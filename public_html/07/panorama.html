@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('editorial.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html" selected>Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="hardware.html">Hardware</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="input.html">INPUT</option>
+        <option value="opinion.html">Opinión</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 7 - Mayo 2004</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+<div align="justify">
+<p>
+Aunque el mundillo del Spectrum no es muy proclive a nuevas noticias y proyectos, en esta entrega tenemos muchas cosas que contaros. Desde el estreno internacional de la mejor tira cómica de Spectrum, hasta la celebración de los Aniversarios de importantes webs del mundillo. Desde MagazineZX os informamos sobre las noticias más destacables.
+</p>
+
+<p>
+<b>La tira de ECSS, en italiano</b>
+</p>
+<p>¿Alguien no conoce la famosa tira cómica de ECSS? Su autor, Pedrete, ha concedido permiso a Stefano Guida para la traducción de la tira cómica al italiano. El destino de la tira en Italiano será su publicación a partir del número 2 (Abril-Mayo) en el fanzine "Sinclair ZX Notizie", dentro de su web "Lo ZX Spectrum in Italia".
+</p>
+<p>
+El próximo paso que debería plantearse la tira de Ecss sería su traducción al inglés, de forma que pueda ser disfrutada por los lectores de comp.sys.sinclair, o directamente de World Of Spectrum.
+</p>
+<p>
+<b>Chrome, clon del Spectrum</b>
+</p>
+<p>
+Con el paso del tiempo el hardware sufre averías (sobre todo en sus partes mecánicas), y llegará un momento en que será muy difícil encontrar Spectrums en perfecto estado. Podría decirse que el principal problema de nuestros Spectrums es el desconocimiento del esquema interno de la ULA, aunque no debemos olvidarnos de las endebles membranas de teclado, y la baja calidad de algunos modelos de moduladores de vídeo. También es un problema el hecho de que sólo es sencillo sacar vídeo RGB de los modelos 128K, +2 y +3. Ante todo esto, una de las prioridades de quienes pretenden preservar la plataforma es construir Spectrums desde cero. Clonar el Spectrum, pero utilizando componentes que permitan que todos puedan hacerlo, y hacerlo de una manera barata y rápida. Clonarlo, pero obteniendo la máxima compatibilidad con el software existente.
+</p>
+<p>
+
+Chrome es un clon hardware del ordenador Spectrum. Como podéis ver en su web, tiene las siguientes características:
+</p>
+<ul>
+	<li>Microprocesador Zilog Z80C, corriendo a 3.58 ó 7.1 Mhz.</li>
+	<li>64KB de ROM (BASIC del Spectrum) y 8K de ROM de disco.</li>
+	<li>160KB de memoria RAM (paginada en páginas de 16K) y 8KB de RAM de disco.</li>
+	<li>Sonido de 3 canales, 7 octavas. Ruido blanco. Salida estereo. Altavoz interno de 1 canal.</li>
+	<li>Interfaz de joystick compatible con Kempston.</li>
+
+	<li>Puerto de Expansión.</li>
+	<li>Interfaz I2C.</li>
+	<li>Puerto paralelo de impresora.</li>
+	<li>Posibilidad de conectar datacassette y disketera de 800KB de capacidad de disco.</li>
+	<li>Gráficos de 256x192 píxeles a 16 colores.</li>
+	<li>Salida RGB SCART.</li>
+
+</ul>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/chrome.jpg" width="400" height="267"  alt="Placa de Chrome conectada a teclado y disketera" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Placa de Chrome conectada a teclado y disketera</td>
+	</tr>
+
+</table>
+</center>
+<p>
+Cabe destacar que el anuncio del prototipo indica que el diseño e implementación ya están finalizados, es decir, Chrome ya funciona al 100%.
+</p>
+<p>
+<b>Juegos de Spectrum en 256 colores</b>
+</p>
+<p>
+Y del hardware nos pasamos al software. Hace bastante tiempo que apareció el emulador Spec256, el cual permitía representar 256 colores en los juegos de Spectrum. Para poder usar estos 256 colores, los juegos debían ser adaptados por programadores, es decir, retocarlos para que utilicen "sets" gráficos diferentes. Debido al coste de tiempo y esfuerzo necesario para pasar los juegos (y a que no es algo que esté al alcance de cualquiera), apenas unos pocos juegos fueron pasados a 256 colores. Ahora ha aparecido otro emulador que los soporta (EmuZWin) y más gente se ha animado a pasar juegos a este formato "extendido" de color.
+</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/256col.jpg" width="400" height="306"  alt="Abu Simbel Profanation en 256 colores" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Abu Simbel Profanation en 256 colores</td>
+	</tr>
+</table>
+</center>
+<p>
+La aparición de EmuZWin parece bastante ligada a los grupos de usuarios ingleses de comp.sys.sinclair, donde hay una mayor base de programadores (en contraposición a Spec256, cuya base de usuarios era sobretodo hispanoparlante). Esto implica que más gente (con bastantes conocimientos técnicos) se ha interesado en el proyecto y es muy probable que el catálogo de juegos en 256 colores se amplíe aún más. La prueba de esto la tenemos en que en la misma página podemos descargar juegos de la Crap Games Compo de CSS en formato 256 colores, directamente adaptados por sus autores (es decir, programadores, y ahora con conocimientos sobre la adaptación a 256 colores). ¿Qué ocurriría ahora si alguno de estos programadores se centra en la adaptación de juegos a 256 colores para un emulador en lugar de hacerlo en la implementación de nuevos juegos para Spectrum?
+</p>
+<p>
+Recordad que estos juegos especiales no pueden funcionar en el Spectrum real, tan sólo en estos dos emuladores que incorporan dicho modo de 256 colores. ¿Es esta una nueva manera de realizar remakes gráficos sin reprogramar código?
+
+</p>
+<p>
+<b>Aniversario doble</b>
+</p>
+<p>
+Este mes tenemos que celebrar 2 aniversarios. Por un lado, la completísima Web sobre el QL de Badaman "Sinclair QL. Recursos en Castellano" cumple 2 años informándonos sobre el QL y preservando todo tipo de información sobre este "desconocido" modelo de Sinclair. Este segundo aniversario coincide además con el 20 aniversario del QL (nacido en 1984).
+</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="463">
+	<tr align="right">
+		<td><img src="img/sinclairql.jpg" width="463" height="100"  alt="Sinclair QL, casualmente web de la Semana a finales de Abril en El Trastero" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">Sinclair QL, casualmente web de la Semana a finales de Abril en El Trastero</td>
+	</tr>
+</table>
+</center>
+<p>
+Por otro lado, José Manuel anunciaba de esta forma en es.comp.sistemas.sinclair el tercer aniversario de la Web "El Trastero":
+</p>
+<p>
+<pre>
+Autor: Jose Manuel
+Asunto: Tercer aniversario del Trastero del Spectrum
+Grupos de noticias: es.comp.sistemas.sinclair
+Fecha: 2003-04-14 01:47:27 PST
+
+Hola colegas, tal que así hace tres años comenzó la andadura
+de esta página, en principio sólo dedicada a la búsqueda del
+programa perdido y gracias a vuestras colaboraciones, se fue
+ampliando con mas y nuevas secciones.
+
+A la fecha hay mas de 170 MB, 1300 programas, y todo tipo
+de material dedicado al Spectrum, y lo mejor, 37 mil visitas,
+la mayoría de nuestro país, pero tambien desde todo el mundo.
+
+Gracias, a todos, a los que colaboran, a los que nos leen, y en
+especial a Santiago Romero por alojarnos en su excelente
+servidor Speccy.org
+
+Saludos, J.M.
+</pre>
+</p>
+
+<p>
+Desde MagazineZX aprovechamos para felicitar a Badaman y a José Manuel por el excelente trabajo que realizando por el mundillo del Spectrum. ¡Felicidades!
+</p>
+<p>
+<b>Retornos y remodelaciones</b>
+</p>
+<p>
+Más sobre páginas Web: por un lado Santiago Romero remodela su web en Speccy.org para hacerla más legible y accesible, y permitir una más rápida actualización de sus contenidos. La web incluye ahora apartados (aunque vacíos por ahora) sobre otros sistemas retro. La parte de Spectrum es la más poblada por ahora, aunque carece todavía de contenidos nuevos.
+</p>
+<p>
+Sin duda el retorno más interesante es el de Matranet. La entrega número 27 del fanzine más desenfadado del mundo retro vuelve a nuestros navegadores. Especialmente ácida la crítica a Retrogames, revista retro recién aparecida y recién desaparecida (sólo ha durado 2 números), y en la que ha trabajado S.T.A.R.
+</p>
+<p>
+Matranet es una revista diferente, con artículos retro y actuales, y centrada en la crítica realista en lugar de la habitual sistemática adulación de tópicos retro.
+</p>
+<p>
+
+<b>Nuevo disco de los AY Riders</b>
+</p>
+<p>
+En su página podéis escuchar el último disco de este grupo de artistas que se dedica a componer y hacer mixes de música de 8 bits en formato MP3. Van ya por su tercer álbum, titulado "8 BITS IS ENUFF?"
+</p>
+<p>
+<b>ZX Format nº 7</b>
+</p>
+<p>
+Aparece un nuevo número de "ZX Format: Spectrum Computing Today". Es la entrega número 7, correspondiente a la Primavera del 2004, y está repleto de contenidos sobre Spectrum.
+</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="189">
+	<tr align="right">
+
+		<td><img src="img/zxf.gif" width="189" height="60"  alt="Logotipo de ZX Format" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Logotipo de ZX Format</td>
+	</tr>
+</table>
+</center>
+<p>
+<b>The Complete Spectrum Rom Disassembly</b>
+
+</p>
+<p>
+Uno de los libros más valorados en el universo del Spectrum es sin duda "The Complete Spectrum ROM disassembly", donde se desgrana y desmenuza la ROM del Spectrum a través de un desemsamblado y comentado de la misma: todas las rutinas, variables, el intérprete de BASIC, etc. Es un libro imprescindible para comprender al máximo la arquitectura del Spectrum. Un libro imprescindible, y caro (y difícil de encontrar y conseguir).
+</p>
+<p>
+Ahora un grupo de voluntarios lo ha escaneado y convertido a diferentes formatos, entre ellos texto plano y PDF, para que todos podamos disfrutar de sus contenidos. Sin duda este escaneo es un acontecimiento muy importante para todos los programadores interesados en el Spectrum.
+</p>
+<p>
+Los usuarios de Spectrum españoles deberíamos tomar nota de este tipo de iniciativas, y realizar este tipo de labores. Tal y como hace José Manuel en El Trastero Del Spectrum, deberíamos dar una cierta prioridad (que en muchas webs está centrada en el software) a preservar los diferentes libros relacionados con el Spectrum. Obtener versiones online (en formatos texto, PDF y html) de los libros más importantes debería ser una obligación asumida por los propios usuarios y poseedores de los dichos libros. Es la mejor manera de compartirlos con todos los demás, y de que poder hojearlo electrónicamente preservando nuestro propio ejemplar (físico) del desgaste.
+</p>
+<p>
+Éstas (y no son pocas) han sido las noticias más destacadas desde la anterior entrega de MagazineZX.
+</p>
+<div align="left">
+<p>
+<b>LINKS</b>
+
+</p>
+<ul>
+	<li>Tira cómica de ECSS (por Pedrete): <a href="http://www.speccy.org/pedrete/" onClick="window.open(this.href); return false;">http://www.speccy.org/pedrete/</a></li>
+	<li>Fanzine Sinclair ZX Notizie: <a href="http://zxspectrum.hal.varese.it/" onClick="window.open(this.href); return false;">http://zxspectrum.hal.varese.it/</a></li>
+	<li>Chrome, clon del Spectrum: <a href="http://aticatac.altervista.org/" onClick="window.open(this.href); return false;">http://aticatac.altervista.org/</a></li>
+	<li>Juegos de Spectrum en 256 colores: <a href="http://www.arjun.150m.com/ZX256games.html" onClick="window.open(this.href); return false;">http://www.arjun.150m.com/ZX256games.html</a></li>
+
+	<li>Crap Games Compo (CSS): <a href="http://8bitorbust.info/cgc/" onClick="window.open(this.href); return false;">http://8bitorbust.info/cgc/</a></li>
+	<li>EmuZWin: <a href="http://bonanzas.rinet.ru/e_downloads.htm" onClick="window.open(this.href); return false;">http://bonanzas.rinet.ru/e_downloads.htm</a></li>
+	<li>Sinclair QL. Recursos en Castellano: <a href="http://www.speccy.org/QL/" onClick="window.open(this.href); return false;">http://www.speccy.org/QL/</a></li>
+	<li>El Trastero del Spectrum: <a href="http://www.speccy.org/trastero/" onClick="window.open(this.href); return false;">http://www.speccy.org/trastero/</a></li>
+	<li>Retroweb de Santiago Romero: <a href="http://www.speccy.org/sromero/" onClick="window.open(this.href); return false;">http://www.speccy.org/sromero/</a></li>
+
+	<li>Matranet: <a href="http://www.matranet.net/" onClick="window.open(this.href);">http://www.matranet.net/</a></li>
+	<lI>AY RIDERS: <a href="http://ayriders.zxdemo.org/mp3.html" onClick="window.open(this.href); return false;">http://ayriders.zxdemo.org/mp3.html</a></li>
+	<li>ZXFormat issue 7: <a href="http://www.zxf.cjb.net/" onClick="window.open(this.href); return false;">http://www.zxf.cjb.net/</a></li>
+	<li>Escaneado de The Complete Spectrum ROM Dissasembly: <a href="http://freestuff.grok.co.uk/rom-dis/" onClick="window.open(this.href); return false;">http://freestuff.grok.co.uk/rom-dis/</a></li>
+</ul>
+
+</div>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right"><br><br>Redacción de MAGAZINE ZX</td>
+	</tr>
+</table>
+                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('editorial.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html" selected>Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="input.html">INPUT</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="siguiente" value=">" />
+</td>
+
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+    </form>
+
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+	</tr>
+
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

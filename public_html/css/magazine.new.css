@@ -1,0 +1,68 @@
+/* base font */
+html { font-size:80%; font-family:Verdana, Arial, Helvetica, sans-serif; }
+body { margin:0; font-size:100%; background:#fff;  color:#000} /*Estandar*/
+* html body { font-size:101%; } /*IE6*/
+*:first-child+html body { font-size:101%; } /*IE7*/
+
+/* Resets de textos */
+h1, h2, h3, h4, h5, h6, p, pre, blockquote { margin: 0; font-size:1em;}
+/* ul, ol, dl, dt, dd { padding:0; margin:0; } */
+
+/* ul,ol { list-style: none; } */
+
+/* Reset de tablas */
+table { border-collapse: collapse; width:100%; font-size: 1em; }
+td { vertical-align: top; }
+caption, th { text-align: left; }
+
+/* Enlaces */
+a { text-decoration: underline; color:#00f; }
+a:hover { text-decoration: underline; }
+a img { border: none; }
+
+/* Formularios */
+form { margin:0;}
+fieldset { margin:0; padding:0; border: none; }
+legend { padding:0; }
+input, textarea, select { font-size: 1em; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+/*
+	Clases genéricas
+************************************/
+
+/* estirar (clearfix Español) */
+.estirar:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.estirar { display:inline-block; }
+/* Hide from IE Mac \*/
+.estirar { display:block; }
+* html .estirar { height:1px; }
+/* End hide from IE Mac */
+
+
+/* NUEVO CSS */
+
+body { background : #cfcfcf; text-align: center; }
+#all { margin: 0 auto 0 auto; width: 960px; background: #f9f9ff; text-align: left; }
+.cabecera { text-align: center; background: #eee; padding: 4px; }
+.indice { text-align: center; background: #fff; padding: 6px; }
+.navegacion { background: #ddd; padding: 6px; }
+.navegacion form { float: left; padding: 8px 0 0 0; }
+.navegacion .num_fecha { float: left; padding: 12px 0 0 40px; }
+.navegacion .derecha { float: right; }
+.navegacion .uplink { padding: 8px; }
+.pie { text-align: center; background: #eee; padding: 6px; }
+a img { border: 0; }
+.contenido { padding: 10px; }
+.contenido h2 { font-size: 24px; font-weight: normal; text-align: center; margin-bottom: 1em; }
+.contenido p { margin-bottom: 1em; }
+.contenido .justificado { text-align: justify; }
+.contenido .firma { text-align: right; font-style: italic; margin-bottom: 1em; }
+.contenido #indice { float: left; margin-bottom: 1em; margin-right: 1em; }
+.contenido #staff { float: left; margin-bottom: 1em; }
+hr { clear: both; }

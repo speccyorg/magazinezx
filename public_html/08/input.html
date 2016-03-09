@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="hardware.html">Hardware</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="input.html" selected>INPUT</option>
+
+        <option value="opinion.html">Opinión</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 8 - Julio 2004</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+
+</table>
+</a>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+
+<div align="justify">
+<p><i>Para este número contamos con un testimonio de primera mano de un desarrollador de videojuegos, Jose María Pérez Rosado. Entre él y su hermano Antonio desarrollaron el juego 'Dea Tenebrarum', juego que lograron publicar comercialmente bajo el sello español System 4.</i></p>
+<p>Este artículo es una breve e interesante reseña de sus comienzos y vivencias en su etapa como desarrollador de software para ZX Spectrum.</p>
+<p align="center"><font size="5">BREVE HISTORIA JMP&APR SEGÚN JMP</font></p>
+<p>Empezamos a hacer videojuegos a principios de los ochenta, con un Spectrum de 48k y teclado de goma, todo ello conseguido por cortesía de sus majestades los Reyes Magos, en la tele del salón, con el radiocassette de la casa. Recuerdo que la primera noche que el ordenador pasó en su nuevo hogar ya nos liamos con el tema de los videojuegos, sin tener la más mínima idea de programación, empeñados en averiguar como lograr el desplazamiento de una letra por la pantalla, cosa que finalmente conseguimos.</p>
+<p>Y, poco a poco, tras un corto aprendizaje, en la primera semana terminé mi primer videojuego "serio", que consistía en unas pelotas que iban cayendo del cielo y que debían ser recogidas desde abajo en una especie de plato para evitar que se despachurraran, contándose en un marcador el número de pelotas buenas.</p>
+<p>Mi siguiente juego fue realizado durante la semana siguiente, esta vez la cosa era más seria, una nave que tenía que esquivar continuos misiles que se acercaban a distintas velocidades, al mismo tiempo que cuidar la cantidad de combustible restante mediante un contador que iba disminuyendo con el tiempo y unos tanques de "fuel" que iban apareciendo a ras del suelo. Simulaba un "scroll" horizontal muy simple.</p>
+<table width="600" align="center">
+	<tr>
+
+		<td><p><font size="5" face="serif">"Sólo con ver un juego, podíamos imaginar como estaba hecho por dentro."</font></p></td>
+		<td><img src="img/input1.gif" width="256" height="192" border="0"></td>
+	</tr>
+</table>
+<p>Cuando el Spectrum cumplía un mes en casa, mi hermano y yo llevamos a cabo nuestra primera colaboración. La complejidad seguía aumentando, los personajes eran bastante más grandes y numerosos. El resultado fue bautizado "Smurfy" y consistía en un hombrecillo que se movía dentro de una única pantalla por pasillos, subiendo y bajando escaleras, evitando en lo posible ser alcanzado por unas brujas montadas en escobas (brujas que eran confundidas por ciervos por algunos observadores, que su dios les conserve la vista). Técnicamente se trataba de un enorme programa, hecho en un Basic de principiantes y que, no obstante, funcionaba. Lo enviamos a Microhobby; lo rechazaron amablemente. Supongo que el motivo fue que ocupaba demasiado para lo que ofrecía.</p>
+<p>Pero no nos desanimamos, ni mucho menos. Seguimos estudiando, aprendiendo, jugando y, en definitiva, divirtiéndonos con el ordenador. Puntualmente, cada semana, comprábamos el Microhobby para devorarlo con avidez, comentando incluso los pormenores de sus artículos, sacándoles todo el jugo. Recuerdo, por ejemplo, aquellas entrevistas a programadores españoles, como la de Víctor Ruiz hablando de sus inicios, del Saimazoom, del Babaliba, etc. o la de Paco Suárez.</p>
+<p>Y a los seis meses, llegó el verano, cuando decidí aprovechar todo ese tiempo libre (tenía entonces catorce años, acababa de terminar primero de bachillerato) para embarcarme en un gran proyecto en solitario. Tenía en mente un gran juego en Basic, que se concretó en un gigantesco castillo dividido en ciento veinte pantallas por las que se iba desplazando un pequeño gusano, que incluso saltaba y caía por efecto de la gravedad. La mala suerte quiso que la cinta donde lo grabé, completamente terminado ya, tras un mes de intenso trabajo, se estropeara, quedando todo mi esfuerzo perdido, sin haberme dado tiempo a enviar una copia a Microhobby. Mas poco tiempo después, cuando menos lo esperaba, un buen día la cinta funcionó. Pude recuperar el juego, lo envié a Microhobby y lo publicaron directamente en cinta. El juego se llamó WormCastle, aunque creo recordar que los de Microhobby cambiaron este altisonante nombre por el más sencillo y poco afortunado de "Gusanín", no te jode (sic). Pero publiqué mi primer juego y me embolsé quince mil pesetillas de las de aquel entonces.</p>
+<p>Seguimos aprendiendo, por separado, mi hermano dedicado a unas cuestiones y yo a otras, pero siempre orientadas a los juegos. Hice muchos pequeños programas, incluido uno de diseño gráfico publicado en Microhobby. Dejé inacabado, aunque bastante avanzado, el mejor juego que he hecho en Basic, llamado Nosferatu. Tenía unas veinte pantallas o poco más. Incluía un ascensor que subía y bajaba suavemente, accionado a voluntad por unas palancas. Ponía a disposición del jugador numerosos objetos con utilidades concretas, necesarios para terminar la partida con éxito. Tanto el protagonista como el resto de personajes poseían movimientos más realistas y complejos que en mis juegos anteriores. Era una pequeña maravilla, pero lo dejé porque cayó en nuestras manos el primer libro de código máquina, un pequeño tesoro por el que cualquier sacrificio era poco. Era un libro de portada oscura titulado "El libro del Código Máquina del Spectrum", si no me equivoco. Más tarde llegaría el famoso curso de código máquina de Microhobby y sus utilísimas fichas de este lenguaje.</p>
+<p>Tras algunas pruebas en solitario, escarceos, trozos de juegos, ideas dispersas por parte de ambos, nos reunimos mi hermano y yo con la firme intención de hacer un juego en código máquina, comprobados los resultados tan satisfactorios del uso de dicho lenguaje.</p>
+
+<p>De continuo nos enfrentábamos a problemas aparentemente irresolubles, necesidad de técnicas que desconocíamos y no obstante existían puesto que se podían observar en algunos juegos. Así que poco a poco, tirando de imaginación, fuimos solventado todo esto y el juego fue avanzando. Su nombre era "Dea Tenebrarum", nombre que le robé a un amigo que lo ideó para un hipotético grupo de música heavy que en el futuro formaría, aunque creo que nunca lo hizo. Ya programábamos bastante bien. Sólo con ver un juego, podíamos imaginar como estaba hecho por dentro.</p>
+<p>Y el Dea Tenebrarum iba llegando a su fin. Eran ciento veinte pantallas (otra vez) dentro de un castillo (otra vez). Nos repartimos las zonas y cada uno las diseñó a su gusto, igual que los personajes, aunque nos reuníamos continuamente para revisarlo todo, intercambiar ideas, opiniones y sugerencias. Lo cierto es que estábamos todo el santo día con el juego en la cabeza. Un día, incluso, llegue a soñar con la solución definitiva que eliminaría el más mínimo parpadeo de la pantalla. Al despertar no lo podía creer, pero aquello funcionó a las mil maravillas.</p>
+<p>Los últimos días fueron terribles, llegando alguno a las veinte horas seguidas delante del ordenador, parando únicamente para comer. Por fortuna nuestro equipo de alta tecnología incluía ya un monitor de fósforo verde de doce pulgadas, un Joystick (un Quickshot II, si no me traiciona la memoria), una grabadora Philips, muy buena por cierto, un teclado profesional Saga (por el que tuvimos que hacer algo que nunca me perdonaré: vender nuestra fabulosa colección de tebeos de superhéroes, la cual incluía un buen número de volúmenes de aquellos de Vértice), y una pintoresca mesa de ruedas totalmente antiergonómica, donde montábamos todo el equipo para llevarlo a la terraza si hacía buen tiempo o al salón si había que hacer pruebas con la tele en color.</p>
+<p>Con este panorama, podemos intentar imaginar como eran las pruebas del programa: primero se sentaba en el puesto de mando uno de los dos con un montón de cintas  que almacenaban un puñado de código disperso en numerosos ficheros y los gráficos, se quitaba de en medio y luego se ponía el otro. Esto que se cuenta tan rápido y en una sola frase, podía llevarnos entre quince minutos y media hora, para que al ir a probar, en un sólo segundo, aparecieran unos signos extraños en pantalla y el Spectrum se autoreseteara. A revisarlo todo y vuelta a empezar. Y así una vez y otra. Si al menos hubiéramos tenido una disquetera...</p>
+<p>Y, pese a todo, terminamos el Dea Tenebrarum, ya definitivamente. Entonces comenzó el paseo por diferentes compañías en busca de alguien que quisiera publicarlo. No era fácil, pues, aunque la técnica era correcta, la artística estaba en pañales. Erbe no quiso publicarlo y Dinamic tampoco, no obstante nos sirvió de tarjeta de presentación ante esta última compañía, pasando a trabajar con ellos en plan "freelance" en un nuevo juego que iba a llamarse "Environment Division", nombre que se me ocurrió estudiando el lenguaje Cobol, pero no adelantemos acontecimientos.</p>
+<p>Contactamos con System 4, una nueva compañía con necesidad de captar nuevos programadores y programas para su distribución. Tratamos con un tal Edgar Pladellorens, quien aceptó distribuir Dea Tenebrarum quizá con la esperanza de captarnos, a pesar de que le dejamos muy claro que sólo queríamos vender ese juego y que luego nos íbamos con Dinamic. El único inconveniente es que el protagonista del juego, un cura para más señas, no disparaba. Así que, no sin grandes problemas de memoria (hubo que simplificar el juego de caracteres especialmente diseñado, cambiándolo por el original del Spectrum con algún efecto), hicimos el cambio solicitado. El cura, más conocido como padre Allicrom (se sugiere leerlo al revés), ya disparaba, y si hubiera tenido que bailar sardanas pues la habría bailado, todo a gusto del consumidor.</p>
+<p>Nos adelantaron cincuenta mil pesetas por las primeras copias que se distribuyeron, las restantes las cobraríamos por el sistema de royalties. Edgar, que parecía haber olvidado nuestro trato, el de irnos con Dinamic, pareció enfadarse cuando descubrió que de verdad nos íbamos con ellos. De manera que System 4 nos hizo el vacío. Tras algunas decenas de llamadas en las que Edgar estaba siempre "reunido" captamos la indirecta y decidimos olvidarnos del tema, a la mierda Edgar y a la mierda System 4. El poco contacto que tuvimos con Erbe, en la persona de Javier Cano, fue bastante correcto aunque al final no llegáramos a nada con ellos. Con Dinamic, igualmente, fue todo como la seda, la verdad es que se portaron bastante bien.</p>
+<p>Y así, con nuestro primer gran juego en el mercado, nos lanzamos a la aventura del segundo. La parte técnica suponía un gran avance respecto al Dea Tenebrarum, pues ahora, en el Environment Division, íbamos a hacer scroll horizontal y vertical con bandas a distintas velocidades, sprites grandes, y animaciones más complejas. La rutina de impresión de sprites, a modo de ejemplo, construía, a su vez, una nueva rutina de impresión a medida del sprite que tuviera que imprimir en cada momento. Parece extraño, pero iba a velocidad de vértigo. Y todo ello, sprites y scroll, sin el más mínimo parpadeo ni efecto indeseable en pantalla, con desplazamientos muy suaves, pero no lentos.</p>
+<p>Lo malo es que, poco a poco, sin darnos cuenta, lo que era una afición, si no una pasión, se había ido transformando en una carga. Fuimos perdiendo la ilusión. Por otro lado, disponíamos de menos tiempo, puesto que mi hermano (APR) se encontraba estudiando Informática en la universidad, y yo haciendo FP2 de Informática y prácticas en una empresa. Lo cierto es que empezaba a ser un poco agobiante. Y todo ello agravado porque, por si fuera poco, nos empeñábamos en hacerlo cada vez mejor, en exigirnos más.</p>
+
+<p>De manera que, ya muy avanzado el Environment Division, tras una noche sin dormir pensando en como iba a decírmelo, mi hermano me anuncia que se retira. Y ahí empezó el fin. Yo no podía ni me apetecía seguir solo, se me antojaba una tarea imposible. Y, en cierto modo, aparte de apenado, sentí que me quitaba una enorme carga de encima. Lo que antes nos divertía, ahora nos agobiaba. La de mi hermano fue una sabia decisión.</p>
+<p>Le comunicamos nuestra decisión a Dinamic, creo que a Nacho Ruiz, el cual pensaba tener algo de culpa por habernos dejado un poco olvidados, ídea un poco exagerada, pero nosotros sabíamos que no era ese el motivo. Devolvimos el Spectrum plus 3 (¡tenía disquetera y todo!) que nos habían proporcionado como adelanto por el primer juego que termináramos, y nos regalaron los disquetes (diez, que podían suponer unas cinco o siete mil pesetas de aquel entonces) donde aún se conservan las demos del Environment Division.</p>
+<p>Luego, me embarqué yo solo en otros juegos, otra vez con mi viejo Spectrum y mis cintas, pero no llegue a concluir nada, aunque me embarqué en mil y una cosas.</p>
+<p>Mi hermano aprobó unas oposiciones para un puesto en una empresa de telecomunicaciones de ámbito nacional, poco tiempo después tuve esa misma suerte. Hoy en día él se dedica a la Telemática y yo a la Informática, en dicha empresa, yo en Jaén y él en Madrid. Y de vez en cuando hablamos de aquella aventura que compartimos, aunque cada vez menos.</p>
+<p>Alguna que otra vez e intentado volver a meterme en el mundillo de los videojuegos, a crear un grupo de programadores y dibujantes, pero no ha cuajado. Ya lo tengo olvidado definitivamente, pero no descarto volver a hacer algún juegecillo, eso sí, esta vez por puro divertimento, sin la más mínima pretensión. No se, quizá en mi flamante Psion Series 5mx de bolsillo recién adquirido, desde donde escribo estas líneas, me anime, algún día, después de hojear la carpeta donde guardo como oro en paño toda la documentación del Dea Tenebrarum, dibujos, ideas, el código completo escrito a mano y otras reliquias, me anime, digo, a realizar algún jueguecillo, quien sabe...</p>
+</div>
+		</td>
+	</tr>
+	<tr>
+
+		<td align="right"><br>José María Pérez (de JMP & APR)</td>
+	</tr>
+</table>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="input.html" selected>INPUT</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+    </form>
+</table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

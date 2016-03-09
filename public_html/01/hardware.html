@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('zona-pc.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="zona-pc.html">Zona PC</option>
+        <option value="hardware.html" selected>Hardware</option>
+        <option value="emulacion.html">Emulación</option>
+        <option value="basic.html">Programación BASIC</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 1 - Julio 2003</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+<div align="justify">
+<p align="center"><font size="5">ADAPTADOR PARA DISQUETERA DE 3 1/2
+PARA EL +3 (I)</font></p>
+
+<i>Comenzamos nuestra andadura por el camino del hardware en este
+primer n&uacute;mero de Magazine ZX con un montaje muy &uacute;til
+y, a la vez, sencillo. Cualquier persona que sepa pelar un cable y
+empalmarlo con cinta aislante deber&iacute;a ser capaz de
+realizarlo. Si os atrev&eacute;is a complicaros un poco, usando soldador y
+esta&ntilde;o y dotarlo de m&aacute;s funcionalidades, os
+ense&ntilde;aremos como hacerlo.<br>
+<br>
+ Todos los montajes que os iremos ofreciendo a lo largo de los
+diferentes n&uacute;meros han sido probados por el autor del
+art&iacute;culo y no han causado ninguna aver&iacute;a ni mal
+funcionamiento tanto en el ordenador en el cual han sido probados
+como en los propios dispositivos empleados o conectados. Por lo cual tenéis que ser
+conscientes de que hacéis esto bajo vuestro propio riesgo. Pero no
+debéis preocuparos de nada si segu&iacute;s al pie de la letra los pasos que vamos a
+ofreceros.<br>
+
+<br>
+Las explicaciones tendrán un eminente carácter práctico. No obstante,
+se introducirán nociones de teoría cuando sea necesario. Pensamos que
+lo interesante para el usuario medio son los montajes en si mismo. Trataremos
+de complementar la información con una buena sección de enlaces a otras
+páginas de Internet donde se profundice sobre cada tema en concreto.</i><br>
+<br>
+<b>PROPÓSITO</b><br><br>
+En este primer montaje trataremos de acoplar una disquetera de 3 pulgadas
+y media a un Spectrum +3. Los discos de esta medida son infinitamente
+más fáciles de conseguir que sus homólogos de 3 pulgadas, lo cual justifica
+totalmente su utilidad.
+<br><br>
+Ya que queremos abundar en varios aspectos del conexionado y uso, en este
+primer número nos centraremos en alimentar la disquetera y conectar
+el cable de datos de forma básica. Así podremos empezar a trabajar con ella.
+En la próxima entrega aprenderemos a aprovechar totalmente su capacidad,
+configurarla como primera o segunda unidad y algunos otros detalles de interés.
+<br><br>
+<b>MATERIALES</b><br>
+<br>
+Al plantearnos el proyecto lo primero que tenemos que tener en
+cuenta es qu&eacute; necesitamos para realizar el montaje.<br>
+
+<br>
+Como material, muy poca cosa. Una faja de datos de disquetera, que tenga
+un conector para unidades de 3 1/2 y otro para las de 5 1/4
+(<a href="#imagen1">Imagen 1</a>), es
+suficiente para realizar el montaje en su forma m&aacute;s
+b&aacute;sica. Estos cables se encuentran sobre todo en PCs
+antiguos, con lo cual estaremos reciclando material que de otra
+forma estar&iacute;a condenado a la basura.<br>
+<br>
+<a name="imagen1"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware7.jpg" width="320" height="240"  alt="Imagen 1. Faja de datos de disquetera de PC" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">Imagen 1. Faja de datos de disquetera de PC</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<br>
+Sin embargo, vamos a hacer inventario de lo que vamos a necesitar,
+tanto en materiales como en herramientas para completar el montaje
+en el ámbito de este artículo.<br>
+<br>
+<ul>
+<li>Adaptador para la fuente de alimentaci&oacute;n:<br>
+
+<br>
+
+<ul>
+<li>1 conector DIN-6 macho.</li>
+<li>1 conector DIN-6 hembra.</li>
+<li>1 conector para alimentar la disquetera. Se puede cortar de una
+fuente vieja o averiada de PC.</li>
+<li>1 trozo de cable de 6 hilos y malla, con una longitud en torno a los 20
+cm.</li>
+<li>Soldador.</li>
+<li>Esta&ntilde;o.</li>
+</ul>
+
+</li>
+<br>
+<li>Para el cable de datos entre la disquetera y el Spectrum
++3:<br><br>
+<ul>
+<li>1 Faja de disquetera, que tenga al menos un conector de 3 1/2 y
+otro de 5 1/4. Necesitamos la parte <u>sin cables cruzados</u>.</li>
+<li>1 trocito de cable de 2-3 cm.</li>
+<li>Tijeras.</li>
+<li>Cutter o pelacables.</li>
+</ul>
+</li>
+
+</ul>
+
+<br>
+<b>LA ALIMENTACI&Oacute;N</b><br>
+<br>
+L&oacute;gicamente la disquetera hay que alimentarla de corriente,
+y para hacerlo tenemos tres opciones:
+
+<ol>
+<li>Utilizar una fuente de PC-AT (las que se usaban de los modelos
+Pentium y anteriores), como la de la <a href="#imagen2">Imagen 2</a>.
+También se puede hacer con una ATX.</li>
+<li>Sacar la corriente desde dentro del propio +3 con un cable,
+derivando del conector de alimentación de la disquetera interna. De
+esta manera la hice por primera vez, aunque es preferible hacer el
+adaptador de la fuente.</li>
+<li>Sacar la corriente de la fuente del +3 mediante un
+peque&ntilde;o "ladrón" que podremos hacer con dos conectores DIN-6.
+Tambi&eacute;n se puede abrir la fuente y manipularla para sacar la
+corriente desde dentro, pero pudiendo hacer un adaptador que no la
+modifique no creo que sea necesario.</li>
+
+</ol>
+
+<i>ALIMENTANDO CON UNA FUENTE DE PC</i><br>
+<br>
+Quiz&aacute;s la soluci&oacute;n m&aacute;s sencilla sea utilizar
+una fuente de PC, simplemente con enganchar el conector de la
+disquetera habitual y enchufar la fuente a la corriente
+el&eacute;ctrica la tendremos alimentada. El principal
+inconveniente es el del tama&ntilde;o de esta fuente y el ruido, aunque si
+somos un poco manitas, la podremos utilizar hasta para alimentar
+nuestro +3 sustituyendo a la original.<br>
+<br>
+<a name="imagen2"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+
+		<td><img src="img/hardware8.jpg" width="320" height="240"  alt="Imagen 2. Fuente de alimentación AT" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 2. Fuente de alimentación AT</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<br>
+ <i>MANIPULANDO EL +3</i><br>
+
+<br>
+Lo primero que tenemos que hacer es abrir el +3. Quitamos los dos
+tornillos del lateral derecho (el lateral de la disquetera) y los seis
+de la parte inferior con un destornillador de estrella. Hecho esto
+procedemos a levantar el teclado con sumo cuidado, veremos que nos
+lo impide el cable que alimenta el led rojo (situado en posición
+central) y las dos cintas del
+teclado (en el lateral izquierdo). Desprendemos el conector del led situado en
+la placa (<a href="#imagen3">Imagen 3</a>) y las
+dos cintas del teclado (<a href="#imagen4">Imagen 4</a>), esto con sumo cuidado.
+No hace falta
+explicar cuál es uno de los puntos m&aacute;s d&eacute;biles del
+Spectrum.<br>
+<br>
+<a name="imagen3"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware9.jpg" width="320" height="240"  alt="Imagen 3. Conexión del led indicador de encendido" />
+</td>
+
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 3. Conexión del led indicador de encendido</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<a name="imagen4"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware10.jpg" width="320" height="240"  alt="Imagen 4. Conexiones de la membrana a la placa base" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 4. Conexiones de la membrana a la placa base</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<br>
+Viendo la <a href="#imagen5">Imagen 5</a> podremos apreciar los cuatro
+cables que salen hacia la disquetera interna. Son esos cables los que
+tendremos que cortar y de los que derivar el cable que alimente la
+unidad de 3 1/2. La operaci&oacute;n es muy sencilla, y solo
+tendremos que empalmar la derivaci&oacute;n de la siguiente manera,
+teniendo en cuenta que el cable del conector de la disquetera de 3
+1/2 lleva un hilo amarillo con +12V, uno rojo con +5V y dos negros
+con GND:<br>
+
+<br>
+<a name="imagen5"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware1.jpg" width="320" height="240"  alt="Imagen 5. Alimentaci&oacute;n en la placa del +3" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 5. Alimentaci&oacute;n en la placa del +3</td>
+	</tr>
+
+</table>
+</center>
+</a><br>
+<ul>
+<li>El naranja del +3 con +5V se conecta al rojo de la disquetera
+de 3 1/2.</li>
+
+<li>El rojo del +3 con +12V se conecta al amarillo del 3 1/2.</li>
+
+<li>Los dos negros del +3 con los dos negros de la disquetera de 3
+1/2.</li>
+</ul>
+
+Una vez hechos los empalmes (ver <a href="#imagen6">Imagen 6</a>), sacamos el cable derivado; la
+ranura de expansi&oacute;n puede ser un buen lugar y nos ahorraremos
+modificar la carcasa, como el cable estar&aacute;
+
+bien aislado (eso sí, revisadlo antes para cerciorarnos de que no tenga
+rozaduras que puedan provocar cortocircuitos) no tenemos
+que tener ning&uacute;n inconveniente. Recomiendo "anudar" el cable
+externo al v&aacute;stago de pl&aacute;stico que hay en la parte
+superior izquierda de la disquetera, de manera que si damos un
+tir&oacute;n al cable, no desprendamos los empalmes de dentro del +3, las
+soldaduras o soltemos el conector de la disquetera de 3".<br>
+<br>
+<a name="imagen6"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware2.jpg" width="320" height="240"  alt="Imagen 6. Empalme de los cables de alimentaci&oacute;n" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right">Imagen 6. Empalme de los cables de alimentaci&oacute;n</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<i>EXTRAYENDO LA ALIMENTACIÓN DE LA FUENTE DEL +3</i><br>
+<br>
+En mi opini&oacute;n es la mejor opci&oacute;n, m&aacute;s limpia,
+ya que no hay que manipular el +3 o la fuente, ni poner una fuente
+adicional.<br>
+
+<br>
+Tenemos que hacer un cable con dos conectores DIN-6 a cada extremo
+en el que, de uno de ellos, preferiblemente el macho, salga el
+cable para alimentar la disquetera. Esta operaci&oacute;n es muy
+sencilla, y solamente tenemos que tener cuidado en unir los pines
+adecuados de cada conector. Hecho esto, tenemos que soldar o
+empalmar los cables que van a alimentar nuestra disquetera de la siguiente
+forma, y como se detalla en el <a href="#esquema1">Esquema 1</a>:
+<ul>
+<li>+12V de la fuente (marcado como rojo) con +12V del conector de
+la disquetera. (Si hemos cortado el cable de una fuente de PC,
+tambi&eacute;n vendr&aacute; de color rojo.</li>
+<li>+5V de la fuente (marcado en amarillo) con +5V del conector, igual que lo anterior.</li>
+<li>GND (masa) de la fuente con los dos cables de masa de la disquetera, ambos
+dos cables negros.</li>
+</ul>
+<a name="esquema1"><center>
+
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/esquema1.gif" width="320" height="240"  alt="Esquema 1. Tomando la alimentación de la fuente del +3" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Esquema 1. Tomando la alimentación de la fuente del +3</td>
+	</tr>
+</table>
+</center>
+
+</a>
+<br>
+Una vez hecho esto nos quedar&aacute; un cable similar al de la <a
+href="#imagen7">Imagen 7</a>, y tendremos la disquetera alimentada.<br>
+<br>
+<a name="imagen7"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware4.jpg" width="320" height="240"  alt="Imagen 7. Ladrón de alimentación para la disquetera del +3" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">Imagen 7. Ladrón de alimentación para la disquetera del +3</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<b>LA TRANSFERENCIA DE DATOS</b><br>
+<br>
+La faja de datos que necesitamos es de las antiguas de floppy, que
+permitían conectar disqueteras de 5 1/4 y 3 1/2 al PC. Estas fajas
+sol&iacute;an llevar algunos de los terminales con el cable
+cruzado (ver <a href="#imagen8">Imagen 8</a>). Estos terminales se
+pueden cortar sin m&aacute;s problemas, con lo cual nos
+quedar&iacute;a un cable con un conector para la disquetera de 3
+1/2 en un extremo y uno de 5 1/4 en el otro.<br>
+
+<br>
+<a name="imagen8"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware6.jpg" width="320" height="240"  alt="Imagen 8. Parte cruzada de la faja de datos de la disquetera" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 8. Parte cruzada de la faja de datos de la disquetera</td>
+	</tr>
+
+</table>
+</center>
+</a><br>
+El terminal de 5 1/4 es el que conectaremos al bus de
+expansi&oacute;n marcado como "DISCO B" en la parte de atr&aacute;s
+de nuestro Spectrum +3 (<a href="#imagen9">Imagen 9</a>), sólo tiene
+una posici&oacute;n en la
+que se acopla, no tendremos ninguna duda al respecto. Y el de 3 1/2
+a la disquetera que estamos acoplando pero con una particularidad,
+debemos conectarlo al revés de como lo haríamos habitualmente en la
+disquetera, es decir, el pin 0, que suele llevar el hilo marcado en
+color rojo, a la izquierda, seg&uacute;n vemos la disquetera por
+detr&aacute;s, en este caso lo tendremos que colocar a la derecha, como
+se aprecia en la <a href="#imagen10">Imagen 10</a>. Puede que sea necesario
+limar el saliente que tienen los cables modernos para impedir que
+conectemos el cable al revés.<br>
+<br>
+<a name="imagen9"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+
+	<tr align="right">
+		<td><img src="img/hardware11.jpg" width="320" height="240"  alt="Imagen 9. Conector de segunda disquetera en el +3" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 9. Conector de segunda disquetera en el +3</td>
+	</tr>
+</table>
+</center>
+</a><br>
+
+<br>
+<a name="imagen10"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware12.jpg" width="320" height="240"  alt="Imagen 10. Conexión del cable de datos a la disquetera" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 10. Conexión del cable de datos a la disquetera</td>
+	</tr>
+
+</table>
+</center>
+</a><br>
+Por último, es necesario puentear los hilos 1 y 2 del cable. Si
+no queremos cortar y empalmar, basta con introducir un pequeño hilo
+en un conector para unidades de 3 1/2 sobrante, como se muestra en
+la <a href="#imagen11">Imagen 11</a>.
+<br><br>
+<a name="imagen11"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/hardware5.jpg" width="320" height="240"  alt="Imagen 11. Puente entre los pines 1 y 2" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right">Imagen 11. Puente entre los pines 1 y 2</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<br>
+Una vez llegados a este punto, tendremos en nuestro flamante +3 una
+disquetera de 3 1/2 conectada y funcionando como unidad secundaria. Al encender
+el Spectrum comprobaremos cómo el sistema detecta las dos unidades
+conectadas (interna y externa). Lo podemos apreciar en la
+<a href="#imagen12">Imagen 12</a>.
+<br><br>
+<a name="imagen12"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+
+		<td><img src="img/hardware13.jpg" width="320" height="240"  alt="Imagen 12. Menú de arranque del +3" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 12. Menú de arranque del +3</td>
+	</tr>
+</table>
+</center>
+</a><br>
+<br>
+Con este montaje podemos acceder únicamente a la primera cara del disco.
+Recordemos que en los discos de 3" es necesario darlos la vuelta para
+poder acceder a la segunda cara. En los discos de 3 1/2 no es necesario,
+ya que las disqueteras disponen de cabezal en ambas caras. El cambio de cara
+lo podemos simular para el Spectrum utilizando un interruptor que permitirá
+conmutar entre la cara 1 y la 2 de forma que podamos acceder a
+los diferentes ficheros de ambas caras.
+
+<br><br>
+En la próxima entrega veremos cómo configurar la disquetera externa
+como unidad A:, cómo usar la cara B de los discos y algunos otros
+ajustes interesantes.
+<br><br>
+<div align="left">
+<b>LINKS</b>
+<br><br>
+<ul>
+	<li>Cómo conectar una disquetera 3 1/2" al +3: <a href="http://www.speccy.org/sinclairmania/disquetera_PC_al_plus3.html" onClick="window.open(this.href); return false;">http://www.speccy.org/sinclairmania/disquetera_PC_al_plus3.html</a></li>
+	<li>Conexión de una unidad de 3.5" al CPC 6128: <a href="http://www.terra.es/personal/diegovp/pag2.htm" onClick="window.open(this.href); return false;">http://www.terra.es/personal/diegovp/pag2.htm</a></li>
+	<li>Fuente de alimentación del +2/+3: <a href="http://www.worldofspectrum.org/faq/reference/pinouts.htm#PSU" onClick="window.open(this.href); return false;">http://www.worldofspectrum.org/faq/reference/pinouts.htm#PSU</a></li>
+
+</ul>
+</div>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right"><br><br>FALVAREZ</td>
+	</tr>
+</table>                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('zona-pc.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="zona-pc.html">Zona PC</option>
+        <option value="hardware.html" selected>Hardware</option>
+
+        <option value="emulacion.html">Emulación</option>
+        <option value="basic.html">Programación BASIC</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente" value=">" />
+</td>
+
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+    </form>
+
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+	</tr>
+
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

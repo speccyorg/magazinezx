@@ -1,0 +1,758 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+        <option value="el-aventurero.html">El Aventurero</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="computone.html" selected>Computone</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="basic.html">Programación BASIC</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="128k-mode.html">128K MODE</option>
+        <option value="input.html">INPUT</option>
+        <option value="tira-comica.html">Tira cómica</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+
+    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 17 - Marzo 2009</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<style type="text/css">
+table.flags { background: grey; margin: 0; padding: 0;}
+table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
+</style>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+    <tr>
+        <td>
+<div align="justify">
+<p align="center"><font size="5">Save y Load: almacenamiento en cinta</font></p>
+
+<p>¿Te has preguntado alguna vez en qué formato se almacenan los datos en una cinta de cassette para que el Spectrum pueda después cargar desde ellas pantallas de presentación, los personajes de un juego o el código ejecutable de un programa?</p>
+
+<p>En este artículo vamos a mostraros cómo se graban y estructuran los datos en las cintas, y qué hace el Spectrum para acceder a ellos mediante las rutinas de que nos provee la ROM. Para aquellos de vosotros que queráis dar una aplicación práctica a lo que veremos hoy, se incluirá código de carga y grabación de pantallas y un ejemplo completo para probar.</p>
+
+<p><b>Formato de los datos en cinta</b></p>
+
+<p>Supongamos que, desde BASIC, salvamos un bloque de datos en cinta con el comando SAVE. Lo primero que nos interesa conocer es el <em>formato</em> o <em>estructura de los datos</em> almacenados en la cinta, es decir, ¿qué se guarda realmente en la cinta (en formato de audio) cuando hacemos un SAVE?</p>
+
+<p>Un SAVE produce 2 bloques de datos en la cinta:</p>
+
+<ul>
+<li>Un bloque de 19 bytes de tamaño fijo, conocido como cabecera. Este bloque es cargado muy rápidamente, debido a su pequeño tamaño. Si pensáis en los cientos ó miles de LOADs desde cinta que habréis hecho en vuestro Spectrum, recordaréis, nada más pulsar PLAY, la aparición del tono guía (líneas del borde rojas y cyan) seguido de un brevísimo momento de carga de datos (líneas del borde azules y amarillas). Es en ese momento en el que aparece en pantalla la información relativa al juego/programa que estamos cargando.</li>
+<li>Un bloque de longitud variable que contiene los datos concretos y reales a cargar.</li>
+</ul>
+
+<p>Ambos bloques son en realidad "datos" con el siguiente formato:</p>
+
+<ul>
+<li>Un byte inicial, que como veremos se llama Flag Byte.</li>
+
+<li>Los datos en sí mismos: 17 bytes para cabeceras, o la longitud concreta de los datos para los bloques de datos.</li>
+<li>Un byte de checksum o CRC.</li>
+</ul>
+
+<p>Profundicemos un poco más en estos 2 bloques de datos:</p>
+
+<p>Cada bloque se inicia con una serie de pulsos de 2168 t-stados cada uno, que constituyen el tono guía. La cantidad de pulsos (la duración) de este tono guía es de 8063 pulsos para los bloques de cabecera, y 3223 pulsos para los bloques de datos. Es por eso que la duración del tono guía (el famoso pitido inicial de la carga) es mayor para la carga de la cabecera que para el de los datos en sí mismos. Es decir, el tono guía está presente tanto para los bloques de cabecera como para los de datos, salvo que su duración es menor en los bloques de datos.</p>
+
+<p> Un <b>t-stado</b> (t-state) es 1 ciclo de reloj, y equivale a  1 / 3.500.000 segundos.</p>
+
+
+<p>Veamos una figura donde se muestra el estado del <b>mapa de memoria del Spectrum</b>:</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/tono_guia.png" width="320" height="240"  alt="Aspecto del tono guía" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right">Aspecto del tono guía</td>
+	</tr>
+</table>
+</center>
+
+<p>Tras el tono guía de la cabecera viene la cabecera en sí misma (que no dejan de ser datos). Su carga, como ya hemos dicho, tarda un tiempo muy corto en realizarse, ya que son sólo 19 bytes a ser leídos desde el cassette.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/header.png" width="320" height="240"  alt="Una vez cargada la cabecera." />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Una vez cargada la cabecera.</td>
+	</tr>
+</table>
+</center>
+
+<p>En la imagen anterior podemos ver el aspecto de la pantalla una vez terminado el tono guía y cargada la cabecera. Esta cabecera, mediante sus 19 bytes, le indican al Spectrum la naturaleza de los datos a cargar en el bloque de datos que sigue a la misma, con el siguiente formato:</p>
+
+<table class="flags">
+
+        <tr><th>Byte</th><th>Longitud</th><th>Descripción</th></tr>
+        <tr><td>0</td><td>1</td><td>Byte Flag (0x00 ó 0xFFF).</td></tr>
+        <tr><td>1</td><td>1</td><td>Tipo de bloque (0-3).</td></tr>
+        <tr><td>2</td><td>10</td><td>Nombre de fichero (rellenado con espacios en blanco).</td></tr>
+
+        <tr><td>12</td><td>2</td><td>Longitud del bloque de datos a cargar.</td></tr>
+        <tr><td>14</td><td>2</td><td>Parámetro 1.</td></tr>
+        <tr><td>16</td><td>2</td><td>Parámetro 2.</td></tr>
+        <tr><td>18</td><td>1</td><td>Checksum / Suma de comprobación.</td></tr>
+
+</table>
+
+<p>Pasemos a describir los diferentes campos de la cabecera:</p>
+
+<p>El byte de flag (Byte 0) y el de Checksum (byte 18) no forman parte exactamente de la cabecera, sino del bloque cargado en sí mismo (también están presente cuando cargamos datos y no cabeceras), pero se han incluído dentro de la tabla para hacerla de lectura más sencilla. Puede decirse que el byte-flag es el byte prefijo de todo bloque de datos (considerando una cabecera de 17 bytes como un bloque de datos) y el checksum es el byte sufijo de ese mismo bloque. Concretamente, el valor de Byte-Flag es de 0x00 para bloques de cabecera y 0xFF para bloques de datos.</p>
+
+<p>El byte de tipo de bloque indica qué datos se van a cargar a continuación, según los siguientes valores:</pi>
+
+<table class="flags">
+        <tr><th>Valor</th><th>Significado</th></tr>
+        <tr><td>0</td><td>Programa.</td></tr>
+
+        <tr><td>1</td><td>Array de números.</td></tr>
+        <tr><td>2</td><td>Array de caracteres.</td></tr>
+        <tr><td>3</td><td>CODE (datos a cargar en memoria).</td></tr>
+</table>
+
+
+<p>En el caso de bloques de tipo CODE, el byte "Parámetro 1" define la dirección de inicio del bloque de código cuando se hizo el SAVE, y el parámetro 2 contiene el valor 32768.</p>
+
+<p>Para bloques de tipo PROGRAM, el Parámetro 1 contiene el valor de la línea BASIC de autostart (o un número mayor de 32768 si no se dio un parámetro LINE al hacer el SAVE), y el Parámetro 2 contiene el inicio del área de variables relativa al inicio del programa.</p>
+
+<p>Un detalle: una pantalla de datos (SCREEN$) se define en esta cabecera como un bloque de tipo CODE de 6912 bytes a cargar sobre la dirección 16384.</p>
+
+<p>Tras la cabecera (tono guía + bloque datos) viene el bloque de datos en sí mismo, que vuelve a componerse de un tono guía, el Flag Byte, los datos y el checksum.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/bloque_datos.png" width="320" height="240"  alt="Aspecto de la carga del bloque de datos en sí mismo." />
+</td>
+
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Aspecto de la carga del bloque de datos en sí mismo.</td>
+	</tr>
+</table>
+</center>
+
+<p>Ahora bien ... ¿cómo es posible que se almacenen como audio datos digitales? ¿Cómo entiende el Spectrum si los datos que está cargando son unos o ceros y los agrupa en bloques de bytes que podemos interpretar de forma lógica?</p>
+
+<p>Como ya hemos comentado al hablar del tono guía, la clave está en la temporización precisa a la hora de leer datos desde la cinta. Aparte de tonos guía y pulsos de sincronización ... ¿qué es un cero en la cinta? ¿qué es un uno? ¿Cómo se almacena (y lee) un byte de 8 bits? ¿Y cómo se almacena (y lee) un conjunto de bytes?</p>
+
+<ul>
+<li>Un cero (bit=0) se codifica en cinta como 2 pulsos de una duración de 855 t-stados cada uno.</li>
+<li>Un uno (bit=1) se codifica en cinta como 2 pulsos de una duración de 1710 t-stados cada uno.</li>
+<li>Para almacenar los 8 bits de un byte, se almacenan bit a bit de mayor a menor peso (primero el bit 7, luego el 6, el 5, el 4, el 3, el 2, el 1 y finalmente el LSB o bit 0).</li>
+<li>Cuando se almacena más de un byte (un bloque) se guardan primero los datos del primer byte del bloque, luego el segundo, etc.</li>
+</ul>
+
+<p>Los pulsos son ondas con un aspecto como el siguiente (aspecto de un tono guía en TAPER):</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="237">
+
+	<tr align="right">
+		<td><img src="img/pilot.png" width="237" height="293"  alt="Aspecto de un tono guía (TAPER)." />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Aspecto de un tono guía (TAPER).</td>
+	</tr>
+</table>
+</center>
+
+<p>Es decir, si tenemos que almacenar en cinta los siguientes bytes:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+abcdefgh ijklmnop
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Se almacenarían en cinta en este orden:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+
+    <tr><td><p class="codigo">
+<pre>
+a b c d e f g h i j k l m n o p
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Así pues, la rutina de la ROM del Spectrum se encarga (tanto al grabar como al leer) de codificar pulsos de diferentes duraciones para almacenar los ceros y unos de forma consecutiva. Nosotros aprovecharemos (como veremos a continuación) dicha rutina para cargar o salvar bloques de datos a nuestro antojo sin tener que programar esas temporizaciones y lecturas/escrituras a la cinta. Para nosotros será tan sencillo como cargar los valores adecuados en ciertos registros y realizar un CALL. No obstante, para los más curiosos, al final de este capítulo tenéis un enlace a las rutinas de la ROM adecuadamente comentadas de "The Complete Spectrum ROM Disassembly", por el Ian Logan y Frank O'Hara (publicado en 1983).</p>
+
+<p>El nivel más bajo al que necesitamos llegar es el siguiente:</p>
+
+<ul>
+<li>Cada bloque tiene la siguiente estructura física:<br><br></li>
+
+<ul>
+<li>Un tono guía de 8063 (cabeceras) ó 3223 pulsos (datos) de 2168 t-stados cada uno.</li>
+<li>Un pulso de sincronización de 667 t-stados.</li>
+<li>Un segundo pulso de sincronización de 735 t-stados.</li>
+<li>El bloque de datos en sí mismo, bit a bit (0 = 2 pulsos de 855 t-stados, 1 = 2 pulsos de 1710 t-stados).<br><br></li>
+</ul>
+<li>Cada bloque tiene la siguiente estructura lógica (formato de los datos DENTRO de un bloque):<br><br></li>
+<ul>
+<li>Flag byte, con un valor de 0x00 para bloques de cabecera o 0xFF para bloques de datos.</li>
+<li>Los datos en sí mismos: 17 bytes para cabeceras, o la longitud concreta de los datos para los bloques de datos.</li>
+
+<li>Un byte de checksum, calculado de forma que haciendo un XOR de todos los bytes juntos, incluyendo el flag Byte, produzca 0x00.</li>
+</ul>
+</ul>
+
+<p>Resumiendo:</p>
+
+<ul>
+<li>Los datos salvados en cinta constan de tono guía, seguido de un bloque de datos de 19 bytes denominado cabecera, seguido de un tono guía de menor duración que el inicial (por ser de datos), seguido de los datos en sí mismos.</li>
+<li>Esa cabecera proporciona información sobre el nombre, duración y ciertos parámetros relativos a los datos en sí mismos (el segundo bloque cargado).</li>
+<li>Los datos se leen de cinta secuencialmente, del primer al último byte del bloque de datos, y almacenado cada byte desde el bit 7 al 0 secuencialmente.</li>
+<li>Los 1s y los 0s se almacenan en cinta como pulsos de duraciones concretas.</li>
+
+<li>Las rutinas de la ROM nos permiten leer y escribir en cinta bloques de datos, realizando ellas la temporización adecuada para convertir nuestros "datos en memoria" en "pulsos" o viceversa sin complicación por nuestra parte.</li>
+<li>Sólo necesitaríamos escribir una rutina propia de carga (que detecte pulsos, temporice, etc) si quisiéramos programar nuestra propia carga, por ejemplo para cargar a diferente velocidad que el Spectrum (ultracargas), que cargue de dispositivos externos (puerto de joystick, algún pin concreto del bus de expansión, etc.) o para ejecutar código mientras cargamos el programa (minijuegos durante la carga, contadores de carga, etc). Para el resto de casos, bastará con usar mediante CALL las rutinas de la ROM.</li>
+</ul>
+
+<p><b>Ejemplo de volcado de un SAVE</b></p>
+
+<p>En la FAQ de comp.sys.sinclair y WorldOfSpectrum tenemos un ejemplo muy interesante que muestra el formato lógico de los datos grabados con un SAVE en cinta. Supongamos el siguiente comando BASIC:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+SAVE "ROM" CODE 0,2
+
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Este comando BASIC salvaría (SAVE), un total de 2 bytes (2) de datos (CODE), empezando en 0 (0) a cinta. En resumen, salvaría el contenido de la dirección de memoria 0x0000 y 0x0001 en cinta. Esto produciría los siguientes datos en cinta:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+00 03 52 4f 4d 20 20 20 20 20 20 20 02 00 00 00 00 80 f1 ff f3 af a3
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Comencemos mostrando qué representa cada dato poco a poco:</p>
+
+<table class="flags">
+        <tr><th>Cabecera</th><th>Bloque de datos</th></tr>
+        <tr><td>00 03 52 4f 4d 20 20 20 20 20 20 20 02 00 00 00 00 80 f1</td><td>ff f3 af a3</td></tr>
+</table>
+
+<p>Desgranando más la información:</p>
+
+<table class="flags">
+        <tr><th>Byte Flag</th><th>Datos cabecera</th><th>Checksum</th><th>Byte flag</th><th>Datos ROM</th><th>Checksum</th></tr>
+        <tr><td>00</td><td>03 52 4f 4d 20 20 20 20 20 20 20 02 00 00 00 00 80</td><td>f1</td><td>ff</td><td>f3 af</td><td>a3</td></tr>
+
+</table>
+
+<p> Concretamente, los datos de la cabecera (ignorando el Byte Flag y el Checksum):</p>
+
+<table class="flags">
+        <tr><th>Tipo de bloque</th><th>Nombre de fichero</th><th>Longitud bloque</th><th>Parámetro 1</th><th>Parámetro 2</th></tr>
+        <tr><td>03</td><td>52 4f 4d 20 20 20 20 20 20 20</td><td>02 00</td><td>00 00</td><td>00 80</td></tr>
+
+</table>
+
+<p>Como véis el nombre "<b>ROM</b>" (52 4F 4D) se completa con espacios en blanco hasta los 10 caracteres. Además podemos ver la longitud del bloque que se salvó (02 bytes).</p>
+
+<p>Después de estos datos tenemos el checksum (F1) y el bloque de datos en sí mismo:</p>
+
+<table class="flags">
+        <tr><th>Byte Flag</th><th>Datos grabados</th><th>Checksum</th></tr>
+        <tr><td>ff</td><td>f3 af</td><td>a3</td></tr>
+
+</table>
+
+<p>En este caso el byte flag es 0xFF (bloque de tipo "datos"), al cual siguen los 2 bytes tomados de la ROM y grabados a cinta (0x0000 y 0x0001) y el checksum (0xA3).</p>
+
+
+<p><b>Rutinas de carga de la ROM</b></p>
+
+<p>Ya sabemos cómo se almacenan los datos en cinta, así que nuestra próxima misión es conocer cómo cargarlos o grabarlos de una manera sencilla. Para hacer esto usaremos las funciones de la ROM del Spectrum para carga y grabación de datos a cinta: hablamos de 2 subrutinas (de LOAD y SAVE) a las que podremos llamar con unos parámetros concretos.</p>
+
+<p><b>Rutina de LOAD de la ROM</b></p>
+
+<p>La rutina de LOAD comienza en la dirección $0556 (0556h ó 1366d) y requiere los siguientes parámetros:</p>
+
+<table class="flags">
+        <tr><th>Registro</th><th>Valor</th></tr>
+        <tr><td>IX</td><td>Dirección inicio de memoria donde almacenar los datos que se van a cargar.</td></tr>
+        <tr><td>DE</td><td>Longitud del bloque de datos a cargar.</td></tr>
+        <tr><td>A</td><td>Flag Byte, normalmente 0x00 para cargar cabeceras o 0xFF (255) para cargar datos.</td></tr>
+
+        <tr><td>CF (CarryFlag)</td><td>1=LOAD, 0=VERIFY</td></tr>
+</table>
+
+<p>La rutina devuelve el CF = 0 si ocurre alguno de los siguientes errores:</p>
+
+<ul>
+<li>"R-Tape Loading Error" (bien por timeout o bien por byte de paridad incorrecto).</li>
+<li>Flag Byte incorrecto.</li>
+<li>"D BREAK - CONT repeats" (se pulsó la tecla BREAK).</li>
+</ul>
+
+<p>Recuerda que puedes activar el CARRY FLAG con la instruccion "SCF" (Set Carry Flag) y ponerlo a cero con un simple "AND A".</p>
+
+<p>Veamos 2 ejemplos, el primero cargaría una pantalla gráfica sobre la videomemoria (el equivalente de un LOAD "" SCREEN$) siempre y cuando la pantalla se haya grabado sin cabecera:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+   SCF                ; Set Carry Flag -> CF=1 -> LOAD
+   LD A, 255          ; A = 0xFF (cargar datos)
+   LD IX, 16384       ; Destino del load = 16384
+   LD DE, 6912        ; Tamaño a cargar = 6912
+   CALL 1366          ; Llamamos a la rutina de carga
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Este segundo programa cargaría un bloque de código ejecutable en memoria, y saltaría a él (un programa "cargador"):</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+   SCF               ; Set Carry Flag (LOAD)
+   LD A, 255        ; A = 0xFF (cargar datos)
+   LD IX, 32768      ; Destino de la carga
+   LD DE, 12000      ; Nuestro "programa" ocupa 12000 bytes.
+   CALL 0556        ; Recordemos que 0556h = 1366d
+   JP 32768          ; Saltamos al programa código máquina cargado
+</pre>
+    </p></td></tr>
+</table>
+
+<p><b>Rutina de SAVE de la ROM</b></p>
+
+
+<p>La rutina SAVE de la ROM tiene unos parámetros muy similares a la de LOAD, y está alojada en 1218d (04c2h):</p>
+
+<table class="flags">
+        <tr><th>Registro</th><th>Valor</th></tr>
+        <tr><td>IX</td><td>Dirección inicio de memoria de los datos que se van a grabar.</td></tr>
+        <tr><td>DE</td><td>Longitud del bloque de datos a grabar (se grabarán los datos desde IX a IX+DE).</td></tr>
+
+        <tr><td>A</td><td>Flag Byte, 0x00 para grabar cabeceras o 0xFF (255) para grabar datos.</td></tr>
+        <tr><td>CF (CarryFlag)</td><td>0 (SAVE)</td></tr>
+</table>
+
+<p>Lo normal es que no tengamos que recurrir en prácticamente ninguna ocasión a la rutina de grabación de datos, de modo que nos centraremos, mediante ejemplos, en la rutina de carga.</p>
+
+
+<p><b>Cargando o Ignorando la cabecera</b></p>
+
+<p>Cuando salvamos datos desde BASIC, lo normal es que se generen 2 bloques de datos, el de la cabecera, y el de los datos en sí mismos. El bloque de datos de la cabecera, cargado en memoria, nos permite saber el tamaño y destino de los datos que vendrán en el siguiente bloque. Es decir, cargando el primer bloque obtenemos la información necesaria para cargar en IX y DE los valores adecuados para la carga del bloque de datos.</p>
+
+<p>En ocasiones, podemos ignorar el bloque de cabecera totalmente, sobre todo cuando sabemos qué vamos a cargar desde cinta, qué destino tiene, y qué tamaño tiene, y lo especificamos directamente en nuestro programa ASM. En ese caso, podemos cargar la cabecera con el CARRY FLAG a cero (verify), con lo cual la leemos pero no la almacenamos en memoria, y después cargar los valores adecuados en IX, DE, A, etc, poner el CF a 1, y cargar los datos que vienen tras la cabecera.</p>
+
+<p>Supongamos que grabamos un bloque de datos, gráficos, una pantalla o música en cinta usando SAVE, rutinas de la ROM, o desde un emulador o herramienta cruzada de PC. Supongamos que sabemos el tamaño exacto en cinta de dichos datos, y no necesitamos leer y analizar la cabecera para cargarlos. En tal caso, podemos ejecutar código como el siguiente:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+  AND A                           ; CF = 0 (verify)
+  CALL 1366                       ; Cargamos e ignoramos la cabecera
+
+  SCF                             ; Set Carry Flag -> CF=1 -> LOAD
+  LD A, 255                       ; A = 0xFF (cargar datos)
+  LD IX, direccion_destino        ; Destino del load
+  LD DE, tamaño_a_cargar          ; Tamaño a cargar
+  CALL 1366                       ; Llamamos a la rutina de carga
+</pre>
+    </p></td></tr>
+
+</table>
+
+
+<p>Posteriormente veremos un ejemplo que ignora la cabecera al cargar una pantalla SCR completa sobre la videoram.</p>
+
+<p>¿Cuándo nos interesa analizar la cabecera? Principalmente cuando los datos están generados desde nuestro propio programa y tienen un tamaño variable. Por ejemplo, supongamos que programamos un editor de textos que da al usuario la oportunidad de salvar y cargar los textos en cinta. En tal caso, necesitaremos leer la cabecera para saber el tamaño del documento (bloque de datos) a cargar, ya que no lo conocemos de antemano.</p>
+
+<p>No obstante, en el caso de un juego, normalmente se conoce con antelación el tamaño de los datos a cargar, por lo que se puede ignorar felizmente la cabecera del bloque de cinta.</p>
+
+
+<p><b>Convirtiendo datos en cinta</b></p>
+
+<p>Lo primero que necesitamos saber es, ¿cómo convertimos nuestros datos (gráficos, pantalla de carga, números, tablas precalculadas, sprites, música, etc) en datos cargables desde las rutinas que hemos visto? Hay múltiples formas de hacerlo.</p>
+
+<p>Para empezar, podemos hacerlo desde el mismo BASIC del Spectrum, usando el comando SAVE: esto nos permitirá grabar datos de memoria en cinta:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+SAVE "nombre" CODE direccion_inicio, tamaño
+</pre>
+    </p></td></tr>
+</table>
+
+
+<p>En la mayoría de los casos, muchos de nosotros programamos hoy en sistemas PC usando compiladores cruzados, ensambladores cruzados y emuladores, por lo que normalmente lo que nos interesará es obtener ficheros TAP para poder concatenarlos con nuestros cargadores o programas.</p>
+
+<p>Supongamos que estamos programando un juego que, nada más acabar, lo primero que hace es cargar desde cinta los datos del nivel actual (gráficos, mapeado, etc). Esto implica que cuando programemos el juego, tendremos por un lado el código, que nos proporcionará un fichero TAP (por ejemplo) listo para ejecutar. A ese fichero TAP tendremos que concatenarle los datos de los diferentes niveles (o gráficos, o los datos que necesitemos).</p>
+
+<p>Así, nuestro "programa.asm" (código fuente) se convierte en "programa.bin" tras el proceso de ensamblado, y finalmente obtenemos un "programa.tap" (o .tzx) listo para cargar en un Spectrum.</p>
+
+<p>Pero en dicho TAP o TZX tenemos que añadir (al final del mismo) los datos que el programa espera cargar. Imaginemos que estos datos son una pantalla gráfica (.scr) de 6912 bytes. Tendremos un fichero "pantalla.scr", y tenemos que introducirlo dentro de nuestro fichero TAP, al final, tras el código del programa, para que cuando este sea ejecutado, lo siguiente que cargue desde cinta nuestro programa sea dicha pantalla SCR.</p>
+
+<p>Para ello, con el objetivo de hacerlo de una manera muy sencilla, utilizaremos ficheros TAP. El formato de este tipo de ficheros es muy sencillo, simplemente contienen bloques de datos precedidos por 2 bytes que indican el tamaño del bloque. Supongamos que tenemos en un fichero los 2 primeros bytes de la ROM que vimos anteriormente:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+
+f3 af
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Este fichero de 2 bytes de tamaño (inicio_rom.bin, por ejemplo), guardado en una cinta tendría el formato que vimos anteriormente: 2 bloques (cabecera y datos).</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+00 03 52 4f 4d 20 20 20 20 20 20 20 02 00 00 00 00 80 f1
+
++
+
+ff f3 af a3
+</pre>
+    </p></td></tr>
+
+</table>
+
+<p>Es decir, 2 bloques de cinta de 19 y 4 bytes de datos, que conforman un SAVE de nuestros 2 bytes. Pues un fichero TAP con estos datos sería, sencillamente, el escribir estos 2 bloques en un fichero anteponiendo a cada bloque el tamaño a cargar:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+13 00 00 03 52 4f 4d 20 20 20 20 20 20 20 02 00 00 00 00 80 f1
+
++
+
+04 00 ff f3 af a3
+</pre>
+    </p></td></tr>
+</table>
+
+
+<p>Es decir "13 00" (número 19 en formato WORD, indicando el tamaño del bloque que viene a continuación) seguido de los 19 bytes, y "04 00" (número 4 en formato WORD) seguido de los 4 bytes del bloque.</p>
+
+<p>El contenido en binario de nuestro inicio_rom.tap sería, pues:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+13 00 00 03 52 4f 4d 20 20 20 20 20 20 20 02 00 00 00 00 80 f1 04 00 ff f3 af a3
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Y el tamaño resultante en bytes del fichero serían 2 + 19 + 2 + 4= 27 bytes.</p>
+
+<p>Gracias a este formato tan sencillo, podemos unir ficheros TAP simplemente concatenándolos. De esta forma, si tenemos nuestro "programa.tap" y la "graficos.tap", y queremos unirlos porque nuestro programa, al ejecutarse, carga los gráficos esperándolos en cinta tras el código del mismo, bastaría con hacer:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+Linux:    cat programa.tap graficos.tap &gt; programa_final.tap
+Windows:  copy /B programa.tap graficos.tap programa_final.tap
+</pre>
+    </p></td></tr>
+</table>
+
+
+<p>Sabemos cómo podemos obtener nuestro programa en formato TAP: cogemos el código fuente, lo compilamos, y o bien obtenemos un TAP directamente (pasmo --tapbas), o bien obtenemos un BIN que convertimos con BIN2TAP. Pero ... ¿cómo convertimos nuestro "graficos.bin", "pantalla_carga.bin", "musica.bin" o cualquier otro fichero de datos en crudo? No podemos usar el BIN2TAP original porque éste añade un cargador BASIC al principio del programa... hay múltiples soluciones, pero la más sencilla es utilizar un ensamblador como <b>pasmo</b>.</p>
+
+<p>Para convertir un fichero .bin en un fichero tap sin cabecera, creamos un pequeño programa ASM (rom.asm) como el siguiente:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+INCBIN "rom.bin"
+</pre>
+    </p></td></tr>
+</table>
+
+<p>A continuación, "ensamblamos" ese programa con PASMO indicando que queremos que nos genere un TAP sin cabecera BASIC:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+pasmo --tap rom.asm rom.tap
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Con esto, obtendremos un fichero "rom.tap" con el contenido de rom.bin, y sin cargador BASIC, listo para utilizar.</p>
+
+<p><b>Ejemplo completo</b></p>
+
+<p>Finamente, para aquellos programadores que quieran ver un ejemplo de aplicación práctica de la recuperación de datos desde un binario en ejecución, vamos a juntar todo lo visto para realizar un programa que cargue una pantalla gráfica completa (fichero .scr) sobre la videoRAM.</p>
+
+<p>Los pasos a seguir para generar el ejemplo son los siguientes:</p>
+
+<p>Primero, buscamos un fichero .SCR de carga (por ejemplo, la pantalla de carga de cualquier juego obtenida desde WOS InfoSeek) y lo almacenamos en disco.</p>
+
+<p>Segundo, mediante pasmo obtenemos un TAP con los datos del fichero SCR, sin cabecera BASIC. Dicho TAP tendrá un tamaño como el siguiente:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+[sromero@compiler]$ ls -l zxcolumns.*
+-rw-r--r-- 1 sromero sromero 6912 2007-10-08 13:01 zxcolumns.scr
+-rw-r--r-- 1 sromero sromero 6937 2007-10-08 13:02 zxcolumns.tap
+</pre>
+    </p></td></tr>
+
+</table>
+
+
+<p>Ahora ya tenemos una pantalla SCR guardada en formato TAP (en cinta). Nótese cómo podríamos cargar este TAP desde BASIC con un <em>LOAD "" CODE 16384,6912</em>, y aparecería la imagen en pantalla.</p>
+
+<p>Lo siguiente que necesitamos es el programa propiamente dicho, el cual hará la carga de la pantalla en videomemoria:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+;----------------------------------------------------------------------
+; Loadscr.asm : Demostración de las rutinas LOAD de la ROM, con
+; la carga de un fichero SCR (desde cinta) en videomemoria.
+;----------------------------------------------------------------------
+
+  ORG 32000
+
+  AND A                           ; CF = 0 (verify)
+  CALL 1366                       ; Cargamos e ignoramos la cabecera
+
+  SCF                             ; Set Carry Flag -> CF=1 -> LOAD
+  LD A, 255                       ; A = 0xFF (cargar datos)
+  LD IX, 16384                    ; Destino del load = 16384
+  LD DE, 6912                     ; Tamaño a cargar = 6912
+  CALL 1366                       ; Llamamos a la rutina de carga
+
+  RET
+
+END 32000
+</pre>
+
+    </p></td></tr>
+</table>
+
+<p>Al respecto del código fuente, como habréis notado, realizamos 2 llamadas a la rutina de la ROM. La primera carga (pero no almacena en ningún sitio) el primer bloque de datos existente (la cabecera de la pantalla de carga). La rutina de la ROM ignorará esta carga porque el CARRY FLAG está a cero (0=VERIFY). La segunda llamada a 1366 realizará la carga de los datos propiamente dichos. Al cargarlos sobre la dirección de destino 16384 (la dirección de la videoram), veremos cómo se van cargando sobre la pantalla directamente desde la cinta.</p>
+
+<p>Ensamblamos nuestro programa con "pasmo --tapbas loadscr.asm loadscr.tap" y tendremos lo siguiente:</p>
+
+<ul>
+<li>Un TAP (loadscr.tap) con nuestro programa (pero que no tiene datos después de él).</li>
+<li>Un TAP (zxcolumns.tap) con los datos gráficos (en este caso, una pantalla completa de 6912 bytes).</li>
+</ul>
+
+<p>Si cargamos en el Spectrum, o en un emulador, el fichero loadscr.tap, nos encontraríamos con que intenta cargar los datos desde cinta, pero no hay datos almacenados tras el programa. Para solucionarlo, concatenamos los 2 TAPs (con cat en Linux o copy en Windows/DOS):</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+[sromero@compiler]$ cat loadscr.tap zxcolumns.tap > programa.tap
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Ahora sí, cargando "programa.tap" en el emulador, cargaremos nuestro programa, el cual llama a la rutina de la ROM para cargar los datos que van después del programa (la pantalla de carga) en videomemoria. Si lo probáis en un emulador, recordad deshabilitar las opciones de carga rápida o carga instantánea si queréis ver el efecto de la carga.</p>
+
+<center>
+
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/loadscreen.png" width="320" height="240"  alt="Nuestro programa cargando el fichero SCR." />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Nuestro programa cargando el fichero SCR.</td>
+	</tr>
+</table>
+</center>
+
+<p>Si os fijáis durante la carga, veréis como primero se carga el LOADER, luego el código máquina de nuestro programa, y después la pantalla. Contando los tonos guía de carga también encontraréis el lugar donde se lee, pero ignora, la cabecera (19 bytes, carga muy corta) de la pantalla SCR.</p>
+
+<p>Un apunte: tanto en el caso de la carga, como de la grabación de datos, recordad que las rutinas de la ROM no indican al usuario que debe pulsar PLAY o REC, por lo que debemos indicar al usuario cuándo debe pulsar PLAY o REC dentro de nuestros programas o juegos. Incluso, cuando acabemos de cargar los datos relativos a nuestro juego, resulta conveniente indicarle al usuario cuándo debe detener la cinta (especialmente en juegos multicarga) e insertar los segundos de "espacio" que creamos convenientes entre bloques.</p>
+
+<p>Recordad que en este ejemplo hemos cargado 6912 bytes de un fichero SCR directamente sobre la videoRAM, pero nada nos impide cargar ficheros de cualquier otro tamaño, con cualquier otro contenido (sprites, fondos, datos, mapeados) sobre cualquier lugar de la memoria (asegurándonos primero que no hay nada en el lugar destino de la carga, como código, la pila, u otros datos o variables). </p>
+
+<p>Así pues, de la misma forma que hemos cargado una pantalla SCR, podemos organizar los gráficos y mapeados de nuestro juego en 1 "bloque de datos" por nivel, cargar los datos del nivel 1 tras acabar la carga de nuestro programa, y sobreescribir estos gráficos y mapeados "en memoria" con los de los diferentes niveles según vaya avanzando el jugador. En otras palabras, podemos hacer un juego multicarga que nos permita tener más sprites, pantallas o gráficos disponibles para cada nivel, que los que tendríamos disponibles si cargamos todos los datos de todos los niveles del juego, ya que usamos toda la memoria para cada nivel, en lugar de dividirla en espacio para los diferentes niveles. A cambio, el usuario tendrá que cargar desde cinta las diferentes fases conforme avanza, y rebobinar para cargar los datos del "Nivel 1" cuando deba empezar una nueva partida.</p>
+
+
+<p><b>Ficheros</b></p>
+
+<ul>
+    <li><a href="src/09_loadscr.asm" onclick="window.open(this.href); return false;">Ejemplo de load de SCR sobre la VRAM</a>.</li>
+    <li><a href="src/09_loadscr.tap" onclick="window.open(this.href); return false;">TAP del ejemplo anterior</a>.</li>
+    <li><a href="src/bin2tap.c" onclick="window.open(this.href); return false;">Conversor de datos a fichero TAP</a>.</li>
+    <li><a href="src/bin2tap_nl.c" onclick="window.open(this.href); return false;">Bin2tap que no genera cargador BASIC</a>.</li>
+
+</ul>
+
+
+<p><b>Enlaces</b></p>
+
+<ul>
+    <li><a href="http://www.worldofspectrum.org/faq/reference/48kreference.htm" onclick="window.open(this.href); return false;">FAQ 48K de WOS</a>.</li>
+    <li><a href="http://www.worldofspectrum.org/faq/reference/48kreference.htm#TapeDataStructure" onclick="window.open(this.href); return false;">Tape Data Structure</a>.</li>
+    <li><a href="http://www.worldofspectrum.org/tapsamp.html" onclick="window.open(this.href); return false;">Cintas y TAPER</a>.</li>
+
+    <li><a href="http://www.worldofspectrum.org/ldbytes.html" onclick="window.open(this.href); return false;">Rutina de carga/grabación de la ROM, desemsamblada y comentada</a>.</li>
+    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt24.html" onclick="window.open(this.href); return false;">Manual del +3</a>.</li>
+    <li><a href="http://www.z80.info/" onclick="window.open(this.href); return false;">Web del Z80</a>.</li>
+    <li><a href="http://www.worldofspectrum.org/faq/reference/z80reference.htm" onclick="window.open(this.href); return false;">Z80 Reference de WOS</a>.</li>
+    <li><a href="http://www.arrakis.es/~ninsesabe/pasmo/" onclick="window.open(this.href); return false;">PASMO</a>.</li>
+
+    <li><a href="http://www.speccy.org/metalbrain/BIN2CODE.EXE" onclick="window.open(this.href); return false;">BIN2CODE (Web de Metalbrain)</a>.</li>
+
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><br><br>Santiago Romero</td>
+    </tr>
+
+</table>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+        <option value="el-aventurero.html">El Aventurero</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="computone.html" selected>Computone</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="basic.html">Programación BASIC</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="128k-mode.html">128K MODE</option>
+        <option value="input.html">INPUT</option>
+        <option value="tira-comica.html">Tira cómica</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+
+    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+    </form>
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+
+</html>

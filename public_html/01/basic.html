@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="zona-pc.html">Zona PC</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="emulacion.html">Emulación</option>
+        <option value="basic.html" selected>Programación BASIC</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 1 - Julio 2003</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+<div align="justify">
+<i>En esta secci&oacute;n queremos ense&ntilde;ar a programar
+juegos en BASIC mediante el empleo de peque&ntilde;os ejemplos y
+soluciones a los problemas que se nos pueden plantear. No pretende
+ser un profundo curso de BASIC, pero si unas pr&aacute;cticas que
+complementen nuestros conocimientos previos en el lenguaje, por
+m&iacute;nimos que sean, o que puedan servir como ejercicios
+simultáneos al aprendizaje sobre un libro que podamos leer.<br>
+
+<br>
+Para poder encontrar una explicaci&oacute;n profunda a cada comando
+que utilicemos, el mejor sitio es el manual del propio Spectrum,
+sobre todo el que se entregaba con la versi&oacute;n de 16k y 48k
+con tapas naranjas.<br>
+<br>
+Tambi&eacute;n vamos a utilizar alguna utilidad externa que
+funciona sobre PC, como puede ser el caso del BAS2TAP, que nos
+facilite la tarea, ya que, siendo realistas, es m&aacute;s
+f&aacute;cil programar en un archivo de texto en el PC y luego
+probar sobre un emulador, que tener que soportar tiempos de espera
+en cargas y grabaciones, etc.<br>
+<br>
+Hoy vamos a centrarnos en la carga y grabaci&oacute;n de nuestros
+programas y el uso del BAS2TAP, un programa sencillo pero potente
+que nos va a ser de mucha utilidad a la hora de programar sobre
+nuestro PC.</i><br>
+<br>
+<b>CARGA Y GRABACIÓN DE PROGRAMAS EN EL ZX-SPECTRUM</b><br>
+
+<br>
+Lo primero que vamos a aprender es a grabar y cargar nuestros
+programas en cinta y disco con un Spectrum, en cualquiera de sus
+modelos.<br>
+<br>
+Escribimos un peque&ntilde;o programa de ejemplo en nuestro
+Spectrum:<br>
+<br>
+<table border="0" cellspacing="0" cellpadding="4" width="100%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="programa1">- PROGRAMA 1 -</a>
+		</td>
+
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+10 PRINT "Hola mundo"<br>
+20 GO TO 10
+		</td>
+	</tr>
+</table>
+<br>
+Este sencillo programa (aunque corto y simple, no deja de
+serlo), nos sirve perfectamente para nuestros fines, practicar el
+uso de los comandos de carga y grabaci&oacute;n en nuestro
+Spectrum.<br>
+
+<br>
+<b>GRABACIÓN Y CARGA EN CINTA</b><br>
+<br>
+<ul>
+<li>Grabaci&oacute;n.<br>
+<br>
+Simplemente, una vez introducido el programa, tecleamos [<font class="codigo">SAVE
+"prueba"</font>] y pulsamos [<font class="codigo">ENTER</font>],
+el Spectrum nos mostrar&aacute; el
+siguiente mensaje: [<font class="codigo">Start tape, then press any key</font>], hacemos
+lo que
+dice el mismo, pulsamos rec y play en la grabadora y pulsamos
+cualquier tecla. En unos segundos tendremos grabado el programa en
+cinta (recordad que el comando SAVE se teclea tal cual en los modelos
+de 128K, pero que se introduce pulsando la tecla 's' en los modelos
+48K).<br>
+
+<br>
+ Otra opci&oacute;n es indicarle que el programa se autoejecute una
+vez cargado, sin necesidad de teclear [<font class="codigo">RUN</font>]
+ para que comience a
+funcionar, esto lo conseguimos simplemente de la siguiente manera:
+[<font class="codigo">SAVE "prueba" LINE 10</font>]. Con esto conseguimos que al cargar el
+programa se comience a ejecutar por la línea 10. Lógicamente
+podemos cambiar el n&uacute;mero de l&iacute;nea, o poner [<font class="codigo">LINE 0</font>]
+para que arranque por la primera l&iacute;nea que encuentre de
+programa, independientemente del n&uacute;mero que tenga. Este
+valor debe estar comprendido entre 0 y 9999, ya que este
+&uacute;ltimo valor es el perteneciente a la &uacute;ltima línea
+que podemos introducir normalmente en un programa BASIC.<br>
+
+<br>
+</li>
+
+<li>Verificaci&oacute;n.<br>
+<br>
+Rebobinamos la cinta al comienzo de la grabaci&oacute;n, tecleamos
+[<font class="codigo">VERIFY "prueba"</font>] y pulsamos [<font class="codigo">ENTER</font>] y
+ play en el cassette. Si todo
+va bien, nos devolver&aacute; en mensaje de conformidad, y en caso
+de que falle, el famoso error de carga, con lo cual
+tendr&iacute;amos que retomar el punto anterior y volver a grabar
+el programa de nuevo. Por supuesto, tendremos que tener el programa
+que hemos grabado en memoria todav&iacute;a y sin modificar, ya que
+de otra forma generar&iacute;a un error de carga por no
+corresponderse el programa en memoria con lo grabado en cinta. Para introducir
+VERIFY en modo comando se utiliza la tecla 'R' estando en modo extended. Es decir,
+pulsamos Caps+Symbol y luego Caps+R.<br>
+
+<br>
+</li>
+
+<li>Carga del programa.<br>
+<br>
+Pr&aacute;cticamente lo mismo que en el apartado de
+verificaci&oacute;n, solo que cambiando el VERIFY por [<font class="codigo">LOAD
+"programa"</font>]. Si lo grabamos con la opci&oacute;n [<font class="codigo">LINE</font>]
+ el programa
+se ejecutar&aacute; solo al terminar la carga, si no hicimos esto,
+tendremos que teclear [<font class="codigo">RUN</font>] + [<font class="codigo">ENTER</font>]
+ una vez terminada la carga (RUN se introduce como 'r' en modo 48K).
+Hay que tener en cuenta que si tenemos otro programa en BASIC en
+memoria, se borrar&aacute; al cargar el nuevo encima. Nótese de nuevo que LOAD se introduce pulsando la tecla 'j' en modo comando del 48K.<br>
+
+<br>
+</li>
+
+<li>Uni&oacute;n de programas.<br>
+<br>
+Otra opci&oacute;n que tenemos es unir un programa disponible en la
+memoria del Spectrum con otro que tengamos en cinta. Esto se logra
+tecleando [<font class="codigo">MERGE "programa"</font>] (que se introduce
+pulsando Caps+T en modo Extended de 48k). Pero hay que tener unas ciertas
+precauciones debido al funcionamiento de este comando, que nos
+puede hacer perder líneas de programa en memoria. Normalmente, si
+las líneas que tenemos en memoria, coinciden por las que tenemos en
+cinta, las sustituye por estas, y si no coinciden las intercala
+unas con otras. Esto lo vamos a entender mejor mediante un sencillo
+ejemplo. Si en memoria tenemos el <a href="#programa1">PROGRAMA
+1</a> que us&aacute;bamos como primer ejemplo, y en cinta uno tal
+que:</li>
+</ul>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="programa2">- PROGRAMA 2 -</a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+&nbsp;5 REM Esto es una prueba<br>
+
+20 GO TO 5
+		</td>
+	</tr>
+</table>
+<br>
+El resultado que obtendr&iacute;amos ser&iacute;a:<br>
+<br>
+<table border="0" cellspacing="0" cellpadding="4" width="100%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="programa3">- PROGRAMA 3 -</a>
+
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+&nbsp;5 REM Esto es una prueba<br>
+10 PRINT "Hola mundo"<br>
+20 GO TO 5
+		</td>
+	</tr>
+</table><br>
+
+Con lo cual vemos que, como la l&iacute;nea 5 no estaba en
+memoria, se incluye sin machacar nada, pero la 20, que est&aacute;
+tanto en memoria como en la cinta, es sustituida por la grabada en
+cinta.<br>
+<br>
+Con [<font class="codigo">MERGE</font>] tambi&eacute;n podemos evitar que los programas
+grabados con la opci&oacute;n [<font class="codigo">LINE XXXX</font>] se ejecuten al cargar, si
+teniendo la memoria sin nada, hacemos [<font class="codigo">MERGE "programa"</font>] al
+finalizar la carga de el mismo, nos devolver&aacute; el control sin
+empezar a correr el programa. Útil si no queremos estar pendiente
+de cuando termine para pulsar [<font class="codigo">BREAK</font>]. Por supuesto, si tenemos
+algo en memoria funcionar&aacute; con las propiedades del comando,
+mezclando y sustituyendo l&iacute;neas y nos devolver&aacute; el
+control.<br>
+
+<br>
+NOTA: Estos comandos tienen m&aacute;s opciones, entre ellas guardar
+programas o datos como bytes, arrays, etc. Cuestiones que
+explicaremos si llega el momento de utilizarlos. Por el momento con
+estas explicaciones nos va a valer para ir creando nuestro
+juego.
+<br><br>
+<b>GRABACI&Oacute;N Y CARGA EN DISCO EN UN SPECTRUM +3</b><br>
+<br>
+Los comandos son los mismos básicamente que en la opci&oacute;n de
+cinta, lo único que cambia es el destino hac&iacute;a donde
+grabamos y desde donde cargamos, lo cual se lo debemos indicar
+para que los busque en el sitio correcto, es decir, el disco del +3
+o la cinta de cassette, por ejemplo. Tambi&eacute;n cambia
+ligeramente el nombre que le podemos dar al programa, ahora le
+podemos poner terminaciones del tipo .bas para programas en
+BASIC.<br>
+<br>
+ Por defecto el +3 manda la salida y entrada de datos de los
+comandos comentados a la disquetera, <font class="codigo">"a:"</font>. Esto se puede modificar
+muy fácilmente. Si queremos usar la cinta en lugar de la
+disquetera, tecleamos [<font class="codigo">LOAD "t:" + ENTER</font>], el ordenador nos
+responder&aacute; con un mensaje de conformidad y a partir de este
+momento, cada vez que utilicemos un comando de carga se
+dirigir&aacute; a la cinta de cassette, y si lo que necesitamos es
+grabar en cinta, hacemos lo mismo pero con el comando [<font class="codigo">SAVE "t:" +
+ENTER</font>]. En el momento que queramos volver a orientar el envío de
+datos al disco, ponemos los mismos comandos anteriores, pero
+cambiando la letra que corresponda a la unidad deseada, [<font class="codigo">a:</font>] para
+la disquetera del +3, [<font class="codigo">b:</font>] si tenemos una segunda disquetera
+externa, como la de 3 1/2, [<font class="codigo">t:</font>] para la cinta de cassette.<br>
+
+<br>
+Los nombres de los programas, como coment&aacute;bamos antes,
+pueden poseer una terminaci&oacute;n que los identifique unos de
+otros. Es decir, podemos poner [<font class="codigo">SAVE "programa.bas"</font>] para un
+programa en BASIC, [<font class="codigo">SAVE "programa.bin" code 30000,4000</font>] para un
+bloque de bytes o [<font class="codigo">SAVE "pantalla.scr" SCREEN$</font>] para las pantallas
+de presentaci&oacute;n. La &uacute;nica norma que tenemos que
+seguir es respetar el l&iacute;mite de 8+3 caracteres por nombre,
+estilo MS-DOS.<br>
+<br>
+Una opci&oacute;n que tenemos es, dando el nombre adecuado, hacer
+que un programa se cargue solo con la opci&oacute;n [<font class="codigo">LOADER</font>] del
+men&uacute; del +3. Para esto debemos grabar el programa como [<font class="codigo">SAVE
+"DISK" LINE XXXX</font>], siendo line opcional, como explicamos al
+comienzo del art&iacute;culo. Este programa lo podemos usar como
+men&uacute; de acceso a los demás archivos, o cualquier utilidad
+que se nos ocurra.<br>
+
+<br>
+Tenemos m&aacute;s comandos para utilizar en el +3 y la unidad de
+disco.
+
+<ul>
+<li>Formateo de los discos: Antes de utilizar un disco, deberemos
+darle un formato. Esto se consigue con el comando [<font class="codigo">FORMAT</font>]. Un
+disco sin formato no es legible para el sistema operativo, por lo
+cual deberemos d&aacute;rselo nosotros, tarea muy sencilla que se
+consigue tecleando [<font class="codigo">FORMAT "A:" + ENTER</font>], esperamos unos segundos y
+repetimos el proceso con la otra cara del disco. Hay que ser muy
+cuidadosos con el uso de este comando, ya que al utilizarlo
+perderemos el contenido de la cara del disco al que lo
+apliquemos.</li>
+
+<li>Listado de los archivos contenidos en un disco: El comando [<font class="codigo">CAT
++ ENTER</font>] nos saca un listado de los archivos que tenemos en el
+disco, ordenados alfab&eacute;ticamente.</li>
+
+<li>Borrado de ficheros: Con el comando [<font class="codigo">ERASE "programa.bas"</font>]
+borraremos del disco el archivo nombrado, sin posibilidad de
+recuperarlo, por lo cual hay que tener mucha prudencia en su
+uso.</li>
+</ul>
+
+<b>UTILIZACI&Oacute;N DE BAS2TAP</b><br>
+<br>
+BAS2TAP es un programa creado por Martijn van der Heide, conocido
+por ser el responsable de la web World of Spectrum, que nos va a
+permitir escribir un programa BASIC en un editor de texto, sobre PC
+por ejemplo, y crear un archivo TAP que se pueda cargar en el
+emulador que usemos habitualmente, e incluso pasarlos a cinta con
+los programas destinados al efecto y cargarlo en un Spectrum real.
+BAS2TAP est&aacute; disponible
+para plataformas Linux, PC/MS-DOS, Amiga y Mac OS X. El autor de
+este art&iacute;culo lo ha probado en Linux y MS-DOS con un
+resultado optimo en ambos casos, en las otras dos plataformas no ha
+sido posible por no disponer de las m&aacute;quinas.<br>
+
+<br>
+Las ventajas de programar utilizando este sistema son evidentes y
+no las vamos a enumerar todas, pero solo con decir que vamos a
+evitar los tiempos de carga y grabaci&oacute;n en el Spectrum, y
+que los resultados van a ser inmediatos sobre el emulador, creo que
+pocas justificaciones m&aacute;s necesitamos.<br>
+<br>
+Una vez descargado el programa de su web, lo descomprimimos en una
+carpeta y queda listo para su uso. En el archivo [bas2tap.doc] que
+acompa&ntilde;a a la distribuci&oacute;n encontramos las
+instrucciones y otros datos útiles, aqu&iacute; vamos a explicar
+someramente lo que nos hace falta saber.
+
+<ul>
+<li>Vamos a comenzar a programar: abrimos nuestro
+editor de textos favorito, vim para Linux, Bloc de Notas en Windows, etc. e
+introducimos el <a href="#programa1">PROGRAMA 1</a> que utilizamos antes, por ejemplo. Los
+comandos BASIC del Spectrum debemos teclearlos en
+may&uacute;sculas, o al ejecutar el BAS2TAP nos generar&aacute; una
+serie de errores, que podemos evitar pasando un
+par&aacute;metro que luego comentaremos, a la hora de ejecutarlo.
+Tambi&eacute;n podemos dejar l&iacute;neas en blanco entra las
+escritas de c&oacute;digo para clarificar el mismo, aunque esto
+genera una serie de alertas (<i>warnings</i>) a la hora de crear el archivo
+.TAP, no tiene mayor importancia.<br>
+
+<br>
+Una vez tengamos el programa BASIC preparado salvamos el archivo
+.txt con el nombre que deseemos, a ser posible en formato 8+3, por
+ejemplo: <font class="codigo">"programa.txt"</font> y lo alojamos en la carpeta donde tengamos
+descomprimido el BAS2TAP.<br>
+<br>
+</li>
+
+<li>El siguiente paso es generar el archivo .TAP que cargaremos en
+el emulador. BAS2TAP hay que utilizarlo desde consola de texto,
+tanto si estamos en Linux como en Windows, ya que para este
+&uacute;ltimo S.O. no hay versi&oacute;n y corre bajo MS-DOS.<br>
+<br>
+Tecleamos [<font class="codigo">bas2tap programa.txt</font>] y, siempre
+que no tengamos errores
+de sintaxis en el listado, nos crear&aacute; un archivo
+
+<font class="codigo">programa.tap</font> en pocos segundos.<br>
+<br>
+Otra opci&oacute;n que le podemos poner es [<font class="codigo">-c</font>] con lo que
+ignorar&aacute; si tenemos los comandos escritos en
+may&uacute;sculas o min&uacute;sculas. [<font class="codigo">bas2tap -c
+programa.txt</font>]<br>
+<br>
+
+Tambi&eacute;n podemos poner el nombre del archivo tap, diferente
+al txt de entrada: [<font class="codigo">bas2tap programa.txt minero.tap</font>], con lo cual
+generar&aacute; un archivo <font class="codigo">minero.tap</font>.<br>
+<br>
+En caso de que dejemos líneas en blanco entre el c&oacute;digo
+BASIC para poder verlo con m&aacute;s claridad, nos generar&aacute;
+alertas al crear el tap, podemos decirle al programa que no nos las
+muestre con [<font class="codigo">bas2tap -w programa.txt</font>].<br>
+
+<br>
+Y, por &uacute;ltimo, si queremos que el tap, se autoarranque al
+cargarlo en el emulador, igual que con la opci&oacute;n LINE del
+BASIC en el Spectrum: [<font class="codigo">bas2tap -aXX programa.txt</font>] donde XX es la
+l&iacute;nea por la que queremos que se ejecute el programa.</li>
+</ul>
+Por supuesto esta utilidad tiene m&aacute;s opciones que podemos
+utilizar, y que tenemos descritas en el archivo <font class="codigo">bas2tap.doc</font> que
+acompa&ntilde;a a la distribuci&oacute;n del mismo. Pero con estos
+simples pasos aqu&iacute; reflejados son suficientes para empezar a
+trabajar con este buen programa de Martijn van der Heide.
+
+<br><br>
+
+<b>CONCLUSIONES</b><br>
+<br>
+En esta entrega nos hemos limitado a ver unos conceptos
+b&aacute;sicos que necesitaremos utilizar cada vez que queramos
+programar, como es el almacenamiento de nuestro c&oacute;digo en un
+soporte permanente, ya que la memoria RAM de nuestro Spectrum se
+borra en cuanto deja de recibir corriente el&eacute;ctrica. El mes
+que viene empezaremos a crear de cero nuestro primer juego, e
+iremos ampli&aacute;ndolo poco a poco y metiendo opciones y efectos
+que lo hagan m&aacute;s atractivo.<br>
+<br>
+<b>LINKS</b><br>
+<br>
+<ul>
+
+<li><a href=
+"http://www.madhippy.com/8-bit/sinclair/zxspecman/" onClick="window.open(this.href); return false;">Manual
+del ZX-Spectrum</a></li>
+
+<li><a href=
+"http://www.madhippy.com/8-bit/sinclair/zxspec3man/index.html" onClick="window.open(this.href); return false;">Manual
+del ZX-Spectrum +3</a></li>
+
+<li><a href=
+"http://www.worldofspectrum.org/utilities.html" onClick="window.open(this.href); return false;">BAS2TAP</a></li>
+</ul>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right"><br>MIGUEL</td>
+
+	</tr>
+</table>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="zona-pc.html">Zona PC</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="emulacion.html">Emulación</option>
+        <option value="basic.html" selected>Programación BASIC</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+    </form>
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+
+</html>

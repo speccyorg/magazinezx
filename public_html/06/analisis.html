@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<title>Magazine ZX</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body bgcolor="#CFCFCF">
+
+<center>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+<tr>
+	<td>
+		<a name="arriba"></a>
+		<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+			<tr align="center" valign="center">
+				<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+			</tr>
+		</table>
+	</td>
+
+</tr>
+<tr>
+	<td>
+		<script language="JavaScript">
+			function RecargarCabecera(url)
+			{
+				document.location=url;
+			}
+		</script>
+		<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+			<form name="selector_secciones">
+				<tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+				<tr>
+					<td align="left">
+						<input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior" value="<" />
+						<select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+							<option value="index.html">Portada</option>
+							<option value="editorial.html">Índice - Editorial</option>
+							<option value="panorama.html">Panorama</option>
+							<option value="analisis.html" selected>Análisis</option>
+
+							<option value="hardware.html">Hardware</option>
+							<option value="al-descubierto.html">Al Descubierto</option>
+							<option value="zona-www.html">Zona WWW</option>
+							<option value="z88dk.html">Programación Z88DK</option>
+							<option value="ensamblador.html">Programación Ensamblador</option>
+							<option value="opinion.html">Opinión</option>
+
+						</select>
+						<input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
+					</td>
+					<td align="center" class="texto">Número 6 - Marzo 2004</td>
+					<td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+				</tr>
+			</form>
+		</table>
+		</a>
+	</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+<td>
+	<table border="0" cellspacing="0" cellpadding="8" width="<?php echo ANCHO_REVISTA; ?>" class="texto">
+		<tr>
+			<td>
+				<div align="justify">
+					<p>
+						Este mes reducimos el número de comentarios debido al extenso reportaje acerca del ST2003. No
+						obstante, contamos con dos interesantes artículos: <a href="#gatecrasher">Gatecrasher</a> a
+						cargo de YOJIMBO y <a href="#wizardslair">Wizard's Lair</a>, por MIGUEL.
+						Esperamos que los disfrutéis.
+					</p>
+					<p>
+					<a name="gatecrasher"><b>GATECRASHER</b></a>
+					</p>
+					<table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
+						<tr valign="center">
+							<td rowspan="9" bgcolor="#EEEEEE"><img src="img/portada_gatecrasher.jpg" width="129" height="200" alt="Portada Gatecrasher" /></td>
+							<td bgcolor="#66AEEF">Título</td>
+							<td bgcolor="#FFFFFF">Gatecrasher</td>
+						</tr>
+
+						<tr>
+							<td bgcolor="#66AEEF">Género</td>
+							<td bgcolor="#FFFFFF">Puzzle</td>
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Año</td>
+							<td bgcolor="#FFFFFF">1984</td>
+
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Máquina</td>
+							<td bgcolor="#FFFFFF">48K</td>
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Jugadores</td>
+
+							<td bgcolor="#FFFFFF">1 Jugador</td>
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Compañía</td>
+							<td bgcolor="#FFFFFF">Quicksilva Ltd.</td>
+						</tr>
+						<tr>
+
+							<td bgcolor="#66AEEF">Autores</td>
+							<td bgcolor="#FFFFFF">Tony Beckwith, Dave Mendes</td>
+						</tr>
+
+						<tr>
+							<td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
+						</tr>
+						<tr>
+
+							<td colspan="2" bgcolor="#FFFFFF">
+								<ul>
+									<li><a href="ftp://ftp.worldofspectrum.org/pub/sinclair/magazines/Crash/Issue07/Pages/Crash0700086.jpg" target="_blank">Crash Issue 07</a></li>
+									<li><a href="http://www.sincuser.f9.co.uk/030/ssftwre.htm" target="_blank">Sinclair User Issue 30</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+					<p>
+						En el año 1984, Quicksilva se empeñaba en sacar lo máximo de las parcas posibilidades gráficas de la máquina, a la par que trataba dar con nuevas fórmulas. Estamos en un año que aún trata de sacar nuevas ideas a la luz y aún no se ha visto tan influenciado por las licencias cinematográficas ni por las conversiones de las recreativas o simplemente por el estilo de estas.
+					</p>
+					<p>
+						La idea básica es tratar de hacer rodar una serie de barriles a través de un tablero, compuesto de una serie de tramos separados por compuertas diagonales, para finalmente encajar una serie de barriles en una serie de huecos en la parte baja de la pantalla.
+					</p>
+					<center>
+						<table border="0" cellspacing="0" cellpadding="2" width="272">
+							<tr align="right">
+								<td><img src="img/gatecrasher0.gif" width="272" height="208"  alt="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="piefoto" align="right">Menú principal de Gatecrasher</td>
+							</tr>
+						</table>
+					</center>
+					<p>
+						La complicación viene dada porque la dirección de cada compuerta influye en la dirección que tomará el barril al atravesarla, y este a su paso cambiará la dirección de dicha compuerta.
+					</p>
+					<p>
+						Para ayudarnos en nuestra tarea contamos con la libertad de elegir el hueco inicial desde el que lanzar los barriles desplazando el surtidor de los mismos, y con la posibilidad de rotar verticalmente el tablero, desplazando arriba y abajo la disposición de tramos y compuertas.
+					</p>
+					<center>
+						<table border="0" cellspacing="0" cellpadding="2" width="272">
+							<tr align="right">
+								<td><img src="img/gatecrasher1.gif" width="272" height="208"  alt="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="piefoto" align="right">El tablero espera que lancemos nuestro primer barril</td>
+							</tr>
+						</table>
+					</center>
+					<p>
+						Como limitaciones, introducir un barril en un hueco que ya contenía uno supone la eliminación de ambos barriles, y por otro lado tenemos un número limitado de los mismos.
+					</p>
+					<p>
+						El juego no tiene mayor complicación, no se basa en tiempos agobiantes, ni hay otros obstáculos que nos acechen, es un puzzle de lo más calmado a la vez que entretenido.
+					</p>
+					<center>
+						<table border="0" cellspacing="0" cellpadding="2" width="272">
+							<tr align="right">
+								<td><img src="img/gatecrasher2.gif" width="272" height="208"  alt="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="piefoto" align="right">El barril a punto de llegar abajo</td>
+							</tr>
+						</table>
+					</center>
+					<p>
+						Gráficamente es simple pero muy correcto, sin excesos de colorido pero en absoluto monocromático. El sonido en cambio es de lo más estridente en su menú y simplemente funcional en la partida, limitándose a las repercusiones de los mínimos eventos durante la misma.
+					</p>
+					<p>
+						El manejo es sencillo (Izquierda, Derecha, mover el tablero hacia arriba o abajo, y lanzar el barril) ya sea mediante teclas redefinibles o mediante Kempston Joystick.
+					</p>
+					<table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
+						<tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
+
+							<td colspan="14">Valoraciones</td>
+						</tr>
+						<tr>
+							<td>Originalidad: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[8]</td>
+							<td>&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Gr&aacute;ficos: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[6]</td>
+							<td>&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Sonido: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[5]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+
+						</tr>
+						<tr>
+							<td>Jugabilidad: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[8]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+
+						<tr>
+							<td>Adicci&oacute;n: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[6]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+
+						<tr>
+							<td>Dificultad: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[7]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+					</table>
+					<p>
+						<b>Descárgalo de:</b>
+					<ul>
+						<li><a href="http://www.worldofspectrum.org/infoseek.cgi?regexp=Gatecrasher" onClick="window.open(this.href); return false;">WOS</a></li>
+					</ul>
+					</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td align="right"><br><br>Yojimbo</td>
+		</tr>
+		<tr>
+			<td>
+				<div align="justify">
+					<hr>
+					<p>
+						<a name="wizardslair"><b>WIZARD'S LAIR</b></a>
+					</p>
+					<table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
+						<tr valign="center">
+							<td rowspan="9" bgcolor="#EEEEEE"><img src="img/portada_wizardslair.jpg" width="124" height="200" alt="Portada Wizard's Lair" /></td>
+							<td bgcolor="#66AEEF">Título</td>
+							<td bgcolor="#FFFFFF">Wizard's Lair</td>
+						</tr>
+
+						<tr>
+							<td bgcolor="#66AEEF">Género</td>
+							<td bgcolor="#FFFFFF">Aventura</td>
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Año</td>
+							<td bgcolor="#FFFFFF">1985</td>
+
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Máquina</td>
+							<td bgcolor="#FFFFFF">48K</td>
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Jugadores</td>
+
+							<td bgcolor="#FFFFFF">1 Jugador</td>
+						</tr>
+						<tr>
+							<td bgcolor="#66AEEF">Compañía</td>
+							<td bgcolor="#FFFFFF">Bubblebus Software</td>
+						</tr>
+						<tr>
+
+							<td bgcolor="#66AEEF">Autor</td>
+							<td bgcolor="#FFFFFF">Stephen Crow</td>
+						</tr>
+
+						<tr>
+							<td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
+						</tr>
+						<tr>
+
+							<td colspan="2" bgcolor="#FFFFFF">
+								<ul>
+									<li><a href="ftp://ftp.worldofspectrum.org/pub/sinclair/magazines/Crash/Issue14/Pages/Crash1400034.jpg" target="_blank">Crash Issue 14</a></li>
+									<li><a href="ftp://ftp.worldofspectrum.org/pub/sinclair/magazines/YourSpectrum/Issue14/Pages/YourSpectrum1400043.jpg" target="_blank">Your Spectrum Issue 14</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+					<p>
+						De todos es sabido que los hermanos Chris y Tim Stamper marcaron una estilo, además
+						de una época, con poco más de una docena de títulos que programaron bajo su
+						sello Ultimate. Verdaderas joyas de la programación como Jet Pac, Knight Lore
+						o Nightshade, entre otros,  no podían hacer otra cosa que fomentar la creación de
+						juegos clónicos que pretendían conseguir el éxito aprovechando el camino abierto
+						por aquellos. El juego que comentamos hoy es un claro ejemplo de esto.
+					</p>
+					<p>
+						Stephen Crow, autor de este Wizard's Lair que comentamos hoy, se inspira claramente
+						en dos grandes producciones como son Atic Atac y Sabre Wulf para su creación.
+						Intenta coger lo mejor de ellos: velocidad, gráficos coloridos, muchos enemigos
+						pululando por las numerosas habitaciones y un argumento que nos pueda sumergir en
+						un ambiente aventurero y frenético para hacernos pasar un buen rato. ¿Lo consigue?
+						Seguid leyendo y sacad vuestras propias conclusiones aunque, como credenciales,
+						podemos decir que el programador de este juego creó a lo largo de su trayectoria
+						obras maestras como Firelord, Starquake o Zynaps, lo que resulta suficiente
+						para darle una oportunidad a este, no muy conocido, Wizard's Lair.
+					</p>
+					<center>
+						<table border="0" cellspacing="0" cellpadding="2" width="320">
+							<tr align="right">
+								<td><img src="img/wizards_02.png" width="320" height="240"  alt="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="piefoto" align="right">Pantalla de presentación</td>
+							</tr>
+						</table>
+					</center>
+					<p>
+						Nada más cargar el juego en nuestro Spectrum, nos sobra con un modelo
+						que posea 48k de memoria, nos encontramos con un completo menú de opciones que
+						nos deja configurar los controles de la manera que mejor se adapten a nuestras
+						preferencias: manejar el personaje con Joystick Kempston, Cursor o Sinclair y
+						redefinir el teclado a nuestra conveniencia. Una musiquilla, correcta y que no
+						se reproduce durante la partida, nos amenizará mientras configuramos los controles
+						del juego.
+					</p>
+					<p>
+						El argumento, sencillo: tenemos que encontrar los cuatro trozos en que ha sido
+						dividida la fabulosa figura de un león de oro, aunque demos nuestra vida en
+						el empeño. Claro está que la búsqueda por las docenas de pantallas que componen
+						el mapeado no va a ser un paseo militar. Vamos a tener que luchar contra auténticas
+						hordas de enemigos que salen de la nada con el único objetivo de impedir nuestra
+						aventura; evitar los profundos pozos a los que podemos caer si entramos en las
+						diferentes habitaciones a todo correr evitando el acoso de los monstruos y, por
+						supuesto, una de los principales obstáculos será la gran cantidad de pantallas
+						que tenemos que recorrer para la finalización del juego, 256, divididas en 7
+						niveles con diferentes ambientaciones. Esta decoración es muy atractiva
+						visualmente, las pantallas derrochan colorido y variedad, encontrando ríos que
+						nos cortan el paso, vegetación abundante en las pantallas de exteriores con
+						un cierto parecido al Sabre Wulf y un ambiente muy "Atic Atac" en los interiores
+						de la mansión y los subterráneos y cavernas, con ese estilo de paredes y
+						muros a base de líneas que le da un aspecto muy característico.
+					</p>
+					<center>
+						<table border="0" cellspacing="0" cellpadding="2" width="320">
+							<tr align="right">
+								<td><img src="img/wizards_03.png" width="320" height="240"  alt="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="piefoto" align="right">Menú principal</td>
+							</tr>
+						</table>
+					</center>
+					<p>
+						En el aspectro gráfico existe un salto de calidad bastante apreciable entre los decorados
+						en sí y el personaje y los monstruos. Mientras que las habitaciones, como
+						comentábamos anteriormente, son muy atractivas, el personaje principal parece
+						un alien sacado de las filmaciones de Roswell. Y no es una exageración, menos
+						un mago parece cualquier cosa. Los enemigos, otro tanto, no están muy
+						conseguidos, pero es una pega que podemos pasar por alto si nos centramos en
+						destruirlos, verlos mucho tiempo en pantalla es peligroso para nuestra salud.
+					</p>
+					<p>
+						Respecto al sonido, quitando la musiquita del menú (y felicitémonos porque no
+						esté sonando durante el juego, ya que podría terminar con nuestra paciencia
+						y nuestros nervios) se limita a algún que otro efecto, correcto, al matar enemigos
+						y corretear por las habitaciones.
+					</p>
+					<center>
+						<table border="0" cellspacing="0" cellpadding="2" width="320">
+							<tr align="right">
+								<td><img src="img/wizards_01.png" width="320" height="240"  alt="" />
+								</td>
+							</tr>
+							<tr>
+								<td class="piefoto" align="right">En plena acción</td>
+							</tr>
+						</table>
+					</center>
+					<p>
+						El control del personaje es preciso, responde bien a los controles, lo cual es
+						de agradecer cuando te ves rodeado de enemigos y tienes que escaparte por una
+						puerta a toda velocidad o ponerte a disparar a destajo. Aunque no debemos abusar
+						de los disparos, ya que tenemos un número limitado de los mismo. Las hachas que
+						arrojamos se nos terminaran en un determinado momento, aunque por el mapeado
+						tenemos repartida munición que podemos recoger. En el mapeado también tenemos
+						diversos objetos que podemos recoger: comida que incrementará nuestra vida,
+						la cual disminuye, además de al roce con los enemigos, por el paso del
+						tiempo; tesoros, con los cuales incrementaremos nuestra cantidad de oro, oro
+						con el cual podemos comprar unos pergaminos que hay distribuidos en varias
+						habitaciones y que nos servirán para canjearlo por llaves, energía, etc.; llaves,
+						para abrir puertas, lógico.
+					</p>
+					<p>
+						Resumiendo, Wizard's Lair es un juego muy adictivo, realizado correctamente
+						salvo la pequeña pega de los gráficos del personaje principal, y que nos
+						va a hacer pasar unos ratos muy entretenidos delante de nuestro Spectrum. Si
+						pasaste horas esquivando al rinoceronte de Sabre Wulf o bajando y subiendo escaleras
+						en el Atic Atac, este Wizard's Lair te gustará.
+					</p>
+					<table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
+						<tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
+
+							<td colspan="14">Valoraciones</td>
+						</tr>
+						<tr>
+							<td>Originalidad: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[6]</td>
+							<td>&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Gr&aacute;ficos: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[8]</td>
+							<td>&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Sonido: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[6]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+
+						</tr>
+						<tr>
+							<td>Jugabilidad: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[9]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+
+						<tr>
+							<td>Adicci&oacute;n: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[9]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+
+						<tr>
+							<td>Dificultad: </td>
+							<td>&nbsp;</td>
+							<td bgcolor="#FFFFFF">[8]</td>
+							<td>&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#00FF00" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+							<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
+						</tr>
+					</table>
+					<p>
+						<b>Trucos:</b>
+					</p>
+					<p>Puedes encontrarlos en <a href="http://www.the-tipshop.co.uk/cgi-bin/search.pl?name=Wizard%60s+Lair" onClick="window.open(this.href); return false;">The Tip Shop</a>
+					</p>
+					<b>Descárgalo de:</b>
+					<ul>
+						<li><a href="http://www.worldofspectrum.org/infoseek.cgi?regexp=^Wizard%27s+Lair$&pub=^Bubblebus+Software$" onClick="window.open(this.href); return false;">WOS</a></li>
+					</ul>
+					</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td align="right"><br><br>MIGUEL</td>
+		</tr>
+	</table>
+
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+
+	<td>
+		<script language="JavaScript">
+			function RecargarPie(url)
+			{
+				document.location=url;
+			}
+		</script>
+		<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+			<form name="selector_secciones">
+				<tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+				<tr>
+					<td align="left">
+						<input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior" value="<" />
+						<select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+							<option value="index.html">Portada</option>
+							<option value="editorial.html">Índice - Editorial</option>
+							<option value="panorama.html">Panorama</option>
+							<option value="analisis.html" selected>Análisis</option>
+
+							<option value="hardware.html">Hardware</option>
+							<option value="al-descubierto.html">Al Descubierto</option>
+							<option value="zona-www.html">Zona WWW</option>
+							<option value="z88dk.html">Programación Z88DK</option>
+							<option value="ensamblador.html">Programación Ensamblador</option>
+							<option value="opinion.html">Opinión</option>
+
+						</select>
+						<input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
+					</td>
+					<td align="center" class="texto">Número 6 - Marzo 2004</td>
+					<td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+				</tr>
+			</form>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td>
+
+		<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+			<tr align="center" valign="center">
+				<td>2003-2009 Magazine ZX</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			try {
+				var pageTracker = _gat._getTracker("UA-8018503-4");
+				pageTracker._trackPageview();
+			} catch(err) {}</script>
+	</td>
+</tr>
+
+</table>
+</center>
+</body>
+</html>

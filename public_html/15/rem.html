@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="hardware.html">Hardware</option>
+        <option value="rem.html" selected>REM</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 15 - Marzo 2007</td>
+
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+    <tr>
+        <td>
+<div align="justify">
+<p align="center"><font size="5">De la A a la Z de Sokoban, o cómo lamerse el cipotillo uno mismo.</font></p>
+<p>Miguel A. García prada nos cuenta...</p>
+<p><strong>Primeros pasos</strong></p>
+<p>Cuando se convocó el concurso de juegos en BASIC de Bytemaniacos, del lejano año 2003, la primera idea que me vino a la cabeza fue realizar una versión del Sokoban.</p>
+<p>¿Por qué? Sokoban, ideado por un japonés llamado Hiroyuki, a principios de los ochenta, es uno de los juegos más versionados y adictivos que conozco. Muchas veces hace que dejes un nivel y te vayas a la cama pensando en como solucionarlo,  jugando en tu cabeza con una imagen mental de la pantalla en la que te encuentras atrancado.</p>
+<p>La idea del juego es simple: se trata de colocar unas "cajas" en determinados lugares de una habitación. Las cajas únicamente se pueden empujar, nunca tirar de ellas y no es posible empujar  más de una a la vez. Con estas sencillas líneas el juego alcanza niveles de dificultad insospechados.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/sokoA.png" width="320" height="240"  alt="" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+
+<p>Después de estudiar el juego y ver que era posible portarlo al Spectrum en BASIC, por supuesto con todas las limitaciones que acarrea el lenguaje en cuestión, me puse manos a la obra con la programación.</p>
+<p>En poco más de una semana ya se movía el personaje, un "bicharraco" con forma de muñeco del día de los inocentes que podéis ver en una captura debajo de estas líneas. Y es que los gráficos no son lo mío. El monigote empujaba las "cajas", detectaba muros, era capaz de terminar una pantalla… El programa mapeaba las pantallas y tenía un menú de opciones para comenzar a jugar. No recuerdo exactamente el motivo del "kinder" en el nombre del juego, fue una broma de Santi Romero y, conociéndole, seguro que era un chiste malo.</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/sokoB.png" width="320" height="240"  alt="" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+
+	</tr>
+</table>
+</center>
+<p>Pero si de una virtud carezco es de la perseverancia. Y cuando el juego estaba en un 85% de desarrollo aproximadamente, lo abandoné, y no se presentó a concurso. Y Así quedó la cosa hasta los comienzos del año 2006.</p>
+<p><strong>Segundo intento</strong></p>
+<p>A primeros del 2006 me propuse hacer, y terminar, un juego para Spectrum, pero con la particularidad de que quería programarlo íntegramente en ensamblador de Z80, una pequeña espinita que tenía clavada desde los años ochenta. Y me decidí a retomar el Sokoban.</p>
+<p>De inicio comencé en solitario con el proyecto: gráficos, programa, etc. Pero un par de decisiones, bastante acertadas, le dieron un giro de 180º a Sokoban.</p>
+<p>Primero se lo comenté a Javier, que se puso a hacer gráficos a la velocidad de la luz. Según le enseñaba betas, me contestaba al correo con gráficos. Le dio la vuelta al juego en el aspecto visual. Fede aceptó hacer la música, algo en lo que yo estaba bastante perdido. Y con esto puede dedicarme únicamente a programar el código del juego.</p>
+<p>Después me dediqué a bombardear, literalmente, a un grupo de amigos del mundillo con betas y más betas del juego. Lejos de mandarme a buscar gamusinos al bosque, empezaron a dar ideas, consejos  y sugerencias.</p>
+<p>Mi idea inicial del juego era darle un estilo más "arcade" que el original, con la inclusión de parámetros como tiempo y "undos" limitados para cada pantalla, y según la dificultad de la misma. Una vez programado se llegó a la conclusión de que, al fin y al cabo, Sokoban es un juego para pensar, y que la presión de tener que terminar un nivel en un periodo de tiempo determinado no era positivo. Se desechó el contador de tiempo, y también el de los "undos" por nivel, en su lugar se decidió incluir la posibilidad de jugar con o sin la opción de retroceder en los movimientos.</p>
+
+<p><strong>Niveles</strong></p>
+<p>Con la programación  del juego bastante avanzada se planteó el reto más importante: los niveles. En un principio se iban a diseñar todos desde cero, pero según avanzábamos en ellos nos dimos cuenta de que era la parte más difícil de todo el juego. Al margen de crear la distribución de cada pantalla y hacerlos más o menos atractivos, lo más complicado es dotarlos de una dificultad ajustada. Nos pusimos a indagar por Internet y encontramos, entre otras muchas, a dos personas que se dedican a hacer niveles de Sokoban y que los ceden para su uso libremente: Evgeny Gregoriev y David W. Skinner. Después de una selección entre los cientos de niveles que tienen cada uno de ellos, se eligieron los más apropiados para nuestra versión en Spectrum, ya que, esencialmente por tamaño, no todos los niveles servían. Una vez eliminados los marcadores de tiempo y "undos" de la pantalla de juego, se decidió usar toda la superficie para zona de juego. El tamaño de los "tiles", piedras a empujar y protagonista se fijó en cuadrados de 16 por 16 píxeles, con lo que las pantalla podían tener un máximo de 16 por 12 "tiles" de tamaño, lo que reducía mucho el rango de niveles que nos servían.</p>
+<p>La cifra de niveles se cerró en 99, de los cuales la primera docena se hizo desde cero por los diferentes colaboradores del juego, para la versión de Spectrum, el resto se tomaron de los realizados por Evgeny y David. Se decidió que los doce niveles realizados para Spectrum se pusieran al principio del juego, ya que no eran muy complicados, y así sirviesen de tutorial o aprendizaje y el resto se colocaron a continuación. La dificultad de los mismos no va en aumento según se avanza en el juego, sino que se alternan fáciles y más complicados. De esta manera te puedes tirar horas o días para superar un nivel, pero los dos o tres siguientes serán más sencillos.</p>
+<p><strong>Programación</strong></p>
+<p>El principal reto, respecto a la programación, no ha sido el ensamblador en sí, al que yo tenía miedo y que al final ha resultado ser más dócil de lo que me imaginaba y que permite hacer cosas que en BASIC ni te planteas, si conoces ambos lenguajes, por supuesto. El principal problema ha sido conseguir meter el juego en la reducida memoria del Spectrum, apenas 40Kb en el modelo "base" (dejando de lado el 16K).</p>
+<p>Desde un principio se tenía claro que el juego tenía que correr en cualquier modelo de Spectrum: desde el 48K hasta el +3. Y por supuesto no correr sólo en emulador, ya que el fin de programar un juego de Spectrum es que corra en un Spectrum, aun a sabiendas de que la mayoría de la gente que lo disfrute lo hará en un emulador, pero no saben lo que se pierden, ya que el juego funciona bastante mejor aporreando teclas de hace 20 años que el teclado de un PC. La única diferencia resultante de correr el juego en modelos que no incluyen el chip AY para generar el sonido es esto mismo, la música, que en los modelos de 48K no sonará. Pero creemos que no es obstáculo para quien quiera disfrutar del juego en una máquina con teclado de goma, que tiene su encanto.</p>
+<p>El mapa de memoria, al final, ha quedado bastante ajustado e incluso han sobrado casi 3KB libres. Los niveles ocupan alrededor del 20% de la memoria, la música y el player sobre los 3KB, de los gráficos mejor no hablo ya que tengo pesadillas todavía al respecto. El resto está dedicado a programa y textos.</p>
+<p>Yo soy un poco raro a la hora de ponerme a programar, suelo empezar la casa por el tejado. Lo primero que hice fue el menú, luego el mapeador de pantallas, y poco a poco se fue incorporando el movimiento, la detección de los "muros", movimiento de bloques, etc.</p>
+<p>Uno de los apartados más espinosos para mi, en un principio, era el de implementar la parte de los "undos". Pero al final resultó ser de lo más sencillo. Una simple pila con la dirección del último movimiento realizado, hasta un total de cien, en la que vamos almacenando los mismos. Ahora, tal como se terminó el juego, sería posible aumentar esa pila hasta los dos mil movimientos almacenados sin ningún problema, pero cuando programé la función íbamos bastante ajustados en las previsiones de memoria, y se pensó que la posibilidad de retroceder cien veces era más que suficiente (otros gurús dijeron que con 640K de memoria tendríamos de sobra y vamos por varios gigas...)</p>
+
+<p>El movimiento fue muy sencillo de programar ya que, tal como comenta Javier sobre los gráficos, se decidió hacerlo de 8 en 8 píxeles para evitar el "colour clash" propio del Spectrum, y así poder dotar de todo el colorido posible a nuestro robot y a los objetos a empujar. Dado que cada nivel está almacenado en una matriz de 16 por 12, la detección de los diferentes obstáculos que podemos encontrar en las pantallas es sumamente sencilla. Simplemente navegando con un puntero por esa matriz y viendo si el código indicado es un muro, un objeto a empujar o está vacío. Esta misma matriz se utiliza para mapear el nivel en la pantalla y en ella se indica, con diferentes códigos, el tipo de bloque que se imprime, las piedras y su situación, las casas, etc.</p>
+<p>Respecto a la música decidimos utilizar un player ya existente, el Vortex. Mis conocimientos de cómo funciona el chip AY del Spectrum son nulos y gracias a este programa me solucionó la papeleta. Lo único que programé fueron las llamadas al player, mediante interrupciones, y la opción de activar y desactivar la música en tiempo de juego. La inspiración la puso Fede, que para algo tenían que servir las horas perdidas aprendiendo solfeo y aporreando el organito Casio.</p>
+<p>El peor quebradero de cabeza lo tuve con el sistema de claves para empezar desde el último nivel terminado, algo que se consideró imprescindible. Debe de ser muy malo para la salud terminar los 99 niveles del tirón, sin descansar. En los primeros pasos del juego los niveles estaban divididos en dos "sets" diferentes: uno con los niveles que estábamos haciendo en exclusiva para el Spectrum, y otro "set" con los niveles de David y Evgeny. Con lo cual había que almacenar el set en el que estábamos, el nivel y alguna otra información. Hay momentos en los que te atascas en algún sitio, y este fue uno de ellos, la mala utilización de una instrucción de rotado de bits hizo que, al generar una clave para un nivel superior al diez, el programa cargara cualquier cosa menos un nivel jugable, con el consiguiente cuelgue del sistema. Cuando analizas estas situaciones y las solucionas, piensas que es increíble que te puedas quedar dos días atascado en el mismo punto, pero la satisfacción al ver funcionar correctamente algo que te ha costado tanto programar es superior a la fatiga.</p>
+<p>Realmente he tardado más en reprogramar lo programado, gracias a las sugerencias que se daban sobre la marcha, que a realizar el motor del juego en sí. Una de las cosas que mejor resultado ha dado es la ventana de opciones en tiempo de juego. En un principio, al pulsar una tecla de pausa que había, la pantalla se ponía en negro para evitar, cuando el juego funcionaba con tiempo limitado, que se hicieran trampas estudiando los movimientos. El menú en tiempo de juego le da un aspecto muy llamativo y un acabado que hubieran querido muchos juegos que se lanzaron comercialmente en los ochenta.</p>
+<p>Los momentos más divertidos de la programación han sido realizar el final (sí, el juego tiene un divertido final al completar los 99 niveles) e incluir un "cheat" que activa un nuevo set gráfico y alguna cosilla más. Por cierto, muy sencillo de descubrir a nada que se pegue un vistazo al código fuente del juego.</p>
+<p>El juego ha sido programado utilizando ordenadores actuales, bajo emulador, y utilizando todos los beneficios que obtenemos de la velocidad de proceso de las máquinas de que disponemos ahora mismo. Un compilado en Spectrum de un programa en ASM puede durar bastante tiempo, un cuelgue por una mala instrucción milésimas y supone una carga de minutos desde cinta de cassette, mientras que lo mismo en un PC es cuestión de segundos. Se adelanta muchísimo y no quiero ni pensar en como se las verían los hermanos Ruiz programando hace 20 años…</p>
+<p>Las herramientas utilizadas han sido, básicamente, FUSE como emulador, PASMO como compilador (excelente compilador) cruzado de Z80 y VIM como editor para el código, todo ello bajo LINUX que era el sistema que utilizaba. En las últimas fases de la programación el editor utilizado fue ForgEdit, para MAC, ya que cambié mi ordenador por uno de Apple, aunque seguí utilizando el mismo compilador y emulador, disponibles para el ordenador de la manzana.</p>
+<p>Y poco más que comentar, salvo que el código fuente está disponible libremente para quien le interese echar un vistazo. ASM no es el hombre del saco, se escriben más líneas, tardas más en ver resultados que en BASIC, pero merece la pena. Los resultados finales inclinan la balanza, sin ninguna duda, del lenguaje de los Z80.</p>
+<p>Solo me queda agradecer a todos aquellos que han hecho posible mi sueño, el ver terminado un juego para Spectrum. Son muchos, y todos ellos están en los créditos del juego, por lo que no voy a repetir aquí los nombres, cual Almodóvar recitando el santoral...</p>
+
+<p>A continuación, Fede J. Álvarez nos comenta...</p>
+<p><strong>Cómo hacer que la nota de un juego no llegue al 10</strong></p>
+<p>Cuando me enteré de que Miguel iba a retomar su vieja idea del Sokoban, la verdad es que me alegré mucho, ya que yo fui uno de los que siempre andaba detrás de él dando la brasa para que lo acabara. Pero las noticias realmente buenas llegaron cuando supe, por un lado, que el juego iba a ser reprogramado totalmente en ensamblador, desde cero, y que Javier Vispe andaba metido en el ajo.</p>
+<p>Por supuesto, fue un orgullo que Miguel me ofreciera la posibilidad de hacer la música. Ya tuve la ocasión de adaptar la sintonía de Babaliba al remake, pero esto suponía un nuevo reto, ya que se trataba, por un lado, de componer una música original y, por otro, de hacerlo para un chip que da apenas 3 canales de sonido generado digitalmente, sin posibilidad de usar <em>samples</em> de instrumentos reales.</p>
+<p>Las primeras pruebas las hicimos con el programa Wham!, en sus dos versiones, para 48K y 128K. Tuve que familiarizarme con su funcionamiento mientras Miguel se pegaba con el <em>player</em>, tratando de integrarlo en el código de Sokoban. Pero la cosa no funcionó demasiado bien, la música no sonaba como debía y el juego se ralentizaba demasiado.</p>
+<p>Unos meses después, el proyecto iba tomando la forma que todos hemos podido comprobar al final del todo, y Javier Vispe, impagable conocedor de los entresijos de la actualidad <em>spectrumera</em> nos facilitó el enlace de un <em>tracker</em> para Windows, llamado Vortex Tracker y programado por Sergey Bulba. Dicho <em>tracker</em>, además, incorpora un <em>player</em> para Spectrum, así que Miguel se puso nuevamente manos a la obra con la tarea de integrarlo con el resto del código. Esta vez funcionó, así que ya sólo quedaba componer la música.</p>
+
+<p>Lamentablemente, estos últimos meses no he dispuesto de demasiado tiempo libre precisamente. Lo cual se ha traducido en que sólo he podido familiarizarme mínimamente con la herramienta y la composición resultante ha quedado un poco pobre. Así que me he propuesto, de cara a futuras composiciones, al menos estudiar y escuchar ejemplos de música en los que sus autores han conseguido sacarle muchísimo partido al chip AY.</p>
+<p>El resultado final es que la música no está a un nivel de calidad equiparable al resto de elementos pero, como mal menor, siempre se puede desactivar en el menú.</p>
+<p>Así que me quedo con la tremenda satisfacción de haber podido participar en la elaboración de un producto de la calidad de Sokoban y con las ganas de sacarme esa espinita clavada en una futura ocasión.</p>
+<p>Por último, Javier Vispe nos relata..</p>
+<p><strong>Cómo hacer la vida imposible al programador</strong></p>
+<p>Con esta frase se puede resumir todo mi trabajo en la parte gráfica de Sokoban. Supongo que Miguel se habrá preguntado durante estos meses por qué se le ocurrió enseñarme el juego que estaba haciendo. No hay cosa peor que mostrar tus proyectos a alguien que no sabe programar, componer música o diseñar niveles. ¡Todos saben que se ofrecerá para diseñar los gráficos!</p>
+<p>Mi relación con Sokoban empezó cuando vi las primeras capturas del juego. Ya estaban hechas las cajas, las metas y los bloques que se usan para dibujar los laberintos, pero faltaba el protagonista. Yo, que soy muy majo, sin decir nada, me puse a garabatear en el programa de retoque de imagen, a ver que me salía. La idea del robot surgió rápidamente. Siempre se nos ha vendido la idea de que son herramientas ideales para hacer tareas pesadas, como por ejemplo, empujar cajas. Miguel estaba peleándose con los píxeles de un señor visto desde arriba. Le enseñé a JCN-7000, y al final, ocurrió lo de siempre: la máquina le quitó el puesto de trabajo al hombre.</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="144">
+	<tr align="right">
+
+		<td><img src="img/soko03.png" width="144" height="192"  alt="" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+<p>Tras esta primera experiencia, a Miguel se le ocurrió la infeliz idea de que yo podría hacer los "dibujitos" y él dedicarse en cuerpo y alma a la parte del código. Craso error. Al día siguiente ya le había dado la vuelta al set gráfico original a petición suya. Pero es que después de uno, vino otro. Y otro... Y otro... Así fue como me desaté, y me iba comiendo la preciada memoria del Spectrum con ideas cada vez más estrambóticas. Mientras, el señor programador sudaba tinta china para recalcular el mapa de memoria. Aunque, en el fondo, sé que le gusta...</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="384">
+
+	<tr align="right">
+		<td><img src="img/soko01.png" width="384" height="384"  alt="" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+<p>Para hacer los gráficos de Sokoban básicamente he tenido como herramienta de trabajo el PC. Miguel ya había delimitado el tamaño de los tiles, por lo que simplemente tenía que pensar en una temática y plasmarla sobre la pantalla. A día de hoy es un método mucho más cómodo, limpio y rápido. En anteriores ocasiones sí que había trabajado sobre papel, pero en este caso sólo lo he usado para realizar un boceto muy general de la pantalla de carga. Una vez acabados los gráficos, se convertían a ensamblador Z80 con el SevenuP de Metalbrain para insertarlos en el código del juego. En este aspecto, quiero agradecer públicamente que haya compartido su magnífica herramienta, puesto que facilita mucho el trabajo a los desarrolladores.</p>
+
+<p>Tengo que decir que me ha sorprendido lo fácil que me resultó el diseño de los sets gráficos, y que prácticamente no han recibido retoques tras su creación, al margen de algún cambio de color.</p>
+<p>En Sokoban hemos utilizado gran cantidad de color en decorados, objetos y personajes. Para evitar la mezcla de atributos se implementó un movimiento de 8 en 8 píxeles, procurando que la respuesta al teclado fuera muy precisa. Un juego puzzle como este permite tomar esta libertad creativa que, por ejemplo, un juego de plataformas no deja. En muchos de estos se ha de contar con un movimiento preciso que no arruine la jugabilidad. En muchas ocasiones eso no se ha tomado en cuenta en Spectrum.</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="256">
+	<tr align="right">
+		<td><img src="img/soko02.png" width="256" height="576"  alt="" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+
+	</tr>
+</table>
+</center>
+<p>La pantalla de juego fue variando progresivamente conforme se sugerían mejoras. La desaparición de marcadores hizo que nos planteáramos el añadir un fondo que evitara la sensación de una pantalla demasiado vacía con los niveles pequeños. La trama de tiles aumentados, junto al logo del juego cumplía perfectamente esta misión, y no apartaba nuestra atención de la zona de juego. Igualmente, decidimos darle un toque más atractivo a la pantalla de opciones dentro de los niveles.</p>
+<p>Uno de los últimos añadidos que hicimos fue la animación del robot apareciendo al principio de cada fase. La buena organización y optimización de código que hizo Miguel nos permitió contar con memoria de sobra para añadir un total de 27 fotogramas para dar el toque final al acabado del juego.</p>
+<p>Sólo me queda hablar de lo mucho que he disfrutado del tiempo que he invertido en ayudar a hacer realidad el sueño de Miguel. Gracias a él, también se han cumplido los de un chaval que en tiempos fantaseaba con hacer juegos en código máquina para Spectrum.</p>
+<p><strong>¿Se lo envuelvo para regalo?</strong></p>
+<p>Una de las señas de identidad de los juegos de los 80 era la portada. Muchos de ellos vendieron gracias a la ilustración que incorporaban en el frontal de la caja. Cuantas decepciones han ocultado exhuberantes mujeres, lejanos paisajes espaciales o parajes remotos de nuestro planeta...</p>
+<p>Para la realización de la carátula de Sokoban, contamos con Juanje Gómez, nuestro ilustrador favorito de portadas en Magazine ZX. Sin dejarlo recuperarse del jet lag que traía de su viaje a Australia, le endilgamos un nuevo incordio en su buzón de correo.</p>
+<center>
+
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/soko04.jpg" width="400" height="1716"  alt="" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+<p>Como podéis ver, el primer diseño optaba por una disposición horizontal, que se nos hacía extraña a la clásica vertical. De nuevo, entró en acción mi espíritu incordiador y empecé a jugar con el material en el programa de retoque de imagen. Me incliné por una distribución más tradicional, incluyendo una pequeña sinopsis y capturas de pantalla en la parte trasera. También le di un poco de alegría al fondo con una trama de tiles del juego.</p>
+
+<p>Tras varias pruebas, le envié un boceto a Juanje para conocer su opinión y ver si podía servirle de algo para retocar la portada original. No sé si lo dijo por quitarse al "pesado" de encima ;), pero le gustó y decidió adoptar el diseño para realizar la magnífica versión final que podéis apreciar. De nuevo, y aún a riesgo de coger fama de empalagoso, tengo que agradecer a Juanje que siempre esté ahí para colaborar en nuestras locuras.</p>
+<p><strong>...Y Sokoban se hizo cinta</strong></p>
+<p>Compiler soft se ha propuesto como meta convertirse en líder del mercado de los 8 bits, superando a grandes empresas con una larga tradición de lanzamientos, como Atari, Capcom, Konami o Activision. Por ello, ha producido versiones físicas de Sokoban para que formen parte de las colecciones de los aficionados al Spectrum. Las previsiones de ventas anuales son muy halagüeñas, como se puede ver en la siguiente gráfica:</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="480">
+	<tr align="right">
+		<td><img src="img/soko05.png" width="480" height="465"  alt="" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+<p>Hemos realizado dos ediciones en diferente soporte: cinta y disco de tres pulgadas. El primero se ha acompañado de un póster para las primeras unidades, mientras que el segundo es una edición limitada destinada en exclusiva a los colaboradores del proyecto. Ambas cuentan con las versiones española e internacional del juego.</p>
+<p>El proceso de fabricación se ha dividido en dos partes, la carátula y la grabación en cinta. Para el primero, encargamos a una empresa de servicios de impresión digital la portada con las instrucciones a todo color, con sus respectivos pliegues. Para el segundo, estuvimos buscando lugares donde todavía duplicaran casetes. En nuestro país empieza a ser complicado hallar lugares que acepten tiradas pequeñas. A esta dificultad hay que añadir la posibilidad de que el proveedor tenga material viejo, y se encuentre en malas condiciones.</p>
+<p>Finalmente encargamos el trabajo a una empresa inglesa. Tras suministrar el máster, nos enviaron una cinta de prueba para comprobar si la grabación era adecuada para la carga en un Spectrum. Una vez certificado que no había problemas, se dio luz verde a la duplicación.</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="600">
+	<tr align="right">
+		<td><img src="img/soko06.jpg" width="600" height="467"  alt="" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+<p>Tras recibir todos los pedidos, sólo quedaba montarlos y prepararlos para su venta. Tras casi un año de desarrollo constante, Sokoban por fin se había materializado en formato físico. Esta última fase ha supuesto un gran esfuerzo, no sólo económico, sino también de tiempo buscando proveedores que ofrecieran lo que necesitábamos y solventando los problemas que han surgido durante la fabricación. Por suerte, la ilusión de ver nuestro sueño cumplido, es una satisfacción que no olvidaremos fácilmente.</p>
+<p>Ahora, tendremos que ir pensando qué vamos a hacer en los próximos meses con tanto tiempo libre...</p>
+</div>
+        </td>
+
+    </tr>
+    <tr>
+        <td align="right"><br><br>COMPILER SOFTWARE</td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="rem.html" selected>REM</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+    </form>
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+
+</html>

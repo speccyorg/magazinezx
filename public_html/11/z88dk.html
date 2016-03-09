@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="input.html">INPUT</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+
+    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 11 - Febrero 2005</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+    <tr>
+        <td>
+<div align="justify">
+<p align="center"><font size="5">SPRITES EN Z88DK</font></p>
+<p><i>Seguimos dejando de lado el modo texto para continuar trabajando con el modo gráfico, del que ya hubo una introducción en el pasado número del Magazine. La mejor forma de continuar es estudiando cómo podemos introducir sprites en la pantalla. Estos
+sprites representarán tanto al personaje que maneja el jugador como a sus enemigos y otros elementos del decorado.</i></p>
+<p>Así pues, manos a la obra.</p>
+
+<p><b>¿Cómo puedo crear un sprite?</b></p>
+<p>Ha llegado el momento de ponernos técnicos. Para definir un sprite en z88dk vamos a tener que hacer uso de la notación hexadecimal. Por lo tanto, debemos comenzar por explicar a los profanos en esta materia cómo funciona este sistema de numeración.</p>
+<p>El ordenador no entiende el lenguaje de los humanos. Para comunicarse, hace uso de un código especial, llamado el código binario. En este código especial, las palabras sólo pueden tener dos símbolos, 0 ó 1. Esto es debido a que con este lenguaje binario se codifica el único idioma que el ordenador comprende: el paso o no paso de corriente eléctrica. Un ejemplo de palabra en binario podría ser 00110101. Pronto se puede observar que cuanto más compleja sea la información que se quiera codificar en este lenguaje, más larga será la palabra en cuestión.</p>
+<p>La codificación hexadecimal surgió como un intento de comprimir el código binario, de tal forma que pudieramos expresar lo que quisiéramos utilizando menos espacio que si utilizáramos código binario. En este lenguaje, cada dígito puede valer de 0 a 15. Pero como en nuestro idioma solo tenemos símbolos para expresar del 0 al 9, hacemos uso de letras para el resto de valores, la A para el 10, la B para el 11, la C para el 12, la D para el 13, la E para el 14 y la F para el 15.</p>
+<p>¿Y cómo tratar los números hexadecimales con más de una cifra? ¿A qué número en sistema decimal corresponde el E5, o el AB? Para ello debemos tener en cuenta que cada dígito del número hexadecimal tiene un valor que es potencia de 16. Por ejemplo, el dígito más a la derecha tiene un valor de 16^0=1, el siguiente de 16^1=16, el siguiente de 16^2=32, y así sucesivamente. Por lo tanto, para obtener el número en decimal, multiplicamos cada dígito por su potencia de 16 correspondiente.</p>
+<p>Por ejemplo, el número 856 en hexadecimal se correspondería con el 8*256 + 5*16 + 6*1 = 2048 + 80 + 6 = 2134 en decimal, mientras que el número AD9 en hexadecimal se correspondería con el 10*256 + 13*16 + 9*1 = 320 + 208 + 9 = 2777 en decimal.</p>
+<p>Un último detalle a tener en cuenta sobre los números en base hexadecimal es que normalmente se suelen representar con el símbolo <i>0x</i> delante, de tal forma que, por ejemplo, los números hexadecimales anteriores tendrían que haber sido representados de la siguiente forma: 0x856 y 0xAD9.</p>
+
+<p>Ahora que ya sabemos un poco más sobre la notación hexadecimal, ya estamos preparados para crear nuestros sprites. Estos sprites se almacenarán en z88dk como arrays de números hexadecimales (por eso ha sido necesaria toda la explicación anterior, tan aburrida).</p>
+<p>Los sprites los podemos representar en papel como una cuadrícula, donde cada casilla de esta cuadrícula será un pixel en la pantalla. Cada pixel podrá estar activado o no, de tal forma que la combinación de pixeles activados/desactivados dentro de esa cuadrícula dará lugar al sprite en la pantalla (como los GDUs en el BASIC del Spectrum). Por ejemplo, la siguiente imagen muestra varios de estos sprites dibujados en una cuadrícula (arriba) y cómo se verían en la pantalla del Spectrum (abajo):</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="500">
+	<tr align="right">
+		<td><img src="img/z88dk6_1.png" width="500" height="300"  alt="Arriba vemos los sprites tal cuál quedarían dibujados sobre una cuadrícula en un papel, y abajo los vemos en la pantalla de nuestro Spectrum" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Arriba vemos los sprites tal cuál quedarían dibujados sobre una cuadrícula en un papel, y abajo los vemos en la pantalla de nuestro Spectrum</td>
+
+	</tr>
+</table>
+</center>
+<p>Los sprites en z88dk pueden ser de cualquier tamaño que queramos. Sin embargo, vamos a empezar por explicar los sprites de tamaño 8x8, como los que acabamos de ver. Como hemos dicho, cada sprite se definirá en z88dk como un array. Las dos primeras posiciones de este array almacenarán la anchura y la altura del sprite respectivamente y, a continuación, el array tendrá tantas posiciones más como filas tenga el sprite. Y el valor de cada una de esas posiciones será una suma, la suma del valor hexadecimal de cada uno de los pixeles activados en dicha fila.</p>
+<p>Esto es así por que cada columna de la cuadrícula que define el sprite tendrá asignado un valor hexadecimal. La siguiente imagen muestra los valores hexadecimales asigandos a cada columna para un sprite de 8 columnas.</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="365">
+	<tr align="right">
+		<td><img src="img/z88dk6_2.png" width="365" height="266"  alt="Valor hexadecimal asignado a cada columna para un sprite con ocho columnas" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">Valor hexadecimal asignado a cada columna para un sprite con ocho columnas</td>
+	</tr>
+</table>
+</center>
+<p>Por ejemplo, si en una fila activamos los pixeles 1, 4, 6, y 8 (comenzando a contar desde la derecha), el valor hexadecimal de esa fila sería 0x01 + 0x08 + 0x20 + 0x80 = 0xA9. La siguiente imagen muestra un ejemplo más elaborado, para uno de los pixeles que hemos visto anteriormente. En dicho ejemplo se muestra el valor para cada fila y se puede ver cómo quedarían las posiciones del array a definir dentro de z88dk (recordemos que las dos primeras posiciones son la anchura y la altura).</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="323">
+	<tr align="right">
+		<td><img src="img/z88dk6_3.png" width="323" height="352"  alt="Ejemplo de cálculo de los valores hexadecimales correspondientes a un sprite" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Ejemplo de cálculo de los valores hexadecimales correspondientes a un sprite</td>
+	</tr>
+</table>
+</center>
+<p>¿Qué ocurre en el caso de querer utilizar pixeles de distinta anchura y/o altura? En el caso de la altura es sencillo, lo único que hay que hacer es añadir o eliminar posiciones del array, ya que como sabemos, cada posición del array se corresponde con la suma de valores hexadecimales de una fila del sprite. En el caso de querer variar el número de columnas, la cosa se complica.</p>
+<p>Si queremos utilizar menos de ocho columnas, éstas se deben ir eliminando de derecha a izquierda. Esto quiere decir que el valor hexadecimal de la primera columna siempre será 0x80, y el de la última dependerá del número de columnas que tengamos. Por ejemplo, para un sprite de siete pixeles de ancho, los valores de las columnas serán 0x80, 0x40, 0x20, 0x10, 0x08, 0x04 y 0x02 (no se usa 0x01), y para un sprite de cinco pixeles de ancho, los valores de las columnas serán 0x80, 0x40, 0x20, 0x10 y 0x08 (no se usan los valores 0x04, 0x02 y 0x01).</p>
+<p>Y si queremos usar más de ocho columnas, la cosa es un poco más complicada, pues en lugar de usar números hexadecimales de dos dígitos, los usaremos de 3 o más. De derecha a izquierda, las columnas que vayamos añadiendo a partir de la de valor 0x80, tendrán valores 0x0100, 0x0200, 0x0400, 0x0800, 0x1000, 0x2000, etc. El array se construiría añadiendo más posiciones para dar cabida a esas nuevas parejas de dígitos hexadecimales. En próximas entregas veremos algunos ejemplos de esto.</p>
+
+<p>Como hemos comentado anteriormente, cada sprite se debe codificar en forma de array, tal como se puede ver en imagen mostrada anteriormente. Pero, ¿dónde introducimos ese array y cómo lo creamos?: en archivos de cabecera (archivos .h) donde podremos tener tantos como queramos. Cada sprite se corresponde con un array de tipo char. Por ejemplo, para el sprite que podemos ver en la imagen anterior, podríamos crear el archivo sprites.h, en el interior del cual introduciríamos el siguiente código:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+    char sprite0[] = { 8, 8, 0x18 , 0x24 , 0x42 , 0x81 , 0xA5 , 0x81 ,
+                       0x7E , 0x00  };
+</pre>
+    </p></td></tr>
+</table>
+<p>Más adelante veremos cómo utilizar los sprites en nuestros programas.</p>
+<p><b>¿Cómo puedo crear un sprite fácilmente?</b></p>
+<p>Si todo lo anterior te ha parecido muy complicado y eres el afortunado usuario de un sistema GNU/Linux, estás de enhorabuena. Existe una aplicación para este sistema operativo que te permitirá crear y diseñar sprites de una forma sencilla. Con este programa podremos dibujar sprites fácilmente sobre una cuadrícula, y almacenar el resultado en un archivo .h que podremos utilizar directamente. </p>
+
+<p>Este programa tan sencillo y tan maravilloso se puede encontrar en la web de una persona llamada Daniel McKinnon, y la dirección es http://stikmansoftware.tripod.com/z88dksprite.html. Es una versión 0.5 que es perfectamente usable, a pesar de algún problemilla que indicaremos cómo se puede solventar.</p>
+<p>Tras descargar el archivo z88dksprite.tar.gz, lo descomprimimos de la siguiente forma:</p>
+<pre>
+	tar -xvzf z88dksprite.tar.gz
+</pre>
+<p>y se nos creará un directorio llamado sprites, en el interior del cual encontraremos el ejecutable que debemos utilizar. También incluye el código fuente para que podamos compilar en el caso de que así lo queramos, pero deberemos para ello disponer de la librería Allegro. Por cierto, también es posible compilarlo en Windows, aunque sólo se distribuyen binarios para Linux.</p>
+<p>Al iniciar el programa nos aparecerá en pantalla algo como lo que se muestra en la siguiente imagen:</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="648">
+	<tr align="right">
+		<td><img src="img/z88dk6_4.png" width="648" height="506"  alt="El editor de sprites de z88dk nada más ejecutarlo" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">El editor de sprites de z88dk nada más ejecutarlo</td>
+	</tr>
+</table>
+</center>
+<p>Podemos controlar el programa de una forma muy sencilla. Con los cursores hacia arriba y hacia abajo cambiamos el zoom, con lo que podremos dibujar de una forma más cómoda. Es fácil ver como nada más iniciarse el programa estamos trabajando sobre una rejilla de 8x8, pero no podemos acceder cómodamente a todas las casillas, deberemos hacer uso de la tecla de cursor abajo para disminuir el zoom.</p>
+<p>Los botones de +1 y -1 al lado de las palabras Width y Height (abajo) nos permiten cambiar, respectivamente, la anchura y la altura del sprite en un pixel. Por supuesto, al lado de Width y Height podemos ver sus valores actuales (en el momento de iniciar la aplicación, tanto la anchura como la altura son de 8 pixeles).</p>
+<p>Pinchando sobre la cuadrícula indicaremos qué pixeles del sprite estarán marcados (y aparecerán de color negro en la pantalla, en el caso de que el sprite no tenga atributos). Volviendo a pinchar sobre un sprite activado lo desactivaremos.</p>
+
+<p>Finalmente, cuando nuestra obra de arte esté terminada, podremos pulsar F5 para grabarla en un archivo .h. Y es aquí donde encontramos un problema grave al usar la aplicación, y es que no podemos introducir un nuevo nombre de fichero con el teclado, solo podremos seleccionar uno de los ya existentes para que se sobrescriba (al menos el autor de este texto no ha podido). Por lo tanto, antes de ejecutar el programa, es aconsejable crear un fichero .h vacío, por ejemplo, sprites.h, que seleccionaremos tras pulsar F5 para guardar nuestros dibujillos.</p>
+<p><b>Dibujando sprites en la pantalla</b></p>
+<p>Ya sabemos como definir nuestros sprites, ahora vamos a aprender a utilizarlos en nuestros programas paraa que se muestren por pantalla, y podamos crear juegos dignos de la prestigiosa Ultimate. El método para mostrar un sprite es <i>putsprite</i>, que viene definido dentro del archivo de cabecera <i>games.h</i>, que será el que tengamos que incluir para poder utilizarlo. Su sintaxis es la siguiente:</p>
+<pre>
+	putsprite(or_type, x, y, sprite)
+</pre>
+<p>donde <i>or_type</i> puede tomar un valor entre varias constantes que se indicarán a continuación, <i>x</i> e <i>y</i> son las coordenadas donde el sprite se dibujará en la pantalla, y <i>sprite</i> se corresponde con el nombre del array que contenga un sprite definido tal como se ha explicado anteriormente. </p>
+
+<p>Como ejemplo, si tuviéramos un archivo llamado <i>sprite.h</i> que contuviera el siguiente código de definición de un sprite determinado:</p>
+<pre>
+	char sprite0[] = { 8, 8, 0x18 , 0x24 , 0x42 , 0x81 , 0xA5 , 0x81 , 0x7E , 0x00  };
+</pre>
+<p>y otro archivo llamado <i>sprite.c</i> (que compilaríamos de la forma habitual) que contuviera el siguiente código:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+
+<pre>
+	#include "games.h"
+	#include "sprite.h"
+
+	void main(void)
+	{
+	        putsprite(spr_or,50,50,sprite0);
+	}
+</pre>
+    </p></td></tr>
+</table>
+<p>Tras crear el archivo .tap y abrirlo en nuestro emulador favorito (o incluso en nuestro spectrum) veríamos el sprite situado en las coordenadas 50,50.</p>
+<p>El primer parámetro del método <i>putsprite</i>, que todavía no hemos comentado, sirve para indicar la forma en la que el sprite se dibujará en la pantalla. Puede tener cualquiera de los siguientes valores:</p>
+<ul>
+<li> spr_and: se realiza una operación lógica AND entre los pixeles marcados por el sprite y los de la pantalla que quedan debajo de la rejilla del mismo. En otras palabras, sirve para que se dibuje el sprite tal cual, borrando todo lo que hubiera debajo del mismo antes de hacerlo.</li>
+
+<li> spr_or: se realiza la operación lógica OR entre los pixeles marcados por el sprite y los de la pantalla que quedan debajo del mismo. Al contrario que en el caso anterior, el pixel se dibujará donde nosotros especifiquemos, pero los puntos de la pantalla que estuvieran activados en dicha posición seguirán estando activados. Es como si estuviéramos mezclando el sprite con el fondo.</li>
+<li> spr_xor: se realiza la operación lógica OR EXCLUSIVA entre los pixeles marcados por el sprite y los de la pantalla que quedan debajo del mismo. Esta operación es muy importante. Cada vez que movamos el pixel, deberemos dibujarlo en su posición anteirior utilizando XOR, para que se borre. </li>
+</ul>
+<p><b>¿Y eso es todo?</b></p>
+<p>Para dibujar un pixel sí que lo es... pero todavía queda todo un poco cojo y tenemos que verlo en funcionamiento. En el siguiente artículo veremos cómo realizar un sencillo juego con sprites controlados por el jugador moviéndose por la pantalla. Pero un poco de paciencia. Primero, a repasar la notación hexadecimal.</p>
+<p>
+<b>LINKS</b>
+</p>
+<ul>
+    <li><a href="http://stikmansoftware.tripod.com/z88dksprite.html" onClick="window.open(this.href); return false;">Z88DK Sprite Editor (Daniel McKinnon)</a></li>
+
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><br><br>SIEW</td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="zona-www.html">Zona WWW</option>
+
+        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="input.html">INPUT</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+    </form>
+</table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="hardware.html" selected>Hardware</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="input.html">INPUT</option>
+        <option value="opinion.html">Opinión</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 7 - Mayo 2004</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+<div align="justify">
+<p align="center"><font size="4">CONECTORES EAR Y MIC PARA EL +2A.</font></p>
+<p>
+
+<i>Uno de los cambios más significativos que se introdujeron cuando Amstrad se hizo cargo de la producción de ordenadores Sinclair fue la inclusión de un lector de cassette acoplado al ordenador. De esta forma, el usuario dejaba de depender de un lector externo y (teóricamente), aumentaba la fiabilidad al leer y grabar las cintas.</i>
+</p>
+<p>
+No obstante, la experiencia nos dice muchos años después que dicha fiabilidad no era tal. Bien porque el lector del +2A esté en plan rebelde y no lea las cintas, bien porque con el paso del tiempo esté estropeado y tenga mal arreglo, siempre puede ser interesante volver a disponer de la opción de cargar y grabar software en un lector externo.
+</p>
+<p>
+No se trata de un montaje difícil. Eso sí, vamos a tener que modificar (levemente) la apariencia externa del ordenador. Quiero agradecer a MIGUEL que me prestara su hospitalidad y su ordenador para hacerle unas fotos al montaje.
+</p>
+<p>
+<b>MATERIAL NECESARIO</b>
+</p>
+<ul>
+<li>2 clavijas mini jack mono para montaje en chasis (si son estéreo también valen, en nuestro caso teníamos un par a mano y las utilizamos en vez de comprar otras nuevas).</li>
+<li>Un destornillador de estrella (para abrir el +2A y extraer las partes necesarias).</li>
+
+<li>Cable de un hilo conductor (estimo que con un metro tendremos de sobra).</li>
+<li>Soldador y estaño.</li>
+<li>Pelacables (opcional).</li>
+<li>Para hacer los agujeros en la carcasa del +2A podemos emplear varios métodos, desde un hierro caliente que funda el plástico, unas tijeras, una "drémel", etc.</li>
+</ul>
+<p>
+<b>IDENTIFICACIÓN DEL OBJETIVO</b>
+</p>
+<p>
+Abrimos el ordenador retirando los tornillos inferiores y los dejamos a buen recaudo.
+Como siempre que se abre un +2A, hay que tener cuidado con varios elementos que unen la carcasa superior a la inferior. Dos de ellos son los frágiles conectores que unen la membrana del teclado a la placa base. El otro es un cable de cuatro hilos (ver <a href="#imagen01">Imagen 1</a>) que lleva la señal del lector de cintas a la placa, y que será objeto de nuestro estudio, ya que nos dará la clave para conectar las dos clavijas que pretendemos añadir.
+
+</p>
+<a name="imagen01"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="100">
+	<tr align="right">
+		<td><img src="img/hard01.jpg" width="100" height="176"  alt="Imagen 1. Cable de datos del cassette" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 1. Cable de datos del cassette</td>
+	</tr>
+
+</table>
+</center>
+</a>
+<p>
+Numeramos los colores de derecha a izquierda, así obtenemos la siguiente correspondencia (ignoro si el el orden del color de los cables será el mismo en todos los casos):
+</p>
+<ol>
+<li>Cable marrón.</li>
+<li>Cable azul.</li>
+<li>Cable rojo.</li>
+<li>Cable blanco.</li>
+</ol>
+<p>
+
+Estos cables van a la placa del lector de cassettes. Sólo necesitamos, pues, una pista que nos indique cuál es la señal que transita por cada uno de ellos. Y esa pista la encontramos serigrafiada en la placa base (ver <a href="#imagen02">Imagen 2</a>).
+</p>
+<a name="imagen02"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="300">
+	<tr align="right">
+		<td><img src="img/hard02.jpg" width="300" height="287"  alt="Imagen 2. Conector del cassette en la placa base" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 2. Conector del cassette en la placa base</td>
+
+	</tr>
+</table>
+</center>
+</a>
+<p>
+Por tanto, llegados a este punto, ya podemos establecer la correspondencia que andábamos buscando.
+</p>
+<center>
+<table class="texto" cellspacing="4">
+	<tr>
+		<td><b>Color</b></td><td><b>Señal</b></td>
+	</tr>
+
+	<tr>
+		<td>Marrón</td><td>GND (masa)</td>
+	</tr>
+	<tr>
+		<td>Azul</td><td>Play</td>
+	</tr>
+	<tr>
+		<td>Rojo</td><td>+5V</td>
+
+	</tr>
+	<tr>
+		<td>Blanco</td><td>Rec</td>
+	</tr>
+</table>
+</center>
+<p>
+De estas señales, la señal de alimentación no nos interesa. Seguimos los colores de las otras tres para localizar los puntos de soldadura, que están indicados en la <a href="#imagen03">Imagen 3</a>.
+</p>
+<a name="imagen03"><center>
+
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/hard03.jpg" width="400" height="341"  alt="Imagen 3. Placa del lector de cassette" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 3. Placa del lector de cassette</td>
+	</tr>
+</table>
+</center>
+
+</a>
+<p>
+Por tanto, ya está claro de dónde sacaremos cada señal, pero queda reflejado aún más claramente en el <a href="#esquema01">Esquema 1</a>. La toma de masa irá a ambas clavijas, y las dos de señal, una a cada una de ellas. En el caso de que las clavijas de las que dispongáis sean estéreo (en el esquema queremos reflejar este particular representando el segundo pin en color morado y línea de trazo discontinuo), se deberán soldar ambos pines de señal.
+</p>
+<a name="esquema01"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/hard_e1.gif" width="400" height="195"  alt="Esquema 1. Conexionado" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right">Esquema 1. Conexionado</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+A continuación lo mejor es soldar las clavijas antes de montarlas en el chasis. Las clavijas van a ir situadas en la carcasa superior en el lateral derecho (en la <a href="#imagen04">Imagen 4</a> podemos ver la ubicación en una fotografía con el montaje ya terminado). Tomamos medida de los cables para que no se queden tirantes y soldamos según el esquema.
+</p>
+<a name="imagen04"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+
+		<td><img src="img/hard04.jpg" width="400" height="339"  alt="Imagen 4. Ubicación de las  nuevas clavijas EAR y MIC" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 4. Ubicación de las  nuevas clavijas EAR y MIC</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+El siguiente paso consiste en agujerear la carcasa. Ya que la modificación va a resultar definitiva, es recomentable tomar bien las medidas de la ubicación, y hacer los agujeros con cuidado. Si disponemos de un minitaladro, resulta ideal para este tipo de tareas, pero, si no es así, podemos llegar a realizar las incisiones con una herramienta tan tosca para este menester como pueden ser unas tijeras (manejadas con destreza pueden obrar maravillas). Desenroscaremos la arandela exterior de las clavijas y las colocaremos en su lugar correspondiente, para después dejarlas firmemente sujetas a la carcasa plástica enroscando de nuevo dicha arandela, como se puede apreciar en la <a href="#imagen05">Imagen 5</a>.
+
+</p>
+<a name="imagen05"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/hard05.jpg" width="400" height="239"  alt="Imagen 5. Detalle de las clavijas ya colocadas" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Imagen 5. Detalle de las clavijas ya colocadas</td>
+	</tr>
+
+</table>
+</center>
+</a>
+<p>
+Ya sólo nos resta volver a conectar todo lo que hemos ido desmontando y cerrar el ordenador, teniendo precaución de no pillar ninguno de los cables que hemos añadido. El nuevo aspecto externo del ordenador se muestra en la <a href="#imagen06">Imagen 6</a>.
+</p>
+<a name="imagen06"><center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/hard06.jpg" width="400" height="143"  alt="Imagen 6. Detalle de las clavijas ya colocadas (exterior)" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">Imagen 6. Detalle de las clavijas ya colocadas (exterior)</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+El significado de las clavijas es el mismo que en la gama Sinclair carente de cassette incorporado, esto es, EAR es la entrada de datos desde la cinta y MIC es la salida hacia la cinta. Por último debemos regular el azimut, si procede, y disfrutar de nuevo de nuestro datassette de toda la vida.
+</p>
+</div>
+		</td>
+	</tr>
+
+	<tr>
+		<td align="right"><br><br>FALVAREZ</td>
+	</tr>
+</table>                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="hardware.html" selected>Hardware</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+
+        <option value="input.html">INPUT</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+    </form>
+</table>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

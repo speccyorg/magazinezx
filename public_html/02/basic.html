@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="zona-pc.html">Zona PC</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="basic.html" selected>Programación BASIC</option>
+        <option value="emulacion.html">Emulación</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 2 - Agosto 2003</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+<div align="justify">
+<p>
+<i>Segunda entrega de nuestro curso de juegos en BASIC, en la cual vamos a
+profundizar en qué son y cómo se usan las variables, las instrucciones que nos
+permiten tomar decisiones en nuestro programa, creación de subrutinas y el control
+del flujo de nuestro programa. Todo esto lo ilustraremos con algún pequeño ejemplo
+en forma de un sencillo juego con el que llevaremos a la práctica todos estos
+conceptos teóricos.</i>
+
+</p>
+<p>
+<b>VARIABLES EN EL BASIC DEL SPECTRUM</b>
+</p>
+<p>
+Las variables son posiciones de memoria que se reservan para almacenar
+un determinado valor al que necesitamos acceder con facilidad desde nuestro
+programa y modificarlo a nuestro gusto. A estas posiciones de memoria se
+accede con el nombre que les damos al declarar las variables. Realmente
+poco nos importa en que posición de memoria las almacena nuestro ordenador,
+ya que siempre nos referiremos a ellas por su nombre.
+</p>
+<ul>
+<li><b>DECLARACIÓN DE LAS VARIABLES</b>
+<p>
+Las variables tenemos que declararlas para poder usarlas, el ordenador no sabe
+ni el nombre ni el valor ni el tipo de la misma si no se lo decimos antes.
+Esto lo podemos hacer en cualquier lugar de nuestro programa siempre que
+lo hagamos antes de utilizarla. Para tener esto un poco más claro veamos
+el siguiente ejemplo:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="94%">
+	<tr bgcolor="#FAE2DF">
+
+		<td class="texto">
+<a name="programa1">- PROGRAMA 1 -</a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+10 IF A=10 THEN LET A=A+1
+		</td>
+	</tr>
+</table>
+
+<p>
+No os preocupéis, de momento, por lo que hace la línea anterior.
+</p>
+<p>
+Si ejecutamos la anterior línea con RUN, nos dará el siguiente
+error: <font class="codigo">2 Variable not found, 10:1</font>. Esto quiere decir
+que no ha encontrado la variable que intentamos utilizar en la parte uno de
+la línea 10, o lo que es lo mismo, la variable 'A' justo después del IF.
+El error ha sido generado por no haber declarado antes de su uso la variable.
+</p>
+<p>
+Añadamos al programa anterior la línea <font class="codigo">5 LET A=10</font>, de manera
+que el programa quede de la siguiente forma:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="94%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+
+<a name="programa2">- PROGRAMA 2 -</a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+&nbsp;5 LET A=10<br>
+10 IF A=10 THEN LET A=A+1
+		</td>
+	</tr>
+</table>
+
+<p>
+Lo volvemos a ejecutar con RUN y, en esta ocasión, nos devolverá el
+mensaje <font class="codigo">0 OK, 10:2</font>, con lo cual nos dice que la
+ejecución del programa se ha llevado a cabo correctamente.
+</p>
+<p>
+Si cambiásemos el número de la línea 5 por 15, nos volvería a generar un error
+de variable no definida, ya que declaramos la variable, pero después de hacer
+uso de ella.
+</p>
+</li>
+<li><b>TIPOS DE VARIABLES</b>
+<p>
+Las variables en el BASIC del Spectrum pueden ser de dos tipos: numéricas
+y alfanuméricas.
+</p>
+<ul><li><b>VARIABLES NUMÉRICAS</b>
+<p>
+
+Al contrario de lo que pasa en otros lenguajes de programación, en los que
+tenemos diferentes tipos de variables para cada número que queremos almacenar,
+INT, FLOAT, DOUBLE, etc., en el BASIC del Spectrum no se distingue el tamaño
+de las variables numéricas. Al contrario, en ellas podemos
+almacenar cualquier tipo de número, ya sea entero o fraccionario, positivo
+o negativo.
+</p>
+<p>
+El nombre por el que las vamos a designar debe comenzar obligatoriamente por
+una letra y puede estar seguida de más letras o números. Veamos los siguientes
+ejemplos de lo que son variables numéricas correctas e incorrectas:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="88%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="variables_numericas_correctas"> Variables numéricas correctas</a>
+		</td>
+	</tr>
+
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+LET A=56<br>
+LET A1=-456<br>
+LET VIDAS=3<br>
+LET X1X=5.60<br>
+LET HOLA1N=-124.675
+		</td>
+	</tr>
+</table>
+
+<p>
+Todas estas declaraciones de variables son perfectamente válidas.
+Y las siguientes no podríamos declararlas:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="88%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="variables_numericas_incorrectas"> Variables numéricas incorrectas</a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+
+		<td class="codigo">
+LET 1=45<br>
+LET 1A=-85<br>
+LET 4PLAYER=3<br>
+LET 1PUNTOS=5.5<br>
+		</td>
+	</tr>
+</table>
+<p>
+Al intentar teclear estas instrucciones, el intérprete BASIC del Spectrum
+simplemente no nos dejaría introducirlas, generando un pitido y colocando el
+cursor en el punto erróneo.
+
+</p>
+<p>
+A la hora de asignar los nombres a las variables numéricas, tenemos un par
+de excepciones que tener en cuenta: las variables que controlan los bucles y
+las que denominan a una matriz (a continuación explicamos qué es una matriz),
+que únicamente pueden estar nombradas con una sola letra:
+<br><br>
+<font class="codigo">FOR F=1 TO 10: PRINT F: NEXT F</font>  sería correcto y<br>
+<font class="codigo">FOR F1= 1 TO 10: PRINT F1: NEXT F1</font>  sería incorrecto.
+</p>
+<p>
+Las variables que controlan los bucles no es necesario declararlas antes de
+utilizarlas, ya que en el mismo FOR se hace su declaración.
+<br><br>
+<font class="codigo">DIM A(10,10)</font> válido y<br>
+
+<font class="codigo">DIM A1(10,10)</font> inválido.
+</p>
+<p>
+Las matrices se componen de una serie de valores almacenados en una cuadrícula a
+la que se accede por el nombre de la variable más su índice, cuya numeración comienza por
+uno. Es decir, si tenemos declarada una variable tal que
+<font class="codigo">DIM A(10)</font>, podemos asignar
+a cada una de sus diez posiciones un valor diferente y utilizarlo de la misma forma
+que cualquier otra variable.
+</p>
+<p>
+Por ejemplo, si queremos asignar a la quinta posición de nuestra matriz llamada 'A'
+el valor 345, nos bastaría con hacer: <font class="codigo">LET A(5)=345</font> y lo
+podríamos utilizar, por ejemplo, de la siguiente forma:
+<font class="codigo">IF A(5)>345 THEN CLS</font>.
+</p>
+
+<p>
+Las matrices pueden tener más de una dimensión, podemos tener una <i>cuadrícula</i> de
+NxN elementos, sin más límite que la memoria del Spectrum. Imaginaos que definimos
+A(10,10), con lo cual tendremos una matriz de 10x10=100 elementos, cada uno
+almacenando un valor independiente, y a la que accedemos de la siguiente
+forma: <font class="codigo">LET A(5,7)=10</font>. ¿Sencillo, verdad?
+</p>
+<p>
+Imaginaos las aplicaciones que a una matriz se le puede dar en un juego. Valga como
+ejemplo el famoso juego de los barquitos, que los colocamos en una cuadrícula de
+NxN elementos, lo extrapolamos a una matriz y tendríamos el problema de
+cómo resolver su almacenamiento solucionado de una forma muy sencilla. Laberintos
+en un juego tipo Maziacs, las cartas en el Póker, etc.
+</p>
+</li>
+<li><b>VARIABLES ALFANUMÉRICAS</b>
+<p>
+El otro tipo de variables que tenemos disponibles son las alfanúmericas. En ellas
+podemos almacenar todo tipo de caracteres ASCII, es decir, números, letras y
+cualquier otro carácter o token del Spectrum.
+</p>
+
+<p>
+Los nombres de las variables alfanuméricas solo pueden estar formados por una
+letra seguidos del símbolo '$', y no son válidas como índice de bucles,
+aunque sí para realizar comparaciones y diferentes operaciones de cadenas, como
+pueden ser concatenar unas con otras, elminar caracteres, etc.  Este tipo de
+variables necesita que el valor que vayamos a asignarlas se indique entre comillas.
+Unos cuantos ejemplos:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="88%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="variables_alfanumericas_correctas"> Variables alfanuméricas correctas</a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+
+		<td class="codigo">
+LET A$="BUENOS DIAS"<br>
+LET A$="BUENOS"+"DIAS"<br>
+LET A$=CHR$ 65 (CHR$ meterá el caracter ASCII correspondiente
+al código 65, en este caso la letra 'A').
+		</td>
+	</tr>
+</table>
+<p>
+Todos los ejemplos anteriores son válidos y, al igual que anteriormente con
+los numéricos, los siguientes generarán un error:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="88%">
+	<tr bgcolor="#FAE2DF">
+
+		<td class="texto">
+<a name="variables_alfanumericas_incorrectas"> Variables alfanuméricas incorrectas</a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+LET A1$="BUENOS DIAS"<br>
+LET A$=BUENOS DIAS
+		</td>
+
+	</tr>
+</table>
+<p>
+También podemos crear matrices con contenido alfanumérico. Éstas tienen un
+peculiaridad muy importante. Siempre reservamos una longitud fija para almacenar la
+cadena. Mejor lo vemos con un ejemplo:
+<br><br>
+<font class="codigo">DIM A$(10,10)</font>
+</p>
+<p>
+Con esta instrucción le decimos a nuestro Spectrum que nos reserve memoria para una
+matriz de 10 elementos y con una longitud de 10 caracteres por elemento, es decir,
+podríamos almacenar diez 'frases' diferentes con una longitud de 10 caracteres
+y, si no rellenamos esos diez caracteres, el ordenador los rellena con espacios a
+la derecha de la cadena. Por ejemplo:
+<br><br>
+<font class="codigo">LET A$(2)="HOLA"</font>
+</p>
+<p>
+introduciría la palabra 'HOLA' (mejor dicho, sus códigos ASCII) en la posición
+2 de la matriz, y rellenaría con seis espacios (carácter ASCII 32) los
+seis bytes restantes. Hay que tener en cuenta que cada carácter en ASCII tiene
+un byte de longitud.
+
+</p>
+</li>
+<li><b>CONSIDERACIONES FINALES SOBRE LAS VARIABLES</b>
+<p>
+Con las variables se pueden efectuar una amplia variedad de operaciones
+aritméticas, trigonométricas y lógicas: suma, resta, multiplicación,
+división, seno, coseno, etc., como pueden ser la siguientes:
+<br><br>
+<font class="codigo">LET A=A+B</font> que suma el contenido de las variables A y B
+dejando el resultado en A.<br>
+<font class="codigo">LET A=A+1</font> que suma a la variable A uno a su valor inicial.<br>
+<font class="codigo">LET A=C*10</font> que pone en A el resultado de multiplicar
+por 10 el contenido de la variable C.<br>
+
+</p>
+<p>
+Y así con todas las operaciones disponibles.
+</p>
+<p>
+Debemos tomar por costumbre nombrar a las variables con nombres que nos indiquen
+su utilidad, pero teniendo en cuenta que a mayor longitud del nombre, más espacio
+ocupan en memoria, y en el Spectrum la RAM es un bien escaso. Como ejemplo nos puede
+valer lo siguiente:
+<br><br>
+<font class="codigo">VIDASJ1=3</font> con lo cual queremos indicar que el jugador
+1 tiene tres vidas; esto ocupa, sólo por la definición del nombre, 7 bytes, sin
+contar el coste de almacenar el valor en memoria. En cambio si
+ponemos 'VJ1=3' lo reducimos en 4 bytes, esto puede parecer poco, pero
+si nos imaginamos un programa que utilice 30 variables, y sumamos los bytes
+gastados en la declaración más los que usemos cada vez que tengamos que realizar una
+operación con ella, podemos darnos cuenta de que se nos dispara el consumo de memoria.
+</p>
+</li></ul>
+</li></ul>
+<b>TOMANDO DECISIONES</b>
+<p>
+Cuando programemos nuestro juego, llegará un momento en que tengamos que hacer
+una cosa u otra dependiendo de determinadas condiciones que se den en el programa:
+si se nos terminan las vidas tiene que finalizar la partida, si matamos a un
+enemigo, que nos incrementen los puntos, etc. Esto se puede hacer en BASIC con los
+comandos que nos provee.
+
+</p>
+<p>
+Para tomar una decisión hacen falta dos elementos que queramos comparar (o más en alguna
+ocasión) y un operador lógico que realice la comparación, es decir, podemos ver
+si entre dos variables una es mayor que la otra, si son iguales, si diferentes...
+</p>
+<p>
+La principal instrucción que nos da el BASIC para efectuar comparaciones es
+<font class="codigo">IF condición THEN</font>. Con esto conseguimos que,
+si el resultado de la comparación es cierto, se ejecuten los comandos que vienen a
+continuación del <font class="codigo">THEN</font>. Lo veremos más claramente con
+un ejemplo:
+<br><br>
+<font class="codigo">10 IF VIDAS=0 THEN PRINT "ESTAS MUERTO": STOP</font>
+</p>
+<p>
+Con esta instrucción comparamos si el contenido de la variable
+VIDAS es igual a 0, en caso afirmativo, se ejecutan los comandos situados después
+del THEN. En caso de que no sea cierta, simplemente se ignoran y se pasa
+la ejecución del programa a la siguiente línea del mismo.
+</p>
+
+<p>
+Pero no sólo podemos realizar una comparación única por cada IF THEN que
+tengamos, podemos concatenar varias comparaciones:
+<br><br>
+<font class="codigo">10 IF VIDAS=0 OR TIEMPO=0 THEN PRINT "ESTAS MUERTO": STOP</font>
+</p>
+<p>
+Aquí hacemos dos comparaciones y gracias al operador lógico OR, las instrucciones
+a continuación del comando THEN se ejecutan si cualquiera de los dos casos se
+cumple, que vidas o tiempo sea igual a 0.
+</p>
+<p>
+Podemos tener la necesidad de que tengan que ser ciertas las dos, y
+no sólo una. Para que nuestra condición se cumpla:
+<br><br>
+<font class="codigo">10 IF VIDAS>0 AND TIEMPO >0 THEN LET TIEMPO=TIEMPO-1</font>
+</p>
+<p>
+Fácil de comprender, si tenemos más vidas y tiempo que lo indicado, '0',
+ejecutamos las instrucciones colocadas después del THEN.
+
+</p>
+<ul><li><b>OPERADORES</b>
+<p>
+Con estos elementos podremos comparar diferentes circunstacias entre variables.
+Y siempre devolverá la comparación si es cierto o falso.
+</p>
+<ul>
+<li>Mayor que <b>">"</b> Cierto si el resultado de comparar el primer dato es
+mayor que el segundo.</li>
+<li>Menor que <b>"<"</b> Cierto si el resultado de comparar el primer dato es
+menor que el segundo.</li>
+
+<li>Igual que <b>"="</b> Cierto si los dos datos son exactamente iguales.</li>
+<li>Diferente que <b>"<>"</b> Será cierto si los datos comparados son diferentes.</li>
+<li>Mayor o igual que <b>">="</b> Cierto si el primer dato es mayor o igual
+que el segundo.</li>
+<li>Menor o igual que <b>"<="</b> Cierto en caso de que el primer dato sea
+menor o igual que el segundo.</li>
+
+</ul>
+<p>
+Con este conjunto de operados lógicos podremos realizar las
+comparaciones necesarias en nuestro programa.
+</p>
+</li></ul>
+</li></ul>
+<b>FLUJO DEL PROGRAMA</b>
+<p>
+En el BASIC del Spectrum, las diferentes instrucciones de los programas las
+vamos introduciendo con un número delante, que nos sirve para poder controlar el
+flujo del programa como necesitemos durante la ejecución del mismo, entre otras
+cosas. La numeración de estas líneas la podemos indicar desde el número 1 al 9999,
+con los saltos intermedios que queramos, podemos numerarlas de 2 en 2, de 10
+en 10, etc. Es aconsejable irlas numerando de manera que quede hueco entre
+una y otra para poder introducir una línea con instrucciones adicionales
+sobre la marcha, en caso de que sea necesario. Por ejemplo de 10 en 10.
+</p>
+<p>
+En cualquier programa la ejecución de las instrucciones se va realizando de
+manera correlativa, en primer lugar la línea superior y consecutivamente las
+siguientes hasta llegar a la última. Esto para un programa sencillo puede
+servir, por ejemplo para uno que nos dé la equivalencia entre
+kilómetros y millas. Pero, en un juego, en el que hay porciones del programa
+que se ejecutarán varias veces, no es útil.
+</p>
+<p>
+Tenemos dos instrucciones que nos van a permitir variar este flujo:
+<font class="codigo">GO TO</font> y <font class="codigo">GO SUB</font>.
+
+</p>
+<ul>
+<li><b>GO TO</b>
+<p>
+Con <font class="codigo">GO TO</font> saltaremos a la línea indicada
+después de la misma instrucción,
+saltando las que pudiese haber tanto delante como detrás de la misma:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="94%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="programa3"> - PROGRAMA 3 - </a>
+
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+&nbsp;10 LET A=5<br>
+&nbsp;20 IF A=5 THEN GO TO 100<br>
+&nbsp;30 PRINT "NO ES CIERTO"<br>
+&nbsp;40 STOP<br>
+100 PRINT "SI ES CIERTO"
+		</td>
+
+	</tr>
+</table>
+<p>
+Al ejecutar este programa, como A=5, ya que así lo hemos asignado al principio
+del mismo, la condición analizada en la línea 20 se cumple y se ejecuta la
+instrucción GO TO, saltando directamente a la línea 100 sin pasar por la 30
+ni la 40. Podemos variar ahora la línea 10 cambíando 5 por cualquier otro número.
+Veremos cómo la condición no se cumple y la ejecución del programa sigue por la
+línea 30 finalizando en la 40 por obra del STOP situado en ella, instrucción
+que sirve para detener la ejecución del programa drásticamente.
+</p>
+</li>
+<li><b>GO SUB y RETURN</b>
+<p>
+La instrucción <font class="codigo">GO SUB</font> es una evolución
+de <font class="codigo">GO TO</font> ya que nos permite desviar
+en un momento dado la ejecución del programa, ejecutar un bloque de
+instrucciones y devolver el flujo a la línea siguiente donde se ejecutó el
+
+<font class="codigo">GO SUB</font> con la instrucción <font class="codigo">RETURN</font>.
+Este tipo de construcciones se denominan subrutinas.
+</p>
+<p>
+Lo vamos a ver con un ejemplo:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="94%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="programa4"> - PROGRAMA 4 - </a>
+
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+&nbsp;10 LET A =5<br>
+&nbsp;20 IF A=5 THEN GO SUB 100<br>
+&nbsp;30 PRINT "DESPUES DEL GOSUB"<br>
+&nbsp;40 STOP<br>
+100 PRINT "EL GOSUB HA FUNCIONADO"<br>
+
+110 RETURN
+		</td>
+	</tr>
+</table>
+<p>
+Es un programa similar al que usamos para ilustrar al comando GO TO. Si la condición
+de la línea 20 se cumple, que lo hará porque A vale 5 en un comienzo,
+salta a la línea 100, ejecuta lo que hay en ella y al llegar a la
+instrucción RETURN de la línea 110 , devuelve el flujo a la línea 30, justo
+después de la ejecución del GO SUB.
+</p>
+<p>
+GO SUB nos va a ser muy útil a la hora de tener porciones de programa que se
+tienen que ejecutar varias veces, para no reescribirlos en varias ocasiones,
+simplemente lo tenemos una vez y cada vez que nos haga falta lo llamamos con
+el correspondiente GO SUB.
+</p>
+<p>
+Una precaución que tenemos que tener con el uso de RETURN, si lo ponemos en
+una línea, y el programa llega a ella sin haber ejecutado previamente una
+sentencia GO SUB,
+se detendrá la ejecución del mismo con el informe de error
+<font class="codigo">7 RETURN without GO SUB, 0:1</font>. Es decir,
+la ejecución de RETURN tiene que estar ligada forzosamente a una llamada
+anterior por medio de GO SUB.
+</p>
+<p>
+
+Damos por supuesto que el lector ha comprendido que la utilización de GO TO
+y GO SUB no se limita al ámbito de una instrucción comparativa, sino que
+puede ser puesta en cualquier línea como un comando más para alterar el
+flujo del programa:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="94%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="programa5"> - PROGRAMA 5 - </a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+
+&nbsp;10 PRINT "HOLA MUNDO"<br>
+&nbsp;20 GO TO 100<br>
+&nbsp;30 REM A ESTA LINEA NO LLEGARA NUNCA LA EJECUCION DEL PROGRAMA<br>
+&nbsp;40 REM YA QUE EL GO TO HACE QUE LA EJECUCION SALTE ESTA LINEA<br>
+100 PRINT "POR AQUI CONTINUA EL PROGRAMA"
+		</td>
+	</tr>
+</table>
+<p>
+Vemos una instrucción nueva, REM, que sirve para insertar comentarios en nuestros
+programas, y que no se ejecuta en ningún caso. Nuestro programa se ejecuta
+escribiendo un saludo y luego salta directamente a la línea 100.
+</p>
+</li></ul>
+
+</ul>
+<b>BUCLES</b>
+<p>
+Podemos tener la necesidad de ejecutar una serie de instrucciones un
+número determinado de veces. Para eso tenemos los bucles, formados por los comandos
+<font class="codigo">FOR TO</font>, <font class="codigo">NEXT</font> y <font class="codigo">STEP</font>.
+</p>
+<p>
+El comando FOR necesita de una variable que irá incrementando o decrementando
+hasta que la condición de salida sea cierta y salga del mismo. Esta variable
+no es necesario que se declare previamente y su nombre constará de una única letra.
+<br><br>
+<font class="codigo">
+
+10 FOR F=1 TO 10<br>
+20 PRINT F<br>
+30 NEXT F
+</font>
+</p>
+<p>
+Este programa ejecutará 10 veces las instrucciones contenidas entre las
+instrucciones FOR y NEXT. En la línea 10 le decimos que vamos a crear un bucle llamado
+F que va a comprender un rango de 1 a (TO) 10, en la línea 20 ejecutamos lo
+que queremos, en este caso un PRINT y en la 30 cerramos el bucle.
+</p>
+<p>
+La iteración del bucle no tiene por que ir de uno en uno, podemos hacer
+que la suma sea mayor con la inclusión del comando STEP. Cambiamos la
+línea 10 únicamente:
+<br><br>
+<font class="codigo">10 FOR F=1 TO 10 STEP 2</font>
+</p>
+<p>
+
+El bucle ahora se ejecutaría la mitad de veces, ya que le estamos indicando
+que incremente el valor de F de dos en dos, en lugar de uno como es lo habitual.
+</p>
+<p>
+Para hacer que el bucle se ejecute hacia atrás, necesitaremos ponerle
+obligatoriamente un STEP -1, ya que de otra manera, la iteración siempre
+suma. Cambiando la línea 10 del anterior programa por la siguiente podremos ver
+los resultados:
+<br><br>
+<font class="codigo">10 FOR F=10 TO 1 STEP -1</font>
+</p>
+<p>
+Podemos anidar un bucle dentro de otro sin ningún problema, siempre que nos
+preocupemos de cerrar el más interno antes de que se ejecute otra iteración
+del externo, Con un ejemplo lo veremos perfectamente:
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+<a name="programa6"> - PROGRAMA 6 - </a>
+
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+10 FOR F=1 TO 10<br>
+20 PRINT "TABLA DEL: ";F<br>
+30 FOR D=1 TO 10<br>
+40 PRINT F*D<br>
+50 NEXT D<br>
+
+60 NEXT F
+		</td>
+	</tr>
+</table>
+<p>
+Con este programa sacaremos por pantalla las tablas de multiplicar del
+1 al 10, y podemos apreciar como antes de cerrar el bucle externo, hay
+que hacer lo propio con el interno, en caso contrario el resultado obtenido no será el
+deseado. Se puede probar intercambiando las líneas 50 y 60.
+</p>
+<b>NUESTRO PRIMER JUEGO</b>
+<p>
+Para ilustrar todo lo que acabamos de leer, vamos a crear un
+jueguecillo simple de adivinación de números en el que vamos a utilizar
+las instrucciones vistas hasta aquí.
+</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%">
+	<tr bgcolor="#FAE2DF">
+		<td class="texto">
+
+<a name="adivinacion"> - <a href="tap/adiv.tap">ADIVINACIÓN</a> - </a>
+		</td>
+	</tr>
+	<tr bgcolor="#EAE8A9">
+		<td class="codigo">
+&nbsp;10 PRINT "DEBE ADIVINAR UN NUMERO ELEGIDO ALEATORIAMENTE ENTRE 1 Y 100 EN LA CANTIDAD DE INTENTOS QUE USTED INTRODUZCA"<br>
+&nbsp;20 INPUT "Introduzca el número de intentos (Max.10) ";A<br>
+
+&nbsp;30 IF A<1 OR A >10 THEN GO TO 20<br>
+&nbsp;40 LET VALOR=(RND*100)+1<br>
+&nbsp;50 FOR F=1 TO A<br>
+&nbsp;60 INPUT "INTRODUZCA NUMERO ";B<br>
+&nbsp;70 IF B=VALOR THEN PRINT "ENHORABUENA, ACERTO EN ";F;" INTENTOS": STOP<br>
+&nbsp;80 IF B>VALOR THEN PRINT "EL NUMERO INTRODUCIDO ES MAYOR"<br>
+&nbsp;90 IF B&lt;VALOR THEN PRINT "EL NUMERO INTRODUCIDO ES MENOR"<br>
+100 NEXT F<br>
+
+110 CLS: PRINT "NO HA SIDO CAPAZ DE ADIVINAR EL NUMERO EN ";A; " INTENTOS"<br>
+120 PRINT "EL NUMERO ERA ";VALOR
+		</td>
+	</tr>
+</table>
+<p>
+El programa es muy sencillo de entender, y solo haremos hincapié en
+unas cuantas instrucciones nuevas.
+</p>
+<ul>
+<li><font class="codigo">INPUT</font>, que como se habrá podido apreciar, sirve para
+introducir un valor por el teclado y asignarlo a una variable.</li>
+<li><font class="codigo">PRINT</font>, Sirve para presentar texto por pantalla.</li>
+
+<li><font class="codigo">RND</font>, que vale para generar números aleatorios,
+en este caso le decimos
+que busque un número entre 1 y 100 (como puede asignar 0 a este valor, le
+sumamos 1 para que nunca ocurra este caso).</li>
+<li><font class="codigo">CLS</font>, sirve para borrar la pantalla.</li>
+<li><font class="codigo">STOP</font>, con este comando paramos la ejecución del programa.</li>
+</ul>
+<p>Algunas de estas instrucciones las comentaremos en profundidad en próximos capítulos
+del curso, de momento con saber qué hacen será suficiente.
+</p>
+<b>CONCLUSIONES</b>
+<p>
+Este mes hemos visto una serie de instrucciones que van a ser
+imprescindibles para realizar nuestros programas, así como dejamos sentados
+unos cuantos conceptos de programación sin los cuales no conseguiremos realizar
+un proyecto medianamente serio.
+</p>
+
+<p>
+El juego de ejemplo de este mes puede no decir gran cosa, ya que
+carece de gráficos, efectos, movimiento, etc. pero sirve perfectamente para
+ver todo lo explicado en este artículo.
+</p>
+<p>
+En la siguiente entrega de este curso, en la que abordaremos la presentación
+gráfica y la lectura de teclado, veremos moverse algo por la pantalla
+controlándolo a nuestro antojo.
+</p>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right"><br>MIGUEL</td>
+	</tr>
+
+</table>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="zona-pc.html">Zona PC</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="basic.html" selected>Programación BASIC</option>
+        <option value="emulacion.html">Emulación</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+    </form>
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+
+</html>

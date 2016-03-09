@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="hardware.html" selected>Hardware</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="rem.html">REM</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+
+    <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 16 - Enero 2008</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+<div align="justify">
+<p align="center"><font size="4">Instalación y uso de una unidad de disco de 3" en un PC</font></p>
+<p><i>Si hay una gran contienda pendiente en cuanto a la preservación de software de Spectrum se refiere, podríamos resumirla bajo cuatro siglas: EDSK. El formato definido por Doewich, Thacker y Vieth cubre, aparentemente, todas las expectativas de los entusiastas del +3, al soportar toda protección de disco conocida para las tres pulgadas. Sin embargo, no son muchos los que tienen una disquetera de 3" instalada en su PC, requisito imprescindible para crear imágenes perfectas de discos de 3" en formato EDSK, así como para volcar éstas de nuevo a disco. Con este artículo trataremos de animar al lector a dar el paso que le permitirá preservar perpetuamente intactos sus discos de 3".</i></p>
+<p>Antes de ponernos manos a la obra, conviene advertir que ni el autor de este artículo, ni SPECCY.ORG, ni la redacción de Magazine ZX, se hacen responsables de los posibles daños que pudiese ocasionar en su PC u otros componentes al seguir esta guía. Particularmente el lector debe recordar que bajo ningún concepto puede conectar la disquetera de 3" a su PC simultáneamente a otras unidades de disco flexible (e.g., la de 3 1/2"), so riesgo de provocar daños irreversibles en la controladora o unidades de disco.</p>
+
+<p><b>Propósito</b></p>
+<p>Con la instalación de una disquetera de 3" en nuestro PC perseguimos, principalmente, dos cometidos:</p>
+<ol>
+	<li>Poder preservar discos de 3", y especialmente los protegidos, en un archivo .DSK (imagen de disco en formato EDSK).</li>
+	<li>Poder grabar discos de 3" a partir de imágenes como las anteriores, de tal modo que seamos capaces de utilizarlos directamente en nuestro +3.</li>
+</ol>
+<p>Con respecto al segundo punto, existe la errónea creencia de que conectando una disquetera de 3 1/2" al +3 (véase artículo relacionado de MagazineZX referenciado más abajo, en el apartado de enlaces), y copiando de 3 1/2" a 3" por medio de un copión, podemos igualmente lograr tal propósito, pero lo cierto es que con ciertas protecciones de disco esto no funciona. Por el momento, la única manera de conseguir volcados perfectos de un DSK es conectando una unidad de disco de 3" a nuestro PC. En ello vamos a centrar nuestro esfuerzo de aquí en adelante.</p>
+<p><b>Material requerido</b></p>
+<ul>
+
+	<li>Un PC. Si simplemente pensamos utilizar CPDRead/CPDWrite, nos basta con un PC viejo, al que le instalaremos MS-DOS. Un 486 o un Pentium lento es ideal. En caso de que queramos utilizar CPCDiskXP, necesitaremos un PC que pueda soportar un Windows 2000 o XP. Si estamos dispuestos a prescindir de la disquetera de 3 1/2", podemos adaptar el PC de sobremesa que utilicemos habitualmente. Hay que tener presente que la unidad de 3" y la de 3 1/2" nunca podrán estar simultáneamente conectadas.</li>
+	<li>Una faja de disquetera de PC convencional, con al menos un conector hembra para disquetera de 3 1/2" (34 PIN IDC). La misma faja que lleve el PC bastará, con toda seguridad.</li>
+	<li>Tijeras y/o cutter. Será necesario realizar algunos cortes en el cable plano.</li>
+	<li>Un conector IDC de 26 pines. En caso de apuro, podemos sacarla de una faja de diskettera de un +3.</li>
+	<li>Una disquetera de 3". Igualmente, podemos extraerla de un +3 o CPC6128.</li>
+</ul>
+<p>Afortunadamente, no es necesario que destripemos un +3 si no queremos, sino que podemos acudir a alguno de los múltiples vendedores que existen en la red, como el afamado John R. P. King, especialista en las 3 pulgadas: <a href="http://www.pcwking1.netfirms.com/plus3.html">http://www.pcwking1.netfirms.com/plus3.html</a> (no, no es colega, ni cobramos comisión por la publicidad ;-))</p>
+
+<p>Otra opción es, por supuesto, comprar una unidad externa de disco Amstrad FD-1 y conectarla al PC. De ese modo te evitarás realizar el montaje del que versa este artículo, ya que no necesita ningún tipo de adaptador (el conector es IDC de 34 pines).</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/plus3-1.png" width="400" height="300"  alt="foto: José Leandro Novellón" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">foto: José Leandro Novellón</td>
+
+	</tr>
+</table>
+</center>
+
+<p><b>Realización del cable</b></p>
+<p><i>Esquema del cable</i></p>
+<p>La disquetera del PC tiene más señales que la disquetera de 3". Será necesario adaptar el cable para poder conectar la disquetera de 3". Por suerte, las modificaciones son pequeñas y la mayoría de señales y pines coinciden en ambos casos.</p>
+<p>El cable que fabricaremos aquí permitirá conectar una disquetera de 3" como unidad "A:" en un PC.</p>
+<p>El esquema del cable es el siguiente:</p>
+
+<center>
+
+<table border="0" cellspacing="0" cellpadding="2" width="553">
+	<tr align="right">
+		<td><img src="img/plus3-21.gif" width="553" height="540"  alt="" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+<center>
+
+<table border="1">
+	<tr><th>Pin 3.5"</th><th>Pin 3"</th><th>Description</th></tr>
+	<tr><td>2</td><td>NC</td><td>Density Select</td></tr>
+	<tr><td>4</td><td>NC</td><td>Reserved</td></tr>
+	<tr><td>6</td><td>NC</td><td>Reserved</td></tr>
+
+	<tr><td>8</td><td>2</td><td>Index</td></tr>
+	<tr><td>10</td><td>8</td><td>Motor Enable A</td></tr>
+	<tr><td>12</td><td>6</td><td>Drive Sel B</td></tr>
+	<tr><td>14</td><td>4</td><td>Drive Sel A</td></tr>
+
+	<tr><td>16</td><td>NC</td><td>Motor Enable B</td></tr>
+	<tr><td>18</td><td>10</td><td>Direction</td></tr>
+	<tr><td>20</td><td>12</td><td>Step</td></tr>
+	<tr><td>22</td><td>14</td><td>Write Data</td></tr>
+
+	<tr><td>24</td><td>16</td><td>Floppy Write Enable</td></tr>
+	<tr><td>26</td><td>18</td><td>Track 0</td></tr>
+	<tr><td>28</td><td>20</td><td>Write Protect</td></tr>
+	<tr><td>30</td><td>22</td><td>Read Data</td></tr>
+
+	<tr><td>32</td><td>24</td><td>Head Select</td></tr>
+	<tr><td>34</td><td>26</td><td>Disk Change</td></tr>
+	<tr><td colspan="3">Nota: todos los pines impares son GND</td></tr>
+</table>
+</center>
+
+<p><i>Construcción</i></p>
+
+<p>Con ayuda de las tijeras, cortamos el conector IDC 34 que está después del cruce de cables.</p>
+<p>Si nos fijamos en el cable, veremos que hay un cable pintado de rojo. Esto nos indica cual es el hilo número 1.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="300">
+	<tr align="right">
+		<td><img src="img/plus3-3.png" width="300" height="225"  alt="foto: José Leandro Novellón" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">foto: José Leandro Novellón</td>
+
+	</tr>
+</table>
+</center>
+
+<p>Pasamos a eliminar los cables que no necesitamos. En este caso, los cables que van del 1-6 y la pareja 15-16.</p>
+<p>Para juntar los cables, antes de presentarlo sobre el conector IDC de 26 pines, podemos usar un poco de celo o cinta aislante. Al cortar algunos cables, el resto se resisten a quedar perfectamente alineados.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="300">
+	<tr align="right">
+		<td><img src="img/plus3-4.png" width="300" height="225"  alt="foto: José Leandro Novellón" />
+</td>
+
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">foto: José Leandro Novellón</td>
+	</tr>
+</table>
+</center>
+
+<p>Presentamos el cable sobre el conector IDC 26 el cual solo puede ser puesto en una posición. En el conector hay una flecha en un extremo que indica cual es el cable número 1. Si no encontramos la flecha nos podemos valer de la muesca grande en el centro del conector. En la foto se puede ver que el cable número 1 es el primer cable empezando por arriba y que no se ve la muesca (está en la otra cara)</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="300">
+
+	<tr align="right">
+		<td><img src="img/plus3-5.png" width="300" height="225"  alt="foto: José Leandro Novellón" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">foto: José Leandro Novellón</td>
+	</tr>
+</table>
+</center>
+
+<p>Comprobaremos que los cables quedan encima de los dientes del conector IDC 26. La pieza que cierra ayuda pues tiene una ligeras marcas.</p>
+<p>Con la ayuda de un martillo, iremos golpeando la pieza que sujetará el cable contra el conector. Poco a poco veremos como va bajando y el conector quedará cerrado del todo.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="300">
+	<tr align="right">
+		<td><img src="img/plus3-6.png" width="300" height="225"  alt="foto: José Leandro Novellón" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">foto: José Leandro Novellón</td>
+
+	</tr>
+</table>
+</center>
+
+<p>El cable ya está finalizado. Si se dispone de un polímetro, es aconsejable comprobar que hay continuidad entre ambos el conector de PC y el de la disquetera de 3".</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="300">
+	<tr align="right">
+		<td><img src="img/plus3-7.png" width="300" height="225"  alt="foto: José Leandro Novellón" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">foto: José Leandro Novellón</td>
+	</tr>
+</table>
+</center>
+
+<p><b>Conexión de la diskettera al PC</b></p>
+<p>En primer lugar, insistimos en que la unidad de 3 1/2" debe estar desconectada del PC. Es importante recordarlo: ambas unidades nunca pueden coexistir.</p>
+<p>Listo el cable de datos, es necesario adaptar el conector de alimentación del PC que irá a la toma de la disquetera de 3". En la siguiente imagen, se muestra el conector de alimentación de una disquetera de 3 1/2" (izquierda) y el de una de 3" (derecha). Como puede verse, la toma de alimentación de 3" lleva intercambiadas las señales de +5v (cable rojo) y +12v (cable amarillo). Por tanto, deberemos intercambiar dichos cables (rojo y amarillo) en el conector de nuestro PC. Las señales de tierra (cables negros) pueden quedar igual:</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/plus3-8.jpg" width="400" height="300"  alt="foto: Jaime González Soriano" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">foto: Jaime González Soriano</td>
+	</tr>
+</table>
+
+</center>
+
+<p>En la propia imagen puede observarse como el conector cuenta con cuatro pequeñas ranuras, a través de las cuales se ve la terminación metálica de cada uno de los cables. Para poder extraer uno de ellos, basta con introducir un destornillador plano por la ranura correspondiente, de manera que desplace levemente la terminación metálica del cable hacia abajo, y luego tirar del cable hacia fuera. No es necesario apretar fuerte con el destornillador; se trata simplemente de aplicar la presión de forma correcta.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="600">
+	<tr align="right">
+		<td><img src="img/pc3.jpg" width="600" height="673"  alt="Cómo intercambiar los cables rojo y amarillo con ayuda de un destornillador" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Cómo intercambiar los cables rojo y amarillo con ayuda de un destornillador</td>
+
+	</tr>
+</table>
+</center>
+
+<p>Finalmente, conectaremos la disquetera a la controladora de disco del PC (FDC) empleando el cable de datos que hemos desarrollado, y enchufaremos el recién adaptado conector de alimentación a la correspondiente toma de la disquetera. A continuación, arrancamos el PC, entramos en la configuración de la BIOS y, si ésta nos lo permite, definimos la unidad de disco como 5 1/4" 360 Kb. También podemos quitar la unidad A: de la secuencia de búsqueda de dispositivos de arranque (bootup sequence) ya que carece de sentido arrancar el PC con un disco de 3".</p>
+<p>Nótese que si la luz de la disquetera permanece continuamente encendida será muy probablemente porque hemos conectado el cable de datos al revés.</p>
+
+<p><b>Configuración y puesta a punto del PC</b></p>
+
+<p>Para manipular discos de 3" existen tres herramientas: CPD TOOLS (MS-DOS), CPCDiskXP (Windows) y SamDisk (Windows, aún en versión beta), cada una de ellas con sus pros y contras, que serán analizados más adelante. En caso de querer utilizar únicamente una de estas herramientas, bastará con tener instalado el sistema operativo correspondiente (MS-DOS o Windows). Pero si queremos poder utilizar las tres, algo que a día de hoy (diciembre de 2007) es más que recomendable, será imprescindible configurar un arranque dual (dual-boot). Esto implica el consiguiente particionado de nuestro disco duro (a menos de que estemos dispuestos a sacrificar un disco duro, destinándolo íntegramente a MS-DOS).</p>
+<p>Si ya contamos con un sistema Windows, ¿realmente es necesario hacer una partición con MS-DOS? Bien. La cuestión es que, hasta donde conocemos, no es posible ejecutar satisfactoriamente CPD TOOLS desde el símbolo de sistema en Windows NT. Desgraciadamente, el S.O. interfiere con las operaciones a bajo nivel que las CPD TOOLS realizan con la disquetera. Y, dado que no tenemos disquetera de 3 1/2" en el PC, puesto que no pueden estar ambas conectadas al mismo tiempo, tampoco podemos emplear un disco de arranque con MS-DOS. Así pues, asumiremos que vamos a tener una pequeña partición con MS-DOS para las CPD TOOLS (puede ser FAT16 ó FAT32), y otra con Windows 2000/XP/…, desde la cual ejecutaremos CPCDiskXP o SamDisk (y que será FAT32 o NTFS).</p>
+
+<p>Una de las cosas que primero debemos tener en cuenta es que, para que MS-DOS pueda arrancar, es necesario que se encuentre alojado en el primer disco duro, en una partición primaria. Suponiendo que no queremos tener discos duros dedicados, sino que vamos a particionar el disco principal, esto implica que tendremos al menos dos particiones primarias: la de Windows y la de MS-DOS.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/pc1.jpg" width="400" height="533"  alt="La disquetera después de montarla en el PC" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">La disquetera después de montarla en el PC</td>
+
+	</tr>
+</table>
+</center>
+
+<p>Si vamos a partir de cero, podemos particionar el disco por medio de FDISK, instalar después MS-DOS, y a continuación instalar Windows 2000/XP, y de ese modo tendremos arranque dual. La partición que se encuentre físicamente en primer lugar será la que reciba la letra de unidad C: en Windows, aunque el S.O. se encuentre instalada en la otra (¡ojo con esto!).</p>
+<p>En cualquier caso, a menudo la situación es diferente: tenemos Windows 2000/XP instalado, y lo que queremos es habilitar una nueva partición para instalar MS-DOS sin destruir lo que ya tenemos. Una opción es utilizar una herramienta como Partition Magic, si disponemos de la correspondiente licencia. La otra, utilizar software libre, para lo cual es útil seguir la guía de TR-LOG incluida en la sección de enlaces, y que se resume en tres pasos: (1) ejecutar un CD de arranque de Linux que incluya un gestor de particiones como GParted o QTParted, y con él reparticionar el disco, (2) instalar MS-DOS 7.1, también desde CD autoarrancable, y (3) instalar un gestor de arranque (boot loader) como puede ser GAG. Se trata de un proceso bastante mecánico y sencillo.</p>
+<p>El interés de instalar el denominado MS-DOS 7.1 (una versión no oficial, por cierto) radica no sólo en el soporte en que es distribuido (CD autorrancable) sino en la posibilidad de dar soporte a FAT32 y nombres largos, lo que será muy útil si pretendemos manipular la partición de MS-DOS desde Windows (y realmente así será, con el fin de transferir los DSKs de una a la otra - recordemos que no tenemos disquetera para poder moverlos; y además, si la de Windows es NTFS, dicha partición será invisible desde MS-DOS). En ese sentido, conviene apuntar que, si la partición de Windows tenía originalmente asignada la letra de unidad C: en el sistema, deberíamos crear la partición de MS-DOS físicamente a continuación (y no antes) de ella, pues de otro modo será invisible desde Windows. No obstante, tampoco debería estar más allá del cilindro 1024, de acuerdo con algunas fuentes.</p>
+
+<p><b>Manipulación de discos de 3"</b></p>
+
+<p>Para volcar discos a DSK, así como para pasarlos de DSK a disco, existen tres herramientas en funcionamiento: la más antigua pero todavía "la reina", las CPD TOOLS, funcionan únicamente sobre MS-DOS. Para suplir la carencia de una herramienta sobre Windows nace CPCDiskXP, disponible para Windows 2000 / XP y en adelante. Y en este artículo os presentamos también una herramienta que se encuentra aún en fase beta, pero que vendrá a ampliar el parque de herramientas para Windows 2000 / XP, y posiblemente también para Linux: la nueva versión de la herramienta SamDisk, originalmente concebida para los discos de Sam Coupé.</p>
+
+<p>Antes de pasar a repasarlas con más detalle, es de justicia nombrar una aplicación que hoy en día resulta casi imprescindible para los que trabajamos con DSKs: el SPIN Disk Manager de Damien Guard. Aunque no entraremos aquí a explicar su funcionamiento, incluimos un enlace a la página web del programa, puesto que os resultará un útil compañero a la hora de, por ejemplo, detectar posibles deficiencias en vuestros DSKs.</p>
+
+<p><i>CPD TOOLS (CPDRead 3.24 / CPDWrite 1.03)</i></p>
+
+<p>En los números 1 y 2 de esta revista, Miguel realizó un reportaje muy detallado sobre estas dos herramientas, creadas por Kevin Thacker (uno de los autores del formato EDSK). Dada la minuciosidad de dicho artículo, no incidiremos de nuevo sobre ello. No obstante, es conveniente remarcar que CPDRead es, de las públicamente disponibles a día de hoy, la herramienta más potente para preservar discos de 3" en formato EDSK. Por tanto, si nuestro objetivo es preservar discos de 3", será absolutamente necesario crear una partición con MS-DOS para poder sacar pleno potencial a la unidad a través de esta herramienta.</p>
+<p>Las CPD TOOLS siguien siendo hoy en día las herramientas "oficiales" para volcado de discos, y son capaces de manejar muchas de las protecciones de disco de +3 y CPC. CPDRead es capaz de procesar discos con tamaños mixtos de sector, errores de datos, marcas de dirección (address marks) borradas y sectores de 8K truncados. Al ser una herramienta antigua, no incluye las últimas revisiones del formato EDSK, con lo que no es capaz de almacenar múltiples copias de los sectores erróneos o débiles (utilizado por el sistema Speedlock) o almacenar más de 6144 bytes de los sectores de 8K (necesario p.e. para Coin-Op Hits, Final Fight u otros). Tampoco es capaz de manejar discos que tienen tamaños de cabecera ID inválidos (empleado p.e. en los discos de utilidades de Kobrahsoft SP5, SP6 y SP7). No obstante, es capaz de procesar la inmensa mayoría de discos publicados para el +3.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="400">
+	<tr align="right">
+		<td><img src="img/pc2.jpg" width="400" height="300"  alt="CPDRead en funcionamiento" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">CPDRead en funcionamiento</td>
+	</tr>
+</table>
+</center>
+
+<p><i>CPCDiskXP v1.6</i></p>
+
+<p>CPCDiskXP es una herramienta desarrollada por Óscar Sánchez, alias Mochilote, para poder transferir discos a DSK, y viceversa, desde Windows 2000 o superior. Es, sin duda alguna, un excelente complemento para CPD TOOLS; y para algunas cuestiones, un más que digno sustituto. CPCDiskXP requiere instalar un driver elaborado por Simon Owen (autor de SamDisk) para acceder a bajo nivel a la controladora de disco, llamado fdrawcmd.sys, y que viene incluido en el propio paquete de CPCDiskXP (basta con lanzar un ejecutable para que quede instalado en el sistema de forma permanente, siendo desinstalable del mismo modo). A la fecha de redacción de este artículo, la última versión disponible de CPCDiskXP es la 1.6.</p>
+
+<p>El funcionamiento de CPCDiskXP es muy intuitivo, gracias a su atractiva interfaz gráfica. En la pantalla principal contamos con dos grandes iconos para pasar de DSK a disco 3" y de disco 3" a DSK, y con otros botones más pequeños para poder formatear un disco u obtener información del mismo. Durante la lectura de un disco, se nos muestra un mapa de sectores en el que se puede seguir el proceso y observar el estado de cada uno de los sectores. Para la escritura, se nos muestra simplemente una barra de progreso.</p>
+<p>CPCDiskXP soporta discos estándar de +3 y CPC y algunas protecciones de disco relativamente básicas. En la versión 1.6 aún no es capaz de manejar discos con tamaños mixtos de sector, IDs falsos, errores de datos, sectores de 8k truncados, o sectores débiles (weak sectors). Desgraciadamente, esto significa que la mayor parte de los discos protegidos no pueden ser volcados de forma correcta. No obstante, su interfaz gráfica lo hace ideal para tareas básicas. Además, nos permite elegir el número de reintentos en caso de error en lectura, algo de lo que CPDRead carecía y que sus usuarios siempre han echado en falta (aunque en caso de error final, el programa deja desafortunadamente todo el sector en blanco en el DSK).</p>
+<p>A pesar de ello, CPCDiskXP es una herramienta muy útil en los tiempos que corren, teniendo en cuenta que nos permite hacer uso de la disquetera desde Windows de forma rápida e intuitiva, sin necesidad de abandonar nuestra sesión del Sistema Operativo.</p>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="640">
+	<tr align="right">
+		<td><img src="img/cpcdiskxp-sectors3.jpg" width="640" height="397"  alt="" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="200">
+	<tr align="right">
+		<td><img src="img/plus3-cpcdiskxp_2.jpg" width="200" height="243"  alt="" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right"></td>
+	</tr>
+</table>
+</center>
+
+<p><i>SamDisk 2.1.1</i></p>
+
+<p>SamDisk es una herramienta para Windows 2000/XP, originalmente pensada para la manipulación de discos de Sam Coupé, y desarrollada por Simon Owen (autor también del emulador Sim Coupé). La última versión publicada es la 2.0, pero hemos tenido acceso a una beta de la versión 2.1.1 que permitirá el manejo de discos de 3". A pesar de contar con una apariencia mucho más austera que las herramientas anteriormente mencionadas (se maneja desde línea de comandos), SamDisk parece llamada a convertirse en la aplicación definitiva para el manejo de discos de 3".</p>
+<p>SamDisk nos permite leer, grabar, formatear o examinar discos a nuestro antojo, de forma similar a cómo funciona la versión actual de SamDisk para discos de Sam. De muestra, un botón:</p>
+
+<p>Copiar de disco a imagen EDSK (42 pistas, sólo cara 0):</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+SamDisk a: myimage.dsk /t:42 /s:0
+</pre>
+    </p></td></tr>
+</table>
+<p>Copiar imagen EDSK a disco (la geometría del disco se obtiene de la imagen):</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+SamDisk myimage.dsk a:
+</pre>
+
+    </p></td></tr>
+</table>
+<p>Examinar disco (nos da información más allá de lo que queda almacenado en EDSK, y por tanto es útil para examinar discos desconocidos):</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+SamDisk /scan a: /t:42 /s:0 /a
+</pre>
+    </p></td></tr>
+</table>
+<p>El parámetro /a muestra dónde se encontraron los sectores en cada pista, lo que permite determinar el tamaño de los huecos (gaps), así como mostrar qué sectores fueron escritos a propósito sin un campo de datos. Se puede emplear también el parámetro /scan sobre imágenes EDSK, pero en ese caso la información sobre la posición no estará disponible.</p>
+<p>Es de esperar que Simon cambie ligeramente la sintaxis de invocación del programa en el momento en que aparezca la versión Linux, debido al uso de la barra oblicua ("/") para pasar los parámetros.</p>
+
+<p>SamDisk 2.1.1 hace uso de las últimas revisiones del formato EDSK para soportar discos que anteriormente no podían ser volcados. Puede leer y escribir tamaños mixtos de sector, errores de datos, campos de datos inexistentes, sectores bobos (dummy sectors), IDs falsos y sectores de 8K truncados. Tiene la capacidad de escribir sectores débiles (necesario para los discos protegidos con Speedlock) así como sectores de más de 6K (como los de Coin-Op Hits) empleando una unidad ralentizada. Puede escribir también discos protegidos con Alkatraz, solucionando un problema con el cargador de arranque que evitaba que funcionasen en unidades de 3.5". Hasta donde se conoce, es capaz de escribir todas y cada una de las imagenes EDSK tanto de +3 como de CPC.</p>
+<p>Por supuesto, nos permite elegir el número de reintentos en caso de error de lectura. Como puntos negativos de la herramienta, hay que destacar que los DSK que genera a veces no son compatibles con emuladores y herramientas antiguas, al seguir las últimas revisiones del formato EDSK. De hecho, al almacenar múltiples copias de los sectores erróneos, nos encontramos con que los malos volcados a menudo dan problemas con determinados programas. Como efecto lateral, el fichero DSK puede resultar notablemente más grande de lo habitual en el caso de que aparezcan múltiples sectores erróneos y hayamos marcado varios reintentos. Y, por supuesto, se echa de menos una interfaz gráfica como la de CPCDiskXP.</p>
+<p>A pesar de esto último, podemos afirmar con rotundidad que, cuando la versión definitiva de SamDisk vea la luz, tendremos la herramienta casi definitiva para el manejo de discos de 3" en el PC. Mientras tanto, os recomendamos la instalación de un arranque dual, y el uso de CPCDiskXP para las tareas rutinarias, y CPD TOOLS para tareas de preservación y manipulación de discos protegidos más específicas.</p>
+
+<div align="left">
+<p>
+<b>AGRADECIMIENTOS / ACKNOWLEDGMENTS</b>
+</p>
+<p>A <b>Jaime González Soriano</b>, por la foto de los conectores de alimentación, y a <b>Simon Owen</b> por la información facilitada y la versión beta de SamDisk.</p>
+
+<p>(To <b>Jaime González Soriano</b>, for the photo of the power supply plug, and to <b>Simon Owen</b> for all the information he kindly provided and the beta version of SamDisk.)</p>
+</div>
+<div align="left">
+<p>
+<b>LINKS</b>
+</p>
+<ul>
+	<li><i>GUIAS ALTERNATIVAS</i>
+
+		<ul>
+			<li>Mounting a 3" disc drive on a PC: <a href="http://www.fvempel.nl/3pc.html">http://www.fvempel.nl/3pc.html</a></li>
+			<li>Dave Batty's disk dumping guide: <a href="http://tzxvault.retrogames.com/help.htm#dsk">http://tzxvault.retrogames.com/help.htm#dsk</a></li>
+			<li>Andy Barker's disk dumping guide: <a href="http://newton.sunderland.ac.uk/%7Especfreak/FD1/">http://newton.sunderland.ac.uk/%7Especfreak/FD1/</a></li>
+			<li>La guía de Deepfb: <a href="http://perso.wanadoo.es/jaimegs/ordenadores/amstrad/3enpc.htm">http://perso.wanadoo.es/jaimegs/ordenadores/amstrad/3enpc.htm</a></li>
+
+		</ul>
+	</li>
+	<li><i>ARTÍCULOS RELACIONADOS</i>
+		<ul>
+			<li>CPDTOOLS (I): <a href="http://magazinezx.speccy.org/index.php?revista=1&seccion=3"></a></li>
+			<li>CPDTOOLS (y II):<a href="http://magazinezx.speccy.org/index.php?revista=2&seccion=1">http://magazinezx.speccy.org/index.php?revista=2&seccion=1</a></li>
+
+			<li>Adaptador de disquetera de 3 1/2" para el +3: <a href="http://magazinezx.speccy.org/index.php?revista=1&seccion=5">http://magazinezx.speccy.org/index.php?revista=1&seccion=5</a></li>
+		</ul>
+	</li>
+	<li><i>FORMATOS DSK/EDSK: HERRAMIENTAS Y DOCUMENTACIÓN</i>
+		<ul>
+			<li>Ullrich Doewich's CPDRead / CPDWrite: <a href="http://www.caprice32.cybercube.com/downloads.php">http://www.caprice32.cybercube.com/downloads.php</a></li>
+
+			<li>CPCDiskXP, por Mochilote: <a href="http://www.cpcmania.com/">http://www.cpcmania.com/</a></li>
+			<li>Simon Owen's SamDisk: <a href="http://simonowen.com/sam/samdisk/">http://simonowen.com/sam/samdisk/</a></li>
+			<li>Damien Guard's Disk Manager: <a href="http://www.damieng.com/spectrum/spin/disk-manager/">http://www.damieng.com/spectrum/spin/disk-manager/</a></li>
+			<li>John Elliot's LibDsk: <a href="http://www.seasip.demon.co.uk/Unix/LibDsk/">http://www.seasip.demon.co.uk/Unix/LibDsk/</a></li>
+			<li>DU54 DSK format: <a href="http://andercheran.aiind.upv.es/%7Eamstrad/docs/dsk.html">http://andercheran.aiind.upv.es/%7Eamstrad/docs/dsk.html</a></li>
+
+			<li>EDSK format: <a href="http://andercheran.aiind.upv.es/%7Eamstrad/docs/extdsk.html">http://andercheran.aiind.upv.es/%7Eamstrad/docs/extdsk.html</a></li>
+		</ul>
+	</li>
+	<li><i>DUAL-BOOT DE DOS Y XP</i>
+		<ul>
+			<li>MS-DOS 7.10: <a href="http://ms-dos7.hit.bg/">http://ms-dos7.hit.bg/</a></li>
+
+			<li>TR-Log procedure for dual-booting Windows XP and DOS: <a href="http://www.trlog.com/DOS_dual_boot_20041207.pdf">http://www.trlog.com/DOS_dual_boot_20041207.pdf</a></li>
+		</ul>
+	</li>
+	<li><i>PROYECTOS DE PRESERVACIÓN DE DISCOS</i>
+		<ul>
+			<li>Spectrum Disk Preservation project: <a href="http://www.worldofspectrum.org/sdp/">http://www.worldofspectrum.org/sdp/</a></li>
+
+			<li>Spanish Spectrum Archive (preservación de discos españoles): <a href="http://spa2.speccy.org/">http://spa2.speccy.org/</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+</div>
+		</td>
+	</tr>
+	<tr>
+
+		<td align="right"><br><br>JOSÉ LEANDRO NOVELLÓN Y JUAN PABLO LÓPEZ</td>
+	</tr>
+</table>                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+
+        <option value="analisis.html">Análisis</option>
+        <option value="hardware.html" selected>Hardware</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="rem.html">REM</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="opinion.html">Opinión</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+    </form>
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+
+</html>

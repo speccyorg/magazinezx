@@ -1,0 +1,1038 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="emulacion.html" selected>Emulación</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="input.html">INPUT</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 4 - Noviembre 2003</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+    </form>
+</table>
+</a>
+                    </td>
+
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+	<tr>
+		<td>
+<div align="justify">
+<p align="center"><font size="5">Emuladores de Spectrum para GP32</font></p>
+<p>
+
+<i>
+Siempre hemos deseado tener un Spectrum en nuestras manos en cualquier
+momento. Al igual que en muchas ocasiones hemos tenido que ir corriendo urgentemente a
+un servicio, hemos tenido la misma sensación pero con la urgencia de correr a por
+un Spectrum. Vas a la tienda, compras un juego para tu Spectrum y... ¿tienes que
+esperar a llegar a casa para probarlo?
+</i>
+</p>
+<p>
+¡Pues NO! Ha llegado el momento de poder jugar con el Spectrum en el metro,
+la parada de autobús, la cola del INEM, o el baño. Si estás de viaje a más de 200
+kilómetros de distancia del Spectrum más próximo, si te aburres soberanamente en la
+playa, si tu novia te abandona en mitad de un restaurante... ¡no temas!
+Sigue leyendo, pues este artículo te va a interesar, porque a todos nos interesa
+tener el poder en tu mano...
+</p>
+<p>
+Con la aparición de las consolas portátiles se empezó a concebir la idea
+de desarrollar emuladores de máquinas antiguas en ellas. No sería hasta la aparición
+de la Game Boy Advance cuando se empezaron a hacer las primeras pruebas serias.
+La GP32, con una arquitectura más ideal para la creación de emuladores es, por el
+momento (y con el permiso de Nokia), la consola con mejores
+características para programar emuladores.
+</p>
+<p>
+En la actualidad, existen 3 emuladores de Spectrum para la GP32. Vamos a
+pasar a analizarlos para ver hasta qué punto pueden convertirse en sustitutos
+portátiles de nuestros queridos Spectrums.
+</p>
+<p>
+<b>LOS EMULADORES</b>
+</p>
+
+<p>
+<b>GPSpeccy</b> (versión comentada: 0.06)
+</p>
+Empezaremos con el emulador menos desarrollado de los tres. El GPSpeccy está programado por
+Zardoz Jones, algo que sabemos por lo que dice la pantalla de presentación
+(<a href="#figura1">Figura 1</a>) del emulador (la cual, por cierto, nos muestra la
+versión 0.05, cuando en realidad hemos descargado la versión 0.06). Y este no es
+el único error en cuanto a diseño del mismo. Tras la pantalla de presentación aparece
+una línea roja horizontal que atraviesa una pantalla totalmente negra. ¿Qué
+debería salir aquí? Pues muy sencillo. El emulador utiliza archivos con extensión
+SNA, pero ojo, sólo los de esta extensión de 48k no el formato SNA de 128k, algo
+por otra parte lógico si tenemos en cuenta que sólo emula el Spectrum de 48k.
+</p>
+<a name="figura1">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion1.jpg" width="320" height="240"  alt="Figura 1. Pantalla de presentación de GPSpeccy" />
+</td>
+
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 1. Pantalla de presentación de GPSpeccy</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+Los juegos con esta extensión deberán estar grabados en la carpeta /GPMM/SNAP.
+Si no tenemos ningún archivo ahí, nos saldrá la pantalla antes comentada de una
+línea roja sin nada más. Si tuviéramos algún archivo grabado, saldrá un
+listado con los archivos para poder ejecutarlos.
+</p>
+<p>
+En el caso de no tener ningún archivo, pulsando otro botón nos aparece
+una pantalla mucho más familiar
+(<a href="#figura2">Figura 2</a>): sobre un borde negro y un fondo blanco-grisáceo
+están los caracteres famosos del (c) 1982 Sinclair Research Inc.
+
+</p>
+<a name="figura2">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion2.jpg" width="320" height="240"  alt="Figura 2. Pantalla inicial del Spectrum 48k" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 2. Pantalla inicial del Spectrum 48k</td>
+	</tr>
+
+</table>
+</center>
+</a>
+<p>
+Este modo es bastante inútil: el emulador se utiliza prácticamente como consola de
+videojuegos, siendo prácticamente imposible poder hacer algo con el teclado. En
+cualquier momento del emulador podemos pulsar el botón L de la consola
+y aparecerá ante nosotros una bonita reproducción del teclado del Spectrum
+(<a href="#figura3">Figura 3</a>). Con el stick podemos controlar la tecla que
+deseamos pulsar, y la seleccionamos con el botón A del emulador. Automáticamente
+saldremos a la pantalla del Spectrum con la tecla en cuestión pulsada.
+El problema es que el emulador no permite la pulsación de más de una tecla de forma
+simultánea, lo que nos impide escribir cualquier comando en el que sea necesario mantener
+pulsada la tecla Symbol Shift o la Caps Shift (aproximadamente, un 70% de los
+comandos existentes en el Spectrum). De ahí la inutilidad de este modo.
+</p>
+<a name="figura3">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion3.jpg" width="320" height="240"  alt="Figura 3. Teclado virtual del Spectrum en GPSpeccy" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">Figura 3. Teclado virtual del Spectrum en GPSpeccy</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+Si tenemos algún juego grabado en la tarjeta, lo podemos seleccionar de
+la lista con el botón A. El juego cargará inmediatamente. Si necesitamos pulsar
+alguna tecla, podemos acceder al teclado virtual mediante el botón L de la consola.
+</p>
+<p>
+El programa emula el uso de varias configuraciones de teclas y del joystick
+Kempston mediante el uso del stick. Es realmente sencillo alternar entre un
+tipo de control y otro: pulsando únicamente la tecla R nos aparecerán
+sobreimpresionadas en pantalla las teclas usadas a partir de entonces. La configuración
+abarca las teclas O P Q A - M,  N M Z X - Espacio, cursores, y joystick Kempston.
+</p>
+<p>
+
+Pulsando el botón Select de la consola aparece el menú del emulador propiamente
+dicho (<a href="#figura4">Figura 4</a>). Las dos primeras opciones y la
+penúltima (Quick Save, Quick Load, y Reboot GP32) no tienen ninguna función en
+especial, puesto que su uso todavía no está implementado. La opción Vsync
+sirve para sincronizar el sonido, que aparece en la siguiente opción (Sound),
+con los gráficos. Por sí sola, el Vsync no afecta para nada al rendimiento del
+emulador, pero si se activa el sonido, es prácticamente obligatorio activar el Vsync.
+</p>
+<a name="figura4">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion4.jpg" width="320" height="240"  alt="Figura 4. Menú de GPSpeccy" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 4. Menú de GPSpeccy</td>
+
+	</tr>
+</table>
+</center>
+</a>
+<p>
+El sonido del emulador merece un punto y aparte. Al emular únicamente al
+48k, el sonido emulado es el del beeper. Sin embargo, el sonido está bastante mal
+emulado: existe mucho ruido y va a saltos, aun con la opción Vsync activada. Sin
+el Vsync activado el sonido es un auténtico caos. Esto explica que el sonido esté
+desactivado por defecto al iniciar el emulador.
+</p>
+<p>
+Con Border se emula el borde de la pantalla del Spectrum, del mismo modo que
+se usaba el comando BORDER del BASIC del Spectrum. Fast CPU es utilizado para aumentar
+la velocidad del emulador en caso de juegos que vayan lentos, aunque la mejoría es
+muy leve y según qué juegos, apenas imperceptible. Profile nos muestra unas
+pequeñas indicaciones sobre el rendimiento del emulador en la pantalla del
+Spectrum. Por defecto, estas 3 opciones están desactivadas. La última opción,
+Back to Emu, nos permite volver al emulador.
+</p>
+<p>
+En un principio, este emulador es el menos desarrollado y el más pobre
+en cuanto opciones. Es el único que no emula el modelo de 128k, su sonido es
+horrible y sólo permite cargar archivos con extensión SNA (ni siquiera admite
+TAP o Z80). Encontrar información sobre el emulador en la red es cosa harto
+complicada. No tiene página web (es el único así de los aquí comentados) y su única
+documentación se compone de un algo exiguo archivo de texto que viene con
+el emulador. También es cierto que este emulador fue el primero que salió de
+Spectrum para la GP32, y que su útlimo desarrollo data de hace más de un año.
+A favor del emulador, está su sencillez de uso: con 3 botones pulsados en la
+consola ya tenemos el juego funcionando en el emulador.
+</p>
+<p>
+<b>ZXGP32</b> (versión comentada: Beta 3)
+
+</p>
+<p>
+El emulador ZXGP32 está bastante más desarrollado que el anterior.
+Incluye dos principales novedades con respecto al GPSpeccy: este ZXGP32 emula el
+modelo de 128k y además soporta los archivos con extensión Z80 y TAP, aparte de
+los SNA soportados en el anterior emulador.
+</p>
+El archivo ejecutable del emulador (con extensión FXE) deberá grabarse en la
+carpeta GPMM de la SmartMedia. Junto con el ejecutable nos vendrán dos
+archivos de 16 Kb cada uno con las ROMs de los modelos de 48k y de 128k. Estos 2
+archivos tendrán que ser grabados en una carpeta llamada ROMS dentro de la carpeta GPMM.
+</p>
+<p>
+El emulador comienza con una decepcionante pantalla preliminar
+(<a href="#figura5">Figura 5</a>) de la pantalla de inicio del Spectrum 128k en
+su versión inglesa. ¿Dónde está lo decepcionante, si esta pantalla es la
+tradicional de este modelo de ordenador? Pues en el tiempo que tarda en mostrarse
+en la pantalla de la consola. La primera impresión que nos da este emulador es que es
+lento, muy lento, ya que la pantalla inicial tarda bastante en dibujarse.
+</p>
+<a name="figura5">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion5.jpg" width="320" height="240"  alt="Figura 5. Menú de inicio del Spectrum 128k" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 5. Menú de inicio del Spectrum 128k</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+Afortunadamente, es sólo una mala pesadilla. El emulador funciona al 100% de
+velocidad tanto en su modo 48k como en su modo 128k. Bien, de momento tenemos
+un emulador con su típica pantalla de presentación en modo 128k. ¿Qué podemos
+hacer ahora?
+</p>
+<p>
+
+El problema del teclado en una consola se soluciona con un teclado virtual que
+aparece al pulsar el botón L. En esta ocasión no sale una reproducción del teclado
+del Spectrum, como sí ocurría con el GPSpeccy (y, como veremos más adelante, con el
+SpeccyalK). Aparece un pequeño recuadro en la parte inferior derecha de la
+pantalla con todas las teclas del Spectrum
+(<a href="#figura6">Figura 6</a>). La ventaja de este sistema es que se permite ver
+el teclado sin ocultar la pantalla del Spectrum, algo sumamente útil y rápido si
+tenemos que andar pulsando varias teclas para acceder a los distintos menús del juego.
+</p>
+<a name="figura6">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion6.jpg" width="320" height="240"  alt="Figura 6. Teclado virtual en ZXGP32" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 6. Teclado virtual en ZXGP32</td>
+
+	</tr>
+</table>
+</center>
+</a>
+<p>
+El problema, en esta ocasión, es que con el tamaño tan pequeño de las teclas sólo
+nos aparecen las teclas principales, es decir, las letras, pero no los tokens del
+Spectrum. Así que si queremos ejecutar un PRINT con el emulador, tenemos que
+acordarnos que hay que pulsar la tecla P (al menos en modo 48k), porque en la
+representación del teclado virtual no aparece.
+</p>
+<p>
+Otra gran ventaja de este teclado es que permite la pulsación de dos teclas a
+la vez, pudiendo acceder a la mayoría de los comandos del Spectrum en modo 48k. El
+modo de utilizar el teclado virtual es muy sencillo: con el stick de la consola
+manejamos un pequeño cursor que se posicionará encima de la tecla que deseemos.
+Para pulsar la tecla, hay que presionar el botón A de la consola. Si queremos mantener
+pulsada una tecla deberemos pulsar dos veces seguidas el botón A encima de la tecla
+en cuestión. Entonces se sombreará esa tecla y podremos pulsar cualquier otra para
+acceder al resto de comandos del Spectrum. Pero ojo: esto solo funcionará con
+SYMBOL SHIFT y con CAPS SHIFT. Para desactivar la pulsación de estas teclas hay
+que volver a pulsar dos veces seguidas el botón A.
+</p>
+<p>
+De vuelta al emulador, pulsando el botón R de la consola nos aparecerá en la parte
+superior izquierda el número frames por minuto del mismo. Con el botón
+Select accederemos a un menú
+(<a href="#figura7">Figura 7</a>) donde podremos encontrar los archivos de imágenes
+que hayamos grabado previamente en la tarjeta SmartMedia. Estos archivos,
+como ya he comentado antes, deberán estar en formato SNA, Z80 (ambos son snapshots)
+o TAP (formato de imagen de cinta), y deberán estar grabados en la
+carpeta /GPMM/SNA creada a tal efecto. Aun así, es perfectamente posible navegar
+entre las carpetas de la tarjeta una vez dentro del emulador para buscar estos archivos.
+</p>
+<a name="figura7">
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion7.gif" width="320" height="240"  alt="Figura 7. Menú de archivos en ZXGP32" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 7. Menú de archivos en ZXGP32</td>
+	</tr>
+</table>
+
+</center>
+</a>
+<p>
+Los archivos de snapshots (SNA y Z80) se cargan automáticamente una vez
+seleccionados, no ocurriendo lo mismo con los archivos en formato TAP, que es
+es necesario cargarlos mediante el cargardor del menú de inicio en modo 128k o
+mediante la instrucción LOAD "" que podemos ejecutar accediendo al teclado
+virtual en modo 48k.
+</p>
+<p>
+Con el botón Start de la consola se accede al menú principal del emulador
+(<a href="#figura8">Figura 8</a>). La primera opción, Sound, permite activar o
+desactivar el sonido, pero sólo en el modo 48k. En el modo 128k el emulador carece
+por completo de sonido al no emular el chip AY-3-8912 de estos modelos.
+En modo 48k el sonido es aceptable, aunque en algunos juegos se noten algunos
+cortes algo molestos.
+</p>
+<a name="figura8">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion8.gif" width="320" height="240"  alt="Figura 8. Menú principal de ZXGP32" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 8. Menú principal de ZXGP32</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+Con Map Button B tenemos la posibilidad de asignar una tecla del teclado virtual
+para usarlo con el botón B de la consola. Esto es extremadamente útil en muchos juegos
+en los que hay que pulsar una tecla para utilizar algún arma especial o alguna función
+específica del mismo. Con esta opción podremos definir cualquier tecla para que podamos
+usarla con el botón B de la consola.
+</p>
+<p>
+
+En Model procederemos a seleccionar el modelo de Spectrum que deseamos emular. Por defecto
+viene el 128k, aunque en cualquier momento puede ser cambiado al modelo 48k. Siempre
+que haya un cambio de modelo el emulador se reiniciará. Reset Emulator permite resetear
+el Spectrum. En Render Mode se nos permitirá cambiar la velocidad de impresión en
+pantalla de los gráficos del Spectrum. Si es FAST, el emulador funcionará más rápido,
+pero algunos juegos que utilicen modos de pantalla no estándar pueden no funcionar.
+Con el modo ULA la emulación es más lenta, pero permitirá que estos programas que
+hacen llamadas no estándar tengan más posibilidades de ser ejecutados.
+</p>
+<p>
+La opción Clock Speed permite configurar la velocidad del microprocesador de la
+consola: 66, 80. 120, o 132 Mhz. Es recomendable utilizar esta última opción, ya
+que permite jugar todos los juegos al 100% de su velocidad original aunque por
+ello la consola gaste más pilas. Save State graba las opciones que tengamos en
+ese momento activadas en el emulador, y por último Return to Emulator nos permite volver
+al emulador.
+</p>
+<p>
+Este emulador supone un paso adelante en cuanto a calidad de los emuladores
+para Spectrum. La emulación está bastante bien conseguida, funcionando
+sin problemas la mayoría de los juegos. La ampliación de los formatos incluyendo
+el TAP, uno de los más extendidos, junto con el uso del modelo de 128k permite la
+utilización de prácticamente toda la biblioteca de soft existente para el
+Spectrum. El teclado virtual es un gran acierto, aunque la "desaparición" de
+los tokens pueda echar a más de uno hacia atrás. La falta de sonido en el modo 128k
+también influye negativamente, así como el control utilizado en el stick
+de la consola: únicamente se puede emular el joystick Kempston, quedando fuera todos
+los juegos que no utilicen este sistema de control. No son muchos pero, por
+desgracia, con este emulador es imposible jugar a algunas joyas de la programación de
+8 bits como La Abadía del Crimen, que no permite utilizar joystick, dejándonos
+un programa totalmente inservible para este emulador.
+</p>
+<p>
+<b>Speccyal K (versión comentada: 0.6)</b>
+</p>
+<p>
+El emulador más potente de todos y el más conseguido. Las mejoras del ZXGP32
+son aquí recogidas y ampliadas con otras, entre la que destaca más la emulación
+del sonido de los modelos de 128k. Los formatos utilizados son los mismos que
+el anterior emulador: SNA, Z80, y TAP, a los que hay que añadir SLT (no muy
+extendido, pero con posibilidad de cargar juegos multicarga, como el TAP),
+y SCR (pantallas de presentación del Spectrum).
+</p>
+<p>
+El ejecutable FXE deberá grabarse en la carpeta GPMM, junto con las 2 ROMs (como
+el ZXGP32, el SpeccyalK viene con 2 archivos con las ROMs de los modelos de
+48k y 128k). Los archivos de juegos podrán instalarse en cualquier sitio de
+la SmartMedia.
+
+</p>
+<p>
+El inicio del emulador es prácticamente idéntico al del GPSpeccy: la pantalla de
+inicio del Spectrum 48k con un borde de color negro
+(<a href="#figura9">Figura 9</a>). Por defecto éste será el modelo de
+Spectrum que será emulado. Bien, empecemos a "desgranar" este emulador.
+</p>
+<a name="figura9">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion9.gif" width="320" height="240"  alt="Figura 9. Pantalla inicial del Spectrum en SpeccyalK" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right">Figura 9. Pantalla inicial del Spectrum en SpeccyalK</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+El teclado virtual (presionar Select para activarlo) es muy parecido al del viejo
+GPSpeccy
+(<a href="#figura10">Figura 10</a>), con alguna sustancial mejora. De nuevo vemos una
+fiel reproducción del teclado original del Spectrum 48k. Con el stick podemos
+posicionarnos en cualquier tecla y pulsar el botón B para que aparezca en
+el emulador. Pero si nos fijamos un poco más, en la parte superior de la pantalla aparece
+el mensaje Caps Shift Off y Symbol Shift Off. Pues bien, eso significa que podemos
+pulsar varias teclas a la vez de forma parecida a como se podía hacer en el ZXGP32.
+En la pantalla del teclado virtual podemos pulsar el botón L para activar el CAPS SHIFT y
+el botón R para activar el SYMBOL SHIFT. Para desactivar el uso de estas teclas hay
+que pulsar de nuevo los botones L y R.
+</p>
+<a name="figura10">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+
+		<td><img src="img/emulacion10.jpg" width="320" height="240"  alt="Figura 10. Teclado virtual del Spectrum en SpeccyalK" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 10. Teclado virtual del Spectrum en SpeccyalK</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+Dentro del emulador, con el botón R, podremos navegar por las carpetas de nuestra
+tarjeta
+(<a href="#figura11">Figura 11</a>) para seleccionar el archivo que deseemos cargar.
+Al igual que en anteriores emuladores, los archivos SNA y Z80 (y ahora también los
+SLT) se cargarán de forma automática cuando los seleccionemos, mientras que el
+formato TAP y el SCR no podrán ser cargados hasta que no realicemos las instrucciones
+de carga pertinentes para cada uno de ellos (LOAD "" en el caso de los TAP
+y LOAD "" SCREEN$ en el caso de los SCR). En caso de no querer cargar ningún archivo,
+bastará con pulsar el botón B de la consola para salir de esta opción.
+
+</p>
+<a name="figura11">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion11.gif" width="320" height="240"  alt="Figura 11. Menú de archivos en SpeccyalK" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Figura 11. Menú de archivos en SpeccyalK</td>
+	</tr>
+
+</table>
+</center>
+</a>
+<p>
+El botón L por sí solo no tiene ninguna función definida en el emulador. Y
+el botón Start resetea de forma directa el Spectrum. Las opciones, que son la
+parte más importante de este emulador, se activan con la pulsación simultánea de los
+botones L y R de la consola
+(<a href="#figura12">Figura 12</a>).
+</p>
+<a name="figura12">
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/emulacion12.gif" width="320" height="240"  alt="Figura 12. Menú de opciones de SpeccyalK" />
+</td>
+	</tr>
+
+	<tr>
+		<td class="piefoto" align="right">Figura 12. Menú de opciones de SpeccyalK</td>
+	</tr>
+</table>
+</center>
+</a>
+<p>
+Se puede navegar a través de las distintas opciones del emulador con el stick,
+activarlas/desactivarlas con el botón A, y volver al emulador con el botón B.
+La primera opción nos permite elegir el modelo de Spectrum que queremos emular.
+Por defecto nos viene el modelo 48k.
+</p>
+<p>
+Las siguientes 4 opciones nos deja utilizar el stick como un joystick Sinclair 1,
+Sinclair 2, cursores, o mejor todavía, remapear cualquier dirección y botón
+de la consola. Esto es sumamente útil para juegos como el ya citado Abadía
+del Crimen, que no tiene posibilidad de jugar con joystick ni tampoco de redefinir
+las teclas. Si el emulador no permite redefinir el teclado, ¿por qué no hacerlo
+el emulador?. Por desgracia, no existe la opción de emular el joystick Kempston en
+este emulador, siendo el Kempston uno de los interfaces para joysticks más usados
+en los Spectrum reales.
+</p>
+<p>
+
+En Border Emulation se nos permite activar/desactivar la emulación del borde
+del Spectrum. Reboot GP32 nos reinicia la consola (cuidado con pulsar esta opción por
+error, que está muy metida entre otras opciones). Fast Rendering permite, si
+está activada, ejecutar más rápidamente las instrucciones gráficas del Spectrum
+para ganar velocidad, sacrificando para ello la compatibilidad.
+</p>
+<p>
+Use frameskip hace que el emulador no dibuje algunos movimientos en pantalla
+(o frames) para ganar velocidad en caso de juegos que vayan lentos con el
+emulador. Y el Fullscreen Mode permite poner el emulador a pantalla completa, aunque para
+ello sea necesario perder las proporciones de los píxeles en la pantalla, quedándonos
+una imagen ligeramente distorsionada.
+</p>
+<p>
+A priori, este emulador se nos antoja como el emulador más completo de los
+existentes para la GP32. Es el que más formatos soporta, el que emula los modelos
+de 48k y de 128k incluyendo (a diferencia del ZXGP32) sonido en el modo
+128k. El sonido en modo 48k es muy bueno, el más cristalino de todos. El modo
+128k el sonido está bastante bien, con buena calidad, aunque en este caso hemos encontrado
+algunos programas que se resisten a funcionar con sonido, obsequiándonos con una buena
+colección de chirridos y bocinazos que nos obliga a bajar el volumen de la consola
+al máximo (el emulador no permite desactivar el sonido).
+</p>
+<p>
+Aunque el autor del emulador asegura haber utilizado el core del MAME para emular
+el Z80 del Spectrum, hemos comprobado que el emulador ofrece serios problemas de
+compatibilidad. En ocasiones, estos problemas son ocasionados más por el propio
+funcionamiento del emulador que por la emulación del Z80 en sí. Por ejemplo, hemos
+visto cómo un juego se resiste a cargar una y otra vez y no lo hace hasta
+que no reseteamos el emulador con el botón Start.
+</p>
+<p>
+Algunas opciones tampoco funcionan como deberían, como poner la pantalla completa
+(a veces funciona, a veces no), o una opción que viene documentada en el
+archivo adjunto al emulador y que no hemos comentado aquí, que se trata de,
+pulsando simultáneamente los botones L y Select, grabar un snapshot del emulador.
+A pesar de las distintas pruebas que hemos realizado, en ninguna
+hemos obtenido éxito.
+</p>
+<p>
+<b>TABLA COMPARATIVA DE LOS EMULADORES</b>
+
+</p>
+<table align="center" border="1" cellspacing="0" cellpadding="3" class="texto">
+	<tr>
+		<td></td>
+		<td></td>
+		<td bgcolor="#FFFFFF">GPSpeccy</td>
+		<td bgcolor="#FFFFFF">ZXGP32</td>
+		<td bgcolor="#FFFFFF">SpeccyalK</td>
+
+	</tr>
+	<tr align="center">
+		<td rowspan="5" bgcolor="#FFFFFF">M<br>O<br>D<br>E<br>L<br>O<br>S</td>
+		<td bgcolor="#DDDDDD">16k</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">48k</td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">128k</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+
+		<td bgcolor="#DDDDDD">+2</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">+3</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td rowspan="2" bgcolor="#FFFFFF">S<br>O<br>N<br>I<br>D<br>O</td>
+		<td bgcolor="#EEEEEE">48k</td>
+
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#EEEEEE">128k</td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td rowspan="7" bgcolor="#FFFFFF">F<br>O<br>R<br>M<br>A<br>T<br>O<br>S</td>
+		<td bgcolor="#DDDDDD">SNA</td>
+
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">Z80</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">TAP</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+
+	<tr align="center">
+		<td bgcolor="#DDDDDD">SLT</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">TZX</td>
+
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">AIR</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">RZX</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+
+	<tr align="center">
+		<td rowspan="4" bgcolor="#FFFFFF">C<br>O<br>N<br>T<br>R<br>O<br>L<br>E<br>S</td>
+		<td bgcolor="#EEEEEE">Kempston</td>
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#EEEEEE">Cursor</td>
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+
+	</tr>
+	<tr align="center">
+		<td bgcolor="#EEEEEE">Interface 1</td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+
+		<td bgcolor="#EEEEEE">Sinclair</td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#DFF9FB"><img src="img/si.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td rowspan="4" bgcolor="#FFFFFF">E<br>X<br>T<br>R<br>A<br>S</td>
+
+		<td bgcolor="#DDDDDD">Multiface</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">Microdrives</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+	<tr align="center">
+		<td bgcolor="#DDDDDD">Disciple</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+
+	<tr align="center">
+		<td bgcolor="#DDDDDD">+D</td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+		<td bgcolor="#CBF7FA"><img src="img/no.gif" width="15" height="15" border="0"></td>
+	</tr>
+</table>
+<p>
+Como se puede apreciar en las tablas, a los 3 emuladores les faltan bastantes
+cosas para poder llegar a ser buenos emuladores. El SpeccyalK, el emulador más
+completo, tiene como asignatura pendiente la compatibilidad. Y los 3 emuladores
+están muy lejos de los actuales emuladores de Spectrum que están saliendo para
+PC, e incluso están lejos de otros emuladores que han salido para la GP32 y
+que, en teoría, emulan máquinas más potentes. Para pasar el rato pueden servir,
+sobre todo teniendo en cuenta que son portables, pero ni mucho menos son
+capaces de sustituir a las máquinas originales.
+</p>
+
+<p>
+<b>LOS JUEGOS</b>
+</p>
+<p>
+Para comprobar el verdadero potencial de cada emulador, hemos decidido hacer
+una serie de pruebas ejecutando varios juegos de Spectrum en ellos. Se han escogido
+los siguientes juegos:
+</p>
+<ol>
+<li>Un juego clásico: el Manic Miner</li>
+<li>Un juego difícil de emular: el Cobra</li>
+<li>Un juego multicarga: el Gauntlet</li>
+<li>Un juego de 128k: La Abadía del Crimen</li>
+
+</ol>
+<p>
+<b>Manic Miner</b>
+</p>
+<p>
+GPSpeccy
+</p>
+<ul>
+<li>Gráficos: Correctos. Se ve perfectamente, sin que haya gráficos corruptos ni nada por
+el estilo.</li>
+<li>Sonido: Regular. Se oye algo de ruido de fondo. El sonido es estridente.</li>
+<li>Controles: Correcto. Se juega perfectamente con la opción de cursores.</li>
+<li>Jugabilidad: Regular. El juego es perfectamente jugable, pero no va al 100% de
+velocidad, aunque se queda cerca. No hay cuelgues ni reseteos.</li>
+
+</ul>
+<p>
+ZXGP32
+</p>
+<ul>
+<li>Gráficos: Correctos. El juego tiene los mismos gráficos que el original del Spectrum.</li>
+<li>Sonido: Regular. La música de la presentación se oye perfecta, pero la música
+durante el juego ha desaparecido. Los efectos sonoros se oyen con bastante retraso
+respecto a los movimientos del juego.</li>
+<li>Controles: Correcto. El juego se maneja perfectamente con el stick de la consola.</li>
+<li>Jugabilidad: Correcto. Va al 100% de velocidad. No hay cuelgues ni reseteos.</li>
+</ul>
+<p>
+SpeccyalK
+</p>
+
+<ul>
+<li>Gráficos: Correctos. Sigue la costumbre del resto de emuladores de emular
+perfectamente el grafismo del juego.</li>
+<li>Sonido: Regular. Tanto la música del principio como la del juego y los efectos
+sonoros están bien conseguidos. El problema es que al acceder al menú principal y
+volver al juego, la música desaparece por arte de magia, fruto de alguno de
+los tantos bugs que tiene este emulador.</li>
+<li>Controles: Correcto. El juego funciona a la perfección con el joystick Sinclair
+emulado.</li>
+<li>Jugabilidad: Correcto. Va al 100% de velocidad. No hay cuelgues ni reseteos.</li>
+</ul>
+<p>
+<b>Cobra</b>
+</p>
+<p>
+GPSpeccy
+</p>
+
+<ul>
+<li>Gráficos: Correcto. Se emula pefectamente el grafismo del juego.</li>
+<li>Sonido: Regular. La música está bien representada, pero se oyen algunas
+interferencias.</li>
+<li>Controles: Correcto. Se juega perfectamente con la opción de joystick Kempston.</li>
+<li>Jugabilidad: Regular. El juego es perfectamente jugable, pero no va al 100% de
+velocidad, aunque se queda cerca. No hay cuelgues ni reseteos.</li>
+</ul>
+<p>
+ZXGP32
+</p>
+<ul>
+<li>Gráficos: Regular. Aunque los gráficos se ven bien representados, hay
+un excesivo parpadeo de algunos de ellos que no existe en un Spectrum real.</li>
+<li>Sonido: Correcto. Tanto la música del inicio como los efectos sonoros son bastante
+correctos.</li>
+
+<li>Controles: Correcto. El juego se maneja perfectamente con el stick de la consola.</li>
+<li>Jugabilidad: Correcto. Va al 100% de velocidad. No hay cuelgues ni reseteos.</li>
+</ul>
+<p>
+SpeccyalK
+</p>
+<ul>
+<li>Gráficos: Correctos. Se ven perfectamente los gráficos del juego.</li>
+<li>Sonido: Regular. Tanto la música del principio como la del juego y los efectos
+sonoros están bien conseguidos, pero vuelve ocurrir lo mismo que con el
+Manic Miner: si se accede al menú principal, se pierde la música.</li>
+<li>Controles: Correcto. El juego funciona a la perfección con el joystick Sinclair
+emulado.</li>
+<li>Jugabilidad: Correcto. Va al 100% de velocidad. No hay cuelgues ni reseteos.</li>
+
+</ul>
+<p>
+<b>Gauntlet</b>
+</p>
+<p>
+GPSpeccy
+</p>
+<p>
+Imposible determinar el funcionamiento del juego bajo este emulador al ser un juego
+multicarga en formato TAP, el cual no está soportado por este emulador.</li>
+</p>
+<p>
+ZXGP32
+</p>
+<ul>
+<li>Gráficos: Correctos. El grafismo del juego es idéntico al original.</li>
+
+<li>Sonido: Mal. La versión 128k no tiene sonido.</li>
+<li>Controles: Correcto. El juego se maneja perfectamente con el stick de la consola.</li>
+<li>Jugabilidad: Correcto. Va al 100% de velocidad. No hay cuelgues ni reseteos. No hay
+problemas para cargar las distintas fases desde el archivo TAP.</li>
+</ul>
+<p>
+SpeccyalK
+</p>
+<ul>
+<li>Gráficos: Correctos. No hay gráficos corruptos.</li>
+<li>Sonido: Correcto. El sonido de 128k se oye a la perfección con gran nitidez.</li>
+<li>Controles: Correcto. El juego funciona a la perfección con el joystick Sinclair
+emulado.</li>
+
+<li>Jugabilidad: Mal. El juego es incapaz de cargar las distintas fases del archivo
+TAP, por lo que este juego es imposible de jugar en este emulador.</li>
+</ul>
+<p>
+<b>La Abadía Del Crimen</b>
+</p>
+<p>
+GPSpeccy
+</p>
+<p>
+Imposible determinar el funcionamiento del juego bajo este emulador al ser
+un juego para 128k, modelo que no es emulado por este emulador.</li>
+</p>
+<p>
+ZXGP32
+</p>
+
+<ul>
+<li>Gráficos: Regular. Aunque el grafismo es correcto, al pulsar algunas teclas
+con el teclado virtual los gráficos se descomponen ligeramente.</li>
+<li>Sonido: Mal. Este emulador no soporta sonido en los modelos de 128k.</li>
+<li>Controles: Mal. Imposible de manejar con el teclado virtual. El juego no tiene
+soporte para joystick Kempston, que es el único emulado por el ZXGP32.</li>
+<li>Jugabilidad: Mal. Al no poder manejar al protagonista, el juego es
+totalmente injugable.</li>
+</ul>
+<p>
+SpeccyalK
+</p>
+<ul>
+<li>Gráficos: Regular. Ocurre lo mismo que con el ZXGP32: al pulsar algunas teclas
+los gráficos se descomponen.</li>
+<li>Sonido: Regular. La música está bien conseguida, pero en ocasiones se
+satura y "chirría" bastante.</li>
+
+<li>Controles: Correcto. El juego funciona a la perfección con el stick de la
+consola mapeado con algunas teclas.</li>
+<li>Jugabilidad: Correcto. Va al 100% de velocidad. No hay cuelgues ni reseteos.</li>
+</ul>
+<div align="left">
+<p>
+<b>LINKS</b>
+</p>
+<ul>
+	<li>Página web del ZXGP32: <a href="http://homepage.ntlworld.com/david.douglas2/GP32.htm" onClick="window.open(this.href); return false;">http://homepage.ntlworld.com/david.douglas2/GP32.htm</a></li>
+	<li>Página web del SpeccyalK: <a href="http://www.speccyal.be" onClick="window.open(this.href); return false;">http://www.speccyal.be</a></li>
+
+	<li>Página web en castellano con bastantes emuladores y foros para la consola: <a href="http://www.gp32spain.com" onClick="window.open(this.href); return false;">http://www.gp32spain.com</a></li>
+</ul>
+<p>Y, por supuesto...</p>
+<ul>
+	<li>Página web con <b>TODO</b> lo relacionado con el Spectrum, incluidos miles de archivos SNA, Z80, y TAP usados por estos emuladores: <a href="http://www.worldofspectrum.org/" onClick="window.open(this.href); return false;">WOS</a></li>
+</ul>
+</ul>
+
+</div>
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right"><br>PEDRETE</td>
+	</tr>
+</table>
+                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="hardware.html">Hardware</option>
+
+        <option value="emulacion.html" selected>Emulación</option>
+        <option value="zona-www.html">Zona WWW</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="input.html">INPUT</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
+</td>
+
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+    </form>
+
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+	</tr>
+
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

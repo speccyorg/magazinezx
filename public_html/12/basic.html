@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+    <head>
+        <title>Magazine ZX</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+    </head>
+    <body bgcolor="#CFCFCF">
+
+        <center>
+            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+                <tr>
+                    <td>
+<a name="arriba"></a>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+	<tr align="center" valign="center">
+		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
+	</tr>
+</table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarCabecera(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="hardware.html">Hardware</option>
+        <option value="basic.html" selected>Programación BASIC</option>
+        <option value="el-aventurero.html">El Aventurero</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="input.html">INPUT</option>
+
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="opinion.html">Opinión</option>
+    </select>
+    <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="siguiente" value=">" />
+</td>
+            <td align="center" class="texto">Número 12 - Septiembre 2005</td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="http://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+        </tr>
+
+    </form>
+</table>
+</a>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+    <tr>
+
+        <td>
+<div align="justify">
+<p align="center"><font size="5">ZXMINES: un juego en BASIC comentado</font></p>
+<p><i>ZXMines es un juego en BASIC que se presentó al concurso de programación de Juegos en Basic 2003 de ByteManiacos. ZXMines implementa en BASIC un sencillo juego de Buscaminas en el cual debemos destapar todo el tablero sin levantar las casillas en que se alojan las minas (destapar una mina finaliza el juego). Para poder destapar totalmente el tablero sin levantar casillas con minas disponemos de una información providencial: cada casilla que no contiene una mina nos indica numéricamente cuántas minas hay en las 8 casillas de alrededor de la casilla actual.</i></p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/basic1.gif" width="320" height="240"  alt="ZXMines: el clásico juego Buscaminas, en BASIC" />
+</td>
+	</tr>
+	<tr>
+
+		<td class="piefoto" align="right">ZXMines: el clásico juego Buscaminas, en BASIC</td>
+	</tr>
+</table>
+</center>
+<p>Así, si destapamos una casilla y contiene el número 1, sabemos que alguna de las 8 casillas de alrededor de la misma contiene una mina. Utilizando la información numérica que nos proporcionan las diferentes casillas que vamos destapando podemos ser capaces de averiguar qué casillas contienen minas y evitarlas. El juego acaba cuando destapamos una mina (y perdemos) o bien cuando destapamos todas las casillas del tablero quedando sólo por destapar las casillas con minas (ganando el juego). Por último, una cosa a destacar es que si destapamos una casilla sin minas alrededor, se abre todo un área de juego a la vista, para acelerar el ritmo de juego.</p>
+<p>El objetivo del presente artículo es mostrar y explicar el código BASIC utilizado para programar ZXMINES, mostrando así algunos trucos que en BASIC proporcionan una mayor velocidad de ejecución.</p>
+<p><b>PSEUDOCÓDIGO DEL JUEGO</b></p>
+<p>Lo primero que hacemos es definir el juego mediante lenguaje humano, para posteriormente adaptar ese lenguaje humano a código en BASIC. Es muy importante hacer esto antes de escribir una sóla línea en BASIC. El programa se adapta al diseño y al pseudocódigo, y no al revés.</p>
+<p>Veamos el pseudocódigo para nuestro juego buscaminas:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+Inicio ZXMINES
+ - Inicio del programa (declaracion de variables, etc.).
+ - Dibujado de la pantalla
+ - Bucle principal del juego:
+   - Comprobacion de fin de partida:
+     - Si quedan tantas casillas como minas:
+       - Llamar a Victoria_Fin_Juego
+   - Leer teclado
+     - Si tecla es 1, 2, ó 3:
+        - Cambiar la dificultad
+        - Nueva partida, saltando a "Dibujado de la pantalla"
+     - Si tecla es 4 Entonces Fin del juego.
+     - Si tecla es ARRIBA:
+         - Mover cursor arriba (ycursor = ycursor-1)
+     - Si tecla es ABAJO:
+         - Mover cursor abajo (ycursor = ycursor+1)
+     - Si tecla es IZQUIERDA:
+         - Mover cursor izquierda (xcursor = xcursor-1)
+     - Si tecla es DERECHA:
+         - Mover cursor derecha (xcursor = xcursor-1)
+     - Si tecla es DISPARO:
+         - Destapar la casilla bajo (xcursor,ycursor)
+           llamando a DestaparMina
+
+
+FUNCIÓN DestaparMina:
+ - Si debajo de (xcursor,ycursor) hay una casilla por destapar:
+   - Si debajo de (xcursor,ycursor) hay una mina:
+     Muerte_Fin_Juego
+   - Si debajo de (xcursor,ycursor) no hay mina:
+     Blanquear_Cuadros_Alrededor
+   - Actualizar puntos y numero de casillas y minas restantes.
+
+
+FUNCIÓN Muerte_Fin_Juego:
+ - Imprimir por pantalla mensajes, esperar tecla.
+ - Restart del juego.
+
+
+FUNCIÓN Victoria_Fin_Juego:
+ - Imprimir por pantalla mensajes, esperar tecla.
+ - Restart del juego.
+
+
+FUNCIÓN Blanquear_Cuadros_Alrededor:
+ - Rutina que recibe una posición CX,CY y destapa
+   todas las casillas no minas a partir de CX,CY.
+
+
+FUNCIÓN Generacion_de_tablero:
+ - Definir una array bidimensional de 12x12 (dificultad maxima)
+   para almacenar las minas (V).
+ - Definir una array bidimensional de 12x12 (dificultad maxima)
+   para almacenar si una casilla está destapada o no, 0/1 (T).
+ - Poner a cero todos los elementos de los arrays.
+ - Segun la dificultad actual, llenar el tablero con minas de
+   forma aleatoria (tablero de 8x8, 10x10 o 12x12). Las minas
+   se colocan en V() mediante un número "9".
+ - Actualizar todas las casillas del tablero recontando el
+   número de minas aldededor, y colocando ese número en la
+   casilla correspondiente.
+
+
+FUNCIÓN Preparar_Pantalla:
+ - Limpiar pantalla.
+ - Imprimir textos, título, teclas.
+ - Definir ciertas variables (minas, dificultad, tamaño tablero)
+ - Cargar los GDUs/UDGs desde los DATAs.
+
+Fin ZXMINES
+</pre>
+    </p></td></tr>
+</table>
+<p>El pseudocódigo permite implementar el juego en cualquier lenguaje de una manera rápida: por ejemplo, el mismo pseudocódigo/diseño que se usó para ZXMINES 1 en BASIC se utilizó para programar ZXMINES 2 en C (mucho más rápido) en apenas un par de horas de codificación. Para que el pseudocódigo sea legible es recomendable mantenerlo conciso y no extenderse demasiado en detalles, ya que debe ser una visión general del programa.</p>
+<p><b>EL LISTADO DEL JUEGO</b></p>
+<p>En los siguientes apartados veremos los diferentes bloques funcionales del juego comentados. El lector podrá identificar fácilmente a qué función del pseudocódigo se corresponden. Como puede verse, la utilización de pseudocódigo permite una programación más limpia, ya que la implementación sólo tiene que ceñirse a lo que hemos diseñado, reduciendo los errores posteriores (se trata tan sólo de implementar la visión general que nos da el pseudocódigo, y esto se puede hacer de forma modular).</p>
+<p>El código lo programaremos en un editor de texto convencional en nuestro ordenador personal y lo grabaremos como un simple fichero de texto con extensión .bas. Después, con bas2tap (un utilísimo programa) generaremos un TAP que será equivalente a haber tecleado el programa en el intérprete BASIC del Spectrum y haberlo grabado con SAVE. El tap resultante de la "compilación" se podrá ejecutar tanto en emuladores como en Spectrum reales.</p>
+
+<p>Para empezar, veamos la relación entre el pseudocódigo y las diferentes líneas BASIC del programa (podéis utilizar el Listado 1 para identificar los diferentes bloques funcionales):</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+Inicio ZXMINES
+ - Inicio del programa (líneas 48-90)
+ - Dibujado de la pantalla (líneas 105-140 y 2300-9022)
+ - Bucle principal del juego: (lineas 200-990)
+
+FUNCIÓN DestaparMina: (líneas 1000-1099)
+FUNCIÓN Muerte_Fin_Juego: (líneas 1300-1330)
+FUNCIÓN Victoria_Fin_Juego: (líneas 1600-1630)
+FUNCIÓN Blanquear_Cuadros_Alrededor: (líneas 3-14)
+FUNCIÓN Generacion_de_tablero: (líneas 2000-2200)
+FUNCIÓN Preparar_Pantalla: (líneas 105-140 y 2300-9022)
+Fin ZXMINES
+</pre>
+    </p></td></tr>
+</table>
+<p>Como puede verse, cada función o bloque lógico del pseudocódigo se corresponde con un bloque de líneas BASIC, que será que lo veremos más detallado a continuación.</p>
+<p><b>INICIO DEL PROGRAMA Y PREPARACIÓN DE PANTALLA</b></p>
+<p>Aparte de los comentarios del programa (líneas 9100 a 9147), el programa (lógicamente hablando) empieza con el siguiente código:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+48 INPUT "Spanish/English? (s/e)", L$ ;
+49 IF L$<>"s" AND L$<>"S" AND L$<>"e" AND L$<>"E" THEN GO TO 48
+
+50 REM *** Declaracion de las variables del programa ***
+51 LET COL=6 : LET PAP=1
+53 INK COL: PAPER PAP
+54 IF L$="E" THEN LET L$="e"
+55 IF L$="S" THEN LET L$="s"
+60 DIM T(12,12)           : REM Campo de minas
+65 DIM V(12,12)           : REM Visto o no visto (0/1)
+70 LET BUCLE=1
+80 LET IX=1 : LET IY=1    : REM IX, IY del tablero
+85 LET DIFICULTAD=0
+90 GO SUB 8000            : REM DEFINIMOS LOS GRAFICOS
+</pre>
+    </p></td></tr>
+</table>
+<p>Lo primero que hacemos es pues preguntar al usuario el idioma para el juego, y después declarar las variables que utilizaremos en el programa. La variable L$ almacenará el idioma del juego, pudiendo contener la cadena "e" (english) o la cadena "s" (spanish). La usaremos posteriormente a la hora de hacer PRINTs para imprimir mensajes en un idioma u otro.</p>
+<p>Dos variables importántisimas son los arrays bidimensionales T(12,12) y V(12,12), que se utilizarán para representar el tablero de juego del buscaminas. Se definen de 12x12 porque éste es el tamaño máximo del juego para el nivel de dificultad máxima; en caso de utilizar menores niveles de dificultad (8x8 y 10x10) se utilizará el mismo array de 12x12, pero usando sólo una porción del mismo.</p>
+
+<p>El array V(12,12) nos indica el estado de las casillas indicando si están tapadas (0), o si están destapadas (1), es decir, si vemos el contenido de la casilla o no. Inicialmente este array tendrá todos sus elementos a cero porque al comenzar el juego todas las casillas están tapadas.</p>
+<p>Así pues, un tablero tapado tendría la siguiente forma:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+V =
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+</pre>
+    </p></td></tr>
+</table>
+<p>Un tablero con la casilla central destapada tendría el siguiente aspecto:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+
+<pre>
+V =
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+</pre>
+    </p></td></tr>
+</table>
+<p>El array T(12,12) indica lo que contiene cada casilla propiamente dicha. Si contiene un cero, la casilla está vacía. Si contiene un nueve, la casilla tiene una mina. Finalmente, cualquier valor entre 1 y 8 significa el número de minas que hay alrededor de la casilla actual.</p>
+<p>Así, inicialmente tendremos ambos arrays (V y T) llenos de ceros porque no hay minas dentro, y porque todas las casillas están tapadas. Si queremos introducir una mina en el tablero en la posición (3,5), podemos hacerlo con:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+T(3,5) = 9;
+</pre>
+    </p></td></tr>
+
+</table>
+<p>Al igual que en el caso anterior, un array sin minas estará lleno de ceros, pero un array con 4 minas y ya correctamente "rellenado" (como veremos posteriormente), podría tener un aspecto similar al siguiente:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+T =
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0
+0, 0, 0, 0, 1, 9, 1, 0, 0, 0, 0, 0
+0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0
+1, 1, 1, 0, 0, 0, 0, 0, 2, 9, 2, 0
+1, 9, 1, 0, 0, 0, 0, 0, 2, 9, 2, 0
+1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+</pre>
+    </p></td></tr>
+</table>
+<p>Como puede verse, las minas se sitúan con números 9, y las casillas de alrededor de las minas contienen valores numéricos que indican la cantidad de minas circundantes.</p>
+<p>Finalmente se produce un salto a la rutina de la dirección 8000, que prepara los UDG o gráficos definidos por el usuario:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+
+    <tr><td><p class="codigo">
+<pre>
+8000 REM *** Preparacion de GDUs ***
+8005 RESTORE 9012
+8010 FOR I=0 TO 7: READ FILA : POKE USR "I"+I, FILA : NEXT I
+8015 FOR I=0 TO 7: READ FILA : POKE USR "M"+I, FILA : NEXT I
+8020 FOR I=0 TO 7: READ FILA : POKE USR "E"+I, FILA : NEXT I
+</pre>
+    </p></td></tr>
+</table>
+<p>Como puede verse, se define "M" como el UDG que contiene el dibujo de las minas, "E" como un UDG que contiene el dibujo de una casilla sin destapar o esquina, e "I" como el UDG que contiene el dibujo de una casilla destapada vacía (un pequeño puntito central).</p>
+<p>Los 3 dibujos han sido creados con SevenuP de la misma forma. Por ejemplo, para crear la mina, abrimos SevenuP y creamos un nuevo dibujo de 8x8. Dibujamos la mina (en la siguiente figura la veremos a medio dibujar) y vamos a File , y luego a Output Options y seleccionamos "No attributes" y como Byte Sort Priority dejamos "X char, Char line, Y char, Mask".</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="478">
+	<tr align="right">
+		<td><img src="img/basic2.gif" width="478" height="409"  alt="Creando nuestros gráficos en SevenuP" />
+
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Creando nuestros gráficos en SevenuP</td>
+	</tr>
+</table>
+</center>
+<p>A continuación exportamos los datos, desde el menu File, opción Export Data. Escribimos un nombre de fichero (por ejemplo, mina.c), y en el desplegable seleccionamos "C source" en lugar de "raw Binary". Al darle a OK habremos creado un fichero mina.c con el gráfico exportado a formato C. El aspecto del fichero será similar (comentarios aparte) al siguiente:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+
+<pre>
+unsigned char Sprite[8] = {
+ 16, 186, 116, 254, 124, 186, 16, 0 };
+</pre>
+    </p></td></tr>
+</table>
+<p>Estos son los valores que podremos en nuestros DATA en BASIC:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+9017 DATA 16, 186, 116, 254, 124, 186, 16, 0
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Tras el inicio del programa (líneas 48 a 90) viene la preparación de la pantalla (líneas 2300 a 2450) donde simplemente se imprimen en pantalla los mensajes que veremos en el menú principal.</p>
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="320">
+	<tr align="right">
+		<td><img src="img/basic3.gif" width="320" height="240"  alt="Aspecto de la pantalla de presentación" />
+</td>
+	</tr>
+	<tr>
+		<td class="piefoto" align="right">Aspecto de la pantalla de presentación</td>
+	</tr>
+
+</table>
+</center>
+<p><b>GENERACIÓN DEL TABLERO</b></p>
+<p>La rutina de las líneas 2000 a 2200 es llamada desde la rutina de preparación de la pantalla para rellenar el tablero T con minas aleatorias (números 9), y al mismo tiempo calcular los valores numéricos de cada casilla indicando el número de minas alrededor.</p>
+<p>La rutina viene a hacer algo como lo siguiente:</p>
+<ul>
+	<li>Rellenar el tablero con minas aleatorias.</li>
+	<li>Recalcular el valor numerico de cada casilla sin mina para todo el tablero.</li>
+</ul>
+<p>En pseudocódigo:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+ Desde I = 0 a NUMERO_DE_MINAS
+   Poner minas aleatoriamente con T(RANDOMX,RANDOMY) = 9;
+ Fin Desde
+
+ Desde Y = 0 a ALTO_TABLERO
+   Desde X = 0 a ANCHO_TABLERO
+     Contar el numero de minas alrededor de T(x,y)
+     T(x,y) = ese numero de minas
+   Fin Desde
+ Fin Desde
+</pre>
+    </p></td></tr>
+</table>
+<p>El código resultante es:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+2000 REM *** GENERACION DE TABLERO ***
+2001 IF DIFICULTAD=0 THEN RETURN
+2002 IF L$="e" THEN PRINT AT 19,1 ; "Generating board..."; AT 20,1 ;
+     "> Placing mines: 0%";
+2003 IF L$="s" THEN PRINT AT 19,1 ; "Generando tablero.."; AT 20,1 ;
+     "> Insert. minas: 0%";
+2030 LET INCR=100/MINAS : LET PORCEN=0 : LET CON=1
+2040 REM Primero ponemos a cero todo el tablero
+2042 DIM T(12,12) : DIM V(12,12)
+2045 LET RX = INT (RND*(ANCHO))+1
+2046 LET RY = INT (RND*(ALTO))+1
+2047 REM Ahora instalamos las minas. Si encontramos un hueco, pasamos a
+     por otra mina
+2050 FOR N=1 TO MINAS
+2060   IF V(RX,RY)=1 THEN GO TO 2070
+2065     LET V(RX,RY)=1 : POKE (59000+N),RX : POKE (59300+N),RY
+2067     LET CON=CON+1 : IF CON=5+DIFICULTAD THEN PRINT AT 20,18 ;
+     INT PORCEN ; "%"; : LET CON=1
+2068     LET PORCEN=PORCEN+INCR : NEXT N
+2069   REM Si no, generamos otro numeros y dec el indice
+2070   LET RX = INT (RND*(ANCHO))+1
+2080   LET RY = INT (RND*(ALTO))+1
+2090   LET N = N-1
+2100 NEXT N
+2101 IF L$="e" THEN PRINT AT 20,1 ; "> Preparing board: 0%";
+2102 IF L$="s" THEN PRINT AT 20,1 ; "> Gener.  tablero: 0%";
+
+</pre>
+    </p></td></tr>
+</table>
+<p>En esa primera parte colocamos las minas dentro del tablero, y a continuación calculamos los valores numéricos de cada celdilla del tablero:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+2109 LET PORCEN=0 : LET CON=0
+2110 FOR N=1 TO MINAS
+2111   LET CON=CON+1 : IF CON=5+DIFICULTAD THEN PRINT AT 20,20 ;
+     INT PORCEN ; "%"; : LET CON=1
+2112   LET PORCEN=PORCEN+INCR
+2120   LET X=PEEK (59000+N) : LET Y=PEEK (59300+N)
+2131   IF X=1 THEN GO TO 2138
+2132     LET T(X-1,Y) = T(X-1,Y) + 1
+2133     IF Y>1          THEN LET T(X-1,Y-1)=T(X-1,Y-1)+1
+2134     IF Y<ALTO       THEN LET T(X-1,Y+1)=T(X-1,Y+1)+1
+2138   IF X=ANCHO THEN GO TO 2145
+2141     LET T(X+1,Y)=T(X+1,Y) + 1
+2142     IF Y<ALTO      THEN LET T(X+1,Y+1)=T(X+1,Y+1)+1
+2143     IF Y>1         THEN LET T(X+1,Y-1)=T(X+1,Y-1)+1
+2145   IF Y<ALTO THEN LET T(X,Y+1)=T(X,Y+1)+1
+2146   IF Y>1    THEN LET T(X,Y-1)=T(X,Y-1)+1
+2160 NEXT N
+2161 PRINT AT 20,20 ; "100%";
+2165 REM Ahora plantamos las minas
+2170 FOR N=1 TO MINAS : LET T( PEEK (59000+N), PEEK (59300+N)) = 9 : NEXT N
+2175 DIM V(12,12)
+2180 PRINT AT 19,1 ; INK COL; PAPER PAP; "                    ";
+2181 PRINT AT 20,1 ; INK COL; PAPER PAP; "                        ";
+2200 RETURN
+</pre>
+    </p></td></tr>
+</table>
+
+<p>Nótese un pequeño truco que se ha utilizado para acelerar la generación y cálculos: en lugar de trabajar sobre arrays temporales, trabajamos sobre zonas de memoria (59000 y 59300) tratándolas como vectores de trabajo temporales. Escribimos en nuestros "arrays" en memoria con POKE, y leemos con PEEK. Posteriormente en la rutina de "Blanqueado de casillas" veremos su utilidad y porqué se ha realizado esto en lugar de arrays temporales. En las posiciones de memoria desde 59000 a 59000+numero_de_minas (ese numero_de_minas varía con la dificultad de juego elegida) se almacenan las posiciones X de las minas aleatorias generadas. Lo mismo ocurre en 59300, donde se almacenan las posiciones Y de las minas aleatorias generadas.</p>
+<p>Así, la primera parte de la función coloca en 59000 y 59300 valores X e Y para las minas, y finalmente incorporamos las minas al tablero mediante:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+2170 FOR N=1 TO MINAS : LET T( PEEK (59000+N), PEEK (59300+N)) = 9 :
+     NEXT N
+</pre>
+    </p></td></tr>
+</table>
+<p>El resultado de la ejecución de la rutina de arriba es un tablero tapado (V(x,y) = 0 para todo x e y), y que tiene una serie de minas (valores numéricos 9) en T(xminas,yminas), estando el resto de casillas de T(x,y) calculadas con valores numéricos que representan las minas alrededor de la casilla en cuestión, como en el ejemplo que hemos visto antes:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+
+<pre>
+T =
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0
+0, 0, 0, 0, 1, 9, 1, 0, 0, 0, 0, 0
+0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0
+0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0
+1, 1, 1, 0, 0, 0, 0, 0, 2, 9, 2, 0
+1, 9, 1, 0, 0, 0, 0, 0, 2, 9, 2, 0
+1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+</pre>
+    </p></td></tr>
+</table>
+<p>Una vez tenemos definido el tablero de juego podemos continuar con el bucle principal del programa.</p>
+<p><b>BUCLE PRINCIPAL DEL JUEGO</b></p>
+<p>El bucle principal del juego se desarrolla entre las líneas 200 y 990).</p>
+<p>Lo primero que hacemos es dibujar el tablero de juego con 2 bucles FOR para el ancho y para el alto:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+
+<pre>
+00 REM *** BUCLE PRINCIPAL ***
+300 LET P$= CHR$(16) + CHR$(0) + CHR$(17) + CHR$(7) :
+    FOR X=1 TO ANCHO : LET P$=P$+"{E}" : NEXT X
+310 FOR Y=1 TO ALTO
+315   PRINT AT IY+Y,IX+1 ; P$;
+370 NEXT Y
+</pre>
+    </p></td></tr>
+</table>
+<p>Se ha utilizado una cadena "P$" en la que introducimos toda una fila horizontal de casillas sin destapar (E). Después con un bucle pintamos tantas líneas horizontales de casillas como altura tiene nuestro tablero. Esto es más rápido que un doble bucle, donde tendríamos que recalcular las casillas horizontales cada vez. El símbolo "{E}" representa al UDG "E" (para bas2tap).</p>
+<p>A continuación viene el bucle principal en sí mismo. Lo que se hace en este bucle principal es utilizar unas variables CX, CY que indican la posición dentro del array de la casilla "actual" o cursor que estamos manejando (de forma que cuando pulsamos espacio destapamos la casilla actual). Las variables CX y CY (posición de la casilla/cursor) se actualizan cuando pulsamos izquierda, derecha, arriba o abajo. En cada paso del bucle representamos la casilla "actual" o cursor mediante un FLASH de la posición en pantalla de la casilla (IX+CX,IY+CY). Recordad: la posición (CX, CY) es un valor entre 1 y 12 dentro de los arrays V() y T(), mientras que (CX+IX, CY+IY) representa un valor entre 1-32 y 1-24 para dibujar en pantalla el cuadro parpadeante (IX e IY son el inicio en pantalla del tablero).</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+400 REM Bucle principal de partida
+405 IF DIFICULTAD=0 THEN GO TO 415
+407 IF MINAS=QUEDAN THEN GO TO 1600
+410 OVER 1: PRINT AT IY+CY, IX+CX ; FLASH 1; INK 0 ; PAPER 7;" "; :
+    OVER 0 : GO SUB 991
+415 LET K$=INKEY$ : IF K$="" THEN GO TO 415
+421 IF K$="1" THEN LET DIFICULTAD=1 : BEEP .0015,35 : GO SUB 2400 :
+    GO SUB 1460 : GO SUB 996 : GO
+TO 111
+422 IF K$="2" THEN LET DIFICULTAD=2 : BEEP .0015,35 : GO SUB 2400 :
+    GO SUB 1460 : GO SUB 996 : GO
+TO 111
+423 IF K$="3" THEN LET DIFICULTAD=3 : BEEP .0015,35 : GO SUB 2400 :
+    GO SUB 1460 : GO SUB 996 : GO
+TO 111
+424 IF DIFICULTAD=0 THEN GO TO 990
+425 IF K$="4" AND DIFICULTAD<>0 THEN LET DIFICULTAD=0 : BEEP .0015,35 :
+    GO TO 1300
+430 IF K$="o" OR K$="O" OR K$="6" THEN IF DIFICULTAD<>0 THEN
+    IF CX>1 THEN GO SUB 1500 : LET CX=CX-1 : GO TO 500
+440 IF K$="p" OR K$="P" OR K$="7" THEN IF DIFICULTAD<>0 THEN
+    IF CX<ANCHO THEN GO SUB 1500 : LET CX=CX+1 : GO TO 500
+450 IF K$="q" OR K$="Q" OR K$="9" THEN IF DIFICULTAD<>0 THEN
+    IF CY>1 THEN GO SUB 1500 : LET CY=CY-1 : GO TO 500
+460 IF K$="a" OR K$="A" OR K$="8" THEN IF DIFICULTAD<>0 THEN
+    IF CY<ALTO THEN GO SUB 1500 : LET CY=CY+1 : GO TO 500
+470 IF K$=" " OR K$="0" THEN IF DIFICULTAD<>0 THEN GO SUB 1000
+990 GO TO 400
+
+</pre>
+    </p></td></tr>
+</table>
+<p>La actualización de la posición actual del cursor se realiza en la línea 410:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+410 OVER 1: PRINT AT IY+CY, IX+CX ; FLASH 1; INK 0 ; PAPER 7;" "; :
+    OVER 0 : GO SUB 991
+</pre>
+    </p></td></tr>
+</table>
+<p>Al final de esa línea se salta a la rutina 991, que simplemente se encarga con varios PRINT de actualizar los valores numéricos de números de minas y casillas restantes en el juego:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+991 REM *** Actualizar contadores minas ***
+992 IF L$="e" THEN PRINT AT 14, 18; "Mines: "; INK 7 ; MINAS ;  " "
+993 IF L$="s" THEN PRINT AT 14, 18; "Minas: "; INK 7 ; MINAS ;  " "
+994 IF L$="e" THEN PRINT AT 15, 18; "Cells: "; INK 7 ; QUEDAN ; " " :
+    RETURN
+995 PRINT AT 15, 18; "Total: "; INK 7 ; QUEDAN ; " " : RETURN
+996 PRINT AT 14, 18; "           "
+997 PRINT AT 15, 18; "            "
+998 RETURN
+</pre>
+    </p></td></tr>
+</table>
+<p>Como puede verse, en el bucle principal también se controla la pulsación de las teclas 1 a 4 para cambiar la dificultad y acabar el juego. Nótese también la siguiente línea:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+407 IF MINAS=QUEDAN THEN GO TO 1600
+</pre>
+
+    </p></td></tr>
+</table>
+<p>La línea 407 es el control de fin de juego para saber si el jugador ha ganado: si quedan tantas casillas por destapar como minas hemos puesto en el tablero, quiere decir que hemos destapado todas las casillas del tablero excepto las minas, con lo cual el juego se ha acabado y hemos ganado. En ese caso se salta a la línea 1600 que es la rutina de Victoria_Fin_Juego. Las rutinas de Victoria_Fin_Juego y Muerte_Fin_Juego son bastante sencillas (líneas 1300-1330 y 1600-1630): simplemente muestran un mensaje en pantalla, muestran el tablero desplegado y completo (si pulsas una mina y pierdes, tienes derecho a ver el contenido del tablero y la posición de las minas), esperan la pulsación de una tecla, reinicializan las variables del juego y saltan a la línea 400 (Inicio del bucle principal) para comenzar una nueva partida. La muestra y borrado del tablero se realiza mediante las siguientes rutinas:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+1400 REM *** Mostrar tablero ***
+1420 FOR Y=1 TO ALTO
+1425   LET P$= CHR$(16) + CHR$(0) + CHR$(17) + CHR$(7) :
+     FOR X=1 TO ANCHO : LET P$=P$+C$(T(X,Y)+1) : NEXT X  :
+     PRINT AT IY+Y,IX+1 ; P$;
+1450 NEXT Y
+1451 RETURN
+
+1460 REM *** Borrar tablero ***
+1461 FOR N=1 TO 12
+1462 PRINT AT IY+N,IX ; INK COL; PAPER PAP ; "                ";
+1463 NEXT N
+1470 RETURN
+</pre>
+    </p></td></tr>
+</table>
+<p>El borrado se basa simplemente en pintar espacios sobre el tablero, mientras que la visualización del tablero muestra todos los valores de T(X,Y) (independientemente del valor de V(X,Y), ya que pretendemos mostrar el tablero destapado completo). Puede verse el uso de C$(), que es un array donde hemos almacenado los caracteres para los 10 valores posibles del tablero (0 a 9, desde una casilla sin mina hasta una mina), de tal forma que 0 se corresponde con una casilla vacía, los números del 1 al 8 con los caracteres del 1 al 9, y el 9 con una mina.</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+
+    <tr><td><p class="codigo">
+<pre>
+101 DIM C$(10) : FOR N=1 TO 10: READ C$(N) : NEXT N
+102 DIM H(10) : FOR N=1 TO 10: READ H(N) : NEXT N
+103 DATA "{I}","1","2","3","4","5","6","7","8","{M}"
+104 DATA 0, 1, 3, 2, 2, 2, 2, 2, 2, 0
+</pre>
+    </p></td></tr>
+</table>
+<p>La notación {M} significa "el UDG de M mayúscula", y se utiliza en BAS2TAP para especificar los UDGs (ya que los teclados de los PCs no tienen las teclas de nuestro Spectrum para dibujar esos símbolos).</p>
+<p>Por último, cuando movemos el "cursor" de una posición a otra tenemos que recuperar en pantalla lo que había bajo la posición que abandonamos. Esta tarea la realiza la siguiente función:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+1500 REM *** Restaurar grafico bajo el cursor ***
+1510 IF V(CX,CY)=1 THEN PRINT AT CY+IY,CX+IX ; FLASH 0; PAPER 7;
+     INK H(T(CX,CY)+1) ;C$(T(CX,CY)+1); : RETURN
+1520 PRINT AT CY+IY,CX+IX; FLASH 0; INK 0 ; PAPER 7; "{E}";
+1530 RETURN
+
+</pre>
+    </p></td></tr>
+</table>
+<p>De nuevo podemos ver cómo se hace uso de CX+IX y CY+IY para saber dónde "escribir" la casilla que hay que recuperar, y de C$() para saber qué carácter imprimir, y H() para saber con qué atributo (tinta) imprimirlo.</p>
+<p>Gracias a H(), por ejemplo, podemos hacer:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+102 DIM H(10) : FOR N=1 TO 10: READ H(N) : NEXT N
+104 DATA 0, 1, 3, 2, 2, 2, 2, 2, 2, 0
+(...)
+PRINT INK H( valor ) ; "X" ;
+</pre>
+    </p></td></tr>
+</table>
+
+<p>en lugar de:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+IF valor="0" : PRINT INK 0; "X"
+IF valor="1" : PRINT INK 1; "X"
+IF valor="2" : PRINT INK 3; "X"
+(...)
+IF valor="9" : PRINT INK 0; "X"
+</pre>
+    </p></td></tr>
+</table>
+<p>Lo cual es mucho más rápido y más óptimo y legible.</p>
+<p><b>DESTAPADO DE MINAS</b></p>
+<p>Cuando en el bucle principal pulsamos espacio, se salta a una rutina que destapa la casilla actual:</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+470 IF K$=" " OR K$="0" THEN IF DIFICULTAD<>0 THEN GO SUB 1000
+</pre>
+    </p></td></tr>
+</table>
+<p>Dicha rutina DestaparMina se desarrolla desde las líneas 1000 a 1099 del programa: Si la casilla ya está destapada, no hay nada que destapar. En caso contrario, la marcamos como ya abierta, y reducimos el número de casillas, y en una tercera línea imprimimos en pantalla el carácter al que corresponde la casilla que acabamos destapar:</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+1000 REM *** Destapar mina ***
+1010 IF V(CX,CY)=1 THEN RETURN
+1020 LET V(CX,CY)=1 : LET QUEDAN=QUEDAN-1 : BEEP .0005,35 :
+1030 PRINT AT CY+IY,CX+IX ; PAPER 7; INK H(T(CX,CY)+1) ;
+     C$(T(CX,CY)+1) ;
+
+</pre>
+    </p></td></tr>
+</table>
+<p>Si es una mina lo que hemos destapado, hemos perdido. Si, por contra, es una casilla en blanco, tenemos que destapar todas las casillas en blanco alrededor de la casilla actual, algo que se hace en la porción de código a partir de la línea 1060. Para el resto de los casos (números 1 al 8) basta con haber destapado y mostrado la casilla, y podemos volver (saltando a 1098):</p>
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+1040 IF T(CX,CY)=9 THEN GO TO 1300
+1050 IF T(CX,CY)=0 THEN GO TO 1060
+1055 GO TO 1098
+</pre>
+    </p></td></tr>
+</table>
+<p>A partir de aquí empieza el destapado de recuadros en blanco: lo primero es visualizar un mensaje de información de que se va a saltar a un cálculo que en BASIC es algo lento y costoso, para después llamar a la rutina Blanquear_Cuadros_Alrededor (llamada en línea 1075). Tras volver de la rutina se actualizan los contadores de minas, casillas y puntos y se vuelve al bucle principal.</p>
+
+<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+    <tr><td><p class="codigo">
+<pre>
+1060 REM Destapar todos los cuadros de alrededor que sean blancos
+1066 LET PP=1                    : REM Puntero a la pila
+1069 LET PD=1                    : REM Puntero a casillas destapadas
+1070 IF L$="e" THEN PRINT AT 19,9 ; "...Working...";
+1071 IF L$="s" THEN PRINT AT 19,9 ; "Calculando...";
+1075 LET OX=CX: LET OY=CY : GO SUB 3 : LET CX=OX : LET CY=OY
+1080 FOR N=1 TO PD-1
+1090 LET X=PEEK (59000+N) : LET Y=PEEK (59300+N) :
+     PRINT AT Y+IY,X+IX ; PAPER 7; INK H(T(X,Y)+1) ; C$(T(X,Y)+1) ;
+1095 NEXT N
+1096 LET QUEDAN=QUEDAN-PD+1 : LET PUNTOS=PUNTOS+PD-2
+1097 PRINT AT 19,9 ; "             ";
+1098 LET PUNTOS=PUNTOS+1
+1099 RETURN
+</pre>
+    </p></td></tr>
+</table>
+<p>La rutina Blanquear_Cuadros_Alrededor se encarga de destapar todos los recuadros en blanco si el recuadro que acabamos de destapar está en blanco. Se usa para evitar que en zonas grandes de recuadros sin minas ni números tengamos que destapar uno a uno todos los recuadros que no contienen nada. Si no se llamara a esta función, al pulsar en un recuadro de un área vacía, simplemente se destaparía ese recuadro y ningún otro más. Lo que hace esta función es destapar todo el área vacía, para agilizar el juego.</p>
+<p>Esta rutina se ha implementado aparte y de una forma optimizada por razones de velocidad. Para empezar, se ha situado en las líneas del 2 al 14 porque las primeras líneas del programa son las que BASIC ejecuta con mayor velocidad (pequeños trucos de BASIC). Además, se ha intentado reducir el número de líneas agregando muchos comandos a cada línea mediante ":", ya que eso también acelera la ejecución (digamos que el pasar de una línea a la siguiente requiere un tiempo en BASIC, y acumulando comandos en la misma línea lo reducimos). Como es la función más crítica (y lenta) del programa, se ha implementado aprovechando estos truquillos de BASIC, para acelerarla. Aún así hay que decir que tal y como está escrita la función es lenta (y esto es una invitación al lector a escribir una rutina más rápida, aprovechando la modularidad del programa).</p>
+<p>Por último, esta función tiene una optimización extra que ha añadido algo de velocidad a la ejecución de la misma: se han cambiado los accesos al array ( V(x,y) = valor ) por accesos a memoria (con PEEK y POKE), al igual que se ha hecho en la rutina de generación del tablero y posicionamiento de las minas.</p>
+<p>Lo que se hace, al igual que en el caso de la generación del tablero, es usar buffers de memoria como vectores de trabajo, empleando PEEK y POKE. Tras las pruebas realizadas, resulta que A(10)=1 es más lento que POKE 59000+10,1 . Así pues, en las direcciones 59000, 59300, 59500 y 59700 establecemos 4 buffers temporales donde trabajar.</p>
+
+<p>El algoritmo de la rutina de las líneas 3 a 14 lo que hace es lo siguiente:</p>
+<ul>
+	<li>Si la casilla actual es cero, destaparla (V(X,Y) = 1) y pintarla en pantalla.</li>
+	<li>Comprobar si las 8 casillas de alrededor son cero.<br />
+  Si lo son, ejecutar este mismo algoritmo sobre cada una de las 8 casillas.</li>
+</ul>
+<p>La implementación es bastante ilegible (al estar optimizada) y es por eso que os animamos a mejorarla y hacerla más rápida utilizando un algoritmo diferente.</p>
+<p><b>CÓMO PASAR NUESTRO PROGRAMA BASIC A UN FICHERO TAP</b></p>
+
+<p>Bas2tap es una utilidad muy interesante que permite teclear nuestros programas en BASIC en nuestro ordenador personal y después generar un tap tal y como si lo hubieramos tecleado en el editor del Spectrum.</p>
+<p>Si grabamos el Listado 1 como zxmines.bas, podemos generar un tap del juego mediante:</p>
+<pre>
+ bas2tap -a1 -szxmines zxmines.bas
+</pre>
+<p>La sintaxis (explicada) es:</p>
+<pre>
+ -a1 : línea de autoarranque (en qué línea autocomenzará el programa sin
+       necesidad de poner RUN tras el LOAD "").
+ -szxmines : título del programa BASIC.
+ zxmines.bas : programa a "compilar" o "traducir".
+</pre>
+<p>Podéis descargar BAS2TAP de la sección de Utilidades de WorldOfSpectrum.</p>
+<b>LINKS</b>
+
+</p>
+<ul>
+    <li><a href="src/basic_zxmines.zip" onClick="window.open(this.href); return false;">Fichero basic_zxmines.zip conteniendo: zxmines.*, Makefile, README</a></li>
+    <li><a href="tap/zxmines.tap" onClick="window.open(this.href); return false;">Fichero zxmines.tap (el programa ya compilado)</a></li>
+    <li><a href="http://www.redeya.com/bytemaniacos/concurso2003/index.html" onClick="window.open(this.href); return false;">Concurso de BASIC 2003 de Bytemaniacos</a></li>
+    <li><a href="http://www.speccy.org/metalbrain" onClick="window.open(this.href); return false;">SevenuP</a></li>
+    <li><a href="http://www.worldofspectrum.org/utilities.html#other" onClick="window.open(this.href); return false;">bas2tap</a></li>
+
+</ul>
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td align="right"><br><br>SROMERO</td>
+    </tr>
+</table>
+                    </td>
+                </tr>
+
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+<script language="JavaScript">
+function RecargarPie(url)
+{
+    document.location=url;
+}
+</script>
+<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+    <form name="selector_secciones">
+        <tr>
+<td align="left">
+    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
+    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+        <option value="index.html">Portada</option>
+        <option value="editorial.html">Índice - Editorial</option>
+        <option value="panorama.html">Panorama</option>
+        <option value="analisis.html">Análisis</option>
+        <option value="al-descubierto.html">Al Descubierto</option>
+        <option value="hardware.html">Hardware</option>
+
+        <option value="basic.html" selected>Programación BASIC</option>
+        <option value="el-aventurero.html">El Aventurero</option>
+        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="input.html">INPUT</option>
+        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="opinion.html">Opinión</option>
+
+    </select>
+    <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="siguiente" value=">" />
+</td>
+            <td align="right" class="texto">
+                <a href="#arriba">Volver arriba</a>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+
+    </form>
+</table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+	<tr align="center" valign="center">
+		<td>2003-2009 Magazine ZX</td>
+
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8018503-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+
+</html>
