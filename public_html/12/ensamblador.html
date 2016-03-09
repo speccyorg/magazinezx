@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -76,7 +76,7 @@ function RecargarCabecera(url)
 <p>Eso implica que cada vez que se ejecuta el programa, para todas y cada una de las líneas, no sólo se está ejecutando nuestro programa sino que debajo de él tenemos a la CPU del Spectrum (que no es especialmente potente) ejecutando un intérprete de BASIC que nos roba tiempo de ejecución y hace que un programa diseñado e implementado de una forma elegante se ejecute con una lentitud que no podemos salvar.</p>
 <p><b>LOS LÍMITES DE BASIC</b></p>
 <p>BASIC tiene una serie de trucos más o menos conocidos para acelerar su ejecución: escribir muchas instrucciones en una sóla línea BASIC, poner las rutinas que más velocidad necesitan en las primeras líneas de programa, reducir el nombre (en longitud) de las variables, etc. Pero al final llegamos a un punto en que no podemos mejorar nuestros programas en cuanto a velocidad. Sin duda, BASIC es un comienzo prácticamente obligado para programar, pero no debería ser el final. Dejando de lado que sigue siendo una herramienta muy útil para programar en el Spectrum, para muchos llega la hora de dar el siguiente paso.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="319">
 	<tr align="right">
 
@@ -87,7 +87,7 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Lenguaje BASIC y su intérprete</td>
 	</tr>
 </table>
-</center>
+
 <p>Una de las primeras posibilidades que se nos plantea más allá del Intérprete BASIC del Spectrum es la utilización de un compilador de BASIC, como por ejemplo MCODER: seguimos programando en BASIC, pero lo hacemos dentro de un entorno de desarrollo (dentro del mismo Spectrum) que cuando terminamos de introducir nuestro programa, actúa como el intérprete BASIC, sólo que en lugar de ejecutar el programa lo compila y lo graba directamente en el formato que entiende el Z80. A partir de un programa en BASIC obtenemos (por ejemplo en cinta) un ejecutable que podremos cargar directamente desde el cassette. La labor de interpretación se hace igualmente, pero se hace antes, ya que en lugar de ejecutar, el resultado de la interpretación se graba en cinta. Un programa en BASIC compilado y ejecutado de este modo es muchísimo más rápido que el mismo programa ejecutado en el intérprete de BASIC del Spectrum.</p>
 <p>MCODER es una buena solución, y para muchos puede ser suficiente para muchas de sus creaciones. Nuestra querida DINAMIC realizó sus primeros juegos en BASIC y los compiló con MCODER: hablamos de Babaliba, Saimazoom, o la utilidad Artist. La pega es que MCODER tiene unas limitaciones que no tienen porqué ser especialmente problemáticas si las conocemos, las aceptamos, y realizamos nuestros programas teniéndolas en cuenta. Por ejemplo, no podemos utilizar vectores (creados con DIM en BASIC), y el manejo de cadenas sufre algunos cambios de sintaxis, entre otros.</p>
 
@@ -162,7 +162,7 @@ NOADD:  DJNZ  MULT
 
 <p>La integración de rutinas en ASM dentro de programas BASIC se realiza a grandes rasgos de la siguiente forma: escribimos nuestra rutina en ensamblador, por ejemplo una rutina que realiza un borrado de la pantalla mucho más rápidamente que realizarlo en BASIC, o una rutina de impresión de Sprites o gráficos, etc.</p>
 <p>Una vez escrito el programa o la rutina, la ensamblamos (de la manera que sea: manualmente o mediante un programa ensamblador) y obtenemos en lugar del código ASM una serie de valores numéricos que representan los códigos de instrucción en código máquina que se corresponden con nuestro listado ASM.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="552">
 	<tr align="right">
 		<td><img src="img/tablamanual.gif" width="552" height="387"  alt="Parte de una tabla de ensamblado manual" />
@@ -173,7 +173,7 @@ NOADD:  DJNZ  MULT
 
 	</tr>
 </table>
-</center>
+
 <p>Tras esto, nuestro programa en BASIC debe cargar esos valores en memoria (mediante instrucciones POKE) y después saltar a la dirección donde hemos POKEADO la rutina para ejecutarla.</p>
 <p>Veamos un ejemplo de todo esto. Supongamos el siguiente programa en BASIC, que está pensado para rellenar toda la pantalla con un patrón de píxeles determinado:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -187,7 +187,7 @@ NOADD:  DJNZ  MULT
 
 </table>
 <p>Lo que hace este programa en BASIC es escribir un valor (el 162) directamente en la memoria de vídeo (en la próxima entrega veremos qué significa esto) y, en resumen, lo que consigue es dibujar en pantalla con unos colores determinados. Si ejecutamos el programa en BASIC veremos lo siguiente:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="294">
 	<tr align="right">
 		<td><img src="img/ejemplo1.gif" width="294" height="230"  alt="Salida del programa BASIC de ejemplo" />
@@ -198,7 +198,7 @@ NOADD:  DJNZ  MULT
 
 	</tr>
 </table>
-</center>
+
 <p>Teclead y ejecutad el programa. Medid el tiempo necesario para "pintar" toda la pantalla y anotadlo. Podéis también utilizar el fichero "ejemplo1-bas.tap" que os ofrecemos ya convertido a TAP.</p>
 <p>A continuación vamos a ver el mismo programa escrito en lenguaje ensamblador:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -331,7 +331,7 @@ rutina2:
 <p>Lo que hemos visto hasta ahora es que podemos programar pequeñas rutinas y llamarlas desde programas en BASIC fácilmente. Todavía no hemos aprendido nada del lenguaje en sí mismo, pero se han asentado muchos de los conceptos necesarios para entenderlo en las próximas entregas del curso.</p>
 <p>En realidad, muchos de nosotros hemos introducido código máquina en nuestros Spectrums sin saberlo. Muchas veces, cuando tecleabamos los listados de programa que venían en la fabulosa revista Microhobby, introducíamos código máquina y lo ejecutábamos, aunque no lo pareciera.</p>
 <p>Algunas veces lo hacíamos en forma de DATAs, integrados en el programa BASIC que estábamos tecleando, pero otras lo hacíamos mediante el famoso Cargador Universal de Código Máquina (CUCM). Para que os hagáis una idea de qué era el CUCM de Microhobby, no era más que un programa en el cual tecleabamos los códigos binarios de rutinas ASM ensambladas previamente. Se tecleaba una larga línea de números en hexadecimal agrupados juntos (ver la siguiente figura), y cada 10 opcodes se debía introducir un número a modo de CRC que aseguraba que los 10 dígitos (20 caracteres) anteriores habían sido introducidos correctamente. Este CRC podía no ser más que la suma de todos los valores anteriores, para asegurarse de que no habíamos tecleado incorrectamente el listado.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="288">
 	<tr align="right">
 		<td><img src="img/cucm.jpg" width="288" height="252"  alt="Ejemplo de listado para el CUCM de MH" />
@@ -342,7 +342,7 @@ rutina2:
 		<td class="piefoto" align="right">Ejemplo de listado para el CUCM de MH</td>
 	</tr>
 </table>
-</center>
+
 <p>Al acabar la introducción en todo el listado en el CUCM, se nos daba la opción de grabarlo. Al grabarlo indicábamos el tamaño de la rutina en bytes y la dirección donde la ibamos a alojar en memoria (en el ejemplo de la captura, la rutina se alojaría en la dirección 53000 y tenía 115 bytes de tamaño). El CUCM todo lo que hacía era un simple:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -482,6 +482,6 @@ pageTracker._trackPageview();
 
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

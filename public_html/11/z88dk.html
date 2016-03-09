@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -82,7 +82,7 @@ sprites representarán tanto al personaje que maneja el jugador como a sus enemig
 
 <p>Ahora que ya sabemos un poco más sobre la notación hexadecimal, ya estamos preparados para crear nuestros sprites. Estos sprites se almacenarán en z88dk como arrays de números hexadecimales (por eso ha sido necesaria toda la explicación anterior, tan aburrida).</p>
 <p>Los sprites los podemos representar en papel como una cuadrícula, donde cada casilla de esta cuadrícula será un pixel en la pantalla. Cada pixel podrá estar activado o no, de tal forma que la combinación de pixeles activados/desactivados dentro de esa cuadrícula dará lugar al sprite en la pantalla (como los GDUs en el BASIC del Spectrum). Por ejemplo, la siguiente imagen muestra varios de estos sprites dibujados en una cuadrícula (arriba) y cómo se verían en la pantalla del Spectrum (abajo):</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
 		<td><img src="img/z88dk6_1.png" width="500" height="300"  alt="Arriba vemos los sprites tal cuál quedarían dibujados sobre una cuadrícula en un papel, y abajo los vemos en la pantalla de nuestro Spectrum" />
@@ -93,10 +93,10 @@ sprites representarán tanto al personaje que maneja el jugador como a sus enemig
 
 	</tr>
 </table>
-</center>
+
 <p>Los sprites en z88dk pueden ser de cualquier tamaño que queramos. Sin embargo, vamos a empezar por explicar los sprites de tamaño 8x8, como los que acabamos de ver. Como hemos dicho, cada sprite se definirá en z88dk como un array. Las dos primeras posiciones de este array almacenarán la anchura y la altura del sprite respectivamente y, a continuación, el array tendrá tantas posiciones más como filas tenga el sprite. Y el valor de cada una de esas posiciones será una suma, la suma del valor hexadecimal de cada uno de los pixeles activados en dicha fila.</p>
 <p>Esto es así por que cada columna de la cuadrícula que define el sprite tendrá asignado un valor hexadecimal. La siguiente imagen muestra los valores hexadecimales asigandos a cada columna para un sprite de 8 columnas.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="365">
 	<tr align="right">
 		<td><img src="img/z88dk6_2.png" width="365" height="266"  alt="Valor hexadecimal asignado a cada columna para un sprite con ocho columnas" />
@@ -107,9 +107,9 @@ sprites representarán tanto al personaje que maneja el jugador como a sus enemig
 		<td class="piefoto" align="right">Valor hexadecimal asignado a cada columna para un sprite con ocho columnas</td>
 	</tr>
 </table>
-</center>
+
 <p>Por ejemplo, si en una fila activamos los pixeles 1, 4, 6, y 8 (comenzando a contar desde la derecha), el valor hexadecimal de esa fila sería 0x01 + 0x08 + 0x20 + 0x80 = 0xA9. La siguiente imagen muestra un ejemplo más elaborado, para uno de los pixeles que hemos visto anteriormente. En dicho ejemplo se muestra el valor para cada fila y se puede ver cómo quedarían las posiciones del array a definir dentro de z88dk (recordemos que las dos primeras posiciones son la anchura y la altura).</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="323">
 	<tr align="right">
 		<td><img src="img/z88dk6_3.png" width="323" height="352"  alt="Ejemplo de cálculo de los valores hexadecimales correspondientes a un sprite" />
@@ -120,7 +120,7 @@ sprites representarán tanto al personaje que maneja el jugador como a sus enemig
 		<td class="piefoto" align="right">Ejemplo de cálculo de los valores hexadecimales correspondientes a un sprite</td>
 	</tr>
 </table>
-</center>
+
 <p>¿Qué ocurre en el caso de querer utilizar pixeles de distinta anchura y/o altura? En el caso de la altura es sencillo, lo único que hay que hacer es añadir o eliminar posiciones del array, ya que como sabemos, cada posición del array se corresponde con la suma de valores hexadecimales de una fila del sprite. En el caso de querer variar el número de columnas, la cosa se complica.</p>
 <p>Si queremos utilizar menos de ocho columnas, éstas se deben ir eliminando de derecha a izquierda. Esto quiere decir que el valor hexadecimal de la primera columna siempre será 0x80, y el de la última dependerá del número de columnas que tengamos. Por ejemplo, para un sprite de siete pixeles de ancho, los valores de las columnas serán 0x80, 0x40, 0x20, 0x10, 0x08, 0x04 y 0x02 (no se usa 0x01), y para un sprite de cinco pixeles de ancho, los valores de las columnas serán 0x80, 0x40, 0x20, 0x10 y 0x08 (no se usan los valores 0x04, 0x02 y 0x01).</p>
 <p>Y si queremos usar más de ocho columnas, la cosa es un poco más complicada, pues en lugar de usar números hexadecimales de dos dígitos, los usaremos de 3 o más. De derecha a izquierda, las columnas que vayamos añadiendo a partir de la de valor 0x80, tendrán valores 0x0100, 0x0200, 0x0400, 0x0800, 0x1000, 0x2000, etc. El array se construiría añadiendo más posiciones para dar cabida a esas nuevas parejas de dígitos hexadecimales. En próximas entregas veremos algunos ejemplos de esto.</p>
@@ -145,7 +145,7 @@ sprites representarán tanto al personaje que maneja el jugador como a sus enemig
 </pre>
 <p>y se nos creará un directorio llamado sprites, en el interior del cual encontraremos el ejecutable que debemos utilizar. También incluye el código fuente para que podamos compilar en el caso de que así lo queramos, pero deberemos para ello disponer de la librería Allegro. Por cierto, también es posible compilarlo en Windows, aunque sólo se distribuyen binarios para Linux.</p>
 <p>Al iniciar el programa nos aparecerá en pantalla algo como lo que se muestra en la siguiente imagen:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="648">
 	<tr align="right">
 		<td><img src="img/z88dk6_4.png" width="648" height="506"  alt="El editor de sprites de z88dk nada más ejecutarlo" />
@@ -156,7 +156,7 @@ sprites representarán tanto al personaje que maneja el jugador como a sus enemig
 		<td class="piefoto" align="right">El editor de sprites de z88dk nada más ejecutarlo</td>
 	</tr>
 </table>
-</center>
+
 <p>Podemos controlar el programa de una forma muy sencilla. Con los cursores hacia arriba y hacia abajo cambiamos el zoom, con lo que podremos dibujar de una forma más cómoda. Es fácil ver como nada más iniciarse el programa estamos trabajando sobre una rejilla de 8x8, pero no podemos acceder cómodamente a todas las casillas, deberemos hacer uso de la tecla de cursor abajo para disminuir el zoom.</p>
 <p>Los botones de +1 y -1 al lado de las palabras Width y Height (abajo) nos permiten cambiar, respectivamente, la anchura y la altura del sprite en un pixel. Por supuesto, al lado de Width y Height podemos ver sus valores actuales (en el momento de iniciar la aplicación, tanto la anchura como la altura son de 8 pixeles).</p>
 <p>Pinchando sobre la cuadrícula indicaremos qué pixeles del sprite estarán marcados (y aparecerán de color negro en la pantalla, en el caso de que el sprite no tenga atributos). Volviendo a pinchar sobre un sprite activado lo desactivaremos.</p>
@@ -274,6 +274,6 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

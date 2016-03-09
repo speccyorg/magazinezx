@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -100,7 +100,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 
 <p>Veamos una figura donde se muestra el estado del <b>mapa de memoria del Spectrum</b>:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 
 	<tr align="right">
@@ -111,7 +111,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 		<td class="piefoto" align="right">Mapa de memoria del Spectrum</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Cualquiera de los 8 bloques de 16KB (128 KB / 16 KB = 8 bloques) puede ser "mapeado" en los 16Kb que van desde 0xc000 a 0xffff, y podremos cambiar este mapeo de un bloque a otro mediante instrucciones I/O concretas.</p>
 
@@ -121,7 +121,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 
 <p>El mapa de memoria del Spectrum con los bloques mapeables/paginables sobre 0xC000 es el siguiente:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="700">
 	<tr align="right">
 		<td><img src="img/pag_normal.png" width="700" height="400"  alt="Posibilidades de paginación" />
@@ -132,7 +132,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 		<td class="piefoto" align="right">Posibilidades de paginación</td>
 	</tr>
 </table>
-</center>
+
 
 <p><b>Cambiando de banco</b></p>
 
@@ -223,7 +223,7 @@ SetRAMBank:
 <p>Cuando se activa el modo especial, el mapa de memoria cambia a una de estas configuraciones, según los valores de los bits 1 y 2 del puerto 0x1FFD:</p>
 
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
 		<td><img src="img/pag_especial.png" width="500" height="400"  alt="Posibilidades especiales de paginación" />
@@ -234,7 +234,7 @@ SetRAMBank:
 		<td class="piefoto" align="right">Posibilidades especiales de paginación</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Por otra parte, las 4 ROMS mapeables del +2A y +3 son:</p>
 
@@ -411,7 +411,7 @@ END 32000
 
 <p>¿Acaso existen en el Spectrum otro dispositivo que acceda a la memoria además del microprocesador (cuando lee, decodifica y ejecuta instrucciones, o cuando lee/escribe en memoria)? Sí, lo hay, y es la ULA (Uncommited Logic Array).</p>
 
-<center>
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
@@ -422,13 +422,13 @@ END 32000
 		<td class="piefoto" align="right">Arquitectura del ZX Spectrum</td>
 	</tr>
 </table>
-</center>
+
 
 <p>La ULA es, digamos, "el chip gráfico" del Spectrum. Su labor no es como en los chips gráficos actuales o los chips gráficos de otros ordenadores (y consolas) de 8 bits, la de apoyar al software con funciones extra, sino que en el Spectrum la ULA se limita a leer la VIDEORAM (parte de la memoria que contiene la información gráfica a representar en el monitor), interpretarla, y mandar al modulador de TV las señales adecuadas para la visualización de dicha información en la TV. Sencillamente, es el chip que lee la VideoMemoria y la convierte en los píxeles que vemos en la TV.</p>
 
 <p>¿Cómo trabaja la ULA? Este pequeño chip fabricado por Ferranti recorre 50 veces por segundo la zona de memoria que comienza en 0×4000 (16384) y transforma los datos numéricos en píxeles apagados o encendidos con el color de la tinta y papel asociado a cada celdilla 8×1 (8×8 en realidad) que va leyendo byte a byte, horizontalmente. Esto implica una sincronización con el haz de electrones del monitor de TV, que empieza en la esquina superior-izquierda y avanza horizontalmente hasta llegar al final de cada línea para, como en una máquina de escribir, pasar a la siguiente línea horizontal, y así hasta llegar hasta la esquina inferior derecha.</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
 		<td><img src="img/retrazo.png" width="640" height="480"  alt="Retrazado de la pantalla" />
@@ -439,7 +439,7 @@ END 32000
 		<td class="piefoto" align="right">Retrazado de la pantalla</td>
 	</tr>
 </table>
-</center>
+
 
 <p>El problema es que mientras el haz de electrones del monitor avanza redibujando la imagen, el Spectrum no puede interrumpirlo (de hecho, no puede controlarlo, sólo se sincroniza con él) y tiene que servirle todos los datos necesarios para el retrazado de la imagen.</p>
 
@@ -653,7 +653,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -73,7 +73,7 @@ function RecargarCabecera(url)
 <div align="justify">
 <p align="center"><font size="5">ZXMINES: un juego en BASIC comentado</font></p>
 <p><i>ZXMines es un juego en BASIC que se presentó al concurso de programación de Juegos en Basic 2003 de ByteManiacos. ZXMines implementa en BASIC un sencillo juego de Buscaminas en el cual debemos destapar todo el tablero sin levantar las casillas en que se alojan las minas (destapar una mina finaliza el juego). Para poder destapar totalmente el tablero sin levantar casillas con minas disponemos de una información providencial: cada casilla que no contiene una mina nos indica numéricamente cuántas minas hay en las 8 casillas de alrededor de la casilla actual.</i></p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/basic1.gif" width="320" height="240"  alt="ZXMines: el clásico juego Buscaminas, en BASIC" />
@@ -84,7 +84,7 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">ZXMines: el clásico juego Buscaminas, en BASIC</td>
 	</tr>
 </table>
-</center>
+
 <p>Así, si destapamos una casilla y contiene el número 1, sabemos que alguna de las 8 casillas de alrededor de la misma contiene una mina. Utilizando la información numérica que nos proporcionan las diferentes casillas que vamos destapando podemos ser capaces de averiguar qué casillas contienen minas y evitarlas. El juego acaba cuando destapamos una mina (y perdemos) o bien cuando destapamos todas las casillas del tablero quedando sólo por destapar las casillas con minas (ganando el juego). Por último, una cosa a destacar es que si destapamos una casilla sin minas alrededor, se abre todo un área de juego a la vista, para acelerar el ritmo de juego.</p>
 <p>El objetivo del presente artículo es mostrar y explicar el código BASIC utilizado para programar ZXMINES, mostrando así algunos trucos que en BASIC proporcionan una mayor velocidad de ejecución.</p>
 <p><b>PSEUDOCÓDIGO DEL JUEGO</b></p>
@@ -306,7 +306,7 @@ T =
 </table>
 <p>Como puede verse, se define "M" como el UDG que contiene el dibujo de las minas, "E" como un UDG que contiene el dibujo de una casilla sin destapar o esquina, e "I" como el UDG que contiene el dibujo de una casilla destapada vacía (un pequeño puntito central).</p>
 <p>Los 3 dibujos han sido creados con SevenuP de la misma forma. Por ejemplo, para crear la mina, abrimos SevenuP y creamos un nuevo dibujo de 8x8. Dibujamos la mina (en la siguiente figura la veremos a medio dibujar) y vamos a File , y luego a Output Options y seleccionamos "No attributes" y como Byte Sort Priority dejamos "X char, Char line, Y char, Mask".</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="478">
 	<tr align="right">
 		<td><img src="img/basic2.gif" width="478" height="409"  alt="Creando nuestros gráficos en SevenuP" />
@@ -317,7 +317,7 @@ T =
 		<td class="piefoto" align="right">Creando nuestros gráficos en SevenuP</td>
 	</tr>
 </table>
-</center>
+
 <p>A continuación exportamos los datos, desde el menu File, opción Export Data. Escribimos un nombre de fichero (por ejemplo, mina.c), y en el desplegable seleccionamos "C source" en lugar de "raw Binary". Al darle a OK habremos creado un fichero mina.c con el gráfico exportado a formato C. El aspecto del fichero será similar (comentarios aparte) al siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -338,7 +338,7 @@ unsigned char Sprite[8] = {
 </table>
 
 <p>Tras el inicio del programa (líneas 48 a 90) viene la preparación de la pantalla (líneas 2300 a 2450) donde simplemente se imprimen en pantalla los mensajes que veremos en el menú principal.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/basic3.gif" width="320" height="240"  alt="Aspecto de la pantalla de presentación" />
@@ -349,7 +349,7 @@ unsigned char Sprite[8] = {
 	</tr>
 
 </table>
-</center>
+
 <p><b>GENERACIÓN DEL TABLERO</b></p>
 <p>La rutina de las líneas 2000 a 2200 es llamada desde la rutina de preparación de la pantalla para rellenar el tablero T con minas aleatorias (números 9), y al mismo tiempo calcular los valores numéricos de cada casilla indicando el número de minas alrededor.</p>
 <p>La rutina viene a hacer algo como lo siguiente:</p>
@@ -799,7 +799,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

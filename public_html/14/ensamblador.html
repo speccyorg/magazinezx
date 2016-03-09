@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -215,7 +215,7 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 
 </table>
 <p>Una vez cargado y ejecutado el TAP en el emulador de Spectrum, podréis ejecutar el código máquina en BASIC con un "RANDOMIZE USR 40000", y deberéis ver una pantalla como la siguiente:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="319">
 	<tr align="right">
 		<td><img src="img/ejemplo1.gif" width="319" height="239"  alt="Salida del ejemplo 1" />
@@ -226,7 +226,7 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 
 	</tr>
 </table>
-</center>
+
 <p>Los píxeles que aparecen en el centro de la pantalla se corresponden con los valores numéricos que hemos definido en "datos", ya que los hemos copiado desde "datos" hasta la videomemoria. No os preocupéis por ahora si no entendéis alguna de las instrucciones utilizadas, las iremos viendo poco a poco y al final tendremos una visión global y concreta de todas ellas.</p>
 <p><strong>LOS REGISTROS</strong></p>
 <p>Como ya vimos en la anterior entrega, todo el "trabajo de campo" lo haremos con los registros de la CPU, que no son más que variables de 8 y 16 bits integradas dentro del Z80 y que por tanto son muy rápidos para realizar operaciones con ellos.</p>
@@ -334,7 +334,7 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 <p>Por ejemplo, uno de los bits del registro F, el bit nº 6, es conocido como "Zero Flag", y nos indica si el resultado de la última operación (para determinadas operaciones, como las aritméticas o las de comparación) es cero o no es cero. Si el resultado de la anterior operación resultó cero, este FLAG se pone a uno. Si no resultó cero, el flag se pone a cero.</p>
 <p>¿Para qué sirve pues un flag así? Para gran cantidad de tareas, por ejemplo para bucles (repetir X veces una misma tarea poniendo el registro BC al valor X, ejecutando el mismo código hasta que BC sea cero), o para comparaciones (mayor que, menor que, igual que).</p>
 <p>Veamos los diferentes registros de flags (bits del registro F) y su utilidad:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 	<tr align="right">
 
@@ -345,7 +345,7 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 		<td class="piefoto" align="right">Los indicadores de flag del registro F</td>
 	</tr>
 </table>
-</center>
+
 <ul>
 	<li><p>Flag S (sign o signo): Este flag se pone a uno si el resultado de la operación realizada en complemento a dos es negativo (es una copia del bit más significativo del resultado). Si por ejemplo realizamos una suma entre 2 números en complemento a dos y el resultado es negativo, este bit se pondrá a uno. Si el resultado es positivo, se pondrá a cero. Es útil para realizar operaciones matemáticas entre múltiples registros: por ejemplo, si nos hacemos una rutina de multiplicación o división de números que permita números negativos, este bit nos puede ser útil en alguna parte de la rutina.</p></li>
 
@@ -1283,6 +1283,6 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

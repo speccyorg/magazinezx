@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -72,7 +72,7 @@ function RecargarCabecera(url)
 <p><b>El Juego de la Vida</b></p>
 
 <p>Esta entrega del curso de z88dk se basará en un ejemplo práctico completo comentado: la implementación para z88dk del clásico "Juego de la Vida" de John Conway. Conway fue un matemático de la Universidad de Cambridge que en 1970 inventó un sencillo juego no interactivo que permitía simular un entorno de vida basado en células individuales que morían o se reproducían mediante unas sencillas reglas.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="556">
 	<tr align="right">
 		<td><img src="img/z88dk_life.png" width="556" height="326"  alt="El juego de la Vida de John Conway" />
@@ -83,7 +83,7 @@ function RecargarCabecera(url)
 	</tr>
 
 </table>
-</center>
+
 <p>La mejor definición del Juego de la Vida de John Conway la podemos encontrar en la Wikipedia:</p>
 <hr>
 <p><i>El juego de la vida es un autómata celular diseñado por el matemático británico John Horton Conway en 1970. Es el mejor ejemplo de un autómata celular. Hizo su primera aparición pública en el número de octubre de 1970 de la revista Scientific American, en la columna de juegos matemáticos de Martin Gardner. Desde un punto de vista teórico, es interesante porque es equivalente a una máquina universal de Turing, es decir, todo lo que se puede computar algorítmicamente se puede computar en el juego de la vida.</i></p>
@@ -94,7 +94,7 @@ function RecargarCabecera(url)
 <p><b>Reglas básicas de El Juego de la Vida</b></p>
 <p>El Juego de la Vida se basa en una matriz de un tamaño determinado (como por ejemplo, 50x50, ó 32x32), que podríamos considerar nuestro "caldo de cultivo", en la cual mueren y se crean células. De forma efectiva, una célula es un 1 en una posición determinada de la cuadrícula mientras que un "espacio vacío" se representa mediante un cero.</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="114">
 	<tr align="right">
 		<td><img src="img/z88dk_cuadric.png" width="114" height="86"  alt="Células vivas en la cuadrícula" />
@@ -105,7 +105,7 @@ function RecargarCabecera(url)
 	</tr>
 </table>
 
-</center>
+
 <p>El Juego de la Vida no requiere interacción por parte del usuario: a partir de un estado inicial (células diseminadas por el caldo de cultivo) se aplican una serie de reglas y se obtiene una nueva generación de células en dicho "caldo". Esta nueva generación será la entrada para volver a aplicar las reglas, y así sucesivamente.</p>
 <p>Las reglas para cada una de las "celdillas" de nuestro caldo de cultivo son:</p>
 <ul>
@@ -471,7 +471,7 @@ void Life( void )
     </p></td></tr>
 </table>
 <p>Si ejecutamos el programa en nuestro Spectrum (o en un emulador) veremos la evolución de las células en tiempo real en nuestra pantalla:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="290">
 
 	<tr align="right">
@@ -482,8 +482,8 @@ void Life( void )
 		<td class="piefoto" align="right">Simulaciones en nuestro Spectrum</td>
 	</tr>
 </table>
-</center>
-<center>
+
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="300">
 	<tr align="right">
@@ -494,7 +494,7 @@ void Life( void )
 		<td class="piefoto" align="right">Simulaciones en nuestro Spectrum</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Cada vez que pulsemos 'r' se generará una nueva "remesa" de células para volver a aplicar el algoritmo y ver su evolución.</p>
 <p><b>Optimizaciones del Juego de la Vida</b></p>
@@ -533,7 +533,7 @@ void Life( void )
 </table>
 <p>Esto es así porque como podemos ver en la siguiente figura, podemos obtener las 8 células vecinal a partir de un mismo offset calculado:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/z88dk_offsets.png" width="320" height="200"  alt="Offset de las 8 células vecinas de una dada" />
@@ -544,7 +544,7 @@ void Life( void )
 	</tr>
 </table>
 
-</center>
+
 <p>El código resultante de la optimización sería el siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -902,7 +902,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -141,7 +141,7 @@ y ejecutar 'make' en el mismo directorio donde se encuentre este archivo Makefil
 
 Para tener claro como va a ser el entorno de juego, es necesario dibujar un mapa. En dicho mapa deben estar claras cúales van a ser las localizaciones o habitaciones por las que va a poder desplazarse el jugador, y cómo van a estar conectadas entre sí. En el caso de nuestro ejemplo concreto, vamos a crear un mapa de la taberna de la isla de Melêe, en donde Guybrush, nuestro personaje, buscará a un maestro de piratería. Un mapa perfectamente válido podría ser el siguiente:
 </p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="460">
 	<tr align="right">
 		<td><img src="img/z88dk_1.jpg" width="460" height="289"  alt="" />
@@ -152,7 +152,7 @@ Para tener claro como va a ser el entorno de juego, es necesario dibujar un mapa
 	</tr>
 
 </table>
-</center>
+
 <p>
 Como vemos, cada habitación está numerada. Esto es muy importante, luego veremos por qué. Las líneas que unen dos habitaciones adyacentes indican que dichas habitaciones están comunicadas; esto quiere decir que desde una habitación podremos acceder a la otra y viceversa. Además de dibujar el mapa, debemos escribir una descripción para cada habitación. Para nuestra aventura concreta, podríamos usar las siguientes descripciones:
 </p>
@@ -357,7 +357,7 @@ Si se utiliza 21, 22, 24 y 27 se desactiva el formato correspondiente. Así pues,
 Si compilamos y ejecutamos, veremos nuestro primer resultado: se mostrará la descripción de la habitación inicial, y se nos mostrarán las direcciones de salida... y ahí acabará el programa, pues no hemos dicho que haga nada más.
 </p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk_2.png" width="328" height="290"  alt="Comienza la aventura" />
@@ -368,7 +368,7 @@ Si compilamos y ejecutamos, veremos nuestro primer resultado: se mostrará la des
 	</tr>
 </table>
 
-</center>
+
 <p>
 <b>El intérprete de comandos</b>
 </p>
@@ -523,7 +523,7 @@ Lo único que se ha hecho ha sido introducir una sentencia if por cada comando qu
 <p>
 Y ya está... si compilamos y ejecutamos el .tap en el emulador, veremos como ya podemos movernos por nuestro mundo conversacional.
 </p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk_3.png" width="328" height="290"  alt="Moviéndonos por el mundo que hemos creado" />
@@ -534,7 +534,7 @@ Y ya está... si compilamos y ejecutamos el .tap en el emulador, veremos como ya 
 		<td class="piefoto" align="right">Moviéndonos por el mundo que hemos creado</td>
 	</tr>
 </table>
-</center>
+
 <p>
 <b>¿Y ahora qué?</b>
 </p>
@@ -625,6 +625,6 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -219,7 +219,7 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion,
 </table>
 
 <p>Y por supuesto, añadir este nuevo parámetro a todas las llamadas a la función que se hagan dentro de main(). Si jugamos ya tendremos un pirata autista moviéndose por nuestro mundo, incapaz de comunicarse con nosotros y que no reacciona ante ninguna de nuestras acciones. Las siguientes dos secciones tratarán de cambiar esto.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk5_1.png" width="328" height="290"  alt="El pirata es muy juguetón y no para de moverse..." />
@@ -230,7 +230,7 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion,
 	</tr>
 
 </table>
-</center>
+
 <p><b>INTERACTUANDO CON EL PIRATA</b></p>
 <p>Dar la capacidad al jugador de hablar con los PSI es algo complicado, pues sería necesario implementar un analizador sintáctico que permitiera al juego interpretar las palabras del jugador. Sería como un intérprete de comandos dentro del intérprete de comandos, pero algo más complicado. Esto, desde luego, queda fuera del objetivo de este artículo. Sin embargo, puede ser interesante indicar el comienzo del camino a seguir para que sea el propio lector el que pueda añadir esta funcionalidad de forma elaborada a su aventura, y a la vez hacer un par de anotaciones sobre características de las cadenas en z88dk.</p>
 <p>Vamos a hacer que el jugador le pueda decir cosas al pirata, pero que éste sólo entienda la palabra "ayuda". Si el jugador dice "ayuda" al pirata, éste le dirá qué es lo que tiene que hacer para terminar el juego (vencerle con la espada). Si el jugador dice cualquier otra cosa, el pirata no le entenderá. Como en la mayoría de las aventuras, el jugador deberá teclear algo similar a lo siguiente para poder decirle algo a un PSI:</p>
@@ -274,7 +274,7 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion,
     </p></td></tr>
 </table>
 <p>Para entrar en esta parte del código e interpretar los comandos introducidos por el jugador relacionados con el pirata, deberemos comprobar que el pirata y el jugador se encuentran en la misma habitación. En caso de que no sea así, no se entrará en esta parte del código y se mostrará el típico mensaje de error cuando se introduce un comando incorrecto. De esta forma, si el jugador introdujera alguno de los comandos relacionados con el pirata sin haber descubierto previamente su existencia, no se le dará ninguna pista sobre ello.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk5_2.png" width="328" height="290"  alt="El pirata parece un poco tonto, pero sabe más de lo que dice..." />
@@ -285,7 +285,7 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion,
 		<td class="piefoto" align="right">El pirata parece un poco tonto, pero sabe más de lo que dice...</td>
 	</tr>
 </table>
-</center>
+
 <p>Haciendo uso de <i>strtok</i> (cuya explicación se realizó en la entrega anterior), comprobamos si la primera palabra del comando del jugador es <i>decir</i>. En caso de que sea así, tratamos de analizar qué es lo que ha dicho el jugador. Usando <i>strtok</i> de nuevo extraemos el resto del comando introducido del jugador, y lo comparamos con la cadena "ayuda" (haciendo uso de la secuencia de escape \" para poder introducir comillas dentro de la cadena). En caso de que el jugador haya dicho exactamente eso, el pirata le dará la pista que necesita. En caso contrario, el pirata ignorará al jugador.</p>
 
 <p>Como se puede comprobar, el pirata no es un hombre de muchas palabras. De todas formas, con esto quedan sentadas las bases para una posible ampliación de su vocabulario (lo cual se deja como ejercicio al lector).</p>
@@ -408,7 +408,7 @@ else if (!strcmp(comando,"luchar con pirata") || !strcmp(comando,"pelear con pir
 </table>
 <p>Primero comprobamos si la espada está en el inventario del jugador (si el valor de localización del objeto 0, correspondiente a la espada, es -1). En el caso de que sea así, se comprueba si el pirata está borracho, según el valor de la variable borrachoPirata. Si vale 0, el pirata no está borracho, por lo que mostramos simplemente un mensaje de texto indicando que al estar sobrio el pirata vence al jugador sin dificultades.</p>
 <p>En el caso contrario, la variable valdrá 1 y el pirata estará borracho. Le damos a la variable final el valor 1, indicando que el juego ha terminado. Si recordamos el código, veremos que al principio del intérprete de comandos había una sentencia while que hacía ejecutarse este intérprete hasta que el valor de la variable final cambiara. Pues bien, por fin podremos terminar la avenura. Lo siguiente es mostrar unos cuantos mensajes con printf, enfatizando con sleep, relatando la tremenda lucha con el pirata. Para el último mensaje, el de felicitación, se deja una espera más larga, para añadir algo de tensión escénica.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk5_3.png" width="328" height="290"  alt="No había presupuesto para un final más espectacular" />
@@ -419,7 +419,7 @@ else if (!strcmp(comando,"luchar con pirata") || !strcmp(comando,"pelear con pir
 		<td class="piefoto" align="right">No había presupuesto para un final más espectacular</td>
 	</tr>
 </table>
-</center>
+
 <p>¡Y ya está! Tenemos una aventura simple pero completa, que puede ser terminada por un jugador avispado.</p>
 <p><b>RESUMEN</b></p>
 <p>Durante estos tres artículos hemos desarrollado una sencilla aventura conversacional, con el objetivo de mostrar las características de las herramientas de texto de z88dk. Los resultados son poco espectaculares, pero hemos conseguido meter la cabeza y perder el miedo.</p>
@@ -504,6 +504,6 @@ pageTracker._trackPageview();
 
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -275,7 +275,7 @@ bin2tap juego.bin juego.tap
 <p>Por ejemplo, supongamos que hacemos un juego donde se mueve por una pantalla fija un personaje que esquiva a 5 enemigos. Cada vez que dibujemos al sprite protagonista y los 5 enemigos, invalidamos las áreas donde los hemos dibujado. Esto permite que SPLIB sólo redibuje en pantalla los 6 bloques de cambios, e incluso que agrupe bloques rectangulares que se solapen (si 2 enemigos están uno encima de otro, no es necesario actualizar 2 veces esa zona de la pantalla, sino sólo una). Esto hace que la librería no pueda aplicarse a juegos con scroll, ya que implicarían invalidar toda la pantalla en cada fotograma, algo bastante costoso y que implicaría trabajar desde el principio con esa idea en mente, y dejar de lado SPLIB y cualquier otra librería de propósito general.</p>
 <p>Y una vez dicho todo esto, vamos a empezar a teclear código, modificando el archivo juego.c que hemos creado anteriormente. El código marcado entre tags comentados "Inicio código nuevo" y "Fin código nuevo" ha sido añadido con un doble objetivo; en primer lugar se inicializa la librería, y en segundo se modifican todos los tiles de la pantalla para que tengan el aspecto que se muestra en la siguiente captura de pantalla:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/z88dk16_1.png" width="320" height="238"  alt="La librería inicializada y el fondo colocado" />
@@ -286,7 +286,7 @@ bin2tap juego.bin juego.tap
 		<td class="piefoto" align="right">La librería inicializada y el fondo colocado</td>
 	</tr>
 </table>
-</center>
+
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -529,7 +529,7 @@ struct personaje p;
 
 	<p>Terminamos esta parte del código colocando el sprite en el centro de la pantalla con sp1_MoveSprAbs (el valor 12 y 16 indican fila y columna en tiles, mientras que los dos últimos valores indican el offset en número de píxels a partir de esa posición inicial), dándole al desplazamiento en x e y del protagonista el valor 0, y redibujando la pantalla. El resultado se puede observar en la siguiente captura:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/z88dk16_2.png" width="320" height="240"  alt="Nuestro sprite preparado para moverse" />
@@ -540,7 +540,7 @@ struct personaje p;
 
 	</tr>
 </table>
-</center>
+
 
 	</li>
 </ul>
@@ -802,7 +802,7 @@ for (i=0;i<6;i++)
 <p>En dicho código simplemente modificamos la dirección de movimiento del enemigo correspondiente si se encuentra en los límites de la pantalla, y utilizamos sp1_MoveSprRel para realizar el movimiento en sí mismo.</p>
 <p>¡Ya podemos ejecutar nuestro juego! Al hacerlo, veremos a nuestros enemigos desplazándose por la pantalla, mientras que nosotros podremos seguir moviéndonos con el teclado, aunque no pasará nada en especial si entramos en contacto con ellos. Sin embargo, observaremos que el movimiento se ha ralentizado muchísimo. De momento arreglamos el problema eliminando la línea in_Wait(5); que utilizábamos de retardo.</p>
 
-<center>
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
@@ -813,7 +813,7 @@ for (i=0;i<6;i++)
 		<td class="piefoto" align="right">Los enemigos hacen acto de presencia</td>
 	</tr>
 </table>
-</center>
+
 
 <p><b>Colisiones</b></p>
 
@@ -967,6 +967,6 @@ pageTracker._trackPageview();
                 </tr>
 
             </table>
-        </center>
+
     </body>
 </html>

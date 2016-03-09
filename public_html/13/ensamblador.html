@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -74,7 +74,7 @@ function RecargarCabecera(url)
 <p><strong>LA ARQUITECTURA DEL SPECTRUM</strong></p>
 <p>Antes de comenzar a programar el Spectrum necesitamos conocer su arquitectura: ¿qué hay dentro de nuestro pequeño ordenador y cómo funciona? En BASIC muchas veces podemos olvidarnos de los detalles a nivel de hardware (para eso es un lenguaje de Alto Nivel), pero en ensamblador no: al hablar directamente un lenguaje que se traduce a código máquina, necesitamos conocer exactamente cómo funciona internamente.</p>
 <p>Aquí veremos una visión simplificada de la arquitectura hardware del Spectrum pero que en el fondo es todo lo que necesitaremos para la mayoría de programas. Para empezar veremos un esquema de cómo es internamente nuestro Spectrum a nivel de hardware, y después comentaremos uno a uno los elementos que lo componen:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
 		<td><img src="img/esquema_zx.gif" width="500" height="400"  alt="Esquema del hardware de un ZX Spectrum" />
@@ -85,7 +85,7 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Esquema del hardware de un ZX Spectrum</td>
 	</tr>
 </table>
-</center>
+
 <p>En un vistazo general, podemos ver que el microprocesador Z80 se conecta mediante los puertos de entrada/salida de la CPU a los periféricos externos (teclado, cassette y altavoz de audio), pudiendo leer el estado de los mismos (leer del teclado, leer del cassette) y escribir en ellos (escribir en el altavoz para reproducir sonido, escribir en el cassette) por medio de estas conexiones conocidas como "I/O Ports".</p>
 <p>Al mismo tiempo, los Buses de Datos y de Direcciones conectan al microprocesador con la memoria. Esta conexión es la que permite que el Z80 pueda leer y escribir en cualquier posición de la memoria. Cuando encendemos el Spectrum, lo que éste lee de la memoria son instrucciones. Empezando por la posición 0000 (0 Kb), el Spectrum comienza a leer instrucciones y a ejecutarlas, una a una. En la primera parte de la memoria tenemos la ROM del Spectrum, que contiene instrucciones de programa preprogramadas y que no podemos modificar: es el menú del Spectrum y el intérprete de BASIC.</p>
 <p>Por otro lado, nuestro microprocesador tiene una serie de registros internos con los que trabaja y que son los que manipula y utiliza para ejecutar las instrucciones almacenadas en la memoria.</p>
@@ -95,7 +95,7 @@ function RecargarCabecera(url)
 <p>Veamos más detalladamente los diferentes componentes de la arquitectura del Spectrum, y cómo funcionan.</p>
 <p><strong>EL MICROPROCESADOR Z80</strong></p>
 <p>Como podemos distinguir en el esquema, el cerebro de nuestro Spectrum es un microprocesador Zilog Z80 a 3,54Mhz. Un microprocesador es un circuito integrado que consta (principalmente) de registros, microcódigo, puertos de entrada/salida, un bus de datos y uno de direcciones.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 	<tr align="right">
 		<td><img src="img/Z80.jpg" width="400" height="227"  alt="Imagen de un C.I. Z80 de Zilog" />
@@ -106,9 +106,9 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Imagen de un C.I. Z80 de Zilog</td>
 	</tr>
 </table>
-</center>
+
 <p>Los registros son variables (igual que cualquier variable de BASIC) que residen dentro de la misma CPU. En el caso del Z80, tiene 2 juegos de registros con unos nombres concretos: entre otros, lo forman registros de un byte como A, F, B, C, D, E, H, L, I y R, y los registros de dos bytes IX, IY, SP y PC. Veremos los registros en detalle en su momento (así como el segundo juego de registros disponible), pero podemos hacernos a la idea de que los registros son simples variables de 8 ó 16 bits que utilizaremos en nuestros programas en ensamblador. Así, podremos cargar un valor en un registro (LD A, 25), sumar un registro con otro (ADD A, B), activar o desactivar determinados bits de un registro (SET 7,A), etc.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="510">
 	<tr align="right">
 		<td><img src="img/debugger1.gif" width="510" height="458"  alt="Parte del debugger de FUSE mostrando los registros de la CPU" />
@@ -119,7 +119,7 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Parte del debugger de FUSE mostrando los registros de la CPU</td>
 	</tr>
 </table>
-</center>
+
 <p>El juego de registros es todo lo que tenemos (aparte de la memoria) para realizar operaciones en nuestro programa: siempre que estemos operando con datos o utilizando variables, tendrá que ser por fuerza un registro, o una posición de memoria que usemos como variable. Por ejemplo, podemos escribir el siguiente programa en ensamblador, que sumaría dos números:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -145,7 +145,7 @@ function RecargarCabecera(url)
 <p>Este microcódigo está dentro del microprocesador porque sus diseñadores implementaron todas y cada una de las operaciones que puede hacer el Z80. Cuando pedimos meter un valor en un registro, leer el valor de un registro, sumar un registro con otro, escribir el valor de un registro en una dirección de memoria, saltar a otra parte del programa, etc, para cada una de esas situaciones, hay un microcódigo (implementado mediante hardware) que realiza esa tarea. Nosotros no tendremos que preocuparnos pues de cómo hace el Z80 las cosas internamente a nivel de microcódigo, aunque es bueno que conozcáis cómo llega el Spectrum a ejecutar nuestros comandos: gracias al microcódigo.</p>
 <p><strong>PUERTOS DE ENTRADA/SALIDA</strong></p>
 <p>Si cogemos un microprocesador Z80, podremos distinguir muchas patillas de conexión. Además de las patillas que se utilizan para alimentar el Z80 desde la fuente de alimentación, existen otra serie de patillas para "Puertos de Entrada/Salida" y "Bus de datos y de direcciones". Esas patillas son la conexión del microprocesador con el resto de elementos del ordenador.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="325">
 
 	<tr align="right">
@@ -156,13 +156,13 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Las 40 patillas del microprocesador Z80. donde vemos el bus de direcciones (A0 a A15) y el bus de datos (D0 a D7), que se conectan a los puertos de entrada/salida y a la memoria</td>
 	</tr>
 </table>
-</center>
+
 <p>Los registros del microprocesador y el microcódigo son internos al procesador, y ninguna de las patillas que podemos ver en la imagen anterior nos comunica con ellos. Es el procesador (internamente) quien lee/modifica los registros o quien ejecuta microcódigo cuando nosotros se lo decimos con las instrucciones de nuestro programa.</p>
 
 <p>Pero nuestro procesador, como hemos dicho, necesita conectarse con elementos del exterior, entre ellos (y casi exclusivamente en el caso del Spectrum) tenemos la memoria, el teclado, el altavoz y la unidad de cinta.</p>
 <p>Visto de un modo muy simple, el Z80 puede acceder a través de una serie de patillas hasta a 65536 elementos externos. Esos elementos se conectan a la CPU Z80 a través de las patillas de "Buses de datos y direcciones" (que podemos leer en los puertos de Entrada/Salida). Una vez conectados (la conexión se realiza físicamente a nivel de hardware, con pistas en la placa base), el microprocesador Z80 puede leer los valores que el dispositivo pone en esas pistas, o puede escribir valores en esas pistas para que el dispositivo los utilice.</p>
 <p>Supongamos el ejemplo del teclado: un teclado es (a un nivel muy simple) una matriz de pulsadores. Al final de toda esa matriz de pulsadores, lo que acabamos teniendo es un número de 8 bits (0-255) cuyos bits nos dicen la teclas pulsadas. Pues bien, ese número de 8 bits es lo que el mismo teclado pone en los "cables" que lo unen con el Z80. El teclado se conecta a la CPU mediante una conexión a uno de los puertos (una serie de patillas de datos y direcciones) del microprocesador y gracias a esto el microprocesador (y nuestro programa) puede leer en todo momento el estado del teclado (y saber qué teclas están pulsadas y cuales no) leyendo del puerto correspondiente.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="567">
 	<tr align="right">
 		<td><img src="img/teclado.jpg" width="567" height="349"  alt="Matriz de teclado del Spectrum y conexiones al Z80" />
@@ -173,7 +173,7 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Matriz de teclado del Spectrum y conexiones al Z80</td>
 	</tr>
 </table>
-</center>
+
 <p>Así, en nuestros programas podemos leer el estado del teclado mediante (por ejemplo):</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -187,7 +187,7 @@ function RecargarCabecera(url)
 </table>
 <p>Este ejemplo lee (en un bucle infinito) una de las diferentes filas del teclado, mediante la lectura del puerto 63486 (F7FEh) con la instrucción de lectura de puertos de BASIC "IN". El estado de las 5 teclas desde el 1 hasta el 5 del teclado del Spectrum está conectado a 5 "hilos" de los 8 que llegan al puerto 63486 del micro Z80. Cuando se pulsa una tecla, el teclado pone a 0 (a 0 voltios) el "hilo" correspondiente de esos 8, y nosotros podemos conocer el estado de la tecla leyendo dicho puerto y mirando el bit en cuestión. Al ejecutar el ejemplo anterior, veremos que la pulsación de la tecla "1" cambiará el valor que aparece en pantalla. Si pasamos los diferentes valores que aparecen a binario y nos fijamos en el estado de los 5 últimos bits, nos daremos cuenta como al pulsar y soltar las diferentes teclas del 1 al 5 estaremos variando esos bits entre 0 (al pulsarlas) y 1 (al liberarlas). Los 3 bits más altos del byte debemos ignorarlos, ya que no tienen relación con el teclado.</p>
 <p>Si no hay ninguna tecla pulsada, los 5 bits más bajos del byte que hay en el puerto estarán todos a 1, mientras que si se pulsa alguna de las teclas del 1 al 5, el bit correspondiente a dicha tecla pasará a estado 0. Nosotros podemos leer el estado del puerto y saber, mirando los unos y los ceros, si las teclas están pulsadas o no.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/leer_teclado.gif" width="320" height="240"  alt="Pulsando "1", ponemos a 0 el bit 0, pasando de 191 a 190" />
@@ -198,7 +198,7 @@ function RecargarCabecera(url)
 
 	</tr>
 </table>
-</center>
+
 <p>Así, leyendo del puerto 63486 obtenemos un byte cuyos 8 bits tienen como significado el estado de cada una de las teclas de la semifila del "1" al "5".</p>
 <table>
 	<tr>
@@ -250,7 +250,7 @@ function RecargarCabecera(url)
 <p>El Spectrum básico (48KB de RAM y 16KB de ROM) tiene disponibles 64KB de memoria, es decir, 65536 bytes a los cuales podemos acceder. Podemos pensar en esta memoria como un gran baúl con 65536 cajones, uno encima de otro. El primer cajón es el cajón 0 (posición de memoria 0), el segundo el cajón 1 (posición de memoria 1), y así hasta el cajón 65535 (posición de memoria 65535).</p>
 
 <p>Nuestro Spectrum no puede tener más de 65536 cajones porque el "bus de direcciones" del microprocesador Z80 es de 16 bits, es decir, las líneas que conectan al microprocesador con la memoria sólo permiten 16 "conexiones"; lo que nos da la posibilidad de acceder a 2 elevado a 16 bytes de memoria, exactamente 65536 bytes.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 	<tr align="right">
 		<td><img src="img/memoria.gif" width="400" height="300"  alt="Aspecto de nuestras 65536 celdillas de memoria" />
@@ -261,7 +261,7 @@ function RecargarCabecera(url)
 	</tr>
 
 </table>
-</center>
+
 <p>Cada uno de estos cajones (más técnicamente, "celdillas de memoria" o "posiciones de memoria") puede contener un número de 8 bits, con un valor, por tanto, entre 0 y 255. Esto es así porque el "bus de datos" del microprocesador Z80 es de 8 bits, lo que implica que "sólo hay 8 conexiones" entre la salida de datos de la memoria y nuestro procesador.</p>
 <p>El microprocesador Z80 puede acceder a cualquier posición de memoria tanto para leer como para escribir. Internamente, cuando le pedimos al microprocesador que meta en el registro A el contenido de la celdilla de memoria 1234h, mediante una instrucción de ensamblador "LD A, (1234h)" (nota, el operador () en ensamblador significa acceso a memoria, y equivaldría en este caso a un "LET A=PEEK 4660" en BASIC) lo que hace el microprocesador internamente es:</p>
 <p><em>Ejecución de LD A, (1234h):</em></p>
@@ -288,7 +288,7 @@ function RecargarCabecera(url)
 <p>Estas son las 2 operaciones básicas que el Z80 puede realizar con la memoria: leer una posición de memoria y escribir en una posición de memoria. Nosotros no tenemos que preocuparnos de ninguna de las señales necesarias para realizar lecturas y escrituras, de eso se encarga el microprocesador. Para nosotros, a nivel de ensamblador, nos bastará con ejecutar "LD A, (1234h)" o "LD (1234h), A", por ejemplo.</p>
 
 <p>Las celdillas desde la nº 0 a la 16383 están ocupadas por un chip que es la ROM del Spectrum. Este chip es de sólo lectura (ROM = Read Only Memory), lo cual quiere decir que si intentamos escribir en las celdillas desde la 0 a la 16383 no conseguiremos cambiar el valor almacenado en ellas. ¿Por qué no se puede escribir aquí? Porque es la ROM del Spectrum, es un chip que contiene el sistema operativo del Spectrum, su intérprete BASIC, como veremos posteriormente.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="200">
 	<tr align="right">
 		<td><img src="img/romram.gif" width="200" height="300"  alt="ROM y RAM" />
@@ -299,7 +299,7 @@ function RecargarCabecera(url)
 	</tr>
 
 </table>
-</center>
+
 <p>Para trabajar (ejecutar programas, realizar operaciones y tareas) podemos utilizar el resto de la memoria. Desde el cajón o celdilla número 16384 hasta el 65535 podremos escribir y leer.</p>
 <p>La memoria RAM (celdillas 16384 a 65536) es muy importante para el Spectrum. Para empezar, en ella es donde se almacenan los datos y donde se cargan los programas, y de ella es de donde lee el microprocesador estos programas (como veremos posteriormente) para ejecutarlos instrucción a instrucción. Cuando en nuestra anterior entrega del curso pokeamos la rutina en código máquina en la dirección 40000, estabamos escribiendo un programa en memoria para después ejecutarlo.</p>
 <p>Hay una parte de la memoria RAM que es especial. El trozo de 6912 bytes que va desde la dirección 16384 hasta la 23296 es conocida como VideoRAM. Esta porción de la memoria no se utiliza para almacenar programas ni datos, sino que es una representación numérica de los gráficos que aparecen en nuestro televisor. La ULA (un chip que hay dentro de nuestro Spectrum) lee continuamente esta zona de memoria y transforma los unos y ceros que en ella encuentra en puntos y colores en el televisor.</p>
@@ -605,7 +605,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -137,7 +137,7 @@ main()
 <p>El método <font color="green">sp_PrintAtInv</font> dibuja un backtile en la pantalla e invalida la posición donde dicho backtile ha sido colocado, para que la celda correspondiente sea redibujada tras llamar a <i>sp_UpdateNow</i>. Los dos primeros parámetros indican la posición del backtile (que también los obtenemos al azar), a continuación el color de papel y de tinta (con la misma sintaxis que en el caso de la función <i>sp_Initialize</i>) y por último indicamos el carácter a escribir. Este carácter se corresponde con un UDG, como en BASIC. De momento no hemos asociado ningún UDG a la letra x, por lo que se mostrará en pantalla será la letra x apareciendo en posiciones al azar, teniendo o bien color de tinta rojo y papel cyan o al revés.</p>
 
 <p>La última línea del bucle, <font color="green">sp_Pause</font>, introduce un pequeño retardo. Actúa exactamente igual que el comando PAUSE de BASIC.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
 		<td><img src="img/z88dk8_1.png" width="640" height="504"  alt="Espectaculares efectos gráficos conseguidos con la librería Sprite Pack" />
@@ -148,7 +148,7 @@ main()
 
 	</tr>
 </table>
-</center>
+
 <p><b>NUESTRO PRIMER EJEMPLO CON UN SPRITE</b></p>
 <p>En esta sección vamos a dibujar un sprite simple sobre un fondo un poco más complejo. Para comprender cómo podemos crear un fondo más complejo, hemos de recordar que los backtiles pueden entenderse como si fueran UDGs de BASIC; sin embargo, hasta ahora solo hemos utilizado caracteres alfanuméricos. ¿De qué forma definimos gráficos para estos backtiles?</p>
 <p>Mediante la función <font color="green">sp_TileArray</font> asociamos un determinado UDG 8x8 a un carácter, de tal forma que al escribir dicho carácter como backtile en la pantalla, aparecerá su UDG correspondiente. Esta función recibe como parámetro el carácter al que queremos asociar el UDG y un array de tipo uchar con la definición del UDG. Ese array contendrá un valor hexadecimal por cada fila del UDG, utilizando la misma notación que vimos en capítulos anteriores para la creación de sprites de tamaño 8x8 con z88dk. Por ejemplo, observemos el siguiente código:</p>
@@ -333,7 +333,7 @@ sp_MoveSprAbs(bicho, sp_ClipStruct, 0, 10, 15, 0, 0);
 <p>Situaremos el sprite creado sobre la pantalla mediante el uso de la función <font color="green">sp_MoveSprAbs</font>, que desplaza nuestro personaje a una posición absoluta de la pantalla. Podríamos utilizar <font color="green">sp_MoveSprRel</font>, que acepta el mismo número de parámetros, con la diferencia de mover el sprite a una posición relativa a la actual. Por lo tanto, siempre usaremos sp_MoveSprAbs para colocar al sprite en su posición inicial.</p>
 <p>Como primer parámetro, el sprite a mover. Como segundo parámetro, el rectángulo que hace referencia a toda la pantalla definido anteriormente. El tercer parámetro hace referencia a la animación, y tampoco hablaremos de él en esta ocasión. El cuarto y el quinto, al bloque de la pantalla donde situaremos el sprite. Decíamos anteriormente que la pantalla estaba dividida en bloques de 8x8; pues bien, con estos dos parámetros indicamos la celda donde colocaremos nuestro sprite. Para conseguir una colocación más exacta, podemos usar los dos últimos parámetros, correspondientes al offset. Indican cuantos píxeles mover hacia la derecha y hacia abajo, respectivamente, a partir de la celda cuya posición es la indicada por los dos parámetros anteriores.</p>
 <p>Por último, con <font color="green">sp_UpdateNow()</font> redibujamos las porciones de la pantalla que lo necesiten, y con while(1) dejamos nuestro programa en constante ejecución, hasta el resto de los días, o hasta que lo detengamos. El resultado se puede observar en la siguiente captura de pantalla.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
 
@@ -344,7 +344,7 @@ sp_MoveSprAbs(bicho, sp_ClipStruct, 0, 10, 15, 0, 0);
 		<td class="piefoto" align="right">Un terrible ser intergaláctico espera ansioso la orden de atacar</td>
 	</tr>
 </table>
-</center>
+
 <p><b>UN SPRITE GRANDE Y NERVIOSO</b></p>
 <p>En este apartado veremos un pequeño ejemplo que introduce algunos conceptos interesantes, como la creación de sprites de un tamaño superior a 8x8 y el uso del movimiento relativo. Vamos a hacer aparecer una criatura en nuestra pantalla que se mueva de forma nerviosa y aleatoria.</p>
 
@@ -722,7 +722,7 @@ defb @00000000, @11111111
 	<li>Se ha añadido un bloque vacío antes de definir nuestro sprite, al final del código anterior; esto es así porque debemos asegurarnos de que haya un bloque en blanco encima de cada columna (manías del ensamblador generado por Sprite Pack).</li>
 
 </ul>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
 		<td><img src="img/z88dk8_3.png" width="640" height="504"  alt="El terrible ser intergaláctico se ha hecho mayor y es más nervioso que antes..." />
@@ -733,7 +733,7 @@ defb @00000000, @11111111
 	</tr>
 
 </table>
-</center>
+
 <p><b>¿Y AHORA QUÉ?</b></p>
 <p>Hemos aprendido las más básicas funcionalidades de Sprite Pack para la creación de sprites. Ya somos capaces de crear nuestros propios sprites (de forma más sencilla a la que se ha realizado en artículos anteriores) y de moverlos, aunque sea de manera aleatoria, por la pantalla (sin necesidad de hacer llamadas de ensamblador para el manejo de interrupciones, como en el ejemplo de los coches visto en el número anterior de MagazineZX). Por lo tanto, ganamos en facilidad de uso.</p>
 <p>Vemos que no es necesario borrar un sprite usando la máscara XOR antes de volver a dibujarlo para simular movimiento, tal como hacíamos con z88dk sin Sprite Pack, y también observamos como somos capaces de añadir transparencias en los sprites de forma muy simple. Volvemos a ganar en facilidad de uso.</p>
@@ -816,7 +816,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -176,7 +176,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 </pre>
     </p></td></tr>
 </table>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="317">
 	<tr align="right">
 		<td><img src="img/la_rom.gif" width="317" height="238"  alt="Aspecto de la rom al copiarla a la VRAM" />
@@ -187,7 +187,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 
 	</tr>
 </table>
-</center>
+
 <p>Os animo a que probéis el equivalente BASIC del ejemplo anterior y verifiquéis las diferencias de velocidad existentes:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -316,7 +316,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 </table>
 <p>Grabamos este cargador en cinta (o tap/tzx), y a continuación, tras el cargador, grabamos una pantalla de carga.</p>
 <p>Ejecutamos el programa resultante en emulador o Spectrum, y veremos cómo la carga de la pantalla no puede verse en el monitor. Cuando está termina su carga, la rutina ensamblador se ejecuta y se vuelca, de golpe, a la videoram (estad atentos a la carga, porque el volcado es muy rápido).</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="318">
 	<tr align="right">
 		<td><img src="img/carga.gif" width="318" height="239"  alt="La pantalla de carga de ZXColumns, volcada a videoram" />
@@ -327,7 +327,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 		<td class="piefoto" align="right">La pantalla de carga de ZXColumns, volcada a videoram</td>
 	</tr>
 </table>
-</center>
+
 <p><strong>ALGUNAS INSTRUCCIONES ESPECIALES</strong></p>
 <p>Antes de comenzar con las instrucciones de manipulación de registros y datos a nivel de bits vamos a ver una serie de instrucciones difíciles de encuadrar en futuros apartados y que pueden sernos de utilidad en nuestros programas:</p>
 <ul>
@@ -532,7 +532,7 @@ LDDR = Repetir LDD hasta que BC valga 0
     </p></td></tr>
 </table>
 <p>Así, RLC de 00000001 daría como resultado 00000010. Como la rotación es circular, todos los bits se mueven una posición a la izquierda y el bit 7 se copia en el bit 0. Asímismo, RRC de 00000001 daría como resultado 10000000, ya que el bit 0 al rotarse a la derecha (como todos los demás bits) se copia donde estaba el bit 7. Cabe destacar que el Carry Flag se vé afectado, ya que el bit 7 en RLC y el 0 en RRC también se copiará allí.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
 		<td><img src="img/rlc_rrc.gif" width="500" height="400"  alt="RLC y RRC" />
@@ -543,7 +543,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 		<td class="piefoto" align="right">RLC y RRC</td>
 	</tr>
 </table>
-</center>
+
 <p>Por ejemplo, supongamos el valor 10000001 almacenado en el registro B:</p>
 <p>El resultado las 2 operaciones descritas sería:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -576,7 +576,7 @@ LDDR = Repetir LDD hasta que BC valga 0
     </p></td></tr>
 </table>
 <p>El CarryFlag hace de bit extra: por un lado se copia al Bit 0 o al Bit 7 según estemos rotando a izquierda o a derecha, y por otra parte recibe el valor del bit 7 del bit 0 (respectivamente para RL y RR).</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
 		<td><img src="img/rl_rr.gif" width="500" height="400"  alt="RL y RR" />
@@ -587,7 +587,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 		<td class="piefoto" align="right">RL y RR</td>
 	</tr>
 </table>
-</center>
+
 <p>Por ejemplo, supongamos el valor 10000001 almacenado en el registro B y que el carry flag estuviera a uno:</p>
 <p>El resultado las 2 operaciones descritas sería:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -851,7 +851,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 	<li>Por la izquierda entra un cero.</li>
 </ul>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
 		<td><img src="img/sla_sra_srl.gif" width="500" height="400"  alt="SLA, SRA y SLR" />
@@ -862,7 +862,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 	</tr>
 </table>
 
-</center>
+
 <p>Nuestra ya conocida tabla:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -1267,7 +1267,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -81,7 +81,7 @@ function RecargarCabecera(url)
 
 	<li>Pletina de metal, arandelas y tornillo.</li>
 </ul>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 	<tr align="right">
 		<td><img src="img/hard01.jpg" width="400" height="300"  alt="Imagen 1. Algunos componentes" />
@@ -92,11 +92,11 @@ function RecargarCabecera(url)
 
 	</tr>
 </table>
-</center>
+
 <p>La acotación  que hacemos sobre la resistencia es debida a que en la página de Sami indica la necesidad de una resistencia de 75 Ohm, aconsejada igualmente por José Leandro Novellón, al que se le comentó la realización de la práctica. En cambio, los amigos de Octocom se deciden por una de 82 Ohm. Nosotros para no ser menos, hemos tirado por el camino de en medio y hemos utilizado lo que teníamos más a mano, soldando dos resistencias que dan un total de 78 Ohm.</p>
 <p><b>La práctica</b></p>
 <p>Tal y como indican los amigos de Octocom en su página deberemos reconocer primeramente la ubicación del modulador y los datos que nos ofrece; para ello exponemos aquí dos instantáneas sacadas de su web. Una es el esquema del montaje y la otra los puntos donde van a realizar la modificación, una vez retirado el modulador.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 	<tr align="right">
 		<td><img src="img/hard02.jpg" width="400" height="250"  alt="Imagen 2. Vaciado del modulador" />
@@ -107,8 +107,8 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Imagen 2. Vaciado del modulador</td>
 	</tr>
 </table>
-</center>
-<center>
+
+
 <table border="0" cellspacing="0" cellpadding="2" width="271">
 	<tr align="right">
 		<td><img src="img/hard03.gif" width="271" height="198"  alt="Imagen 3. Esquema de la práctica" />
@@ -119,10 +119,10 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Imagen 3. Esquema de la práctica</td>
 	</tr>
 </table>
-</center>
+
 <p>Tomaremos buena nota de los cuatro puntos a tener en cuenta pero no quitaremos nada, aprovechando la ventaja de estar trabajando en un espacio más amplio que el que proporciona el teclado del 48k.</p>
 <p>Si seguimos el esquema veremos que la resistencia debe soldarse a masa, la cual encontraremos fácilmente en la misma caja del modulador (punto 2, esquema en interior caja). O si por el contrario se nos resiste o no necesitamos abrir el modulador, como es nuestro caso, buscaremos en una de las pistas próximas a éste, comprobándola previamente. El otro extremo lo soldaremos al condensador.</p>
-<center>
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 	<tr align="right">
@@ -133,14 +133,14 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Imagen 4. Prueba de funcionamiento</td>
 	</tr>
 </table>
-</center>
+
 
 <p>El transistor BC547 presenta tres extremos: base,emisor y colector.</p>
 <p>Por ello, lo primero que haremos será diferenciar estas tres vías del transistor.</p>
 <p>El transistor se alimenta por el colector de ahí la conexión a +5V que se indica en el esquema, y necesita de la resistencia para su correcto funcionamiento. La señal entra al transistor por la base y sale amplificada por el emisor hasta el condensador; el cual sçolo permite pasar la corriente alterna, o sea, la señal.</p>
 <p>Una vez soldada la resistencia en el emisor del transistor y al condensador, la otra pata de este llevará finalmente la señal de vídeo compuesto tan preciada. Antes de soldarla al conector RCA, hemos optado por probarla y que mejor forma que desoldando la señal RF y soldando la nueva, (imagen 4).</p>
 <p>A continuación nos aprovecharemos de las características del teclado dk'tronics para colocar un conector hembra RCA en la salida inmediata superior a la que sale del modulador. (imagen 6)</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 	<tr align="right">
 		<td><img src="img/hard05.jpg" width="400" height="300"  alt="Imagen 5. Colocación del nuevo conector RCA" />
@@ -151,10 +151,10 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Imagen 5. Colocación del nuevo conector RCA</td>
 	</tr>
 </table>
-</center>
+
 <p>La señal la soldaremos a un conector hembra RCA. La masa de este conector, (tal y como se ve en la imagen 5) hemos optado por soldarla en una de las pistas del exterior de la placa.</p>
 <p>Finalmente la colocación del conector hembra RCA lo hemos resuelto sujetando una pletina a la tapa inferior del teclado dk'tronics haciéndole un agujero y sujetándola con un tornillo.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 
 	<tr align="right">
@@ -165,7 +165,7 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Imagen 6. Visión exterior</td>
 	</tr>
 </table>
-</center>
+
 <p>Observamos en la imagen anterior ambas salidas de vídeo RF y RCA, sin sustituir nada. Eso sí, si pretendemos incorporar el Interface 1 al teclado, deberíamos perder una de ellas, obviamente la RF, pero simplemente quitaríamos el nuevo conector y dejaríamos la práctica tal cual se ve en la imagen 4.</p>
 
 <p>Ahora sólo queda enchufar el Spectrum a una de nuestras modernas televisiones y disfrutar del Uchi-mata.</p>
@@ -251,6 +251,6 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -117,7 +117,7 @@ $ play prueba.voc
 $ maketzx
 </pre>
 <p>con los que nos aparecerá un listado de opciones como el siguiente:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="560">
 	<tr align="right">
 		<td><img src="img/mtzx_options.png" width="560" height="300"  alt="" />
@@ -128,7 +128,7 @@ $ maketzx
 		<td class="piefoto" align="right"></td>
 	</tr>
 </table>
-</center>
+
 <p><b>Transfiriendo las cintas al ordenador</b></p>
 <p>Ya mismo se podría afirmar que hemos llegado a la parte más sencilla de todo el proceso de creación de archivos TZX, pues la mayor parte de las ocasiones consistirá en ejecutar un simple comando en la consola de nuestro ordenador y de pulsar PLAY en el reproductor de cassette.</p>
 <p>Como se ha visto en el apartado anterior, la utilidad MakeTZX dispone de una serie de opciones de las que apenas usaremos un par de ellas y las demás sólo serán necesarias en caso de complicación en el proceso de transferencia.</p>
@@ -151,7 +151,7 @@ $ maketzx -a -r &lt;fichero.tzx&gt;
 <p>A continuación se muestran algunos ejemplos de juegos transferidos a formato TZX, cada uno de ellos condifernetes formatos de carga para comprobar el buen funcionamiento de la utilidad MakeTZX.</p>
 <p><b>Target Renegade (Imagine Software)</b> [<a href="tzx/target_renegade.tzx">target_renegade.tzx</a>]</p>
 <p>Tipo de carga: Estándar de ROM + Custom loader</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="560">
 	<tr align="right">
 		<td><img src="img/targetrenegade_capt.png" width="560" height="320"  alt="" />
@@ -162,10 +162,10 @@ $ maketzx -a -r &lt;fichero.tzx&gt;
 		<td class="piefoto" align="right"></td>
 	</tr>
 </table>
-</center>
+
 <p>Como se puede apreciar en este juego, los primeros bloques son de carga estándar de la ROM pero las fases están grabadas en un formato turbo. Además este formato turbo tiene una cabecera casi inapreciable (con pausas de apenas 1ms) pero que el MakeTZX detecta perfectamente.</p>
 <p>Aquí vemos como el Target Renegade carga perfectamente y sin errores en el emulador FUSE:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 
@@ -176,11 +176,11 @@ $ maketzx -a -r &lt;fichero.tzx&gt;
 		<td class="piefoto" align="right"></td>
 	</tr>
 </table>
-</center>
+
 <p><b>Desperado (Topo Soft)</b> [<a href="tzx/desperado.tzx">desperado.tzx</a>]</p>
 
 <p>Tipo de carga: Estándar de la ROM</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="560">
 	<tr align="right">
 		<td><img src="img/desperado_capt.png" width="560" height="320"  alt="" />
@@ -191,10 +191,10 @@ $ maketzx -a -r &lt;fichero.tzx&gt;
 	</tr>
 
 </table>
-</center>
+
 <p>En este caso podemos ver que aunque el juego cargue de un modo colorista y aparentemente no estándar, se comprueba que el modo en que fue grabado fue con la velocidad y el formato estándar de la ROM, excepto por el hecho de que el último bloque no tiene cabecera.</p>
 <p>Y a continuación se muestra la colorista carga del Desperado que, como hemos dicho antes, es simplemente un bloque de datos estándar de la ROM pero cargado de una forma diferente:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/desperado_load.png" width="320" height="240"  alt="" />
@@ -205,10 +205,10 @@ $ maketzx -a -r &lt;fichero.tzx&gt;
 		<td class="piefoto" align="right"></td>
 	</tr>
 </table>
-</center>
+
 <p><b>Ramparts (GO!)</b> [<a href="tzx/target_renegade.tzx">ramparts.tzx</a>]</p>
 <p>Tipo de carga: Alkatraz</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
 
@@ -219,12 +219,12 @@ $ maketzx -a -r &lt;fichero.tzx&gt;
 		<td class="piefoto" align="right"></td>
 	</tr>
 </table>
-</center>
+
 <p>Y finalmente tenemos un caso de carga un poco más complejo. Como vemos en el proceso de carga en tiempo real del programa, el MakeTZX autodetecta que se va a cargar un programa con sistema Alkatraz y se coloca en ese modo de proceso.</p>
 <p>También se aprecia que el último bloque del sistema Alkatraz se muestra una interrogación antes del campo Length. Esto indica que el bloque no lleva un CRC que calcular y que el MakeTZX no puede determinar si es correcto. Pero no significa necesariamente que la carga sea incorrecta.</p>
 
 <p>Bastará cargarlo en un emulador y comprobarlo por nosotros mismos como hacemos a continuación:</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/ramparts_load.png" width="320" height="279"  alt="" />
@@ -235,7 +235,7 @@ $ maketzx -a -r &lt;fichero.tzx&gt;
 	</tr>
 
 </table>
-</center>
+
 <p><b>Observaciones y consejos</b></p>
 <ul>
 	<li>La utilidad MakeTZX no puede procesar cargas muy complicadas o de las que desconoce su formato. Como por ejemplo, el sistema Poliload de juegos como Rescate Atlántida o Astro Marine Corps.</li>
@@ -340,7 +340,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

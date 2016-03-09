@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -113,7 +113,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 
 <p>Veamos una figura donde se muestra el estado del <b>mapa de memoria del Spectrum</b>:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/tono_guia.png" width="320" height="240"  alt="Aspecto del tono guía" />
@@ -124,11 +124,11 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 		<td class="piefoto" align="right">Aspecto del tono guía</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Tras el tono guía de la cabecera viene la cabecera en sí misma (que no dejan de ser datos). Su carga, como ya hemos dicho, tarda un tiempo muy corto en realizarse, ya que son sólo 19 bytes a ser leídos desde el cassette.</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/header.png" width="320" height="240"  alt="Una vez cargada la cabecera." />
@@ -139,7 +139,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 		<td class="piefoto" align="right">Una vez cargada la cabecera.</td>
 	</tr>
 </table>
-</center>
+
 
 <p>En la imagen anterior podemos ver el aspecto de la pantalla una vez terminado el tono guía y cargada la cabecera. Esta cabecera, mediante sus 19 bytes, le indican al Spectrum la naturaleza de los datos a cargar en el bloque de datos que sigue a la misma, con el siguiente formato:</p>
 
@@ -181,7 +181,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 
 <p>Tras la cabecera (tono guía + bloque datos) viene el bloque de datos en sí mismo, que vuelve a componerse de un tono guía, el Flag Byte, los datos y el checksum.</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/bloque_datos.png" width="320" height="240"  alt="Aspecto de la carga del bloque de datos en sí mismo." />
@@ -192,7 +192,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 		<td class="piefoto" align="right">Aspecto de la carga del bloque de datos en sí mismo.</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Ahora bien ... ¿cómo es posible que se almacenen como audio datos digitales? ¿Cómo entiende el Spectrum si los datos que está cargando son unos o ceros y los agrupa en bloques de bytes que podemos interpretar de forma lógica?</p>
 
@@ -207,7 +207,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 
 <p>Los pulsos son ondas con un aspecto como el siguiente (aspecto de un tono guía en TAPER):</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="237">
 
 	<tr align="right">
@@ -218,7 +218,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 		<td class="piefoto" align="right">Aspecto de un tono guía (TAPER).</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Es decir, si tenemos que almacenar en cinta los siguientes bytes:</p>
 
@@ -627,7 +627,7 @@ END 32000
 
 <p>Ahora sí, cargando "programa.tap" en el emulador, cargaremos nuestro programa, el cual llama a la rutina de la ROM para cargar los datos que van después del programa (la pantalla de carga) en videomemoria. Si lo probáis en un emulador, recordad deshabilitar las opciones de carga rápida o carga instantánea si queréis ver el efecto de la carga.</p>
 
-<center>
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
@@ -638,7 +638,7 @@ END 32000
 		<td class="piefoto" align="right">Nuestro programa cargando el fichero SCR.</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Si os fijáis durante la carga, veréis como primero se carga el LOADER, luego el código máquina de nuestro programa, y después la pantalla. Contando los tonos guía de carga también encontraréis el lugar donde se lee, pero ignora, la cabecera (19 bytes, carga muy corta) de la pantalla SCR.</p>
 
@@ -752,7 +752,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

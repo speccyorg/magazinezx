@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -224,7 +224,7 @@ escribirDescripcion(habitaciones,habitacion,objetos)
 El código que hemos añadido recorre el array de objetos comprobando para cada uno si su localización corresponde con el identificador de la habitación actual. En el caso de que sea así escribe su nombre (fíjate en el espacio en blanco antes del %s). La variable hayObjetos nos sirve para determinar si hay algún objeto en la habitación. En un principio vale 0, y si la localización de algún objeto se corresponde con el identificador de la habitación actual, valdrá 1. Solo en el caso de que valga 0 se mostrará el mensaje "nada". Ahora ya podemos compilar y ejecutar la aventura, dirigiéndonos hacia la cocina para comprobar que la espada está allí. No podemos saber nada de la jarra, porque todavía no hemos implementado el inventario, lo haremos en la siguiente sección.
 </p>
 <br>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk4_1.png" width="328" height="290"  alt="¿Quién se habrá dejado esta espada aquí tirada en la cocina?" />
@@ -235,7 +235,7 @@ El código que hemos añadido recorre el array de objetos comprobando para cada un
 		<td class="piefoto" align="right">¿Quién se habrá dejado esta espada aquí tirada en la cocina?</td>
 	</tr>
 </table>
-</center>
+
 <p>
 <b>Coger y dejar objetos. El inventario</b>
 </p>
@@ -280,7 +280,7 @@ Implementemos primero el inventario. Cuando el jugador teclee "inventario" o "i"
 La variable hayObjetos se debe definir al comienzo de la función main y cumple el mismo objetivo que en la función describirHabitacion. Lo único que se hace en el caso del inventario es recorrer el array de objetos escribiendo el nombre de aquéllos para los que el valor de localización sea -1, o "nada" en el caso de que no haya ninguno que cumpla esta condición. Si compilamos y ejecutamos, por fin veremos la jarra en nuestro juego al teclear "i" o "inventario".
 </p>
 <br>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk4_2.png" width="328" height="290"  alt="Esperemos que esta jarra nos sirva de algo en nuestra aventura" />
@@ -291,7 +291,7 @@ La variable hayObjetos se debe definir al comienzo de la función main y cumple e
 		<td class="piefoto" align="right">Esperemos que esta jarra nos sirva de algo en nuestra aventura</td>
 	</tr>
 </table>
-</center>
+
 <p>
 Para que el jugador pueda coger y dejar objetos, lo único que tenemos que hacer, nuevamente, es añadir los comandos adecuados al intérprete de comandos. La implementación es tan simple como hacer que cuando cojamos un objeto, la localización del mismo pase a ser -1, y que cuando dejemos un objeto, la localización del mismo pase de ser -1 a ser el identificador de la habitación actual. Veamos primero cómo implementar la parte de coger objetos (el código en rojo es código añadido):
 </p>
@@ -705,7 +705,7 @@ else
     </p></td></tr>
 </table>
 <br>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
 		<td><img src="img/z88dk4_3.png" width="328" height="290"  alt="La antorcha en acción" />
@@ -716,7 +716,7 @@ else
 
 	</tr>
 </table>
-</center>
+
 <p>
 <b>Resumen</b>
 </p>
@@ -822,6 +822,6 @@ pageTracker._trackPageview();
                 </tr>
 
             </table>
-        </center>
+
     </body>
 </html>

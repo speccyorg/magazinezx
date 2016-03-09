@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -118,7 +118,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 <p>El Z80 tiene un registro conocido como <b>SP (Stack Pointer)</b>, o <b>puntero de pila</b>, que es un registro de 16 bits que contiene una dirección de memoria. Esa dirección de memoria es ”<em>la cabeza de la pila</em>”: apunta al próximo lugar donde almacenaremos un dato (al hueco donde guardaremos el próximo plato).</p>
 <p>La peculiaridad de la pila del Spectrum es que <em>crece hacia abajo</em>, en lugar de hacia arriba. Veamos un ejemplo práctico:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="465">
 	<tr align="right">
 
@@ -129,7 +129,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 		<td class="piefoto" align="right">Como crece y decrece la pila del Z80</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Supongamos que SP (puntero de pila) apunta a 65535 (la última posición de la memoria). Hagamos una serie de PUSHes y POPs de registros de 16 bits. Sea el siguiente programa:</p>
 
@@ -1075,7 +1075,7 @@ void FadeScreen( void )
 
 <p>Si tenéis curiosidad por ver el funcionamiento de esta rutina de Fade (fundido), podéis verla integramente en ASM en el fichero fade.asm. Un detalle a tener en cuenta, en Z88DK se soporta “EX AF, AF”, mientras que pasmo requiere poner la comilla del shadow-register: “EX AF, AF'”.</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/fade.png" width="320" height="240"  alt="Captura durante el fade de la pantalla" />
@@ -1086,7 +1086,7 @@ void FadeScreen( void )
 	</tr>
 </table>
 
-</center>
+
 
 <p>En la anterior captura podéis ver el aspecto de uno de los pasos del fundido.</p>
 
@@ -1204,7 +1204,7 @@ estado de los mismos (leer del teclado, leer del cassette) y escribir
 en ellos (escribir en el altavoz para reproducir sonido, escribir en
 el cassette) por medio de estas conexiones conocidas como "<em>I/O Ports</em>".</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="500">
 	<tr align="right">
 		<td><img src="img/esquema_zx.gif" width="500" height="400"  alt="Esquema de hardware de un ZX Spectrum" />
@@ -1215,7 +1215,7 @@ el cassette) por medio de estas conexiones conocidas como "<em>I/O Ports</em>".<
 	</tr>
 
 </table>
-</center>
+
 
 Aunque para nosotros el teclado o el altavoz puedan ser parte del
 ordenador, para el Z80, el microprocesador en sí mismo, son tan
@@ -1482,7 +1482,7 @@ salir:
 
 <p></p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/borde.png" width="320" height="240"  alt="Ejecución del programa de cambio de borde" />
@@ -1493,7 +1493,7 @@ salir:
 		<td class="piefoto" align="right">Ejecución del programa de cambio de borde</td>
 	</tr>
 </table>
-</center>
+
 
 <p>El puerto 7FFDh gestiona la <em>paginación en los modos de 128K</em>,
 permitiendo cambiar el modelo de páginas de memoria (algo que
@@ -2494,6 +2494,6 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

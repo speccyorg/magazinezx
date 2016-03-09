@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -77,7 +77,7 @@ function RecargarCabecera(url)
 <p>Para aprender los conceptos que necesitamos vamos a programar lo que podría ser el código inicial de un juego de carreras de coches, tipo Super Sprint, en los que desde una vista cenital podemos ver el circuito y los distintos participantes. Crearemos un coche utilizando diversos sprites, según hacia donde se esté moviendo el mismo, y crearemos una pista por donde el coche podrá moverse. Evidentemente, esta pista marcará el límite de movimiento de nuestro bólido, por lo que deberemos implementar también algún mecanismo para colisiones, de tal manera que al vehículo le pase algo al contactar con los límites del circuito. Sin más, empecemos.</p>
 <p><b>Definiendo los sprites</b></p>
 <p>Hasta ahora hemos visto como crear sprites de un tamaño límite de 8x8. Sin embargo, por mucho que lo intentemos, va a ser un poco difícil crear un sprite que represente algo aproximado a un coche con una rejilla tan pequeña. Si nos fijamos en la siguiente imagen, observaremos que tanto para representar al coche en todas las posibles orientaciones, así como los neumáticos que van a formar parte de los límites de la pista, necesitamos utilizar sprites de 10x10. ¿Cómo creamos sprites mayores de 8x8 usando z88dk?</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 
 	<tr align="right">
@@ -88,7 +88,7 @@ function RecargarCabecera(url)
 		<td class="piefoto" align="right">Figura 1: Los sprites que vamos a utilizar en nuestro juego. Representan todas las posibles orientaciones del coche, excepto el último de todos, que representa un neumático. Todos ellos tienen un tamaño de 10x10</td>
 	</tr>
 </table>
-</center>
+
 <p>Según vimos anteriormente, un sprite se definía en z88dk como un array de char del tipo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -101,7 +101,7 @@ char sprite0[] = { 8, 8, 0x18 , 0x24 , 0x42 , 0x81 , 0xA5 , 0x81 , 0x7E , 0x00 }
 <p>donde los dos primeros valores indicaban la altura y la anchura, respectivamente, y los siguientes valores representaban a cada una de las filas del sprite. Si cada columna tenía asignado un valor hexadecimal (estos valores eran, para una anchura de 8, y de derecha a izquierda, los siguientes: 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80), el valor para cada fila era la suma de los valores hexadecimales para los que el pixel correspondiente valía 1.</p>
 <p>Para sprites de más de anchura 8, y hata una anchura de 16, en ese array de caracteres cada fila se va a representar por un par de números hexadecimales. El primer valor de esa pareja se va a corresponder con los 8 primeros píxeles empezando por la izquierda de la columna, y el segundo con el resto.</p>
 <p>En el caso de los sprites que vemos en la figura anterior, donde cada columna tiene una anchura de diez píxeles, cada fila se representaría también por una pareja de valores hexadecimales. Con la primera pareja codificamos los ocho píxeles de la izquierda, de la misma forma en que lo hacemos con sprites de anchura hasta 8, y con la segunda pareja codificamos los otros dos pixeles que quedan a la derecha (siendo el valor 0x80 el correspondiente al primero y el valor 0x40 el correspondiente al segundo. Si hubiese más de dos, seguiríamos asignando los valores 0x20, 0x10, 0x08, 0x04 y etc. a los siguientes). En la siguiente imagen vemos un ejemplo.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="576">
 
 	<tr align="right">
@@ -112,7 +112,7 @@ char sprite0[] = { 8, 8, 0x18 , 0x24 , 0x42 , 0x81 , 0xA5 , 0x81 , 0x7E , 0x00 }
 		<td class="piefoto" align="right">Figura 2: cálculo de los valores hexadecimales correspondientes a cada una de las filas del sprite 0</td>
 	</tr>
 </table>
-</center>
+
 <p>Podríamos ser malvados y dejar como ejercicio al lector que calcule cómo se codificarían el resto de sprites, pero vamos a ahorrarle el mal trago. A continuación incluímos el código que codifica todos los sprites anteriores, que deberemos introducir dentro de un archivo de cabecera llamado <b>coches.h</b>:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -172,7 +172,7 @@ void main(void)
     </p></td></tr>
 </table>
 <p>El archivo de cabecera <i>games.h</i> debe ser incluido si queremos utilizar <i>putsprite</i>. En la siguiente imagen vemos la salida de este programa.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 
@@ -183,7 +183,7 @@ void main(void)
 		<td class="piefoto" align="right">Figura 3. Los sprites mostrándose en la pantalla de nuestro Spectrum (o de nuestro emulador)</td>
 	</tr>
 </table>
-</center>
+
 <p><b>Añadiendo movimiento</b></p>
 <p>Hacer que un sprite se mueva por pantalla es tan sencillo como borrarlo de donde se encontraba anteriormente y volver a dibujarlo en una nueva posición. Lo interesante será hacer que nuestro coche cambie de aspecto según la orientación en la que se esté moviendo.</p>
 
@@ -719,7 +719,7 @@ void main(void)
 </pre>
     </p></td></tr>
 </table>
-<center>
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
@@ -730,7 +730,7 @@ void main(void)
 		<td class="piefoto" align="right">Figura 4. Nuestro coche dispuesto a ser el rey de la pista</td>
 	</tr>
 </table>
-</center>
+
 
 <p>Hay que tener en cuenta que hemos cambiado el valor inicial de la coordenada y del coche para que éste quede dentro de la pista. También hemos creado dos variables, <i>i</i> y <i>j</i> que nos van a servir de contadores en un par de bucles.</p>
 <p>Este par de bucles son los dos que se muestran en rojo. En el primero lo único que hacemos es escribir en la pantalla 30 líneas en blanco para borrarla (es por eso que en la captura anterior ya no se ve lo de <i>Bytes: juego.tap</i> que molestaba tanto). Es en el segundo en el que dibujamos el circuito.</p>
@@ -1161,6 +1161,6 @@ pageTracker._trackPageview();
 
                 </tr>
             </table>
-        </center>
+
     </body>
 </html>

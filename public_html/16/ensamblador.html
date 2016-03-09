@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -247,7 +247,7 @@ texto DB "Esto es una cadena de texto"
 
 </table>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="316">
 	<tr align="right">
 		<td><img src="img/db.gif" width="316" height="237"  alt="Resultado de RANDOMIZE USR 50000 en nuestro programa" />
@@ -258,7 +258,7 @@ texto DB "Esto es una cadena de texto"
 	</tr>
 
 </table>
-</center>
+
 
 <p>Como puede verse, con DB hemos "insertado" datos directamente dentro de nuestro programa. Estos datos se cargarán en memoria (pokeados) también como parte del programa, y podremos acceder a ellos posteriormente. Los datos, en nuestro programa, están situados en la memoria, justo después de las instrucciones ensambladas (tras el último RET). Podemos verlo si ensamblamos el programa:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -751,7 +751,7 @@ fin:
 </table>
 <p>Lo ensamblamos con: pasmo –tapbas compara.asm compara.tap, y lo cargamos en el Spectrum o emulador. La sentencia END 50000 nos ahorra el teclear "RANDOMIZE USR 50000" ya que pasmo lo introducirá en el cargador BASIC por nosotros. Jugando con los valores de A y B del listado deberemos ver cómo cambia el lugar al que saltamos (representado por el lugar de la pantalla en que vemos dibujada nuestra pequeña línea de 8 píxeles).</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 		<td><img src="img/compara.png" width="320" height="240"  alt="Salida del programa anterior con A=5 y B=7" />
@@ -762,7 +762,7 @@ fin:
 
 	</tr>
 </table>
-</center>
+
 
 <p>Finalmente, destacar que nada nos impide el hacer comparaciones multiples o anidadas:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -1003,7 +1003,7 @@ texto DB "Esto es una X cadena de texto."
 </table>
 <p>Lo compilamos con "pasmo –tapbas buscatxt.asm buscatxt.tap", lo cargamos en el emulador y tras un RUN ejecutamos nuestra rutina como "PRINT AT 10,10 ; USR 50000". En pantalla aparecerá el valor 12:</p>
 
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="318">
 	<tr align="right">
 		<td><img src="img/buscatxt.gif" width="318" height="236"  alt="Salida del programa buscatxt.asm" />
@@ -1014,7 +1014,7 @@ texto DB "Esto es una X cadena de texto."
 		<td class="piefoto" align="right">Salida del programa buscatxt.asm</td>
 	</tr>
 </table>
-</center>
+
 
 <p>¿Qué significa este "12"? Es la posición del carácter 'X' dentro de la cadena de texto. La hemos obtenido de la siguiente forma:</p>
 <ul>
@@ -1144,7 +1144,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>

@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<!doctype html>
+<html lang="es">
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <link rel="shortcut icon" href="favicon.ico">
+
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body bgcolor="#CFCFCF">
+    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
 
-        <center>
+
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -278,7 +278,7 @@ defb @00000000, @11111111
     </p></td></tr>
 </table>
 <p>Al probar el ejemplo nos habremos encontrado con un problema bastante grave: al no controlar cuándo el sprite sobrepasa los límites de la pantalla, es posible desplazar nuestro "bicho" al exterior y perder totalmente su control. Una forma de solucionarlo sería añadir un nuevo control de tal forma que al accionarlo volviéramos a colocar a nuestro bicho en el centro de la pantalla. Esto se puede conseguir realizando mapeados adicionales de teclado a los del joystick virtual. Mediante <i>sp_LookupKey</i> se puede asociar una tecla a una variable <i>uint</i>, de tal forma que más adelante, mediante el uso de otra función adicional llamada <i>sp_KeyPressed</i> podremos saber si dicha tecla está siendo pulsada en este momento.</p>
-<center>
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
@@ -289,7 +289,7 @@ defb @00000000, @11111111
 		<td class="piefoto" align="right">¡Ya podemos mover a nuestro bicho con el teclado!</td>
 	</tr>
 </table>
-</center>
+
 
 <p>El código anterior se ha modificado para añadir dos nuevas funcionalidades. Al pulsar la tecla <i>r</i>, nuestro "bicho" volverá al centro de la pantalla. Por otra parte, la tecla <i>b</i> va a permitir que cambiemos el color del borde. Las modificaciones se muestran en rojo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -791,7 +791,7 @@ LIB SPNullSprPtr
 </table>
 <p>evitará que esa columna vacía "moleste" al resto de los sprites con los que nuestro bicho entre en contacto.</p>
 <p>Y ya está, ya le hemos dado color a nuestro bicho (eso sí, una combinación bastante psicodélica). Cada vez que queramos hacer lo mismo con cualquier otro sprite, tan solo deberemos seguir la receta anterior, pues es algo mecánico.</p>
-<center>
+
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
 		<td><img src="img/z88dk9_2.png" width="640" height="508"  alt="Nuestro sprite a color. Evidentemente, la combinación de colores puede ser mejorada" />
@@ -802,10 +802,10 @@ LIB SPNullSprPtr
 		<td class="piefoto" align="right">Nuestro sprite a color. Evidentemente, la combinación de colores puede ser mejorada</td>
 	</tr>
 </table>
-</center>
+
 <p><b>UN NUEVO JUEGO</b></p>
 <p>A continuación, y empleando el conocimiento adquirido tanto en este número como en el número anterior del magazine, vamos a comenzar a desarrollar nuestro propio juego. Al hacerlo nos encontraremos con una serie de problemas que iremos resolviendo en próximos artículos. En nuestro juego controlaremos los movimientos de un esquiador que deberá descender una montaña esquivando todas las rocas que se interpongan en su camino. El esquiador estará situado en la parte superior de la pantalla y podrá desplazarse a izquierda y derecha. Las rocas subirán desde la parte inferior de la pantalla, simulando el descenso por la pendiente nevada de la montaña.</p>
-<center>
+
 
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
@@ -816,7 +816,7 @@ LIB SPNullSprPtr
 		<td class="piefoto" align="right">Aspecto final del juego</td>
 	</tr>
 </table>
-</center>
+
 
 <p>El código completo, que comentaremos a lo largo de esta sección (aunque no en detalle, sólo aquellas partes que difieran de lo visto hasta ahora o introduzcan conceptos nuevos), es el siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -1422,7 +1422,7 @@ pageTracker._trackPageview();
                     </td>
                 </tr>
             </table>
-        </center>
+
     </body>
 
 </html>
