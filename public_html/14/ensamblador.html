@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,26 +31,26 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('input.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
+        <option value="ensamblador.html" selected>ProgramaciÃ³n Ensamblador</option>
     </select>
     <input type="button" onclick="return false;" name="siguiente" value=">" disabled  />
 </td>
 
-            <td align="center" class="texto">Número 14 - Diciembre 2006</td>
+            <td align="center" class="texto">NÃºmero 14 - Diciembre 2006</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
@@ -68,100 +68,100 @@ function RecargarCabecera(url)
 <div align="justify">
 <p align="center"><font size="5">Lenguaje Ensamblador del Z80 (I)</font></p>
 <p><strong>LA ARQUITECTURA DEL SPECTRUM</strong></p>
-<p>En esta tercera entrega del curso explicaremos la sintaxis utilizada en los programas en ensamblador. Para ello comenzaremos con una definición general de la sintaxis del lenguaje para el ensamblador Pasmo, que será el "traductor" que usaremos entre el lenguaje ensamblador y el código máquina del Z80.</p>
-<p>Posteriormente veremos en detalle los registros: qué registros hay disponibles, cómo se agrupan, y el registro especial de Flags, enlazando el uso de estos registros con las instrucciones de carga, de operaciones aritméticas, y de manejo de bits, que serán las que trataremos hoy.</p>
+<p>En esta tercera entrega del curso explicaremos la sintaxis utilizada en los programas en ensamblador. Para ello comenzaremos con una definiciÃ³n general de la sintaxis del lenguaje para el ensamblador Pasmo, que serÃ¡ el "traductor" que usaremos entre el lenguaje ensamblador y el cÃ³digo mÃ¡quina del Z80.</p>
+<p>Posteriormente veremos en detalle los registros: quÃ© registros hay disponibles, cÃ³mo se agrupan, y el registro especial de Flags, enlazando el uso de estos registros con las instrucciones de carga, de operaciones aritmÃ©ticas, y de manejo de bits, que serÃ¡n las que trataremos hoy.</p>
 
-<p>Esta entrega del curso es delicada y complicada: por un lado, tenemos que explicar las normas y sintaxis del ensamblador cruzado PASMO antes de que conozcamos la sintaxis del lenguaje ensamblador en sí, y por el otro, no podremos utilizar PASMO hasta que conozcamos la sintaxis del lenguaje.</p>
-<p>Además, el lenguaje ensamblador tiene disponibles muchas instrucciones diferentes, y nos resultaría imposible explicarlas todas en un mismo capítulo, lo que nos fuerza a explicar las instrucciones del microprocesador en varias entregas. Esto implica que hablaremos de PASMO comentando reglas, opciones de instrucciones y directivas que todavía no conocemos.</p>
-<p>Es por esto que recomendamos al lector que, tras releer los capítulos 1 y 2 de nuestro curso, se tome esta entrega de una manera especial, leyéndola 2 veces. La "segunda pasada" sobre el texto permitirá enlazar todos los conocimientos dispersos en el mismo, y que no pueden explicarse de una manera lineal porque están totalmente interrelacionados. Además, la parte relativa a la sintaxis de PASMO será una referencia obligada para posteriores capítulos (mientras continuemos viendo diferentes instrucciones ASM y ejemplos).</p>
-<p>Así pues, os recomendamos leer este capítulo dos veces, una para absorber las normas de PASMO, y otra para absorber la sintaxis del lenguaje y las instrucciones que explicaremos (terminando de comprender conceptos de la primera lectura).</p>
+<p>Esta entrega del curso es delicada y complicada: por un lado, tenemos que explicar las normas y sintaxis del ensamblador cruzado PASMO antes de que conozcamos la sintaxis del lenguaje ensamblador en sÃ­, y por el otro, no podremos utilizar PASMO hasta que conozcamos la sintaxis del lenguaje.</p>
+<p>AdemÃ¡s, el lenguaje ensamblador tiene disponibles muchas instrucciones diferentes, y nos resultarÃ­a imposible explicarlas todas en un mismo capÃ­tulo, lo que nos fuerza a explicar las instrucciones del microprocesador en varias entregas. Esto implica que hablaremos de PASMO comentando reglas, opciones de instrucciones y directivas que todavÃ­a no conocemos.</p>
+<p>Es por esto que recomendamos al lector que, tras releer los capÃ­tulos 1 y 2 de nuestro curso, se tome esta entrega de una manera especial, leyÃ©ndola 2 veces. La "segunda pasada" sobre el texto permitirÃ¡ enlazar todos los conocimientos dispersos en el mismo, y que no pueden explicarse de una manera lineal porque estÃ¡n totalmente interrelacionados. AdemÃ¡s, la parte relativa a la sintaxis de PASMO serÃ¡ una referencia obligada para posteriores capÃ­tulos (mientras continuemos viendo diferentes instrucciones ASM y ejemplos).</p>
+<p>AsÃ­ pues, os recomendamos leer este capÃ­tulo dos veces, una para absorber las normas de PASMO, y otra para absorber la sintaxis del lenguaje y las instrucciones que explicaremos (terminando de comprender conceptos de la primera lectura).</p>
 <p><strong>SINTAXIS DEL LENGUAJE EN PASMO</strong></p>
-<p>En la primera parte de curso se introdujo PASMO, el ensamblador cruzado que recomendamos para el desarrollo de programas para Spectrum. Este ensamblador traduce nuestros ficheros de texto .asm con el código fuente de programa (en lenguaje ensamblador) a ficheros .bin (o .tap/.tzx) que contendrán el código máquina directamente ejecutable por el Spectrum. Suponemos que ya tenéis instalado PASMO (ya sea la versión Windows o la de Linux) en vuestro sistema y que sabéis utilizarlo (os recomiendo que releáis la primera entrega de nuestro curso si no recordáis su uso), y que podéis ejecutarlo dentro del directorio de trabajo que habéis elegido (por ejemplo: /home/usuario/z80asm o C:\z80asm).</p>
-<p>El ciclo de desarrollo con PASMO será el siguiente:</p>
+<p>En la primera parte de curso se introdujo PASMO, el ensamblador cruzado que recomendamos para el desarrollo de programas para Spectrum. Este ensamblador traduce nuestros ficheros de texto .asm con el cÃ³digo fuente de programa (en lenguaje ensamblador) a ficheros .bin (o .tap/.tzx) que contendrÃ¡n el cÃ³digo mÃ¡quina directamente ejecutable por el Spectrum. Suponemos que ya tenÃ©is instalado PASMO (ya sea la versiÃ³n Windows o la de Linux) en vuestro sistema y que sabÃ©is utilizarlo (os recomiendo que releÃ¡is la primera entrega de nuestro curso si no recordÃ¡is su uso), y que podÃ©is ejecutarlo dentro del directorio de trabajo que habÃ©is elegido (por ejemplo: /home/usuario/z80asm o C:\z80asm).</p>
+<p>El ciclo de desarrollo con PASMO serÃ¡ el siguiente:</p>
 <ul>
-<li>Con un editor de texto, tecleamos nuestro programa en un fichero .ASM con la sintaxis que veremos a continuación.</li>
+<li>Con un editor de texto, tecleamos nuestro programa en un fichero .ASM con la sintaxis que veremos a continuaciÃ³n.</li>
 
 <li>Salimos del editor de texto y ensamblamos el programa con: "pasmo ejemplo1.asm ejemplo1.bin".</li>
-<li>El fichero bin contiene el código máquina resultante, que podemos POKEar en memoria, cargar como un bloque CM (LOAD "" CODE) tras nuestro programa BASIC, o bien si el programa está realizado enteramente en ensamblador, hacer un pequeño cargador (o usar bin2tap o --bastap) y cargar directamente el programa en el Spectrum.</li>
+<li>El fichero bin contiene el cÃ³digo mÃ¡quina resultante, que podemos POKEar en memoria, cargar como un bloque CM (LOAD "" CODE) tras nuestro programa BASIC, o bien si el programa estÃ¡ realizado enteramente en ensamblador, hacer un pequeÃ±o cargador (o usar bin2tap o --bastap) y cargar directamente el programa en el Spectrum.</li>
 </ul>
-<p>Todo esto se mostró bastante detalladamente en su momento en el número 1 de nuestro curso.</p>
-<p>Con esto, sabemos ensamblar programas creados adecuadamente, de modo que la pregunta es: ¿cómo debo escribir mi programa para que PASMO pueda ensamblarlo? Es sencillo, escribiremos nuestro programa en un fichero de texto con extensión (por ejemplo) .asm. En este fichero de texto se ignorarán las líneas en blanco y los comentarios, que en ASM de Z80 se introducen con el símbolo ";" (punto y coma), de forma que todo lo que el ensamblador encuentre a la derecha de un ; será ignorado (siempre que no forme parte de una cadena). Ese fichero de texto será ensamblado por PASMO y convertido en código binario.</p>
-<p>Lo que vamos a ver a continuación son las normas que debe cumplir un programa para poder ser ensamblado en PASMO. Es necesario explicar estas reglas para que el lector pueda consultarlas en el futuro, cuando esté realizando sus propios programas. No te preocupes si no entiendes alguna de las reglas, cuando llegues al momento de implementar tus primeras rutinas, las siguientes normas te serán muy útiles:</p>
+<p>Todo esto se mostrÃ³ bastante detalladamente en su momento en el nÃºmero 1 de nuestro curso.</p>
+<p>Con esto, sabemos ensamblar programas creados adecuadamente, de modo que la pregunta es: Â¿cÃ³mo debo escribir mi programa para que PASMO pueda ensamblarlo? Es sencillo, escribiremos nuestro programa en un fichero de texto con extensiÃ³n (por ejemplo) .asm. En este fichero de texto se ignorarÃ¡n las lÃ­neas en blanco y los comentarios, que en ASM de Z80 se introducen con el sÃ­mbolo ";" (punto y coma), de forma que todo lo que el ensamblador encuentre a la derecha de un ; serÃ¡ ignorado (siempre que no forme parte de una cadena). Ese fichero de texto serÃ¡ ensamblado por PASMO y convertido en cÃ³digo binario.</p>
+<p>Lo que vamos a ver a continuaciÃ³n son las normas que debe cumplir un programa para poder ser ensamblado en PASMO. Es necesario explicar estas reglas para que el lector pueda consultarlas en el futuro, cuando estÃ© realizando sus propios programas. No te preocupes si no entiendes alguna de las reglas, cuando llegues al momento de implementar tus primeras rutinas, las siguientes normas te serÃ¡n muy Ãºtiles:</p>
 <ul>
 <li><p>Normas para las instrucciones:</p>
 	<ul>
-	<li>Pondremos una sóla instrucción de ensamblador por línea.</li>
+	<li>Pondremos una sÃ³la instrucciÃ³n de ensamblador por lÃ­nea.</li>
 
-	<li>Como existen diferencias entre los "fin de línea" entre Linux y Windows, es recomendable que los programas se ensamblen con PASMO en la misma plataforma de S.O. en que se han escrito. Si PASMO intenta compilar en Windows un programa ASM escrito en un editor de texto de Linux (con retornos de carro de Linux) es posible que obtengamos errores de compilación (aunque no es seguro). Si os ocurre al compilar los ejemplos que os proporcionamos (están escritos en Linux) y usáis Windows, lo mejor es abrir el fichero .ASM con notepad y grabarlo de nuevo (lo cual lo salvará con formato de retornos de carro de Windows). El fichero "regrabado" con Notepad podrá ser ensamblado sin problemas.</li>
-	<li>Además de una instrucción por línea podremos añadir etiquetas (para referenciar a dicha línea, algo que veremos posteriormente) y comentarios (con ';').</li>
+	<li>Como existen diferencias entre los "fin de lÃ­nea" entre Linux y Windows, es recomendable que los programas se ensamblen con PASMO en la misma plataforma de S.O. en que se han escrito. Si PASMO intenta compilar en Windows un programa ASM escrito en un editor de texto de Linux (con retornos de carro de Linux) es posible que obtengamos errores de compilaciÃ³n (aunque no es seguro). Si os ocurre al compilar los ejemplos que os proporcionamos (estÃ¡n escritos en Linux) y usÃ¡is Windows, lo mejor es abrir el fichero .ASM con notepad y grabarlo de nuevo (lo cual lo salvarÃ¡ con formato de retornos de carro de Windows). El fichero "regrabado" con Notepad podrÃ¡ ser ensamblado sin problemas.</li>
+	<li>AdemÃ¡s de una instrucciÃ³n por lÃ­nea podremos aÃ±adir etiquetas (para referenciar a dicha lÃ­nea, algo que veremos posteriormente) y comentarios (con ';').</li>
 	</ul>
 </li>
-<li><p>Normas para los valores numéricos:</p>
+<li><p>Normas para los valores numÃ©ricos:</p>
 	<ul>
-	<li>Todos los valores numéricos se considerarán, por defecto, escritos en decimal.</li>
-	<li>Para introducir valores números en hexadecimal los precederemos del carácter "$", y para escribir valores numéricos en binario lo haremos mediante el carácter "%".</li>
+	<li>Todos los valores numÃ©ricos se considerarÃ¡n, por defecto, escritos en decimal.</li>
+	<li>Para introducir valores nÃºmeros en hexadecimal los precederemos del carÃ¡cter "$", y para escribir valores numÃ©ricos en binario lo haremos mediante el carÃ¡cter "%".</li>
 
-	<li>Podremos también especificar la base del literal poniendoles como prefijo las cadena &H ó 0x (para hexadecimal) o &O (para octal).</li>
-	<li>Podemos especificar también los números mediante sufijos: Usando una "H" para hexadecimal, "D" para decimal, "B" para binario u "O" para octal (tanto mayúsculas como minúsculas).</li>
+	<li>Podremos tambiÃ©n especificar la base del literal poniendoles como prefijo las cadena &H Ã³ 0x (para hexadecimal) o &O (para octal).</li>
+	<li>Podemos especificar tambiÃ©n los nÃºmeros mediante sufijos: Usando una "H" para hexadecimal, "D" para decimal, "B" para binario u "O" para octal (tanto mayÃºsculas como minÃºsculas).</li>
 	</ul>
 </li>
 <li><p>Normas para cadenas de texto:</p>
 	<ul>
 
 	<li>Podemos separar las cadenas de texto mediante comillas simples o dobles.</li>
-	<li>El texto encerrado entre comillas simples no recibe ninguna interpretación, excepto si se encuentran 2 comillas simples consecutivas, que sirven para introducir una comilla simple en la cadena.</li>
-	<li>El texto encerrado entre comillas dobles permite introducir caracteres especiales al estilo de C/C++ como \n, \r o \t (nueva línea, retorno de carro, tabulador...).</li>
-	<li>El texto encerrado entre comillas dobles también admite \xNN para introducir el carácter correspondiente a un número hexadecimal NN.</li>
-	<li>Una cadena de texto de longitud 1 (un carácter) puede usarse como una constante (valor ASCII del carácter) en expresiones como, por ejemplo, 'C'+10h.</li>
+	<li>El texto encerrado entre comillas simples no recibe ninguna interpretaciÃ³n, excepto si se encuentran 2 comillas simples consecutivas, que sirven para introducir una comilla simple en la cadena.</li>
+	<li>El texto encerrado entre comillas dobles permite introducir caracteres especiales al estilo de C/C++ como \n, \r o \t (nueva lÃ­nea, retorno de carro, tabulador...).</li>
+	<li>El texto encerrado entre comillas dobles tambiÃ©n admite \xNN para introducir el carÃ¡cter correspondiente a un nÃºmero hexadecimal NN.</li>
+	<li>Una cadena de texto de longitud 1 (un carÃ¡cter) puede usarse como una constante (valor ASCII del carÃ¡cter) en expresiones como, por ejemplo, 'C'+10h.</li>
 	</ul>
 
 </li>
 <li><p>Normas para los nombres de ficheros:</p>
 	<ul>
-	<li>Si vemos que nuestro programa se hace muy largo, podemos partir el fichero en varios ficheros e incluirlos mediante directivas INCLUDE (para incluir ficheros ASM) o INCBIN (para incluir código máquina ya compilado). Al especificar nombres de ficheros, deberán estar entre dobles comillas o simples comillas.</li>
+	<li>Si vemos que nuestro programa se hace muy largo, podemos partir el fichero en varios ficheros e incluirlos mediante directivas INCLUDE (para incluir ficheros ASM) o INCBIN (para incluir cÃ³digo mÃ¡quina ya compilado). Al especificar nombres de ficheros, deberÃ¡n estar entre dobles comillas o simples comillas.</li>
 	</ul>
 </li>
 <li><p>Normas para los identificadores:</p>
 	<ul>
-	<li>Los identificadores son los nombres usados para etiquetas y símbolos definidos mediante EQU y DEFL.</li>
+	<li>Los identificadores son los nombres usados para etiquetas y sÃ­mbolos definidos mediante EQU y DEFL.</li>
 
 	<li>Podemos utilizar cualquier cadena de texto, excepto los nombres de las palabras reservadas de ensamblador.</li>
 	</ul>
 </li>
 <li><p>Normas para las etiquetas:</p>
 	<ul>
-	<li>Una etiqueta es un identificador de texto que ponemos poner al principio de cualquier línea de nuestro programa.</li>
-	<li>Podemos añadir el tradicional sufijo ":" a las etiquetas, pero también es posible no incluirlo si queremos compatibilidad con otros ensambladores que no lo soporten (por si queremos ensamblar nuestro programa con otro ensamblador que no sea pasmo).</li>
-	<li>Para PASMO, cualquier referencia a una etiqueta a lo largo del programa se convierte en una referencia a la posición de memoria donde se ensambla la instrucción o dato donde hemos colocado la etiqueta. Podemos utilizar así etiquetas para hacer referencia a nuestros gráficos, variables, datos, funciones, lugares a donde saltar, etc.</li>
+	<li>Una etiqueta es un identificador de texto que ponemos poner al principio de cualquier lÃ­nea de nuestro programa.</li>
+	<li>Podemos aÃ±adir el tradicional sufijo ":" a las etiquetas, pero tambiÃ©n es posible no incluirlo si queremos compatibilidad con otros ensambladores que no lo soporten (por si queremos ensamblar nuestro programa con otro ensamblador que no sea pasmo).</li>
+	<li>Para PASMO, cualquier referencia a una etiqueta a lo largo del programa se convierte en una referencia a la posiciÃ³n de memoria donde se ensambla la instrucciÃ³n o dato donde hemos colocado la etiqueta. Podemos utilizar asÃ­ etiquetas para hacer referencia a nuestros grÃ¡ficos, variables, datos, funciones, lugares a donde saltar, etc.</li>
 
 	</ul>
 </li>
 <li><p>Directivas:</p>
 	<ul>
-	<li>Tenemos a nuestra disposición una serie de directivas para facilitarnos la programación, como DEFB o DB para introducir datos en crudo en nuestro programa, END para finalizar el programa, IF/ELSE/ENDIF en tiempo de compilación, INCLUDE e INCBIN, MACRO y REPT.</li>
-	<li>Una de las directivas más importantes es ORG, que indica la posición origen donde almacenar el código que la sigue. Podemos utilizar diferentes directivas ORG en un mismo programa.</li>
-	<li>Iremos viendo el significado de las directivas conforme las vayamos usando, pero es aconsejable consultar el <a href="http://www.arrakis.es/~ninsesabe/pasmo/pasmodoc.html#directives">manual de PASMO</a> para conocer más sobre ellas.</li>
+	<li>Tenemos a nuestra disposiciÃ³n una serie de directivas para facilitarnos la programaciÃ³n, como DEFB o DB para introducir datos en crudo en nuestro programa, END para finalizar el programa, IF/ELSE/ENDIF en tiempo de compilaciÃ³n, INCLUDE e INCBIN, MACRO y REPT.</li>
+	<li>Una de las directivas mÃ¡s importantes es ORG, que indica la posiciÃ³n origen donde almacenar el cÃ³digo que la sigue. Podemos utilizar diferentes directivas ORG en un mismo programa.</li>
+	<li>Iremos viendo el significado de las directivas conforme las vayamos usando, pero es aconsejable consultar el <a href="http://www.arrakis.es/~ninsesabe/pasmo/pasmodoc.html#directives">manual de PASMO</a> para conocer mÃ¡s sobre ellas.</li>
 
  	</ul>
 </li>
 <li><p><a href="http://www.arrakis.es/~ninsesabe/pasmo/pasmodoc.html#operators">Operadores</a>:</p>
  	<ul>
- 	<li>Podemos utilizar los operadores típicos +, -, *. /, así como otros operadores de desplazamiento de bits como &gt;&gt; y &lt;&lt;.</li>
- 	<li>Tenemos disponibles operadores de comparación como EQ, NE, LT, LE, GT, GE o los clásicos =, !=, <, >, <=, >=.</li>
+ 	<li>Podemos utilizar los operadores tÃ­picos +, -, *. /, asÃ­ como otros operadores de desplazamiento de bits como &gt;&gt; y &lt;&lt;.</li>
+ 	<li>Tenemos disponibles operadores de comparaciÃ³n como EQ, NE, LT, LE, GT, GE o los clÃ¡sicos =, !=, <, >, <=, >=.</li>
 
- 	<li>Existen también operadores lógicos como AND, OR, NOT, o sus variantes &, |, !.</li>
-	<li>Los operadores sólo tienen aplicación en tiempo de ensamblado, es decir, no podemos multiplicar o dividir en tiempo real en nuestro programa usando * o /. Estos operadores están pensados para que podamos poner expresiones como ((32*10)+12), en lugar del valor numérico del resultado, por ejemplo.</li>
+ 	<li>Existen tambiÃ©n operadores lÃ³gicos como AND, OR, NOT, o sus variantes &, |, !.</li>
+	<li>Los operadores sÃ³lo tienen aplicaciÃ³n en tiempo de ensamblado, es decir, no podemos multiplicar o dividir en tiempo real en nuestro programa usando * o /. Estos operadores estÃ¡n pensados para que podamos poner expresiones como ((32*10)+12), en lugar del valor numÃ©rico del resultado, por ejemplo.</li>
 	</ul>
 </li>
 </ul>
 <p><strong>ASPECTO DE UN PROGRAMA EN ENSAMBLADOR</strong></p>
-<p>Veamos un ejemplo de programa en ensamblador que muestra el uso de algunas de estas normas, para que las podamos entender fácilmente mediante los comentarios incluidos:</p>
+<p>Veamos un ejemplo de programa en ensamblador que muestra el uso de algunas de estas normas, para que las podamos entender fÃ¡cilmente mediante los comentarios incluidos:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
 <pre>
 ; Programa de ejemplo para mostrar el aspecto de
-; un programa típico en ensamblador para PASMO.
+; un programa tÃ­pico en ensamblador para PASMO.
 ; Copia una serie de bytes a la videomemoria con
 ; instrucciones simples (sin optimizar).
 ORG 40000
@@ -180,7 +180,7 @@ destino   EQU  18384
 bucle:               ; etiqueta que usaremos luego
 
   LD A, (DE)         ; Leemos un dato de [DE]
-  ADD A, valor       ; Le sumamos 1 al dato leído
+  ADD A, valor       ; Le sumamos 1 al dato leÃ­do
   LD (HL), A         ; Lo grabamos en el destino [HL]
   INC DE             ; Apuntamos al siguiente dato
   INC HL             ; Apuntamos al siguiente destino
@@ -198,14 +198,14 @@ END
 </table>
 <p>Algunos detalles a tener en cuenta:</p>
 <ul>
-	<li>Como veis, se pone una instrucción por línea.</li>
-	<li>Los comentarios pueden ir en sus propias líneas, o dentro de líneas de instrucciones (tras ellas).</li>
-	<li>Podemos definir "constantes" con EQU para hacer referencia a ellas luego en el código. Son constantes, no variables, es decir, se definen en tiempo de ensamblado y no se cambian con la ejecución del programa. Su uso está pensado para poder escribir código más legible y que podamos cambiar los valores asociados posteriormente de una forma sencilla (es más fácil cambiar el valor asignado en el EQU, que cambiar un valor en todas sus apariciones en el código).</li>
+	<li>Como veis, se pone una instrucciÃ³n por lÃ­nea.</li>
+	<li>Los comentarios pueden ir en sus propias lÃ­neas, o dentro de lÃ­neas de instrucciones (tras ellas).</li>
+	<li>Podemos definir "constantes" con EQU para hacer referencia a ellas luego en el cÃ³digo. Son constantes, no variables, es decir, se definen en tiempo de ensamblado y no se cambian con la ejecuciÃ³n del programa. Su uso estÃ¡ pensado para poder escribir cÃ³digo mÃ¡s legible y que podamos cambiar los valores asociados posteriormente de una forma sencilla (es mÃ¡s fÃ¡cil cambiar el valor asignado en el EQU, que cambiar un valor en todas sus apariciones en el cÃ³digo).</li>
 
-	<li>Podemos poner etiquetas (como "bucle" y "datos" -con o sin dos puntos, son ignorados-) para referenciar a una posición de memoria. Así, la etiqueta "bucle" del programa anterior hace referencia a la posición de memoria donde se ensamblaría la siguiente instrucción que aparece tras ella. Las etiquetas se usan para poder saltar a ellas (en los bucles y condiciones) mediante un nombre en lugar de tener que calcular nosotros la dirección del salto a mano y poner direcciones de memoria. Es más fácil de entender y programar un "DJNZ bucle" que un "DJNZ 40008", por ejemplo. En el caso de la etiqueta "datos", nos permite referenciar la posición en la que empiezan los datos que vamos a copiar.</li>
-	<li>Los datos definidos con DEFB pueden estar en cualquier formato numérico, como se ha mostrado en el ejemplo: decimal, binario, hexadecimal tanto con prefijo "$" como con sufijo "h", etc.</li>
+	<li>Podemos poner etiquetas (como "bucle" y "datos" -con o sin dos puntos, son ignorados-) para referenciar a una posiciÃ³n de memoria. AsÃ­, la etiqueta "bucle" del programa anterior hace referencia a la posiciÃ³n de memoria donde se ensamblarÃ­a la siguiente instrucciÃ³n que aparece tras ella. Las etiquetas se usan para poder saltar a ellas (en los bucles y condiciones) mediante un nombre en lugar de tener que calcular nosotros la direcciÃ³n del salto a mano y poner direcciones de memoria. Es mÃ¡s fÃ¡cil de entender y programar un "DJNZ bucle" que un "DJNZ 40008", por ejemplo. En el caso de la etiqueta "datos", nos permite referenciar la posiciÃ³n en la que empiezan los datos que vamos a copiar.</li>
+	<li>Los datos definidos con DEFB pueden estar en cualquier formato numÃ©rico, como se ha mostrado en el ejemplo: decimal, binario, hexadecimal tanto con prefijo "$" como con sufijo "h", etc.</li>
 </ul>
-<p>Podéis ensamblar el ejemplo anterior mediante:</p>
+<p>PodÃ©is ensamblar el ejemplo anterior mediante:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -214,7 +214,7 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
     </p></td></tr>
 
 </table>
-<p>Una vez cargado y ejecutado el TAP en el emulador de Spectrum, podréis ejecutar el código máquina en BASIC con un "RANDOMIZE USR 40000", y deberéis ver una pantalla como la siguiente:</p>
+<p>Una vez cargado y ejecutado el TAP en el emulador de Spectrum, podrÃ©is ejecutar el cÃ³digo mÃ¡quina en BASIC con un "RANDOMIZE USR 40000", y deberÃ©is ver una pantalla como la siguiente:</p>
 
 <table border="0" cellspacing="0" cellpadding="2" width="319">
 	<tr align="right">
@@ -227,41 +227,41 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 	</tr>
 </table>
 
-<p>Los píxeles que aparecen en el centro de la pantalla se corresponden con los valores numéricos que hemos definido en "datos", ya que los hemos copiado desde "datos" hasta la videomemoria. No os preocupéis por ahora si no entendéis alguna de las instrucciones utilizadas, las iremos viendo poco a poco y al final tendremos una visión global y concreta de todas ellas.</p>
+<p>Los pÃ­xeles que aparecen en el centro de la pantalla se corresponden con los valores numÃ©ricos que hemos definido en "datos", ya que los hemos copiado desde "datos" hasta la videomemoria. No os preocupÃ©is por ahora si no entendÃ©is alguna de las instrucciones utilizadas, las iremos viendo poco a poco y al final tendremos una visiÃ³n global y concreta de todas ellas.</p>
 <p><strong>LOS REGISTROS</strong></p>
-<p>Como ya vimos en la anterior entrega, todo el "trabajo de campo" lo haremos con los registros de la CPU, que no son más que variables de 8 y 16 bits integradas dentro del Z80 y que por tanto son muy rápidos para realizar operaciones con ellos.</p>
-<p>El Z80 tiene una serie de registros de 8 bits con nombres específicos:</p>
+<p>Como ya vimos en la anterior entrega, todo el "trabajo de campo" lo haremos con los registros de la CPU, que no son mÃ¡s que variables de 8 y 16 bits integradas dentro del Z80 y que por tanto son muy rÃ¡pidos para realizar operaciones con ellos.</p>
+<p>El Z80 tiene una serie de registros de 8 bits con nombres especÃ­ficos:</p>
 <ul>
-	<li>A: El Registro A (de 8 bits) es el acumulador. Es un registro que se utiliza generalmente como destino de muchas operaciones aritméticas y de comparaciones y testeos.</li>
-	<li>B, C, D, E, H, L: Registros de propósito general, utilizables para gran cantidad de operaciones, almacenamiento de valores, etc.</li>
+	<li>A: El Registro A (de 8 bits) es el acumulador. Es un registro que se utiliza generalmente como destino de muchas operaciones aritmÃ©ticas y de comparaciones y testeos.</li>
+	<li>B, C, D, E, H, L: Registros de propÃ³sito general, utilizables para gran cantidad de operaciones, almacenamiento de valores, etc.</li>
 
-	<li>I: Registro de interrupción, no lo utilizaremos en nuestros primeros programas. No debemos modificar su valor, aunque en el futuro veremos su uso en las interrupciones del Spectrum.</li>
-	<li>R: Registro de Refresco de memoria: lo utiliza internamente la CPU para saber cuándo debe refrescar la RAM. Su valor cambia sólo conforme el Z80 va ejecutando instrucciones, de modo que podemos utilizarlo (leerlo) para obtener valores pseudo-aleatorios entre 0 y 255.</li>
+	<li>I: Registro de interrupciÃ³n, no lo utilizaremos en nuestros primeros programas. No debemos modificar su valor, aunque en el futuro veremos su uso en las interrupciones del Spectrum.</li>
+	<li>R: Registro de Refresco de memoria: lo utiliza internamente la CPU para saber cuÃ¡ndo debe refrescar la RAM. Su valor cambia sÃ³lo conforme el Z80 va ejecutando instrucciones, de modo que podemos utilizarlo (leerlo) para obtener valores pseudo-aleatorios entre 0 y 255.</li>
 </ul>
-<p>Además, podemos agrupar algunos de estos registros en pares de 16 bits para determinadas operaciones:</p>
+<p>AdemÃ¡s, podemos agrupar algunos de estos registros en pares de 16 bits para determinadas operaciones:</p>
 <ul>
-	<li>AF: Formado por el registro A como byte más significativo (Byte alto) y por F como byte menos significativo (Byte bajo). Si A vale FFh y B vale 00h, AF valdrá automáticamente "FF00h".</li>
-	<li>BC: Agrupación de los registros B y C que se puede utilizar en bucles y para acceder a puertos. También se utiliza como "repetidor" o "contador" en las operaciones de acceso a memoria (LDIR, LDDR, etc.).</li>
-	<li>DE, HL: Registros de 16 bits formados por D y E por un lado y H y L por otro. Utilizaremos generalmente estos registros para leer y escribir en memoria en una operación única, así como para las operaciones de acceso a memoria como LDIR, LDDR, etc.</li>
+	<li>AF: Formado por el registro A como byte mÃ¡s significativo (Byte alto) y por F como byte menos significativo (Byte bajo). Si A vale FFh y B vale 00h, AF valdrÃ¡ automÃ¡ticamente "FF00h".</li>
+	<li>BC: AgrupaciÃ³n de los registros B y C que se puede utilizar en bucles y para acceder a puertos. TambiÃ©n se utiliza como "repetidor" o "contador" en las operaciones de acceso a memoria (LDIR, LDDR, etc.).</li>
+	<li>DE, HL: Registros de 16 bits formados por D y E por un lado y H y L por otro. Utilizaremos generalmente estos registros para leer y escribir en memoria en una operaciÃ³n Ãºnica, asÃ­ como para las operaciones de acceso a memoria como LDIR, LDDR, etc.</li>
 
 </ul>
 <p>Aparte de estos registros, existen otra serie de registros de 16 bits:</p>
 <ul>
-	<li>IX, IY: Dos registros de 16 bits pensados para acceder a memoria de forma indexada. Gracias a estos registros podemos realizar operaciones como: "LD (IX+desplazamiento), VALOR". Este tipo de registros se suele utilizar pues para hacer de índices dentro de tablas o vectores. El desplazamiento es un valor numérico de 8 bits en complemento a 2, lo que nos permite un rango desde -128 a +127 (puede ser negativo para acceder a posiciones de memoria anteriores a IX).</li>
-	<li>SP: Puntero de pila, como veremos en su momento apunta a la posición actual de la "cabeza" de la pila.</li>
-	<li>PC: Program Counter o Contador de Programa. Como ya vimos en la anterior entrega, contiene la dirección de la instrucción actual a ejecutar. No modificaremos PC directamente moviendo valores a este registro, sino que lo haremos mediante instrucciones de salto (JP, JR, CALL...).</li>
+	<li>IX, IY: Dos registros de 16 bits pensados para acceder a memoria de forma indexada. Gracias a estos registros podemos realizar operaciones como: "LD (IX+desplazamiento), VALOR". Este tipo de registros se suele utilizar pues para hacer de Ã­ndices dentro de tablas o vectores. El desplazamiento es un valor numÃ©rico de 8 bits en complemento a 2, lo que nos permite un rango desde -128 a +127 (puede ser negativo para acceder a posiciones de memoria anteriores a IX).</li>
+	<li>SP: Puntero de pila, como veremos en su momento apunta a la posiciÃ³n actual de la "cabeza" de la pila.</li>
+	<li>PC: Program Counter o Contador de Programa. Como ya vimos en la anterior entrega, contiene la direcciÃ³n de la instrucciÃ³n actual a ejecutar. No modificaremos PC directamente moviendo valores a este registro, sino que lo haremos mediante instrucciones de salto (JP, JR, CALL...).</li>
 </ul>
-<p>Por último, tenemos disponible un banco alternativo de registros, conocidos como Shadow Registers o Registros Alternativos, que se llaman igual que sus equivalentes principales pero con una comilla simple detrás: A', F', B', C', D'. E', H' y L'.</p>
-<p>En cualquier momento podemos intercambiar el valor de los registros A, B, C, D, E, F, H y L con el valor de los registros A', B', C', D', E', F', H' y L' mediante la instrucción de ensamblador "EXX", como veremos más adelante. La utilidad de estos Shadow Registers es almacenar valores temporales y proporcionarnos más registros para operar: podremos intercambiar el valor de los registros actuales con los temporales, realizar operaciones con los registros sin perder los valores originales (que al hacer el EXX se quedarán en los registros Shadow), y después recuperar los valores originales volviendo a ejecutar un EXX.</p>
+<p>Por Ãºltimo, tenemos disponible un banco alternativo de registros, conocidos como Shadow Registers o Registros Alternativos, que se llaman igual que sus equivalentes principales pero con una comilla simple detrÃ¡s: A', F', B', C', D'. E', H' y L'.</p>
+<p>En cualquier momento podemos intercambiar el valor de los registros A, B, C, D, E, F, H y L con el valor de los registros A', B', C', D', E', F', H' y L' mediante la instrucciÃ³n de ensamblador "EXX", como veremos mÃ¡s adelante. La utilidad de estos Shadow Registers es almacenar valores temporales y proporcionarnos mÃ¡s registros para operar: podremos intercambiar el valor de los registros actuales con los temporales, realizar operaciones con los registros sin perder los valores originales (que al hacer el EXX se quedarÃ¡n en los registros Shadow), y despuÃ©s recuperar los valores originales volviendo a ejecutar un EXX.</p>
 
-<p>Ya conocemos los registros disponibles, veamos ahora ejemplos de operaciones típicas que podemos realizar con ellos:</p>
+<p>Ya conocemos los registros disponibles, veamos ahora ejemplos de operaciones tÃ­picas que podemos realizar con ellos:</p>
 <ul>
-	<li>Meter valores en registros (ya sean valores numéricos directos, de memoria, o de otros registros).</li>
+	<li>Meter valores en registros (ya sean valores numÃ©ricos directos, de memoria, o de otros registros).</li>
 	<li>Incrementar o decrementar los valores de los registros.</li>
-	<li>Realizar operaciones (tanto aritméticas como lógicas) entre los registros.</li>
+	<li>Realizar operaciones (tanto aritmÃ©ticas como lÃ³gicas) entre los registros.</li>
 	<li>Acceder a memoria para escribir o leer.</li>
 </ul>
-<p>Por ejemplo, las siguientes instrucciones en ensamblador serían válidas:</p>
+<p>Por ejemplo, las siguientes instrucciones en ensamblador serÃ­an vÃ¡lidas:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -282,9 +282,9 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 </pre>
     </p></td></tr>
 </table>
-<p>Dentro del ejemplo anterior queremos destacar el operador "()", que significa "el contenido de la memoria apuntado por". Así, "LD A, (16384)" no quiere decir "mete en A el valor 16384" (cosa que además no se puede hacer porque A es un registro de 8 bits), sino "mete en A el valor de 8 bits que contiene la celdilla de memoria 16384" (equivalente a utilizar en BASIC las funciones PEEK y POKE, como en LET A=PEEK 16384).</p>
-<p>Cabe destacar un gran inconveniente del juego de instrucciones del Z80, y es que no es ortogonal. Se dice que el juego de instrucciones de un microprocesador es ortogonal cuando puedes realizar todas las operaciones sobre todos los registros, sin presentar excepciones. En el caso del Z80 no es así, ya que hay determinadas operaciones que podremos realizar sobre unos registros pero no sobre otros. </p>
-<p>Así, si el Z80 fuera ortogonal, podríamos ejecutar cualquiera de estas operaciones:</p>
+<p>Dentro del ejemplo anterior queremos destacar el operador "()", que significa "el contenido de la memoria apuntado por". AsÃ­, "LD A, (16384)" no quiere decir "mete en A el valor 16384" (cosa que ademÃ¡s no se puede hacer porque A es un registro de 8 bits), sino "mete en A el valor de 8 bits que contiene la celdilla de memoria 16384" (equivalente a utilizar en BASIC las funciones PEEK y POKE, como en LET A=PEEK 16384).</p>
+<p>Cabe destacar un gran inconveniente del juego de instrucciones del Z80, y es que no es ortogonal. Se dice que el juego de instrucciones de un microprocesador es ortogonal cuando puedes realizar todas las operaciones sobre todos los registros, sin presentar excepciones. En el caso del Z80 no es asÃ­, ya que hay determinadas operaciones que podremos realizar sobre unos registros pero no sobre otros. </p>
+<p>AsÃ­, si el Z80 fuera ortogonal, podrÃ­amos ejecutar cualquiera de estas operaciones:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
     <tr><td><p class="codigo">
@@ -299,40 +299,40 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 </pre>
     </p></td></tr>
 </table>
-<p>Sin embargo, como el Z80 no tiene un juego de instrucciones (J.I. desde este momento) ortogonal, hay instrucciones del ejemplo anterior que no son válidas, es decir, que no tienen dentro de la CPU un microcódigo para que el Z80 sepa qué hacer con ellas:</p>
+<p>Sin embargo, como el Z80 no tiene un juego de instrucciones (J.I. desde este momento) ortogonal, hay instrucciones del ejemplo anterior que no son vÃ¡lidas, es decir, que no tienen dentro de la CPU un microcÃ³digo para que el Z80 sepa quÃ© hacer con ellas:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
   LD SP, BC      ; NO: No se puede cargar el valor un registro en SP,
-                 ; sólo se puede cargar un valor inmediato NN
+                 ; sÃ³lo se puede cargar un valor inmediato NN
 
   EX BC, DE      ; NO: Existe EX DE, HL, pero no EX BC, DE
 
-  ADD DE, BC     ; NO: Sólo se puede usar HL como operando destino
-                 ; en las sumas de 16 bytes con registros de propósito
+  ADD DE, BC     ; NO: SÃ³lo se puede usar HL como operando destino
+                 ; en las sumas de 16 bytes con registros de propÃ³sito
                  ; general.
 
 </pre>
     </p></td></tr>
 </table>
-<p>Si el J.I. fuera ortogonal, se podría realizar cualquier operación con cualquier registro, como por ejemplo:</p>
+<p>Si el J.I. fuera ortogonal, se podrÃ­a realizar cualquier operaciÃ³n con cualquier registro, como por ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
   LD BC, DE
   LD DE, HL
-  LD SP, BC      ; Se podría realizar
+  LD SP, BC      ; Se podrÃ­a realizar
 </pre>
     </p></td></tr>
 </table>
-<p>Pero "LD SP, BC" es una excepción, y no existe como instrucción del Z80. Y como el caso de "LD SP, BC" existen muchos otros de instrucciones que aceptan unos registros como operandos pero no otros. </p>
+<p>Pero "LD SP, BC" es una excepciÃ³n, y no existe como instrucciÃ³n del Z80. Y como el caso de "LD SP, BC" existen muchos otros de instrucciones que aceptan unos registros como operandos pero no otros. </p>
 
-<p>La única solución para programar sin tratar de utilizar instrucciones no permitidas es la práctica: con ella acabaremos conociendo qué operaciones podemos realizar y sobre qué registros se pueden aplicar, y realizaremos nuestros programas con estas limitaciones en mente. Iremos viendo las diferentes excepciones caso a caso, pero podemos encontrar las nuestras propias gracias a los errores que nos dará el ensamblador al intentar ensamblar un programa con una instrucción que no existe para el Z80.</p>
-<p>No os preocupéis: es sólo una cuestión de práctica. Tras haber realizado varios programas en ensamblador ya conoceréis, prácticamente de memoria, qué instrucciones son válidas para el microprocesador y cuáles no.</p>
+<p>La Ãºnica soluciÃ³n para programar sin tratar de utilizar instrucciones no permitidas es la prÃ¡ctica: con ella acabaremos conociendo quÃ© operaciones podemos realizar y sobre quÃ© registros se pueden aplicar, y realizaremos nuestros programas con estas limitaciones en mente. Iremos viendo las diferentes excepciones caso a caso, pero podemos encontrar las nuestras propias gracias a los errores que nos darÃ¡ el ensamblador al intentar ensamblar un programa con una instrucciÃ³n que no existe para el Z80.</p>
+<p>No os preocupÃ©is: es sÃ³lo una cuestiÃ³n de prÃ¡ctica. Tras haber realizado varios programas en ensamblador ya conocerÃ©is, prÃ¡cticamente de memoria, quÃ© instrucciones son vÃ¡lidas para el microprocesador y cuÃ¡les no.</p>
 <p><strong>EL REGISTRO DE FLAGS</strong></p>
-<p>Hemos hablado del registro de 8 bits F como un registro especial. La particularidad de F es que no es un registro de propósito general donde podamos introducir valores a voluntad, sino que los diferentes bits del registro F tienen un significado propio que cambia automáticamente según el resultado de operaciones anteriores.</p>
-<p>Por ejemplo, uno de los bits del registro F, el bit nº 6, es conocido como "Zero Flag", y nos indica si el resultado de la última operación (para determinadas operaciones, como las aritméticas o las de comparación) es cero o no es cero. Si el resultado de la anterior operación resultó cero, este FLAG se pone a uno. Si no resultó cero, el flag se pone a cero.</p>
-<p>¿Para qué sirve pues un flag así? Para gran cantidad de tareas, por ejemplo para bucles (repetir X veces una misma tarea poniendo el registro BC al valor X, ejecutando el mismo código hasta que BC sea cero), o para comparaciones (mayor que, menor que, igual que).</p>
+<p>Hemos hablado del registro de 8 bits F como un registro especial. La particularidad de F es que no es un registro de propÃ³sito general donde podamos introducir valores a voluntad, sino que los diferentes bits del registro F tienen un significado propio que cambia automÃ¡ticamente segÃºn el resultado de operaciones anteriores.</p>
+<p>Por ejemplo, uno de los bits del registro F, el bit nÂº 6, es conocido como "Zero Flag", y nos indica si el resultado de la Ãºltima operaciÃ³n (para determinadas operaciones, como las aritmÃ©ticas o las de comparaciÃ³n) es cero o no es cero. Si el resultado de la anterior operaciÃ³n resultÃ³ cero, este FLAG se pone a uno. Si no resultÃ³ cero, el flag se pone a cero.</p>
+<p>Â¿Para quÃ© sirve pues un flag asÃ­? Para gran cantidad de tareas, por ejemplo para bucles (repetir X veces una misma tarea poniendo el registro BC al valor X, ejecutando el mismo cÃ³digo hasta que BC sea cero), o para comparaciones (mayor que, menor que, igual que).</p>
 <p>Veamos los diferentes registros de flags (bits del registro F) y su utilidad:</p>
 
 <table border="0" cellspacing="0" cellpadding="2" width="400">
@@ -347,30 +347,30 @@ pasmo --tapbas ejemplo.asm ejemplo.tap
 </table>
 
 <ul>
-	<li><p>Flag S (sign o signo): Este flag se pone a uno si el resultado de la operación realizada en complemento a dos es negativo (es una copia del bit más significativo del resultado). Si por ejemplo realizamos una suma entre 2 números en complemento a dos y el resultado es negativo, este bit se pondrá a uno. Si el resultado es positivo, se pondrá a cero. Es útil para realizar operaciones matemáticas entre múltiples registros: por ejemplo, si nos hacemos una rutina de multiplicación o división de números que permita números negativos, este bit nos puede ser útil en alguna parte de la rutina.</p></li>
+	<li><p>Flag S (sign o signo): Este flag se pone a uno si el resultado de la operaciÃ³n realizada en complemento a dos es negativo (es una copia del bit mÃ¡s significativo del resultado). Si por ejemplo realizamos una suma entre 2 nÃºmeros en complemento a dos y el resultado es negativo, este bit se pondrÃ¡ a uno. Si el resultado es positivo, se pondrÃ¡ a cero. Es Ãºtil para realizar operaciones matemÃ¡ticas entre mÃºltiples registros: por ejemplo, si nos hacemos una rutina de multiplicaciÃ³n o divisiÃ³n de nÃºmeros que permita nÃºmeros negativos, este bit nos puede ser Ãºtil en alguna parte de la rutina.</p></li>
 
-	<li><p>Flag Z (zero o cero): Este flag se pone a uno si el resultado de la última operación que afecte a los flags es cero. Por ejemplo, si realizamos una operación matemática y el resultado es cero, se pondrá a uno. Este flag es uno de los más útiles, ya que podemos utilizarlo para múltiples tareas. La primera es para los bucles, ya que podremos programar código como:</p>
+	<li><p>Flag Z (zero o cero): Este flag se pone a uno si el resultado de la Ãºltima operaciÃ³n que afecte a los flags es cero. Por ejemplo, si realizamos una operaciÃ³n matemÃ¡tica y el resultado es cero, se pondrÃ¡ a uno. Este flag es uno de los mÃ¡s Ãºtiles, ya que podemos utilizarlo para mÃºltiples tareas. La primera es para los bucles, ya que podremos programar cÃ³digo como:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
         ; Repetir algo 100 veces
         LD B, 100
 bucle:
-        (...)        ; código
+        (...)        ; cÃ³digo
 
         DEC B        ; Decrementamos B (B=B-1)
-        JR NZ bucle  ; Si el resultado de la operación anterior
+        JR NZ bucle  ; Si el resultado de la operaciÃ³n anterior
                      ; no es cero (NZ = Non Zero), saltar a la
-                     ; etiqueta bucle y continuar. DEC B hará
+                     ; etiqueta bucle y continuar. DEC B harÃ¡
                      ; que el flag Z se ponga a 1 cuando B llegue
-                     ; a cero, lo que afectará al JR NZ.
-                     ; Como resultado, este trozo de código (..)
-                     ; se ejecutará 100 veces.
+                     ; a cero, lo que afectarÃ¡ al JR NZ.
+                     ; Como resultado, este trozo de cÃ³digo (..)
+                     ; se ejecutarÃ¡ 100 veces.
 </pre>
     </p></td></tr>
 </table>
-		<p>Como veremos en su momento, existe una instrucción equivalente a DEC B + JR NZ que es más cómoda de utilizar y más rápida que estas 2 instrucciones juntas (DJNZ), pero se ha elegido el ejemplo que tenéis arriba para que veáis cómo muchas operaciones (en este caso DEC) afectan a los flags, y la utilidad que estos tienen a la hora de programar.</p>
-		<p>Además de para bucles, también podemos utilizarlo para comparaciones. Supongamos que queremos hacer en ensamblador una comparación de igualdad, algo como:</p>
+		<p>Como veremos en su momento, existe una instrucciÃ³n equivalente a DEC B + JR NZ que es mÃ¡s cÃ³moda de utilizar y mÃ¡s rÃ¡pida que estas 2 instrucciones juntas (DJNZ), pero se ha elegido el ejemplo que tenÃ©is arriba para que veÃ¡is cÃ³mo muchas operaciones (en este caso DEC) afectan a los flags, y la utilidad que estos tienen a la hora de programar.</p>
+		<p>AdemÃ¡s de para bucles, tambiÃ©n podemos utilizarlo para comparaciones. Supongamos que queremos hacer en ensamblador una comparaciÃ³n de igualdad, algo como:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -387,7 +387,7 @@ bucle:
 
  LD A, C              ; A = C
                       ; Tenemos que hacer esto porque no existe
-                      ; una instruccion SUB B, C . Sólo se puede
+                      ; una instruccion SUB B, C . SÃ³lo se puede
                       ; restar un registro al registro A.
 
  SUB B                ; A = A-B
@@ -404,30 +404,30 @@ No_Es_Igual:
 </table>
 	</li>
 	<li><p>Flag H (Half-carry o Acarreo-BCD): Se pone a uno cuando en operaciones BCD existe un acarreo del bit 3 al bit 4. Es muy probable que no lleguemos a utilizarlo nunca.</p></li>
-	<li><p>Flag P/V (Parity/Overflow o Paridad/Desbordamiento): En las operaciones que modifican el bit de paridad, este bit vale 1 si el número de unos del resultado de la operación es par, y 0 si es impar. Si, por contra, el resultado de la operación realizada necesita más bits para ser representado de los que nos provee el registro, tendremos un desbordamiento, con este flag a 1. Este mismo bit sirve pues para 2 tareas, y nos indicará una u otra (paridad o desbordamiento) según sea el tipo de operación que hayamos realizado. Por ejemplo, tras una suma, su utilidad será la de indicar el desbordamiento.</p>
-	<p>El flag de desbordamiento se activará cuando en determinadas operaciones pasemos de valores 11111111b a 00000000b, por "falta de bits" para representar el resultado o viceversa . Por ejemplo, en el caso de INC y DEC con registros de 8 bits, si pasamos de 0 a 255 o de 255 a 0.</p>
+	<li><p>Flag P/V (Parity/Overflow o Paridad/Desbordamiento): En las operaciones que modifican el bit de paridad, este bit vale 1 si el nÃºmero de unos del resultado de la operaciÃ³n es par, y 0 si es impar. Si, por contra, el resultado de la operaciÃ³n realizada necesita mÃ¡s bits para ser representado de los que nos provee el registro, tendremos un desbordamiento, con este flag a 1. Este mismo bit sirve pues para 2 tareas, y nos indicarÃ¡ una u otra (paridad o desbordamiento) segÃºn sea el tipo de operaciÃ³n que hayamos realizado. Por ejemplo, tras una suma, su utilidad serÃ¡ la de indicar el desbordamiento.</p>
+	<p>El flag de desbordamiento se activarÃ¡ cuando en determinadas operaciones pasemos de valores 11111111b a 00000000b, por "falta de bits" para representar el resultado o viceversa . Por ejemplo, en el caso de INC y DEC con registros de 8 bits, si pasamos de 0 a 255 o de 255 a 0.</p>
 
 	</li>
-	<li><p>Flag N (Substract o Resta): Se pone a 1 si la última operación realizada fue una resta. Se utiliza en operaciones aritméticas.</p></li>
-	<li><p>Flag C (Carry o Acarreo): Este flag se pone a uno si el resultado de la operación anterior no cupo en el registro y necesita un bit extra para ser representado. Este bit es ese bit extra. Veremos su uso cuando tratemos las operaciones aritméticas, en esta misma entrega.</p></li>
+	<li><p>Flag N (Substract o Resta): Se pone a 1 si la Ãºltima operaciÃ³n realizada fue una resta. Se utiliza en operaciones aritmÃ©ticas.</p></li>
+	<li><p>Flag C (Carry o Acarreo): Este flag se pone a uno si el resultado de la operaciÃ³n anterior no cupo en el registro y necesita un bit extra para ser representado. Este bit es ese bit extra. Veremos su uso cuando tratemos las operaciones aritmÃ©ticas, en esta misma entrega.</p></li>
 </ul>
-<p>Así pues, resumiendo:</p>
+<p>AsÃ­ pues, resumiendo:</p>
 <ul>
-	<li>El registro F es un registro especial cuyo valor no manejamos directamente, sino que cada uno de sus bits tiene un valor especial y está a 1 o a 0 según ciertas condiciones de la última operación realizada que afecte a dicho registro.</li>
-	<li>Por ejemplo, si realizamos una operación y el resultado de la misma es cero, se pondrá a 1 el flag de Zero (Z) del registro F, que no es más que su bit número 6.</li>
+	<li>El registro F es un registro especial cuyo valor no manejamos directamente, sino que cada uno de sus bits tiene un valor especial y estÃ¡ a 1 o a 0 segÃºn ciertas condiciones de la Ãºltima operaciÃ³n realizada que afecte a dicho registro.</li>
+	<li>Por ejemplo, si realizamos una operaciÃ³n y el resultado de la misma es cero, se pondrÃ¡ a 1 el flag de Zero (Z) del registro F, que no es mÃ¡s que su bit nÃºmero 6.</li>
 
-	<li>No todas las operaciones afectan a los flags, iremos viendo qué operaciones afectan a qué flags conforme avancemos en el curso, en el momento en que se estudia cada instrucción.</li>
-	<li>Existen operaciones que se pueden ejecutar con el estado de los flags como condición. Por ejemplo, realizar un salto a una dirección de memoria si un determinado flag está activo, o si no lo está.</li>
+	<li>No todas las operaciones afectan a los flags, iremos viendo quÃ© operaciones afectan a quÃ© flags conforme avancemos en el curso, en el momento en que se estudia cada instrucciÃ³n.</li>
+	<li>Existen operaciones que se pueden ejecutar con el estado de los flags como condiciÃ³n. Por ejemplo, realizar un salto a una direcciÃ³n de memoria si un determinado flag estÃ¡ activo, o si no lo estÃ¡.</li>
 </ul>
 <p><strong>INSTRUCCIONES LD</strong></p>
-<p>Las operaciones que más utilizaremos en nuestros programas en ensamblador serán sin duda las operaciones de carga o instrucciones LD. Estas operaciones sirven para:</p>
+<p>Las operaciones que mÃ¡s utilizaremos en nuestros programas en ensamblador serÃ¡n sin duda las operaciones de carga o instrucciones LD. Estas operaciones sirven para:</p>
 <ul>
 	<li>Meter un valor en un registro.</li>
 	<li>Copiar el valor de un registro en otro registro.</li>
 
-	<li>Escribir en memoria (en una dirección determinada) un valor.</li>
-	<li>Escribir en memoria (en una dirección determinada) el contenido de un registro.</li>
-	<li>Asignarle a un registro el contenido de una dirección de memoria.</li>
+	<li>Escribir en memoria (en una direcciÃ³n determinada) un valor.</li>
+	<li>Escribir en memoria (en una direcciÃ³n determinada) el contenido de un registro.</li>
+	<li>Asignarle a un registro el contenido de una direcciÃ³n de memoria.</li>
 </ul>
 <p>La sintaxis de LD en lenguaje ensamblador es:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -438,9 +438,9 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Así, gracias a las operaciones LD podemos:</p>
+<p>AsÃ­, gracias a las operaciones LD podemos:</p>
 <ul>
-	<li><p>Asignar a un registro un valor numérico directo de 8 o 16 bits.</p>
+	<li><p>Asignar a un registro un valor numÃ©rico directo de 8 o 16 bits.</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -485,18 +485,18 @@ No_Es_Igual:
 </table>
 	</li>
 </ul>
-<p>Nótese cómo el operador () nos permite acceder a memoria. En nuestros ejemplos, LD A, (12345) no significa meter en A el valor 12345 (cosa imposible al ser un registro de 16 bits) sino almacenar en el registro A el valor que hay almacenado en la celdilla número 12345 de la memoria del Spectrum.</p>
+<p>NÃ³tese cÃ³mo el operador () nos permite acceder a memoria. En nuestros ejemplos, LD A, (12345) no significa meter en A el valor 12345 (cosa imposible al ser un registro de 16 bits) sino almacenar en el registro A el valor que hay almacenado en la celdilla nÃºmero 12345 de la memoria del Spectrum.</p>
 
-<p>En un microprocesador con un juego de instrucciones ortogonal, se podría usar cualquier origen y cualquier destino sin distinción. En el caso del Z80 no es así. El listado completo de operaciones válidas con LD es el siguiente:</p>
+<p>En un microprocesador con un juego de instrucciones ortogonal, se podrÃ­a usar cualquier origen y cualquier destino sin distinciÃ³n. En el caso del Z80 no es asÃ­. El listado completo de operaciones vÃ¡lidas con LD es el siguiente:</p>
 <p>Leyenda:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
- N  = valor numérico directo de 8 bits (0-255)
- NN = valor numérico directo de 16 bits (0-65535)
+ N  = valor numÃ©rico directo de 8 bits (0-255)
+ NN = valor numÃ©rico directo de 16 bits (0-65535)
  r  = registro de 8 bits (A, B, C, D, E, H, L)
  rr = registro de 16 bits (BC, DE, HL, SP)
- ri = registro índice (IX o IY).
+ ri = registro Ã­ndice (IX o IY).
 </pre>
     </p></td></tr>
 </table>
@@ -533,11 +533,11 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Además, tenemos una serie de casos "especiales":</p>
+<p>AdemÃ¡s, tenemos una serie de casos "especiales":</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
- ; Manipulación del puntero de pila (SP)
+ ; ManipulaciÃ³n del puntero de pila (SP)
  LD SP, ri
  LD SP, HL
 
@@ -548,7 +548,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Veamos ejemplos válidos y cuál sería el resultado de su ejecución:</p>
+<p>Veamos ejemplos vÃ¡lidos y cuÃ¡l serÃ­a el resultado de su ejecuciÃ³n:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -585,28 +585,28 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Haré hincapié de nuevo en el mismo detalle: debido a que el juego de instrucciones del Z80 no es ortogonal, en ocasiones no podemos ejecutar ciertas operaciones que podrían sernos útiles con determinados registros. En ese caso tendremos que buscar una solución mediante los registros y operaciones válidas de que disponemos.</p>
+<p>HarÃ© hincapiÃ© de nuevo en el mismo detalle: debido a que el juego de instrucciones del Z80 no es ortogonal, en ocasiones no podemos ejecutar ciertas operaciones que podrÃ­an sernos Ãºtiles con determinados registros. En ese caso tendremos que buscar una soluciÃ³n mediante los registros y operaciones vÃ¡lidas de que disponemos.</p>
 
-<p>Un detalle muy importante respecto a las instrucciones de carga: en el caso de las operaciones LD, el registro F no ve afectado ninguno de sus indicadores o flags en relación al resultado de la ejecución de las mismas (salvo en el caso de "LD A, I" y "LD A, R").</p>
-<p>Esto quiere decir que una operación como "LD A, 0", por ejemplo, no activará el flag de Zero del registro F.</p>
+<p>Un detalle muy importante respecto a las instrucciones de carga: en el caso de las operaciones LD, el registro F no ve afectado ninguno de sus indicadores o flags en relaciÃ³n al resultado de la ejecuciÃ³n de las mismas (salvo en el caso de "LD A, I" y "LD A, R").</p>
+<p>Esto quiere decir que una operaciÃ³n como "LD A, 0", por ejemplo, no activarÃ¡ el flag de Zero del registro F.</p>
 <p><strong>CPU Z80: LOW ENDIAN</strong></p>
-<p>Un detalle más sobre nuestra CPU: a la hora de trabajar con datos de 16 bits (por ejemplo, leer o escribir de memoria) conviene tener en cuenta que nuestro Z80 es una CPU del tipo LOW-ENDIAN, es decir, que si almacenamos en la posición de memoria 0000h el valor "1234h", el contenido de las celdillas de memoria sería:</p>
+<p>Un detalle mÃ¡s sobre nuestra CPU: a la hora de trabajar con datos de 16 bits (por ejemplo, leer o escribir de memoria) conviene tener en cuenta que nuestro Z80 es una CPU del tipo LOW-ENDIAN, es decir, que si almacenamos en la posiciÃ³n de memoria 0000h el valor "1234h", el contenido de las celdillas de memoria serÃ­a:</p>
 <table>
-	<tr><th style="border-bottom: 1px solid #000;">Posición</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
+	<tr><th style="border-bottom: 1px solid #000;">PosiciÃ³n</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
 	<tr><td>0000h</td><td>34h</td></tr>
 
 	<tr><td>0001h</td><td>12h</td></tr>
 </table>
-<p>En otro tipo de procesadores del tipo Big-Endian, los bytes aparecerían escritos en memoria de la siguiente forma:</p>
+<p>En otro tipo de procesadores del tipo Big-Endian, los bytes aparecerÃ­an escritos en memoria de la siguiente forma:</p>
 <table>
-	<tr><th style="border-bottom: 1px solid #000;">Posición</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
+	<tr><th style="border-bottom: 1px solid #000;">PosiciÃ³n</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
 	<tr><td>0000h</td><td>12h</td></tr>
 	<tr><td>0001h</td><td>34h</td></tr>
 
 </table>
 <p>Debemos tener en cuenta este dato a la hora de escribir valores de 16 bits en memoria y recuperarlos posteriormente mediante operaciones de acceso a la memoria.</p>
 <p><strong>INCREMENTOS Y DECREMENTOS</strong></p>
-<p>Entre las operaciones disponibles, tenemos la posibilidad de incrementar (INC) y decrementar (DEC) en 1 unidad el contenido de determinados registros de 8 y 16 bits, así como de posiciones de memoria apuntadas por HL o por IX/IY más un offset (desplazamiento de 8 bits).</p>
+<p>Entre las operaciones disponibles, tenemos la posibilidad de incrementar (INC) y decrementar (DEC) en 1 unidad el contenido de determinados registros de 8 y 16 bits, asÃ­ como de posiciones de memoria apuntadas por HL o por IX/IY mÃ¡s un offset (desplazamiento de 8 bits).</p>
 <p>Por ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -630,22 +630,22 @@ No_Es_Igual:
 	<li><p>DEC r</p></li>
 	<li><p>INC rr</p></li>
 	<li><p>DEC rr</p>
-		<p>Donde r puede ser A, B, C, D, E, H o L, y 'rr' puede ser BC, DE, HL, SP, IX o IY. Esta instrucción incrementa o decrementa el valor contenido en el registro especificado.</p>
+		<p>Donde r puede ser A, B, C, D, E, H o L, y 'rr' puede ser BC, DE, HL, SP, IX o IY. Esta instrucciÃ³n incrementa o decrementa el valor contenido en el registro especificado.</p>
 
 	</li>
 	<li><p>INC (HL)</p></li>
 	<li><p>DEC (HL)</p>
-		<p>Incrementa o decrementa el byte que contiene la dirección de memoria apuntada por HL.</p>
+		<p>Incrementa o decrementa el byte que contiene la direcciÃ³n de memoria apuntada por HL.</p>
 	</li>
 	<li><p>INC (IX+N)</p></li>
 	<li><p>DEC (IX+N)</p></li>
 
 	<li><p>INC (IY+N)</p></li>
 	<li><p>DEC (IY+N)</p>
-		<p>Incrementa o decrementa el byte que contiene la dirección de memoria resultante de sumar el valor del registro IX o el registro IY con un valor numérico de 8 bits en complemento a dos.</p>
+		<p>Incrementa o decrementa el byte que contiene la direcciÃ³n de memoria resultante de sumar el valor del registro IX o el registro IY con un valor numÃ©rico de 8 bits en complemento a dos.</p>
 	</li>
 </ul>
-<p>Por ejemplo, las siguientes instrucciones serían válidas:</p>
+<p>Por ejemplo, las siguientes instrucciones serÃ­an vÃ¡lidas:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -660,24 +660,24 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Unos apuntes sobre la afectación de los flags ante el uso de INC y DEC:</p>
+<p>Unos apuntes sobre la afectaciÃ³n de los flags ante el uso de INC y DEC:</p>
 <ul>
-	<li>Si un registro de 8 bits vale 255 (FFh) y lo incrementamos, pasará a valer 0.</li>
-	<li>Si un registro de 16 bits vale 65535 (FFFFh)y lo incrementamos, pasará a valer 0.</li>
-	<li>Si un registro de 8 bits vale 0  y lo decrementamos, pasará a valer 255 (FFh).</li>
+	<li>Si un registro de 8 bits vale 255 (FFh) y lo incrementamos, pasarÃ¡ a valer 0.</li>
+	<li>Si un registro de 16 bits vale 65535 (FFFFh)y lo incrementamos, pasarÃ¡ a valer 0.</li>
+	<li>Si un registro de 8 bits vale 0  y lo decrementamos, pasarÃ¡ a valer 255 (FFh).</li>
 
-	<li>Si un registro de 16 bits vale 0 (0h) y lo decrementamos, pasará a valer 65535 (FFh).</li>
-	<li>En estos desbordamientos no se tomará en cuenta para nada el bit de Carry (acarreo) de los flags (registro F), ni tampoco lo afectarán tras ejecutarse.</li>
-	<li>Las operaciones INC y DEC sobre registros de 16 bits (BC, DE, HL, IX, IY, SP) no afectan a los flags. Esto implica que no podemos usar como condición de flag zero para un salto el resultado de instrucciones como "DEC BC", por ejemplo.</li>
-	<li>Las operaciones INC y DEC sobre registros de 8 bits y sobre la memoria no afectan al flag de acarreo, pero sí que pueden afectar al flag de Zero (Z), al de Paridad/Overflow (P/V), al de Signo (S) y al de Half-Carry (H).</li>
+	<li>Si un registro de 16 bits vale 0 (0h) y lo decrementamos, pasarÃ¡ a valer 65535 (FFh).</li>
+	<li>En estos desbordamientos no se tomarÃ¡ en cuenta para nada el bit de Carry (acarreo) de los flags (registro F), ni tampoco lo afectarÃ¡n tras ejecutarse.</li>
+	<li>Las operaciones INC y DEC sobre registros de 16 bits (BC, DE, HL, IX, IY, SP) no afectan a los flags. Esto implica que no podemos usar como condiciÃ³n de flag zero para un salto el resultado de instrucciones como "DEC BC", por ejemplo.</li>
+	<li>Las operaciones INC y DEC sobre registros de 8 bits y sobre la memoria no afectan al flag de acarreo, pero sÃ­ que pueden afectar al flag de Zero (Z), al de Paridad/Overflow (P/V), al de Signo (S) y al de Half-Carry (H).</li>
 </ul>
-<p>Lo siguiente que vamos a ver es una tabla de afectación de flags (que podréis ver en muchas tablas de instrucciones del Z80, y a las que conviene que os vayáis acostumbrando). Esta tabla indica cómo afecta cada instrucción a cada uno de los flags:</p>
+<p>Lo siguiente que vamos a ver es una tabla de afectaciÃ³n de flags (que podrÃ©is ver en muchas tablas de instrucciones del Z80, y a las que conviene que os vayÃ¡is acostumbrando). Esta tabla indica cÃ³mo afecta cada instrucciÃ³n a cada uno de los flags:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
 <pre>
                          Flags
-   Instrucción       |S Z H P N C|
+   InstrucciÃ³n       |S Z H P N C|
  ----------------------------------
    INC r             |* * * V 0 -|
    INC [HL]          |* * * V 0 -|
@@ -689,12 +689,12 @@ No_Es_Igual:
  Donde:
  r = registro de 8 bits
  rr = registro de 16 bits (BC, DE, HL, IX, IY)
- ri = registro índice (IX, IY)
+ ri = registro Ã­ndice (IX, IY)
  N = desplazamiento de 8 bits (entre -128 y +127).
 
  Y respecto a los flags:
- - = El flag NO se ve afectado por la operación.
- * = El flag se ve afectado por la operación acorde al resultado.
+ - = El flag NO se ve afectado por la operaciÃ³n.
+ * = El flag se ve afectado por la operaciÃ³n acorde al resultado.
  0 = El flag se pone a cero.
  1 = El flag se pone a uno.
  V = El flag se comporta como un flag de Overflow acorde al resultado.
@@ -703,9 +703,9 @@ No_Es_Igual:
     </p></td></tr>
 </table>
 <p><strong>OPERACIONES MATEMATICAS</strong></p>
-<p>Las operaciones aritméticas básicas para nuestro Spectrum son la suma y la resta, tanto con acarreo como sin él. A partir de ellas deberemos crearnos nuestras propias rutinas para multiplicar, dividir, etc.</p>
+<p>Las operaciones aritmÃ©ticas bÃ¡sicas para nuestro Spectrum son la suma y la resta, tanto con acarreo como sin Ã©l. A partir de ellas deberemos crearnos nuestras propias rutinas para multiplicar, dividir, etc.</p>
 <h4>Suma: ADD (Add)</h4>
-<p>Nuestro microprocesador Z80 puede realizar sumas de 8 y 16 bits internamente. La instrucción utilizada para ello es "ADD" y el formato es:</p>
+<p>Nuestro microprocesador Z80 puede realizar sumas de 8 y 16 bits internamente. La instrucciÃ³n utilizada para ello es "ADD" y el formato es:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -726,18 +726,18 @@ No_Es_Igual:
 
  s:  Cualquier registro de 8 bits (A, B, C, D, E, H, L),
      cualquier valor inmediato de 8 bits (en el rango 0-255 o -128+127
-     en complemento a dos), cualquier dirección de memoria apuntada por HL,
-     y cualquier dirección de memoria apuntada por un registro índice con
+     en complemento a dos), cualquier direcciÃ³n de memoria apuntada por HL,
+     y cualquier direcciÃ³n de memoria apuntada por un registro Ã­ndice con
      desplazamiento de 8 bits.
  ss: Cualquier registro de 16 bits de entre los siguientes: BC, DE, HL, SP.
- ri: Uno de los 2 registros índices (IX o IY).
+ ri: Uno de los 2 registros Ã­ndices (IX o IY).
  rr: Cualquier registro de 16 bits de entre los siguientes excepto el mismo
-     registro índice origen: BC, DE, HL, IX, IY, SP.
+     registro Ã­ndice origen: BC, DE, HL, IX, IY, SP.
 </pre>
     </p></td></tr>
 
 </table>
-<p>Esto daría la posibilidad de ejecutar cualquiera de las siguientes instrucciones:</p>
+<p>Esto darÃ­a la posibilidad de ejecutar cualquiera de las siguientes instrucciones:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -759,29 +759,29 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Por contra, estas instrucciones no serían válidas:</p>
+<p>Por contra, estas instrucciones no serÃ­an vÃ¡lidas:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
 <pre>
- ADD B, C      ; Sólo A puede ser destino
- ADD BC, DE    ; Sólo puede ser destino HL
- ADD IX, IX    ; No podemos sumar un registro índice a él mismo
+ ADD B, C      ; SÃ³lo A puede ser destino
+ ADD BC, DE    ; SÃ³lo puede ser destino HL
+ ADD IX, IX    ; No podemos sumar un registro Ã­ndice a Ã©l mismo
 </pre>
     </p></td></tr>
 </table>
-<p>La afectación de los flags ante las operaciones de sumas es la siguiente:</p>
+<p>La afectaciÃ³n de los flags ante las operaciones de sumas es la siguiente:</p>
 <ul>
-	<li>Para "ADD A, s", el registro N (Substraction) se pone a 0 (lógicamente, ya que sólo se pone a uno cuando se ha realizado una resta). El registro P/V se comporta como un registro de Overflow e indica si ha habido overflow (desbordamiento) en la operación. El resto de flags (Sign, Zero, Half-Carry y Carry) se verán afectados de acuerdo al resultado de la operación de suma.</li>
-	<li>Para "ADD HL, ss" y "ADD ri, rr", se pone a 0 el flag N, y sólo se verá afectado el flag de acarreo (C) de acuerdo al resultado de la operación.</li>
+	<li>Para "ADD A, s", el registro N (Substraction) se pone a 0 (lÃ³gicamente, ya que sÃ³lo se pone a uno cuando se ha realizado una resta). El registro P/V se comporta como un registro de Overflow e indica si ha habido overflow (desbordamiento) en la operaciÃ³n. El resto de flags (Sign, Zero, Half-Carry y Carry) se verÃ¡n afectados de acuerdo al resultado de la operaciÃ³n de suma.</li>
+	<li>Para "ADD HL, ss" y "ADD ri, rr", se pone a 0 el flag N, y sÃ³lo se verÃ¡ afectado el flag de acarreo (C) de acuerdo al resultado de la operaciÃ³n.</li>
 </ul>
 
-<p>O, en forma de tabla de afectación:</p>
+<p>O, en forma de tabla de afectaciÃ³n:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
                          Flags
-   Instrucción       |S Z H P N C|
+   InstrucciÃ³n       |S Z H P N C|
  ----------------------------------
  ADD A, s            |* * * V 0 *|
  ADD HL, ss          |- - ? - 0 *|
@@ -789,7 +789,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Las sumas realizadas por el Spectrum se hacen a nivel de bits, empezando por el bit de más a la derecha y yendo hacia la izquierda, según las siguientes reglas:</p>
+<p>Las sumas realizadas por el Spectrum se hacen a nivel de bits, empezando por el bit de mÃ¡s a la derecha y yendo hacia la izquierda, segÃºn las siguientes reglas:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -801,7 +801,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Al sumar el último bit, se actualizará el flag de acarreo si es necesario.</p>
+<p>Al sumar el Ãºltimo bit, se actualizarÃ¡ el flag de acarreo si es necesario.</p>
 <p>Por ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -817,7 +817,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Si la suma del último bit (bit 7) requiere un bit extra, se utilizará el Carry Flag del registro F para almacenarlo. Supongamos que ejecutamos el siguiente código:</p>
+<p>Si la suma del Ãºltimo bit (bit 7) requiere un bit extra, se utilizarÃ¡ el Carry Flag del registro F para almacenarlo. Supongamos que ejecutamos el siguiente cÃ³digo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -827,10 +827,10 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>El resultado de la ejecución de esta suma sería: A=128+128=256. Como 256 (100000000b) tiene 9 bits, no podemos representar el resultado con los 8 bits del registro A, de modo que el resultado de la suma sería realmente: A = 00000000 y CarryFlag = 1.</p>
+<p>El resultado de la ejecuciÃ³n de esta suma serÃ­a: A=128+128=256. Como 256 (100000000b) tiene 9 bits, no podemos representar el resultado con los 8 bits del registro A, de modo que el resultado de la suma serÃ­a realmente: A = 00000000 y CarryFlag = 1.</p>
 
 <h4>Resta: SUB (Substract)</h4>
-<p>En el caso de las restas, sólo es posible realizar (de nuevo gracias a la no ortogonalidad del J.I.) la operación "A=A-origen", donde "origen" puede ser cualquier registro de 8 bits, valor inmediato de 8 bits, contenido de la memoria apuntada por [HL], o contenido de la memoria apuntada por un registro índice más un desplazamiento. El formato de la instrucción no requiere 2 operandos, ya que el registro destino sólo puede ser A:</p>
+<p>En el caso de las restas, sÃ³lo es posible realizar (de nuevo gracias a la no ortogonalidad del J.I.) la operaciÃ³n "A=A-origen", donde "origen" puede ser cualquier registro de 8 bits, valor inmediato de 8 bits, contenido de la memoria apuntada por [HL], o contenido de la memoria apuntada por un registro Ã­ndice mÃ¡s un desplazamiento. El formato de la instrucciÃ³n no requiere 2 operandos, ya que el registro destino sÃ³lo puede ser A:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -862,19 +862,19 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Es importante recordar que en una operación "SUB X", la operación realizada es "A=A-X" y no "A=X-A".</p>
-<p>Por otra parte, con respecto a la afectación de flags, tenemos la siguiente:</p>
+<p>Es importante recordar que en una operaciÃ³n "SUB X", la operaciÃ³n realizada es "A=A-X" y no "A=X-A".</p>
+<p>Por otra parte, con respecto a la afectaciÃ³n de flags, tenemos la siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
  Flags:      S Z H P N C
  -----------------------
- Afectación: * * * V 1 *
+ AfectaciÃ³n: * * * V 1 *
 </pre>
 
     </p></td></tr>
 </table>
-<p>Es decir, el flag de N (substraction) se pone a 1, para indicar que hemos realizado una resta. El flag de P/V (Parity/Overflow) se convierte en indicar de Overflow y queda afectado por el resultado de la resta. El resto de flags (Sign, Zero, Half-Carry y Carry) quedarán afectados de acuerdo al resultado de la misma (por ejemplo, si el resultado es Cero, se activará el Flag Z).</p>
+<p>Es decir, el flag de N (substraction) se pone a 1, para indicar que hemos realizado una resta. El flag de P/V (Parity/Overflow) se convierte en indicar de Overflow y queda afectado por el resultado de la resta. El resto de flags (Sign, Zero, Half-Carry y Carry) quedarÃ¡n afectados de acuerdo al resultado de la misma (por ejemplo, si el resultado es Cero, se activarÃ¡ el Flag Z).</p>
 <h4>Suma con acarreo: ADC (Add with carry)</h4>
 <p>Sumar con acarreo dos elementos significa realizar la suma de uno con el otro y, posteriormente, sumarle el estado del flag de Carry. Es decir:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -888,12 +888,12 @@ No_Es_Igual:
     </p></td></tr>
 
 </table>
-<p> La tabla de afectación de flags sería la siguiente:</p>
+<p> La tabla de afectaciÃ³n de flags serÃ­a la siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
                         Flags
-  Instrucción       |S Z H P N C|
+  InstrucciÃ³n       |S Z H P N C|
  ----------------------------------
  ADC A,s            |* * * V 0 *|
  ADC HL,ss          |* * ? V 0 *|
@@ -903,7 +903,7 @@ No_Es_Igual:
 <p>La suma con acarreo se utiliza normalmente para sumar las partes altas de palabras de 16 bytes. Se suma la parte baja con ADD y luego la parte alta con ADC para tener en cuenta el acarreo de la suma de la parte baja.</p>
 <h4>Resta con acarreo: SBC (Substract with carry)</h4>
 
-<p>Al igual que en el caso de la suma con acarreo, podemos realizar restas con acarreo, que no son más que realizar una resta de los 2 operandos, tras lo cual restamos además el valor del bit de Carry Flag:</p>
+<p>Al igual que en el caso de la suma con acarreo, podemos realizar restas con acarreo, que no son mÃ¡s que realizar una resta de los 2 operandos, tras lo cual restamos ademÃ¡s el valor del bit de Carry Flag:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -912,13 +912,13 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>La tabla de afectación de flags (en este caso con N=1, ya que es una resta):</p>
+<p>La tabla de afectaciÃ³n de flags (en este caso con N=1, ya que es una resta):</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
 <pre>
                         Flags
-  Instrucción       |S Z H P N C|
+  InstrucciÃ³n       |S Z H P N C|
  ----------------------------------
  SBC A,s            |* * * V 1 *|
  SBC HL,ss          |* * ? V 1 *|
@@ -926,8 +926,8 @@ No_Es_Igual:
     </p></td></tr>
 </table>
 <p><strong>COMPLEMENTO A DOS</strong></p>
-<p>A lo largo del presente texto hemos hablado de números en complemento a dos. Complemento a dos es una manera de representar números negativos en nuestros registros de 8 bits, utilizando para ello como signo el bit más significativo (bit 7) del byte.</p>
-<p>Si dicho bit está a 0, el número es positivo, y si está a 1 es negativo. Así:</p>
+<p>A lo largo del presente texto hemos hablado de nÃºmeros en complemento a dos. Complemento a dos es una manera de representar nÃºmeros negativos en nuestros registros de 8 bits, utilizando para ello como signo el bit mÃ¡s significativo (bit 7) del byte.</p>
+<p>Si dicho bit estÃ¡ a 0, el nÃºmero es positivo, y si estÃ¡ a 1 es negativo. AsÃ­:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -954,7 +954,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Podemos averiguar cuál es la versión negativa de cualquier número positivo (y viceversa), invirtiendo el estado de los bits y sumando uno:</p>
+<p>Podemos averiguar cuÃ¡l es la versiÃ³n negativa de cualquier nÃºmero positivo (y viceversa), invirtiendo el estado de los bits y sumando uno:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -967,7 +967,7 @@ No_Es_Igual:
     </p></td></tr>
 
 </table>
-<p>Como veremos en unos minutos, se eligió este sistema para representar los números negativos para que las operaciones matemáticas estándar funcionaran directamente sobre los números positivos y negativos. ¿Por qué no utilizamos directamente la inversión de los bits para representar los números negativos y estamos sumando además 1 para obtenerlos? Sencillo: si no sumáramos uno y simplemente invirtiéramos los bits, tendríamos 2 ceros (00000000 y 11111111) y además las operaciones matemáticas no cuadrarían (por culpa de los dos ceros). La gracia del complemento a dos es que las sumas y restas binarias lógicas (ADD, ADC, SUB y SBC) funcionan:</p>
+<p>Como veremos en unos minutos, se eligiÃ³ este sistema para representar los nÃºmeros negativos para que las operaciones matemÃ¡ticas estÃ¡ndar funcionaran directamente sobre los nÃºmeros positivos y negativos. Â¿Por quÃ© no utilizamos directamente la inversiÃ³n de los bits para representar los nÃºmeros negativos y estamos sumando ademÃ¡s 1 para obtenerlos? Sencillo: si no sumÃ¡ramos uno y simplemente invirtiÃ©ramos los bits, tendrÃ­amos 2 ceros (00000000 y 11111111) y ademÃ¡s las operaciones matemÃ¡ticas no cuadrarÃ­an (por culpa de los dos ceros). La gracia del complemento a dos es que las sumas y restas binarias lÃ³gicas (ADD, ADC, SUB y SBC) funcionan:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -980,7 +980,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>El resultado es 00001111, es decir, 15, ya que 32-17=15. El flag de carry se pone a 1, pero lo podemos ignorar, porque el flag que nos indica realmente el desbordamiento (como veremos a continuación) en operaciones de complemento a dos es el flag de Overflow.</p>
+<p>El resultado es 00001111, es decir, 15, ya que 32-17=15. El flag de carry se pone a 1, pero lo podemos ignorar, porque el flag que nos indica realmente el desbordamiento (como veremos a continuaciÃ³n) en operaciones de complemento a dos es el flag de Overflow.</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -994,7 +994,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>Como podéis ver, al sumar +17 y -17 el resultado es 0. Si representáramos los números negativos simplemente como la inversa de los positivos, esto no se podría hacer:</p>
+<p>Como podÃ©is ver, al sumar +17 y -17 el resultado es 0. Si representÃ¡ramos los nÃºmeros negativos simplemente como la inversa de los positivos, esto no se podrÃ­a hacer:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -1006,11 +1006,11 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>En complemento a dos, las sumas y restas de números se pueden realizar a nivel lógico mediante las operaciones estándar del Z80. En realidad para el Z80 no hay más que simples operaciones de unos y ceros, y somos nosotros los que interpretamos la información de los operandos y del resultado de una forma que nos permite representar números negativos.</p>
-<p>En otras palabras: cuando vemos un uno en el bit más significativo de un resultado, somos nosotros los que tenemos que interpretar si ese bit representa un signo negativo o no: si sabemos que estamos operando con números 0-255, podemos tratarlo como un resultado positivo. Si estábamos operando con números en complemento a dos, podemos tratarlo como un resultado en complemento a dos. Para el microprocesador, en cambio, no hay más que unos y ceros.</p>
-<p>Para acabar, veamos cuál es la diferencia entre el Flag de Carry (C) y el de Overflow (V) a la hora de realizar sumas y restas. El primero (C) se activará cuando se produzca un desbordamiento físico a la hora de sumar o restar 2 números binarios (cuando necesitemos un bit extra para representarlo). El segundo (V), se utilizará cuando se produzca cualquier sobrepasamiento operando con 2 números en complemento a dos.</p>
-<p>Como acabamos de ver, en complemento a dos el último bit (el bit 7) nos indica el signo, y cuando operamos con 2 números binarios que nosotros interpretamos como números en complemento a dos no nos basta con el bit de Carry. Es el bit de Overflow el que nos dará información sobre el desbordamiento a un nivel lógico.</p>
-<p>En pocas palabras, el bit de Carry se activará si pasamos de 255 a 0 o de 0 a 255 (comportándose como un bit de valor 2 elevado a 8, o 256), y el bit de overflow lo hará si el resultado de una operación en complemento a dos requiere más de 7 bits para ser representado.</p>
+<p>En complemento a dos, las sumas y restas de nÃºmeros se pueden realizar a nivel lÃ³gico mediante las operaciones estÃ¡ndar del Z80. En realidad para el Z80 no hay mÃ¡s que simples operaciones de unos y ceros, y somos nosotros los que interpretamos la informaciÃ³n de los operandos y del resultado de una forma que nos permite representar nÃºmeros negativos.</p>
+<p>En otras palabras: cuando vemos un uno en el bit mÃ¡s significativo de un resultado, somos nosotros los que tenemos que interpretar si ese bit representa un signo negativo o no: si sabemos que estamos operando con nÃºmeros 0-255, podemos tratarlo como un resultado positivo. Si estÃ¡bamos operando con nÃºmeros en complemento a dos, podemos tratarlo como un resultado en complemento a dos. Para el microprocesador, en cambio, no hay mÃ¡s que unos y ceros.</p>
+<p>Para acabar, veamos cuÃ¡l es la diferencia entre el Flag de Carry (C) y el de Overflow (V) a la hora de realizar sumas y restas. El primero (C) se activarÃ¡ cuando se produzca un desbordamiento fÃ­sico a la hora de sumar o restar 2 nÃºmeros binarios (cuando necesitemos un bit extra para representarlo). El segundo (V), se utilizarÃ¡ cuando se produzca cualquier sobrepasamiento operando con 2 nÃºmeros en complemento a dos.</p>
+<p>Como acabamos de ver, en complemento a dos el Ãºltimo bit (el bit 7) nos indica el signo, y cuando operamos con 2 nÃºmeros binarios que nosotros interpretamos como nÃºmeros en complemento a dos no nos basta con el bit de Carry. Es el bit de Overflow el que nos darÃ¡ informaciÃ³n sobre el desbordamiento a un nivel lÃ³gico.</p>
+<p>En pocas palabras, el bit de Carry se activarÃ¡ si pasamos de 255 a 0 o de 0 a 255 (comportÃ¡ndose como un bit de valor 2 elevado a 8, o 256), y el bit de overflow lo harÃ¡ si el resultado de una operaciÃ³n en complemento a dos requiere mÃ¡s de 7 bits para ser representado.</p>
 <p>Mediante ejemplos:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
@@ -1039,10 +1039,10 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>En el ejemplo anterior, V se activa porque no ha habido desbordamiento físico (no es necesario un bit extra para representar la operación), pero sí lógico: no podemos representar +128 con 7 bits+signo en complemento a dos.</p>
+<p>En el ejemplo anterior, V se activa porque no ha habido desbordamiento fÃ­sico (no es necesario un bit extra para representar la operaciÃ³n), pero sÃ­ lÃ³gico: no podemos representar +128 con 7 bits+signo en complemento a dos.</p>
 <p><strong>INSTRUCCIONES DE INTERCAMBIO</strong></p>
-<p>Como ya se ha explicado, disponemos de un banco de registros alternativos (los Shadow Registers), y podemos conmutar los valores entre los registros estándar y los alternativos mediante unas determinadas instrucciones del Z80.</p>
-<p>El Z80 nos proporciona una serie de registros de propósito general (así como un registro de flags), de nombres A, B, C, D, E, F, H y L. El micro dispone también de unos registros extra (set alternativo conocido como Shadow Registers) de nombre A', B', C', D', E', F', H' y L', que aprovecharemos en cualquier momento de nuestro programa. No obstante, no podremos hacer uso directo de estos registros en instrucciones en ensamblador. No es posible, por ejemplo, ninguna de las siguientes instrucciones:</p>
+<p>Como ya se ha explicado, disponemos de un banco de registros alternativos (los Shadow Registers), y podemos conmutar los valores entre los registros estÃ¡ndar y los alternativos mediante unas determinadas instrucciones del Z80.</p>
+<p>El Z80 nos proporciona una serie de registros de propÃ³sito general (asÃ­ como un registro de flags), de nombres A, B, C, D, E, F, H y L. El micro dispone tambiÃ©n de unos registros extra (set alternativo conocido como Shadow Registers) de nombre A', B', C', D', E', F', H' y L', que aprovecharemos en cualquier momento de nuestro programa. No obstante, no podremos hacer uso directo de estos registros en instrucciones en ensamblador. No es posible, por ejemplo, ninguna de las siguientes instrucciones:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -1054,7 +1054,7 @@ No_Es_Igual:
 </pre>
     </p></td></tr>
 </table>
-<p>La manera de utilizar estos registros alternativos es conmutar sus valores con los registros estándar mediante la instrucción "EXX", cuyo resultado es el intercambio de B por B', C por C', D por D', E por E', H por H' y L por L'. Supongamos que tenemos los siguientes valores en los registros:</p>
+<p>La manera de utilizar estos registros alternativos es conmutar sus valores con los registros estÃ¡ndar mediante la instrucciÃ³n "EXX", cuyo resultado es el intercambio de B por B', C por C', D por D', E por E', H por H' y L por L'. Supongamos que tenemos los siguientes valores en los registros:</p>
 <table>
 <tr><th style="border-bottom: 1px solid #000;">Registro</th><th style="border-bottom: 1px solid #000;">Valor</th><th style="border-bottom: 1px solid #000;">Registro</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
 
@@ -1066,7 +1066,7 @@ No_Es_Igual:
 <tr><td>H</td><td>00h</td><td>H'</td><td>00h</td></tr>
 <tr><td>L</td><td>31h</td><td>L'</td><td>00h</td></tr>
 </table>
-<p>En el momento en que realicemos un EXX, los registros cambiarán de valor por la "conmutación" de bancos:</p>
+<p>En el momento en que realicemos un EXX, los registros cambiarÃ¡n de valor por la "conmutaciÃ³n" de bancos:</p>
 <table>
 <tr><th style="border-bottom: 1px solid #000;">Registro</th><th style="border-bottom: 1px solid #000;">Valor</th><th style="border-bottom: 1px solid #000;">Registro</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
 
@@ -1078,8 +1078,8 @@ No_Es_Igual:
 <tr><td>H</td><td>00h</td><td>H'</td><td>00h</td></tr>
 <tr><td>L</td><td>00h</td><td>L'</td><td>31h</td></tr>
 </table>
-<p>Si realizamos de nuevo EXX, volveremos a dejar los valores de los registros en sus "posiciones" originales. EXX (mnemónico ensamblador derivado de EXchange), simplemente intercambia los valores entre ambos bancos.</p>
-<p>Aparte de la instrucción EXX, disponemos de una instrucción EX AF, AF' , que, como el lector imagina, intercambia los valores de los registros AF y AF'. Así, pasaríamos de:</p>
+<p>Si realizamos de nuevo EXX, volveremos a dejar los valores de los registros en sus "posiciones" originales. EXX (mnemÃ³nico ensamblador derivado de EXchange), simplemente intercambia los valores entre ambos bancos.</p>
+<p>Aparte de la instrucciÃ³n EXX, disponemos de una instrucciÃ³n EX AF, AF' , que, como el lector imagina, intercambia los valores de los registros AF y AF'. AsÃ­, pasarÃ­amos de:</p>
 <table>
 <tr><th style="border-bottom: 1px solid #000;">Registro</th><th style="border-bottom: 1px solid #000;">Valor</th><th style="border-bottom: 1px solid #000;">Registro</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
 
@@ -1093,14 +1093,14 @@ No_Es_Igual:
 <tr><td>A</td><td>00h</td><td>A'</td><td>01h</td></tr>
 <tr><td>F</td><td>00h</td><td>F'</td><td>10h</td></tr>
 </table>
-<p>Realizando de nuevo un EX AF, AF' volveríamos a los valores originales en ambos registros.</p>
-<p>De esta forma podemos disponer de un set de registros extra con los que trabajar. Por ejemplo, supongamos que programamos una porción de código donde queremos hacer una serie de cálculos entre registros y después dejar el resultado en una posición de memoria, pero no queremos perder los valores actuales de los registros (ni tampoco hacer uso de la pila, que veremos en su momento). En ese caso, podemos hacer:</p>
+<p>Realizando de nuevo un EX AF, AF' volverÃ­amos a los valores originales en ambos registros.</p>
+<p>De esta forma podemos disponer de un set de registros extra con los que trabajar. Por ejemplo, supongamos que programamos una porciÃ³n de cÃ³digo donde queremos hacer una serie de cÃ¡lculos entre registros y despuÃ©s dejar el resultado en una posiciÃ³n de memoria, pero no queremos perder los valores actuales de los registros (ni tampoco hacer uso de la pila, que veremos en su momento). En ese caso, podemos hacer:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
 <pre>
 ; Una rutina a la que saltaremos gracias a la
-; etiqueta que definimos aquí:
+; etiqueta que definimos aquÃ­:
 MiRutina:
 
     ; Cambiamos de banco de registros:
@@ -1114,7 +1114,7 @@ MiRutina:
     INC A
     ADD A, B
     ; (...etc...)
-    ; (...aquí más operaciones...)
+    ; (...aquÃ­ mÃ¡s operaciones...)
 
     ; Grabamos el resultado en memoria
     LD (1236h), A
@@ -1128,18 +1128,18 @@ MiRutina:
 </pre>
     </p></td></tr>
 </table>
-<p>Aparte de EXX y EX AF, AF' tenemos disponibles 3 instrucciones de intercambio más que no trabajan con los registros alternativos, sino entre la memoria y registros, y la pila (o memoria en general) y los registros HL, IX e IY.</p>
+<p>Aparte de EXX y EX AF, AF' tenemos disponibles 3 instrucciones de intercambio mÃ¡s que no trabajan con los registros alternativos, sino entre la memoria y registros, y la pila (o memoria en general) y los registros HL, IX e IY.</p>
 <table>
-<tr><th style="border-bottom: 1px solid #000;">Instrucción</th><th style="border-bottom: 1px solid #000;">Resultado</th></tr>
+<tr><th style="border-bottom: 1px solid #000;">InstrucciÃ³n</th><th style="border-bottom: 1px solid #000;">Resultado</th></tr>
 <tr><td>EX DE, HL</td><td>Intercambiar los valores de DE y HL.</td></tr>
-<tr><td>EX (SP), HL</td><td>Intercambiar el valor de HL con el valor de 16 bits de la posición de memoria apuntada por el registro SP (por ejemplo, para intercambiar el valor de HL con el del último registro que hayamos introducido en la pila).</tr></tr>
+<tr><td>EX (SP), HL</td><td>Intercambiar el valor de HL con el valor de 16 bits de la posiciÃ³n de memoria apuntada por el registro SP (por ejemplo, para intercambiar el valor de HL con el del Ãºltimo registro que hayamos introducido en la pila).</tr></tr>
 
 <tr><td>EX (SP), IX</td><td>Igual que el anterior, pero con IX.</td></tr>
 <tr><td>EX (SP), IY</td><td>Igual que el anterior, pero con IY.</tr>
 </table>
-<p>La primera de estas instrucciones nos puede ser muy útil en nuestros programas en ensamblador, ya que nos permite intercambiar los valores de los registros DE y HL. Las 3 instrucciones restantes permiten intercambiar el valor apuntado por SP (en memoria) por el valor de los registros HL, IX o IY.</p>
-<p>Como ya hemos comentado cuando hablamos del carácter Low-Endian de nuestra CPU, al escribir en memoria (también en la pila) primero se escribe el Byte Bajo y luego el Byte Alto. Posteriormente lo leeremos de la misma forma, de tal modo que si los bytes apuntados en la pila (en memoria) son "FF 00h", al hacer el EX (SP), HL, el registro HL valdrá "00FFh".</p>
-<p>Nótese que aprovechando la pila (como veremos en su momento) también podemos intercambiar los valores de los registros mediante:</p>
+<p>La primera de estas instrucciones nos puede ser muy Ãºtil en nuestros programas en ensamblador, ya que nos permite intercambiar los valores de los registros DE y HL. Las 3 instrucciones restantes permiten intercambiar el valor apuntado por SP (en memoria) por el valor de los registros HL, IX o IY.</p>
+<p>Como ya hemos comentado cuando hablamos del carÃ¡cter Low-Endian de nuestra CPU, al escribir en memoria (tambiÃ©n en la pila) primero se escribe el Byte Bajo y luego el Byte Alto. Posteriormente lo leeremos de la misma forma, de tal modo que si los bytes apuntados en la pila (en memoria) son "FF 00h", al hacer el EX (SP), HL, el registro HL valdrÃ¡ "00FFh".</p>
+<p>NÃ³tese que aprovechando la pila (como veremos en su momento) tambiÃ©n podemos intercambiar los valores de los registros mediante:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -1151,7 +1151,7 @@ MiRutina:
 </pre>
     </p></td></tr>
 </table>
-<p>Si queréis comprobarlo, podéis hacerlo mediante el siguiente programa:</p>
+<p>Si querÃ©is comprobarlo, podÃ©is hacerlo mediante el siguiente programa:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -1184,19 +1184,19 @@ MiRutina:
 </pre>
     </p></td></tr>
 </table>
-<p>Tras esto lo cargamos en un emulador de Spectrum (como un fichero TAP), nos vamos al BASIC y tecleamos "PRINT AT 10, 10; USR 40000". En pantalla aparecerá el valor "12345", ya que las rutinas llamadas desde BASIC devuelven sus resultados en BC, y nosotros hemos hecho un intercambio mediante la pila, entre DE y BC.</p>
-<p>En su momento veremos cómo funciona la pila, por ahora basta con saber que tenemos la posibilidad de intercambiar registros mediante el uso de la misma. Podríamos haber optado por no explicar este pequeño truco hasta haber hablado de la pila, pero nos parece más conveniente el hecho de tener toda la información sobre ensamblador agrupada de forma que cuando en el futuro (una vez terminado el curso completo) busquéis información sobre instrucciones para intercambiar valores de registros, podáis encontrarla toda junta, como un libro o una guía de referencia. Como hemos comentado al principio de esta entrega, resulta muy complicado explicar un lenguaje tan interrelacionado de forma que no se solapen diferentes áreas, de modo que la comprensión total de muchos de los conceptos se alcanzará con una segunda lectura del curso completo.</p>
+<p>Tras esto lo cargamos en un emulador de Spectrum (como un fichero TAP), nos vamos al BASIC y tecleamos "PRINT AT 10, 10; USR 40000". En pantalla aparecerÃ¡ el valor "12345", ya que las rutinas llamadas desde BASIC devuelven sus resultados en BC, y nosotros hemos hecho un intercambio mediante la pila, entre DE y BC.</p>
+<p>En su momento veremos cÃ³mo funciona la pila, por ahora basta con saber que tenemos la posibilidad de intercambiar registros mediante el uso de la misma. PodrÃ­amos haber optado por no explicar este pequeÃ±o truco hasta haber hablado de la pila, pero nos parece mÃ¡s conveniente el hecho de tener toda la informaciÃ³n sobre ensamblador agrupada de forma que cuando en el futuro (una vez terminado el curso completo) busquÃ©is informaciÃ³n sobre instrucciones para intercambiar valores de registros, podÃ¡is encontrarla toda junta, como un libro o una guÃ­a de referencia. Como hemos comentado al principio de esta entrega, resulta muy complicado explicar un lenguaje tan interrelacionado de forma que no se solapen diferentes Ã¡reas, de modo que la comprensiÃ³n total de muchos de los conceptos se alcanzarÃ¡ con una segunda lectura del curso completo.</p>
 
 <p><strong>EN RESUMEN</strong></p>
-<p>En esta entrega hemos visto la sintaxis de los programas en ensamblador (o, al menos, la sintaxis general de PASMO, el ensamblador que recomendamos), así como una descripción completa del juego de registros del Z80, incluyendo entre ellos el registro de flags F.</p>
-<p>Además, hemos comenzado a ver nuestras primeras instrucciones del lenguaje ensamblador, en especial las instrucciones de carga, incremento y decremento, y aritméticas.</p>
-<p>En la próxima entrega continuaremos detallando las diferentes instrucciones del Z80, ejemplos de uso y su efecto sobre los flags del registro F. Hasta entonces, os recomiendo la lectura del fichero "progcard.txt" adjunto con este artículo, donde encontraréis una gran referencia de instrucciones y flags.</p>
+<p>En esta entrega hemos visto la sintaxis de los programas en ensamblador (o, al menos, la sintaxis general de PASMO, el ensamblador que recomendamos), asÃ­ como una descripciÃ³n completa del juego de registros del Z80, incluyendo entre ellos el registro de flags F.</p>
+<p>AdemÃ¡s, hemos comenzado a ver nuestras primeras instrucciones del lenguaje ensamblador, en especial las instrucciones de carga, incremento y decremento, y aritmÃ©ticas.</p>
+<p>En la prÃ³xima entrega continuaremos detallando las diferentes instrucciones del Z80, ejemplos de uso y su efecto sobre los flags del registro F. Hasta entonces, os recomiendo la lectura del fichero "progcard.txt" adjunto con este artÃ­culo, donde encontrarÃ©is una gran referencia de instrucciones y flags.</p>
 <p><strong>FICHEROS</strong></p>
 <ul>
     <li><a href="revistas/14/src/ejemplo.asm" onClick="window.open(this.href); return false;">Ejemplo de programa en ASM</a></li>
     <li><a href="revistas/14/tap/ejemplo.tap" onClick="window.open(this.href); return false;">Fichero tap del ejemplo ejemplo.asm</a></li>
 
-    <li><a href="revistas/14/info/progcard.txt" onClick="window.open(this.href); return false;">Referencia del juego de instrucciones del Z80 y cómo su ejecución afecta a los flags</a></li>
+    <li><a href="revistas/14/info/progcard.txt" onClick="window.open(this.href); return false;">Referencia del juego de instrucciones del Z80 y cÃ³mo su ejecuciÃ³n afecta a los flags</a></li>
     <li><a href="revistas/14/src/cambio.asm" onClick="window.open(this.href); return false;">Programa en ASM que muestra el uso de la pila para el intercambio de registros</a></li>
     <li><a href="revistas/14/tap/cambio.tap" onClick="window.open(this.href); return false;">Fichero tap del ejemplo cambio.asm</a></li>
 </ul>
@@ -1241,14 +1241,14 @@ function RecargarPie(url)
     <input type="button" onclick="RecargarCabecera('input.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
+        <option value="ensamblador.html" selected>ProgramaciÃ³n Ensamblador</option>
     </select>
     <input type="button" onclick="return false;" name="siguiente" value=">" disabled  />
 </td>
@@ -1257,7 +1257,7 @@ function RecargarPie(url)
                 <a href="#arriba">Volver arriba</a>
             </td>
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
     </form>
 
 </table>

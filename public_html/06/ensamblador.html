@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,28 +31,28 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('z88dk.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="hardware.html">Hardware</option>
         <option value="al-descubierto.html">Al Descubierto</option>
         <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+        <option value="ensamblador.html" selected>ProgramaciÃ³n Ensamblador</option>
+        <option value="opinion.html">OpiniÃ³n</option>
 
     </select>
     <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
 </td>
-            <td align="center" class="texto">Número 6 - Marzo 2004</td>
+            <td align="center" class="texto">NÃºmero 6 - Marzo 2004</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
@@ -68,25 +68,25 @@ function RecargarCabecera(url)
 	<tr>
 		<td>
 <div align="justify">
-<p><b>CÁLCULO DE DIRECCIONES DE PANTALLA A PARTIR DE COORDENADAS</b></p>
+<p><b>CÃLCULO DE DIRECCIONES DE PANTALLA A PARTIR DE COORDENADAS</b></p>
 <p>
 
 <i>Cuando tenemos la coordenada de cualquier sprite almacenada en registros
 o variables, necesitaremos saber donde hay que empezar a ponerlo cuando
-vayamos a pintarlo. Esto, dada la extraña disposición de la memoria de la
+vayamos a pintarlo. Esto, dada la extraÃ±a disposiciÃ³n de la memoria de la
 pantalla en el Spectrum, no es tan sencillo como pueda serlo en otros
-sistemas (por ejemplo en el modo VGA 13h del PC, donde el cálculo consiste
-en hacer (320*y)+x ). Así pues, vamos a dedicar este artículo a ver
+sistemas (por ejemplo en el modo VGA 13h del PC, donde el cÃ¡lculo consiste
+en hacer (320*y)+x ). AsÃ­ pues, vamos a dedicar este artÃ­culo a ver
 varias formas distintas de realizar esta tarea, comentando sus
 ventajas e inconvenientes.</i>
 </p>
 <p>
 Para poder comprender las distintas rutinas hay que tener muy en cuenta
-la disposición de la memoria de video, así que vamos a recordarla por si
+la disposiciÃ³n de la memoria de video, asÃ­ que vamos a recordarla por si
 a alguien se le ha olvidado.
 </p>
 <p>
-Básicamente, el aparente caos que supone el orden de la pantalla se entiende una vez
+BÃ¡sicamente, el aparente caos que supone el orden de la pantalla se entiende una vez
 que se descomponen las direcciones en campos de bits bien diferenciados:
 </p>
 <table border="0" class="texto">
@@ -128,18 +128,18 @@ el formato: ttYYYyyy , y otro byte para la coordenada X en el formato:
 000XXXXX.
 </p>
 <p>
-Así pues nuestro cometido principal consiste en reordenar todos los campos
-de la coordenada Y al insertarlos en la dirección, para terminar añadiendo
+AsÃ­ pues nuestro cometido principal consiste en reordenar todos los campos
+de la coordenada Y al insertarlos en la direcciÃ³n, para terminar aÃ±adiendo
 al resultado la coordenada X, lo cual es bastante trivial.
 </p>
 <p>
 Para realizar el calculo de la coordenada Y tenemos dos posibilidades
-básicas: hacer todo el cálculo por nuestra cuenta, o usar una tabla que
-almacene todos los resultados. También tenemos la opción intermedia de
-usar las tablas sólo para la parte mas compleja y calcular el resto.
+bÃ¡sicas: hacer todo el cÃ¡lculo por nuestra cuenta, o usar una tabla que
+almacene todos los resultados. TambiÃ©n tenemos la opciÃ³n intermedia de
+usar las tablas sÃ³lo para la parte mas compleja y calcular el resto.
 </p>
 <p>
-Realizando el cálculo, la primera rutina que se me ocurrió fue ésta:
+Realizando el cÃ¡lculo, la primera rutina que se me ocurriÃ³ fue Ã©sta:
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><p class="codigo">
@@ -170,18 +170,18 @@ CALC1:		LD      D,2     ; D = 00000010  2 / 7    2 /   7
 </p></td></tr>
 </table>
 <p>
-En los comentarios podeis ver el resultado de la última
-operación (para que se entienda lo que va haciendo el programa), los
-bytes y estados de la instrucción actual y por último la suma de bytes /
-estados hasta el momento. En los siguientes listados prescindiré de algunos
+En los comentarios podeis ver el resultado de la Ãºltima
+operaciÃ³n (para que se entienda lo que va haciendo el programa), los
+bytes y estados de la instrucciÃ³n actual y por Ãºltimo la suma de bytes /
+estados hasta el momento. En los siguientes listados prescindirÃ© de algunos
 de estos campos.
 </p>
 <p>
 En total esta primera rutina ocupa 27 bytes, y tarda 126 estados en
-realizar el cálculo.
+realizar el cÃ¡lculo.
 </p>
 <p>
-¿Es mucho, es poco? Veamos si podemos mejorarla.
+Â¿Es mucho, es poco? Veamos si podemos mejorarla.
 </p>
 <p>
 Si nos damos cuenta, existen algunas instrucciones que se repiten, por
@@ -212,21 +212,21 @@ ROT2:           RLCA              ;     1 / 4,4,4       17 / 111
 </p></td></tr>
 </table>
 <p>
-Como podéis observar, el algoritmo es identico al caso anterior,
+Como podÃ©is observar, el algoritmo es identico al caso anterior,
 pero hemos introducido un par de bits extra en el registro D que
-actúan de bits marcadores (los bit markers que vimos en el artículo anterior)
+actÃºan de bits marcadores (los bit markers que vimos en el artÃ­culo anterior)
 para salir de los bucles.
 </p>
 <p>
-A cambio de ahorrar 5 bytes, estamos tardando 50 estados más en realizar
-el cálculo.
+A cambio de ahorrar 5 bytes, estamos tardando 50 estados mÃ¡s en realizar
+el cÃ¡lculo.
 </p>
 <p>
 
 Si nos fijamos en la primera rutina, vemos que estamos haciendo una
-tontería con el campo yyy, ya que estamos rotando el byte 8 veces, para
-que el campo vuelva otra vez al mismo sitio al final. Además, el uso de
-instrucciones PUSH AF y POP AF resulta costoso en estados, así que podemos
+tonterÃ­a con el campo yyy, ya que estamos rotando el byte 8 veces, para
+que el campo vuelva otra vez al mismo sitio al final. AdemÃ¡s, el uso de
+instrucciones PUSH AF y POP AF resulta costoso en estados, asÃ­ que podemos
 refinar la rutina un poquito:
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -254,10 +254,10 @@ CALC3:          LD	A,D	; A = ttYYYyyy	1 / 4    1 /   4
 </p></td></tr>
 </table>
 <p>
-Ahora ocupa 25 bytes, y tarda sólo 103 estados en realizar el cálculo.
+Ahora ocupa 25 bytes, y tarda sÃ³lo 103 estados en realizar el cÃ¡lculo.
 </p>
 <p>
-Haciendo lo mismo de antes, la versión pequeña saldría así:
+Haciendo lo mismo de antes, la versiÃ³n pequeÃ±a saldrÃ­a asÃ­:
 </p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -283,17 +283,17 @@ ROT2:           RLC     H       ; 2 / 8,8,8   	17 / 104
 </p></td></tr>
 </table>
 <p>
-De nuevo perdemos 50 estados, pero en esta ocasión tan solo ganamos
+De nuevo perdemos 50 estados, pero en esta ocasiÃ³n tan solo ganamos
 3 bytes en lugar de 5, por lo que no bajamos de los 22 bytes.
 </p>
 <p>
-Parece como si no pudiésemos hacer el cálculo en menos de 100 estados,
-pero sí que es posible si volvemos a cambiar de método.
+Parece como si no pudiÃ©semos hacer el cÃ¡lculo en menos de 100 estados,
+pero sÃ­ que es posible si volvemos a cambiar de mÃ©todo.
 </p>
 <p>
 En lugar de utilizar 5 rotaciones para poner el campo del tercio en su
 sitio, podemos detectar en que tercio estamos al efectuar las dos
-primeras rotaciones (las que ajustan la posición del campo YYY) gracias
+primeras rotaciones (las que ajustan la posiciÃ³n del campo YYY) gracias
 al bit de acarreo, y en caso de que sea necesario, "inyectar" el bit directamente.
 
 </p>
@@ -320,19 +320,19 @@ noter_2: 	ADD     A,C     ; A = YYYXXXXX	 1 / 4
 </p></td></tr>
 </table>
 <p>
-El cálculo para la parte alta ya está terminado en la cuarta instrucción en el
+El cÃ¡lculo para la parte alta ya estÃ¡ terminado en la cuarta instrucciÃ³n en el
 caso de que estemos en el primer tercio. Los otros dos tercios necesitan
-uno de los SETs para añadir el bit que les falta. Esta rutina también ocupa
+uno de los SETs para aÃ±adir el bit que les falta. Esta rutina tambiÃ©n ocupa
 22 bytes, y tarda 83 estados en el primer tercio y 86 para los
 otros dos.
 </p>
 <p>
-Parece que hemos llegado a la conclusión de que no es posible hacerlo más
-pequeño, pero es posible hacerlo más rápido si tenemos en cuenta que no
+Parece que hemos llegado a la conclusiÃ³n de que no es posible hacerlo mÃ¡s
+pequeÃ±o, pero es posible hacerlo mÃ¡s rÃ¡pido si tenemos en cuenta que no
 existe el caso 11 para el campo tt, por lo que si detectamos el
-tercer tercio, no es necesario probar si estamos en el segundo. Así
+tercer tercio, no es necesario probar si estamos en el segundo. AsÃ­
 que separando los caminos un poquito y repitiendo por tanto algo de
-código obtenemos:
+cÃ³digo obtenemos:
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
@@ -365,35 +365,35 @@ ter_3:          SET     4,H     ; H = 01010yyy	 2 / 8
 26 bytes, los tiempos para cada tercio son respectivamente: 78, 81, 79.
 Aparte de ganar 7 estados para el tercer tercio, hemos ganado otros 5
 para los otros dos casos porque el primer salto que antes se daba ahora no
-se produce (y los saltos condicionales son mas rápidos cuando no se producen
+se produce (y los saltos condicionales son mas rÃ¡pidos cuando no se producen
 (7 estados) que cuando se producen (12)).
 </p>
 <p>
 Si el segundo salto lo hacemos de forma que salte en caso de acarreo hacia
 otra zona donde se realiza el proceso del segundo tercio, separando el
-código un poco más, optimizamos el camino del primer tercio a costa del camino
-del segundo, con lo que obtendríamos 73, 86, 79 (y ocuparía algunos bytes mas).
+cÃ³digo un poco mÃ¡s, optimizamos el camino del primer tercio a costa del camino
+del segundo, con lo que obtendrÃ­amos 73, 86, 79 (y ocuparÃ­a algunos bytes mas).
 </p>
 <p>
-Y eso es todo en cuanto a los métodos de cálculo directo. Vamos a ver
-ahora los métodos que utilizan tablas.
+Y eso es todo en cuanto a los mÃ©todos de cÃ¡lculo directo. Vamos a ver
+ahora los mÃ©todos que utilizan tablas.
 </p>
 
 <p>
-Las tablas no son más que listas de resultados de ciertos cálculos que
+Las tablas no son mÃ¡s que listas de resultados de ciertos cÃ¡lculos que
 dejamos apuntados en memoria para no tener que recalcularlos cada vez
 que los necesitamos. Por lo tanto permiten ganar tiempo a cambio de usar memoria.
 </p>
 <p>
 En un principio, para cada posible valor de Y, necesitaremos dos
 valores en las tablas, uno para el byte alto y otro para la primera mitad del
-byte bajo, a la cual le sumaremos el campo X para obtener la dirección
+byte bajo, a la cual le sumaremos el campo X para obtener la direcciÃ³n
 completa. Como tenemos 192 posibles valores de Y, obtenemos un
 total de 192*2=384 bytes de datos.
 </p>
 <p>
 Tan solo necesitamos que la rutina lea los datos de la tabla. Eso
-se puede hacer por ejemplo así:
+se puede hacer por ejemplo asÃ­:
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><p class="codigo">
@@ -417,15 +417,15 @@ La tabla se construye pasando ttYYYyyy -> YYY00000, 010ttyyy para cada valor
 del 0 al 191, y puede estar situada en cualquier parte de la memoria.
 </p>
 <p>
-En un principio parece que no ganamos mucho sólo por el hecho de utilizar una
-tabla, ya que tenemos que calcular la posición de los datos que
+En un principio parece que no ganamos mucho sÃ³lo por el hecho de utilizar una
+tabla, ya que tenemos que calcular la posiciÃ³n de los datos que
 buscamos, y para esto tenemos que usar instrucciones de 16 bits que
 resultan muy costosas en tiempo. Para mejorar esto tenemos que colocar
-alguna restricción en la tabla, y aprovecharla para tener que realizar
-menos cálculos. Por ejemplo, si hacemos que la tabla comience en una
-dirección fija que sea múltiplo de 512, en lugar de un 0 colocamos en
+alguna restricciÃ³n en la tabla, y aprovecharla para tener que realizar
+menos cÃ¡lculos. Por ejemplo, si hacemos que la tabla comience en una
+direcciÃ³n fija que sea mÃºltiplo de 512, en lugar de un 0 colocamos en
 H el valor TABLA/512, con lo cual al hacer la suma ADD HL,HL tenemos ya
-la dirección de la tabla calculada por completo, y no necesitamos utilizar para
+la direcciÃ³n de la tabla calculada por completo, y no necesitamos utilizar para
 nada el registro DE.
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -445,19 +445,19 @@ TABLA2:         LD      H,TABLA/512     ; 2 /  7	 2 /  7
 <p>
 
 Ahora podemos utilizar INC L en lugar de INC HL porque el ADD HL,HL
-dejó un valor par, y por lo tanto al incrementar L nunca va a incrementarse H,
-y así nos ahorramos 2 estados mas. En el caso anterior, cabía la
+dejÃ³ un valor par, y por lo tanto al incrementar L nunca va a incrementarse H,
+y asÃ­ nos ahorramos 2 estados mas. En el caso anterior, cabÃ­a la
 posibilidad de que la etiqueta TABLA cayera en un lugar impar.
 </p>
 <p>
-Esto ya tiene mejor pinta, ¿verdad?. Pues la cosa puede mejorar mas aún.
+Esto ya tiene mejor pinta, Â¿verdad?. Pues la cosa puede mejorar mas aÃºn.
 Si en lugar de una tabla con los 384 valores juntos creamos dos tablas de
 192 bytes separadas entre si 256 bytes (osea, dejando un hueco
 de 64), podemos pasar de un valor al siguiente usando INC H en lugar
 de INC L (o INC HL), y nos podemos ahorrar la otra suma de 16 bits.
 </p>
 <p>
-Sin restricción en la colocación de la pareja de tablas quedaría:
+Sin restricciÃ³n en la colocaciÃ³n de la pareja de tablas quedarÃ­a:
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><p class="codigo">
@@ -481,8 +481,8 @@ Ahora se hacen dos tablas ttYYYyyy -> YYY00000 por una parte y ttYYYyyy ->
 </p>
 <p>
 Y juntando los dos trucos (aunque ahora la pareja de tablas basta con
-alinearlas a un múltiplo de 256, no hace falta 512), obtenemos la
-versión más rápida:
+alinearlas a un mÃºltiplo de 256, no hace falta 512), obtenemos la
+versiÃ³n mÃ¡s rÃ¡pida:
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><p class="codigo">
@@ -499,21 +499,21 @@ TABLA4:         LD      H,TABLA/256	; 2 / 7
 </table>
 <p>
 Como podemos ver, las tablas pueden ayudarnos a reducir el tiempo a la
-mitad, lo cual resulta muy útil cuando tenemos que llamar a una rutina muy
+mitad, lo cual resulta muy Ãºtil cuando tenemos que llamar a una rutina muy
 a menudo.
 
 </p>
 <p>
-Por último vamos a ver un par de ejemplos de rutinas "híbridas", en el
-sentido de que realizan parte del cálculo y miran otra parte en alguna tabla,
-obteniendose mayor velocidad que con el cálculo pero ocupando menos espacio que
+Por Ãºltimo vamos a ver un par de ejemplos de rutinas "hÃ­bridas", en el
+sentido de que realizan parte del cÃ¡lculo y miran otra parte en alguna tabla,
+obteniendose mayor velocidad que con el cÃ¡lculo pero ocupando menos espacio que
 las soluciones con tabla que hemos visto hasta ahora.
 </p>
 <p>
-La primera que vamos a ver se aprovecha del hecho de que el cálculo de
-la parte baja es muy sencillo, así que tan solo usamos una tabla de 192
-bytes para la parte alta. La versión directamente optimizada (con la tabla
-alineada a un múltiplo de 256) podría ser algo así:
+La primera que vamos a ver se aprovecha del hecho de que el cÃ¡lculo de
+la parte baja es muy sencillo, asÃ­ que tan solo usamos una tabla de 192
+bytes para la parte alta. La versiÃ³n directamente optimizada (con la tabla
+alineada a un mÃºltiplo de 256) podrÃ­a ser algo asÃ­:
 </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><p class="codigo">
@@ -537,9 +537,9 @@ En este caso tan solo necesitamos una tabla recorriendo ttYYYyyy -> 010ttyyy
 de 0 a 191.
 </p>
 <p>
-Para la última rutina que vamos a ver nos aprovecharemos del hecho
+Para la Ãºltima rutina que vamos a ver nos aprovecharemos del hecho
 de que los valores que aparecen en la tabla de 192 bytes se repiten 8
-veces, dado que el campo YYY no pinta nada en esta tabla. Así pues rotamos el
+veces, dado que el campo YYY no pinta nada en esta tabla. AsÃ­ pues rotamos el
 campo Y para acumular los bits que nos interesan en las posiciones mas bajas
 y borramos los de las posiciones altas antes de mirar en la tabla. La
 tabla resultante es de 32 bytes, de los cuales 8 no se usan (dado que
@@ -570,8 +570,8 @@ La tablita en este caso se construye recorriendo 000yyytt -> 010ttyyy de 0 a 30
 </p>
 
 <p>
-Visto todo esto, ¿cual es la mejor rutina? Si nos quedamos sólo con las
-mejores rutinas, podemos escoger la relación velocidad/espacio que mejor
+Visto todo esto, Â¿cual es la mejor rutina? Si nos quedamos sÃ³lo con las
+mejores rutinas, podemos escoger la relaciÃ³n velocidad/espacio que mejor
 convenga a nuestro programa, entre las siguientes:
 </p>
 <table border="0" class="texto">
@@ -618,30 +618,30 @@ convenga a nuestro programa, entre las siguientes:
 	</tr>
 </table>
 <p>
-* > 46 si no aprovechásemos los huecos.
+* > 46 si no aprovechÃ¡semos los huecos.
 </p>
 <p>
-¿Pueden optimizarse más? Pues depende. Como rutinas de uso general, creo
-que no dan más de si (aparte de la obviedad que supone usarlas en línea
+Â¿Pueden optimizarse mÃ¡s? Pues depende. Como rutinas de uso general, creo
+que no dan mÃ¡s de si (aparte de la obviedad que supone usarlas en lÃ­nea
 y evitar por lo tanto el RET), pero una vez aplicadas a un juego
-determinado, las características del juego pueden favorecer nuevas
+determinado, las caracterÃ­sticas del juego pueden favorecer nuevas
 optimizaciones. Por ejemplo, si un juego tan solo usa los dos primeros
-tercios, dejando el tercio de abajo para puntuaciones, barras de energía,
-etc... podemos reducir los tamaños de las tablas a 256,128 o
-16 bytes (en esta ocasión seguidos) respectivamente, y las rutinas de
-cálculo quedarían como una sóla de 18 bytes, tardando 71/74 estados.
+tercios, dejando el tercio de abajo para puntuaciones, barras de energÃ­a,
+etc... podemos reducir los tamaÃ±os de las tablas a 256,128 o
+16 bytes (en esta ocasiÃ³n seguidos) respectivamente, y las rutinas de
+cÃ¡lculo quedarÃ­an como una sÃ³la de 18 bytes, tardando 71/74 estados.
 </p>
 <p>
-Con esto concluye el artículo, si tenéis dudas o queréis proponer
-temas para futuros artículos, podeis apuntaros a la lista de correo de
-programación en ensamblador [z80asm] de speccy.org.
+Con esto concluye el artÃ­culo, si tenÃ©is dudas o querÃ©is proponer
+temas para futuros artÃ­culos, podeis apuntaros a la lista de correo de
+programaciÃ³n en ensamblador [z80asm] de speccy.org.
 
 </p>
 <p>
-La mayoría de las rutinas vistas en este artículo ya fueron discutidas hace
-tiempo en dicha lista, y quiero agradecer especialmente la colaboración de
-Truevideo (que planteó su rutina usando tabla) y Z80user (autor
-original de CALC6, de la cual se deriva fácilmente CALC5).
+La mayorÃ­a de las rutinas vistas en este artÃ­culo ya fueron discutidas hace
+tiempo en dicha lista, y quiero agradecer especialmente la colaboraciÃ³n de
+Truevideo (que planteÃ³ su rutina usando tabla) y Z80user (autor
+original de CALC6, de la cual se deriva fÃ¡cilmente CALC5).
 </p>
 <p>
 Hasta otra.
@@ -651,7 +651,7 @@ Hasta otra.
 <b>LINKS</b>
 </p>
 <ul>
-	<li><a href="http://www.speccy.org/article.php?story=20021015230520421" onClick="window.open(this.href); return false;">Lista de correo de programación en ensamblador de speccy.org</a></li>
+	<li><a href="http://www.speccy.org/article.php?story=20021015230520421" onClick="window.open(this.href); return false;">Lista de correo de programaciÃ³n en ensamblador de speccy.org</a></li>
 </ul>
 
 </div>
@@ -682,16 +682,16 @@ function RecargarPie(url)
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
 
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
         <option value="hardware.html">Hardware</option>
         <option value="al-descubierto.html">Al Descubierto</option>
 
         <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+        <option value="ensamblador.html" selected>ProgramaciÃ³n Ensamblador</option>
+        <option value="opinion.html">OpiniÃ³n</option>
     </select>
     <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
 </td>
@@ -700,7 +700,7 @@ function RecargarPie(url)
                 <a href="#arriba">Volver arriba</a>
             </td>
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
     </form>
 
 </table>

@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,28 +31,28 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="zona-pc.html" selected>Zona PC</option>
         <option value="hardware.html">Hardware</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="emulacion.html">Emulación</option>
+        <option value="basic.html">ProgramaciÃ³n BASIC</option>
+        <option value="emulacion.html">EmulaciÃ³n</option>
         <option value="zona-www.html">Zona WWW</option>
         <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
 
     </select>
     <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
 </td>
-            <td align="center" class="texto">Número 2 - Agosto 2003</td>
+            <td align="center" class="texto">NÃºmero 2 - Agosto 2003</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
@@ -72,13 +72,13 @@ function RecargarCabecera(url)
 <i>Este mes vamos a pasar nuestros discos de Spectrum, tanto de
 3" como de 3"1/2, a formato DSK para poder usarlos con un emulador
 o distribuirlos por medios digitales al resto de usuarios interesados, en lo que
-será la segunda y última entrega del análisis que hemos
+serÃ¡ la segunda y Ãºltima entrega del anÃ¡lisis que hemos
 hecho al conjunto de utilidades que componen las CPDTOOLS.</i>
 
 </p>
 <p>
 Como complemento a todo esto explicaremos, con un ejemplo sencillo
-de comprender, cómo pasar un juego de cinta a disco. Esto vamos a hacerlo
+de comprender, cÃ³mo pasar un juego de cinta a disco. Esto vamos a hacerlo
 en un emulador de Spectrum corriendo sobre PC, pero es totalmente aplicable
 a un Spectrum real.
 </p>
@@ -86,46 +86,46 @@ a un Spectrum real.
 <b>CONFIGURANDO CPDREAD</b>
 </p>
 <p>
-La instalación de las CPDTOOLS ya la abordamos en el anterior número
+La instalaciÃ³n de las CPDTOOLS ya la abordamos en el anterior nÃºmero
 de Magazine ZX, por lo cual vamos a pasar directamente a la parte
-práctica.
+prÃ¡ctica.
 </p>
 <p>
 Lo primero que tenemos que hacer es abrir con un editor de textos el
 archivo <font class="codigo">CPDREAD.CFG</font> y mirar si tenemos las
 opciones adecuadas seleccionadas.
-Aunque muchos de estos parámetros los podemos introducir por la línea de
+Aunque muchos de estos parÃ¡metros los podemos introducir por la lÃ­nea de
 comandos, lo ideal es tener el archivo adecuado a nuestras necesidades.
 </p>
 
 <p>
 En este archivo encontraremos una corta y sencilla serie de opciones
-que, pese a que se pueden dejar prácticamente como vienen, vamos a recorrer
+que, pese a que se pueden dejar prÃ¡cticamente como vienen, vamos a recorrer
 someramente para que podamos hacer nuestras variaciones si lo deseamos.
 
 <ul>
 <li>#tracks
-<p>Como su nombre indica es el número de pistas a leer del
-disquete, de momento podemos dejarlo como está, con valor 80.</p></li>
+<p>Como su nombre indica es el nÃºmero de pistas a leer del
+disquete, de momento podemos dejarlo como estÃ¡, con valor 80.</p></li>
 <li>#drive
-<p>La letra a la que está asignada nuestra unidad de disco
+<p>La letra a la que estÃ¡ asignada nuestra unidad de disco
 de donde vamos a leer. Si lo hacemos de un disco de 3" 1/2 lo normal
-es que esté configurado como 'A', y si tenemos acoplada una unidad de 3"
-a nuestro PC, lo más lógico es tenerla como 'B'. Ponemos la letra
-que se corresponda con la unidad que queremos leer y ya está.</p></li>
+es que estÃ© configurado como 'A', y si tenemos acoplada una unidad de 3"
+a nuestro PC, lo mÃ¡s lÃ³gico es tenerla como 'B'. Ponemos la letra
+que se corresponda con la unidad que queremos leer y ya estÃ¡.</p></li>
 <li>#sides
-<p>El número de caras que tiene el disco. Lo podemos dejar tal cual.</p></li>
+<p>El nÃºmero de caras que tiene el disco. Lo podemos dejar tal cual.</p></li>
 <li>#step
-<p>Aquí se indica el número de 'tracks' que tiene que saltar el
+<p>AquÃ­ se indica el nÃºmero de 'tracks' que tiene que saltar el
 programa por cada lectura de la disquetera. Por defecto viene con un valor
 de '1', pero si vamos a leer desde la disquetera de 3", debemos
-cambiarlo por '2'. De lo contrario no saldrá el DSK correctamente.</p></li>
+cambiarlo por '2'. De lo contrario no saldrÃ¡ el DSK correctamente.</p></li>
 <li>#mediatype
 <p>El tipo de disquetera desde el que vamos a leer.
-Por defecto tiene el tipo '2' seleccionado, y con ése nos bastará tanto
-si es para la disquetera de 3" 1/2 cómo para la de 3". En el mismo
-archivo vienen el listado de disqueteras soportadas más la
-opción correspondiente que debemos poner.</p></li>
+Por defecto tiene el tipo '2' seleccionado, y con Ã©se nos bastarÃ¡ tanto
+si es para la disquetera de 3" 1/2 cÃ³mo para la de 3". En el mismo
+archivo vienen el listado de disqueteras soportadas mÃ¡s la
+opciÃ³n correspondiente que debemos poner.</p></li>
 
 </ul>
 </p>
@@ -141,17 +141,17 @@ Ahora viene la hora de crear nuestro primer DSK, tarea muy sencilla
 gracias a la cual podemos disponer de una copia de seguridad de
 nuestros discos originales de Spectrum, o compartirlos mediante web
 o email con nuestros colegas; siempre en caso de que la casa propietaria de
-los derechos del juego no haya denegado su libre distribución y, valga como
-ejemplo de esto último, desarrolladores y distribuidores tales como
-Ultimate, Capcom, etc. De esto os podéis informar en
+los derechos del juego no haya denegado su libre distribuciÃ³n y, valga como
+ejemplo de esto Ãºltimo, desarrolladores y distribuidores tales como
+Ultimate, Capcom, etc. De esto os podÃ©is informar en
 <a href="http://www.worldofspectrum.org/permits/" onClick="window.open(this.href); return false;">WOS</a>.
 </p>
 <p>
-Como lo más normal es querer hacer la imagen de un disco de 3",
-adecuamos nuestro archivo de configuración a esta característica como
+Como lo mÃ¡s normal es querer hacer la imagen de un disco de 3",
+adecuamos nuestro archivo de configuraciÃ³n a esta caracterÃ­stica como
 indicamos en el paso anterior. Una vez hecho esto, deberemos arrancar
 nuestro PC en modo MS-DOS o bien utilizar un disco de arranque como
-indicábamos en la entrega del mes pasado. Introducimos el disco en
+indicÃ¡bamos en la entrega del mes pasado. Introducimos el disco en
 la unidad de 3" conectada al PC y tecleamos:
 <br><br>
 
@@ -161,7 +161,7 @@ la unidad de 3" conectada al PC y tecleamos:
 bien puede ser 'C:/CPDTOOLS').
 </p>
 <p>
-Después de unos segundos, y si nada falla, tendremos un archivo llamado
+DespuÃ©s de unos segundos, y si nada falla, tendremos un archivo llamado
 'midisco.dsk' con el contenido del disco por la cara correspondiente.
 </p>
 <p>
@@ -171,27 +171,27 @@ ejecutamos la orden de nuevo.
 </p>
 <p>
 Podemos encontrarnos con el caso de querer hacer un DSK de un
-disco de 3"1/2, grabado como si tuviese dos caras. Nada más sencillo.
-Volvemos a configurar el CPDREAD.CFG con las opciones idóneas y tecleamos:
+disco de 3"1/2, grabado como si tuviese dos caras. Nada mÃ¡s sencillo.
+Volvemos a configurar el CPDREAD.CFG con las opciones idÃ³neas y tecleamos:
 <br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="codigo">CPDREAD.EXE midisco.dsk</font> para la cara 'A' y
 
 <br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="codigo">CPDREAD.EXE midisco.dsk S</font> para la cara 'B',
-nótese la 'S' que indica al programa que lea de la cara 'B'.
+nÃ³tese la 'S' que indica al programa que lea de la cara 'B'.
 </p>
 <p>
-Si no queremos modificar el archivo de configuración, podemos pasarle al
-programa los parámetros mediante la línea de comandos, por ejemplo:
+Si no queremos modificar el archivo de configuraciÃ³n, podemos pasarle al
+programa los parÃ¡metros mediante la lÃ­nea de comandos, por ejemplo:
 <br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="codigo">CPDREAD.EXE midisco.dsk [tracks] [drive]</font>
 <br><br>
 En el cual le indicaremos el disco desde el que queremos leer
-de la misma manera que lo haríamos en el archivo de configuración. Esto
-queda a nuestra elección.
+de la misma manera que lo harÃ­amos en el archivo de configuraciÃ³n. Esto
+queda a nuestra elecciÃ³n.
 </p>
 <p>
-El programa, en caso de que no le pasemos ninguna opción por línea de comandos,
+El programa, en caso de que no le pasemos ninguna opciÃ³n por lÃ­nea de comandos,
 las lee del archivo CFG, con lo cual prevalecen las primeras sobre las segundas.
 </p>
 <p>
@@ -200,19 +200,19 @@ las lee del archivo CFG, con lo cual prevalecen las primeras sobre las segundas.
 </p>
 <p>
 El conjunto de herramientas que comprende el paquete CPDTOOLS nos va a ser muy
-útil para preservar nuestros discos o crearlos y, unido esto a la posibilidad de
+Ãºtil para preservar nuestros discos o crearlos y, unido esto a la posibilidad de
 tener una disquetera de 3"1/2 conectada a nuestro Spectrum +3, se abre un
 amplio abanico de posibilidades.
 </p>
 <p>
-Como habéis podido comprobar, tanto grabar como leer discos es muy sencillo,
-y únicamente nos encontramos con un pero bastante importante, que sólo funcione
-con MS-DOS como sistema operativo, que actualmente está obsoleto y poca gente lo
+Como habÃ©is podido comprobar, tanto grabar como leer discos es muy sencillo,
+y Ãºnicamente nos encontramos con un pero bastante importante, que sÃ³lo funcione
+con MS-DOS como sistema operativo, que actualmente estÃ¡ obsoleto y poca gente lo
 tiene instalado en su PC. La falta de versiones para Linux o Windows le resta
 bastantes enteros.
 </p>
 <p>
-Aún así es un pack de utilidades imprescindible si queremos tener una
+AÃºn asÃ­ es un pack de utilidades imprescindible si queremos tener una
 experiencia sensacional con nuestro Spectrum +3.
 </p>
 <hr>
@@ -224,11 +224,11 @@ experiencia sensacional con nuestro Spectrum +3.
 <i>Cuando adquirimos un Spectrum +3, el principal motivo por el que lo
 hacemos es para evitar los largos tiempos de espera y los errores en la
 carga de los programas desde un soporte como es la cinta de cassette,
-poco fiable y que depende de varios parámetros para su correcta carga,
-como pueden ser el volumen, la colocación de la cabeza lectora del reproductor
-de audio mediante el azimut (ese tornillito pequeño que tenemos que
+poco fiable y que depende de varios parÃ¡metros para su correcta carga,
+como pueden ser el volumen, la colocaciÃ³n de la cabeza lectora del reproductor
+de audio mediante el azimut (ese tornillito pequeÃ±o que tenemos que
 girar para hacer subir o bajar la cabeza lectora respecto de la cinta),
-o el estado de la cinta misma (y la suerte, por qué no decirlo).</i>
+o el estado de la cinta misma (y la suerte, por quÃ© no decirlo).</i>
 </p>
 <p>
 A partir del lanzamiento de este modelo muchas empresas creadoras de software
@@ -237,7 +237,7 @@ de 3". Pero el software anterior, salvo contados packs recopilatorios, no lo
 tenemos disponible en disco.
 </p>
 <p>
-Este es el motivo de la creación de este artículo: pasar nuestros juegos
+Este es el motivo de la creaciÃ³n de este artÃ­culo: pasar nuestros juegos
 preferidos de cinta a disco.
 </p>
 <p>
@@ -245,49 +245,49 @@ preferidos de cinta a disco.
 </p>
 <p>
 Los programas almacenados en cinta de cassette, en muchos casos, estaban puestos
-a salvo de la piratería y la copia indiscriminada con diferentes sistemas de
-protección por software. Carga turbo, eliminación de las cabeceras de información,
-grabación de la pantalla, basic y código máquina como un solo bloque, y un
-largo etcétera.
+a salvo de la piraterÃ­a y la copia indiscriminada con diferentes sistemas de
+protecciÃ³n por software. Carga turbo, eliminaciÃ³n de las cabeceras de informaciÃ³n,
+grabaciÃ³n de la pantalla, basic y cÃ³digo mÃ¡quina como un solo bloque, y un
+largo etcÃ©tera.
 </p>
 
 <p>
-Este texto no pretende ser un manual de cómo desproteger programas, con lo que,
-en esta ocasión, nos vamos a limitar a los que utilizaban la rutina de carga de la ROM
-con los comandos típicos del BASIC: 'LOAD' y 'SAVE'.
+Este texto no pretende ser un manual de cÃ³mo desproteger programas, con lo que,
+en esta ocasiÃ³n, nos vamos a limitar a los que utilizaban la rutina de carga de la ROM
+con los comandos tÃ­picos del BASIC: 'LOAD' y 'SAVE'.
 </p>
 <p>
 Antes de decidirnos a pasar un programa a disco, debemos asegurarnos de que
 mantiene compatibilidad con el Spectrum +3. Varios juegos no funcionan en este modelo
 de Amstrad o hay que modificarlos para que lo hagan. Por lo cual la mejor manera
-de asegurarse si nos van a funcionar es cargándolos en el mismo, bien sea un
+de asegurarse si nos van a funcionar es cargÃ¡ndolos en el mismo, bien sea un
 TZX o TAP en el emulador o la cinta original en el +3.
 </p>
 <p>
-Por comodidad, en vez de trabajar sobre la máquina real, lo haremos sobre
+Por comodidad, en vez de trabajar sobre la mÃ¡quina real, lo haremos sobre
 un emulador. En concreto vamos a usar FUSE para Linux, ya que es el que el
-autor usa habitualmente. No obstante, resulta válido cualquier otro que soporte
-el uso de archivos DSK, como imágenes de disco, y TZX o TAP como cintas, en
+autor usa habitualmente. No obstante, resulta vÃ¡lido cualquier otro que soporte
+el uso de archivos DSK, como imÃ¡genes de disco, y TZX o TAP como cintas, en
 cualquier plataforma o sistema operativo (MS-DOS, Windows, etc.). Incluso
-se puede seguir el artículo trabajando directamente el +3 (eso sí, las cargas
-de cinta se harán más tediosas).
+se puede seguir el artÃ­culo trabajando directamente el +3 (eso sÃ­, las cargas
+de cinta se harÃ¡n mÃ¡s tediosas).
 </p>
 <p>
-<b>INFORMÁNDONOS DE CÓMO ESTA GRABADO UN PROGRAMA</b>
+<b>INFORMÃNDONOS DE CÃ“MO ESTA GRABADO UN PROGRAMA</b>
 </p>
 <p>
 Los programas grabados con los comandos habituales del basic 'LOAD' y 'SAVE'
-tienen un esquema estándar. Cuando ejecutamos el <font class="codigo">SAVE "programa"
-LINE 10</font>, primero se graba una cabecera con la información que necesita la rutina
-de la ROM para cargar el bloque de datos, y después el bloque de datos propiamente
-dicho. Para pasar el programa a disco, necesitamos saber la información exacta, y ésta
+tienen un esquema estÃ¡ndar. Cuando ejecutamos el <font class="codigo">SAVE "programa"
+LINE 10</font>, primero se graba una cabecera con la informaciÃ³n que necesita la rutina
+de la ROM para cargar el bloque de datos, y despuÃ©s el bloque de datos propiamente
+dicho. Para pasar el programa a disco, necesitamos saber la informaciÃ³n exacta, y Ã©sta
 se puede conseguir con un programa lector de cabeceras. Podemos bajarnos un programa que
-publicó Microhobby en el número 2 con el nombre de 'Listador de cintas', que cumplirá
+publicÃ³ Microhobby en el nÃºmero 2 con el nombre de 'Listador de cintas', que cumplirÃ¡
 con las funciones requeridas perfectamente, de la web
 
 <a href="http://www.speccy.org/kyenter/" onClick="window.open(this.href); return false;">KyENTER</a>.
-Está grabado en un TAP gracias al webmaster de la misma y nos va a ser de
-muchísima utilidad.
+EstÃ¡ grabado en un TAP gracias al webmaster de la misma y nos va a ser de
+muchÃ­sima utilidad.
 </p>
 <a name="figura1">
 <table border="0" cellspacing="0" cellpadding="2" width="320">
@@ -303,36 +303,36 @@ muchísima utilidad.
 
 </a>
 <p>
-Vamos a elegir un clásico para pasar a disco, como es el Manic Miner. Es un juego
-muy sencillo de grabar en disco siguiendo las indicaciones aquí dadas.
+Vamos a elegir un clÃ¡sico para pasar a disco, como es el Manic Miner. Es un juego
+muy sencillo de grabar en disco siguiendo las indicaciones aquÃ­ dadas.
 </p>
 <p>
-Comenzamos por abrir nuestro emulador y quitar la opción de auto-carga de
-cintas en caso de que la tuviésemos. Debemos elegir al Spectrum +3 como modelo
+Comenzamos por abrir nuestro emulador y quitar la opciÃ³n de auto-carga de
+cintas en caso de que la tuviÃ©semos. Debemos elegir al Spectrum +3 como modelo
 de hardware que queremos emular.
 </p>
 <p>
 Abrimos el archivo del 'Listador de cintas' en el emulador y pasamos al BASIC con el
-menú del +3. Una vez en él tecleamos <font class="codigo">LOAD "T:"</font> y ENTER,
+menÃº del +3. Una vez en Ã©l tecleamos <font class="codigo">LOAD "T:"</font> y ENTER,
 con esto conseguimos que el +3 mande las ordenes de carga a la cinta de cassette y no
-a la unidad de disco que es a donde van por defecto en este modelo. Tecleamos en esta ocasión
+a la unidad de disco que es a donde van por defecto en este modelo. Tecleamos en esta ocasiÃ³n
 <font class="texto">LOAD ""</font> y cargaremos el listador en memoria. Una vez cargado,
-nos saldrá una pantalla azul que nos pregunta por el nombre de la cinta,
-podemos ponerlo o simplemente dar ENTER, esta información vale realmente para poco;
-una pregunta similar nos hará respecto a la cara de la cinta y tiene el mismo valor que
+nos saldrÃ¡ una pantalla azul que nos pregunta por el nombre de la cinta,
+podemos ponerlo o simplemente dar ENTER, esta informaciÃ³n vale realmente para poco;
+una pregunta similar nos harÃ¡ respecto a la cara de la cinta y tiene el mismo valor que
 la anterior. Antes de pulsar ENTER de nuevo, abrimos el archivo TAP o TZX del que
-queremos sacar la información, en nuestro caso el que lleva el juego Manic Miner,
+queremos sacar la informaciÃ³n, en nuestro caso el que lleva el juego Manic Miner,
 que hemos bajado de <a href="http://www.worldofspectrum.org/infoseek.cgi?regexp=Manic+Miner" onClick="window.open(this.href); return false;">WOS</a>.
-Pulsamos ENTER y al cabo de un par de segundos nos saldrá una pantalla como la
-de la <a href="#figura1">Figura 1</a> con parte de la información que necesitamos.
+Pulsamos ENTER y al cabo de un par de segundos nos saldrÃ¡ una pantalla como la
+de la <a href="#figura1">Figura 1</a> con parte de la informaciÃ³n que necesitamos.
 
 </p>
 <p>
-Podemos ver que el Manic Miner está grabado con tres bloques de datos:
+Podemos ver que el Manic Miner estÃ¡ grabado con tres bloques de datos:
 <ol>
-<li>BASIC con nombre 'MANICMINER' que se autoejecuta en la línea 1 y tiene una
+<li>BASIC con nombre 'MANICMINER' que se autoejecuta en la lÃ­nea 1 y tiene una
 longitud de 142 bytes.</li>
-<li>Bytes con nombre 'mm1' que comienza en la dirección 22784 y tiene una longitud
+<li>Bytes con nombre 'mm1' que comienza en la direcciÃ³n 22784 y tiene una longitud
 de 256 bytes.</li>
 <li>Bytes con nombre 'mm2' con comienzo en 32768 y una longitud de 32879 bytes.</li>
 </ol>
@@ -342,21 +342,21 @@ de 256 bytes.</li>
 </p>
 <p>
 
-Con esta información ya podemos pasar el programa a disco, pero antes tenemos que
+Con esta informaciÃ³n ya podemos pasar el programa a disco, pero antes tenemos que
 modificar el cargador BASIC para adecuarlo a nuestro +3.
 </p>
 <p>
 Reiniciamos el Spectrum (el emulador en este caso) y, desde el BASIC, volvemos
 a teclear <font class="codigo">LOAD "T:"</font> y ENTER,
-y a continuación <font class="codigo">MERGE ""</font>. Así cargaremos
+y a continuaciÃ³n <font class="codigo">MERGE ""</font>. AsÃ­ cargaremos
 en memoria el cargador del Manic Miner, sin que llegue a ejecutarse
 gracias al MERGE. Miramos el listado BASIC (que tenemos en la
 <a href="#figura2">Figura 2</a>) del mismo y es importante que tomemos nota de
-dos cosas: la dirección del CLEAR y la del USR, que en nuestro caso vienen a
-ser 24310 para el CLEAR y 33792 para el USR. La primera dirección nos indica el lugar
-donde colocamos el RAMPTOP para que el BASIC no machaque la información y la
-PILA del ordenador, y la segunda nos indica la dirección de arranque del programa
-en código máquina.
+dos cosas: la direcciÃ³n del CLEAR y la del USR, que en nuestro caso vienen a
+ser 24310 para el CLEAR y 33792 para el USR. La primera direcciÃ³n nos indica el lugar
+donde colocamos el RAMPTOP para que el BASIC no machaque la informaciÃ³n y la
+PILA del ordenador, y la segunda nos indica la direcciÃ³n de arranque del programa
+en cÃ³digo mÃ¡quina.
 </p>
 <a name="figura2">
 <table border="0" cellspacing="0" cellpadding="2" width="320">
@@ -375,35 +375,35 @@ en código máquina.
 Cuando cargamos un programa de cinta no es necesario indicar el nombre de los
 bloques que se van a cargar, ya que se supone que van grabados secuencialmente en el mismo orden
 que los vamos a cargar. Esto no pasa con el +3 y la unidad de disco, debemos indicarle
-exactamente cómo se llaman los diferentes bloques, en caso contrario no sabría
+exactamente cÃ³mo se llaman los diferentes bloques, en caso contrario no sabrÃ­a
 localizarlos. Los nombres que podemos dar a los diferentes archivos en la unidad
 de disco cambia respecto a como estamos acostumbrados a hacerlo en cinta. En
 disco se pueden nombrar con el formato de 8+3, es decir, ocho caracteres para el
-nombre, seguidos de un punto, y tres caracteres para la extensión que nos
-indique de que tipo de datos está compuesto el archivo. Por ejemplo "manic.bas"
+nombre, seguidos de un punto, y tres caracteres para la extensiÃ³n que nos
+indique de que tipo de datos estÃ¡ compuesto el archivo. Por ejemplo "manic.bas"
 para el cargador basic del Manic Miner, "manic.scr" para la pantalla de
-carga, "manic.bin" para el bloque de datos y código máquina. En cambio, a la hora
+carga, "manic.bin" para el bloque de datos y cÃ³digo mÃ¡quina. En cambio, a la hora
 de nombrar programas en cinta se pueden emplear hasta un total de 10 caracteres,
-sin extensiones, a nuestra entera disposición.
+sin extensiones, a nuestra entera disposiciÃ³n.
 </p>
 <p>
 
 Con el cargador en memoria tenemos dos opciones, modificar el que tiene el
 juego original o crear uno nuevo. En este caso simplemente vamos a poner los nombres
-que deseamos en las órdenes LOAD; los mismos con los que vamos a grabar los bloques
+que deseamos en las Ã³rdenes LOAD; los mismos con los que vamos a grabar los bloques
 posteriormente a disco. El cargador debe quedar como en la <a href="#figura3">Figura 3</a>.
-Veréis que tiene los comandos tecleados de una forma un tanto especial, con
-instrucciones tales como VAL, PI, etc. Esto es así para que el programa BASIC ocupe menos
+VerÃ©is que tiene los comandos tecleados de una forma un tanto especial, con
+instrucciones tales como VAL, PI, etc. Esto es asÃ­ para que el programa BASIC ocupe menos
 en memoria.
 </p>
 <a name="figura3">
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
-		<td><img src="img/zonapc_03.gif" width="320" height="265"  alt="Figura 3. Cargador para la versión en disco" />
+		<td><img src="img/zonapc_03.gif" width="320" height="265"  alt="Figura 3. Cargador para la versiÃ³n en disco" />
 </td>
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">Figura 3. Cargador para la versión en disco</td>
+		<td class="piefoto" align="right">Figura 3. Cargador para la versiÃ³n en disco</td>
 
 	</tr>
 </table>
@@ -419,23 +419,23 @@ Para el emulador, podemos coger el archivo 180k.dsk que viene con las CPDTOOLS y
 hacer una copia con otro nombre.
 </p>
 <p>
-Abrimos el DSK (vacío) en el emulador y empezamos a grabar los diferentes bloques.
+Abrimos el DSK (vacÃ­o) en el emulador y empezamos a grabar los diferentes bloques.
 </p>
 <p>
 El cargador BASIC lo tenemos en memoria, por lo cual tecleamos <font class="codigo">SAVE
-"manic.bas" LINE 10</font> y pulsamos ENTER. Esperamos unos segundos, y estará grabado
+"manic.bas" LINE 10</font> y pulsamos ENTER. Esperamos unos segundos, y estarÃ¡ grabado
 en el disco. Los dos bloques de datos deberemos cargarlos ya que no lo hicimos antes.
 
 </p>
 <p>
 Ejecutamos <font class="codigo">CLEAR 3E4</font> y ENTER, por ejemplo, para evitar que se nos
-corrompa el bloque que vamos a cargar en 32768 y a continuación
+corrompa el bloque que vamos a cargar en 32768 y a continuaciÃ³n
 <font class="codigo">LOAD "" CODE: SAVE "manic.scr" CODE 22784,256</font> y pulsamos
 ENTER. Con esto cargamos de cinta y despues grabamos a disco
 el primero de los bloques. Con el segundo hacemos algo
 similar: <font class="codigo">LOAD "" CODE: SAVE "manic.bin" CODE 32768,32768</font> y
 ENTER. Ya tenemos el programa grabado en disco. Para comprobarlo hacemos
-<font class="codigo">CAT</font> y ENTER y debería salirnos algo similar a lo mostrado
+<font class="codigo">CAT</font> y ENTER y deberÃ­a salirnos algo similar a lo mostrado
 en la <a href="#figura4">Figura 4</a>.
 
 </p>
@@ -455,7 +455,7 @@ en la <a href="#figura4">Figura 4</a>.
 <p>
 Ya tenemos el Manic Miner listo para ser cargado en segundos en nuestro +3.
 Reseteamos el emulador y tecleamos <font class="codigo">LOAD "manic.bas"</font> y ENTER.
-Al cabo de unos segundos, y si seguimos el proceso aquí explicado, tendremos el juego
+Al cabo de unos segundos, y si seguimos el proceso aquÃ­ explicado, tendremos el juego
 cargado y listo para pegarnos unas partiditas.
 </p>
 <a name="figura5">
@@ -477,9 +477,9 @@ cargado y listo para pegarnos unas partiditas.
 <p>
 Por supuesto, todo esto que acabamos de realizar lo podemos hacer sobre un +3
 real, utilizando cintas y discos reales, etc., con el inconveniente del tiempo de
-carga. El emulador nos facilita enormemente esta tarea y, además, no olvidemos que podemos
-grabar el archivo DSK generado a un disco de 3" o 3"1/2 como explicábamos en esta
-misma sección el mes pasado.
+carga. El emulador nos facilita enormemente esta tarea y, ademÃ¡s, no olvidemos que podemos
+grabar el archivo DSK generado a un disco de 3" o 3"1/2 como explicÃ¡bamos en esta
+misma secciÃ³n el mes pasado.
 </p>
 
 </div>
@@ -509,14 +509,14 @@ function RecargarPie(url)
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
 
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
         <option value="zona-pc.html" selected>Zona PC</option>
         <option value="hardware.html">Hardware</option>
 
-        <option value="basic.html">Programación BASIC</option>
-        <option value="emulacion.html">Emulación</option>
+        <option value="basic.html">ProgramaciÃ³n BASIC</option>
+        <option value="emulacion.html">EmulaciÃ³n</option>
         <option value="zona-www.html">Zona WWW</option>
         <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
     </select>
@@ -527,7 +527,7 @@ function RecargarPie(url)
                 <a href="#arriba">Volver arriba</a>
             </td>
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
     </form>
 
 </table>

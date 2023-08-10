@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,34 +31,34 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
         <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
 
         <option value="el-aventurero.html">El Aventurero</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
         <option value="computone.html">Computone</option>
         <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html" selected>Programación BASIC</option>
-        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="basic.html" selected>ProgramaciÃ³n BASIC</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
 
-        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
         <option value="128k-mode.html">128K MODE</option>
         <option value="input.html">INPUT</option>
-        <option value="tira-comica.html">Tira cómica</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="tira-comica.html">Tira cÃ³mica</option>
+        <option value="opinion.html">OpiniÃ³n</option>
     </select>
 
     <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
 </td>
-            <td align="center" class="texto">Número 17 - Marzo 2009</td>
+            <td align="center" class="texto">NÃºmero 17 - Marzo 2009</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
@@ -74,89 +74,89 @@ function RecargarCabecera(url)
     <tr>
         <td>
 <div align="justify">
-<p align="center"><font size="5">ZX BASIC. Un sueño hecho real...</font></p>
-<p><em>Este artículo trata sobre ZX BASIC, un compilador cruzado que permite crear en tu PC programas para tu ZX Spectrum. Lo que hace es traducir las instrucciones de un programa en BASIC a código máquina del Z80 que luego puedes ejecutar en un emulador o en un Spectrum real.</em></p>
+<p align="center"><font size="5">ZX BASIC. Un sueÃ±o hecho real...</font></p>
+<p><em>Este artÃ­culo trata sobre ZX BASIC, un compilador cruzado que permite crear en tu PC programas para tu ZX Spectrum. Lo que hace es traducir las instrucciones de un programa en BASIC a cÃ³digo mÃ¡quina del Z80 que luego puedes ejecutar en un emulador o en un Spectrum real.</em></p>
 <p><strong>Hace mucho tiempo...</strong></p>
 
-<p>Ejem... ¿En una galaxia muy muy lejana? Bueno, no. No tanto.</p>
-<p>Al igual que muchos de vosotros, de niño quería hacer otras cosas con mi ZX Spectrum aparte de jugar: quería experimentar. Programar era una forma de hacerlo, sin duda. La electrónica no era mi fuerte y siendo un crío como era y con tan poca experiencia (había tenido algún que otro susto con la electricidad anteriormente) la programación era la mejor forma de experimentar. Era como ser un dios en miniatura dentro del universo de posibilidades que el ZX Spectrum ofrecía por aquel entonces. Compraba MicroHobby (y las primeras Micromanía); me dedicaba -como creo que todos hicimos- horas y horas a teclear los listados publicados; a hacer mis propios códigos en BASIC; a cargar algunos de los programas y modificarlos (hoy diríamos hackearlos) y en definitiva a probar muchas otras cosas de esta pequeña pero maravillosa máquina.</p>
-<p>Pronto una limitación se hizo evidente: el BASIC del ZX Spectrum era ciertamente lento. Cuando nos picábamos mis amigos y yo con nuestros respectivmos micros, el ZX Spectrum siempre llevaba las de perder. Un simple bucle FOR n = 1 TO 1000: NEXT n tardaba algo más de 4 segundos en ejecutarse aunque no hiciera nada. En otros microordenadores esto no era así (en el Dragon 64 tardaba menos de un segundo, creo recordar).</p>
-<p>Pese a todo, el BASIC de Sinclair era extremadamente rico en general. Aprendí programación con él y muchas de esas cosas me ayudaron en la carrera de informática. Esa riqueza del lenguaje no parecían tenerla los otras implementaciones BASIC de los años 80 (o esa fue mi impresión). Un ejemplo típico es el COMMODORE, cuyo BASIC emplea muchos POKES para realizar determinadas tareas. Es por esto que creo que es uno de los micros con mayor cantidad de programas BASIC creados (todavía a día de hoy).</p>
-<p>Para vencer la limitación de la velocidad, muchos intentamos programar en ensamblador. Mis escasos conocimientos en general y particularmente sobre todo de aritmética binaria y hexadecimal, la escasa bibliografía -gracias de nuevo a MicroHobby y a sus fichas- y, sobre todo, de un ensamblador decente (nunca tuve GENS ni MONS) hicieron que el sueño de crear un juego y otras muchas cosas nunca se cumplieran.</p>
-<p>Llegué a hacer en BASIC un intérprete de lenguaje Prolog muy simple. Otro de LOGO y otro de un lenguaje que me inventé. Desde luego, no tenía el conocimiento sobre la programación de lenguajes de ordenador que tengo hoy día, pero como ya os imagináis, si el BASIC de ZX era lento, un intérprete de un lenguaje realizado en BASIC era aún más lento. Exasperante. A pesar de todo, esa pequeña frustración fue la semilla que fijó claramente mi vocación (como supongo que muchos de vosotros).</p>
-<p>Si estás leyendo esto es porque muy probablemente también tuviste estas inquietudes. Ahora volvamos al presente...</p>
-<p><strong>Un poco de teoría</strong></p>
-<p>Antes de comenzar a explicar el uso del compilador, está bien echar un vistazo por encima a qué es un compilador y su diseño interno por dos motivos:</p>
+<p>Ejem... Â¿En una galaxia muy muy lejana? Bueno, no. No tanto.</p>
+<p>Al igual que muchos de vosotros, de niÃ±o querÃ­a hacer otras cosas con mi ZX Spectrum aparte de jugar: querÃ­a experimentar. Programar era una forma de hacerlo, sin duda. La electrÃ³nica no era mi fuerte y siendo un crÃ­o como era y con tan poca experiencia (habÃ­a tenido algÃºn que otro susto con la electricidad anteriormente) la programaciÃ³n era la mejor forma de experimentar. Era como ser un dios en miniatura dentro del universo de posibilidades que el ZX Spectrum ofrecÃ­a por aquel entonces. Compraba MicroHobby (y las primeras MicromanÃ­a); me dedicaba -como creo que todos hicimos- horas y horas a teclear los listados publicados; a hacer mis propios cÃ³digos en BASIC; a cargar algunos de los programas y modificarlos (hoy dirÃ­amos hackearlos) y en definitiva a probar muchas otras cosas de esta pequeÃ±a pero maravillosa mÃ¡quina.</p>
+<p>Pronto una limitaciÃ³n se hizo evidente: el BASIC del ZX Spectrum era ciertamente lento. Cuando nos picÃ¡bamos mis amigos y yo con nuestros respectivmos micros, el ZX Spectrum siempre llevaba las de perder. Un simple bucle FOR n = 1 TO 1000: NEXT n tardaba algo mÃ¡s de 4 segundos en ejecutarse aunque no hiciera nada. En otros microordenadores esto no era asÃ­ (en el Dragon 64 tardaba menos de un segundo, creo recordar).</p>
+<p>Pese a todo, el BASIC de Sinclair era extremadamente rico en general. AprendÃ­ programaciÃ³n con Ã©l y muchas de esas cosas me ayudaron en la carrera de informÃ¡tica. Esa riqueza del lenguaje no parecÃ­an tenerla los otras implementaciones BASIC de los aÃ±os 80 (o esa fue mi impresiÃ³n). Un ejemplo tÃ­pico es el COMMODORE, cuyo BASIC emplea muchos POKES para realizar determinadas tareas. Es por esto que creo que es uno de los micros con mayor cantidad de programas BASIC creados (todavÃ­a a dÃ­a de hoy).</p>
+<p>Para vencer la limitaciÃ³n de la velocidad, muchos intentamos programar en ensamblador. Mis escasos conocimientos en general y particularmente sobre todo de aritmÃ©tica binaria y hexadecimal, la escasa bibliografÃ­a -gracias de nuevo a MicroHobby y a sus fichas- y, sobre todo, de un ensamblador decente (nunca tuve GENS ni MONS) hicieron que el sueÃ±o de crear un juego y otras muchas cosas nunca se cumplieran.</p>
+<p>LleguÃ© a hacer en BASIC un intÃ©rprete de lenguaje Prolog muy simple. Otro de LOGO y otro de un lenguaje que me inventÃ©. Desde luego, no tenÃ­a el conocimiento sobre la programaciÃ³n de lenguajes de ordenador que tengo hoy dÃ­a, pero como ya os imaginÃ¡is, si el BASIC de ZX era lento, un intÃ©rprete de un lenguaje realizado en BASIC era aÃºn mÃ¡s lento. Exasperante. A pesar de todo, esa pequeÃ±a frustraciÃ³n fue la semilla que fijÃ³ claramente mi vocaciÃ³n (como supongo que muchos de vosotros).</p>
+<p>Si estÃ¡s leyendo esto es porque muy probablemente tambiÃ©n tuviste estas inquietudes. Ahora volvamos al presente...</p>
+<p><strong>Un poco de teorÃ­a</strong></p>
+<p>Antes de comenzar a explicar el uso del compilador, estÃ¡ bien echar un vistazo por encima a quÃ© es un compilador y su diseÃ±o interno por dos motivos:</p>
 
 <ul>
-  <li>Hay personas que saben programar pero no comprenden que hay cosas que un compilador no podrá hacer jamás.</li>
-  <li>También puede que te interese expandir el compilador de alguna manera, o contribuir al desarrollo del lenguaje o a muchas otras cosas.</li>
+  <li>Hay personas que saben programar pero no comprenden que hay cosas que un compilador no podrÃ¡ hacer jamÃ¡s.</li>
+  <li>TambiÃ©n puede que te interese expandir el compilador de alguna manera, o contribuir al desarrollo del lenguaje o a muchas otras cosas.</li>
 </ul>
-<p>Para empezar, un traductor no es más que un programa capaz de convertir de alguna manera un código escrito en un lenguaje de programación a otro. Por ejemplo puedes tener un programa en BASIC y traducirlo a LOGO (suponiendo que sea factible) o a C. Un compilador va un paso más allá. Es un traductor que traduce un lenguaje fuente a código objeto (binario) que es directamente ejecutable por la máquina.</p>
-<p>Un intérprete, por contra, lo que hace es ir leyendo un programa fuente instrucción por instrucción y representarlas ejecutando una serie de acciones equivalentes a cada una de ellas. Si usaste un ZX Spectrum ya conoces un intérprete: la ROM del ZX Spectrum. La ROM es en su mayor parte un intérprete de Sinclair BASIC. Los programas interpretados, por lo general, son más lentos que los compilados (en algunos pocos casos se puede conseguir una velocidad casi similar).</p>
-<p>ZX BASIC es un compilador cruzado. Los compiladores cruzados son aquellos que se ejecutan en una máquina pero producen código objeto para otra. En este caso, vamos a usar ZX BASIC en nuestro PC (ya sea sobre Windows o Linux) para producir un programa compilado para ZX Spectrum (en realidad para Z80). De esa manera ahorraremos memoria -que en el Spectrum es muy escasa- al no tener que alojar el compilador junto con el programa compilado. Además, la velocidad de compilación será mayor (generalmente unos segundos).</p>
-<p>La velocidad de un programa compilado estriba en que se calcula de antemano toda la información posible sobre el código fuente que se va a ejecutar. Por eso un compilador necesita obtener determinada información sobre el programa durante la fase de compilación (por ejemplo, el tipo de dato que almacena una variable, si es numérica o de cadena, dónde se va a guardar en memoria, etc). Un intérprete no necesita esto ya que lo hace durante la ejecución. Por eso hay cosas que un compilador no puede hacer y un intérprete sí. El ejemplo más claro es el de la función VAL del Sinclair BASIC. Es una instrucción muy potente. LET a$ = "x+x": LET b = VAL a$ almacena en la variable b el resultado de la expresión "x+x". Dado que la variable a$ puede cambiar su valor durante la ejecución del programa, es imposible saber en tiempo de compilación que tipo de dato se va a guardar en b (un valor de punto flotante, un número entero, etc) ni cómo calcularlo. De hecho, muy pocas implementaciones de BASIC tienen esta potencia, ni siquiera en la actualidad. En las competiciones de BASIC entre distintas marcas de micros antes mencionadas, el ZX perdía en velocidad pero por contra la capacidad de VAL resultaba devastadora.</p>
-<p>En definitiva, esto era posible porque el BASIC de la ROM cada vez que evalúa una expresión le hace un análisis (con la consiguiente lentitud): se gana versatilidad, pero se pierde velocidad.</p>
+<p>Para empezar, un traductor no es mÃ¡s que un programa capaz de convertir de alguna manera un cÃ³digo escrito en un lenguaje de programaciÃ³n a otro. Por ejemplo puedes tener un programa en BASIC y traducirlo a LOGO (suponiendo que sea factible) o a C. Un compilador va un paso mÃ¡s allÃ¡. Es un traductor que traduce un lenguaje fuente a cÃ³digo objeto (binario) que es directamente ejecutable por la mÃ¡quina.</p>
+<p>Un intÃ©rprete, por contra, lo que hace es ir leyendo un programa fuente instrucciÃ³n por instrucciÃ³n y representarlas ejecutando una serie de acciones equivalentes a cada una de ellas. Si usaste un ZX Spectrum ya conoces un intÃ©rprete: la ROM del ZX Spectrum. La ROM es en su mayor parte un intÃ©rprete de Sinclair BASIC. Los programas interpretados, por lo general, son mÃ¡s lentos que los compilados (en algunos pocos casos se puede conseguir una velocidad casi similar).</p>
+<p>ZX BASIC es un compilador cruzado. Los compiladores cruzados son aquellos que se ejecutan en una mÃ¡quina pero producen cÃ³digo objeto para otra. En este caso, vamos a usar ZX BASIC en nuestro PC (ya sea sobre Windows o Linux) para producir un programa compilado para ZX Spectrum (en realidad para Z80). De esa manera ahorraremos memoria -que en el Spectrum es muy escasa- al no tener que alojar el compilador junto con el programa compilado. AdemÃ¡s, la velocidad de compilaciÃ³n serÃ¡ mayor (generalmente unos segundos).</p>
+<p>La velocidad de un programa compilado estriba en que se calcula de antemano toda la informaciÃ³n posible sobre el cÃ³digo fuente que se va a ejecutar. Por eso un compilador necesita obtener determinada informaciÃ³n sobre el programa durante la fase de compilaciÃ³n (por ejemplo, el tipo de dato que almacena una variable, si es numÃ©rica o de cadena, dÃ³nde se va a guardar en memoria, etc). Un intÃ©rprete no necesita esto ya que lo hace durante la ejecuciÃ³n. Por eso hay cosas que un compilador no puede hacer y un intÃ©rprete sÃ­. El ejemplo mÃ¡s claro es el de la funciÃ³n VAL del Sinclair BASIC. Es una instrucciÃ³n muy potente. LET a$ = "x+x": LET b = VAL a$ almacena en la variable b el resultado de la expresiÃ³n "x+x". Dado que la variable a$ puede cambiar su valor durante la ejecuciÃ³n del programa, es imposible saber en tiempo de compilaciÃ³n que tipo de dato se va a guardar en b (un valor de punto flotante, un nÃºmero entero, etc) ni cÃ³mo calcularlo. De hecho, muy pocas implementaciones de BASIC tienen esta potencia, ni siquiera en la actualidad. En las competiciones de BASIC entre distintas marcas de micros antes mencionadas, el ZX perdÃ­a en velocidad pero por contra la capacidad de VAL resultaba devastadora.</p>
+<p>En definitiva, esto era posible porque el BASIC de la ROM cada vez que evalÃºa una expresiÃ³n le hace un anÃ¡lisis (con la consiguiente lentitud): se gana versatilidad, pero se pierde velocidad.</p>
 
 <p>Los compiladores modernos (y ZX BASIC lo es) se basan en capas:</p>
 <ul>
-  <li>La primera capa es la de análisis de código (que a su vez se suele descomponer en dos: una capa de análisis léxico y otra de análisis sintáctico). Esta capa intenta comprender el programa y verificar que la sintaxis es correcta construyendo una representación en memoria del programa llamada Árbol Sintáctico Abstracto (AST en inglés).</li>
-  <li>La segunda capa es la de análisis semántico, que realiza una primera traducción y además algunas comprobaciones extra que la capa anterior no puede realizar. También se realizan las primeras optimaciones de código. En general, lo que hace es traducir el programa a un ensamblador ficticio llamado código intermedio. Esta capa y la anterior suelen ir juntas en el código (muchas veces son la misma capa en realidad) y se les llama frontend.</li>
-  <li>Este código intermedio será nuevamente traducido a ensamblador de la arquitectura de destino (en nuestro caso Z80). Al contrario que el lenguaje BASIC, el código intermedio es muy rígido y muy fácil de analizar. No es necesario crear otro traductor para esta fase. A esta capa y a las que siguen se las suele llamar backend.</li>
-  <li>Finalmente, un ensamblador (el ZX BASIC contiene uno propio) y un enlazador de código objeto (el ZX BASIC no usa ninguno: por ahora todo se trabaja en ensamblador y se compila a binario directamente) realizan el resto del trabajo produciendo el binario final.</li>
+  <li>La primera capa es la de anÃ¡lisis de cÃ³digo (que a su vez se suele descomponer en dos: una capa de anÃ¡lisis lÃ©xico y otra de anÃ¡lisis sintÃ¡ctico). Esta capa intenta comprender el programa y verificar que la sintaxis es correcta construyendo una representaciÃ³n en memoria del programa llamada Ãrbol SintÃ¡ctico Abstracto (AST en inglÃ©s).</li>
+  <li>La segunda capa es la de anÃ¡lisis semÃ¡ntico, que realiza una primera traducciÃ³n y ademÃ¡s algunas comprobaciones extra que la capa anterior no puede realizar. TambiÃ©n se realizan las primeras optimaciones de cÃ³digo. En general, lo que hace es traducir el programa a un ensamblador ficticio llamado cÃ³digo intermedio. Esta capa y la anterior suelen ir juntas en el cÃ³digo (muchas veces son la misma capa en realidad) y se les llama frontend.</li>
+  <li>Este cÃ³digo intermedio serÃ¡ nuevamente traducido a ensamblador de la arquitectura de destino (en nuestro caso Z80). Al contrario que el lenguaje BASIC, el cÃ³digo intermedio es muy rÃ­gido y muy fÃ¡cil de analizar. No es necesario crear otro traductor para esta fase. A esta capa y a las que siguen se las suele llamar backend.</li>
+  <li>Finalmente, un ensamblador (el ZX BASIC contiene uno propio) y un enlazador de cÃ³digo objeto (el ZX BASIC no usa ninguno: por ahora todo se trabaja en ensamblador y se compila a binario directamente) realizan el resto del trabajo produciendo el binario final.</li>
 </ul>
 
 <table border="1">
   <tr>
     <td rowspan="5">Frontend</td>
-    <td>Análisis Léxico</td>
-    <td>Convertir letras a palabras y símbolos</td>
+    <td>AnÃ¡lisis LÃ©xico</td>
+    <td>Convertir letras a palabras y sÃ­mbolos</td>
   </tr>
   <tr>
-    <td>Análisis Sintáctico</td>
+    <td>AnÃ¡lisis SintÃ¡ctico</td>
 
     <td>	Comprobar la sintaxis y las frases</td>
   </tr>
   <tr>
-    <td>Análisis Semántico</td>
-    <td>	Comprobar los tipos de variable, declaraciones duplicadas o fuera de contexto. Construcción del Árbol Sintáctico.</td>
+    <td>AnÃ¡lisis SemÃ¡ntico</td>
+    <td>	Comprobar los tipos de variable, declaraciones duplicadas o fuera de contexto. ConstrucciÃ³n del Ãrbol SintÃ¡ctico.</td>
   </tr>
 
   <tr>
-    <td colspan="2">Optimización del Árbol</td>
+    <td colspan="2">OptimizaciÃ³n del Ãrbol</td>
   </tr>
   <tr>
-    <td colspan="2">Generación de Código Intermedio</td>
+    <td colspan="2">GeneraciÃ³n de CÃ³digo Intermedio</td>
   </tr>
   <tr>
     <td rowspan="3">Backend para ZX Spectrum</td>
 
-    <td colspan="2">Traducción a Ensamblador (Z80)</td>
+    <td colspan="2">TraducciÃ³n a Ensamblador (Z80)</td>
   </tr>
   <tr>
-    <td colspan="2">Optimización de Código Ensamblador (reordenación de registros, etc)</td>
+    <td colspan="2">OptimizaciÃ³n de CÃ³digo Ensamblador (reordenaciÃ³n de registros, etc)</td>
   </tr>
   <tr>
-    <td colspan="2">Ensamblado: Traducción a Código Máquina (o Código Objeto)</td>
+    <td colspan="2">Ensamblado: TraducciÃ³n a CÃ³digo MÃ¡quina (o CÃ³digo Objeto)</td>
 
   </tr>
 </table>
 
-<p>Prácticamente todos los compiladores actuales trabajan de forma similar. La ventaja de esto es que se pueden cambiar las capas de backend de manera que es posible compilar el mismo programa para distintas arquitecturas: se podría hacer que un programa en ZX BASIC compilara para Windows, Linux, Nintendo DS, teléfono móvil, PlayStation o cualquier otra plataforma. Evidentemente cada plataforma tiene su limitación, pero dado que el ZX es la más limitada de todas sin duda, esto no debería suponer problema alguno. Los compiladores de este tipo se llaman retargeable compilers (compiladores reorientables).</p>
-<p>También se podría cambiar el frontend. Podrías crear un traductor para otro lenguaje (C, PASCAL, LOGO...) que pasara a código intermedio, y usar el mismo backend. Esta filosofía es la que usa .NET, por ejemplo, donde distintos lenguajes fuentes compilan a CIL (Common Intermediate Language) que es luego interpretado por el .NET Framework que tengas instalado en Windows (si es que usas ese sistema operativo).</p>
+<p>PrÃ¡cticamente todos los compiladores actuales trabajan de forma similar. La ventaja de esto es que se pueden cambiar las capas de backend de manera que es posible compilar el mismo programa para distintas arquitecturas: se podrÃ­a hacer que un programa en ZX BASIC compilara para Windows, Linux, Nintendo DS, telÃ©fono mÃ³vil, PlayStation o cualquier otra plataforma. Evidentemente cada plataforma tiene su limitaciÃ³n, pero dado que el ZX es la mÃ¡s limitada de todas sin duda, esto no deberÃ­a suponer problema alguno. Los compiladores de este tipo se llaman retargeable compilers (compiladores reorientables).</p>
+<p>TambiÃ©n se podrÃ­a cambiar el frontend. PodrÃ­as crear un traductor para otro lenguaje (C, PASCAL, LOGO...) que pasara a cÃ³digo intermedio, y usar el mismo backend. Esta filosofÃ­a es la que usa .NET, por ejemplo, donde distintos lenguajes fuentes compilan a CIL (Common Intermediate Language) que es luego interpretado por el .NET Framework que tengas instalado en Windows (si es que usas ese sistema operativo).</p>
 <p>Resumiendo: ZX BASIC es un compilador cruzado reorientable de 3 capas.</p>
 
-<p><strong>Instalación</strong></p>
-<p>El compilador ZX BASIC está hecho en Python (un lenguaje interpretado de scripting). Esto lo hace portable a todas aquellas plataformas donde esté python (actualmente incluso para telefonos Nokia con Symbian, y para Windows Mobile). Es posible en teoría compilar programas en ZX BASIC para nuestro Spectrum en cualquier sitio donde esté python. Lo único que se requiere es que la versión de Python instalada sea igual o superior a la 2.5. En el caso de Windows, además, hay una versión instalable (.MSI) que ni siquiera requiere python. Si usas Windows y tienes dudas, te recomiendo que uses esta versión.</p>
-<p>Puedes descargarte la última versión del compilador desde http://www.boriel.com/files/zxb/ . Verás que hay varias versiones. Descárgate siempre la más reciente. Hay un alias llamado latest version que siempre apunta a la última versión (en el momento de escribir esto, la 1.0.3). El archivo con extensión .MSI es el archivo de instalación de Windows antes mencionado. Si no estás familiarizado con todo lo que has leído hasta ahora, usa esta versión.</p>
+<p><strong>InstalaciÃ³n</strong></p>
+<p>El compilador ZX BASIC estÃ¡ hecho en Python (un lenguaje interpretado de scripting). Esto lo hace portable a todas aquellas plataformas donde estÃ© python (actualmente incluso para telefonos Nokia con Symbian, y para Windows Mobile). Es posible en teorÃ­a compilar programas en ZX BASIC para nuestro Spectrum en cualquier sitio donde estÃ© python. Lo Ãºnico que se requiere es que la versiÃ³n de Python instalada sea igual o superior a la 2.5. En el caso de Windows, ademÃ¡s, hay una versiÃ³n instalable (.MSI) que ni siquiera requiere python. Si usas Windows y tienes dudas, te recomiendo que uses esta versiÃ³n.</p>
+<p>Puedes descargarte la Ãºltima versiÃ³n del compilador desde http://www.boriel.com/files/zxb/ . VerÃ¡s que hay varias versiones. DescÃ¡rgate siempre la mÃ¡s reciente. Hay un alias llamado latest version que siempre apunta a la Ãºltima versiÃ³n (en el momento de escribir esto, la 1.0.3). El archivo con extensiÃ³n .MSI es el archivo de instalaciÃ³n de Windows antes mencionado. Si no estÃ¡s familiarizado con todo lo que has leÃ­do hasta ahora, usa esta versiÃ³n.</p>
 
-<p>Para Linux y otras plataformas, descomprime la versión .zip (o .tar.gz, la que te sea más cómoda) en algún sitio de tu PATH. Para desinstalar el compilador, sólo tienes que borrar la carpeta donde lo has descomprimido. Si usaste la versión .MSI de windows, desinstálalo desde el Panel de Control (Agregar o Quitar Programas).</p>
-<p>Para comprobar que se ha instalado correctamente, abre una consola y teclea zxb.py --version. Si usaste la versión autoinstalable de Windows, abre una ventana nueva de consola de comandos MS-DOS porque las variables de entorno han cambiado, y teclea: zxb --version (fíjate que no tiene la extensión .py). En ambos casos, se debería imprimir la versión del compilador (1.0.5).</p>
-<p>A partir de ahora todos los ejemplos usarán la orden zxb (usa zxb.py si instalaste el compilador descomprimiéndolo en una carpeta).</p>
+<p>Para Linux y otras plataformas, descomprime la versiÃ³n .zip (o .tar.gz, la que te sea mÃ¡s cÃ³moda) en algÃºn sitio de tu PATH. Para desinstalar el compilador, sÃ³lo tienes que borrar la carpeta donde lo has descomprimido. Si usaste la versiÃ³n .MSI de windows, desinstÃ¡lalo desde el Panel de Control (Agregar o Quitar Programas).</p>
+<p>Para comprobar que se ha instalado correctamente, abre una consola y teclea zxb.py --version. Si usaste la versiÃ³n autoinstalable de Windows, abre una ventana nueva de consola de comandos MS-DOS porque las variables de entorno han cambiado, y teclea: zxb --version (fÃ­jate que no tiene la extensiÃ³n .py). En ambos casos, se deberÃ­a imprimir la versiÃ³n del compilador (1.0.5).</p>
+<p>A partir de ahora todos los ejemplos usarÃ¡n la orden zxb (usa zxb.py si instalaste el compilador descomprimiÃ©ndolo en una carpeta).</p>
 
 <p><strong>Nuestro primer programa</strong></p>
-<p>El ritual a la hora de probar un nuevo lenguaje es el programa Hola Mundo, que básicamente imprime ese mensaje por pantalla. Vamos a hacer lo mismo, para familiarizarnos con todo el proceso de creación y compilación de un programa.</p>
-<p>El código fuente de ZX BASIC tiene que estar en un archivo de texto ASCII. Usa tu editor de texto favorito, y escribe el siguiente programa:</p>
+<p>El ritual a la hora de probar un nuevo lenguaje es el programa Hola Mundo, que bÃ¡sicamente imprime ese mensaje por pantalla. Vamos a hacer lo mismo, para familiarizarnos con todo el proceso de creaciÃ³n y compilaciÃ³n de un programa.</p>
+<p>El cÃ³digo fuente de ZX BASIC tiene que estar en un archivo de texto ASCII. Usa tu editor de texto favorito, y escribe el siguiente programa:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -165,8 +165,8 @@ function RecargarCabecera(url)
 </pre>
     </p></td></tr>
 </table>
-<p>Como puedes ver, es una sentencia BASIC de toda la vida. Ahora graba el programa como hola.bas. Nunca grabes tus programas en el directorio de instalación del compilador. Hazlo en un directorio propio y evita que tu código se mezcle con el del compilador. De esa forma, cuando salgan nuevas versiones no tendrás problemas borrando el directorio del compilador para instalar la nueva versión.</p>
-<p>Ahora abre una consola de comandos y posiciónate en el directorio donde has grabado el programa hola.bas. Vamos a realizar la compilación:</p>
+<p>Como puedes ver, es una sentencia BASIC de toda la vida. Ahora graba el programa como hola.bas. Nunca grabes tus programas en el directorio de instalaciÃ³n del compilador. Hazlo en un directorio propio y evita que tu cÃ³digo se mezcle con el del compilador. De esa forma, cuando salgan nuevas versiones no tendrÃ¡s problemas borrando el directorio del compilador para instalar la nueva versiÃ³n.</p>
+<p>Ahora abre una consola de comandos y posiciÃ³nate en el directorio donde has grabado el programa hola.bas. Vamos a realizar la compilaciÃ³n:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -175,30 +175,30 @@ zxb -T -B -a hola.bas
     </p></td></tr>
 
 </table>
-<p>Te recomiendo que dejes de leer aquí y hagas todo esto en el computador antes de seguir. Si todo ha ido bien no aparecerá nada por pantalla. Se tiene que haber creado el programa hola.tzx (que es tu programa compilado en formato .tzx) en el mismo directorio donde tienes el código fuente hola.bas. Este programa se puede ejecutar directamente en cualquier emulador (yo utilizo EMUZWIN) que admite el formato .TZX. También hay programas que convierten los archivos .TZX a archivos de sonido .MP3 que son los que se usarían para cargar en un ZX Spectrum real. De todas formas se pueden generar otros formatos.</p>
-<p>Recuerda que tu programa es compilado en código máquina. Normalmente el ZX Spectrum necesita un cargador en BASIC que cargue el código máquina y lo ejecute. Si cargas el programa a velocidad normal verás que primero aparecerá en pantalla Program: "hola.bas". Es el cargador en BASIC. Este cargador a continuación cargará el código máquina y lo ejecutará con un RANDOMIZE USR. Si interrumpes la carga verás que es un cargador muy simple y sin ninguna protección y que el código máquina de tu programa se carga y ejecuta a partir de la dirección de memoria 32768 (8000h en hexadecimal).</p>
-<p>Si todo esto te ha funcionado, enhorabuena: ya estás listo para empezar a programar. ZX BASIC intenta ser lo más parecido al Sinclair BASIC, de manera que te sea cómodo empezar a programar si ya conoces éste último. Sin embargo, existen algunas limitaciones por ser un programa compilado (como ya se comentó antes). Algunas instrucciones como VAL no se comportan igual. Otras no existen porque no tienen sentido (LIST, LLIST). Y algunas otras están expandidas o admiten parámetros extra para aprovechar la potencia que ahora tenemos. Además, hay instrucciones nuevas que te ahorrarán trabajo: sentencias de bucles más potentes y subrutinas con variables privadas son sólo un ejemplo de ello.</p>
+<p>Te recomiendo que dejes de leer aquÃ­ y hagas todo esto en el computador antes de seguir. Si todo ha ido bien no aparecerÃ¡ nada por pantalla. Se tiene que haber creado el programa hola.tzx (que es tu programa compilado en formato .tzx) en el mismo directorio donde tienes el cÃ³digo fuente hola.bas. Este programa se puede ejecutar directamente en cualquier emulador (yo utilizo EMUZWIN) que admite el formato .TZX. TambiÃ©n hay programas que convierten los archivos .TZX a archivos de sonido .MP3 que son los que se usarÃ­an para cargar en un ZX Spectrum real. De todas formas se pueden generar otros formatos.</p>
+<p>Recuerda que tu programa es compilado en cÃ³digo mÃ¡quina. Normalmente el ZX Spectrum necesita un cargador en BASIC que cargue el cÃ³digo mÃ¡quina y lo ejecute. Si cargas el programa a velocidad normal verÃ¡s que primero aparecerÃ¡ en pantalla Program: "hola.bas". Es el cargador en BASIC. Este cargador a continuaciÃ³n cargarÃ¡ el cÃ³digo mÃ¡quina y lo ejecutarÃ¡ con un RANDOMIZE USR. Si interrumpes la carga verÃ¡s que es un cargador muy simple y sin ninguna protecciÃ³n y que el cÃ³digo mÃ¡quina de tu programa se carga y ejecuta a partir de la direcciÃ³n de memoria 32768 (8000h en hexadecimal).</p>
+<p>Si todo esto te ha funcionado, enhorabuena: ya estÃ¡s listo para empezar a programar. ZX BASIC intenta ser lo mÃ¡s parecido al Sinclair BASIC, de manera que te sea cÃ³modo empezar a programar si ya conoces Ã©ste Ãºltimo. Sin embargo, existen algunas limitaciones por ser un programa compilado (como ya se comentÃ³ antes). Algunas instrucciones como VAL no se comportan igual. Otras no existen porque no tienen sentido (LIST, LLIST). Y algunas otras estÃ¡n expandidas o admiten parÃ¡metros extra para aprovechar la potencia que ahora tenemos. AdemÃ¡s, hay instrucciones nuevas que te ahorrarÃ¡n trabajo: sentencias de bucles mÃ¡s potentes y subrutinas con variables privadas son sÃ³lo un ejemplo de ello.</p>
 
-<p><strong>Parámetros de compilación</strong></p>
-<p>El compilador ZX BASIC, por defecto, lee el código fuente y genera un archivo binario con la extensión .bin que contiene el código máquina (es decir, los bytes del código objeto directamente). Este código máquina no es reubicable, y tiene que ser cargado a partir de la dirección 32768. Como puedes suponer, esto puede ser de poca utilidad si no disponemos de algún método para pasar este código máquina a un emulador o un ZX Spectrum real. Además, puede que queramos que nuestro código empiece en la dirección 28000 (para ganar algo más de memoria que tan escasa es en nuestro ZX). Todo esto y mucho más se puede cambiar con las opciones de compilación.</p>
-<p>ZX Basic tiene bastantes parámetros. Sólo veremos los más importantes. Si tecleas zxb -h tendrás una escueta ayuda. Puedes buscar más información en la Wiki del compilador, que está en http://www.boriel.com/wiki/en/index.php/ZXBasic en inglés. Los parámetros tienen una versión larga que empieza con doble guión (por ej. --tzx) y una versión corta equivalente (en este caso, -T). Los parámetros más importantes son:</p>
+<p><strong>ParÃ¡metros de compilaciÃ³n</strong></p>
+<p>El compilador ZX BASIC, por defecto, lee el cÃ³digo fuente y genera un archivo binario con la extensiÃ³n .bin que contiene el cÃ³digo mÃ¡quina (es decir, los bytes del cÃ³digo objeto directamente). Este cÃ³digo mÃ¡quina no es reubicable, y tiene que ser cargado a partir de la direcciÃ³n 32768. Como puedes suponer, esto puede ser de poca utilidad si no disponemos de algÃºn mÃ©todo para pasar este cÃ³digo mÃ¡quina a un emulador o un ZX Spectrum real. AdemÃ¡s, puede que queramos que nuestro cÃ³digo empiece en la direcciÃ³n 28000 (para ganar algo mÃ¡s de memoria que tan escasa es en nuestro ZX). Todo esto y mucho mÃ¡s se puede cambiar con las opciones de compilaciÃ³n.</p>
+<p>ZX Basic tiene bastantes parÃ¡metros. SÃ³lo veremos los mÃ¡s importantes. Si tecleas zxb -h tendrÃ¡s una escueta ayuda. Puedes buscar mÃ¡s informaciÃ³n en la Wiki del compilador, que estÃ¡ en http://www.boriel.com/wiki/en/index.php/ZXBasic en inglÃ©s. Los parÃ¡metros tienen una versiÃ³n larga que empieza con doble guiÃ³n (por ej. --tzx) y una versiÃ³n corta equivalente (en este caso, -T). Los parÃ¡metros mÃ¡s importantes son:</p>
 <ul>
   <li>-T o --tzx hace que el formato de salida sea un archivo de cinta .tzx</li>
 
-  <li>-t o --tap hace que el formato de salida sea un archivo de cinta .tap. Esta opción y la anterior son excluyentes.</li>
-  <li>-B o --BASIC hace que se genere un cargador BASIC que cargue nuestro programa. Si usas esta opción, necesariamente tienes que haber usado una de las anteriores.</li>
-  <li>-a o --autorun hace que nuestro programa se ejecute automáticamente tras ser cargado. Esta opción obliga a que se use la opción --BASIC, ya que se requiere un cargador BASIC para que el programa se autoejecute.</li>
-  <li>-o &lt;fichero de salida&gt;. Permite especificar un nombre de archivo distinto para el programa resultante. Generalmente se usará el mismo nombre que el programa de código fuente (.bas), pero con una extensión distinta (.bin, .tap o .tzx)</li>
-  <li>-A o --asm Hace que no se genere el código objeto. En lugar de eso obtendremos el código ensamblador de todo nuestro programa (un archivo ASCII con extensión .asm). Esta opción es útil si queremos optimizar a mano nuestro programa. Se ha intentado que el código ensamblador generado sea bastante legible y con comentarios incluidos.</li>
+  <li>-t o --tap hace que el formato de salida sea un archivo de cinta .tap. Esta opciÃ³n y la anterior son excluyentes.</li>
+  <li>-B o --BASIC hace que se genere un cargador BASIC que cargue nuestro programa. Si usas esta opciÃ³n, necesariamente tienes que haber usado una de las anteriores.</li>
+  <li>-a o --autorun hace que nuestro programa se ejecute automÃ¡ticamente tras ser cargado. Esta opciÃ³n obliga a que se use la opciÃ³n --BASIC, ya que se requiere un cargador BASIC para que el programa se autoejecute.</li>
+  <li>-o &lt;fichero de salida&gt;. Permite especificar un nombre de archivo distinto para el programa resultante. Generalmente se usarÃ¡ el mismo nombre que el programa de cÃ³digo fuente (.bas), pero con una extensiÃ³n distinta (.bin, .tap o .tzx)</li>
+  <li>-A o --asm Hace que no se genere el cÃ³digo objeto. En lugar de eso obtendremos el cÃ³digo ensamblador de todo nuestro programa (un archivo ASCII con extensiÃ³n .asm). Esta opciÃ³n es Ãºtil si queremos optimizar a mano nuestro programa. Se ha intentado que el cÃ³digo ensamblador generado sea bastante legible y con comentarios incluidos.</li>
 
-  <li>-S o --ORG cambia la dirección de comienzo de ejecución del código máquina. Como se dijo antes, por defecto es 32768, pero podemos hacer que se ejecute a partir de una dirección distinta (por ej. 28000) para obtener más memoria.</li>
+  <li>-S o --ORG cambia la direcciÃ³n de comienzo de ejecuciÃ³n del cÃ³digo mÃ¡quina. Como se dijo antes, por defecto es 32768, pero podemos hacer que se ejecute a partir de una direcciÃ³n distinta (por ej. 28000) para obtener mÃ¡s memoria.</li>
 </ul>
 
 <p><strong>El Lenguaje ZX BASIC</strong></p>
-<p>He intentado que el lenguaje ZX BASIC sea lo más similar posible al de Sinclair. Como ya expliqué en el apartado anterior, hay instrucciones que no tienen sentido en un programa compilado y otras que son prácticamente imposibles de implementar. Pero también es cierto que se puede expandir el lenguaje y crear nuevas instrucciones para hacer cosas con la potencia que ahora tenemos. Para llegar a un consenso, se han tomado palabras reservadas del lenguaje FreeBASIC. En general, lo mejor es ir a la Wiki del compilador ZX BASIC ya mencionada pues allí hay una referencia de las palabras clave así como multitud de ejemplos.</p>
+<p>He intentado que el lenguaje ZX BASIC sea lo mÃ¡s similar posible al de Sinclair. Como ya expliquÃ© en el apartado anterior, hay instrucciones que no tienen sentido en un programa compilado y otras que son prÃ¡cticamente imposibles de implementar. Pero tambiÃ©n es cierto que se puede expandir el lenguaje y crear nuevas instrucciones para hacer cosas con la potencia que ahora tenemos. Para llegar a un consenso, se han tomado palabras reservadas del lenguaje FreeBASIC. En general, lo mejor es ir a la Wiki del compilador ZX BASIC ya mencionada pues allÃ­ hay una referencia de las palabras clave asÃ­ como multitud de ejemplos.</p>
 <p>Algunas cosas importantes:</p>
 <ul>
-  <li><p>ZX BASIC distingue en entre mayúsculas y minúsculas en los nombres de variables y funciones. Una variable llamada A es diferente de otra llamada a. Sin embargo en lo que se refiere a palabras reservadas (por ejemplo PRINT o FOR), éstas se pueden escribir como se deseen. La distinción entre mayúsculas y minúsculas para los identificadores de usuario podrá ser configurable en futuras versiones del compilador, pero no actualmente.</p>
+  <li><p>ZX BASIC distingue en entre mayÃºsculas y minÃºsculas en los nombres de variables y funciones. Una variable llamada A es diferente de otra llamada a. Sin embargo en lo que se refiere a palabras reservadas (por ejemplo PRINT o FOR), Ã©stas se pueden escribir como se deseen. La distinciÃ³n entre mayÃºsculas y minÃºsculas para los identificadores de usuario podrÃ¡ ser configurable en futuras versiones del compilador, pero no actualmente.</p>
   <p>Ejemplo.- Las siguientes palabras reservadas son todas equivalentes</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -209,8 +209,8 @@ PRINT print Print PrInT
     </p></td></tr>
 </table>
 </li>
-  <li><p>Como en el Spectrum, el ZX BASIC está orientado a líneas: no puedes partir una línea en medio de una sentencia BASIC. Si deseas hacerlo, usa el carácter de subrayado (_), al final de la línea partida para indicar que ésta continúa en la siguiente.</p>
-  <p>Ejemplo.- La siguiente línea partida no dará error, porque lleva un caracter de subguión (o subrayado) al final
+  <li><p>Como en el Spectrum, el ZX BASIC estÃ¡ orientado a lÃ­neas: no puedes partir una lÃ­nea en medio de una sentencia BASIC. Si deseas hacerlo, usa el carÃ¡cter de subrayado (_), al final de la lÃ­nea partida para indicar que Ã©sta continÃºa en la siguiente.</p>
+  <p>Ejemplo.- La siguiente lÃ­nea partida no darÃ¡ error, porque lleva un caracter de subguiÃ³n (o subrayado) al final
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -221,29 +221,29 @@ PRINT print Print PrInT
     </p></td></tr>
 </table>
   </p></li>
-  <li><p>Los números de línea del BASIC ya no son obligatorios. Son opcionales y se usan como etiquetas. También puedes usar identificadores como etiquetas. De todas maneras, si quieres puedes seguir usando líneas numeradas como en el BASIC tradicional del ZX Spectrum, si te puede la nostalgia (a mí a veces me puede, qué demonios). ¡Además, ya no están limitadas a 9999, y ni si quiera tienen por qué estar numeradas en orden!</p>
-  <p>Ejemplo.- Un bucle infinito sin usar numeración de líneas:</p>
+  <li><p>Los nÃºmeros de lÃ­nea del BASIC ya no son obligatorios. Son opcionales y se usan como etiquetas. TambiÃ©n puedes usar identificadores como etiquetas. De todas maneras, si quieres puedes seguir usando lÃ­neas numeradas como en el BASIC tradicional del ZX Spectrum, si te puede la nostalgia (a mÃ­ a veces me puede, quÃ© demonios). Â¡AdemÃ¡s, ya no estÃ¡n limitadas a 9999, y ni si quiera tienen por quÃ© estar numeradas en orden!</p>
+  <p>Ejemplo.- Un bucle infinito sin usar numeraciÃ³n de lÃ­neas:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
 <pre>
 BucleInfinito: REM Esto es una etiqueta.
-        PRINT "Hola Mundo" : REM Esto es una línea sin numeración
-        GO TO BucleInfinito : REM Esto podría ser GO TO 10 en Sinclair BASIC
+        PRINT "Hola Mundo" : REM Esto es una lÃ­nea sin numeraciÃ³n
+        GO TO BucleInfinito : REM Esto podrÃ­a ser GO TO 10 en Sinclair BASIC
 </pre>
     </p></td></tr>
 </table>
   </li>
 </ul>
 <p><strong>Los tipos de datos</strong></p>
-<p>Si eres un programador de Sinclair BASIC con cierta experiencia seguramente sabrás que el BASIC del ZX Spectrum trabaja siempre en punto flotante. El formato de dicha representación puede resultar complejo y ocupa 5 preciosos bytes (una mantisa de 32 bits y un exponente de 8 en exceso 127, tal y como explica el manual del ZX). Eso se traduce en un coste enorme en tiempo y en memoria. Si solo queremos almacenar valores enteros menores que 255, podríamos usar bytes directamente. Ocuparían la quinta parte de la memoria y su procesado sería mucho más rápido (apenas una o dos instrucciones en ensamblador). Por contra, se puede perder precisión en algunos cálculos. No te preocupes: el formato de punto flotante también está disponible.</p>
-<p>Está claro que según el uso que le vayamos a dar a una variable, ésta almacenará un tipo de dato determinado. Este tipo de dato le indica al compilador cómo tratarlo y el tamaño que ocupará en memoria. Así pues, usaremos tipos de datos y diremos que ZX BASIC es un lenguaje tipado. Los tipos de datos que maneja el ZX BASIC son:</p>
+<p>Si eres un programador de Sinclair BASIC con cierta experiencia seguramente sabrÃ¡s que el BASIC del ZX Spectrum trabaja siempre en punto flotante. El formato de dicha representaciÃ³n puede resultar complejo y ocupa 5 preciosos bytes (una mantisa de 32 bits y un exponente de 8 en exceso 127, tal y como explica el manual del ZX). Eso se traduce en un coste enorme en tiempo y en memoria. Si solo queremos almacenar valores enteros menores que 255, podrÃ­amos usar bytes directamente. OcuparÃ­an la quinta parte de la memoria y su procesado serÃ­a mucho mÃ¡s rÃ¡pido (apenas una o dos instrucciones en ensamblador). Por contra, se puede perder precisiÃ³n en algunos cÃ¡lculos. No te preocupes: el formato de punto flotante tambiÃ©n estÃ¡ disponible.</p>
+<p>EstÃ¡ claro que segÃºn el uso que le vayamos a dar a una variable, Ã©sta almacenarÃ¡ un tipo de dato determinado. Este tipo de dato le indica al compilador cÃ³mo tratarlo y el tamaÃ±o que ocuparÃ¡ en memoria. AsÃ­ pues, usaremos tipos de datos y diremos que ZX BASIC es un lenguaje tipado. Los tipos de datos que maneja el ZX BASIC son:</p>
 
 <table border="1">
   <tr>
 
     <th>Tipo</th>
-    <th>Tamaño</th>
+    <th>TamaÃ±o</th>
     <th>Clase de dato</th>
     <th>Intervalo</th>
   </tr>
@@ -279,21 +279,21 @@ BucleInfinito: REM Esto es una etiqueta.
     <td>Long</td>
     <td>4 bytes</td>
     <td>Entero largo con signo</td>
-    <td>[-2147483648 a 2147483647] (más de 2.100 millones)</td>
+    <td>[-2147483648 a 2147483647] (mÃ¡s de 2.100 millones)</td>
   </tr>
 
   <tr>
     <td>Ulong</td>
     <td>4 bytes</td>
     <td>Entero largo sin signo</td>
-    <td>[0 .. 4294967295] (de 0 a más de 4.200 millones)</td>
+    <td>[0 .. 4294967295] (de 0 a mÃ¡s de 4.200 millones)</td>
   </tr>
   <tr>
 
     <td>Fixed</td>
     <td>4 bytes</td>
     <td>Decimal con punto fijo</td>
-    <td>[-32767.9999847 .. 32767.9999847] con una precisión de 1 / 2^16 (0.000015 aprox.)</td>
+    <td>[-32767.9999847 .. 32767.9999847] con una precisiÃ³n de 1 / 2^16 (0.000015 aprox.)</td>
   </tr>
   <tr>
     <td>Float</td>
@@ -304,15 +304,15 @@ BucleInfinito: REM Esto es una etiqueta.
 	</tr>
 </table>
 
-<p>Estos son todos los tipos de datos numéricos. Los enteros deberían estar claros. Además hay un tipo de decimal en punto fijo, llamado Fixed, muy interesante. Si vas a usar números decimales entre -32767 y 32767 quizá deberías usar este tipo de números (siempre y cuando sólo uses las 4 operaciones básicas: sumas, restas, productos y divisiones).</p>
-<p>Estos tipos de datos se usan para almacenar valores y computar expresiones matemáticas. Las expresiones matemáticas usan la misma sintaxis que el Sinclair BASIC y los mismos operadores y precedencia, con la excepción del operador de potencia (^). La expresión 2^2^3 se calcula de forma distinta en un Spectrum que en la mayoría de los lenguajes. Haz la prueba... En cualqueir caso, si tienes dudas, usa paréntesis.</p>
+<p>Estos son todos los tipos de datos numÃ©ricos. Los enteros deberÃ­an estar claros. AdemÃ¡s hay un tipo de decimal en punto fijo, llamado Fixed, muy interesante. Si vas a usar nÃºmeros decimales entre -32767 y 32767 quizÃ¡ deberÃ­as usar este tipo de nÃºmeros (siempre y cuando sÃ³lo uses las 4 operaciones bÃ¡sicas: sumas, restas, productos y divisiones).</p>
+<p>Estos tipos de datos se usan para almacenar valores y computar expresiones matemÃ¡ticas. Las expresiones matemÃ¡ticas usan la misma sintaxis que el Sinclair BASIC y los mismos operadores y precedencia, con la excepciÃ³n del operador de potencia (^). La expresiÃ³n 2^2^3 se calcula de forma distinta en un Spectrum que en la mayorÃ­a de los lenguajes. Haz la prueba... En cualqueir caso, si tienes dudas, usa parÃ©ntesis.</p>
 
-<p><strong>Variables de Cadenas de Carácteres</strong></p>
-<p>Al igual que Sinclair BASIC, ZX BASIC también es capaz de manejar cadenas alfanuméricas. Tradicionalmente, en el lenguaje BASIC las variables alfanuméricas se denotaban con el sufijo $. En ZX BASIC (y los BASIC modernos en general) esto es opcional. Además, Sinclair BASIC sólo permitía nombres de variables alfanuméricas de una letra. Aquí no existe esa limitación, pudiendo usar variables alfanuméricas como una_variable_con_nombre_muy_largo$.</p>
-<p>Los valores alfanuméricos se pueden unir (concatenar) usando el operador de suma (+), al igual que en Basic de Sinclair.</p>
+<p><strong>Variables de Cadenas de CarÃ¡cteres</strong></p>
+<p>Al igual que Sinclair BASIC, ZX BASIC tambiÃ©n es capaz de manejar cadenas alfanumÃ©ricas. Tradicionalmente, en el lenguaje BASIC las variables alfanumÃ©ricas se denotaban con el sufijo $. En ZX BASIC (y los BASIC modernos en general) esto es opcional. AdemÃ¡s, Sinclair BASIC sÃ³lo permitÃ­a nombres de variables alfanumÃ©ricas de una letra. AquÃ­ no existe esa limitaciÃ³n, pudiendo usar variables alfanumÃ©ricas como una_variable_con_nombre_muy_largo$.</p>
+<p>Los valores alfanumÃ©ricos se pueden unir (concatenar) usando el operador de suma (+), al igual que en Basic de Sinclair.</p>
 
 <p><strong>Asignando Valores a Variables</strong</p>
-<p>Al igual que en Sinclair BASIC, se usa la sentencia LET para asignar un valor a una variable. Pero ahora ésta se puede omitir. Las siguientes líneas son equivalentes:</p>
+<p>Al igual que en Sinclair BASIC, se usa la sentencia LET para asignar un valor a una variable. Pero ahora Ã©sta se puede omitir. Las siguientes lÃ­neas son equivalentes:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -324,14 +324,14 @@ a = 1
 </table>
 
 <p><strong>DIM: Declarando Variables</strong></p>
-<p>Hemos visto que ZX BASIC usa distintos tipos de dato. Cuando usas una variable el compilador intenta adivinar su tipo (si es alfanumérica, entera, etc.), pero en general no va a poder hacerlo. Si no sabe qué tipo asignar, usará el punto flotante como el Sinclair Basic. Esto conlleva un desperdicio de memoria y mayor lentitud. Podemos indicarle al compilador el tipo de dato de una variable declarándola. Para declarar una variable se usa la palabra reservada DIM:</p>
+<p>Hemos visto que ZX BASIC usa distintos tipos de dato. Cuando usas una variable el compilador intenta adivinar su tipo (si es alfanumÃ©rica, entera, etc.), pero en general no va a poder hacerlo. Si no sabe quÃ© tipo asignar, usarÃ¡ el punto flotante como el Sinclair Basic. Esto conlleva un desperdicio de memoria y mayor lentitud. Podemos indicarle al compilador el tipo de dato de una variable declarÃ¡ndola. Para declarar una variable se usa la palabra reservada DIM:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-REM Declaración de dos variables de tipo entero byte sin signo
+REM DeclaraciÃ³n de dos variables de tipo entero byte sin signo
 DIM a, b uByte
 
-REM Declaración de una variable en punto Flotante con valor inicializado
+REM DeclaraciÃ³n de una variable en punto Flotante con valor inicializado
 DIM longitud = 3.5 AS Float: REM longitud = 3.5 metros
 </pre>
     </p></td></tr>
@@ -340,7 +340,7 @@ DIM longitud = 3.5 AS Float: REM longitud = 3.5 metros
 <p>Si vas a declarar una variable, tienes que hacerlo antes de su primer uso.</p>
 
 <p><strong>Arrays</strong></p>
-<p>Los arrays se declaran como en Sinclair BASIC, y admiten tantas dimensiones como quepan en memoria. No obstante, al contrario que en Sinclair Basic, la numeración de los índices no comienza en 1, sino en 0. Además, podemos declarar opcionalmente el tipo de elemento. Veamos un ejemplo:</p>
+<p>Los arrays se declaran como en Sinclair BASIC, y admiten tantas dimensiones como quepan en memoria. No obstante, al contrario que en Sinclair Basic, la numeraciÃ³n de los Ã­ndices no comienza en 1, sino en 0. AdemÃ¡s, podemos declarar opcionalmente el tipo de elemento. Veamos un ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -349,7 +349,7 @@ DIM a(10) AS Float : REM un array de 11 flotantes, del 0 al 10, ambos inclusive
     </p></td></tr>
 </table>
 
-<p>Podemos trabajar normalmente como en Sinclair BASIC empezando desde índice uno, pero desperdiciaremos la posición 0. No obstante, también podemos declarar el índice mínimo y máximo del array de forma explícita:</p>
+<p>Podemos trabajar normalmente como en Sinclair BASIC empezando desde Ã­ndice uno, pero desperdiciaremos la posiciÃ³n 0. No obstante, tambiÃ©n podemos declarar el Ã­ndice mÃ­nimo y mÃ¡ximo del array de forma explÃ­cita:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -357,9 +357,9 @@ DIM a(1 TO 10, 1 TO 5) AS Float : REM  esto es equivalente a DIM a(10, 5) en el 
 </pre>
     </p></td></tr>
 </table>
-<p>Si queremos que por defecto los arrays comiencen en 1 (como en Sinclair BASIC) y no en 0, hay que usar la opción --array-base=1 al invocar al compilador.</p>
-<p>Al contrario que en el BASIC de Sinclair, el nombre de las variables de array puede tener cualquier longitud (estaban limitados a una sola letra en el Spectrum, al igual que las variables de bucles FOR y las alfanuméricas). Existen muchas más cosas que se pueden hacer (como declarar arrays inicializados) pero no las veremos en este artículo. Pregunta en el foro de speccy.org o en del compilador, o mejor consulta la Wiki.</p>
-<p>Es posible declarar arrays con valores inicializados. Esto es útil porque no existen ni READ, ni DATA, ni RESTORE. Lo haríamos así:</p>
+<p>Si queremos que por defecto los arrays comiencen en 1 (como en Sinclair BASIC) y no en 0, hay que usar la opciÃ³n --array-base=1 al invocar al compilador.</p>
+<p>Al contrario que en el BASIC de Sinclair, el nombre de las variables de array puede tener cualquier longitud (estaban limitados a una sola letra en el Spectrum, al igual que las variables de bucles FOR y las alfanumÃ©ricas). Existen muchas mÃ¡s cosas que se pueden hacer (como declarar arrays inicializados) pero no las veremos en este artÃ­culo. Pregunta en el foro de speccy.org o en del compilador, o mejor consulta la Wiki.</p>
+<p>Es posible declarar arrays con valores inicializados. Esto es Ãºtil porque no existen ni READ, ni DATA, ni RESTORE. Lo harÃ­amos asÃ­:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -370,49 +370,49 @@ DIM MiUdg(1, 7) AS uByte =&gt; { {60, 66, 129, 129, 129, 129, 66, 60}, _
 </pre>
     </p></td></tr>
 </table>
-<p>Observa el caracter de subrayado "_" al final de la primera línea del array, ya que hay que partirla (si no, quedaría muy larga).</p>
+<p>Observa el caracter de subrayado "_" al final de la primera lÃ­nea del array, ya que hay que partirla (si no, quedarÃ­a muy larga).</p>
 
 <p><strong>Sentencias de Control de Flujo</strong></p>
 
 <p><em>GO TO, GO SUB, RETURN</em></p>
 
-<p>Idénticas al BASIC de Sinclair, aunque se desaconseja su uso. GO TO puede escribirse junto, como GOTO. Ídem para GOSUB. Se pueden usar números de línea o etiquetas como vimos en un ejemplo anterior.</p>
+<p>IdÃ©nticas al BASIC de Sinclair, aunque se desaconseja su uso. GO TO puede escribirse junto, como GOTO. Ãdem para GOSUB. Se pueden usar nÃºmeros de lÃ­nea o etiquetas como vimos en un ejemplo anterior.</p>
 
 <p><em>FOR</em></p>
 
-<p>La sentencia para realizar bucles FOR se comporta de la misma forma que en ZX Basic. No obstante, al ser un lenguaje compilado, tienes que tener en cuenta algunas cosas. Por ejemplo, hacer un bucle FOR usando una variable en punto flotante es bastante más lento que hacerla con una de tipo entero. Su uso es prácticamente igual al del ZX Spectrum, pero hay algunas diferencias:</p>
+<p>La sentencia para realizar bucles FOR se comporta de la misma forma que en ZX Basic. No obstante, al ser un lenguaje compilado, tienes que tener en cuenta algunas cosas. Por ejemplo, hacer un bucle FOR usando una variable en punto flotante es bastante mÃ¡s lento que hacerla con una de tipo entero. Su uso es prÃ¡cticamente igual al del ZX Spectrum, pero hay algunas diferencias:</p>
 <ul>
-  <li>Los nombres de las variables de bucle FOR pueden tener más de una letra (no así en Sinclair BASIC)</li>
+  <li>Los nombres de las variables de bucle FOR pueden tener mÃ¡s de una letra (no asÃ­ en Sinclair BASIC)</li>
   <li>El nombre de la variable se puede omitir en las sentencias NEXT. O sea, se puede escribir FOR x = 1 TO 10: NEXT : REM  se omite la 'x' en NEXT</li>
 
-  <li>No se puede poner un NEXT en cualquier parte del programa. Tiene que ser después de un FOR. Para bucles anidados (uno dentro de otro) el NEXT interno tiene que referirse obligatoriamente al bucle más interno. Ídem para los restantes bucles.</li>
+  <li>No se puede poner un NEXT en cualquier parte del programa. Tiene que ser despuÃ©s de un FOR. Para bucles anidados (uno dentro de otro) el NEXT interno tiene que referirse obligatoriamente al bucle mÃ¡s interno. Ãdem para los restantes bucles.</li>
 </ul>
-<p>Existen además, dos sentencias de control de bucles nuevas:</p>
+<p>Existen ademÃ¡s, dos sentencias de control de bucles nuevas:</p>
 <ul>
-  <li>EXIT FOR termina el bucle FOR y salta justo al final (solíamos usar on GOTO para esto, ¿verdad?)</li>
-  <li>CONTINUE FOR que "continúa" el bucle, es decir, realiza un NEXT. En el BASIC de Sinclair poníamos un NEXT &lt;variable&gt;, pero en ZX BASIC esto no se permite. Hay que usar CONTINUE.</li>
+  <li>EXIT FOR termina el bucle FOR y salta justo al final (solÃ­amos usar on GOTO para esto, Â¿verdad?)</li>
+  <li>CONTINUE FOR que "continÃºa" el bucle, es decir, realiza un NEXT. En el BASIC de Sinclair ponÃ­amos un NEXT &lt;variable&gt;, pero en ZX BASIC esto no se permite. Hay que usar CONTINUE.</li>
 </ul>
 
 <p><em>IF</em></p>
-<p>Esta sentencia sí difiere del BASIC tradicional de Sinclair. Es más potente. Admite varias líneas después del THEN, y además incluye la cláusula ELSE ("en otro caso"). Además es necesario terminarla con un END IF. Un ejemplo:</p>
+<p>Esta sentencia sÃ­ difiere del BASIC tradicional de Sinclair. Es mÃ¡s potente. Admite varias lÃ­neas despuÃ©s del THEN, y ademÃ¡s incluye la clÃ¡usula ELSE ("en otro caso"). AdemÃ¡s es necesario terminarla con un END IF. Un ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
 IF a &lt; b THEN
     PRINT "a es menor que b"
-    PRINT "Esto es otra sentencia más"
+    PRINT "Esto es otra sentencia mÃ¡s"
 ELSE : REM si no...
     PRINT "a no es menor que b"
 END IF
 </pre>
     </p></td></tr>
 </table>
-<p>En Sinclair BASIC teníamos que ingeniárnoslas haciendo algo así:</p>
+<p>En Sinclair BASIC tenÃ­amos que ingeniÃ¡rnoslas haciendo algo asÃ­:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-1000 IF a &lt; b THEN PRINT "a es menor que b": PRINT "Esto es otra sentencia más" : GO TO 1030
+1000 IF a &lt; b THEN PRINT "a es menor que b": PRINT "Esto es otra sentencia mÃ¡s" : GO TO 1030
 1010 REM si no...
 1020 PRINT "a no es menor que b"
 1030 ...
@@ -420,7 +420,7 @@ END IF
     </p></td></tr>
 </table>
 <p><em>WHILE</em></p>
-<p>Esta sentencia es nueva ZX BASIC y sirve también para hacer bucles. Es más potente que FOR porque el bucle se repite mientras se dé la condición que se indique. Si al empezar el bucle la condición es falsa, entonces no se llega a ejecutar ninguna iteración. Un ejemplo:</p>
+<p>Esta sentencia es nueva ZX BASIC y sirve tambiÃ©n para hacer bucles. Es mÃ¡s potente que FOR porque el bucle se repite mientras se dÃ© la condiciÃ³n que se indique. Si al empezar el bucle la condiciÃ³n es falsa, entonces no se llega a ejecutar ninguna iteraciÃ³n. Un ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -431,10 +431,10 @@ END WHILE
 </pre>
     </p></td></tr>
 </table>
-<p>La finalización del bucle tiene que terminarse con END WHILE o con WEND (son equivalentes). Al igual que con FOR, las sentencias EXIT WHILE y CONTINUE WHILE también pueden utilizarse con WHILE para terminar el bucle o continuar con la siguiente iteración.</p>
+<p>La finalizaciÃ³n del bucle tiene que terminarse con END WHILE o con WEND (son equivalentes). Al igual que con FOR, las sentencias EXIT WHILE y CONTINUE WHILE tambiÃ©n pueden utilizarse con WHILE para terminar el bucle o continuar con la siguiente iteraciÃ³n.</p>
 
 <p><em>DO ... UNTIL</em></p>
-<p>Similar a la anterior, pero aquí la comprobación de la condición se hace al final del bucle y éste se repite mientras no se cumpla la misma (es decir, mientras sea falsa). Al contrario que con WHILE, el bucle se ejecutará al menos una vez. Un ejemplo:</p>
+<p>Similar a la anterior, pero aquÃ­ la comprobaciÃ³n de la condiciÃ³n se hace al final del bucle y Ã©ste se repite mientras no se cumpla la misma (es decir, mientras sea falsa). Al contrario que con WHILE, el bucle se ejecutarÃ¡ al menos una vez. Un ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -448,12 +448,12 @@ LOOP UNTIL a &gt;= 10
 <p>Igualmente podemos usar CONTINUE DO y EXIT DO para adelantar el bucle o terminarlo anticipadamente.</p>
 
 <p><em>DO ... WHILE</em></p>
-<p>Existe también la construcción DO ... WHILE, idéntica a la anterior, solo que esta repite el bucle mientras la condición se cumpla.</p>
+<p>Existe tambiÃ©n la construcciÃ³n DO ... WHILE, idÃ©ntica a la anterior, solo que esta repite el bucle mientras la condiciÃ³n se cumpla.</p>
 
 <p><strong>Manejo de Memoria</strong></p>
 
 <p><em>PEEK y POKE</em></p>
-<p>Son idénticas al Sinclair BASIC, pero ahora, además, está extendidas. Tanto PEEK como POKE admiten especificar el tipo de dato que se guarda en memoria. Por defecto será de tipo byte sin signo (como en el ZX Spectrum). Así pues, las siguientes dos líneas son equivalentes:</p>
+<p>Son idÃ©nticas al Sinclair BASIC, pero ahora, ademÃ¡s, estÃ¡ extendidas. Tanto PEEK como POKE admiten especificar el tipo de dato que se guarda en memoria. Por defecto serÃ¡ de tipo byte sin signo (como en el ZX Spectrum). AsÃ­ pues, las siguientes dos lÃ­neas son equivalentes:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -467,17 +467,17 @@ LET a = PEEK(uByte, 16384)
     <tr><td><p class="codigo">
 
 <pre>
-REM Guardamos en la variable 'a' la dirección de comienzo de los GDU
+REM Guardamos en la variable 'a' la direcciÃ³n de comienzo de los GDU
 LET a = PEEK 23675 + 256 * PEEK 23676 : REM Forma tradicional
 LET a = PEEK(Uinteger, 16384)
 </pre>
     </p></td></tr>
 </table>
-<p>Ambas formas son equivalentes, pero la segunda es más eficiente (por el ensamblador generado) y más legible. Si se usa la segunda forma, los paréntesis son obligatorios. Igualmente, podemos guardar con POKE valores de más de un byte:</p>
+<p>Ambas formas son equivalentes, pero la segunda es mÃ¡s eficiente (por el ensamblador generado) y mÃ¡s legible. Si se usa la segunda forma, los parÃ©ntesis son obligatorios. Igualmente, podemos guardar con POKE valores de mÃ¡s de un byte:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-REM Cambiamos la dirección de los GDU según la variable 'a'
+REM Cambiamos la direcciÃ³n de los GDU segÃºn la variable 'a'
 
 REM Forma tradicional
 POKE 23675, a - INT(a / 256) * a : REM cuidado con el redondeo si a es entera.
@@ -489,15 +489,15 @@ POKE Uinteger 23675, a
     </p></td></tr>
 </table>
 
-<p>Claramente, la segunda forma es más legible (y preferible). Además, se traduce de forma más eficiente a ensablador. ¡Ahora ya es posible (y extraño), guardar números flotantes con POKE en memoria! Prueba a hacer POKE Float 16384, PI.</p>
+<p>Claramente, la segunda forma es mÃ¡s legible (y preferible). AdemÃ¡s, se traduce de forma mÃ¡s eficiente a ensablador. Â¡Ahora ya es posible (y extraÃ±o), guardar nÃºmeros flotantes con POKE en memoria! Prueba a hacer POKE Float 16384, PI.</p>
 
 <p><strong>Salida por Pantalla</strong></p>
 
 <p><em>PRINT</em></p>
-<p>Se ha intentado que PRINT sea lo más compatible posible con el original. De hecho, a nivel sintáctico funciona igual. E incluso los códigos de color de la ROM se pueden utilizar. Esta implementación de PRINT no usa la rutina de la ROM (para mayor velocidad) sino que es propia, y permite imprimir en todas las filas de pantalla. Así pues, PRINT AT 22,0; es una sentencia legal. No existen canales.</p>
+<p>Se ha intentado que PRINT sea lo mÃ¡s compatible posible con el original. De hecho, a nivel sintÃ¡ctico funciona igual. E incluso los cÃ³digos de color de la ROM se pueden utilizar. Esta implementaciÃ³n de PRINT no usa la rutina de la ROM (para mayor velocidad) sino que es propia, y permite imprimir en todas las filas de pantalla. AsÃ­ pues, PRINT AT 22,0; es una sentencia legal. No existen canales.</p>
 
 <p><em>BORDER, PAPER, INK, INVERSE, BRIGHT, FLASH, OVER</em></p>
-<p>Funcionan igual que en Sinclar BASIC. Para BORDER, usar un color mayor que 7 se suele ignorar, ya que sólo se toman los 3 bits más bajos. Para INK y PAPER si se puede usar el valor 8 (transparencia). Over tiene funcionalidades extra: OVER 1 actúa como en el ZX Spectrum e imprime realizando la operacion XOR. Pero se puede usar también OVER 2 y OVER 3 en conjunción con el comando PRINT. OVER 2 realiza un AND y OVER 3 realiza un OR. Esto se puede usar para crear efectos de filmation. Prueba el siguiente ejemplo de BORDER y compara su velocidad con la del Basic de la ROM:</p>
+<p>Funcionan igual que en Sinclar BASIC. Para BORDER, usar un color mayor que 7 se suele ignorar, ya que sÃ³lo se toman los 3 bits mÃ¡s bajos. Para INK y PAPER si se puede usar el valor 8 (transparencia). Over tiene funcionalidades extra: OVER 1 actÃºa como en el ZX Spectrum e imprime realizando la operacion XOR. Pero se puede usar tambiÃ©n OVER 2 y OVER 3 en conjunciÃ³n con el comando PRINT. OVER 2 realiza un AND y OVER 3 realiza un OR. Esto se puede usar para crear efectos de filmation. Prueba el siguiente ejemplo de BORDER y compara su velocidad con la del Basic de la ROM:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -507,8 +507,8 @@ POKE Uinteger 23675, a
     </p></td></tr>
 </table>
 <p><em>PLOT, DRAW y CIRCLE</em></p>
-<p>Funcionan igual que en el Basic original... pero más rápido. PLOT usa la rutina de la ROM, por lo que se aplican todos atributos de color que usa el comando PLOT original. La diferencia ahora es que disponemos de los 192 puntos de pantalla para pintar. La coordenada (0, 0) es ahora la esquina inferior izquierda física de la pantalla. Eso significa que si usamos un comando de dibujado cualquiera, nuestros dibujos aparecerán 16 píxeles más abajo que en el Sinclair BASIC original, pues ahora disponemos de 16 líneas de altura más.</p>
-<p>DRAW y CIRCLE están optimizadas (no son las de la ROM) y emplean el algoritmo de Bresenham, por lo que son algo más rápidas (especialmente CIRCLE). También se pueden dibujar arcos, con DRAW x, y, a como en el BASIC original. La rutina está copiada de la ROM, para simular el mismo comportamiento que la original, pero modificada para dibujar también en toda la pantalla, como las anteriores. El siguiente ejemplo está sacado del manual del ZX Spectrum (el reloj), pero está escrito con la nueva sintaxis, sin usar números de línea:</p>
+<p>Funcionan igual que en el Basic original... pero mÃ¡s rÃ¡pido. PLOT usa la rutina de la ROM, por lo que se aplican todos atributos de color que usa el comando PLOT original. La diferencia ahora es que disponemos de los 192 puntos de pantalla para pintar. La coordenada (0, 0) es ahora la esquina inferior izquierda fÃ­sica de la pantalla. Eso significa que si usamos un comando de dibujado cualquiera, nuestros dibujos aparecerÃ¡n 16 pÃ­xeles mÃ¡s abajo que en el Sinclair BASIC original, pues ahora disponemos de 16 lÃ­neas de altura mÃ¡s.</p>
+<p>DRAW y CIRCLE estÃ¡n optimizadas (no son las de la ROM) y emplean el algoritmo de Bresenham, por lo que son algo mÃ¡s rÃ¡pidas (especialmente CIRCLE). TambiÃ©n se pueden dibujar arcos, con DRAW x, y, a como en el BASIC original. La rutina estÃ¡ copiada de la ROM, para simular el mismo comportamiento que la original, pero modificada para dibujar tambiÃ©n en toda la pantalla, como las anteriores. El siguiente ejemplo estÃ¡ sacado del manual del ZX Spectrum (el reloj), pero estÃ¡ escrito con la nueva sintaxis, sin usar nÃºmeros de lÃ­nea:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -521,7 +521,7 @@ FOR n = 1 to 12
     PRINT AT 10 - (10 * COS(n * PI / 6) - 0.5), 16 + (0.5 + 10 * SIN(n * PI / 6)); n
 NEXT n
 
-REM Lo siguiente sería PRINT #0; en el Basic de la ROM
+REM Lo siguiente serÃ­a PRINT #0; en el Basic de la ROM
 PRINT AT 23, 0; "PULSA UNA TECLA PARA TERMINAR";
 
 FUNCTION t AS ULONG
@@ -533,7 +533,7 @@ DIM t1 as FLOAT
 OVER 1
 WHILE INKEY$ = ""
     LET t1 = t()
-    LET a = t1 / 30 * PI: REM a es el ángulo del segundero en radianes
+    LET a = t1 / 30 * PI: REM a es el Ã¡ngulo del segundero en radianes
     LET sx = 72 * SIN a : LET sy = 72 * COS a
     PLOT 131, 107: DRAW sx, sy
 
@@ -549,7 +549,7 @@ END WHILE
     </p></td></tr>
 </table>
 <p><em>SCREEN$, ATTR, POINT</em></p>
-<p>Existen y se comportan como en Sinclair BASIC. Pero son funciones externas. Las funciones externas son aquellas que existen en un fichero .BAS aparte. En concreto, en el directorio library/ del compilador hay una biblioteca de funciones que irá creciendo con el tiempo. Para usarlas en tu programa, tienes que usar una directiva de preprocesador como la que sigue:</p>
+<p>Existen y se comportan como en Sinclair BASIC. Pero son funciones externas. Las funciones externas son aquellas que existen en un fichero .BAS aparte. En concreto, en el directorio library/ del compilador hay una biblioteca de funciones que irÃ¡ creciendo con el tiempo. Para usarlas en tu programa, tienes que usar una directiva de preprocesador como la que sigue:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -558,13 +558,13 @@ END WHILE
     </p></td></tr>
 
 </table>
-<p>Los ficheros que las contienen son SCREEN.BAS, ATTR.BAS y POINT.BAS respectivamente. Si miras en ese directorio, verás que hay otras funciones. Enseguida veremos cómo definir nuestras propias funciones.</p>
+<p>Los ficheros que las contienen son SCREEN.BAS, ATTR.BAS y POINT.BAS respectivamente. Si miras en ese directorio, verÃ¡s que hay otras funciones. Enseguida veremos cÃ³mo definir nuestras propias funciones.</p>
 
 <p><strong>Sonido</strong></p>
 
 <p><em>BEEP</em></p>
-<p>Por ahora, el único soporte de sonido es el comando BEEP, que usa la rutina de la ROM y es idéntico al de Sinclair BASIC. La única ventaja es que aquí, al disponer de mayor rapidez, podemos implementar algunos trucos de sonido. Existe un comando en la versión 128K del BASIC, PLAY que se espera poder implementar en futuras versiones.</p>
-<p>El siguiente ejemplo está sacado del manual el ZX Spectrum (Frere Gustav del manual de ZX Spectrum 48K, capítulo 19):</p>
+<p>Por ahora, el Ãºnico soporte de sonido es el comando BEEP, que usa la rutina de la ROM y es idÃ©ntico al de Sinclair BASIC. La Ãºnica ventaja es que aquÃ­, al disponer de mayor rapidez, podemos implementar algunos trucos de sonido. Existe un comando en la versiÃ³n 128K del BASIC, PLAY que se espera poder implementar en futuras versiones.</p>
+<p>El siguiente ejemplo estÃ¡ sacado del manual el ZX Spectrum (Frere Gustav del manual de ZX Spectrum 48K, capÃ­tulo 19):</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -583,11 +583,11 @@ END WHILE
 </pre>
     </p></td></tr>
 </table>
-<p><strong>Funciones Matemáticas y Números aleatorios</strong></p>
+<p><strong>Funciones MatemÃ¡ticas y NÃºmeros aleatorios</strong></p>
 <p><em>STR$, VAL, PI, SIN, COS, TAN, ASN, ACS, ATN, EXP</em></p>
-<p>Estas funciones trabajan todas igual que en el BASIC original del ZX Spectrum a excepción de VAL. Como ya se dijo antes, VAL es un caso particular prácticamente imposible de compilar. Funciona como en la mayoría de los BASIC estándar: se convierte una cadena alfanumérica a punto flotante, pero esta cadena sólo puede contener un número (no una expresión). Si una cadena no se puede convertir, se devuelve 0. Luego VAL "x+x" devolverá 0 siempre, aunque la variable x esté definida.</p>
+<p>Estas funciones trabajan todas igual que en el BASIC original del ZX Spectrum a excepciÃ³n de VAL. Como ya se dijo antes, VAL es un caso particular prÃ¡cticamente imposible de compilar. Funciona como en la mayorÃ­a de los BASIC estÃ¡ndar: se convierte una cadena alfanumÃ©rica a punto flotante, pero esta cadena sÃ³lo puede contener un nÃºmero (no una expresiÃ³n). Si una cadena no se puede convertir, se devuelve 0. Luego VAL "x+x" devolverÃ¡ 0 siempre, aunque la variable x estÃ© definida.</p>
 <p><em>RANDOMIZE, RND</em></p>
-<p>Existen y se usan como en el ZX Spectrum con la diferencia de que la rutina de números aleatorios es más rápida ya que no usa la calculadora de punto flotante de la ROM sino registros y desplazamientos en ensamblador. Esta rutina es un generador lineal congruente (como la del ZX Spectrum) pero usa números de 32 bits, por lo que tiene un periodo de miles de millones (antes de que vuelva a repetirse la secuencia). Se ha sacado del libro Numerical Recipes in C (disponible gratuitamente en internet, aunque vale la pena comprarlo). Además, tiene una mejor dispersión. Prueba el siguiente programa en el ZX Spectrum, tanto en el BASIC de la ROM como en ZX BASIC (compilado):</p>
+<p>Existen y se usan como en el ZX Spectrum con la diferencia de que la rutina de nÃºmeros aleatorios es mÃ¡s rÃ¡pida ya que no usa la calculadora de punto flotante de la ROM sino registros y desplazamientos en ensamblador. Esta rutina es un generador lineal congruente (como la del ZX Spectrum) pero usa nÃºmeros de 32 bits, por lo que tiene un periodo de miles de millones (antes de que vuelva a repetirse la secuencia). Se ha sacado del libro Numerical Recipes in C (disponible gratuitamente en internet, aunque vale la pena comprarlo). AdemÃ¡s, tiene una mejor dispersiÃ³n. Prueba el siguiente programa en el ZX Spectrum, tanto en el BASIC de la ROM como en ZX BASIC (compilado):</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -598,23 +598,23 @@ END WHILE
 </pre>
     </p></td></tr>
 </table>
-<p>Aparte de la velocidad del programa compilado, notarás que en la versión del BASIC de Sinclair aparecen líneas diagonales. Ello indica que la aleatoriedad de los números no es tan alta en el BASIC de la ROM como se podría esperar.</p>
+<p>Aparte de la velocidad del programa compilado, notarÃ¡s que en la versiÃ³n del BASIC de Sinclair aparecen lÃ­neas diagonales. Ello indica que la aleatoriedad de los nÃºmeros no es tan alta en el BASIC de la ROM como se podrÃ­a esperar.</p>
 
 <p><strong>Entrada y salida</strong></p>
 <p><em>INKEY$, IN, OUT</em></p>
-<p>También están presentes y funcionan de forma idéntica a la de Sinclair BASIC... excepto por su velocidad, que es bastante mayor  en el caso de IN y OUT.</p>
+<p>TambiÃ©n estÃ¡n presentes y funcionan de forma idÃ©ntica a la de Sinclair BASIC... excepto por su velocidad, que es bastante mayor  en el caso de IN y OUT.</p>
 
-<p><strong>Caracteres gráficos, GDU y códigos de color</strong></p>
+<p><strong>Caracteres grÃ¡ficos, GDU y cÃ³digos de color</strong></p>
 
-<p>Para poder introducir caracteres gráficos y códigos de color, se ha seguido el mismo convenio que BASIN (un entorno para programar y depurar programas BASIC del ZX Spectrum). Así, dentro de una cadena de caracteres, el caracter de barra invertida '\' tiene un significado especial. Así, para escribir un el GDU "A", escribiremos PRINT "\A". Si queremos escribir varios carácteres gráficos seguidos, "AB", escribiremos: PRINT "\A\B". Si queremos imprimir la barra invertida (este carácter existe en el Spectrum), usaremos doble barra: PRINT "\\"</p>
-<p>Los símbolos gráficos (aquellos que tenían formas de cuadraditos y que se sacaban en con el cursor en modo gráfico y pulsando un número del 0 al 8) también pueden ponerse como en BASIN. Prueba a poner PRINT "\:.\'.". Como puedes ver, se componen de la barra invertida seguido de dos caracteres que pueden ser uno de estos: [ ][.]['][:] (espacio en blanco, punto, apóstrofe y dos puntos). Cada "puntito" del caracter representa un cuadrado del gráfico (es difícil de explicarlo, lo mejor es que lo pruebes). Estos códigos son leídos por el compilador y reemplazados por un solo byte, correspondiente al código ASCII del caracter que queramos representar. Puedes probar a hacer un programa BASIC en Basin y grabarlo como .bas (ASCII) y ver la secuencia de caracteres generada.</p>
-<p>Igualmente, los códigos de color, brillo, flash e inversión de vídeo pueden especificarse "en línea", como se hacía con el ZX Spectrum, siguiendo el mismo convenio que BASIN. Para escribir por ejemplo, HOLA con tinta roja sobre fondo negro, puedes hacer: PRINT "{i2}{p0}HOLA"</p>
+<p>Para poder introducir caracteres grÃ¡ficos y cÃ³digos de color, se ha seguido el mismo convenio que BASIN (un entorno para programar y depurar programas BASIC del ZX Spectrum). AsÃ­, dentro de una cadena de caracteres, el caracter de barra invertida '\' tiene un significado especial. AsÃ­, para escribir un el GDU "A", escribiremos PRINT "\A". Si queremos escribir varios carÃ¡cteres grÃ¡ficos seguidos, "AB", escribiremos: PRINT "\A\B". Si queremos imprimir la barra invertida (este carÃ¡cter existe en el Spectrum), usaremos doble barra: PRINT "\\"</p>
+<p>Los sÃ­mbolos grÃ¡ficos (aquellos que tenÃ­an formas de cuadraditos y que se sacaban en con el cursor en modo grÃ¡fico y pulsando un nÃºmero del 0 al 8) tambiÃ©n pueden ponerse como en BASIN. Prueba a poner PRINT "\:.\'.". Como puedes ver, se componen de la barra invertida seguido de dos caracteres que pueden ser uno de estos: [ ][.]['][:] (espacio en blanco, punto, apÃ³strofe y dos puntos). Cada "puntito" del caracter representa un cuadrado del grÃ¡fico (es difÃ­cil de explicarlo, lo mejor es que lo pruebes). Estos cÃ³digos son leÃ­dos por el compilador y reemplazados por un solo byte, correspondiente al cÃ³digo ASCII del caracter que queramos representar. Puedes probar a hacer un programa BASIC en Basin y grabarlo como .bas (ASCII) y ver la secuencia de caracteres generada.</p>
+<p>Igualmente, los cÃ³digos de color, brillo, flash e inversiÃ³n de vÃ­deo pueden especificarse "en lÃ­nea", como se hacÃ­a con el ZX Spectrum, siguiendo el mismo convenio que BASIN. Para escribir por ejemplo, HOLA con tinta roja sobre fondo negro, puedes hacer: PRINT "{i2}{p0}HOLA"</p>
 
-<p>Los códigos son:</p>
+<p>Los cÃ³digos son:</p>
 
 <table border="1">
   <tr>
-    <th>Código</th>
+    <th>CÃ³digo</th>
     <th>Significa</th>
 
     <th>Valores</th>
@@ -649,23 +649,23 @@ END WHILE
   </tr>
 </table>
 
-<p>Además, puedes especificar cualquier caracter ASCII en decimal, usando \#xxx. Por ejemplo, el copyright puedes ponerlo como PRINT "\*" o bien como PRINT "\#127"</p>
+<p>AdemÃ¡s, puedes especificar cualquier caracter ASCII en decimal, usando \#xxx. Por ejemplo, el copyright puedes ponerlo como PRINT "\*" o bien como PRINT "\#127"</p>
 
 <p><strong>Funciones y Subrutinas</strong></p>
-<p>Una de las grandes diferencias del ZX BASIC respecto a sinclair BASIC es la posibilidad de definir funciones y subrutinas, y que además estas contengan variables privadas. La única posibilidad que ofrecía el BASIC de Sinclair para definir funciones era con DEF FN, que aquí ya no existe. Para definir una función, usaremos la palabra reservada FUNCTION, así:</p>
+<p>Una de las grandes diferencias del ZX BASIC respecto a sinclair BASIC es la posibilidad de definir funciones y subrutinas, y que ademÃ¡s estas contengan variables privadas. La Ãºnica posibilidad que ofrecÃ­a el BASIC de Sinclair para definir funciones era con DEF FN, que aquÃ­ ya no existe. Para definir una funciÃ³n, usaremos la palabra reservada FUNCTION, asÃ­:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
 FUNCTION mifuncion(x AS Integer, y AS Byte) AS Integer
-    REM Función que devuelve x + y
+    REM FunciÃ³n que devuelve x + y
     RETURN x + y
 END FUNCTION
 </pre>
     </p></td></tr>
 </table>
-<p>Esta pequeña función recibe 2 parámetros, un entero de 16 bit en x y un byte en y, para devolver la suma de ambos (x + y).</p>
+<p>Esta pequeÃ±a funciÃ³n recibe 2 parÃ¡metros, un entero de 16 bit en x y un byte en y, para devolver la suma de ambos (x + y).</p>
 
-<p>Para usar la función, sólo tienes que llamarla como como si fuera una función BASIC cualquiera:</p>
+<p>Para usar la funciÃ³n, sÃ³lo tienes que llamarla como como si fuera una funciÃ³n BASIC cualquiera:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -673,8 +673,8 @@ PRINT mifuncion(3, 5) : REM Imprime 8
 </pre>
     </p></td></tr>
 </table>
-<p>Mira el ejemplo anterior del reloj, cómo define y usa una función.</p>
-<p>También se puede llamar a una función sin más, como si fuera una subrutina:</p>
+<p>Mira el ejemplo anterior del reloj, cÃ³mo define y usa una funciÃ³n.</p>
+<p>TambiÃ©n se puede llamar a una funciÃ³n sin mÃ¡s, como si fuera una subrutina:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -683,19 +683,19 @@ mifuncion(3, 5) : REM suma 3 + 5 y luego los descarta y no hace nada con el resu
 </pre>
     </p></td></tr>
 </table>
-<p>Al igual que las funciones, también puedes definir subrutinas. Se definen usando la palabra reservada SUB. La sintaxis es muy similar a la anterior:</p>
+<p>Al igual que las funciones, tambiÃ©n puedes definir subrutinas. Se definen usando la palabra reservada SUB. La sintaxis es muy similar a la anterior:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
 SUB misubrutina(x AS Integer, y AS Byte)
-    REM Función que devuelve x + y
+    REM FunciÃ³n que devuelve x + y
     PRINT x + y
 END SUB
 </pre>
     </p></td></tr>
 </table>
 
-<p>Y la invocamos así</p>
+<p>Y la invocamos asÃ­</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -703,10 +703,10 @@ misubrutina(3, 6) : REM imprime 9
 </pre>
     </p></td></tr>
 </table>
-<p>La diferencia principal es que SUB siempre tiene que invocarse. Nunca devuelve un resultado, al contrario que las funciones. De hecho, no puedes usar RETURN &lt;valor&gt; para salir de una subrutina, sino simplemente RETURN. Retornar de una subrutina o función y retornar de un GOSUB son cosas distintas. Al escribir simplemente RETURN, desde dentro de una función o subrutina siempre se supondrá que se retorna de la misma y no de un GOSUB.</p>
-<p>Esto es así porque cada vez que se retorna, el programa tiene que hacer ciertas gestiones con la pila de código máquina antes de regresar. Así pues, no es lo mismo retornar de un GOSUB, que de una función o subrutina. Al declarar una subrutina ya le estamos indicando al compilador que no es necesario devolver ningún valor, y eso permite hacer una pequeña optimización.</p>
+<p>La diferencia principal es que SUB siempre tiene que invocarse. Nunca devuelve un resultado, al contrario que las funciones. De hecho, no puedes usar RETURN &lt;valor&gt; para salir de una subrutina, sino simplemente RETURN. Retornar de una subrutina o funciÃ³n y retornar de un GOSUB son cosas distintas. Al escribir simplemente RETURN, desde dentro de una funciÃ³n o subrutina siempre se supondrÃ¡ que se retorna de la misma y no de un GOSUB.</p>
+<p>Esto es asÃ­ porque cada vez que se retorna, el programa tiene que hacer ciertas gestiones con la pila de cÃ³digo mÃ¡quina antes de regresar. AsÃ­ pues, no es lo mismo retornar de un GOSUB, que de una funciÃ³n o subrutina. Al declarar una subrutina ya le estamos indicando al compilador que no es necesario devolver ningÃºn valor, y eso permite hacer una pequeÃ±a optimizaciÃ³n.</p>
 
-<p>Por último, las variables declaradas (DIM) dentro de una subrutina o función son privadas y no son accesibles desde fuera. Además, sólo usan memoria durante la ejecución de la función. Al salir de la misma, esa memoria se libera (se usa la pila de código máquina). Mira este ejemplo:</p>
+<p>Por Ãºltimo, las variables declaradas (DIM) dentro de una subrutina o funciÃ³n son privadas y no son accesibles desde fuera. AdemÃ¡s, sÃ³lo usan memoria durante la ejecuciÃ³n de la funciÃ³n. Al salir de la misma, esa memoria se libera (se usa la pila de cÃ³digo mÃ¡quina). Mira este ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -725,7 +725,7 @@ PRINT "Despues de la subrutina, a ="; a
     </p></td></tr>
 </table>
 <p><strong>ASM integrado</strong></p>
-<p>Es posible meter líneas de ASM directamente. Esto es una característica de muy bajo nivel, y se sale un poco de los propósitos de este artículo. Básicamente, se puede incrustar ASM directamente en el código así:</p>
+<p>Es posible meter lÃ­neas de ASM directamente. Esto es una caracterÃ­stica de muy bajo nivel, y se sale un poco de los propÃ³sitos de este artÃ­culo. BÃ¡sicamente, se puede incrustar ASM directamente en el cÃ³digo asÃ­:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -737,7 +737,7 @@ END ASM
 </pre>
     </p></td></tr>
 </table>
-<p>Como ZX Basic aspira a ser multiplataforma (reorientable), el código que hagas con ASM directo sólo compilará en la arquitectura que soporte ese ensamblador (en nuestro caso, Z80). Aquí tienes un ejemplo:</p>
+<p>Como ZX Basic aspira a ser multiplataforma (reorientable), el cÃ³digo que hagas con ASM directo sÃ³lo compilarÃ¡ en la arquitectura que soporte ese ensamblador (en nuestro caso, Z80). AquÃ­ tienes un ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -749,33 +749,33 @@ END ASM
     </p></td></tr>
 </table>
 
-<p>La idea de usar ASM directamente es en aquellos bucles que requieran mucha velocidad (por ejemplo, alguna subrutina de algún juego). Si miras la biblioteca de funciones, library/ verás que muchas funciones están definidas en ensamblador.</p>
+<p>La idea de usar ASM directamente es en aquellos bucles que requieran mucha velocidad (por ejemplo, alguna subrutina de algÃºn juego). Si miras la biblioteca de funciones, library/ verÃ¡s que muchas funciones estÃ¡n definidas en ensamblador.</p>
 
 <p><strong>Lo que falta...</strong></p>
-<p>No todo iba a ser perfecto. ZX Basic, por ser compilado, tiene cosas que le faltan. Por ejemplo, no existe INPUT. Te la tendrás que implementar (la mayoría de los juegos se implementan su propio INPUT; fíjate en El Hobbit). Ya hay una función INPUT implementada en en la biblioteca de funciones, por si te interesa esa. Prueba a usarla.</p>
+<p>No todo iba a ser perfecto. ZX Basic, por ser compilado, tiene cosas que le faltan. Por ejemplo, no existe INPUT. Te la tendrÃ¡s que implementar (la mayorÃ­a de los juegos se implementan su propio INPUT; fÃ­jate en El Hobbit). Ya hay una funciÃ³n INPUT implementada en en la biblioteca de funciones, por si te interesa esa. Prueba a usarla.</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-REM Importamos la función input
+REM Importamos la funciÃ³n input
 #include &lt;input.bas&gt;
 
-LET a$ = input(32): REM Input de una cadena de 32 caracteres como máximo
+LET a$ = input(32): REM Input de una cadena de 32 caracteres como mÃ¡ximo
 PRINT a$
 </pre>
 
     </p></td></tr>
 </table>
-<p>Es muy difícil utilizar el INPUT de la ROM, que usa canales (que ya no existen aquí), y otras zonas del área de BASIC que pueden corromper el programa compilado o la pila de ejecución (aunque se supone que el CLEAR del cargador evitará esto). Tampoco tienen sentido READ, DATA y RESTORE. Son un desperdicio de memoria e imposibles de compilar tal y como las ofrece el BASIC de la ROM; aunque es probable que se implementen en un futuro con ciertas limitaciones.</p>
+<p>Es muy difÃ­cil utilizar el INPUT de la ROM, que usa canales (que ya no existen aquÃ­), y otras zonas del Ã¡rea de BASIC que pueden corromper el programa compilado o la pila de ejecuciÃ³n (aunque se supone que el CLEAR del cargador evitarÃ¡ esto). Tampoco tienen sentido READ, DATA y RESTORE. Son un desperdicio de memoria e imposibles de compilar tal y como las ofrece el BASIC de la ROM; aunque es probable que se implementen en un futuro con ciertas limitaciones.</p>
 
 <p><strong>Ejemplos</strong></p>
-<p>Este artículo está quedando muy extenso, así que lo cortaré aquí (si fuera para MicroHobby, daría para varios números). Quedan algunas cosas por explicar (como el alias de variables o las instrucciones de manejo de bits: rotaciones, etc.) En cuaquier caso, en el directorio examples tienes varios ejemplos que puedes compilar para aprender cómo funcionan. El ejemplo de la Bandera Inglesa está sacado del manual del ZX Spectrum y funciona tal cual está, sin ninguna modificación. Otros ejemplos, como el Snake (cortesía de Federico J. Alvarez Valero, año 2003) se han retocado para declarar explícitamente el tipo de dato de algunas variables (recordemos que trabajar con enteros es más rápido que punto flotante), y terninar los IF con sus END IF correspondientes.</p>
+<p>Este artÃ­culo estÃ¡ quedando muy extenso, asÃ­ que lo cortarÃ© aquÃ­ (si fuera para MicroHobby, darÃ­a para varios nÃºmeros). Quedan algunas cosas por explicar (como el alias de variables o las instrucciones de manejo de bits: rotaciones, etc.) En cuaquier caso, en el directorio examples tienes varios ejemplos que puedes compilar para aprender cÃ³mo funcionan. El ejemplo de la Bandera Inglesa estÃ¡ sacado del manual del ZX Spectrum y funciona tal cual estÃ¡, sin ninguna modificaciÃ³n. Otros ejemplos, como el Snake (cortesÃ­a de Federico J. Alvarez Valero, aÃ±o 2003) se han retocado para declarar explÃ­citamente el tipo de dato de algunas variables (recordemos que trabajar con enteros es mÃ¡s rÃ¡pido que punto flotante), y terninar los IF con sus END IF correspondientes.</p>
 
-<p><strong>Y pasaron los años...</strong></p>
-<p>¿20 años? ¡Glup! Al menos se cumplió una parte del sueño (la otra no os la digo...). ¿Fue demasiado tarde? No lo creo. Al menos no en parte.</p>
-<p>El ZX Spectrum, los micros en general, y su época de alguna manera dejaron huella. Muchos pensamos que esto fue irrepetible. En aquella época la tecnología no avanzaba tan rápidamente como ahora y es por eso que micros como el ZX Spectrum duraron de media una década sin sufrir grandes cambios. Por contra las videoconsolas y sistemas actuales apenas pasan de los 3 ó 4 años de vida.</p>
+<p><strong>Y pasaron los aÃ±os...</strong></p>
+<p>Â¿20 aÃ±os? Â¡Glup! Al menos se cumpliÃ³ una parte del sueÃ±o (la otra no os la digo...). Â¿Fue demasiado tarde? No lo creo. Al menos no en parte.</p>
+<p>El ZX Spectrum, los micros en general, y su Ã©poca de alguna manera dejaron huella. Muchos pensamos que esto fue irrepetible. En aquella Ã©poca la tecnologÃ­a no avanzaba tan rÃ¡pidamente como ahora y es por eso que micros como el ZX Spectrum duraron de media una dÃ©cada sin sufrir grandes cambios. Por contra las videoconsolas y sistemas actuales apenas pasan de los 3 Ã³ 4 aÃ±os de vida.</p>
 
-<p>Hoy día estamos tan saturados y acostumbrados a los cambios que ya nada nos asombra (o al menos a mí). Miles de millones de píxeles en miles de millones de colores con un sonido envolvente no consiguen dejar esa impronta que una máquina tan simple logró en apenas unas horas. Quizá porque fue la primera, no lo sé. Pero me consta que las generaciones actuales no sienten esa pasión y ese tirón por las máquinas. La PS3, la XBOX, el iPhone o el PC. Ninguno consigue enganchar tanto a los chicos de hoy día.</p>
-<p>Suena un poco nostálgico, lo sé, pero creo que hemos tenido la suerte de haberlo podido vivir.</p>
+<p>Hoy dÃ­a estamos tan saturados y acostumbrados a los cambios que ya nada nos asombra (o al menos a mÃ­). Miles de millones de pÃ­xeles en miles de millones de colores con un sonido envolvente no consiguen dejar esa impronta que una mÃ¡quina tan simple logrÃ³ en apenas unas horas. QuizÃ¡ porque fue la primera, no lo sÃ©. Pero me consta que las generaciones actuales no sienten esa pasiÃ³n y ese tirÃ³n por las mÃ¡quinas. La PS3, la XBOX, el iPhone o el PC. Ninguno consigue enganchar tanto a los chicos de hoy dÃ­a.</p>
+<p>Suena un poco nostÃ¡lgico, lo sÃ©, pero creo que hemos tenido la suerte de haberlo podido vivir.</p>
 
 <p><br></p>
 <p><strong>Enlaces y ficheros</strong></p>
@@ -811,22 +811,22 @@ function RecargarPie(url)
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
 
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
         <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
         <option value="el-aventurero.html">El Aventurero</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
         <option value="computone.html">Computone</option>
 
         <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html" selected>Programación BASIC</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="basic.html" selected>ProgramaciÃ³n BASIC</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+        <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
         <option value="128k-mode.html">128K MODE</option>
         <option value="input.html">INPUT</option>
 
-        <option value="tira-comica.html">Tira cómica</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="tira-comica.html">Tira cÃ³mica</option>
+        <option value="opinion.html">OpiniÃ³n</option>
     </select>
     <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
 </td>
@@ -835,7 +835,7 @@ function RecargarPie(url)
             </td>
 
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
     </form>
 </table>
                     </td>

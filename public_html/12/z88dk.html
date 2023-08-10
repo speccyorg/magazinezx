@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,30 +31,30 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="al-descubierto.html">Al Descubierto</option>
         <option value="hardware.html">Hardware</option>
-        <option value="basic.html">Programación BASIC</option>
+        <option value="basic.html">ProgramaciÃ³n BASIC</option>
         <option value="el-aventurero.html">El Aventurero</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
 
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+        <option value="opinion.html">OpiniÃ³n</option>
     </select>
     <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
 </td>
-            <td align="center" class="texto">Número 12 - Septiembre 2005</td>
+            <td align="center" class="texto">NÃºmero 12 - Septiembre 2005</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
 
@@ -71,25 +71,25 @@ function RecargarCabecera(url)
 
         <td>
 <div align="justify">
-<p align="center"><font size="5">¡MIS SPRITES SE MUEVEN!</font></p>
-<p>En el artículo anterior aprendimos cómo definir sprites y dibujarlos en pantalla utilizando la librería z88dk sin recurrir a ninguna otra herramienta externa (a menos que quisiéramos dibujar los sprites utilizando algún programa como los mostrados en el número anterior). En esta entrega vamos a ir un poco más allá y vamos a permitir que el usuario pueda mover algún sprite por la pantalla,  y que este sprite pueda interaccionar con otros elementos, colisionando con ellos.</p>
-<p><b>¿Qué vamos a hacer?</b></p>
-<p>Para aprender los conceptos que necesitamos vamos a programar lo que podría ser el código inicial de un juego de carreras de coches, tipo Super Sprint, en los que desde una vista cenital podemos ver el circuito y los distintos participantes. Crearemos un coche utilizando diversos sprites, según hacia donde se esté moviendo el mismo, y crearemos una pista por donde el coche podrá moverse. Evidentemente, esta pista marcará el límite de movimiento de nuestro bólido, por lo que deberemos implementar también algún mecanismo para colisiones, de tal manera que al vehículo le pase algo al contactar con los límites del circuito. Sin más, empecemos.</p>
+<p align="center"><font size="5">Â¡MIS SPRITES SE MUEVEN!</font></p>
+<p>En el artÃ­culo anterior aprendimos cÃ³mo definir sprites y dibujarlos en pantalla utilizando la librerÃ­a z88dk sin recurrir a ninguna otra herramienta externa (a menos que quisiÃ©ramos dibujar los sprites utilizando algÃºn programa como los mostrados en el nÃºmero anterior). En esta entrega vamos a ir un poco mÃ¡s allÃ¡ y vamos a permitir que el usuario pueda mover algÃºn sprite por la pantalla,  y que este sprite pueda interaccionar con otros elementos, colisionando con ellos.</p>
+<p><b>Â¿QuÃ© vamos a hacer?</b></p>
+<p>Para aprender los conceptos que necesitamos vamos a programar lo que podrÃ­a ser el cÃ³digo inicial de un juego de carreras de coches, tipo Super Sprint, en los que desde una vista cenital podemos ver el circuito y los distintos participantes. Crearemos un coche utilizando diversos sprites, segÃºn hacia donde se estÃ© moviendo el mismo, y crearemos una pista por donde el coche podrÃ¡ moverse. Evidentemente, esta pista marcarÃ¡ el lÃ­mite de movimiento de nuestro bÃ³lido, por lo que deberemos implementar tambiÃ©n algÃºn mecanismo para colisiones, de tal manera que al vehÃ­culo le pase algo al contactar con los lÃ­mites del circuito. Sin mÃ¡s, empecemos.</p>
 <p><b>Definiendo los sprites</b></p>
-<p>Hasta ahora hemos visto como crear sprites de un tamaño límite de 8x8. Sin embargo, por mucho que lo intentemos, va a ser un poco difícil crear un sprite que represente algo aproximado a un coche con una rejilla tan pequeña. Si nos fijamos en la siguiente imagen, observaremos que tanto para representar al coche en todas las posibles orientaciones, así como los neumáticos que van a formar parte de los límites de la pista, necesitamos utilizar sprites de 10x10. ¿Cómo creamos sprites mayores de 8x8 usando z88dk?</p>
+<p>Hasta ahora hemos visto como crear sprites de un tamaÃ±o lÃ­mite de 8x8. Sin embargo, por mucho que lo intentemos, va a ser un poco difÃ­cil crear un sprite que represente algo aproximado a un coche con una rejilla tan pequeÃ±a. Si nos fijamos en la siguiente imagen, observaremos que tanto para representar al coche en todas las posibles orientaciones, asÃ­ como los neumÃ¡ticos que van a formar parte de los lÃ­mites de la pista, necesitamos utilizar sprites de 10x10. Â¿CÃ³mo creamos sprites mayores de 8x8 usando z88dk?</p>
 
 <table border="0" cellspacing="0" cellpadding="2" width="400">
 
 	<tr align="right">
-		<td><img src="img/z88dk7_1.png" width="400" height="400"  alt="Figura 1: Los sprites que vamos a utilizar en nuestro juego. Representan todas las posibles orientaciones del coche, excepto el último de todos, que representa un neumático. Todos ellos tienen un tamaño de 10x10" />
+		<td><img src="img/z88dk7_1.png" width="400" height="400"  alt="Figura 1: Los sprites que vamos a utilizar en nuestro juego. Representan todas las posibles orientaciones del coche, excepto el Ãºltimo de todos, que representa un neumÃ¡tico. Todos ellos tienen un tamaÃ±o de 10x10" />
 </td>
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">Figura 1: Los sprites que vamos a utilizar en nuestro juego. Representan todas las posibles orientaciones del coche, excepto el último de todos, que representa un neumático. Todos ellos tienen un tamaño de 10x10</td>
+		<td class="piefoto" align="right">Figura 1: Los sprites que vamos a utilizar en nuestro juego. Representan todas las posibles orientaciones del coche, excepto el Ãºltimo de todos, que representa un neumÃ¡tico. Todos ellos tienen un tamaÃ±o de 10x10</td>
 	</tr>
 </table>
 
-<p>Según vimos anteriormente, un sprite se definía en z88dk como un array de char del tipo:</p>
+<p>SegÃºn vimos anteriormente, un sprite se definÃ­a en z88dk como un array de char del tipo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -98,22 +98,22 @@ char sprite0[] = { 8, 8, 0x18 , 0x24 , 0x42 , 0x81 , 0xA5 , 0x81 , 0x7E , 0x00 }
 </pre>
     </p></td></tr>
 </table>
-<p>donde los dos primeros valores indicaban la altura y la anchura, respectivamente, y los siguientes valores representaban a cada una de las filas del sprite. Si cada columna tenía asignado un valor hexadecimal (estos valores eran, para una anchura de 8, y de derecha a izquierda, los siguientes: 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80), el valor para cada fila era la suma de los valores hexadecimales para los que el pixel correspondiente valía 1.</p>
-<p>Para sprites de más de anchura 8, y hata una anchura de 16, en ese array de caracteres cada fila se va a representar por un par de números hexadecimales. El primer valor de esa pareja se va a corresponder con los 8 primeros píxeles empezando por la izquierda de la columna, y el segundo con el resto.</p>
-<p>En el caso de los sprites que vemos en la figura anterior, donde cada columna tiene una anchura de diez píxeles, cada fila se representaría también por una pareja de valores hexadecimales. Con la primera pareja codificamos los ocho píxeles de la izquierda, de la misma forma en que lo hacemos con sprites de anchura hasta 8, y con la segunda pareja codificamos los otros dos pixeles que quedan a la derecha (siendo el valor 0x80 el correspondiente al primero y el valor 0x40 el correspondiente al segundo. Si hubiese más de dos, seguiríamos asignando los valores 0x20, 0x10, 0x08, 0x04 y etc. a los siguientes). En la siguiente imagen vemos un ejemplo.</p>
+<p>donde los dos primeros valores indicaban la altura y la anchura, respectivamente, y los siguientes valores representaban a cada una de las filas del sprite. Si cada columna tenÃ­a asignado un valor hexadecimal (estos valores eran, para una anchura de 8, y de derecha a izquierda, los siguientes: 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80), el valor para cada fila era la suma de los valores hexadecimales para los que el pixel correspondiente valÃ­a 1.</p>
+<p>Para sprites de mÃ¡s de anchura 8, y hata una anchura de 16, en ese array de caracteres cada fila se va a representar por un par de nÃºmeros hexadecimales. El primer valor de esa pareja se va a corresponder con los 8 primeros pÃ­xeles empezando por la izquierda de la columna, y el segundo con el resto.</p>
+<p>En el caso de los sprites que vemos en la figura anterior, donde cada columna tiene una anchura de diez pÃ­xeles, cada fila se representarÃ­a tambiÃ©n por una pareja de valores hexadecimales. Con la primera pareja codificamos los ocho pÃ­xeles de la izquierda, de la misma forma en que lo hacemos con sprites de anchura hasta 8, y con la segunda pareja codificamos los otros dos pixeles que quedan a la derecha (siendo el valor 0x80 el correspondiente al primero y el valor 0x40 el correspondiente al segundo. Si hubiese mÃ¡s de dos, seguirÃ­amos asignando los valores 0x20, 0x10, 0x08, 0x04 y etc. a los siguientes). En la siguiente imagen vemos un ejemplo.</p>
 
 <table border="0" cellspacing="0" cellpadding="2" width="576">
 
 	<tr align="right">
-		<td><img src="img/z88dk7_2.png" width="576" height="377"  alt="Figura 2: cálculo de los valores hexadecimales correspondientes a cada una de las filas del sprite 0" />
+		<td><img src="img/z88dk7_2.png" width="576" height="377"  alt="Figura 2: cÃ¡lculo de los valores hexadecimales correspondientes a cada una de las filas del sprite 0" />
 </td>
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">Figura 2: cálculo de los valores hexadecimales correspondientes a cada una de las filas del sprite 0</td>
+		<td class="piefoto" align="right">Figura 2: cÃ¡lculo de los valores hexadecimales correspondientes a cada una de las filas del sprite 0</td>
 	</tr>
 </table>
 
-<p>Podríamos ser malvados y dejar como ejercicio al lector que calcule cómo se codificarían el resto de sprites, pero vamos a ahorrarle el mal trago. A continuación incluímos el código que codifica todos los sprites anteriores, que deberemos introducir dentro de un archivo de cabecera llamado <b>coches.h</b>:</p>
+<p>PodrÃ­amos ser malvados y dejar como ejercicio al lector que calcule cÃ³mo se codificarÃ­an el resto de sprites, pero vamos a ahorrarle el mal trago. A continuaciÃ³n incluÃ­mos el cÃ³digo que codifica todos los sprites anteriores, que deberemos introducir dentro de un archivo de cabecera llamado <b>coches.h</b>:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -148,7 +148,7 @@ char sprite8[] = { 10, 10, 0x1E , 0x00 , 0x7F , 0x80 , 0x7F , 0x80 , 0xF3 ,
 </pre>
     </p></td></tr>
 </table>
-<p>Y a continuación indicamos el código de un pequeño programa, que llamaremos <b>coches.c</b>, que lo único que hará será mostrar por pantalla todos los sprites para comprobar que quedan bonitos. Para ello hacemos uso de la función <i>putsprite</i>, cuya sintaxis se explicó en el artículo anterior:</p>
+<p>Y a continuaciÃ³n indicamos el cÃ³digo de un pequeÃ±o programa, que llamaremos <b>coches.c</b>, que lo Ãºnico que harÃ¡ serÃ¡ mostrar por pantalla todos los sprites para comprobar que quedan bonitos. Para ello hacemos uso de la funciÃ³n <i>putsprite</i>, cuya sintaxis se explicÃ³ en el artÃ­culo anterior:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -176,18 +176,18 @@ void main(void)
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
 
-		<td><img src="img/z88dk7_3.png" width="320" height="240"  alt="Figura 3. Los sprites mostrándose en la pantalla de nuestro Spectrum (o de nuestro emulador)" />
+		<td><img src="img/z88dk7_3.png" width="320" height="240"  alt="Figura 3. Los sprites mostrÃ¡ndose en la pantalla de nuestro Spectrum (o de nuestro emulador)" />
 </td>
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">Figura 3. Los sprites mostrándose en la pantalla de nuestro Spectrum (o de nuestro emulador)</td>
+		<td class="piefoto" align="right">Figura 3. Los sprites mostrÃ¡ndose en la pantalla de nuestro Spectrum (o de nuestro emulador)</td>
 	</tr>
 </table>
 
-<p><b>Añadiendo movimiento</b></p>
-<p>Hacer que un sprite se mueva por pantalla es tan sencillo como borrarlo de donde se encontraba anteriormente y volver a dibujarlo en una nueva posición. Lo interesante será hacer que nuestro coche cambie de aspecto según la orientación en la que se esté moviendo.</p>
+<p><b>AÃ±adiendo movimiento</b></p>
+<p>Hacer que un sprite se mueva por pantalla es tan sencillo como borrarlo de donde se encontraba anteriormente y volver a dibujarlo en una nueva posiciÃ³n. Lo interesante serÃ¡ hacer que nuestro coche cambie de aspecto segÃºn la orientaciÃ³n en la que se estÃ© moviendo.</p>
 
-<p>Para conseguir esto último, es decir, que se nos muestre un sprite distinto del coche según se esté moviendo hacia arriba, hacia abajo, etc., debemos añadir un par de cambios al archivo <b>coches.h</b>. Lo primero que vamos a hacer es almacenar todos los sprites en un único array de arrays de chars (es decir, en un único array de sprites). Esto lo hacemos colocando después de la definición de los diferentes sprites en <i>coches.h</i> una línea como la siguiente:</p>
+<p>Para conseguir esto Ãºltimo, es decir, que se nos muestre un sprite distinto del coche segÃºn se estÃ© moviendo hacia arriba, hacia abajo, etc., debemos aÃ±adir un par de cambios al archivo <b>coches.h</b>. Lo primero que vamos a hacer es almacenar todos los sprites en un Ãºnico array de arrays de chars (es decir, en un Ãºnico array de sprites). Esto lo hacemos colocando despuÃ©s de la definiciÃ³n de los diferentes sprites en <i>coches.h</i> una lÃ­nea como la siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -196,7 +196,7 @@ char *sprites[9] = { sprite0 , sprite1 , sprite2 , sprite3 , sprite4 , sprite5 ,
 </pre>
     </p></td></tr>
 </table>
-<p>De tal forma que podremos acceder al sprite <i>i</i> utilizando, por ejemplo, <i>sprites[i]</i> en lugar de <i>spritei</i>, lo cual nos va a ser de mucha utilidad. Justo después de esta línea, introducimos las dos líneas siguientes en <i>coches.h</i>:</p>
+<p>De tal forma que podremos acceder al sprite <i>i</i> utilizando, por ejemplo, <i>sprites[i]</i> en lugar de <i>spritei</i>, lo cual nos va a ser de mucha utilidad. Justo despuÃ©s de esta lÃ­nea, introducimos las dos lÃ­neas siguientes en <i>coches.h</i>:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -206,10 +206,10 @@ int derecha[] = {5,4,6,7,0,3,1,2};
 </pre>
     </p></td></tr>
 </table>
-<p>Estos dos arrays los utilizaremos para saber, cada vez que giramos, cuál es el sprite que debemos dibujar en la pantalla. Si los sprites están numerados según la primera figura de este artículo, y ahora mismo se nos muestra en la pantalla el sprite 0, si giramos a la izquierda el que se debería mostrar es el 4. Si volvemos a girar a la izquierda, el que debería dibujarse entonces en la pantalla es el 1, etc. Si por el contrario, estamos mostrando el sprite 0 en la pantalla y giramos a la derecha, se nos debería mostrar el sprite 5. Si volvemos a girar a la derecha, se nos debería mostrar el sprite 3, etc. </p>
-<p>¿Cómo representamos esto con los arrays indicados anteriormente? Para cada uno de estos dos arrays, la posición <i>i</i> representa, para el <i>sprite i</i>, cual debería ser el sprite que se debería dibujar si giramos hacia la izquierda, en el caso del primer array, o hacia la derecha, en el caso del segundo. Así, por ejemplo, si estamos mostrando el sprite 1 (el coche hacia arriba) y giramos a la izquierda, el valor para la posición 1 (recordemos que en C la primera posición de los arrays es el 0) en el array izquierda es 6, por lo que deberemos mostrar el sprite 6, correspondiente al coche dirigiéndose en diagonal hacia arriba a la izquierda. Sin embargo, si lo que hacemos es girar hacia la derecha, el valor almacenado en la posición 1 del array derecha es el 4, por lo que deberemos mostrar el sprite 4, correspondiente al coche dirigiéndose hacia arriba a la derecha.</p>
+<p>Estos dos arrays los utilizaremos para saber, cada vez que giramos, cuÃ¡l es el sprite que debemos dibujar en la pantalla. Si los sprites estÃ¡n numerados segÃºn la primera figura de este artÃ­culo, y ahora mismo se nos muestra en la pantalla el sprite 0, si giramos a la izquierda el que se deberÃ­a mostrar es el 4. Si volvemos a girar a la izquierda, el que deberÃ­a dibujarse entonces en la pantalla es el 1, etc. Si por el contrario, estamos mostrando el sprite 0 en la pantalla y giramos a la derecha, se nos deberÃ­a mostrar el sprite 5. Si volvemos a girar a la derecha, se nos deberÃ­a mostrar el sprite 3, etc. </p>
+<p>Â¿CÃ³mo representamos esto con los arrays indicados anteriormente? Para cada uno de estos dos arrays, la posiciÃ³n <i>i</i> representa, para el <i>sprite i</i>, cual deberÃ­a ser el sprite que se deberÃ­a dibujar si giramos hacia la izquierda, en el caso del primer array, o hacia la derecha, en el caso del segundo. AsÃ­, por ejemplo, si estamos mostrando el sprite 1 (el coche hacia arriba) y giramos a la izquierda, el valor para la posiciÃ³n 1 (recordemos que en C la primera posiciÃ³n de los arrays es el 0) en el array izquierda es 6, por lo que deberemos mostrar el sprite 6, correspondiente al coche dirigiÃ©ndose en diagonal hacia arriba a la izquierda. Sin embargo, si lo que hacemos es girar hacia la derecha, el valor almacenado en la posiciÃ³n 1 del array derecha es el 4, por lo que deberemos mostrar el sprite 4, correspondiente al coche dirigiÃ©ndose hacia arriba a la derecha.</p>
 
-<p>Habiendo hecho estas dos modificaciones, ya podemos incluir aquí el código de un programa que llamaremos <b>movimiento.c</b>, que nos pondrá a los mandos de un coche que se mostrará en la pantalla, el cual podremos mover hacia donde queramos, sin ninguna restricción. </p>
+<p>Habiendo hecho estas dos modificaciones, ya podemos incluir aquÃ­ el cÃ³digo de un programa que llamaremos <b>movimiento.c</b>, que nos pondrÃ¡ a los mandos de un coche que se mostrarÃ¡ en la pantalla, el cual podremos mover hacia donde queramos, sin ninguna restricciÃ³n. </p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -246,19 +246,19 @@ void main(void)
 </pre>
     </p></td></tr>
 </table>
-<p>De momento vamos a comenzar con los giros, y ya surcaremos después la pantalla a toda velocidad. El código anterior nos dibuja el coche en una zona cercana al centro de la pantalla, y nos permite girarlo hacia la izquierda y hacia la derecha empleando las teclas <i>o</i> y <i>p</i> respectivamente. Explicamos el código y más adelante indicamos un problema que se muestra durante la ejecuciñón y cómo solucionarlo.</p>
+<p>De momento vamos a comenzar con los giros, y ya surcaremos despuÃ©s la pantalla a toda velocidad. El cÃ³digo anterior nos dibuja el coche en una zona cercana al centro de la pantalla, y nos permite girarlo hacia la izquierda y hacia la derecha empleando las teclas <i>o</i> y <i>p</i> respectivamente. Explicamos el cÃ³digo y mÃ¡s adelante indicamos un problema que se muestra durante la ejecuciÃ±Ã³n y cÃ³mo solucionarlo.</p>
 
-<p>Lo primero que hacemos es incluir algunos archivos de cabecera correspondientes a la librería z88dk para poder hacer uso de algunas funcionalidades de la librería. El segundo de ellos, <i>ctype.h</i> permite utilizar la función <i>toupper</i>, que devuelve la cadena que se le pasa como parámetro pasada a mayúsculas. El tercero que incluimos, <i>games.h</i>, es el que hemos utilizado hasta ahora para poder utilizar <i>putsprite</i>, que ya sabemos de sobra lo que hace. Y finalmente, el primero de ellos, <i>stdio.h</i>, lo incluimos para poder leer de teclado con la función <i>getk</i>. Evidentemente, también debemos incluir <i>coches.h</i>, pues es donde se definen nuestros sprites, el array que los contiene a todos ellos, y los arrays <i>izquierda</i> y <i>derecha</i> cuyo funcionamiento hemos explicado anteriormente.</p>
+<p>Lo primero que hacemos es incluir algunos archivos de cabecera correspondientes a la librerÃ­a z88dk para poder hacer uso de algunas funcionalidades de la librerÃ­a. El segundo de ellos, <i>ctype.h</i> permite utilizar la funciÃ³n <i>toupper</i>, que devuelve la cadena que se le pasa como parÃ¡metro pasada a mayÃºsculas. El tercero que incluimos, <i>games.h</i>, es el que hemos utilizado hasta ahora para poder utilizar <i>putsprite</i>, que ya sabemos de sobra lo que hace. Y finalmente, el primero de ellos, <i>stdio.h</i>, lo incluimos para poder leer de teclado con la funciÃ³n <i>getk</i>. Evidentemente, tambiÃ©n debemos incluir <i>coches.h</i>, pues es donde se definen nuestros sprites, el array que los contiene a todos ellos, y los arrays <i>izquierda</i> y <i>derecha</i> cuyo funcionamiento hemos explicado anteriormente.</p>
 
-<p>Una vez que comienza el programa principal, empezamos a definir variables. En el caso de <i>x</i> e <i>y</i>, su cometido es tan simple como indicarnos en que posición de la pantalla se va a encontrar el coche. Ahora que vamos a tener el coche fijo girando a lo mejor no parece de utilidad, pero luego, más tarde, cuando lo movamos, sí que va a serasí. La última variable que definimos es <i>posicion</i> encargada de indicarnos que sprite estamos dibujando en pantalla. Si el array <i>sprites</i> contiene todos los sprites definidos, al hacer un <i>putsprite</i> de <i>sprites[posicion]</i>, lo que estaremos haciendo es dibujar por pantalla el sprite almacenado en la posición <i>posicion</i> de dicho array. En nuestro caso, esta variable comienza valiendo 0, por lo que cuando ejecutemos el programa, veremos que el coche, nada más empezar, se encuentra preparado para correr orientado hacia la derecha.</p>
+<p>Una vez que comienza el programa principal, empezamos a definir variables. En el caso de <i>x</i> e <i>y</i>, su cometido es tan simple como indicarnos en que posiciÃ³n de la pantalla se va a encontrar el coche. Ahora que vamos a tener el coche fijo girando a lo mejor no parece de utilidad, pero luego, mÃ¡s tarde, cuando lo movamos, sÃ­ que va a serasÃ­. La Ãºltima variable que definimos es <i>posicion</i> encargada de indicarnos que sprite estamos dibujando en pantalla. Si el array <i>sprites</i> contiene todos los sprites definidos, al hacer un <i>putsprite</i> de <i>sprites[posicion]</i>, lo que estaremos haciendo es dibujar por pantalla el sprite almacenado en la posiciÃ³n <i>posicion</i> de dicho array. En nuestro caso, esta variable comienza valiendo 0, por lo que cuando ejecutemos el programa, veremos que el coche, nada mÃ¡s empezar, se encuentra preparado para correr orientado hacia la derecha.</p>
 
-<p>Y una vez dibujamos el coche por primera vez, utilizando <i>putsprite</i>, ya estamos preparados para entrar en el bucle principal. Es muy importante fijarse que para el modo de dibujado (primer parámetro de <i>putsprite</i>) estamos utilizando <b>spr_xor</b>, correspondiente a la operación lógica <i>OR EXCLUSIVA</i>. Usamos este modo para poder borrar sprites de una forma muy cómoda. De forma intuitiva, lo único que debemos saber es que si dibujamos un sprite usando or exclusiva en una zona de la pantalla que esté vacía, el sprite se dibujará tal cual en la pantalla. Si dibujamos el sprite usando or exclusiva en una zona de la pantalla donde ese sprite ya estuviera dibujado, se borrará sin modificar el resto de los píxeles de por alrededor, solo se borrarán los píxeles que formen parte del coche.</p>
-<p>Por lo tanto, para mover, lo que haremos será dibujar el sprite usando or exclusiva en la misma posición en la que se encontrara anteriormente, y después vovler a dibujar usando or exclusiva en su nueva posición. </p>
-<p>El bucle principal se va a ejecutar de forma indefinida (<i>while (1)</i>). En el mismo, leeremos constantemente lo que el usuario introduzca por el teclado utilizando <i>getk</i>. Hemos de tener en cuenta dos cosas: la función <i>getk</i> es no bloqueante, lo cual quiere decir que si el usuario no pulsa ninguna tecla, el programa no se queda detenido en esa instrucción, y utilizamos <i>getk</i> combinado con <i>toupper</i>, que transforma lo que se le pasa como parámetro a mayúsculas, para que el movimiento funcione igual tanto si el usuario pulsa las teclas con el bloqueo mayúsculas activado o sin el. Por eso, dentro del switch, a la hora de comprobar que tecla se ha pulsado, comparamos la entrada con 'O' y 'P' en lugar de con 'o' y 'p'.</p>
+<p>Y una vez dibujamos el coche por primera vez, utilizando <i>putsprite</i>, ya estamos preparados para entrar en el bucle principal. Es muy importante fijarse que para el modo de dibujado (primer parÃ¡metro de <i>putsprite</i>) estamos utilizando <b>spr_xor</b>, correspondiente a la operaciÃ³n lÃ³gica <i>OR EXCLUSIVA</i>. Usamos este modo para poder borrar sprites de una forma muy cÃ³moda. De forma intuitiva, lo Ãºnico que debemos saber es que si dibujamos un sprite usando or exclusiva en una zona de la pantalla que estÃ© vacÃ­a, el sprite se dibujarÃ¡ tal cual en la pantalla. Si dibujamos el sprite usando or exclusiva en una zona de la pantalla donde ese sprite ya estuviera dibujado, se borrarÃ¡ sin modificar el resto de los pÃ­xeles de por alrededor, solo se borrarÃ¡n los pÃ­xeles que formen parte del coche.</p>
+<p>Por lo tanto, para mover, lo que haremos serÃ¡ dibujar el sprite usando or exclusiva en la misma posiciÃ³n en la que se encontrara anteriormente, y despuÃ©s vovler a dibujar usando or exclusiva en su nueva posiciÃ³n. </p>
+<p>El bucle principal se va a ejecutar de forma indefinida (<i>while (1)</i>). En el mismo, leeremos constantemente lo que el usuario introduzca por el teclado utilizando <i>getk</i>. Hemos de tener en cuenta dos cosas: la funciÃ³n <i>getk</i> es no bloqueante, lo cual quiere decir que si el usuario no pulsa ninguna tecla, el programa no se queda detenido en esa instrucciÃ³n, y utilizamos <i>getk</i> combinado con <i>toupper</i>, que transforma lo que se le pasa como parÃ¡metro a mayÃºsculas, para que el movimiento funcione igual tanto si el usuario pulsa las teclas con el bloqueo mayÃºsculas activado o sin el. Por eso, dentro del switch, a la hora de comprobar que tecla se ha pulsado, comparamos la entrada con 'O' y 'P' en lugar de con 'o' y 'p'.</p>
 
-<p>Si la tecla que se ha pulsado es la 'o', deseamos girar hacia la izquierda. Dibujamos el coche en la posición actualusando or exclusiva, de tal forma que se borra. Con la línea <i>posicion = izquierda[posicion]</i> lo que hacemos es averiguar que sprite es el que tenemos que dibujar a continuación, según la orientación en la que nos encontremos. Finalmente volvemos a dibujar el coche con las mismas coordenadas (x,y), pero utilizando un sprite distinto, correspondiente a haber girado el coche a la izquierda. En el caso de que se hubiera pulsado la tecla 'p' se realizaría la misma operación, pero utilizando el array <i>derecha</i>.</p>
-<p>Ahora ya podemos compilar y ejecutar y comprobaremos como podemos girar nuestro coche pulsando las teclas 'o' y 'p'- Sin embargo, veremos que se produce un efecto extraño. Al mantener una tecla pulsada durante un tiempo, es como si estuviéramos escribiendo en BASIC: se gira una vez, y tras un breve tiempo, ya se gira sin interrupción. Más tarde averiguaremos como resolver este pequeño contratiempo. Antes, veamos como podemos hacer que nuestro coche acelere y frene.</p>
-<p>Queremos que pulsando la tecla 'q' el coche vaya acelerando hasta una velocidad máxima (y por lo tanto, que se vaya moviendo conforme a esa velocidad) y que al pulsar la tecla 'a', el coche vaya frenando hasta detenerse. A continuación vemos como lo hemos resuelto, en el siguiente programa, que sustituirá a nuestro anterior <b>movimiento.c</b> (el código en rojo es nuevo):</p>
+<p>Si la tecla que se ha pulsado es la 'o', deseamos girar hacia la izquierda. Dibujamos el coche en la posiciÃ³n actualusando or exclusiva, de tal forma que se borra. Con la lÃ­nea <i>posicion = izquierda[posicion]</i> lo que hacemos es averiguar que sprite es el que tenemos que dibujar a continuaciÃ³n, segÃºn la orientaciÃ³n en la que nos encontremos. Finalmente volvemos a dibujar el coche con las mismas coordenadas (x,y), pero utilizando un sprite distinto, correspondiente a haber girado el coche a la izquierda. En el caso de que se hubiera pulsado la tecla 'p' se realizarÃ­a la misma operaciÃ³n, pero utilizando el array <i>derecha</i>.</p>
+<p>Ahora ya podemos compilar y ejecutar y comprobaremos como podemos girar nuestro coche pulsando las teclas 'o' y 'p'- Sin embargo, veremos que se produce un efecto extraÃ±o. Al mantener una tecla pulsada durante un tiempo, es como si estuviÃ©ramos escribiendo en BASIC: se gira una vez, y tras un breve tiempo, ya se gira sin interrupciÃ³n. MÃ¡s tarde averiguaremos como resolver este pequeÃ±o contratiempo. Antes, veamos como podemos hacer que nuestro coche acelere y frene.</p>
+<p>Queremos que pulsando la tecla 'q' el coche vaya acelerando hasta una velocidad mÃ¡xima (y por lo tanto, que se vaya moviendo conforme a esa velocidad) y que al pulsar la tecla 'a', el coche vaya frenando hasta detenerse. A continuaciÃ³n vemos como lo hemos resuelto, en el siguiente programa, que sustituirÃ¡ a nuestro anterior <b>movimiento.c</b> (el cÃ³digo en rojo es nuevo):</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -356,15 +356,15 @@ void main(void)
 </pre>
     </p></td></tr>
 </table>
-<p>Lo más evidente es que necesitaremos una variable, en este caso llamada <i>velocidad</i>, que nos permita almacenar la velocidad del coche en un momento dado. Es importante tener en cuenta que en un principio el coche estará parado, por lo que esta velocidad valdrá cero. Hemos añadido también código que hará que nuestra velocidad aumente o disminuya, hasta una velocidad máxima o mínima, al pulsar las teclas 'q' y 'a', respectivamente (este código es el que se ha añadido dentro del switch).</p>
-<p>Lo que a lo mejor queda un poco más esotérico es ver cómo hacemos que el coche, una vez que adquiere velocidad, pueda moverse. La parte del código encargada de esto es la que se encuentra al final. Este código, como es obvio, solo se ejecutará si el coche tiene velocidad. El coche se moverá cuando una variable, llamada <i>ciclos</i>, y a la que se le va restando el valor de la velocidad en cada iteración del bucle principal, llegue a cero. Evidentemente, cuanta mayor sea la velocidad, más rápido llegará <i>ciclos</i> a 0 y cada menos iteraciones del bucle principal se moverá el coche. </p>
+<p>Lo mÃ¡s evidente es que necesitaremos una variable, en este caso llamada <i>velocidad</i>, que nos permita almacenar la velocidad del coche en un momento dado. Es importante tener en cuenta que en un principio el coche estarÃ¡ parado, por lo que esta velocidad valdrÃ¡ cero. Hemos aÃ±adido tambiÃ©n cÃ³digo que harÃ¡ que nuestra velocidad aumente o disminuya, hasta una velocidad mÃ¡xima o mÃ­nima, al pulsar las teclas 'q' y 'a', respectivamente (este cÃ³digo es el que se ha aÃ±adido dentro del switch).</p>
+<p>Lo que a lo mejor queda un poco mÃ¡s esotÃ©rico es ver cÃ³mo hacemos que el coche, una vez que adquiere velocidad, pueda moverse. La parte del cÃ³digo encargada de esto es la que se encuentra al final. Este cÃ³digo, como es obvio, solo se ejecutarÃ¡ si el coche tiene velocidad. El coche se moverÃ¡ cuando una variable, llamada <i>ciclos</i>, y a la que se le va restando el valor de la velocidad en cada iteraciÃ³n del bucle principal, llegue a cero. Evidentemente, cuanta mayor sea la velocidad, mÃ¡s rÃ¡pido llegarÃ¡ <i>ciclos</i> a 0 y cada menos iteraciones del bucle principal se moverÃ¡ el coche. </p>
 
-<p>Si los ciclos llegan a cero, nos disponemos a mover el coche. Lo primero es volver a hacer que ciclos valga su valor inicial, para volver a comenzar el proceso al terminar de mover. Lo siguiente es borrar el coche de su posición anterior, dibujándolo en dicha posición usando el modo or exclusiva. Y después, con un switch, cambiamos el valor de la coordenada <i>x</i> y/o <i>y</i> según la orientación del coche, dada por la variable <i>posicion</i>. Así, por ejemplo, si <i>posicion</i> vale 0, eso quiere decir que el coche está orientado hacia la derecha, por lo que aumentamos el valor de la coordenada x. Si <i>posicion</i> valiera 4, el coche estaría orientado hacia arriba a la derecha, por lo que disminuiríamos el valor de <i>y</i> y aumentaríamos el de <i>x</i>. Y así con el total de las 8 orientaciones. Finalmente, dibujamos el coche en su nueva posición <i>x</i> e <i>y</i>.</p>
+<p>Si los ciclos llegan a cero, nos disponemos a mover el coche. Lo primero es volver a hacer que ciclos valga su valor inicial, para volver a comenzar el proceso al terminar de mover. Lo siguiente es borrar el coche de su posiciÃ³n anterior, dibujÃ¡ndolo en dicha posiciÃ³n usando el modo or exclusiva. Y despuÃ©s, con un switch, cambiamos el valor de la coordenada <i>x</i> y/o <i>y</i> segÃºn la orientaciÃ³n del coche, dada por la variable <i>posicion</i>. AsÃ­, por ejemplo, si <i>posicion</i> vale 0, eso quiere decir que el coche estÃ¡ orientado hacia la derecha, por lo que aumentamos el valor de la coordenada x. Si <i>posicion</i> valiera 4, el coche estarÃ­a orientado hacia arriba a la derecha, por lo que disminuirÃ­amos el valor de <i>y</i> y aumentarÃ­amos el de <i>x</i>. Y asÃ­ con el total de las 8 orientaciones. Finalmente, dibujamos el coche en su nueva posiciÃ³n <i>x</i> e <i>y</i>.</p>
 
-<p>Aquí encontramos varias ventajas con respecto al BASIC. Primero, que los gráficos definidos por el usuario (en este caso, sprites) no tienen por qué estar limitados a un tamaño de 8 por 8, y segundo, que estos sprites pueden moverse utilizando incrementos que sean cualquier múltiplo de un pixel, mientras que en basic debemos mover los UDGs de 8 en 8.</p>
-<p>Al ejecutar este programa, veremos como podemos acelerar y frenar, y el coche se moverá, sin ninguna restricción. Si el coche sale de la pantalla, observaremos como este entra por el extremo opuesto y el programa seguirá funcionando sin problemas. Sin embargo, se sigue produciendo el mismo efecto que comentábamos antes, el teclado parece comportarse como si estuviéramos en BASIC... vamos a solucionarlo dándole valor a dos variables del sistema, ¡pero que no se asuste nadie!.</p>
-<p>Las variables del sistema se podrían entender como determinadas direcciones de memoría que modifican el comportamiento del sistema según su valor (más información en la Microhobby especial nº2). En nuestro caso concreto, las variables del sistema que vamos a modificar son REPDEL y REPPER, correspondientes a las direcciones de memoria 23561 y 23562. La primera de ellas indica el tiempo en cincuentavos de segundo que se debe tener pulsada una tecla para que esta se comience a repetir, y la segunda indica el tiempo en cincuentavos de segundo que tarda en producirse esta repetición una vez que se comienza. Si le damos un valor de 1 a estas variables, conseguiremos una respuesta dle teclado rápida, y nos desharemos del efecto tan fastidioso que hemos comentado antes.</p>
-<p>En el siguiente código se muestran, en rojo, los cambios que deberíamos realizar al comienzo del programa <b>movimiento.c</b>:</p>
+<p>AquÃ­ encontramos varias ventajas con respecto al BASIC. Primero, que los grÃ¡ficos definidos por el usuario (en este caso, sprites) no tienen por quÃ© estar limitados a un tamaÃ±o de 8 por 8, y segundo, que estos sprites pueden moverse utilizando incrementos que sean cualquier mÃºltiplo de un pixel, mientras que en basic debemos mover los UDGs de 8 en 8.</p>
+<p>Al ejecutar este programa, veremos como podemos acelerar y frenar, y el coche se moverÃ¡, sin ninguna restricciÃ³n. Si el coche sale de la pantalla, observaremos como este entra por el extremo opuesto y el programa seguirÃ¡ funcionando sin problemas. Sin embargo, se sigue produciendo el mismo efecto que comentÃ¡bamos antes, el teclado parece comportarse como si estuviÃ©ramos en BASIC... vamos a solucionarlo dÃ¡ndole valor a dos variables del sistema, Â¡pero que no se asuste nadie!.</p>
+<p>Las variables del sistema se podrÃ­an entender como determinadas direcciones de memorÃ­a que modifican el comportamiento del sistema segÃºn su valor (mÃ¡s informaciÃ³n en la Microhobby especial nÂº2). En nuestro caso concreto, las variables del sistema que vamos a modificar son REPDEL y REPPER, correspondientes a las direcciones de memoria 23561 y 23562. La primera de ellas indica el tiempo en cincuentavos de segundo que se debe tener pulsada una tecla para que esta se comience a repetir, y la segunda indica el tiempo en cincuentavos de segundo que tarda en producirse esta repeticiÃ³n una vez que se comienza. Si le damos un valor de 1 a estas variables, conseguiremos una respuesta dle teclado rÃ¡pida, y nos desharemos del efecto tan fastidioso que hemos comentado antes.</p>
+<p>En el siguiente cÃ³digo se muestran, en rojo, los cambios que deberÃ­amos realizar al comienzo del programa <b>movimiento.c</b>:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -399,8 +399,8 @@ void main(void)
 </pre>
     </p></td></tr>
 </table>
-<p>Al mejorar la respuesta del teclado nos ha surgido un nuevo problema... ¡el coche gira demasiado rápido!. </p>
-<p>Será conveniente añadir un contador para que el coche no gire nada más pulsar la tecla correspondiente; mejor que gire cuando la tecle lleve un rato pulsada. A continuación mostramos, en rojo, el código que deberíamos añadir:</p>
+<p>Al mejorar la respuesta del teclado nos ha surgido un nuevo problema... Â¡el coche gira demasiado rÃ¡pido!. </p>
+<p>SerÃ¡ conveniente aÃ±adir un contador para que el coche no gire nada mÃ¡s pulsar la tecla correspondiente; mejor que gire cuando la tecle lleve un rato pulsada. A continuaciÃ³n mostramos, en rojo, el cÃ³digo que deberÃ­amos aÃ±adir:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -473,14 +473,14 @@ void main(void)
 </pre>
     </p></td></tr>
 </table>
-<p>Nos vamos a basar en tres nuevas variables, <i>girando</i>, <i>contador_izquierda</i> y <i>contador_derecha</i>. Las dos últimas son las que nos van a indicar cuándo hacer el giro. Cada vez que le demos a la tecla de giro a la izquierda, aumentará el valor de <i>contador_izquierda</i>, y cada vez que le demos a la tecla de giro a la derecha, aumentará el valor de <i>contador_derecha</i>. Cuando alguna de ellas valga 3, giraremos a la izquierda o a la derecha, respectivamente. </p>
+<p>Nos vamos a basar en tres nuevas variables, <i>girando</i>, <i>contador_izquierda</i> y <i>contador_derecha</i>. Las dos Ãºltimas son las que nos van a indicar cuÃ¡ndo hacer el giro. Cada vez que le demos a la tecla de giro a la izquierda, aumentarÃ¡ el valor de <i>contador_izquierda</i>, y cada vez que le demos a la tecla de giro a la derecha, aumentarÃ¡ el valor de <i>contador_derecha</i>. Cuando alguna de ellas valga 3, giraremos a la izquierda o a la derecha, respectivamente. </p>
 
-<p>Una medida que tomamos es que al girar hacia la izquierda, ponemos a cero la variable <i>contador_derecha</i>, que nos dice cuanto tiempo hemos estado girando a la derecha, y viceversa, cuando giramos a la derecha, ponemos a cero la variable <i>contador_izquierda</i>, que nos dice cuánto hemos girado hasta la izquierda hasta el momento. Así evitamos que, en el caso de haber estado girando hacia la izquierda durante un tiempo, por ejemplo, empecemos a girar a la derecha, y que tan solo haga falta rozar la tecla de giro izquierda para volver a girar a la izquierda, lo cual no es demasiado real. </p>
-<p>Otra medida que tomamos está relacionada con la variable <i>girando</i>. Si dejamos de pulsar las teclas de giro, no es demasiado real que si volvemos a pulsarlas otra vez pasado un rato y durante muy poco tiempo, giremos. Para solucionar esto, lo que hacemos simplemente es: darle a la variable <i>girando</i> el valor 0 cada vez que entramos en el bucle, darle el valor 1 en el caso de que pulsemos giro izquierda o giro derecha, y por último, poner <i>contador_izquierda</i> y <i>contador_derecha</i> a cero en el caso de que no se haya girado en esa iteración, y por lo tanto, en el caso de que <i>girando</i> valga cero... es bastante sencillo de comprender.</p>
+<p>Una medida que tomamos es que al girar hacia la izquierda, ponemos a cero la variable <i>contador_derecha</i>, que nos dice cuanto tiempo hemos estado girando a la derecha, y viceversa, cuando giramos a la derecha, ponemos a cero la variable <i>contador_izquierda</i>, que nos dice cuÃ¡nto hemos girado hasta la izquierda hasta el momento. AsÃ­ evitamos que, en el caso de haber estado girando hacia la izquierda durante un tiempo, por ejemplo, empecemos a girar a la derecha, y que tan solo haga falta rozar la tecla de giro izquierda para volver a girar a la izquierda, lo cual no es demasiado real. </p>
+<p>Otra medida que tomamos estÃ¡ relacionada con la variable <i>girando</i>. Si dejamos de pulsar las teclas de giro, no es demasiado real que si volvemos a pulsarlas otra vez pasado un rato y durante muy poco tiempo, giremos. Para solucionar esto, lo que hacemos simplemente es: darle a la variable <i>girando</i> el valor 0 cada vez que entramos en el bucle, darle el valor 1 en el caso de que pulsemos giro izquierda o giro derecha, y por Ãºltimo, poner <i>contador_izquierda</i> y <i>contador_derecha</i> a cero en el caso de que no se haya girado en esa iteraciÃ³n, y por lo tanto, en el caso de que <i>girando</i> valga cero... es bastante sencillo de comprender.</p>
 
-<p>¿Y ya está? ¡No! Más problemas se interponen entre nosotros y un sprite en movimiento. Si ejecutamos el código anterior veremos como el coche... ¡no gira! ¿Es que hemos hecho algo mal? No, la algoritmia está bien, pero tenemos un problema de interrupciones. El programa no espera a que pulsemos una tecla, por lo que a lo mejor nosotros estamos pulsando la tecla P todo el rato, pero el programa no llega a leer el teclado a tiempo y <i>girando</i> vuelve a valer 0.</p>
-<p>Vamos a hacer que el bucle principal solo avance cuando se produzca una interrupción. Dichas interrupciones se producirán en dos casos, cuando pulsemos una tecla (lo cual es lo que queremos) y cuando vaya a comenzar el refresco de la pantalla (cuando el haz de electrones se sitúe de nuevo en el punto 0,0 de la pantalla para empezar a dibujar, de izquierda a derecha y de arriba a abajo). Para ello tendremos que utilizar... ¡ensamblador!. Pero no hay que preocuparse, porque lo solucionaremos todo con una línea de código.</p>
-<p>La instrucción en ensamblador que detiene la ejecución hasta que se produce una interrupción es <i>HALT</i>. Y en z88dk, ejecutar una instrucción en ensamblador en cualquier momento es tan sencillo como hacer uso de la función <b>asm</b>, que recibe como parámetro una cadena conteniendo la instrucción que deseamos ejecutar. Por lo tanto, resolver de una vez por todas nuestros problemas de movimiento es tan simple como colocar la instrucción <i>asm("HALT")</i> en los lugares adecuados. A continuación se muestra todo el código de <b>movimiento.c</b> tal como quedaría después de los cambios (marcados en rojo).</p>
+<p>Â¿Y ya estÃ¡? Â¡No! MÃ¡s problemas se interponen entre nosotros y un sprite en movimiento. Si ejecutamos el cÃ³digo anterior veremos como el coche... Â¡no gira! Â¿Es que hemos hecho algo mal? No, la algoritmia estÃ¡ bien, pero tenemos un problema de interrupciones. El programa no espera a que pulsemos una tecla, por lo que a lo mejor nosotros estamos pulsando la tecla P todo el rato, pero el programa no llega a leer el teclado a tiempo y <i>girando</i> vuelve a valer 0.</p>
+<p>Vamos a hacer que el bucle principal solo avance cuando se produzca una interrupciÃ³n. Dichas interrupciones se producirÃ¡n en dos casos, cuando pulsemos una tecla (lo cual es lo que queremos) y cuando vaya a comenzar el refresco de la pantalla (cuando el haz de electrones se sitÃºe de nuevo en el punto 0,0 de la pantalla para empezar a dibujar, de izquierda a derecha y de arriba a abajo). Para ello tendremos que utilizar... Â¡ensamblador!. Pero no hay que preocuparse, porque lo solucionaremos todo con una lÃ­nea de cÃ³digo.</p>
+<p>La instrucciÃ³n en ensamblador que detiene la ejecuciÃ³n hasta que se produce una interrupciÃ³n es <i>HALT</i>. Y en z88dk, ejecutar una instrucciÃ³n en ensamblador en cualquier momento es tan sencillo como hacer uso de la funciÃ³n <b>asm</b>, que recibe como parÃ¡metro una cadena conteniendo la instrucciÃ³n que deseamos ejecutar. Por lo tanto, resolver de una vez por todas nuestros problemas de movimiento es tan simple como colocar la instrucciÃ³n <i>asm("HALT")</i> en los lugares adecuados. A continuaciÃ³n se muestra todo el cÃ³digo de <b>movimiento.c</b> tal como quedarÃ­a despuÃ©s de los cambios (marcados en rojo).</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -615,12 +615,12 @@ void main(void)
 </pre>
     </p></td></tr>
 </table>
-<p>Como se puede comprobar, se ha incluido un <i>halt</i> antes de la lectura de teclado, para detener el programa hasta que se pulse una tecla, y después se ha incluido un <i>halt</i> antes de borrar y volver a dibujar el sprite, para esperar el refresco de la pantalla. Como consecuencia, el coche irá más lento, es por ello que también hemos modificado el valor de <i>CICLOS_BASE</i>, la velocidad máxima, y el incremento y decremento de la velocidad. ¿Y os habeis fijado? Gracias a que hemos sincronizado el movimiento del coche con el refresco de la pantalla... ¡este ha dejado de parpadear al moverse!</p>
+<p>Como se puede comprobar, se ha incluido un <i>halt</i> antes de la lectura de teclado, para detener el programa hasta que se pulse una tecla, y despuÃ©s se ha incluido un <i>halt</i> antes de borrar y volver a dibujar el sprite, para esperar el refresco de la pantalla. Como consecuencia, el coche irÃ¡ mÃ¡s lento, es por ello que tambiÃ©n hemos modificado el valor de <i>CICLOS_BASE</i>, la velocidad mÃ¡xima, y el incremento y decremento de la velocidad. Â¿Y os habeis fijado? Gracias a que hemos sincronizado el movimiento del coche con el refresco de la pantalla... Â¡este ha dejado de parpadear al moverse!</p>
 
-<p>Por último, una cosa curiosa: si mientras movemos el coche pasamos por encima de donde pone <i>Bytes: movimiento</i> (correspondiente a la carga desde cinta) veremos como el borrado y la escritura del sprite del coche no afecta en lo mas mínimo a los píxeles que forman parte de ese texto; esto es sin duda otra de las grandes ventajas de usar el modo de dibujado de sprites or exclusiva.</p>
+<p>Por Ãºltimo, una cosa curiosa: si mientras movemos el coche pasamos por encima de donde pone <i>Bytes: movimiento</i> (correspondiente a la carga desde cinta) veremos como el borrado y la escritura del sprite del coche no afecta en lo mas mÃ­nimo a los pÃ­xeles que forman parte de ese texto; esto es sin duda otra de las grandes ventajas de usar el modo de dibujado de sprites or exclusiva.</p>
 <p><b>Y ahora, pongamos el coche en una pista</b></p>
-<p>Por último vamos a dibujar una pista de neumáticos para limitar un poco el movimiento de nuestro bólido. Vamos además a hacerlo de tal forma que sea muy fácil modificar el trazado, y así la diversión se multiplique durante meses. Si recordamos, el último de los sprites que habíamos definido era el correspondiente a un neumático. Este sprite, com todos los anteriores, tiene un tamaño de 10x10 (quizá un poco grande, para hacer circuitos más complicados quizas no hubiera estado mal utilizar sprites de neumáticos más pequeños). </p>
-<p>Dentro de <b>coches.h</b> es donde definiremos el trazado de la pista. Si consideramos la pantalla como un array de 18x24 casillas de tamaño 10x10 (el mismo que los neumáticos), podemos indicar el recorrido de la pista creando un array, donde colocaremos ceros en aquellas casillas donde no vaya a haber neumático, y unos en las casillas en las que sí. Al principio de <b>coches.h</b> definimos unas constantes para el tamaño del circuito:</p>
+<p>Por Ãºltimo vamos a dibujar una pista de neumÃ¡ticos para limitar un poco el movimiento de nuestro bÃ³lido. Vamos ademÃ¡s a hacerlo de tal forma que sea muy fÃ¡cil modificar el trazado, y asÃ­ la diversiÃ³n se multiplique durante meses. Si recordamos, el Ãºltimo de los sprites que habÃ­amos definido era el correspondiente a un neumÃ¡tico. Este sprite, com todos los anteriores, tiene un tamaÃ±o de 10x10 (quizÃ¡ un poco grande, para hacer circuitos mÃ¡s complicados quizas no hubiera estado mal utilizar sprites de neumÃ¡ticos mÃ¡s pequeÃ±os). </p>
+<p>Dentro de <b>coches.h</b> es donde definiremos el trazado de la pista. Si consideramos la pantalla como un array de 18x24 casillas de tamaÃ±o 10x10 (el mismo que los neumÃ¡ticos), podemos indicar el recorrido de la pista creando un array, donde colocaremos ceros en aquellas casillas donde no vaya a haber neumÃ¡tico, y unos en las casillas en las que sÃ­. Al principio de <b>coches.h</b> definimos unas constantes para el tamaÃ±o del circuito:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -679,7 +679,7 @@ short int *circuito[ALTURA_CIRCUITO] = {circuito1, circuito2, circuito3, circuit
 
     </p></td></tr>
 </table>
-<p>Con un poco de imaginación podemos vislumbrar en ese array un circuito cerrado en forma de O. Si ahora creamos un fichero llamado <b>juego.c</b>, que contenga el mismo código que <i>movimiento.c</i>, pero añadiéndole el que aperece en color rojo a continuación, podremos por fin ver nuestor circuito en la pantalla, tal como se ve en la siguiente imagen:</p>
+<p>Con un poco de imaginaciÃ³n podemos vislumbrar en ese array un circuito cerrado en forma de O. Si ahora creamos un fichero llamado <b>juego.c</b>, que contenga el mismo cÃ³digo que <i>movimiento.c</i>, pero aÃ±adiÃ©ndole el que aperece en color rojo a continuaciÃ³n, podremos por fin ver nuestor circuito en la pantalla, tal como se ve en la siguiente imagen:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -732,13 +732,13 @@ void main(void)
 </table>
 
 
-<p>Hay que tener en cuenta que hemos cambiado el valor inicial de la coordenada y del coche para que éste quede dentro de la pista. También hemos creado dos variables, <i>i</i> y <i>j</i> que nos van a servir de contadores en un par de bucles.</p>
-<p>Este par de bucles son los dos que se muestran en rojo. En el primero lo único que hacemos es escribir en la pantalla 30 líneas en blanco para borrarla (es por eso que en la captura anterior ya no se ve lo de <i>Bytes: juego.tap</i> que molestaba tanto). Es en el segundo en el que dibujamos el circuito.</p>
-<p>Si hemos decidido anteriormente que el array <i>circuito</i> nos iba a indicar si en cada celda de 10x10 píxeles en las que dividíamos la pantalla había o no un neumático, lo que haremos para dibujar la pista no es más que recorrer todas las posiciones del array y dibujar en la pantalla un neumático en la posición <i>i*10+1</i>, <i>j*10+1</i>, siendo <i>i</i> y <i>j</i> las coordenadas dentro del array donde hemos leído un 1.</p>
+<p>Hay que tener en cuenta que hemos cambiado el valor inicial de la coordenada y del coche para que Ã©ste quede dentro de la pista. TambiÃ©n hemos creado dos variables, <i>i</i> y <i>j</i> que nos van a servir de contadores en un par de bucles.</p>
+<p>Este par de bucles son los dos que se muestran en rojo. En el primero lo Ãºnico que hacemos es escribir en la pantalla 30 lÃ­neas en blanco para borrarla (es por eso que en la captura anterior ya no se ve lo de <i>Bytes: juego.tap</i> que molestaba tanto). Es en el segundo en el que dibujamos el circuito.</p>
+<p>Si hemos decidido anteriormente que el array <i>circuito</i> nos iba a indicar si en cada celda de 10x10 pÃ­xeles en las que dividÃ­amos la pantalla habÃ­a o no un neumÃ¡tico, lo que haremos para dibujar la pista no es mÃ¡s que recorrer todas las posiciones del array y dibujar en la pantalla un neumÃ¡tico en la posiciÃ³n <i>i*10+1</i>, <i>j*10+1</i>, siendo <i>i</i> y <i>j</i> las coordenadas dentro del array donde hemos leÃ­do un 1.</p>
 
-<p>De acuerdo, ya tenemos un coche moviéndose y un circuito... pero cuando el coche llega hasta alguno de los neumáticos, en lugar de producirse una espectacular explosión, lo atraviesa como si nada y sigue su camino. Tenemos, sin duda, que añadir colisiones.</p>
-<p>Para detectar cuando nuestro coche colisiona con uno de los neumáticos que forman parte de los límites de la pista, deberemos añadir una condición <i>if</i> antes de cada desplazamiento del mismo, de tal forma que si ese desplazamiento va a provocar que coche y neumático entren en contacto, el coche se pare totalmente (dada la poca velocidad a la que se ha programado el coche en nuestro programa, y a nuestra incapacidad de momento para crear grandes explosiones usando z88dk en el Spectrum, vamos a suponer que al contactar con un neumático el coche solamente queda parado).</p>
-<p>A continuación mostrmos lo que sería el código <i>completo</i> de <b>juego.c</b>, con las partes nuevas en color rojo, como siempre:</p>
+<p>De acuerdo, ya tenemos un coche moviÃ©ndose y un circuito... pero cuando el coche llega hasta alguno de los neumÃ¡ticos, en lugar de producirse una espectacular explosiÃ³n, lo atraviesa como si nada y sigue su camino. Tenemos, sin duda, que aÃ±adir colisiones.</p>
+<p>Para detectar cuando nuestro coche colisiona con uno de los neumÃ¡ticos que forman parte de los lÃ­mites de la pista, deberemos aÃ±adir una condiciÃ³n <i>if</i> antes de cada desplazamiento del mismo, de tal forma que si ese desplazamiento va a provocar que coche y neumÃ¡tico entren en contacto, el coche se pare totalmente (dada la poca velocidad a la que se ha programado el coche en nuestro programa, y a nuestra incapacidad de momento para crear grandes explosiones usando z88dk en el Spectrum, vamos a suponer que al contactar con un neumÃ¡tico el coche solamente queda parado).</p>
+<p>A continuaciÃ³n mostrmos lo que serÃ­a el cÃ³digo <i>completo</i> de <b>juego.c</b>, con las partes nuevas en color rojo, como siempre:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -950,8 +950,8 @@ void main(void)
 </pre>
     </p></td></tr>
 </table>
-<p>Simplemente, antes de mover el coche, en la última parte del bucle principal, comprobamos si va a haber una colisión con alguno de los neumáticos. En el caso de que sea así ponemos la velocidad a cero, y en caso contrario realizamos el movimiento de forma normal. En todas las comprobaciones miramos a ver si en la posición del array circuito correspondiente a donde estaría mas o menos situado el coche (recordemos que en <i>circuito</i> cada posición se corresponde con 10x10 píxeles de la pantalla) hay un 1. </p>
-<p>Analicemos, por ejemplo, para el <i>case 0</i>, que se corresponde con el coche moviéndose hacia la derecha, y el resto de condiciones se podrá sacar de la misma forma (hemos de aclarar que en los cuatro últimos <i>case</i>, al tratarse de movimientos diagonales, la comprobación debe ser en los dos sentidos, eje <i>x</i> y eje <i>y</i>):</p>
+<p>Simplemente, antes de mover el coche, en la Ãºltima parte del bucle principal, comprobamos si va a haber una colisiÃ³n con alguno de los neumÃ¡ticos. En el caso de que sea asÃ­ ponemos la velocidad a cero, y en caso contrario realizamos el movimiento de forma normal. En todas las comprobaciones miramos a ver si en la posiciÃ³n del array circuito correspondiente a donde estarÃ­a mas o menos situado el coche (recordemos que en <i>circuito</i> cada posiciÃ³n se corresponde con 10x10 pÃ­xeles de la pantalla) hay un 1. </p>
+<p>Analicemos, por ejemplo, para el <i>case 0</i>, que se corresponde con el coche moviÃ©ndose hacia la derecha, y el resto de condiciones se podrÃ¡ sacar de la misma forma (hemos de aclarar que en los cuatro Ãºltimos <i>case</i>, al tratarse de movimientos diagonales, la comprobaciÃ³n debe ser en los dos sentidos, eje <i>x</i> y eje <i>y</i>):</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -961,15 +961,15 @@ if (circuito[y/10][(x + 9)/10] == 1 ||
 </pre>
     </p></td></tr>
 </table>
-<p>Básicamente la comprobación se compone de dos partes, la que está a la izquierda del OR (que en C, recordemos, se codifica con ||) y la que está a la derecha. Si en el array <i>circuito</i> decíamos que cada posición se correspondía con una región de 10x10 píxeles de la pantalla, cuando el coche está en las coordenadas <i>(y,x)</i>, tendríamos que comprobar en la posición <i>(y/10,x/10)</i> del array <i>circuito</i> (en C, las divisiones enteras se redondean hacia abajo). </p>
+<p>BÃ¡sicamente la comprobaciÃ³n se compone de dos partes, la que estÃ¡ a la izquierda del OR (que en C, recordemos, se codifica con ||) y la que estÃ¡ a la derecha. Si en el array <i>circuito</i> decÃ­amos que cada posiciÃ³n se correspondÃ­a con una regiÃ³n de 10x10 pÃ­xeles de la pantalla, cuando el coche estÃ¡ en las coordenadas <i>(y,x)</i>, tendrÃ­amos que comprobar en la posiciÃ³n <i>(y/10,x/10)</i> del array <i>circuito</i> (en C, las divisiones enteras se redondean hacia abajo). </p>
 
-<p>La anchura y la altura del coche es 10, por lo tanto, si queremos movernos hacia la derecha, aumentando el valor de <i>x</i> en 1, debemos comprobar si el pixel situado en el extremo derecho, es decir, el pixel situado en <i>x+11</i> , estará en contacto con algún pixel de algún neumático. Esto es equivalente a comprobar si en la posición <i>[y/10][(x+11)/10]</i> de <i>circuito</i> hay almacenado un 1. Si es así habrá colisión, por lo que no nos interesará avanzar, se cumplirá la condición, y <i>velocidad</i> pasará a valer 0. Lo que ocurre es que en nuestro caso, en lugar de <i>x+11</i> hemos usado <i>x+9</i> ya que, por ensayo y error hemos comprobado que con este valor el coche solo colisionara cuando este totalmente pegado al neumático (nuestros sprites son de 10x10, pero algunos de ellos no ocupan toda la anchura o toda la altura).</p>
+<p>La anchura y la altura del coche es 10, por lo tanto, si queremos movernos hacia la derecha, aumentando el valor de <i>x</i> en 1, debemos comprobar si el pixel situado en el extremo derecho, es decir, el pixel situado en <i>x+11</i> , estarÃ¡ en contacto con algÃºn pixel de algÃºn neumÃ¡tico. Esto es equivalente a comprobar si en la posiciÃ³n <i>[y/10][(x+11)/10]</i> de <i>circuito</i> hay almacenado un 1. Si es asÃ­ habrÃ¡ colisiÃ³n, por lo que no nos interesarÃ¡ avanzar, se cumplirÃ¡ la condiciÃ³n, y <i>velocidad</i> pasarÃ¡ a valer 0. Lo que ocurre es que en nuestro caso, en lugar de <i>x+11</i> hemos usado <i>x+9</i> ya que, por ensayo y error hemos comprobado que con este valor el coche solo colisionara cuando este totalmente pegado al neumÃ¡tico (nuestros sprites son de 10x10, pero algunos de ellos no ocupan toda la anchura o toda la altura).</p>
 
-<p>Esto estaría bien si el coche solo pudiera moverse en el eje <i>y</i> en múltiplos de 10, pero esto no siempre es así. Si el coche estuviera en <i>(12,12)</i> (valiendo 12 la coordenada <i>y</i>, por lo tanto), al movernos a la derecha, podríamos colisionar con un neumático almacenado en el array <i>circuito</i> en <i>(1,2)</i>, pero también con el que estuviera en <i>(2,2)</i> (el de abajo). Por lo tanto, la segunda condición comprueba si, en el caso de que la coordenada <i>y</i> no tenga un valor múltiplo de 10 (es decir, cuando el resultado de la operación resto, especifacada en C con % y que calcula el resto de la división entera, devuelva un valor distinto de cero), habría colisión con un neumático situado abajo a la derecha. Como en el caso de la <i>x</i>, en lugar de sumar 11 a <i>y</i>, añadimos un valor calculado a ojo que nos asegura que el coche quedaría pegadito en el caso de una colisión vertical.</p>
+<p>Esto estarÃ­a bien si el coche solo pudiera moverse en el eje <i>y</i> en mÃºltiplos de 10, pero esto no siempre es asÃ­. Si el coche estuviera en <i>(12,12)</i> (valiendo 12 la coordenada <i>y</i>, por lo tanto), al movernos a la derecha, podrÃ­amos colisionar con un neumÃ¡tico almacenado en el array <i>circuito</i> en <i>(1,2)</i>, pero tambiÃ©n con el que estuviera en <i>(2,2)</i> (el de abajo). Por lo tanto, la segunda condiciÃ³n comprueba si, en el caso de que la coordenada <i>y</i> no tenga un valor mÃºltiplo de 10 (es decir, cuando el resultado de la operaciÃ³n resto, especifacada en C con % y que calcula el resto de la divisiÃ³n entera, devuelva un valor distinto de cero), habrÃ­a colisiÃ³n con un neumÃ¡tico situado abajo a la derecha. Como en el caso de la <i>x</i>, en lugar de sumar 11 a <i>y</i>, aÃ±adimos un valor calculado a ojo que nos asegura que el coche quedarÃ­a pegadito en el caso de una colisiÃ³n vertical.</p>
 
-<p>Se podrían cumplir las dos condiciones a la vez, pero nos es indiferente, con que se cumpla una de las dos ya hay colisión.</p>
+<p>Se podrÃ­an cumplir las dos condiciones a la vez, pero nos es indiferente, con que se cumpla una de las dos ya hay colisiÃ³n.</p>
 <p>En el caso de movernos hacia la izquierda, en lugar de sumar a <i>x</i> restamos, y en el caso de movernos hacia arriba o hacia abajo, hacemos lo mismo pero cambiando lo que sumamos o restamos a <i>x</i> por lo que sumamos o restamos a <i>y</i> y viceversa. </p>
-<p>¿Y eso es todo? Bueno... hemos de ser sinceros y admitir que debido a la inclusión del código que detecta las colisiones, ha vuelto el parpadeo del coche al moverse, sobre todo por la parte superior de la pantalla. No le da tiempo al programa a sincronizar el movimiento con el refresco de la pantalla, debido a lo complejo de los cálculos. Esto, a grandes rasgos, se puede mejorar, aunque solo sea un poco, creando dos nuevas variables, <i>x_anterior</i> e <i>y_anterior</i>, y dejando el código de detección de colisiones de la siguiente manera (calculando las colisiones antes de esperar el refresco de la pantalla y borrar y dibujar el sprite):</p>
+<p>Â¿Y eso es todo? Bueno... hemos de ser sinceros y admitir que debido a la inclusiÃ³n del cÃ³digo que detecta las colisiones, ha vuelto el parpadeo del coche al moverse, sobre todo por la parte superior de la pantalla. No le da tiempo al programa a sincronizar el movimiento con el refresco de la pantalla, debido a lo complejo de los cÃ¡lculos. Esto, a grandes rasgos, se puede mejorar, aunque solo sea un poco, creando dos nuevas variables, <i>x_anterior</i> e <i>y_anterior</i>, y dejando el cÃ³digo de detecciÃ³n de colisiones de la siguiente manera (calculando las colisiones antes de esperar el refresco de la pantalla y borrar y dibujar el sprite):</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -1078,14 +1078,14 @@ if (circuito[y/10][(x + 9)/10] == 1 ||
 </pre>
     </p></td></tr>
 </table>
-<p><b>¿Y ahora qué?</b></p>
-<p>Bueno, parece que al final lo hemos conseguido: tenemos un coche moviéndose por la pista, que se choca con los bordes del circuito y puede acelerar y frenar... tomando este código como base, podríamos crear nuestro fantástico juego de coches, añadir nuevas pistas, contrincantes, etc. Sin embargo, hemos comprobado ciertas limitaciones en el código de dibujado de sprites que se suministra con z88dk, sobre todo en <i>juego.c</i>, donde se produce un ligero parpadeo del coche cuando este se mueve por la parte superior. En próximos artículos estudiaremos alguna librería que nos puede ayudar a superar el trance... pero mientras, ¡a conducir!.</p>
-<p>Me gustaría agradecer tanto a Horace como a NoP por los comentarios realizados y la ayuda que me han prestado durante la realización de este artículo.</p>
+<p><b>Â¿Y ahora quÃ©?</b></p>
+<p>Bueno, parece que al final lo hemos conseguido: tenemos un coche moviÃ©ndose por la pista, que se choca con los bordes del circuito y puede acelerar y frenar... tomando este cÃ³digo como base, podrÃ­amos crear nuestro fantÃ¡stico juego de coches, aÃ±adir nuevas pistas, contrincantes, etc. Sin embargo, hemos comprobado ciertas limitaciones en el cÃ³digo de dibujado de sprites que se suministra con z88dk, sobre todo en <i>juego.c</i>, donde se produce un ligero parpadeo del coche cuando este se mueve por la parte superior. En prÃ³ximos artÃ­culos estudiaremos alguna librerÃ­a que nos puede ayudar a superar el trance... pero mientras, Â¡a conducir!.</p>
+<p>Me gustarÃ­a agradecer tanto a Horace como a NoP por los comentarios realizados y la ayuda que me han prestado durante la realizaciÃ³n de este artÃ­culo.</p>
 
 <b>LINKS</b>
 </p>
 <ul>
-    <li><a href="src/z88dk_coches.zip" onClick="window.open(this.href); return false;">Código fuente de los ejemplos</a></li>
+    <li><a href="src/z88dk_coches.zip" onClick="window.open(this.href); return false;">CÃ³digo fuente de los ejemplos</a></li>
 </ul>
 </div>
         </td>
@@ -1114,19 +1114,19 @@ function RecargarPie(url)
     <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="al-descubierto.html">Al Descubierto</option>
         <option value="hardware.html">Hardware</option>
-        <option value="basic.html">Programación BASIC</option>
+        <option value="basic.html">ProgramaciÃ³n BASIC</option>
         <option value="el-aventurero.html">El Aventurero</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
 
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+        <option value="opinion.html">OpiniÃ³n</option>
     </select>
     <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
 </td>
@@ -1135,7 +1135,7 @@ function RecargarPie(url)
             </td>
 
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
     </form>
 </table>
                     </td>

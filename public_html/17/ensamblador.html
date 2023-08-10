@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,34 +31,34 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('z88dk.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
         <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
 
         <option value="el-aventurero.html">El Aventurero</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
         <option value="computone.html">Computone</option>
         <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html">Programación Z88DK</option>
+        <option value="basic.html">ProgramaciÃ³n BASIC</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
 
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
+        <option value="ensamblador.html" selected>ProgramaciÃ³n Ensamblador</option>
         <option value="128k-mode.html">128K MODE</option>
         <option value="input.html">INPUT</option>
-        <option value="tira-comica.html">Tira cómica</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="tira-comica.html">Tira cÃ³mica</option>
+        <option value="opinion.html">OpiniÃ³n</option>
     </select>
 
     <input type="button" onclick="RecargarCabecera('128k-mode.html');" name="siguiente" value=">" />
 </td>
-            <td align="center" class="texto">Número 17 - Marzo 2009</td>
+            <td align="center" class="texto">NÃºmero 17 - Marzo 2009</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
@@ -78,21 +78,21 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
     <tr>
         <td>
 <div align="justify">
-<p>En este último número de la revista hacemos una promoción 2x1. Llévese los dos últimos artículos del curso de ensamblador por el precio de uno.</p>
+<p>En este Ãºltimo nÃºmero de la revista hacemos una promociÃ³n 2x1. LlÃ©vese los dos Ãºltimos artÃ­culos del curso de ensamblador por el precio de uno.</p>
 <p align="center"><font size="5">Lenguaje Ensamblador del Z80 (IV)</font></p>
 
 <p><b>La pila y las llamadas a subrutinas</b></p>
-<p> Los 2 temas que vamos a tratar hoy, la pila por un lado y las llamadas a subrutinas por otro, están íntimamente relacionados. Como veremos, la pila del Spectrum es aquello que permite la utilización de rutinas a las que pasaremos parámetros, y que volverán al punto donde fueron llamadas tras su ejecución.</p>
+<p> Los 2 temas que vamos a tratar hoy, la pila por un lado y las llamadas a subrutinas por otro, estÃ¡n Ã­ntimamente relacionados. Como veremos, la pila del Spectrum es aquello que permite la utilizaciÃ³n de rutinas a las que pasaremos parÃ¡metros, y que volverÃ¡n al punto donde fueron llamadas tras su ejecuciÃ³n.</p>
 <p><strong>La pila del Spectrum</strong></p>
-<p>Hoy vamos a tratar una de las cosas más importantes del microprocesador Z80: <b>la pila</b> o <b>Stack</b> (en inglés).</p>
-<p>La pila, teóricamente, es <em>una porción de memoria donde se pueden almacenar valores de 16 bits</em>.</p>
+<p>Hoy vamos a tratar una de las cosas mÃ¡s importantes del microprocesador Z80: <b>la pila</b> o <b>Stack</b> (en inglÃ©s).</p>
+<p>La pila, teÃ³ricamente, es <em>una porciÃ³n de memoria donde se pueden almacenar valores de 16 bits</em>.</p>
 
-<p>Su nombre viene del hecho que los datos se almacenan unos encima de otros, como en una pila de platos. Cuando almacenamos un nuevo plato en una pila, lo dejamos encima del todo de la misma, sobre el plato anterior. Cuando queremos coger un plato, cogemos el plato más alto, el que está en la parte más alta de la pila.</p>
-<p>Las pilas son una estructura de datos conocida como ”estructura LIFO”: ”Last In, First Out”: el último que entró es el primero que sale. En nuestro ejemplo de los platos, efectivamente cuando retiramos un plato (el primero que sale) extraemos el que está arriba del todo (el último que habíamos dejado). En una pila de ordenador (como en nuestra pila de datos) sólo podemos trabajar con el dato (o plato) que está arriba del todo de la pila: no podemos extraer uno de los platos intermedios. Sólo podemos apilar un plato nuevo y desapilar el plato apilado arriba del todo de la pila.</p>
+<p>Su nombre viene del hecho que los datos se almacenan unos encima de otros, como en una pila de platos. Cuando almacenamos un nuevo plato en una pila, lo dejamos encima del todo de la misma, sobre el plato anterior. Cuando queremos coger un plato, cogemos el plato mÃ¡s alto, el que estÃ¡ en la parte mÃ¡s alta de la pila.</p>
+<p>Las pilas son una estructura de datos conocida como Â”estructura LIFOÂ”: Â”Last In, First OutÂ”: el Ãºltimo que entrÃ³ es el primero que sale. En nuestro ejemplo de los platos, efectivamente cuando retiramos un plato (el primero que sale) extraemos el que estÃ¡ arriba del todo (el Ãºltimo que habÃ­amos dejado). En una pila de ordenador (como en nuestra pila de datos) sÃ³lo podemos trabajar con el dato (o plato) que estÃ¡ arriba del todo de la pila: no podemos extraer uno de los platos intermedios. SÃ³lo podemos apilar un plato nuevo y desapilar el plato apilado arriba del todo de la pila.</p>
 <p>
-<p>La pila del Spectrum no es de platos sino de valores numéricos de 16 bits. Introducimos valores y sacamos valores mediante 2 instrucciones concretas: <b>PUSH &lt;valor&gt;</b> y <b>POP &lt;valor&gt;</b>, donde normalmente &lt;valor&gt; será un registro (metemos en la pila el valor que contiene un registro de 16 bits, o bien leemos de la pila un valor y lo asignamos a un registro de 16 bits).</p>
+<p>La pila del Spectrum no es de platos sino de valores numÃ©ricos de 16 bits. Introducimos valores y sacamos valores mediante 2 instrucciones concretas: <b>PUSH &lt;valor&gt;</b> y <b>POP &lt;valor&gt;</b>, donde normalmente &lt;valor&gt; serÃ¡ un registro (metemos en la pila el valor que contiene un registro de 16 bits, o bien leemos de la pila un valor y lo asignamos a un registro de 16 bits).</p>
 
-<p>Por ejemplo, podemos guardar el valor que contiene un registro en la pila si tenemos que hacer operaciones con ese registro para así luego recuperarlo tras realizar la tarea que tengamos que realizar:</p>
+<p>Por ejemplo, podemos guardar el valor que contiene un registro en la pila si tenemos que hacer operaciones con ese registro para asÃ­ luego recuperarlo tras realizar la tarea que tengamos que realizar:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -103,7 +103,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
  (...)           ; Operamos con BC
 
  LD HL, 0
- ADD HL, BC      ; y ya podemos guardar el resultado de la operación
+ ADD HL, BC      ; y ya podemos guardar el resultado de la operaciÃ³n
                  ; (recordemos que no existe "LD HL, BC", de modo que
                  ; lo almacenamos como HL = 0+BC
 
@@ -112,11 +112,11 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 </pre>
     </p></td></tr>
 </table>
-<p>La instrucción “PUSH BC” lo que ha hecho es introducir en memoria, en lo alto de la pila, el valor 1000, que recuperamos posteriormente con el “POP BC”.</p>
+<p>La instrucciÃ³n Â“PUSH BCÂ” lo que ha hecho es introducir en memoria, en lo alto de la pila, el valor 1000, que recuperamos posteriormente con el Â“POP BCÂ”.</p>
 <p>La realidad es que <em>el Spectrum no tiene una zona de memoria especial o aislada de la RAM dedicada a la pila. En su lugar se utiliza la misma RAM del Spectrum (0-65535)</em>.</p>
 
-<p>El Z80 tiene un registro conocido como <b>SP (Stack Pointer)</b>, o <b>puntero de pila</b>, que es un registro de 16 bits que contiene una dirección de memoria. Esa dirección de memoria es ”<em>la cabeza de la pila</em>”: apunta al próximo lugar donde almacenaremos un dato (al hueco donde guardaremos el próximo plato).</p>
-<p>La peculiaridad de la pila del Spectrum es que <em>crece hacia abajo</em>, en lugar de hacia arriba. Veamos un ejemplo práctico:</p>
+<p>El Z80 tiene un registro conocido como <b>SP (Stack Pointer)</b>, o <b>puntero de pila</b>, que es un registro de 16 bits que contiene una direcciÃ³n de memoria. Esa direcciÃ³n de memoria es Â”<em>la cabeza de la pila</em>Â”: apunta al prÃ³ximo lugar donde almacenaremos un dato (al hueco donde guardaremos el prÃ³ximo plato).</p>
+<p>La peculiaridad de la pila del Spectrum es que <em>crece hacia abajo</em>, en lugar de hacia arriba. Veamos un ejemplo prÃ¡ctico:</p>
 
 
 <table border="0" cellspacing="0" cellpadding="2" width="465">
@@ -131,7 +131,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 </table>
 
 
-<p>Supongamos que SP (puntero de pila) apunta a 65535 (la última posición de la memoria). Hagamos una serie de PUSHes y POPs de registros de 16 bits. Sea el siguiente programa:</p>
+<p>Supongamos que SP (puntero de pila) apunta a 65535 (la Ãºltima posiciÃ³n de la memoria). Hagamos una serie de PUSHes y POPs de registros de 16 bits. Sea el siguiente programa:</p>
 
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -167,7 +167,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
     </p></td></tr>
 </table>
 
-<p>Con lo que el contenido de la memoria sería:</p>
+<p>Con lo que el contenido de la memoria serÃ­a:</p>
 
 <table class="flags">
 <tr><th></th><th>Celdilla</th><th>Contenido</th></tr>
@@ -176,7 +176,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
 
 </table>
 
-<p>Si a continuación hacemos otro PUSH:</p>
+<p>Si a continuaciÃ³n hacemos otro PUSH:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -197,7 +197,7 @@ table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
     </p></td></tr>
 </table>
 
-<p>Con lo que el contenido de las celdillas de memoria sería:</p>
+<p>Con lo que el contenido de las celdillas de memoria serÃ­a:</p>
 
 <table class="flags">
 <tr><th></th><th>Celdilla</th><th>Contenido</th></tr>
@@ -245,7 +245,7 @@ mientras que <em>POP recupera valores</em>, haciendo crecer (en 2 bytes, 16 bits
 el valor de SP.</p>
 
 <p><strong>PUSH y POP</strong></p>
-<p>Así pues, podemos hacer <b>PUSH</b> y <b>POP</b> de los siguientes registros:</p>
+<p>AsÃ­ pues, podemos hacer <b>PUSH</b> y <b>POP</b> de los siguientes registros:</p>
 
 <ul>
   <li>PUSH: AF, BC, DE, HL, IX, IY</li>
@@ -267,12 +267,12 @@ el valor de SP.</p>
     </p></td></tr>
 </table>
 
-<p>Nótese cómo la pila se decrementa ANTES de poner los datos en ella, y se incrementa DESPUES de sacar datos de la misma. Esto mantiene siempre SP apuntando al TOS (<em>Top Of Stack</em>).</p>
+<p>NÃ³tese cÃ³mo la pila se decrementa ANTES de poner los datos en ella, y se incrementa DESPUES de sacar datos de la misma. Esto mantiene siempre SP apuntando al TOS (<em>Top Of Stack</em>).</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
                         Flags
-   Instrucción       |S Z H P N C|
+   InstrucciÃ³n       |S Z H P N C|
  ----------------------------------
  POP xx              |- - - - - -|
  PUSH xx             |- - - - - -|
@@ -281,10 +281,10 @@ el valor de SP.</p>
 
 </table>
 
-<p>Nótese que también podemos apilar y desapilar AF. De hecho, es una forma de manipular los bits del registro F (hacer PUSH BC con un valor determinado, por ejemplo, y hacer un POP AF).</p>
+<p>NÃ³tese que tambiÃ©n podemos apilar y desapilar AF. De hecho, es una forma de manipular los bits del registro F (hacer PUSH BC con un valor determinado, por ejemplo, y hacer un POP AF).</p>
 
 <p><strong>Utilidad de la pila del Spectrum</strong></p>
-<p>La pila resulta muy útil para gran cantidad de tareas en programas en ensamblador. Veamos algunos ejemplos:</p>
+<p>La pila resulta muy Ãºtil para gran cantidad de tareas en programas en ensamblador. Veamos algunos ejemplos:</p>
 <ul>
   <li>Intercambiar valores de registros mediante PUSH y POP. Por ejemplo, para intercambiar el valor de BC y de DE:</li>
 </ul>
@@ -304,15 +304,15 @@ el valor de SP.</p>
 
 <ul>
   <li>POP AF es la principal forma de manipular el registro F directamente (haciendo PUSH de otro registro y POP de AF).</li>
-  <li>Almacenaje de datos mientras ejecutamos porciones de código: Supongamos que tenemos un registro cuyo valor queremos mantener, pero que tenemos que ejecutar una porción de código que lo modifica. Gracias a la pila podemos hacer lo siguiente:</li>
+  <li>Almacenaje de datos mientras ejecutamos porciones de cÃ³digo: Supongamos que tenemos un registro cuyo valor queremos mantener, pero que tenemos que ejecutar una porciÃ³n de cÃ³digo que lo modifica. Gracias a la pila podemos hacer lo siguiente:</li>
 </ul>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
     <tr><td><p class="codigo">
 <pre>
  PUSH BC    ; Guardamos el valor de BC
- (código)   ; Hacemos operaciones
- POP BC     ; Recuperamos el valor que teníamos en BC
+ (cÃ³digo)   ; Hacemos operaciones
+ POP BC     ; Recuperamos el valor que tenÃ­amos en BC
 </pre>
     </p></td></tr>
 </table>
@@ -334,7 +334,7 @@ bucle:
     </p></td></tr>
 </table>
 
-<p>En este sentido, también podremos anidar 2 o más bucles que usen el registro B o BC con PUSH y POPs entre ellos. Supongamos un bucle BASIC del tipo:</p>
+<p>En este sentido, tambiÃ©n podremos anidar 2 o mÃ¡s bucles que usen el registro B o BC con PUSH y POPs entre ellos. Supongamos un bucle BASIC del tipo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -347,7 +347,7 @@ bucle:
     </p></td></tr>
 </table>
 
-<p>En ensamblador podríamos hacer:</p>
+<p>En ensamblador podrÃ­amos hacer:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -357,7 +357,7 @@ bucle_externo:
     PUSH BC                 ; Nos guardamos el valor de BC
     LD B, 100               ; Iteraciones del bucle interno
 bucle_interno:
-    (... código ...)
+    (... cÃ³digo ...)
     DJNZ bucle_interno      ; FOR J=0 TO 100
     POP BC                  ; Recuperamos el valor de B
 
@@ -366,7 +366,7 @@ bucle_interno:
     </p></td></tr>
 </table>
 
-<p>Hay que tener en cuenta que PUSH y POP implican escribir en memoria (en la dirección apuntada por SP), por que siempre serán más lentas que guardarse el valor actual de B en otro registro:</p>
+<p>Hay que tener en cuenta que PUSH y POP implican escribir en memoria (en la direcciÃ³n apuntada por SP), por que siempre serÃ¡n mÃ¡s lentas que guardarse el valor actual de B en otro registro:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
     <tr><td><p class="codigo">
@@ -378,7 +378,7 @@ bucle_externo:
 
     LD B, 100               ; Iteraciones del bucle interno
 bucle_interno:
-    (... código ...)        ; En este codigo no podemos usar D
+    (... cÃ³digo ...)        ; En este codigo no podemos usar D
     DJNZ bucle_interno      ; FOR J=0 TO 100
 
     LD B, D                 ; Recuperamos el valor de B
@@ -388,14 +388,14 @@ bucle_interno:
     </p></td></tr>
 </table>
 
-<p>No obstante, en múltiples casos nos quedaremos sin registros libres donde guardar datos, por lo que la pila es una gran opción. No hay que obsesionarse con no usar la pila porque implique escribir en memoria. A menos que estemos hablando de una rutina muy muy crítica, que se ejecute muchas veces por cada fotograma de nuestro juego, PUSH y POP serán las mejores opciones para preservar valores.</p>
+<p>No obstante, en mÃºltiples casos nos quedaremos sin registros libres donde guardar datos, por lo que la pila es una gran opciÃ³n. No hay que obsesionarse con no usar la pila porque implique escribir en memoria. A menos que estemos hablando de una rutina muy muy crÃ­tica, que se ejecute muchas veces por cada fotograma de nuestro juego, PUSH y POP serÃ¡n las mejores opciones para preservar valores.</p>
 <ul>
-  <li>Almacenaje de datos de entrada y salida en subrutinas: Podemos pasar parámetros a nuestras rutinas apilándolos en el stack, de forma que nada más entrar en la rutina leamos de la pila esos parámetros.</li>
-  <li>Extendiendo un poco más el punto anterior, cuando realicemos funciones en ensamblador embebidas dentro de otros lenguajes (por ejemplo, dentro de programas en C con Z88DK), podremos recoger dentro de nuestro bloque en ensamblador los parámetros pasados con llamadas de funciones C.</li>
+  <li>Almacenaje de datos de entrada y salida en subrutinas: Podemos pasar parÃ¡metros a nuestras rutinas apilÃ¡ndolos en el stack, de forma que nada mÃ¡s entrar en la rutina leamos de la pila esos parÃ¡metros.</li>
+  <li>Extendiendo un poco mÃ¡s el punto anterior, cuando realicemos funciones en ensamblador embebidas dentro de otros lenguajes (por ejemplo, dentro de programas en C con Z88DK), podremos recoger dentro de nuestro bloque en ensamblador los parÃ¡metros pasados con llamadas de funciones C.</li>
 
-  <li>Como veremos en el próximo apartado, la pila es la clave de las subrutinas (CALL/RET) en el Spectrum (equivalente al GOSUB/RETURN de BASIC).</li>
+  <li>Como veremos en el prÃ³ximo apartado, la pila es la clave de las subrutinas (CALL/RET) en el Spectrum (equivalente al GOSUB/RETURN de BASIC).</li>
 </ul>
-<p>Recordad también que tenéis instrucciones de intercambio (EX) que permiten manipular la pila. Hablamos de:</p>
+<p>Recordad tambiÃ©n que tenÃ©is instrucciones de intercambio (EX) que permiten manipular la pila. Hablamos de:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -407,42 +407,42 @@ bucle_interno:
 </table>
 
 <p><strong>Los peligros de la pila</strong></p>
-<p>Pero como todo arma, las pilas también tienen un doble filo. Mal utilizada puede dar lugar a enormes desastres en nuestros programas. Veamos algunos de los más habituales:</p>
+<p>Pero como todo arma, las pilas tambiÃ©n tienen un doble filo. Mal utilizada puede dar lugar a enormes desastres en nuestros programas. Veamos algunos de los mÃ¡s habituales:</p>
 <ul>
-  <li>Dado que la pila decrece en memoria, tenemos que tener cuidado con el valor de SP y la posición más alta de memoria donde hayamos almacenado datos o rutinas. Si ponemos un gráfico o una rutina cerca del valor inicial de SP, y realizamos muchas operaciones de PUSH, podemos machacar nuestros datos con los valores de los registros que estamos apilando.</li>
-  <li>Hacer más PUSH que POP o más POP que PUSH. Recordemos que la pila tiene que ser consistente. Si hacemos un push, debemos recordar hacer el pop correspondiente (a menos que haya una razón para ello), y viceversa. Como veremos a continuación, la pila es utilizada tanto para pasar parámetros a funciones como para volver de ellas, si introducimos un valor en ella con PUSH dentro de una función y no lo sacamos antes de hacer el RET, nuestro programa continuará su ejecución el algún lugar de la memoria que no era al que debía volver. Es más, si nuestro programa debe volver a BASIC correctamente tras su ejecución, entonces es obligatorio que hagamos tantos PUSH como POP para que el punto final de retorno del programa al BASIC esté en la siguiente posición de la pila cuando nuestro programa acabe.</li>
+  <li>Dado que la pila decrece en memoria, tenemos que tener cuidado con el valor de SP y la posiciÃ³n mÃ¡s alta de memoria donde hayamos almacenado datos o rutinas. Si ponemos un grÃ¡fico o una rutina cerca del valor inicial de SP, y realizamos muchas operaciones de PUSH, podemos machacar nuestros datos con los valores de los registros que estamos apilando.</li>
+  <li>Hacer mÃ¡s PUSH que POP o mÃ¡s POP que PUSH. Recordemos que la pila tiene que ser consistente. Si hacemos un push, debemos recordar hacer el pop correspondiente (a menos que haya una razÃ³n para ello), y viceversa. Como veremos a continuaciÃ³n, la pila es utilizada tanto para pasar parÃ¡metros a funciones como para volver de ellas, si introducimos un valor en ella con PUSH dentro de una funciÃ³n y no lo sacamos antes de hacer el RET, nuestro programa continuarÃ¡ su ejecuciÃ³n el algÃºn lugar de la memoria que no era al que debÃ­a volver. Es mÃ¡s, si nuestro programa debe volver a BASIC correctamente tras su ejecuciÃ³n, entonces es obligatorio que hagamos tantos PUSH como POP para que el punto final de retorno del programa al BASIC estÃ© en la siguiente posiciÃ³n de la pila cuando nuestro programa acabe.</li>
   <li>Ampliando la regla anterior, hay que tener cuidado con los bucles a la hora de hacer PUSH y POP.</li>
-  <li>Finalmente, no hay que asumir que SP tiene un valor correcto para nosotros. Tal vez tenemos planeado usar una zona de la memoria para guardar datos o subrutinas y el uso de PUSH y POP pueda machacarlo. Si sabemos dónde no puede hacer daño SP y sus escrituras en memoria, basta con inicializar la pila al principio de nuestro programa a una zona de memoria libre (por ejemplo, “LD SP, 23999”, o cualquier otra dirección que sepamos que no vamos a usar). Esto no es obligatorio y muchas veces el valor por defecto de SP será válido, siempre que no usemos zonas de la memoria que creemos libres como “almacenes temporales”. Si usamos “variables” creadas en tiempo de ensamblado (definidas como DB o DW en el ensamblador) no deberíamos tener problemas, al menos con programas pequeños.</li>
+  <li>Finalmente, no hay que asumir que SP tiene un valor correcto para nosotros. Tal vez tenemos planeado usar una zona de la memoria para guardar datos o subrutinas y el uso de PUSH y POP pueda machacarlo. Si sabemos dÃ³nde no puede hacer daÃ±o SP y sus escrituras en memoria, basta con inicializar la pila al principio de nuestro programa a una zona de memoria libre (por ejemplo, Â“LD SP, 23999Â”, o cualquier otra direcciÃ³n que sepamos que no vamos a usar). Esto no es obligatorio y muchas veces el valor por defecto de SP serÃ¡ vÃ¡lido, siempre que no usemos zonas de la memoria que creemos libres como Â“almacenes temporalesÂ”. Si usamos Â“variablesÂ” creadas en tiempo de ensamblado (definidas como DB o DW en el ensamblador) no deberÃ­amos tener problemas, al menos con programas pequeÃ±os.</li>
 
 </ul>
-<p>Veamos algunos ejemplos de “errores” con la pila. Empecemos con el típico PUSH del cual se nos olvida hacer POP:</p>
+<p>Veamos algunos ejemplos de Â“erroresÂ” con la pila. Empecemos con el tÃ­pico PUSH del cual se nos olvida hacer POP:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-  ; Este programa se colgará (probablemente, depende de BC)
-  ; pero en cualquier caso, no seguirá su ejecución normal.
+  ; Este programa se colgarÃ¡ (probablemente, depende de BC)
+  ; pero en cualquier caso, no seguirÃ¡ su ejecuciÃ³n normal.
   PUSH BC
   PUSH DE
 
-  (código)
+  (cÃ³digo)
 
   POP DE
-  RET          ; En lugar de volver a la dirección de memoria
-               ; a la que teníamos que volver, volveremos a
-               ; la dirección apuntada por el valor de BC, que
+  RET          ; En lugar de volver a la direcciÃ³n de memoria
+               ; a la que tenÃ­amos que volver, volveremos a
+               ; la direcciÃ³n apuntada por el valor de BC, que
                ; no hemos recogido de la pila.
 </pre>
     </p></td></tr>
 </table>
 
-<p>También hay que tener cuidado con los bucles:</p>
+<p>TambiÃ©n hay que tener cuidado con los bucles:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
     <tr><td><p class="codigo">
 <pre>
 bucle:
     PUSH BC         ; Nos queremos guardar BC
-    (código que usa B)
+    (cÃ³digo que usa B)
 
     JR flag, bucle
     POP BC
@@ -450,13 +450,13 @@ bucle:
     </p></td></tr>
 </table>
 
-<p>En ese código hacemos múltiples PUSHes pero un sólo POP. Probablemente, en realidad, queremos hacer lo siguiente:</p>
+<p>En ese cÃ³digo hacemos mÃºltiples PUSHes pero un sÃ³lo POP. Probablemente, en realidad, queremos hacer lo siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
     PUSH BC         ; Nos queremos guardar BC
 bucle:
-    (código)
+    (cÃ³digo)
 
     JR flag, bucle
     POP BC
@@ -465,13 +465,13 @@ bucle:
     </p></td></tr>
 </table>
 
-<p>Y una curiosidad al respecto de la pila y la sentencia <b>CLEAR</b> de BASIC: en el fondo, lo que realiza esta función es cambiar el valor de la variable del sistema RAMTOP, lo que implica cambiar el valor de SP. Así, con <b>CLEAR XXXX</b>, <em>ponemos la pila colgando de la dirección de memoria XXXX</em>, asegurándonos de que BASIC no pueda hacer crecer la pila de forma que machaque código máquina que hayamos cargado nosotros en memoria. Si, por ejemplo, vamos a cargar todo nuestro código a partir de 50000, en nuestro cargador BASIC haremos un CLEAR 49999, de forma que BASIC no podrá tocar ninguna dirección de memoria por encima de este valor.</p>
+<p>Y una curiosidad al respecto de la pila y la sentencia <b>CLEAR</b> de BASIC: en el fondo, lo que realiza esta funciÃ³n es cambiar el valor de la variable del sistema RAMTOP, lo que implica cambiar el valor de SP. AsÃ­, con <b>CLEAR XXXX</b>, <em>ponemos la pila colgando de la direcciÃ³n de memoria XXXX</em>, asegurÃ¡ndonos de que BASIC no pueda hacer crecer la pila de forma que machaque cÃ³digo mÃ¡quina que hayamos cargado nosotros en memoria. Si, por ejemplo, vamos a cargar todo nuestro cÃ³digo a partir de 50000, en nuestro cargador BASIC haremos un CLEAR 49999, de forma que BASIC no podrÃ¡ tocar ninguna direcciÃ³n de memoria por encima de este valor.</p>
 
 <p><strong>Rutinas: CALL y RET</strong></p>
 
-<p>Ya de por sí el lenguaje ensamblador es un lenguaje de listados “largos” y enrevesados, y donde teníamos 10 líneas en BASIC podemos tener 100 ó 1000 en ensamblador.</p>
-<p>Lo normal para hacer el programa más legible es <em>utilizar bloques de código que hagan unas funciones concretas</em> y a los cuales podamos llamar a lo largo de nuestro programa. Esos bloques de código son las <b>funciones o subrutinas</b>.</p>
-<p>Las subrutinas son bloques de código máquina a las cuales saltamos, hacen su tarea asignada, y devuelven el control al punto en que fueron llamadas. A veces, esperan recibir los registros con una serie de valores y devuelven registros con los valores resultantes.</p>
+<p>Ya de por sÃ­ el lenguaje ensamblador es un lenguaje de listados Â“largosÂ” y enrevesados, y donde tenÃ­amos 10 lÃ­neas en BASIC podemos tener 100 Ã³ 1000 en ensamblador.</p>
+<p>Lo normal para hacer el programa mÃ¡s legible es <em>utilizar bloques de cÃ³digo que hagan unas funciones concretas</em> y a los cuales podamos llamar a lo largo de nuestro programa. Esos bloques de cÃ³digo son las <b>funciones o subrutinas</b>.</p>
+<p>Las subrutinas son bloques de cÃ³digo mÃ¡quina a las cuales saltamos, hacen su tarea asignada, y devuelven el control al punto en que fueron llamadas. A veces, esperan recibir los registros con una serie de valores y devuelven registros con los valores resultantes.</p>
 <p>Por ejemplo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -490,8 +490,8 @@ SUMA_A_10:
     </p></td></tr>
 </table>
 
-<p>Nuestra función/subrutina de ejemplo espera obtener en A un valor, y devuelve el resultado de su ejecución en B. Antes de llamar a esta rutina, nosotros deberemos poner en A el valor sobre el que actuar, y posteriormente interpretar el resultado (sabiendo que lo tenemos en B).</p>
-<p>Pero, ¿cómo llamamos a las subrutinas y volvemos de ellas? Podéis pensar en nuestro ejemplo anterior y la orden “<b>JP</b>”:</p>
+<p>Nuestra funciÃ³n/subrutina de ejemplo espera obtener en A un valor, y devuelve el resultado de su ejecuciÃ³n en B. Antes de llamar a esta rutina, nosotros deberemos poner en A el valor sobre el que actuar, y posteriormente interpretar el resultado (sabiendo que lo tenemos en B).</p>
+<p>Pero, Â¿cÃ³mo llamamos a las subrutinas y volvemos de ellas? PodÃ©is pensar en nuestro ejemplo anterior y la orden Â“<b>JP</b>Â”:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -509,7 +509,7 @@ SUMA_A_10:
     </p></td></tr>
 </table>
 
-<p>En este caso, cargaríamos A con el valor 35, saltaríamos a la subrutina, sumaríamos 10 a A (pasando a valer 45), haríamos B = 45, y volveríamos al lugar posterior al punto de llamada. Pero … ¿qué pasaría si quisieramos volver a llamar a la subrutina desde otro punto de nuestro programa? Que sería inviable, porque nuestra subrutina acaba con un “JP volver1” que no devolvería la ejecución al punto desde donde la hemos llamado, sino a “volver1”.</p>
+<p>En este caso, cargarÃ­amos A con el valor 35, saltarÃ­amos a la subrutina, sumarÃ­amos 10 a A (pasando a valer 45), harÃ­amos B = 45, y volverÃ­amos al lugar posterior al punto de llamada. Pero Â… Â¿quÃ© pasarÃ­a si quisieramos volver a llamar a la subrutina desde otro punto de nuestro programa? Que serÃ­a inviable, porque nuestra subrutina acaba con un Â“JP volver1Â” que no devolverÃ­a la ejecuciÃ³n al punto desde donde la hemos llamado, sino a Â“volver1Â”.</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -534,10 +534,10 @@ SUMA_A_10:
 <p>Para evitar ese enorme problema es para lo que se usa <b>CALL</b> y <b>RET</b>.</p>
 
 <p><strong>Uso de CALL y RET</strong></p>
-<p><b>CALL</b> es, en esencia, similar a JP, salvo porque antes de realizar el salto, introduce en la pila (PUSH) el valor del registro PC (Program Counter, o contador de programa), el cual una vez leído y decodificado el CALL apunta a la siguiente instrucción tras el mismo.</p>
-<p>¿Y para qué sirve eso? Para que lo aprovechemos dentro de nuestra subrutina con <b>RET</b>. RET lee de la pila la dirección que introdujo CALL y salta a ella. Así, cuando acaba nuestra función, el RET devuelve la ejecución a la instrucción siguiente al CALL que hizo la llamada.</p>
+<p><b>CALL</b> es, en esencia, similar a JP, salvo porque antes de realizar el salto, introduce en la pila (PUSH) el valor del registro PC (Program Counter, o contador de programa), el cual una vez leÃ­do y decodificado el CALL apunta a la siguiente instrucciÃ³n tras el mismo.</p>
+<p>Â¿Y para quÃ© sirve eso? Para que lo aprovechemos dentro de nuestra subrutina con <b>RET</b>. RET lee de la pila la direcciÃ³n que introdujo CALL y salta a ella. AsÃ­, cuando acaba nuestra funciÃ³n, el RET devuelve la ejecuciÃ³n a la instrucciÃ³n siguiente al CALL que hizo la llamada.</p>
 
-<p>Son, por tanto, el equivalente ensamblador de GO SUB y RETURN en BASIC (o más bien se debería decir que GO SUB y RETURN son la implantación en BASIC de estas instrucciones del microprocesador).</p>
+<p>Son, por tanto, el equivalente ensamblador de GO SUB y RETURN en BASIC (o mÃ¡s bien se deberÃ­a decir que GO SUB y RETURN son la implantaciÃ³n en BASIC de estas instrucciones del microprocesador).</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -549,7 +549,7 @@ SUMA_A_10:
  RET equivale a:
     POP PC
 
-<p>Veamos la aplicación de CALL y RET con nuestro ejemplo anterior:</p>
+<p>Veamos la aplicaciÃ³n de CALL y RET con nuestro ejemplo anterior:</p>
 
     LD A, 35
     CALL SUMA_A_10
@@ -570,36 +570,36 @@ SUMA_A_10:
 
 </table>
 
-<p>En esta ocasión, cuando ejecutamos el primer CALL, se introduce en la pila el valor de PC, que se corresponde exáctamente con la dirección de memoria donde estaría ensamblada la siguiente instrucción (LD A, 50). El CALL cambia el valor de PC al de la dirección de “SUMA_A_10”, y se continúa la ejecución dentro de la subrutina.</p>
-<p>Al acabar la subrutina encontramos el RET, quien extrae de la pila el valor de PC anteriormente introducido, con lo que en el siguiente ciclo de instrucción del microprocesador, el Z80 leerá, decodificará y ejecutará la instrucción “LD A, 50”, siguiendo el flujo del programa linealmente desde ahí. Con la segunda llamada a CALL ocurriría lo mismo, pero esta vez lo que se introduce en la pila es la dirección de memoria en la que está ensamblada la instrucción “LD C, B”. Esto asegura el retorno de nuestra subrutina al punto adecuado.</p>
-<p>Al hablar de la pila os contamos lo importante que era mantener la misma cantidad de PUSH que de POPs en nuestro código. Ahora entenderéis por qué: si dentro de una subrutina hacéis un PUSH que no elimináis después con un POP, cuando lleguéis al RET éste obtendrá de la pila un valor que no será el introducido por CALL, y saltará allí. Por ejemplo:</p>
+<p>En esta ocasiÃ³n, cuando ejecutamos el primer CALL, se introduce en la pila el valor de PC, que se corresponde exÃ¡ctamente con la direcciÃ³n de memoria donde estarÃ­a ensamblada la siguiente instrucciÃ³n (LD A, 50). El CALL cambia el valor de PC al de la direcciÃ³n de Â“SUMA_A_10Â”, y se continÃºa la ejecuciÃ³n dentro de la subrutina.</p>
+<p>Al acabar la subrutina encontramos el RET, quien extrae de la pila el valor de PC anteriormente introducido, con lo que en el siguiente ciclo de instrucciÃ³n del microprocesador, el Z80 leerÃ¡, decodificarÃ¡ y ejecutarÃ¡ la instrucciÃ³n Â“LD A, 50Â”, siguiendo el flujo del programa linealmente desde ahÃ­. Con la segunda llamada a CALL ocurrirÃ­a lo mismo, pero esta vez lo que se introduce en la pila es la direcciÃ³n de memoria en la que estÃ¡ ensamblada la instrucciÃ³n Â“LD C, BÂ”. Esto asegura el retorno de nuestra subrutina al punto adecuado.</p>
+<p>Al hablar de la pila os contamos lo importante que era mantener la misma cantidad de PUSH que de POPs en nuestro cÃ³digo. Ahora entenderÃ©is por quÃ©: si dentro de una subrutina hacÃ©is un PUSH que no eliminÃ¡is despuÃ©s con un POP, cuando lleguÃ©is al RET Ã©ste obtendrÃ¡ de la pila un valor que no serÃ¡ el introducido por CALL, y saltarÃ¡ allÃ­. Por ejemplo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
   CALL SUMA_A_10
-  LD C, B              ; Esta dirección se introduce en la pila con CALL
+  LD C, B              ; Esta direcciÃ³n se introduce en la pila con CALL
 
 SUMA_A_10:
   LD DE, $0000
   PUSH DE
   ADD A, 10
   LD B, a
-  RET                  ; RET no sacará de la pila lo introducido por CALL
+  RET                  ; RET no sacarÃ¡ de la pila lo introducido por CALL
                        ; sino "0000", el valor que hemos pulsado nosotros.
 </pre>
     </p></td></tr>
 
 </table>
 
-<p>Aquí RET sacará de la pila 0000h, en lugar de la dirección que introdujo CALL, y saltará al inicio del a ROM, produciendo un bonito reset.</p>
+<p>AquÃ­ RET sacarÃ¡ de la pila 0000h, en lugar de la direcciÃ³n que introdujo CALL, y saltarÃ¡ al inicio del a ROM, produciendo un bonito reset.</p>
 <p>Ni call ni RET afectan a la tabla de flags del registro F.</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
                         Flags
-   Instrucción       |S Z H P N C|
+   InstrucciÃ³n       |S Z H P N C|
  ----------------------------------
  CALL NN             |- - - - - -|
  RET                 |- - - - - -|
@@ -608,14 +608,14 @@ SUMA_A_10:
 </table>
 
 <p>Saltos y retornos condicionales</p>
-<p>Una de las peculiaridades de CALL y RET es que tienen instrucciones condicionales con respecto al estado de los flags, igual que “JP cc” o “JR cc”, de forma que podemos condicionar el SALTO (CALL) o el retorno (RET) al estado de un determinado flag.</p>
+<p>Una de las peculiaridades de CALL y RET es que tienen instrucciones condicionales con respecto al estado de los flags, igual que Â“JP ccÂ” o Â“JR ccÂ”, de forma que podemos condicionar el SALTO (CALL) o el retorno (RET) al estado de un determinado flag.</p>
 <p>Para eso, utilizamos las siguientes instrucciones:</p>
 <ul>
-  <li><b>CALL flag, NN</b> : Salta sólo si FLAG está activo.</li>
-  <li><b>RET flag</b> : Vuelve sólo si FLAG está activo.</li>
+  <li><b>CALL flag, NN</b> : Salta sÃ³lo si FLAG estÃ¡ activo.</li>
+  <li><b>RET flag</b> : Vuelve sÃ³lo si FLAG estÃ¡ activo.</li>
 
 </ul>
-<p>Por ejemplo, supongamos que una de nuestras subrutinas tiene que comprobar que uno de los parámetros que le pasamos, BC, no sea 0.</p>
+<p>Por ejemplo, supongamos que una de nuestras subrutinas tiene que comprobar que uno de los parÃ¡metros que le pasamos, BC, no sea 0.</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -632,24 +632,24 @@ Copia_Pantalla:
    ; lo primero, comprobamos que BC no sea cero:
    LD A, B
    OR C                           ; Hacemos un OR de B sobre C
-                                  ; Si BC es cero, activará el flag Z
+                                  ; Si BC es cero, activarÃ¡ el flag Z
    RET Z                          ; Si BC es cero, volvemos sin hacer nada
 
-   (más código)
-   ; Aquí seguiremos si  BC no es  cero, el
-   ; RET no se habrá ejecutado.
+   (mÃ¡s cÃ³digo)
+   ; AquÃ­ seguiremos si  BC no es  cero, el
+   ; RET no se habrÃ¡ ejecutado.
 </pre>
     </p></td></tr>
 </table>
 
-<p>Del mismo modo, el uso de CALL condicionado al estado de flags (CALL Z, CALL NZ, CALL M, CALL P, etc) nos permitirá llamar o no a funciones según el estado de un flag.</p>
+<p>Del mismo modo, el uso de CALL condicionado al estado de flags (CALL Z, CALL NZ, CALL M, CALL P, etc) nos permitirÃ¡ llamar o no a funciones segÃºn el estado de un flag.</p>
 <p>Al igual que CALL y RET, sus versiones condicionales no afectan al estado de los flags.</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
                         Flags
-   Instrucción       |S Z H P N C|         Pseudocodigo
+   InstrucciÃ³n       |S Z H P N C|         Pseudocodigo
  -----------------------------------------------------------
  CALL cc, NN         |- - - - - -|        IF cc CALL NN
  RET cc              |- - - - - -|        IF cc RET
@@ -659,16 +659,16 @@ Copia_Pantalla:
 
 
 <p><strong>Pasando parametros a rutinas</strong></p>
-<p>Ahora que ya sabemos crear rutinas y utilizarlas, vamos a ver los 3 métodos que hay para pasar y devolver parámetros a las funciones.</p>
+<p>Ahora que ya sabemos crear rutinas y utilizarlas, vamos a ver los 3 mÃ©todos que hay para pasar y devolver parÃ¡metros a las funciones.</p>
 
-<p><em>Método 1: Uso de registros</em></p>
-<p>Este método consiste en modificar unos registros concretos antes de hacer el CALL a nuestra subrutina, sabiendo que dicha subrutina espera esos registros con los valores sobre los que actuar. Asímismo, nuestra rutina puede modificar alguno de los registros con el objetivo de devolvernos un valor.</p>
+<p><em>MÃ©todo 1: Uso de registros</em></p>
+<p>Este mÃ©todo consiste en modificar unos registros concretos antes de hacer el CALL a nuestra subrutina, sabiendo que dicha subrutina espera esos registros con los valores sobre los que actuar. AsÃ­mismo, nuestra rutina puede modificar alguno de los registros con el objetivo de devolvernos un valor.</p>
 <p>Por ejemplo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-; Función de multiplicación de 8 bits
+; FunciÃ³n de multiplicaciÃ³n de 8 bits
 ;
 ; Entrada:
 ;            H = valor 8 bits
@@ -692,18 +692,18 @@ NOADD:
     </p></td></tr>
 </table>
 
-<p>Antes de hacer la llamada a MULTIPLICA, tendremos que cargar en H y en E los valores que queremos multiplicar, de modo que si estos valores están en otros registros o en memoria, tendremos que moverlos a H y a E.</p>
-<p>Además, sabemos que la salida nos será devuelta en HL, con lo que si dicho registro (especialmente L en nuestro caso, ya que H es un parámetro de entrada) contiene algún valor importante, deberemos preservarlo previamente.</p>
-<p>Con este tipo de funciones resulta importantísimo realizarse cabeceras de comentarios explicativos, que indiquen:</p>
+<p>Antes de hacer la llamada a MULTIPLICA, tendremos que cargar en H y en E los valores que queremos multiplicar, de modo que si estos valores estÃ¡n en otros registros o en memoria, tendremos que moverlos a H y a E.</p>
+<p>AdemÃ¡s, sabemos que la salida nos serÃ¡ devuelta en HL, con lo que si dicho registro (especialmente L en nuestro caso, ya que H es un parÃ¡metro de entrada) contiene algÃºn valor importante, deberemos preservarlo previamente.</p>
+<p>Con este tipo de funciones resulta importantÃ­simo realizarse cabeceras de comentarios explicativos, que indiquen:</p>
 <ul>
-  <li>a.- Qué función realiza la subrutina.</li>
-  <li>b.- Qué registros espera como entrada.</li>
-  <li>c.- Qué registros devuelve como salida.</li>
-  <li>d.- Qué registros modifica además de los de entrada y salida.</li>
+  <li>a.- QuÃ© funciÃ³n realiza la subrutina.</li>
+  <li>b.- QuÃ© registros espera como entrada.</li>
+  <li>c.- QuÃ© registros devuelve como salida.</li>
+  <li>d.- QuÃ© registros modifica ademÃ¡s de los de entrada y salida.</li>
 
 </ul>
-<p>Con este tipo de paso de parámetros tenemos el mayor ahorro y la mayor velocidad: no se accede a la pila y no se accede a la memoria, pero por contra tenemos que tenerlo todo controlado. Tendremos que saber en cada momento qué parámetros de entrada y de salida utiliza (de ahí la importancia del comentario explicativo, al que acudiremos más de una vez cuando no recordemos en qué registros teníamos que pasarle los datos de entrada), y asegurarnos de que ninguno de los registros “extra” que modifica están en uso antes de llamar a la función, puesto que se verán alterados.</p>
-<p>Si no queremos que la función modifique muchos registros además de los de entrada y salida, siempre podemos poner una serie de PUSH y POP en su inicio y final, al estilo:</p>
+<p>Con este tipo de paso de parÃ¡metros tenemos el mayor ahorro y la mayor velocidad: no se accede a la pila y no se accede a la memoria, pero por contra tenemos que tenerlo todo controlado. Tendremos que saber en cada momento quÃ© parÃ¡metros de entrada y de salida utiliza (de ahÃ­ la importancia del comentario explicativo, al que acudiremos mÃ¡s de una vez cuando no recordemos en quÃ© registros tenÃ­amos que pasarle los datos de entrada), y asegurarnos de que ninguno de los registros Â“extraÂ” que modifica estÃ¡n en uso antes de llamar a la funciÃ³n, puesto que se verÃ¡n alterados.</p>
+<p>Si no queremos que la funciÃ³n modifique muchos registros ademÃ¡s de los de entrada y salida, siempre podemos poner una serie de PUSH y POP en su inicio y final, al estilo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -721,12 +721,12 @@ MiFuncion:
     </p></td></tr>
 </table>
 
-<p>En funciones que no sean críticas en velocidad, es una buena opción porque no tendremos que preocuparnos por el estado de nuestros registros durante la ejecución de la subrutina: al volver de ella tendrán sus valores originales (excepto aquellos de entrada y salida que consideremos necesarios).</p>
+<p>En funciones que no sean crÃ­ticas en velocidad, es una buena opciÃ³n porque no tendremos que preocuparnos por el estado de nuestros registros durante la ejecuciÃ³n de la subrutina: al volver de ella tendrÃ¡n sus valores originales (excepto aquellos de entrada y salida que consideremos necesarios).</p>
 
-<p>No nos olvidemos de que en algunos casos podemos usar el juego de registros alternativos (EX AF, AF', EXX) para evitar algún PUSH o POP.</p>
+<p>No nos olvidemos de que en algunos casos podemos usar el juego de registros alternativos (EX AF, AF', EXX) para evitar algÃºn PUSH o POP.</p>
 
-<p><em>Método 2: Uso de localidades de memoria</em></p>
-<p>Aunque no es una opción rápida, sí que es bastante efectivo y sencillo el uso de variables o posiciones de memoria para pasar y recoger parámetros de funciones. Nos ahorra el uso de muchos registros, y hace que podamos usar dentro de las funciones prácticamente todos los registros. Se hace especialmente útil usando el juego de registros alternativos.</p>
+<p><em>MÃ©todo 2: Uso de localidades de memoria</em></p>
+<p>Aunque no es una opciÃ³n rÃ¡pida, sÃ­ que es bastante efectivo y sencillo el uso de variables o posiciones de memoria para pasar y recoger parÃ¡metros de funciones. Nos ahorra el uso de muchos registros, y hace que podamos usar dentro de las funciones prÃ¡cticamente todos los registros. Se hace especialmente Ãºtil usando el juego de registros alternativos.</p>
 <p>Por ejemplo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -763,11 +763,11 @@ salida DB  0
     </p></td></tr>
 </table>
 
-<p>Este es un ejemplo exagerado donde todos los parámetros se pasan en variables, pero lo normal es usar un método mixto entre este y el anterior, pasando cosas en registros excepto si nos quedamos sin ellos (por que una función requiere muchos parámetros, por ejemplo), de forma que algunas cosas las pasamos con variables de memoria.</p>
+<p>Este es un ejemplo exagerado donde todos los parÃ¡metros se pasan en variables, pero lo normal es usar un mÃ©todo mixto entre este y el anterior, pasando cosas en registros excepto si nos quedamos sin ellos (por que una funciÃ³n requiere muchos parÃ¡metros, por ejemplo), de forma que algunas cosas las pasamos con variables de memoria.</p>
 
-<p><em>Método 3: Uso de la pila (método C)</em></p>
-<p>El tercer método es el sistema que utilizan los lenguajes de alto nivel para pasar parámetros a las funciones: el apilamiento de los mismos. Este sistema no se suele utilizar en ensamblador, pero vamos a comentarlo de forma que os permita integrar funciones en ASM dentro de programas escritos en C, como los compilables con el ensamblador Z88DK.</p>
-<p>En C (y en otros lenguajes de programación) los parámetros se insertan en la pila en el orden en que son leídos. La subrutina debe utilizar el registro SP (una copia) para acceder a los valores apilados en orden inverso. Estos valores son siempre de 16 bits aunque las variables pasadas sean de 8 bits (en este caso ignoraremos el byte que no contiene datos, el segundo).</p>
+<p><em>MÃ©todo 3: Uso de la pila (mÃ©todo C)</em></p>
+<p>El tercer mÃ©todo es el sistema que utilizan los lenguajes de alto nivel para pasar parÃ¡metros a las funciones: el apilamiento de los mismos. Este sistema no se suele utilizar en ensamblador, pero vamos a comentarlo de forma que os permita integrar funciones en ASM dentro de programas escritos en C, como los compilables con el ensamblador Z88DK.</p>
+<p>En C (y en otros lenguajes de programaciÃ³n) los parÃ¡metros se insertan en la pila en el orden en que son leÃ­dos. La subrutina debe utilizar el registro SP (una copia) para acceder a los valores apilados en orden inverso. Estos valores son siempre de 16 bits aunque las variables pasadas sean de 8 bits (en este caso ignoraremos el byte que no contiene datos, el segundo).</p>
 <p>Veamos unos ejemplos:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -813,8 +813,8 @@ int Funcion( int x, int y )
     </p></td></tr>
 </table>
 
-<p>No tenemos que preocuparnos por hacer PUSH y POP de los registros para preservar su valor dado que C lo hace automáticamente antes y después de cada #asm y #endasm.</p>
-<p>El problema es que conforme crece el número de parámetros apilados, es posible que tengamos que hacer malabarismos para almacenarlos, dado que no podemos usar HL (es nuestro puntero a la pila en las lecturas). Veamos el siguiente ejemplo con 3 parámetros, donde tenemos que usar PUSH para guardar el valor de DE y EX DE, HL para acabar asociando el valor final a HL:</p>
+<p>No tenemos que preocuparnos por hacer PUSH y POP de los registros para preservar su valor dado que C lo hace automÃ¡ticamente antes y despuÃ©s de cada #asm y #endasm.</p>
+<p>El problema es que conforme crece el nÃºmero de parÃ¡metros apilados, es posible que tengamos que hacer malabarismos para almacenarlos, dado que no podemos usar HL (es nuestro puntero a la pila en las lecturas). Veamos el siguiente ejemplo con 3 parÃ¡metros, donde tenemos que usar PUSH para guardar el valor de DE y EX DE, HL para acabar asociando el valor final a HL:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -871,12 +871,12 @@ int Funcion( char x, y )
    ADD HL,SP           ; Ahora SP apunta al ultimo parametro metido
                        ; en la pila por el compilador (tamanyo)
 
-   LD A, (HL)          ; Aquí tenemos nuestro dato de 8 bits (y)
+   LD A, (HL)          ; AquÃ­ tenemos nuestro dato de 8 bits (y)
    LD B, A
    INC HL
    INC HL              ; La parte alta del byte no nos interesa
 
-   LD A, (HL)          ; Aquí tenemos nuestro dato de 8 bits (x)
+   LD A, (HL)          ; AquÃ­ tenemos nuestro dato de 8 bits (x)
    LD C, A
    INC HL
    INC HL              ; La parte alta del byte no nos interesa
@@ -935,7 +935,7 @@ valor_z  defb  0
     </p></td></tr>
 </table>
 
-<p>Por contra, para devolver valores no se utiliza la pila (dado que no podemos tocarla), sino que se utiliza un determinado registro. En el caso de Z88DK, se utiliza el registro HL. Si la función es de tipo INT o CHAR en cuanto a devolución, el valor que dejemos en HL será el que se asignará en una llamada de este tipo:</p>
+<p>Por contra, para devolver valores no se utiliza la pila (dado que no podemos tocarla), sino que se utiliza un determinado registro. En el caso de Z88DK, se utiliza el registro HL. Si la funciÃ³n es de tipo INT o CHAR en cuanto a devoluciÃ³n, el valor que dejemos en HL serÃ¡ el que se asignarÃ¡ en una llamada de este tipo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -945,20 +945,20 @@ valor_z  defb  0
     </p></td></tr>
 </table>
 
-<p>Hemos considerado importante explicar este tipo de paso de parámetros y devolución de valores porque nos permite integrar nuestro código ASM en programas en C.</p>
+<p>Hemos considerado importante explicar este tipo de paso de parÃ¡metros y devoluciÃ³n de valores porque nos permite integrar nuestro cÃ³digo ASM en programas en C.</p>
 
 <p><strong>Integracion de ASM en Z88DK</strong></p>
 
-<p>Para aprovechar esta introducción de “uso de ASM en z88dk”, veamos el código de alguna función en C que use ASM internamente y que muestre, entre otras cosas, la lectura de parámetros de la pila, el acceso a variables del código C, el uso de etiquetas, o la devolución de valores.</p>
+<p>Para aprovechar esta introducciÃ³n de Â“uso de ASM en z88dkÂ”, veamos el cÃ³digo de alguna funciÃ³n en C que use ASM internamente y que muestre, entre otras cosas, la lectura de parÃ¡metros de la pila, el acceso a variables del cÃ³digo C, el uso de etiquetas, o la devoluciÃ³n de valores.</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
 //
 // Devuelve la direccion de memoria del atributo de un caracter
-// de pantalla, de coordenadas (x,y). Usando la dirección que
-// devuelve esta función (en HL, devuelto en la llamada), podemos
-// leer o cambiar los atributos de dicho carácter.
+// de pantalla, de coordenadas (x,y). Usando la direcciÃ³n que
+// devuelve esta funciÃ³n (en HL, devuelto en la llamada), podemos
+// leer o cambiar los atributos de dicho carÃ¡cter.
 //
 // Llamada:   valor =  Get_LOWRES_Attrib_Address( 1, 3 );
 //
@@ -990,8 +990,8 @@ int Get_LOWRES_Attrib_Address( char x, char y )
 
 //
 // Set Border
-// Ejemplo de modificación del borde, muestra cómo leer variables
-// globales de C en ASM, añadiendo "_" delante.
+// Ejemplo de modificaciÃ³n del borde, muestra cÃ³mo leer variables
+// globales de C en ASM, aÃ±adiendo "_" delante.
 //
 
 char my_tmp_border;
@@ -1013,8 +1013,8 @@ void BORDER( unsigned char value )
 
 
 //
-// Realización de un fundido de la pantalla hacia negro
-// Con esta función se muestra el uso de etiquetas. Nótese
+// RealizaciÃ³n de un fundido de la pantalla hacia negro
+// Con esta funciÃ³n se muestra el uso de etiquetas. NÃ³tese
 // como en lugar de escribirse como ":", se escriben sin
 // ellos y con un punto "." delante.
 //
@@ -1073,7 +1073,7 @@ void FadeScreen( void )
     </p></td></tr>
 </table>
 
-<p>Si tenéis curiosidad por ver el funcionamiento de esta rutina de Fade (fundido), podéis verla integramente en ASM en el fichero fade.asm. Un detalle a tener en cuenta, en Z88DK se soporta “EX AF, AF”, mientras que pasmo requiere poner la comilla del shadow-register: “EX AF, AF'”.</p>
+<p>Si tenÃ©is curiosidad por ver el funcionamiento de esta rutina de Fade (fundido), podÃ©is verla integramente en ASM en el fichero fade.asm. Un detalle a tener en cuenta, en Z88DK se soporta Â“EX AF, AFÂ”, mientras que pasmo requiere poner la comilla del shadow-register: Â“EX AF, AF'Â”.</p>
 
 
 <table border="0" cellspacing="0" cellpadding="2" width="320">
@@ -1088,16 +1088,16 @@ void FadeScreen( void )
 
 
 
-<p>En la anterior captura podéis ver el aspecto de uno de los pasos del fundido.</p>
+<p>En la anterior captura podÃ©is ver el aspecto de uno de los pasos del fundido.</p>
 
 <p><strong>La importancia de usar subrutinas</strong></p>
-<p>Usar subrutinas es mucho más importante de lo que parece a simple vista: <em>nos permite organizar el programa en unidades o módulos funcionales</em> que cumplen una serie de funciones específicas, lo que hace mucha más sencilla su depuración y optimización.</p>
-<p>Si en el menú de nuestro juego estamos dibujando una serie de sprites móviles, y también lo hacemos a lo largo del juego, resulta absurdo “construir” 2 bloques de código, uno para mover los sprites del menú y otro para los del juego. Haciendo esto, si encontramos un error en una de las 2 rutinas, o realizamos una mejora, deberemos corregirlo en ambas.</p>
-<p>Por contra, si creamos una subrutina, digamos, DrawSprite, que podamos llamar con los parámetros adecuados en ambos puntos del programa, cualquier cambio, mejora o corrección que realicemos en DrawSprite afectará a todas las llamadas que le hagamos. También reducimos así el tamaño de nuestro programa (y con él el tiempo de carga del mismo), las posibilidades de fallo, y la longitud del listado (haciéndolo más legible y manejable).</p>
-<p>Aunque no sea el objetivo de esta serie de artículos, antes de sentarse a teclear, un buen programador debería coger un par de folios de papel y hacer un pequeño análisis de lo que pretende crear. Este proceso, la fase de diseño, define qué debe de hacer el programa y, sobre todo, una división lógica de cuáles son las principales partes del mismo. Un sencillo esquema en papel, un diagrama de flujo, identificar las diferentes partes del programa, etc.</p>
+<p>Usar subrutinas es mucho mÃ¡s importante de lo que parece a simple vista: <em>nos permite organizar el programa en unidades o mÃ³dulos funcionales</em> que cumplen una serie de funciones especÃ­ficas, lo que hace mucha mÃ¡s sencilla su depuraciÃ³n y optimizaciÃ³n.</p>
+<p>Si en el menÃº de nuestro juego estamos dibujando una serie de sprites mÃ³viles, y tambiÃ©n lo hacemos a lo largo del juego, resulta absurdo Â“construirÂ” 2 bloques de cÃ³digo, uno para mover los sprites del menÃº y otro para los del juego. Haciendo esto, si encontramos un error en una de las 2 rutinas, o realizamos una mejora, deberemos corregirlo en ambas.</p>
+<p>Por contra, si creamos una subrutina, digamos, DrawSprite, que podamos llamar con los parÃ¡metros adecuados en ambos puntos del programa, cualquier cambio, mejora o correcciÃ³n que realicemos en DrawSprite afectarÃ¡ a todas las llamadas que le hagamos. TambiÃ©n reducimos asÃ­ el tamaÃ±o de nuestro programa (y con Ã©l el tiempo de carga del mismo), las posibilidades de fallo, y la longitud del listado (haciÃ©ndolo mÃ¡s legible y manejable).</p>
+<p>Aunque no sea el objetivo de esta serie de artÃ­culos, antes de sentarse a teclear, un buen programador deberÃ­a coger un par de folios de papel y hacer un pequeÃ±o anÃ¡lisis de lo que pretende crear. Este proceso, la fase de diseÃ±o, define quÃ© debe de hacer el programa y, sobre todo, una divisiÃ³n lÃ³gica de cuÃ¡les son las principales partes del mismo. Un sencillo esquema en papel, un diagrama de flujo, identificar las diferentes partes del programa, etc.</p>
 
-<p>El proceso empieza con un esbozo muy general del programa, que será coincidente con la gran mayoría de los juegos: inicialización de variables, menú (que te puede llevar bien a las opciones o bien al juego en sí), y dentro del juego, lectura de teclado/joystick, trazado de la pantalla, lógica del juego, etc.</p>
-<p>Después, se teclea un programa vacío que siga esos pasos, pero que no haga nada; un bucle principal que tenga un aspecto parecido a:</p>
+<p>El proceso empieza con un esbozo muy general del programa, que serÃ¡ coincidente con la gran mayorÃ­a de los juegos: inicializaciÃ³n de variables, menÃº (que te puede llevar bien a las opciones o bien al juego en sÃ­), y dentro del juego, lectura de teclado/joystick, trazado de la pantalla, lÃ³gica del juego, etc.</p>
+<p>DespuÃ©s, se teclea un programa vacÃ­o que siga esos pasos, pero que no haga nada; un bucle principal que tenga un aspecto parecido a:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -1120,10 +1120,10 @@ Comprobar_Estado:
     </p></td></tr>
 </table>
 
-<p>Tras esto, ya tenemos el “esqueleto del programa”. Y ahora hay que rellenar ese esqueleto, y la mejor forma de hacerlo es aprovechar esa “modularidad” que hemos obtenido con ese diseño en papel.</p>
+<p>Tras esto, ya tenemos el Â“esqueleto del programaÂ”. Y ahora hay que rellenar ese esqueleto, y la mejor forma de hacerlo es aprovechar esa Â“modularidadÂ” que hemos obtenido con ese diseÃ±o en papel.</p>
 
-<p>Por ejemplo, supongamos que nuestro juego tiene que poder dibujar sprites y pantallas hechas a bases de bloques que se repiten (tiles). Gracias a nuestro diseño, sabemos que necesitamos una rutina que imprima un sprite, una rutina que dibuje un tile y una rutina que dibuje una pantalla llena de tiles.</p>
-<p>Pues bien, creamos un programa en ASM nuevo, desde cero, y en él creamos una función DrawSprite que acepte como parámetros la dirección origen de los datos del Sprite, y las posiciones X e Y donde dibujarlo, y la realizamos. En este nuevo programa, pequeño, sencillo de leer, realizamos todo tipo de pruebas:</p>
+<p>Por ejemplo, supongamos que nuestro juego tiene que poder dibujar sprites y pantallas hechas a bases de bloques que se repiten (tiles). Gracias a nuestro diseÃ±o, sabemos que necesitamos una rutina que imprima un sprite, una rutina que dibuje un tile y una rutina que dibuje una pantalla llena de tiles.</p>
+<p>Pues bien, creamos un programa en ASM nuevo, desde cero, y en Ã©l creamos una funciÃ³n DrawSprite que acepte como parÃ¡metros la direcciÃ³n origen de los datos del Sprite, y las posiciones X e Y donde dibujarlo, y la realizamos. En este nuevo programa, pequeÃ±o, sencillo de leer, realizamos todo tipo de pruebas:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -1140,7 +1140,7 @@ Comprobar_Estado:
 ; Rutina DrawSprite
 ; Acepta como parametros ... y devuelve ...
 DrawSprite:
-   (aquí el código)
+   (aquÃ­ el cÃ³digo)
    RET
 
 sprite DB 0,0,255,123,121,123,34, (etc...)
@@ -1148,22 +1148,22 @@ sprite DB 0,0,255,123,121,123,34, (etc...)
     </p></td></tr>
 </table>
 
-<p>Gracias a esto, podremos probar nuestra nueva rutina y trabajar con ella limpiamente y en un fichero de programa pequeño. Cuando la tenemos lista, basta con copiarla a nuestro programa “principal” y ya sabemos que la tenemos disponible para su uso con CALL.</p>
+<p>Gracias a esto, podremos probar nuestra nueva rutina y trabajar con ella limpiamente y en un fichero de programa pequeÃ±o. Cuando la tenemos lista, basta con copiarla a nuestro programa Â“principalÂ” y ya sabemos que la tenemos disponible para su uso con CALL.</p>
 
-<p>Así, vamos creando diferentes rutinas en un entorno controlado y testeable, y las vamos incorporando a nuestro programa. Si hay algún bug en una rutina y tenemos que reproducirlo, podemos hacerlo en nuestros pequeños programas de prueba, evitando el típico problema de tener que llegar a un determinado punto de nuestro programa para chequear una rutina, o modificar su bucle principal para hacerlo.</p>
-<p>Además, el definir de antemano qué tipo de subrutinas necesitamos y qué parámetros deben aceptar o devolver permite trabajar en equipo. Si sabes que necesitarás una rutina que dibuje un sprite, o que lea el teclado y devuelva la tecla pulsada, puedes decir los registros de entrada y los valores de salida que necesitas, y que la realice una segunda persona y te envíe la rutina lista para usar.</p>
-<p>En ocasiones una excesiva desgranación del programa en módulos más pequeños puede dar lugar a una penalización en el rendimiento, aunque no siempre es así. Por ejemplo, supongamos que tenemos que dibujar un mapeado de 10×10 bloques de 8×8 pixeles cada uno. Si hacemos una función de que dibuja un bloque de 8×8, podemos llamarla en un bucle para dibujar nuestros 10×10 bloques.</p>
-<p>Hay gente que, en lugar de esto, preferirá realizar una función específica que dibuje los 10×10 bloques dentro de una misma función. Esto es así porque de este modo te evitas 100 CALLs (10×10) y sus correspondientes RETs, lo cual puede ser importante en una rutina gráfica que se ejecute X veces por segundo. Por supuesto, en muchos casos tendrán razón, en ciertas ocasiones hay que hacer rutinas concretas para tareas concretas, aún cuando puedan repetir parte de otro código que hayamos escrito anteriormente, con el objetivo de evitar llamadas, des/apilamientos u operaciones innecesarias en una función crítica.</p>
-<p>Pero si, por ejemplo, nosotros sólo dibujamos la pantalla una vez cuando nuestro personaje sale por el borde, y no volvemos a dibujar otra hasta que sale por otro borde (típico caso de juegos sin scroll que muestran pantallas completas de una sóla vez), vale la pena el usar funciones modulares dado que unos milisegundos más de ejecución en el trazado de la pantalla no afectarán al desarrollo del juego.</p>
-<p>Al final hay que llegar a un compromiso entre modularidad y optimización, en algunos casos nos interesará desgranar mucho el código, y en otros nos interesará hacer funciones específicas. Y esa decisión no deja de ser, al fin y al cabo, diseño del programa.</p>
-<p>En cualquier caso, el diseño nos asegura que podremos implementar nuestro programa en cualquier lenguaje y en cualquier momento. Podremos retomar nuestros “papeles de diseño” 3 meses después y, pese a no recordar en qué parte del programa estábamos, volver a su desarrollo sin excesivas dificultades.</p>
-<p>Una de las cosas más complicadas de hacer un juego es el pensar por dónde empezar. Todo este proceso nos permite empezar el programa por la parte del mismo que realmente importa. Todos hemos empezado alguna vez a realizar nuestro juego por el menú, perdiendo muchas horas de trabajo para descubrir que teníamos un menú, pero no teníamos un juego, y que ya estábamos cansados del desarrollo sin apenas haber empezado.</p>
-<p>Veamos un ejemplo: suponiendo que realizamos, por ejemplo, un juego de puzzles tipo Tetris, lo ideal sería empezar definiendo dónde se almacenan los datos del area de juego, hacer una función que convierta esos datos en imágenes en pantalla, y realizar un bucle que permita ver caer la pieza. Después, se agrega control por teclado para la pieza y se pone la lógica del juego (realización de líneas al tocar suelo, etc).</p>
+<p>AsÃ­, vamos creando diferentes rutinas en un entorno controlado y testeable, y las vamos incorporando a nuestro programa. Si hay algÃºn bug en una rutina y tenemos que reproducirlo, podemos hacerlo en nuestros pequeÃ±os programas de prueba, evitando el tÃ­pico problema de tener que llegar a un determinado punto de nuestro programa para chequear una rutina, o modificar su bucle principal para hacerlo.</p>
+<p>AdemÃ¡s, el definir de antemano quÃ© tipo de subrutinas necesitamos y quÃ© parÃ¡metros deben aceptar o devolver permite trabajar en equipo. Si sabes que necesitarÃ¡s una rutina que dibuje un sprite, o que lea el teclado y devuelva la tecla pulsada, puedes decir los registros de entrada y los valores de salida que necesitas, y que la realice una segunda persona y te envÃ­e la rutina lista para usar.</p>
+<p>En ocasiones una excesiva desgranaciÃ³n del programa en mÃ³dulos mÃ¡s pequeÃ±os puede dar lugar a una penalizaciÃ³n en el rendimiento, aunque no siempre es asÃ­. Por ejemplo, supongamos que tenemos que dibujar un mapeado de 10Ã—10 bloques de 8Ã—8 pixeles cada uno. Si hacemos una funciÃ³n de que dibuja un bloque de 8Ã—8, podemos llamarla en un bucle para dibujar nuestros 10Ã—10 bloques.</p>
+<p>Hay gente que, en lugar de esto, preferirÃ¡ realizar una funciÃ³n especÃ­fica que dibuje los 10Ã—10 bloques dentro de una misma funciÃ³n. Esto es asÃ­ porque de este modo te evitas 100 CALLs (10Ã—10) y sus correspondientes RETs, lo cual puede ser importante en una rutina grÃ¡fica que se ejecute X veces por segundo. Por supuesto, en muchos casos tendrÃ¡n razÃ³n, en ciertas ocasiones hay que hacer rutinas concretas para tareas concretas, aÃºn cuando puedan repetir parte de otro cÃ³digo que hayamos escrito anteriormente, con el objetivo de evitar llamadas, des/apilamientos u operaciones innecesarias en una funciÃ³n crÃ­tica.</p>
+<p>Pero si, por ejemplo, nosotros sÃ³lo dibujamos la pantalla una vez cuando nuestro personaje sale por el borde, y no volvemos a dibujar otra hasta que sale por otro borde (tÃ­pico caso de juegos sin scroll que muestran pantallas completas de una sÃ³la vez), vale la pena el usar funciones modulares dado que unos milisegundos mÃ¡s de ejecuciÃ³n en el trazado de la pantalla no afectarÃ¡n al desarrollo del juego.</p>
+<p>Al final hay que llegar a un compromiso entre modularidad y optimizaciÃ³n, en algunos casos nos interesarÃ¡ desgranar mucho el cÃ³digo, y en otros nos interesarÃ¡ hacer funciones especÃ­ficas. Y esa decisiÃ³n no deja de ser, al fin y al cabo, diseÃ±o del programa.</p>
+<p>En cualquier caso, el diseÃ±o nos asegura que podremos implementar nuestro programa en cualquier lenguaje y en cualquier momento. Podremos retomar nuestros Â“papeles de diseÃ±oÂ” 3 meses despuÃ©s y, pese a no recordar en quÃ© parte del programa estÃ¡bamos, volver a su desarrollo sin excesivas dificultades.</p>
+<p>Una de las cosas mÃ¡s complicadas de hacer un juego es el pensar por dÃ³nde empezar. Todo este proceso nos permite empezar el programa por la parte del mismo que realmente importa. Todos hemos empezado alguna vez a realizar nuestro juego por el menÃº, perdiendo muchas horas de trabajo para descubrir que tenÃ­amos un menÃº, pero no tenÃ­amos un juego, y que ya estÃ¡bamos cansados del desarrollo sin apenas haber empezado.</p>
+<p>Veamos un ejemplo: suponiendo que realizamos, por ejemplo, un juego de puzzles tipo Tetris, lo ideal serÃ­a empezar definiendo dÃ³nde se almacenan los datos del area de juego, hacer una funciÃ³n que convierta esos datos en imÃ¡genes en pantalla, y realizar un bucle que permita ver caer la pieza. DespuÃ©s, se agrega control por teclado para la pieza y se pone la lÃ³gica del juego (realizaciÃ³n de lÃ­neas al tocar suelo, etc).</p>
 
-<p>Tras esto, ya tenemos el esqueleto funcional del juego y podemos añadir opciones, menúes y demás. Tendremos algo tangible, funcional, donde podemos hacer cambios que implican un inmediato resultado en pantalla, y no habremos malgastado muchas horas con un simple menú.</p>
-<p>Por otra parte, el diseñar correctamente nuestro programa y desgranarlo en piezas reutilizables redundará en nuestro beneficio no sólo actual (con respecto al programa que estamos escribiendo) sino futuro, ya que podremos crearnos nuestras propias “bibliotecas” de funciones que reutilizar en futuros programas. Aquella rutina de dibujado de Sprites, de zoom de pantalla o de compresión de datos que tanto nos costó programar, bien aislada en una subrutina y con sus parámetros de entrada y salida bien definidos puede ser utilizada directamente en nuestros próximos programas simplemente copiando y pegando el código correspondiente.</p>
-<p>Más aún, podemos organizar funciones con finalidades comunes en ficheros individuales. Tendremos así nuestro fichero / biblioteca con funciones gráficas, de sonido, de teclado/joystick, etc. El ensamblador PASMO nos permite incluir un fichero en cualquier parte de nuestro código con la directiva “<b>INCLUDE</b>”.</p>
-<p>Así, nuestro programa en ASM podría comenzar (o acabar) por algo como:</p>
+<p>Tras esto, ya tenemos el esqueleto funcional del juego y podemos aÃ±adir opciones, menÃºes y demÃ¡s. Tendremos algo tangible, funcional, donde podemos hacer cambios que implican un inmediato resultado en pantalla, y no habremos malgastado muchas horas con un simple menÃº.</p>
+<p>Por otra parte, el diseÃ±ar correctamente nuestro programa y desgranarlo en piezas reutilizables redundarÃ¡ en nuestro beneficio no sÃ³lo actual (con respecto al programa que estamos escribiendo) sino futuro, ya que podremos crearnos nuestras propias Â“bibliotecasÂ” de funciones que reutilizar en futuros programas. Aquella rutina de dibujado de Sprites, de zoom de pantalla o de compresiÃ³n de datos que tanto nos costÃ³ programar, bien aislada en una subrutina y con sus parÃ¡metros de entrada y salida bien definidos puede ser utilizada directamente en nuestros prÃ³ximos programas simplemente copiando y pegando el cÃ³digo correspondiente.</p>
+<p>MÃ¡s aÃºn, podemos organizar funciones con finalidades comunes en ficheros individuales. Tendremos asÃ­ nuestro fichero / biblioteca con funciones grÃ¡ficas, de sonido, de teclado/joystick, etc. El ensamblador PASMO nos permite incluir un fichero en cualquier parte de nuestro cÃ³digo con la directiva Â“<b>INCLUDE</b>Â”.</p>
+<p>AsÃ­, nuestro programa en ASM podrÃ­a comenzar (o acabar) por algo como:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -1177,28 +1177,28 @@ INCLUDE "datos.asm"
     </p></td></tr>
 </table>
 
-<p>Esto contribuye a reducir fallos en la codificación, hacer más corto el “listado general del programa”, y, sobre todo, reduce el tiempo de desarrollo.</p>
+<p>Esto contribuye a reducir fallos en la codificaciÃ³n, hacer mÃ¡s corto el Â“listado general del programaÂ”, y, sobre todo, reduce el tiempo de desarrollo.</p>
 
 
 <p align="center"><font size="5">Lenguaje Ensamblador del Z80 (V)</font></p>
 <p><b> Puertos de E/S y Tabla de Opcodes </b></p>
 
 
-<p>En este capítulo se introducirán las instrucciones <b>IN</b> y <b>OUT</b> para la exploración
-de los puertos del microprocesador, mostrando cómo el acceso a dichos puertos nos
-permitirá la gestión de los diferentes dispositivos conectados al microprocesador
+<p>En este capÃ­tulo se introducirÃ¡n las instrucciones <b>IN</b> y <b>OUT</b> para la exploraciÃ³n
+de los puertos del microprocesador, mostrando cÃ³mo el acceso a dichos puertos nos
+permitirÃ¡ la gestiÃ³n de los diferentes dispositivos conectados al microprocesador
 (teclado, altavoz, controladora de disco, etc...).</p>
 
-<p>Finalmente, para acabar con la descripción del juego de instrucciones del Z80
+<p>Finalmente, para acabar con la descripciÃ³n del juego de instrucciones del Z80
 veremos algunos ejemplos de <em>opcodes no documentados</em>, y una <em>tabla-resumen</em> con
-la mayoría de instrucciones, así como sus tiempos de ejecución y tamaños.</p>
+la mayorÃ­a de instrucciones, asÃ­ como sus tiempos de ejecuciÃ³n y tamaÃ±os.</p>
 
 
 <p><b> Los puertos E/S </b></p>
 
 
 <p>Como ya vimos en su momento, el microprocesador Z80 se conecta
-mediante los puertos de entrada/salida de la CPU a los periféricos
+mediante los puertos de entrada/salida de la CPU a los perifÃ©ricos
 externos (teclado, cassette y altavoz de audio), pudiendo leer el
 estado de los mismos (leer del teclado, leer del cassette) y escribir
 en ellos (escribir en el altavoz para reproducir sonido, escribir en
@@ -1218,21 +1218,21 @@ el cassette) por medio de estas conexiones conocidas como "<em>I/O Ports</em>".<
 
 
 Aunque para nosotros el teclado o el altavoz puedan ser parte del
-ordenador, para el Z80, el microprocesador en sí mismo, son tan
-externos a él como el monitor o el joystick. Nuestro microprocesador
+ordenador, para el Z80, el microprocesador en sÃ­ mismo, son tan
+externos a Ã©l como el monitor o el joystick. Nuestro microprocesador
 accede a todos estos elementos externos mediante una serie de patillas
-(buses de datos y direcciones) que son conectadas eléctricamente a
-todos los elementos externos con los que queremos que interactúe. La
+(buses de datos y direcciones) que son conectadas elÃ©ctricamente a
+todos los elementos externos con los que queremos que interactÃºe. La
 memoria, el teclado, el altavoz, o los mismos pines del bus trasero
-del Spectrum, se conectan al Z80 y éste nos permite su acceso a través
-de dichas líneas, o de los puertos de entrada/salida (I/O).</p>
+del Spectrum, se conectan al Z80 y Ã©ste nos permite su acceso a travÃ©s
+de dichas lÃ­neas, o de los puertos de entrada/salida (I/O).</p>
 
 
 
 <p><b> IN y OUT </b></p>
 
-<p>Ya conocemos la existencia y significado de los puertos y su conexión
-con el microprocesador. Sólo resta saber: ¿cómo accedemos a un puerto
+<p>Ya conocemos la existencia y significado de los puertos y su conexiÃ³n
+con el microprocesador. SÃ³lo resta saber: Â¿cÃ³mo accedemos a un puerto
 tanto para leer como para escribir desde nuestros programas en
 ensamblador?</p>
 
@@ -1243,17 +1243,17 @@ sea directamente, o cargado sobre el registro BC:</p>
 
 <p><b>IN registro, (C)</b></p>
 <p>Leemos el puerto "BC" y ponemos su contenido en el registro especificado.</p>
-En realidad, pese a que teóricamente el Spectrum sólo tiene acceso a puertos
+En realidad, pese a que teÃ³ricamente el Spectrum sÃ³lo tiene acceso a puertos
 E/S de 8 bits (0-255), para acceder a los puertos, IN r, (C) pone todo el valor
 de BC en el bus de direcciones.</p>
 
 <p><b>IN A, (puerto)</b></p>
 <p>Leemos el puerto "A*256 + Puerto" y ponemos su contenido en A. En esta
-ocasión, el Spectrum pone en el bus de direcciones el valor del registro
+ocasiÃ³n, el Spectrum pone en el bus de direcciones el valor del registro
 de 16 bits formado por A y (puerto) (en lugar de BC).</p>
 
 <p>Por ejemplo, estas 2 lecturas de puerto (usando los 2 formatos de la
-instrucción IN vistos anteriormente) son equivalentes:</p>
+instrucciÃ³n IN vistos anteriormente) son equivalentes:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
    <tr><td><p class="codigo">
@@ -1270,7 +1270,7 @@ IN A, (FEh)     ; A = Lectura de puerto FFFEh
    </p></td></tr>
 </table>
 
-<p>Aunque la instrucción de la "Forma 1" hable del puerto C, en realidad
+<p>Aunque la instrucciÃ³n de la "Forma 1" hable del puerto C, en realidad
 el puerto es un valor de 16 bits y se carga en el registro BC.</p>
 
 <p>De la misma forma, podemos escribir un valor en un puerto con sus equivalentes "OUT":</p>
@@ -1295,7 +1295,7 @@ se pueden acceder a todos los 65536 puertos disponibles.</p>
    <tr><td><p class="codigo">
 <pre>
                         Flags
-  Instrucción       |S Z H P N C|
+  InstrucciÃ³n       |S Z H P N C|
 ----------------------------------
   IN A, (n)         |- - - - - -|
   IN r, (C)         |* * * P 0 -|
@@ -1305,7 +1305,7 @@ se pueden acceder a todos los 65536 puertos disponibles.</p>
    </p></td></tr>
 </table>
 
-<p>Aunque entre los 2 formatos OUT no debería haber ninguna diferencia funcional, cabe destacar que "OUT (N), A" es 1 t-estado o ciclo de reloj más rápida que "OUT (C), A", tardando 11 y 12 t-estados respectivamente.</p>
+<p>Aunque entre los 2 formatos OUT no deberÃ­a haber ninguna diferencia funcional, cabe destacar que "OUT (N), A" es 1 t-estado o ciclo de reloj mÃ¡s rÃ¡pida que "OUT (C), A", tardando 11 y 12 t-estados respectivamente.</p>
 
 
 
@@ -1317,40 +1317,40 @@ instrucciones incrementales (LDI "carga e incrementa", LDD "carga y decrementa")
 repetitivas (LDIR "carga, incrementa y repite BC veces", LDDR "carga, decrementa, y
 repite BC veces"), IN y OUT tienen sus equivalentes incrementales y repetidores.</p>
 
-<p>Así:</p>
+<p>AsÃ­:</p>
 
 <ul>
 <li><b>IND</b> :</li>
 <ul>
 
-<li>Leemos en la dirección de memoria apuntada por HL ([HL]) el valor contenido en el puerto C.</li>
+<li>Leemos en la direcciÃ³n de memoria apuntada por HL ([HL]) el valor contenido en el puerto C.</li>
 <li>Decrementamos HL.</li>
 <li>Decrementamos B.</li>
 </ul>
 <li><b>INI</b> :</li>
 <ul>
-<li>Leemos en la dirección de memoria apuntada por HL ([HL]) el valor contenido en el puerto C.</li>
+<li>Leemos en la direcciÃ³n de memoria apuntada por HL ([HL]) el valor contenido en el puerto C.</li>
 <li>Incrementamos HL.</li>
 <li>Decrementamos B.</li>
 
 </ul>
 <li><b>OUTD</b> :</li>
 <ul>
-<li>Escribimos en el puerto C el valor de la dirección de memoria apuntada por HL ([HL]).</li>
+<li>Escribimos en el puerto C el valor de la direcciÃ³n de memoria apuntada por HL ([HL]).</li>
 <li>Decrementamos HL.</li>
 <li>Decrementamos B.</li>
 </ul>
 <li><b>OUTI</b> :</li>
 
 <ul>
-<li>Escribimos en el puerto C el valor de la dirección de memoria apuntada por HL ([HL]).</li>
+<li>Escribimos en el puerto C el valor de la direcciÃ³n de memoria apuntada por HL ([HL]).</li>
 <li>Incrementamos HL.</li>
 <li>Decrementamos B.</li>
 </ul>
 </ul>
 
 <p>Y sus versiones repetitivas <b>INDR, INIR, OTDR</b> y <b>OTIR</b>, que realizan la misma
-función que sus hermanas incrementales, repitiéndolo hasta que BC sea cero.</p>
+funciÃ³n que sus hermanas incrementales, repitiÃ©ndolo hasta que BC sea cero.</p>
 
 <p>Las afectaciones de flags de estas funciones son las siguientes:</p>
 
@@ -1360,7 +1360,7 @@ Flags:</p>
    <tr><td><p class="codigo">
 <pre>
                         Flags
-  Instrucción       |S Z H P N C|
+  InstrucciÃ³n       |S Z H P N C|
 ----------------------------------
   INI               |? * ? ? 1 ?|
   IND               |? * ? ? 1 ?|
@@ -1374,10 +1374,10 @@ Flags:</p>
   </p></td></tr>
 </table>
 
-Nota: Pese a que la documentación oficial dice que estas instrucciones no
+Nota: Pese a que la documentaciÃ³n oficial dice que estas instrucciones no
 afectan al Carry Flag, las pruebas hechas a posteriori y recopiladas en
-la información disponible sobre Opcodes No Documentados del Z80 sugieren que
-sí que son modificados.</p>
+la informaciÃ³n disponible sobre Opcodes No Documentados del Z80 sugieren que
+sÃ­ que son modificados.</p>
 
 
 <p><b> Algunos puertos E/S comunes </b></p>
@@ -1385,13 +1385,13 @@ sí que son modificados.</p>
 
 <p>Para terminar con el tema de los puertos de Entrada y Salida, vamos a hacer
 referencia a algunos puertos disponibles en el Sinclair Spectrum (algunos de
-ellos sólo en ciertos modelos).</p>
+ellos sÃ³lo en ciertos modelos).</p>
 
-<p>Como veremos en capítulo dedicado al teclado, existe una serie de puertos
+<p>Como veremos en capÃ­tulo dedicado al teclado, existe una serie de puertos
 E/S que acceden directamente a la lectura del estado de las diferentes teclas
 de nuestro Spectrum. Leyendo del puerto adecuado, y chequeando en la respuesta
 obtenida el bit concreto asociado a la tecla que queremos consultar podremos
-conocer si una determinada tecla está pulsada (0) o no pulsada (1), como
+conocer si una determinada tecla estÃ¡ pulsada (0) o no pulsada (1), como
 podemos ver en el siguiente ejemplo:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -1438,11 +1438,11 @@ asociados a las diferentes filas de teclas:</p>
 </table>
 
 <p>El bit 6 de los puertos que hemos visto para el teclado tiene un valor
-aleatorio, excepto cuando se pulsa PLAY en el cassette, y es a través
+aleatorio, excepto cuando se pulsa PLAY en el cassette, y es a travÃ©s
 de dicho bit de donde podremos obtener los datos a cargar.</p>
 
 <p>La escritura en el puerto 00FEh permite <em>acceder al altavoz</em> (bit 4)
-y a la señal de audio para grabar a cinta (bit 3). Los bits 0, 1 y 2
+y a la seÃ±al de audio para grabar a cinta (bit 3). Los bits 0, 1 y 2
 controlan <em>el color del borde</em>, como podemos ver en el siguiente ejemplo:</p>
 
 
@@ -1485,40 +1485,40 @@ salir:
 
 <table border="0" cellspacing="0" cellpadding="2" width="320">
 	<tr align="right">
-		<td><img src="img/borde.png" width="320" height="240"  alt="Ejecución del programa de cambio de borde" />
+		<td><img src="img/borde.png" width="320" height="240"  alt="EjecuciÃ³n del programa de cambio de borde" />
 </td>
 
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">Ejecución del programa de cambio de borde</td>
+		<td class="piefoto" align="right">EjecuciÃ³n del programa de cambio de borde</td>
 	</tr>
 </table>
 
 
-<p>El puerto 7FFDh gestiona la <em>paginación en los modos de 128K</em>,
-permitiendo cambiar el modelo de páginas de memoria (algo que
-no vamos a ver en este capítulo).</p>
+<p>El puerto 7FFDh gestiona la <em>paginaciÃ³n en los modos de 128K</em>,
+permitiendo cambiar el modelo de pÃ¡ginas de memoria (algo que
+no vamos a ver en este capÃ­tulo).</p>
 
 <p>Los puertos BFFDh y FFFDh gestionan el <em>chip de sonido</em> en aquellos
-modelos que dispongan de él, así como el RS232/MIDI y el interfaz
+modelos que dispongan de Ã©l, asÃ­ como el RS232/MIDI y el interfaz
 AUX.</p>
 
 <p>Finalmente, el puerto 0FFDh gestiona <em>el puerto paralelo de impresora</em>,
 y los puertos 2FFDh y 3FFDh permiten gestionar la controladora de disco en
 aquellos modelos de Spectrum que dispongan de ella.</p>
 
-<p>Podéis encontrar más información sobre los puertos de Entrada y
-Salida en el <em>capítulo 8 sección 23 del manual del +2A y +3</em>, disponible
+<p>PodÃ©is encontrar mÃ¡s informaciÃ³n sobre los puertos de Entrada y
+Salida en el <em>capÃ­tulo 8 secciÃ³n 23 del manual del +2A y +3</em>, disponible
 online en World Of Spectrum.</p>
 
 
-<p><b> Tabla de instrucciones, ciclos y tamaños </b></p>
+<p><b> Tabla de instrucciones, ciclos y tamaÃ±os </b></p>
 
 
-<p>A continuación se incluye una tabla donde se hace referencia a las instrucciones
+<p>A continuaciÃ³n se incluye una tabla donde se hace referencia a las instrucciones
 del microprocesador Z80 (campo Mnemonic), los ciclos de reloj que tarda en ejecutarse
-(campo Clck), el tamaño en bytes de la instrucción codificada (Siz), la afectación
-de Flags (SZHPNC), el opcode y su descripción en cuanto a ejecución.</p>
+(campo Clck), el tamaÃ±o en bytes de la instrucciÃ³n codificada (Siz), la afectaciÃ³n
+de Flags (SZHPNC), el opcode y su descripciÃ³n en cuanto a ejecuciÃ³n.</p>
 
 <p>La tabla forma parte de un documento llamado "<b>The Complete Z80 OP-Code Reference</b>",
 de <em>Devin Gardner</em>.</p>
@@ -2069,7 +2069,7 @@ de <em>Devin Gardner</em>.</p>
 <p>La leyenda para interpretar esta tabla es la siguiente:</p>
 
 <table class="flags">
-<tr><th>Símbolo</th><th>Significado</th></tr>
+<tr><th>SÃ­mbolo</th><th>Significado</th></tr>
 <tr></tr>
 <tr><td>n            </td><td>Immediate addressing                        </td></tr>
 <tr><td>nn           </td><td>Immediate extended addressing               </td></tr>
@@ -2129,8 +2129,8 @@ de <em>Devin Gardner</em>.</p>
 
 <p>Unos apuntes sobre esta tabla:</p>
 
-1.- En instrucciones como "ADC A, r" podemos ver una defición del OPCODE como "88+rb".</p>
-En este caso, el opcode final se obtendría sumando a "88h" un valor de 0 a 7 según
+1.- En instrucciones como "ADC A, r" podemos ver una deficiÃ³n del OPCODE como "88+rb".</p>
+En este caso, el opcode final se obtendrÃ­a sumando a "88h" un valor de 0 a 7 segÃºn
 el registro al que nos referimos:</p>
 
 <table class="flags">
@@ -2146,17 +2146,17 @@ el registro al que nos referimos:</p>
 <tr><td>(HL)</td><td>6</td></tr>
 </table>
 
-<p>Por ejemplo, "ADC A, B" se codificaría en memoria como "88+0=88".</p>
+<p>Por ejemplo, "ADC A, B" se codificarÃ­a en memoria como "88+0=88".</p>
 
 
-2.- En los saltos hay 2 tiempos de ejecución diferentes (por ejemplo, 10/1). En este
-caso el valor más alto (10) son los t-estados o ciclos que toma la instrucción cuando
-el salto se realiza, y el más bajo (1) es lo que tarda la instrucción cuando no se
-salta al destino. Como véis, a la hora de programar una rutina que tenga saltos o
-bifurcaciones, es interesante programarla de forma que el caso más común, el que se
-produzca la mayoría de las veces, no produzca un salto.</p>
+2.- En los saltos hay 2 tiempos de ejecuciÃ³n diferentes (por ejemplo, 10/1). En este
+caso el valor mÃ¡s alto (10) son los t-estados o ciclos que toma la instrucciÃ³n cuando
+el salto se realiza, y el mÃ¡s bajo (1) es lo que tarda la instrucciÃ³n cuando no se
+salta al destino. Como vÃ©is, a la hora de programar una rutina que tenga saltos o
+bifurcaciones, es interesante programarla de forma que el caso mÃ¡s comÃºn, el que se
+produzca la mayorÃ­a de las veces, no produzca un salto.</p>
 
-3.- La descripción de las afectaciones de flags son las siguientes:</p>
+3.- La descripciÃ³n de las afectaciones de flags son las siguientes:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
    <tr><td><p class="codigo">
@@ -2179,51 +2179,51 @@ produzca la mayoría de las veces, no produzca un salto.</p>
 <p><b> Instrucciones no documentadas del Z80 </b></p>
 
 
-<p>En Internet podemos encontrar gran cantidad de documentación acerca del Z80
+<p>En Internet podemos encontrar gran cantidad de documentaciÃ³n acerca del Z80
 y su juego de instrucciones, incluyendo las especificaciones oficiales del
 microprocesador Z80 de Zilog.
 
 <p>No obstante, existen una serie de instrucciones u opcodes que el microprocesador
-puede ejecutar y que no están detallados en la documentación oficial de Zilog.</p>
+puede ejecutar y que no estÃ¡n detallados en la documentaciÃ³n oficial de Zilog.</p>
 Con respecto a esto, tenemos la suerte de disponer de algo que los programadores
-de la época del Spectrum no tenían: una descripción detallada de las instrucciones
-no documentadas del Z80. Aunque la mayoría son instrucciones repetidas de sus
+de la Ã©poca del Spectrum no tenÃ­an: una descripciÃ³n detallada de las instrucciones
+no documentadas del Z80. Aunque la mayorÃ­a son instrucciones repetidas de sus
 versiones documentadas, hay algunas instrucciones curiosas y a las que tal vez
 le podamos sacar alguna utilidad.
 
-<p>¿Por qué existen estos opcodes y no fueron documentados? Supongo que algunos de
+<p>Â¿Por quÃ© existen estos opcodes y no fueron documentados? Supongo que algunos de
 ellos no fueron considerados como "merecedores de utilidad alguna" y los ingenieros
 de Zilog no los documentaron, o tal vez sean simplemente un resultado no previsto
-de la ejecución del Z80 porque los diseñadores no pensaron que al microprocesador
-pudieran llegarle dichos códigos. El caso es que para el microprocesador existen
-"todos" los opcodes, otra cosa es qué haga al leerlos y decodificarlos. En este
-caso algunos de ellos realizan funciones válidas mientras que otros son el equivalente
+de la ejecuciÃ³n del Z80 porque los diseÃ±adores no pensaron que al microprocesador
+pudieran llegarle dichos cÃ³digos. El caso es que para el microprocesador existen
+"todos" los opcodes, otra cosa es quÃ© haga al leerlos y decodificarlos. En este
+caso algunos de ellos realizan funciones vÃ¡lidas mientras que otros son el equivalente
 a ejecutar 2 instrucciones NOP, por ejemplo.</p>
 
-<p>¿Cuál es la utilidad de estas instrucciones para los programadores? Para ser
+<p>Â¿CuÃ¡l es la utilidad de estas instrucciones para los programadores? Para ser
 sinceros, como programadores con un ensamblador o un ensamblador cruzado, poca.</p>
 
-Si haces tus programas desde cero con un programa ensamblador, éste se encargará
-de la conversión de instrucciones estándar a opcodes, aunque no viene mal conocer
+Si haces tus programas desde cero con un programa ensamblador, Ã©ste se encargarÃ¡
+de la conversiÃ³n de instrucciones estÃ¡ndar a opcodes, aunque no viene mal conocer
 la existencia de estas instrucciones. Para los programadores de emuladores y de
 desensambladores, el conocimiento de estos opcodes es vital.</p>
 
-<p>El juego Sabre Wulf, por ejemplo, utiliza una de estas instrucciones en la determinación
-del camino de uno de los enemigos en pantalla (la instrucción SLL, que veremos a
-continuación), hasta el punto en que los primeros emuladores de Spectrum emulaban
-mal este juego hasta que incluyeron dicha instrucción en la emulación.</p>
+<p>El juego Sabre Wulf, por ejemplo, utiliza una de estas instrucciones en la determinaciÃ³n
+del camino de uno de los enemigos en pantalla (la instrucciÃ³n SLL, que veremos a
+continuaciÃ³n), hasta el punto en que los primeros emuladores de Spectrum emulaban
+mal este juego hasta que incluyeron dicha instrucciÃ³n en la emulaciÃ³n.</p>
 
 <p>Los "<em>undocumented opcodes</em>" son esencialmente opcodes con prefijos CB, ED, DD o FD
-que hacen unas determinadas operaciones y que no están incluídos en la "lista oficial"
-que hemos visto hasta ahora. Todos los ejemplos que veremos a continuación están
-extraídos del documento "<em>The Undocumented Z80 Documented</em>", de Sean Young.</p>
+que hacen unas determinadas operaciones y que no estÃ¡n incluÃ­dos en la "lista oficial"
+que hemos visto hasta ahora. Todos los ejemplos que veremos a continuaciÃ³n estÃ¡n
+extraÃ­dos del documento "<em>The Undocumented Z80 Documented</em>", de Sean Young.</p>
 
 
 
 <p><b>Prefijo CB</b></p>
 
 <p>Por ejemplo, los opcodes CB 30, CB 31, CB 32, CB 33, CB 34, CB 35, CB 36 y CB 37
-definen una nueva instrucción: <b>SLL</b>.</p>
+definen una nueva instrucciÃ³n: <b>SLL</b>.</p>
 
 <table class="flags">
 <tr><th>OPCODE</th><th>INSTRUCCION</th></tr>
@@ -2239,17 +2239,17 @@ definen una nueva instrucción: <b>SLL</b>.</p>
 </table>
 
 <p><b>SLL (Shift Logical Left)</b> funciona exactamente igual que SLA salvo porque pone a
-1 el bit 0 (mientras que SLA lo ponía a 0).</p>
+1 el bit 0 (mientras que SLA lo ponÃ­a a 0).</p>
 
 
 <b><p> Prefijos DD y FD </b></p>
 
 
-<p>En general, una instrucción precedida por el opcode DD se ejecuta igual que sin él
+<p>En general, una instrucciÃ³n precedida por el opcode DD se ejecuta igual que sin Ã©l
 excepto por las siguientes reglas:</p>
 
 <ul>
-<li>Si la instrucción usaba el registro HL, éste se sustituye por IX (excepto en las instrucciones EX DE, HL y EXX).</li>
+<li>Si la instrucciÃ³n usaba el registro HL, Ã©ste se sustituye por IX (excepto en las instrucciones EX DE, HL y EXX).</li>
 
 <li>Cualquier uso de (HL) se reemplaza por (IX+d), excepto JP (HL).</li>
 <li>Cualquier acceso a H se reemplaza por IXh (byte alto de IX), excepto en el uso de (IX+d).</li>
@@ -2272,12 +2272,12 @@ excepto por las siguientes reglas:</p>
 <p><b>Prefijo ED</b></p>
 
 <p>Hay una gran cantidad de instrucciones ED XX indocumentadas. Muchos de ellos realizan
-la misma función que sus equivalentes sin ED delante, mientras que otros simplemente
-son leídos y decodificados, resultando, a niveles prácticos, equivalentes a 2 instrucciones
+la misma funciÃ³n que sus equivalentes sin ED delante, mientras que otros simplemente
+son leÃ­dos y decodificados, resultando, a niveles prÃ¡cticos, equivalentes a 2 instrucciones
 NOP. Veamos algunos de ellos:</p>
 
 <table class="flags">
-<tr><th>OPCODE</th><th>Instrucción</th></tr>
+<tr><th>OPCODE</th><th>InstrucciÃ³n</th></tr>
 <tr><td>ED 4C</td><td>NEG</td></tr>
 <tr><td>ED 4E</td><td>IM 0</td></tr>
 <tr><td>ED 44</td><td>NEG</td></tr>
@@ -2318,10 +2318,10 @@ ED 70       IN (C)
 </table>
 
 
-<p>Esta instrucción lee el puerto C, pero no almacena el resultado de la lectura en
-ningún lugar. No obstante, altera los flags del registro F como corresponde al
-resultado leído. Puede ser interesante si sólo nos interesa, por ejemplo, si el
-valor leído es cero o no (flag Z), y no queremos perder un registro para almacenar
+<p>Esta instrucciÃ³n lee el puerto C, pero no almacena el resultado de la lectura en
+ningÃºn lugar. No obstante, altera los flags del registro F como corresponde al
+resultado leÃ­do. Puede ser interesante si sÃ³lo nos interesa, por ejemplo, si el
+valor leÃ­do es cero o no (flag Z), y no queremos perder un registro para almacenar
 el resultado.</p>
 
 
@@ -2329,11 +2329,11 @@ el resultado.</p>
 <p><b>Prefijos DDCB y FDCB</b></p>
 
 <p>Las instrucciones DDCB y FDCB no documentadas almacenan el resultado de la
-operación de la instrucción equivalente sin prefijo (si existe dicho resultado)
-en uno de los registros de propósito general: B, C, D, E, H, L, ninguno o A,
-según los 3 bits más bajos del último byte del opcode (000=B, 001=C, 010=D, etc).</p>
+operaciÃ³n de la instrucciÃ³n equivalente sin prefijo (si existe dicho resultado)
+en uno de los registros de propÃ³sito general: B, C, D, E, H, L, ninguno o A,
+segÃºn los 3 bits mÃ¡s bajos del Ãºltimo byte del opcode (000=B, 001=C, 010=D, etc).</p>
 
-<p>Así, supongamos el siguiente opcode sí documentado:</p>
+<p>AsÃ­, supongamos el siguiente opcode sÃ­ documentado:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
    <tr><td><p class="codigo">
@@ -2344,8 +2344,8 @@ DD CB 01 06         RLC (IX+01h)
    </p></td></tr>
 </table>
 
-<p>Si hacemos los 3 últimos bits de dicho opcode 010 (010), el resultado de la
-operación se copia al registro D (010 = D en nuestra definición anterior), con
+<p>Si hacemos los 3 Ãºltimos bits de dicho opcode 010 (010), el resultado de la
+operaciÃ³n se copia al registro D (010 = D en nuestra definiciÃ³n anterior), con
 lo que realmente, en lugar de "RLC (IX+01h)" se ejecuta:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -2358,7 +2358,7 @@ LD (IX+01h), D
    </p></td></tr>
 </table>
 
-<p>La notación que sugiere <em>Sean Young</em> para estos opcodes es: "RLC (IX+01h), D".</p>
+<p>La notaciÃ³n que sugiere <em>Sean Young</em> para estos opcodes es: "RLC (IX+01h), D".</p>
 
 
 <p>Con el prefijo FDCB ocurre igual que con DDCB, salvo que se usa el registro IY
@@ -2368,16 +2368,16 @@ en lugar de IX.</p>
 <p><b> De la teoria a la practica </b></p>
 
 
-<p>Con este capítulo hemos cubierto el 99% de las instrucciones soportadas
-por el microprocesador Z80. Con la excepción de los <em>Modos de Interrupciones</em>
-del Z80 y sus aplicaciones, ya tenemos a nuestra disposición las piezas
-básicas para formar cualquier programa o rutina en ensamblador.</p>
+<p>Con este capÃ­tulo hemos cubierto el 99% de las instrucciones soportadas
+por el microprocesador Z80. Con la excepciÃ³n de los <em>Modos de Interrupciones</em>
+del Z80 y sus aplicaciones, ya tenemos a nuestra disposiciÃ³n las piezas
+bÃ¡sicas para formar cualquier programa o rutina en ensamblador.</p>
 
-<p>No obstante, todavía quedan por delante muchas horas de programación
-para dominar este lenguaje, así como diferentes técnicas, trucos,
-rutinas y mapas de memoria que nos permitan dibujar nuestros gráficos,
+<p>No obstante, todavÃ­a quedan por delante muchas horas de programaciÃ³n
+para dominar este lenguaje, asÃ­ como diferentes tÃ©cnicas, trucos,
+rutinas y mapas de memoria que nos permitan dibujar nuestros grÃ¡ficos,
 realizar rutinas complejas, utilizar el sistema de interrupciones del
-microprocesador para realizar controles de temporización de nuestros
+microprocesador para realizar controles de temporizaciÃ³n de nuestros
 programas, o reproducir sonido.</p>
 
 
@@ -2444,22 +2444,22 @@ function RecargarPie(url)
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
 
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
         <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
         <option value="el-aventurero.html">El Aventurero</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="computone.html">Computone</option>
         <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
+        <option value="basic.html">ProgramaciÃ³n BASIC</option>
+        <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+        <option value="ensamblador.html" selected>ProgramaciÃ³n Ensamblador</option>
         <option value="128k-mode.html">128K MODE</option>
 
         <option value="input.html">INPUT</option>
-        <option value="tira-comica.html">Tira cómica</option>
-        <option value="opinion.html">Opinión</option>
+        <option value="tira-comica.html">Tira cÃ³mica</option>
+        <option value="opinion.html">OpiniÃ³n</option>
     </select>
     <input type="button" onclick="RecargarCabecera('128k-mode.html');" name="siguiente" value=">" />
 </td>
@@ -2468,7 +2468,7 @@ function RecargarPie(url)
 
             </td>
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
     </form>
 </table>
                     </td>

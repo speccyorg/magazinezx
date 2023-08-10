@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,26 +31,26 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="hardware.html">Hardware</option>
         <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
     </select>
     <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
 </td>
 
-            <td align="center" class="texto">Número 5 - Enero 2004</td>
+            <td align="center" class="texto">NÃºmero 5 - Enero 2004</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
@@ -69,67 +69,67 @@ function RecargarCabecera(url)
 <p>
 <i>A lo largo de los siguientes meses echaremos un vistazo al paquete
 z88dk (<a href="http://z88dk.sourceforge.net" onClick="window.open(this.href); return false;">http://z88dk.sourceforge.net</a>)
-y aprenderemos a realizar programas con él para nuestro Spectrum. Básicamente se
+y aprenderemos a realizar programas con Ã©l para nuestro Spectrum. BÃ¡sicamente se
 trata de un compilador cruzado de C, que nos permite realizar
 nuestros programas en este lenguaje en nuestro ordenador de
 sobremesa (PC con Windows o Linux, SPARC) y crear
-un fichero que podrá ser ejecutado con un emulador y, mediante las herramientas
+un fichero que podrÃ¡ ser ejecutado con un emulador y, mediante las herramientas
 adecuadas, ser pasado a cinta
-para ejecutarlo en nuestro Spectrum. Aunque en estos artículos nos centraremos
-en la máquina objetivo de
-esta publicación (el Sinclair ZX Spectrum), el z88dk permite desarrollar aplicaciones
+para ejecutarlo en nuestro Spectrum. Aunque en estos artÃ­culos nos centraremos
+en la mÃ¡quina objetivo de
+esta publicaciÃ³n (el Sinclair ZX Spectrum), el z88dk permite desarrollar aplicaciones
 para una gran cantidad
-de plataformas, entre ellas Sam Coupé, MSX1, Jupiter ACE, ZX81, y un gran número
+de plataformas, entre ellas Sam CoupÃ©, MSX1, Jupiter ACE, ZX81, y un gran nÃºmero
 de ordenadores basados en el procesador Z80.</i>
 </p>
 <p>
 
-El paquete incluye una serie de librerías que nos permitirán añadir
-funcionalidades fácilmente a nuestros
-programas, siendo las más interesantes las librerías gráficas, que nos capacitarán
-incluso para programar algún
-juego. El compilador de C incluido con z88dk no es más que un pequeño
+El paquete incluye una serie de librerÃ­as que nos permitirÃ¡n aÃ±adir
+funcionalidades fÃ¡cilmente a nuestros
+programas, siendo las mÃ¡s interesantes las librerÃ­as grÃ¡ficas, que nos capacitarÃ¡n
+incluso para programar algÃºn
+juego. El compilador de C incluido con z88dk no es mÃ¡s que un pequeÃ±o
 compilador que acepta muchas de las
-características de ANSI C y realiza optimizaciones básicas.
-Por último, hemos de aclarar que el objetivo de esta serie de artículos no
+caracterÃ­sticas de ANSI C y realiza optimizaciones bÃ¡sicas.
+Por Ãºltimo, hemos de aclarar que el objetivo de esta serie de artÃ­culos no
 es explicar la sintaxis o el
-funcionamiento del lenguaje C; es más, al lector se le supondrán una serie
-de conocimientos básicos sobre
-el mismo. Como en el artículo de este número nos centraremos en
-cómo instalar el paquete para distintas
-plataformas, así como en conocer la forma de compilar y ejecutar los
-ejemplos, el lector tendrá tiempo de
-consultar cualquiera de los múltiples tutoriales sobre C existentes en la
-red. En la Web del Programador (ver sección de enlaces)
+funcionamiento del lenguaje C; es mÃ¡s, al lector se le supondrÃ¡n una serie
+de conocimientos bÃ¡sicos sobre
+el mismo. Como en el artÃ­culo de este nÃºmero nos centraremos en
+cÃ³mo instalar el paquete para distintas
+plataformas, asÃ­ como en conocer la forma de compilar y ejecutar los
+ejemplos, el lector tendrÃ¡ tiempo de
+consultar cualquiera de los mÃºltiples tutoriales sobre C existentes en la
+red. En la Web del Programador (ver secciÃ³n de enlaces)
 se pueden encontrar multitud de enlaces relacionados con el tema.
 </p>
 <p>
-<b>INSTALACIÓN</b>
+<b>INSTALACIÃ“N</b>
 </p>
 <p>
-Para descargarnos la última versión estable deberemos dirigirnos a la página
+Para descargarnos la Ãºltima versiÃ³n estable deberemos dirigirnos a la pÃ¡gina
 de descargas de z88dk (a partir
-del enlace proporcionado en la página del paquete, ver sección de Links), donde
-podremos obtener la versión de Linux. Los binarios para Windows se pueden
-obtener en la página de Dennis
-Grönign (el enlace también puede ser encontrado en la misma
-página de z88dk).
+del enlace proporcionado en la pÃ¡gina del paquete, ver secciÃ³n de Links), donde
+podremos obtener la versiÃ³n de Linux. Los binarios para Windows se pueden
+obtener en la pÃ¡gina de Dennis
+GrÃ¶nign (el enlace tambiÃ©n puede ser encontrado en la misma
+pÃ¡gina de z88dk).
 </p>
 <p>
-<b>INSTALACIÓN EN LINUX</b>
+<b>INSTALACIÃ“N EN LINUX</b>
 </p>
 <p>
 El primer paso, una vez descargado el fichero <span class="codigo">z88dk-src-x.y.tar.gz</span>
 
-(donde x.y es la versión del paquete;
-en el momento de redactar este artículo la última versión estable era la 1.5),
+(donde x.y es la versiÃ³n del paquete;
+en el momento de redactar este artÃ­culo la Ãºltima versiÃ³n estable era la 1.5),
 es desempaquetarlo en el directorio donde queramos tenerlo instalado:
 </p>
 <p class="codigo">
 tar -xvzf z88dk-src-x.y.tar.gz
 </p>
 <p>
-Una vez hecho esto debemos compilar los distintos binarios y librerías que componen z88dk:
+Una vez hecho esto debemos compilar los distintos binarios y librerÃ­as que componen z88dk:
 </p>
 <p class="codigo">
 cd z88dk<br>
@@ -139,7 +139,7 @@ cd z88dk<br>
 Para el uso de z88dk debemos darle un valor a una serie de variables de entorno.
 Podemos hacer esto
 creando un fichero <span class="codigo">setpath.sh</span> (al que daremos permisos
-de ejecución con
+de ejecuciÃ³n con
 
 <span class="codigo">chmod a+x setpath.sh</span>) con el
 siguiente contenido:
@@ -163,12 +163,12 @@ source setpath.sh
 Con esto hacemos que las variables de entorno queden definidas para el shell actual.
 </p>
 <p>
-Una herramienta de la que haremos uso en la creación de nuestros programas es
+Una herramienta de la que haremos uso en la creaciÃ³n de nuestros programas es
 bin2tap. Este programa transforma
 los binarios producidos por el compilador en archivos TAP que pueden ser
 ejecutados en un emulador. Afortunadamete,
 este programa viene incluido con z88dk. Desgraciadamente, se incluye sin
-compilar, y además, tampoco se
+compilar, y ademÃ¡s, tampoco se
 compila al ejecutar el <span class="codigo">./build.sh</span> anteriormente indicado.
 Para construirlo, nos desplazamos al directorio
 <span class="codigo">$Z88DK/support/zx/</span>, y ejecutamos:
@@ -178,7 +178,7 @@ cc -o bin2tap bin2tap.c
 </p>
 <p>
 De esa forma crearemos el ejecutable del programa. Para poder utilizarlo
-cómodamente, lo copiamos al directorio <span class="codigo">bin</span>:
+cÃ³modamente, lo copiamos al directorio <span class="codigo">bin</span>:
 
 </p>
 <p class="codigo">
@@ -189,7 +189,7 @@ mv $Z88DK/support/zx/bin2tap $Z88DK/bin/
 </p>
 <p>
 Una vez instalado el paquete, y preparado nuestro sistema, pasamos a explicar
-cómo podemos compilar
+cÃ³mo podemos compilar
 nuestros programas, y ejecutarlos en cualquier emulador. Para ello nos
 basamos en los ejemplos situados
 en el directorio <span class="codigo">$Z88DK/examples/spectrum</span>.
@@ -197,11 +197,11 @@ en el directorio <span class="codigo">$Z88DK/examples/spectrum</span>.
 <p>
 En el directorio anterior encontramos una serie de archivos .c, conteniendo programas
 en C que utilizan
-las librerías de z88dk. En el archivo <span class="codigo">README</span> tenemos una
-descripción de qué hace cada uno de ellos. Vamos
+las librerÃ­as de z88dk. En el archivo <span class="codigo">README</span> tenemos una
+descripciÃ³n de quÃ© hace cada uno de ellos. Vamos
 a compilar y a probar el <span class="codigo">gfx.c</span>, que incorpora una
-serie de efectos gráficos y que a priori
-puede parecer el más espectacular, visualmente hablando. Para ello, según
+serie de efectos grÃ¡ficos y que a priori
+puede parecer el mÃ¡s espectacular, visualmente hablando. Para ello, segÃºn
 el archivo <span class="codigo">README</span>, podemos ejecutar:
 
 </p>
@@ -209,83 +209,83 @@ el archivo <span class="codigo">README</span>, podemos ejecutar:
 zcc +zx -o gfx.bin gfx.c -lndos
 </p>
 <p>
-A continuación hacemos una breve descripción de la sintaxis:
+A continuaciÃ³n hacemos una breve descripciÃ³n de la sintaxis:
 <ul>
-<li>Justo después del comando zcc especificamos la máquina destino, es decir,
-la máquina para la cual se
+<li>Justo despuÃ©s del comando zcc especificamos la mÃ¡quina destino, es decir,
+la mÃ¡quina para la cual se
 va a producir el binario. En nuestro caso deseamos crear un binario para el
-ZX Spectrum, así que usamos
-el modificador +zx (los modificadores correspondientes a cada una de las máquinas
+ZX Spectrum, asÃ­ que usamos
+el modificador +zx (los modificadores correspondientes a cada una de las mÃ¡quinas
 soportadas los podemos
 encontrar en <span class="codigo">$Z88DK/doc/compile.txt</span>).</li>
-<li>Con el parámetro -o especificamos el nombre del archivo binario resultante
+<li>Con el parÃ¡metro -o especificamos el nombre del archivo binario resultante
 (en nuestro caso, gfx.bin).</li>
-<li>Después indicamos el nombre del fichero fuente.</li>
-<li>Por último, con -lndos hacemos que se enlace con la librería ndos
-(en próximas entregas entraremos en detalle
-sobre las librerías más útiles y las funcionalidades que ofrecen). Las
-librerías se encuentran en <span class="codigo">$Z88DK/libsrc/</span>.</li>
+<li>DespuÃ©s indicamos el nombre del fichero fuente.</li>
+<li>Por Ãºltimo, con -lndos hacemos que se enlace con la librerÃ­a ndos
+(en prÃ³ximas entregas entraremos en detalle
+sobre las librerÃ­as mÃ¡s Ãºtiles y las funcionalidades que ofrecen). Las
+librerÃ­as se encuentran en <span class="codigo">$Z88DK/libsrc/</span>.</li>
 
 </ul>
 </p>
 <p>
 Como se puede observar, la sintaxis es muy parecida al compilador gcc de
-Linux, así que si ya estamos
-acostumbrados a programar en C en esta plataforma, no deberíamos tener ningún
+Linux, asÃ­ que si ya estamos
+acostumbrados a programar en C en esta plataforma, no deberÃ­amos tener ningÃºn
 problema. El archivo resultante,
 gfx.bin, es un archivo binario (no entenderemos su contenido si lo editamos
 con un editor de texto). Hay que
-tener en cuenta que zcc no es el compilador en sí, sino que es un frontend que
+tener en cuenta que zcc no es el compilador en sÃ­, sino que es un frontend que
 se encarga de ejecutar el
 compilador y el ensamblador/enlazador (todas estas aplicaciones se pueden
 encontrar en el directorio <span class="codigo">$Z88DK/bin/</span>).
 </p>
 <p>
-Este archivo binario todavía no puede ser ejecutado en ningún emulador,
+Este archivo binario todavÃ­a no puede ser ejecutado en ningÃºn emulador,
 primero debemos pasarlo a un formato
-adecuado. Para ello podemos hacer uso de la aplicación bin2tap, que compilamos
+adecuado. Para ello podemos hacer uso de la aplicaciÃ³n bin2tap, que compilamos
 en el apartado anterior:
 </p>
 <p class="codigo">
 bin2tap gfx.bin gfx.tap
 </p>
 <p>
-¡Y ya podemos probar el programa en nuestro emulador favorito!
+Â¡Y ya podemos probar el programa en nuestro emulador favorito!
 </p>
 
 
 <table border="0" cellspacing="0" cellpadding="2" width="328">
 	<tr align="right">
-		<td><img src="img/z88dk1_1.png" width="328" height="266"  alt="Efecto gráfico programado en C para el Spectrum por medio de z88dk" />
+		<td><img src="img/z88dk1_1.png" width="328" height="266"  alt="Efecto grÃ¡fico programado en C para el Spectrum por medio de z88dk" />
 </td>
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">Efecto gráfico programado en C para el Spectrum por medio de z88dk</td>
+		<td class="piefoto" align="right">Efecto grÃ¡fico programado en C para el Spectrum por medio de z88dk</td>
 	</tr>
 </table>
 
 
 <p>
-<b>INSTALACIÓN EN WINDOWS</b> <i>(gracias a la colaboración de MIGUEL)</i>
+<b>INSTALACIÃ“N EN WINDOWS</b> <i>(gracias a la colaboraciÃ³n de MIGUEL)</i>
 </p>
 <p>
-Esta instalación ha sido realizada y probada sobre un PC con Windows 98 Second Edition.
-Se intentó realizar en un
+Esta instalaciÃ³n ha sido realizada y probada sobre un PC con Windows 98 Second Edition.
+Se intentÃ³ realizar en un
 sistema con Windows XP y los ejecutables contenidos en el directorio bin daban
 el error <i>"xxxxxxx.exe
-no es un archivo win32 válido"</i> (Esto puede ser debido más al PC en el que el
+no es un archivo win32 vÃ¡lido"</i> (Esto puede ser debido mÃ¡s al PC en el que el
 autor tiene instalado el
 sistema operativo que a problemas de incompatibilidad  entre el propio z88dk y Windows XP).
 </p>
 <p>
 El primer paso que tenemos que llevar a cabo es descargarnos el archivo
 <span class="codigo">z88dk-win32-x.y.zip</span> (donde x.y
-indica la versión de z88dk) que podemos
+indica la versiÃ³n de z88dk) que podemos
 encontrar en la web del proyecto. Una vez descargado, descomprimimos el
 zip en el directorio <span class="codigo">c:\z88dk</span>, que va a ser el directorio que
 usemos por defecto para explicar la
-instalación, y que podemos cambiar a uno que nos agrade más cambiando la ruta
-en todas las explicaciones que se dan a continuación.
+instalaciÃ³n, y que podemos cambiar a uno que nos agrade mÃ¡s cambiando la ruta
+en todas las explicaciones que se dan a continuaciÃ³n.
 
 </p>
 
@@ -301,21 +301,21 @@ en todas las explicaciones que se dan a continuación.
 </table>
 
 <p>
-Lo siguiente es añadir la ruta de los ejecutables y las librerías al archivo
+Lo siguiente es aÃ±adir la ruta de los ejecutables y las librerÃ­as al archivo
 <span class="codigo">autoexec.bat</span>. Para esto
 tenemos dos opciones:
 </p>
 <ol>
 <li>
 <p>
-Añadir manualmente la ruta, editando el archivo <span class="codigo">autoexec.bat</span>.
+AÃ±adir manualmente la ruta, editando el archivo <span class="codigo">autoexec.bat</span>.
 </p>
 <p>
 Para hacerlo simplemente editamos el archivo autoexec.bat, situado en
 <span class="codigo">c:/</span>, con el Bloc de Notas de Windows,
 o, desde una ventana de MS-DOS con <span class="codigo">"edit autoexec.bat"</span>
 
-y le añadimos las siguientes líneas:
+y le aÃ±adimos las siguientes lÃ­neas:
 </p>
 <p class="codigo">
 SET Z80_OZFILES=C:\z88dk\Lib\<br>
@@ -327,9 +327,9 @@ SET PATH=%PATH%;C:\z88dk\Bin
 <p>
 Al descomprimir el zip que contiene los archivos del z88dk, hay un archivo llamado
 <span class="codigo">SETZ88-W95.inf</span>,
-situamos el puntero del ratón encima de él, pulsamos el botón derecho y hacemos
+situamos el puntero del ratÃ³n encima de Ã©l, pulsamos el botÃ³n derecho y hacemos
 clic en instalar, con
-lo cual se añade la ruta automáticamente al archivo <span class="codigo">autoexec.bat</span>.
+lo cual se aÃ±ade la ruta automÃ¡ticamente al archivo <span class="codigo">autoexec.bat</span>.
 
 </p>
 </li>
@@ -354,7 +354,7 @@ PC para que se actualicen las rutas que acabamos de introducir.
 <b>COMPILAR Y EJECUTAR EN WINDOWS</b>
 </p>
 <p>
-Cuando programamos con z88dk, escribimos el código en lenguaje C en archivos de
+Cuando programamos con z88dk, escribimos el cÃ³digo en lenguaje C en archivos de
 texto plano, con nuestro editor preferido, puede ser el Bloc de Notas que trae
 Windows perfectamente. Estos archivos se suelen nombrar como
 <span class="codigo">programa.c</span>.
@@ -368,30 +368,30 @@ en un ordenador real, vamos a usar uno de los ejemplos que vienen con el z88dk.
 <ul>
 <li>
 <p>
-Lo primero que hacemos es abrir una ventana de MS-DOS y, después, desde ésta nos
-situamos en la carpeta donde están los ejemplos para el ZX Spectrum:
+Lo primero que hacemos es abrir una ventana de MS-DOS y, despuÃ©s, desde Ã©sta nos
+situamos en la carpeta donde estÃ¡n los ejemplos para el ZX Spectrum:
 </p>
 <p>
 <span class="codigo">CD..</span><br>
- Para colocarnos en el directorio raíz de C:
+ Para colocarnos en el directorio raÃ­z de C:
 </p>
 <p>
 <span class="codigo">CD z88dk\examples\spectrum</span><br>
-Con eso nos situamos en la carpeta donde están los ejemplos para ZX Spectrum
+Con eso nos situamos en la carpeta donde estÃ¡n los ejemplos para ZX Spectrum
 
 </p>
 <p>
 En esta carpeta encontraremos varios ficheros, concretamente vamos a usar el
-<span class="codigo">gfx.c</span> que nos crea unos efectos gráficos en la
+<span class="codigo">gfx.c</span> que nos crea unos efectos grÃ¡ficos en la
 pantalla del emulador/Spectrum.
 </p>
 </li>
 <li>
 <p>
 Ahora tenemos que compilar el programa, para ello vamos a usar el ejecutable
-<span class="codigo">ZCC.EXE</span>, que está ubicado
+<span class="codigo">ZCC.EXE</span>, que estÃ¡ ubicado
 en la carpeta <span class="codigo">BIN</span>, pero no tenemos que entrar en
-ella para nada, ya que anteriormente añadimos el path.
+ella para nada, ya que anteriormente aÃ±adimos el path.
 Vamos a compilar, para ello tecleamos en la ventana de MS-DOS:
 </p>
 <p class="codigo">
@@ -415,7 +415,7 @@ kit del z88dk y situado en el directorio <span class="codigo">\support\zx</span>
 <p>
 Su uso es muy sencillo, tenemos que tener en la misma carpeta el archivo
 <span class="codigo">.BIN</span> y el programa <span class="codigo">BIN2TAP.exe</span>,
-también podemos incluir la ruta del bin2tap en el path, eso lo dejamos a nuestra elección.
+tambiÃ©n podemos incluir la ruta del bin2tap en el path, eso lo dejamos a nuestra elecciÃ³n.
 </p>
 <p>
 Ejecutamos: <span class="codigo">BIN2TAP gfx.bin gfx.tap</span>
@@ -428,8 +428,8 @@ Y ya tenemos nuestro programa preparado para cargarlo en nuestro emulador prefer
 </p>
 <p>
 NOTA: en el caso de disponer de una plataforma Windows se recomienda leer
-también de forma detenida
-el apartado de compilación y ejecución en Linux donde se explican una serie
+tambiÃ©n de forma detenida
+el apartado de compilaciÃ³n y ejecuciÃ³n en Linux donde se explican una serie
 de conceptos importantes sobre el proceso.
 </p>
 <div align="left">
@@ -469,13 +469,13 @@ function RecargarPie(url)
 
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
         <option value="hardware.html">Hardware</option>
 
         <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
     </select>
     <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
@@ -485,7 +485,7 @@ function RecargarPie(url)
 
             </td>
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
     </form>
 </table>
                     </td>

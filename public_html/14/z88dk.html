@@ -2,11 +2,11 @@
 <html lang="es">
     <head>
         <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
@@ -31,26 +31,26 @@ function RecargarCabecera(url)
 </script>
 <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
     <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
         <tr>
 <td align="left">
     <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
 
         <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
     </select>
     <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
 </td>
 
-            <td align="center" class="texto">Número 14 - Diciembre 2006</td>
+            <td align="center" class="texto">NÃºmero 14 - Diciembre 2006</td>
             <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
@@ -67,10 +67,10 @@ function RecargarCabecera(url)
         <td>
 <div align="justify">
 <p align="center"><font size="5">LA LIBRERIA SPRITE PACK (II)</font></p>
-<p><b>INTRODUCCIÓN</b></p>
-<p>En la entrega anterior de la revista comenzamos a examinar la librería <a href="http://www.geocities.com/aralbrec/spritepack/programmer-intro.htm">Sprite Pack</a> y aprendimos a dibujar elementos gráficos sobre la pantalla. También aprendimos que la pantalla estaba dividida en 32x24 "celdas", cada una de las cuales podía contener un <i>tile</i> (cada uno de los elementos que forman parte del fondo) y/o uno o más sprites (gráficos que representaban los diferentes personajes o elementos de nuestro juego). Incluso llegamos a crear un sprite que se movía al azar por la pantalla.</p>
+<p><b>INTRODUCCIÃ“N</b></p>
+<p>En la entrega anterior de la revista comenzamos a examinar la librerÃ­a <a href="http://www.geocities.com/aralbrec/spritepack/programmer-intro.htm">Sprite Pack</a> y aprendimos a dibujar elementos grÃ¡ficos sobre la pantalla. TambiÃ©n aprendimos que la pantalla estaba dividida en 32x24 "celdas", cada una de las cuales podÃ­a contener un <i>tile</i> (cada uno de los elementos que forman parte del fondo) y/o uno o mÃ¡s sprites (grÃ¡ficos que representaban los diferentes personajes o elementos de nuestro juego). Incluso llegamos a crear un sprite que se movÃ­a al azar por la pantalla.</p>
 
-<p>En esta ocasión vamos a añadir un par de sencillos detalles más antes de comenzar a escribir nuestro propio juego; un código que luego podrá formar parte de un producto más elaborado. En concreto veremos cómo hacer reaccionar nuestro programa ante la pulsación de teclas por parte del usuario, y cómo mover un sprite utilizando este dispositivo de entrada. También aprenderemos como añadir color a los sprites. Para nuestras explicaciones haremos uso como base del código <i>sprite2.c</i> que se creó en la anterior entrega, y en el que se definía un sprite de tamaño 2x1 que se desplazaba al azar.</p>
+<p>En esta ocasiÃ³n vamos a aÃ±adir un par de sencillos detalles mÃ¡s antes de comenzar a escribir nuestro propio juego; un cÃ³digo que luego podrÃ¡ formar parte de un producto mÃ¡s elaborado. En concreto veremos cÃ³mo hacer reaccionar nuestro programa ante la pulsaciÃ³n de teclas por parte del usuario, y cÃ³mo mover un sprite utilizando este dispositivo de entrada. TambiÃ©n aprenderemos como aÃ±adir color a los sprites. Para nuestras explicaciones haremos uso como base del cÃ³digo <i>sprite2.c</i> que se creÃ³ en la anterior entrega, y en el que se definÃ­a un sprite de tamaÃ±o 2x1 que se desplazaba al azar.</p>
 <p><b>MOVIENDO LOS SPRITES CON EL TECLADO</b></p>
 <p>Si queremos mover un sprite por la pantalla utilizando el teclado, lo primero que deberemos hacer en nuestro programa es declarar una estructura del siguiente tipo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -81,7 +81,7 @@ struct sp_UDK keys;
     </p></td></tr>
 
 </table>
-<p>La variable <i>keys</i> nos permitirá asociar teclas de nuestro teclado con los diferentes controles de un joystick virtual haciendo uso de la función <i>sp_Lookup_Key</i>, tal como se puede observar a continuación:</p>
+<p>La variable <i>keys</i> nos permitirÃ¡ asociar teclas de nuestro teclado con los diferentes controles de un joystick virtual haciendo uso de la funciÃ³n <i>sp_Lookup_Key</i>, tal como se puede observar a continuaciÃ³n:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -94,8 +94,8 @@ struct sp_UDK keys;
     </p></td></tr>
 
 </table>
-<p>Según este ejemplo, cada vez que pulsáramos 'q' en el teclado es como si estuviéramos moviendo el joystick hacia arriba, al pulsar 'a' simulamos la dirección de abajo del joystick, y así sucesivamente. Varias de estas teclas podrían ser pulsadas simultáneamente sin ningún problema.</p>
-<p>La función <i>sp_JoyKeyboard</i> devuelve una máscara de bits indicándonos qué controles del joystick están accionados en ese momento debido a que sus correspondientes teclas están pulsadas. La forma de interpretar el valor devuelto por esta función es igual que con cualquier máscara de bits en C, y se puede contemplar en el siguiente ejemplo, que consiste en el archivo <i>sprite2.c</i> de la anterior entrega modificado de tal forma que movamos el sprite precisamente con la combinación de teclas indicada anteriormente. Para ello realizamos movimientos relativos del sprite, cambiando cómo desplazamos el sprite en x y en y (dx y dy respectivamente) según los controles de nuestro joystick virtual que estén siendo accionados. El código nuevo respecto a la versión anterior del archivo se muestra en rojo:</p>
+<p>SegÃºn este ejemplo, cada vez que pulsÃ¡ramos 'q' en el teclado es como si estuviÃ©ramos moviendo el joystick hacia arriba, al pulsar 'a' simulamos la direcciÃ³n de abajo del joystick, y asÃ­ sucesivamente. Varias de estas teclas podrÃ­an ser pulsadas simultÃ¡neamente sin ningÃºn problema.</p>
+<p>La funciÃ³n <i>sp_JoyKeyboard</i> devuelve una mÃ¡scara de bits indicÃ¡ndonos quÃ© controles del joystick estÃ¡n accionados en ese momento debido a que sus correspondientes teclas estÃ¡n pulsadas. La forma de interpretar el valor devuelto por esta funciÃ³n es igual que con cualquier mÃ¡scara de bits en C, y se puede contemplar en el siguiente ejemplo, que consiste en el archivo <i>sprite2.c</i> de la anterior entrega modificado de tal forma que movamos el sprite precisamente con la combinaciÃ³n de teclas indicada anteriormente. Para ello realizamos movimientos relativos del sprite, cambiando cÃ³mo desplazamos el sprite en x y en y (dx y dy respectivamente) segÃºn los controles de nuestro joystick virtual que estÃ©n siendo accionados. El cÃ³digo nuevo respecto a la versiÃ³n anterior del archivo se muestra en rojo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -277,21 +277,21 @@ defb @00000000, @11111111
 </pre>
     </p></td></tr>
 </table>
-<p>Al probar el ejemplo nos habremos encontrado con un problema bastante grave: al no controlar cuándo el sprite sobrepasa los límites de la pantalla, es posible desplazar nuestro "bicho" al exterior y perder totalmente su control. Una forma de solucionarlo sería añadir un nuevo control de tal forma que al accionarlo volviéramos a colocar a nuestro bicho en el centro de la pantalla. Esto se puede conseguir realizando mapeados adicionales de teclado a los del joystick virtual. Mediante <i>sp_LookupKey</i> se puede asociar una tecla a una variable <i>uint</i>, de tal forma que más adelante, mediante el uso de otra función adicional llamada <i>sp_KeyPressed</i> podremos saber si dicha tecla está siendo pulsada en este momento.</p>
+<p>Al probar el ejemplo nos habremos encontrado con un problema bastante grave: al no controlar cuÃ¡ndo el sprite sobrepasa los lÃ­mites de la pantalla, es posible desplazar nuestro "bicho" al exterior y perder totalmente su control. Una forma de solucionarlo serÃ­a aÃ±adir un nuevo control de tal forma que al accionarlo volviÃ©ramos a colocar a nuestro bicho en el centro de la pantalla. Esto se puede conseguir realizando mapeados adicionales de teclado a los del joystick virtual. Mediante <i>sp_LookupKey</i> se puede asociar una tecla a una variable <i>uint</i>, de tal forma que mÃ¡s adelante, mediante el uso de otra funciÃ³n adicional llamada <i>sp_KeyPressed</i> podremos saber si dicha tecla estÃ¡ siendo pulsada en este momento.</p>
 
 
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
-		<td><img src="img/z88dk9_1.png" width="640" height="504"  alt="¡Ya podemos mover a nuestro bicho con el teclado!" />
+		<td><img src="img/z88dk9_1.png" width="640" height="504"  alt="Â¡Ya podemos mover a nuestro bicho con el teclado!" />
 </td>
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">¡Ya podemos mover a nuestro bicho con el teclado!</td>
+		<td class="piefoto" align="right">Â¡Ya podemos mover a nuestro bicho con el teclado!</td>
 	</tr>
 </table>
 
 
-<p>El código anterior se ha modificado para añadir dos nuevas funcionalidades. Al pulsar la tecla <i>r</i>, nuestro "bicho" volverá al centro de la pantalla. Por otra parte, la tecla <i>b</i> va a permitir que cambiemos el color del borde. Las modificaciones se muestran en rojo:</p>
+<p>El cÃ³digo anterior se ha modificado para aÃ±adir dos nuevas funcionalidades. Al pulsar la tecla <i>r</i>, nuestro "bicho" volverÃ¡ al centro de la pantalla. Por otra parte, la tecla <i>b</i> va a permitir que cambiemos el color del borde. Las modificaciones se muestran en rojo:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -491,9 +491,9 @@ defb @00000000, @11111111
 </pre>
     </p></td></tr>
 </table>
-<p>Como veremos más adelante, deberemos implementar algún mecanismo para limitar la zona por donde nuestros sprites se van a desplazar. La forma de hacer esto es mediante simples comparaciones, comprobando que el lugar al que vamos a desplazar el sprite no este fuera de la pantalla (o de la zona donde queremos que permanezca).</p>
-<p><b>AÑADIENDO COLOR</b></p>
-<p>Un paso importante para poder tener como resultado un videojuego vistoso y que entre por los ojos es aprovechar los colores de nuestro Spectrum y disponer de una combinación agradable de cromaticidad en los sprites de nuestro juego. Los colores también permitirán distinguir con mayor facilidad nuestro personaje de los enemigos y el resto de elementos de la pantalla. Ya vimos en entregas anteriores que en el caso de los tiles era bastante sencillo modificar la tonalidad de la tinta y el papel:</p>
+<p>Como veremos mÃ¡s adelante, deberemos implementar algÃºn mecanismo para limitar la zona por donde nuestros sprites se van a desplazar. La forma de hacer esto es mediante simples comparaciones, comprobando que el lugar al que vamos a desplazar el sprite no este fuera de la pantalla (o de la zona donde queremos que permanezca).</p>
+<p><b>AÃ‘ADIENDO COLOR</b></p>
+<p>Un paso importante para poder tener como resultado un videojuego vistoso y que entre por los ojos es aprovechar los colores de nuestro Spectrum y disponer de una combinaciÃ³n agradable de cromaticidad en los sprites de nuestro juego. Los colores tambiÃ©n permitirÃ¡n distinguir con mayor facilidad nuestro personaje de los enemigos y el resto de elementos de la pantalla. Ya vimos en entregas anteriores que en el caso de los tiles era bastante sencillo modificar la tonalidad de la tinta y el papel:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -503,8 +503,8 @@ sp_Initialize(INK_WHITE | PAPER_BLACK, ' ');
 </pre>
     </p></td></tr>
 </table>
-<p>pero en el caso de los sprites la cosa se complica un poco más y vamos a tener que dar unas cuantas "vueltas" para llegar a nuestro objetivo. En concreto, deberemos hacer uso de una función llamada <i>sp_IterateSprChar</i>, que recibe como parámetro una variable de tipo <i>struct sp_SS</i>, que representa el sprite que queremos modificar, y el nombre de una función que habremos definido anteriormente. Dicha función, al ser llamada, obtendrá como parámetro una variable de tipo <i>struct sp_CS</i>, una estructura muy interesante que nos va a permitir modificar diversas características del sprite, entre ellas el color.</p>
-<p>El siguiente código muestra, en color rojo, las modificaciones realizadas al programa anterior para poder añadirle color al sprite de nuestro bicho, y que pasaremos a explicar a continuación:</p>
+<p>pero en el caso de los sprites la cosa se complica un poco mÃ¡s y vamos a tener que dar unas cuantas "vueltas" para llegar a nuestro objetivo. En concreto, deberemos hacer uso de una funciÃ³n llamada <i>sp_IterateSprChar</i>, que recibe como parÃ¡metro una variable de tipo <i>struct sp_SS</i>, que representa el sprite que queremos modificar, y el nombre de una funciÃ³n que habremos definido anteriormente. Dicha funciÃ³n, al ser llamada, obtendrÃ¡ como parÃ¡metro una variable de tipo <i>struct sp_CS</i>, una estructura muy interesante que nos va a permitir modificar diversas caracterÃ­sticas del sprite, entre ellas el color.</p>
+<p>El siguiente cÃ³digo muestra, en color rojo, las modificaciones realizadas al programa anterior para poder aÃ±adirle color al sprite de nuestro bicho, y que pasaremos a explicar a continuaciÃ³n:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -735,7 +735,7 @@ defb @00000000, @11111111
 </pre>
     </p></td></tr>
 </table>
-<p>Como se puede comprobar, tras crear el sprite del bicho, hacemos uso de la siguiente instrucción:</p>
+<p>Como se puede comprobar, tras crear el sprite del bicho, hacemos uso de la siguiente instrucciÃ³n:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -744,7 +744,7 @@ sp_IterateSprChar(spriteBicho, addColour);
 </pre>
     </p></td></tr>
 </table>
-<p>Esto significa que vamos a usar una función llamada <i>addColour</i>, y que deberemos haber definido anteriormente dentro del archivo con el código, para modificar las propiedades de <i>spriteBicho</i>. Aunque la instrucción sólo aparece una vez, es como si estuviéramos llamando a la función <i>addColour</i> una vez por cada bloque de 8x8 que forma el sprite del bicho (recordemos que el sprite de nuestro bicho está formado por 3 columnas de 3 bloques de 8x8, por lo que la función <i>addColour</i> será llamada un total de 9 veces). La forma que tiene está función es la siguiente:</p>
+<p>Esto significa que vamos a usar una funciÃ³n llamada <i>addColour</i>, y que deberemos haber definido anteriormente dentro del archivo con el cÃ³digo, para modificar las propiedades de <i>spriteBicho</i>. Aunque la instrucciÃ³n sÃ³lo aparece una vez, es como si estuviÃ©ramos llamando a la funciÃ³n <i>addColour</i> una vez por cada bloque de 8x8 que forma el sprite del bicho (recordemos que el sprite de nuestro bicho estÃ¡ formado por 3 columnas de 3 bloques de 8x8, por lo que la funciÃ³n <i>addColour</i> serÃ¡ llamada un total de 9 veces). La forma que tiene estÃ¡ funciÃ³n es la siguiente:</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -773,10 +773,10 @@ void addColour(struct sp_CS *cs)
 </pre>
     </p></td></tr>
 </table>
-<p>Justo antes se define una variable global llamada <i>n</i>, y que no será más que un contador que nos permitirá saber en cuál de las nueve llamadas a la función <i>addColour</i> nos encontramos. Ya dentro de dicho método se observa como su valor se incrementa de uno en uno en cada llamada.</p>
-<p>Como hemos repetido varias veces, la función <i>addColour</i> será llamada una vez por cada bloque 8x8 que forme nuestro sprite, recibiendo como parámetro un struct de tipo sp_CS que nos va a permitir modificar diversas características de dicho bloque del sprite. Uno de los campos de ese struct es <i>colour</i>, que como su propio nombre indica, es el indicado para añadir color. Gracias al valor de <i>n</i>, podremos conocer en cuál de todos los bloques del sprite nos encontramos (empezando por el 0, los bloques están ordenados de arriba a abajo y de izquierda a derecha, por lo que en el caso de nuestro bicho, aun estando compuesto por 3x3 bloques, sólo nos interesará colorear aquellos para los que n vale 0,1,3 y 4, que son los que no están vacíos) y asignarle un color de tinta y papel modificando el valor del campo <i>colour</i> del <i>struct sp_CS</i>, tal como se puede observar en el código anterior.</p>
+<p>Justo antes se define una variable global llamada <i>n</i>, y que no serÃ¡ mÃ¡s que un contador que nos permitirÃ¡ saber en cuÃ¡l de las nueve llamadas a la funciÃ³n <i>addColour</i> nos encontramos. Ya dentro de dicho mÃ©todo se observa como su valor se incrementa de uno en uno en cada llamada.</p>
+<p>Como hemos repetido varias veces, la funciÃ³n <i>addColour</i> serÃ¡ llamada una vez por cada bloque 8x8 que forme nuestro sprite, recibiendo como parÃ¡metro un struct de tipo sp_CS que nos va a permitir modificar diversas caracterÃ­sticas de dicho bloque del sprite. Uno de los campos de ese struct es <i>colour</i>, que como su propio nombre indica, es el indicado para aÃ±adir color. Gracias al valor de <i>n</i>, podremos conocer en cuÃ¡l de todos los bloques del sprite nos encontramos (empezando por el 0, los bloques estÃ¡n ordenados de arriba a abajo y de izquierda a derecha, por lo que en el caso de nuestro bicho, aun estando compuesto por 3x3 bloques, sÃ³lo nos interesarÃ¡ colorear aquellos para los que n vale 0,1,3 y 4, que son los que no estÃ¡n vacÃ­os) y asignarle un color de tinta y papel modificando el valor del campo <i>colour</i> del <i>struct sp_CS</i>, tal como se puede observar en el cÃ³digo anterior.</p>
 
-<p>Sólo deberemos colorear los bloques 0,1,3 y 4 de nuestro bicho, pues el bloque 2 se corresponde con el último de la primera columna (que está vacío), el bloque 5 con el último de la segunda columna (que también está vacío) y los bloques 6,7 y 8 con la última columna de todas, también vacía, y que se añadió para que no hubiera problemas al desplazar el sprite. En el caso de los bloques 2 y 5 lo más correcto hubiera sido utilizar el valor <i>TRANSPARENT</i> para el campo <i>colour</i> (aunque en nuestro ejemplo hemos sido un poco transgresores y el bloque 2 no lo hemos hecho transparente). Para la última columna (bloques para los que <i>n</i> vale más que 5), sin embargo, asignamos el valor <i>sp_NullSprPtr</i> al campo <i>colour</i>. Este valor, que ha sido definido anteriormente en el programa de la siguiente forma:</p>
+<p>SÃ³lo deberemos colorear los bloques 0,1,3 y 4 de nuestro bicho, pues el bloque 2 se corresponde con el Ãºltimo de la primera columna (que estÃ¡ vacÃ­o), el bloque 5 con el Ãºltimo de la segunda columna (que tambiÃ©n estÃ¡ vacÃ­o) y los bloques 6,7 y 8 con la Ãºltima columna de todas, tambiÃ©n vacÃ­a, y que se aÃ±adiÃ³ para que no hubiera problemas al desplazar el sprite. En el caso de los bloques 2 y 5 lo mÃ¡s correcto hubiera sido utilizar el valor <i>TRANSPARENT</i> para el campo <i>colour</i> (aunque en nuestro ejemplo hemos sido un poco transgresores y el bloque 2 no lo hemos hecho transparente). Para la Ãºltima columna (bloques para los que <i>n</i> vale mÃ¡s que 5), sin embargo, asignamos el valor <i>sp_NullSprPtr</i> al campo <i>colour</i>. Este valor, que ha sido definido anteriormente en el programa de la siguiente forma:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
     <tr><td><p class="codigo">
@@ -789,22 +789,22 @@ LIB SPNullSprPtr
 </pre>
     </p></td></tr>
 </table>
-<p>evitará que esa columna vacía "moleste" al resto de los sprites con los que nuestro bicho entre en contacto.</p>
-<p>Y ya está, ya le hemos dado color a nuestro bicho (eso sí, una combinación bastante psicodélica). Cada vez que queramos hacer lo mismo con cualquier otro sprite, tan solo deberemos seguir la receta anterior, pues es algo mecánico.</p>
+<p>evitarÃ¡ que esa columna vacÃ­a "moleste" al resto de los sprites con los que nuestro bicho entre en contacto.</p>
+<p>Y ya estÃ¡, ya le hemos dado color a nuestro bicho (eso sÃ­, una combinaciÃ³n bastante psicodÃ©lica). Cada vez que queramos hacer lo mismo con cualquier otro sprite, tan solo deberemos seguir la receta anterior, pues es algo mecÃ¡nico.</p>
 
 <table border="0" cellspacing="0" cellpadding="2" width="640">
 	<tr align="right">
-		<td><img src="img/z88dk9_2.png" width="640" height="508"  alt="Nuestro sprite a color. Evidentemente, la combinación de colores puede ser mejorada" />
+		<td><img src="img/z88dk9_2.png" width="640" height="508"  alt="Nuestro sprite a color. Evidentemente, la combinaciÃ³n de colores puede ser mejorada" />
 
 </td>
 	</tr>
 	<tr>
-		<td class="piefoto" align="right">Nuestro sprite a color. Evidentemente, la combinación de colores puede ser mejorada</td>
+		<td class="piefoto" align="right">Nuestro sprite a color. Evidentemente, la combinaciÃ³n de colores puede ser mejorada</td>
 	</tr>
 </table>
 
 <p><b>UN NUEVO JUEGO</b></p>
-<p>A continuación, y empleando el conocimiento adquirido tanto en este número como en el número anterior del magazine, vamos a comenzar a desarrollar nuestro propio juego. Al hacerlo nos encontraremos con una serie de problemas que iremos resolviendo en próximos artículos. En nuestro juego controlaremos los movimientos de un esquiador que deberá descender una montaña esquivando todas las rocas que se interpongan en su camino. El esquiador estará situado en la parte superior de la pantalla y podrá desplazarse a izquierda y derecha. Las rocas subirán desde la parte inferior de la pantalla, simulando el descenso por la pendiente nevada de la montaña.</p>
+<p>A continuaciÃ³n, y empleando el conocimiento adquirido tanto en este nÃºmero como en el nÃºmero anterior del magazine, vamos a comenzar a desarrollar nuestro propio juego. Al hacerlo nos encontraremos con una serie de problemas que iremos resolviendo en prÃ³ximos artÃ­culos. En nuestro juego controlaremos los movimientos de un esquiador que deberÃ¡ descender una montaÃ±a esquivando todas las rocas que se interpongan en su camino. El esquiador estarÃ¡ situado en la parte superior de la pantalla y podrÃ¡ desplazarse a izquierda y derecha. Las rocas subirÃ¡n desde la parte inferior de la pantalla, simulando el descenso por la pendiente nevada de la montaÃ±a.</p>
 
 
 <table border="0" cellspacing="0" cellpadding="2" width="640">
@@ -818,7 +818,7 @@ LIB SPNullSprPtr
 </table>
 
 
-<p>El código completo, que comentaremos a lo largo de esta sección (aunque no en detalle, sólo aquellas partes que difieran de lo visto hasta ahora o introduzcan conceptos nuevos), es el siguiente:</p>
+<p>El cÃ³digo completo, que comentaremos a lo largo de esta secciÃ³n (aunque no en detalle, sÃ³lo aquellas partes que difieran de lo visto hasta ahora o introduzcan conceptos nuevos), es el siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -1216,9 +1216,9 @@ defb @00000000, @11111111
 </pre>
     </p></td></tr>
 </table>
-<p>Se han definido un total de cuatro sprites. El sprite de tipo <i>roca</i> (dividido en tres columnas denominadas <i>roca1, roca2</i> y <i>roca3</i>) será el que representará los obstáculos que encontrará nuestro intrépido esquiador en su descenso. Para el protagonista de nuestro juego se han definido tres sprites divididos cada uno de ellos en dos columnas: <i>skiCentrado</i> que será el que se mostrará cuando el esquiador esté descendiendo sin que lo movamos a izquierda o derecha, <i>skiIzquierda</i> que representa nuestro esquiador desplazándose hacia la izquierda, y <i>skiDerecha</i> que a su vez representa al mismo esquiador desplazándose a la derecha.</p>
+<p>Se han definido un total de cuatro sprites. El sprite de tipo <i>roca</i> (dividido en tres columnas denominadas <i>roca1, roca2</i> y <i>roca3</i>) serÃ¡ el que representarÃ¡ los obstÃ¡culos que encontrarÃ¡ nuestro intrÃ©pido esquiador en su descenso. Para el protagonista de nuestro juego se han definido tres sprites divididos cada uno de ellos en dos columnas: <i>skiCentrado</i> que serÃ¡ el que se mostrarÃ¡ cuando el esquiador estÃ© descendiendo sin que lo movamos a izquierda o derecha, <i>skiIzquierda</i> que representa nuestro esquiador desplazÃ¡ndose hacia la izquierda, y <i>skiDerecha</i> que a su vez representa al mismo esquiador desplazÃ¡ndose a la derecha.</p>
 
-<p>Como debemos reservar memoria para los sprites que vayamos a mostrar por pantalla, lo haremos para cada una de las tres posiciones del esquiador (de tal forma que mostraremos la adecuada según el movimiento del jugador) y un número fijo de rocas. Es probable que no todas las rocas sean visibles simultáneamente durante el juego, pero hacerlo de esta forma simplifica en gran medida el diseño, sin tener que hacer grandes esfuerzos para reservar o liberar memoria cuando sea necesario. En concreto, la constante NUM_ROCAS es la que vamos a usar para indicar el número de rocas que se van a crear. Se define un array llamado <i>spriteRoca</i> con tantas posiciones como las indicadas por la constante anteriormente mencionada, y en cada posición de dicho array se reserva memoria para un sprite de tipo roca que es coloreado con su correspondiente función <i>addColour</i>:</p>
+<p>Como debemos reservar memoria para los sprites que vayamos a mostrar por pantalla, lo haremos para cada una de las tres posiciones del esquiador (de tal forma que mostraremos la adecuada segÃºn el movimiento del jugador) y un nÃºmero fijo de rocas. Es probable que no todas las rocas sean visibles simultÃ¡neamente durante el juego, pero hacerlo de esta forma simplifica en gran medida el diseÃ±o, sin tener que hacer grandes esfuerzos para reservar o liberar memoria cuando sea necesario. En concreto, la constante NUM_ROCAS es la que vamos a usar para indicar el nÃºmero de rocas que se van a crear. Se define un array llamado <i>spriteRoca</i> con tantas posiciones como las indicadas por la constante anteriormente mencionada, y en cada posiciÃ³n de dicho array se reserva memoria para un sprite de tipo roca que es coloreado con su correspondiente funciÃ³n <i>addColour</i>:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -1235,7 +1235,7 @@ defb @00000000, @11111111
     </p></td></tr>
 
 </table>
-<p>Un par de comentarios sobre la definición de los sprites en este programa: como primer parámetro para los sprites de tipo roca en la función <i>sp_CreateSpr</i> se pasa el valor <i>sp_OR_SPRITE</i> en lugar de <i>sp_MASK_SPRITE</i>. Esto permite mayor velocidad en el dibujado de las rocas por la pantalla a cambio de renunciar a que el sprite pueda tener píxeles transparentes en su interior. Por otra parte, antes de llamar a la correspondiente función addColour para cada sprite se vuelve a dar a la variable global <i>n</i> el valor 0, de tal forma que se pueda iterar de nuevo por todos los bloques de cada nuevo sprite que queramos colorear. Esto se puede ver también en el caso de los tres sprites para el esquiador.</p>
+<p>Un par de comentarios sobre la definiciÃ³n de los sprites en este programa: como primer parÃ¡metro para los sprites de tipo roca en la funciÃ³n <i>sp_CreateSpr</i> se pasa el valor <i>sp_OR_SPRITE</i> en lugar de <i>sp_MASK_SPRITE</i>. Esto permite mayor velocidad en el dibujado de las rocas por la pantalla a cambio de renunciar a que el sprite pueda tener pÃ­xeles transparentes en su interior. Por otra parte, antes de llamar a la correspondiente funciÃ³n addColour para cada sprite se vuelve a dar a la variable global <i>n</i> el valor 0, de tal forma que se pueda iterar de nuevo por todos los bloques de cada nuevo sprite que queramos colorear. Esto se puede ver tambiÃ©n en el caso de los tres sprites para el esquiador.</p>
 <p>Una vez creados los sprites se utilizan las siguientes instrucciones:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
@@ -1247,9 +1247,9 @@ defb @00000000, @11111111
 </pre>
     </p></td></tr>
 </table>
-<p>El puntero <i>ski</i> apuntará en todo momento al sprite del esquiador que deba ser mostrado por pantalla. El esquiador comenzará mirando hacia abajo, ya que no se está moviendo ni a izquierda ni a derecha; por lo tanto, <i>ski</i> apuntará al sprite <i>spriteSkiCentrado</i>, que es el que deberá ser visualizado. Cada vez que el esquiador se mueva a izquierda o derecha, <i>ski</i> apuntará, respectivamente, a <i>spriteSkiIzquierda</i> y <i>spriteSkiDerecha</i>.</p>
+<p>El puntero <i>ski</i> apuntarÃ¡ en todo momento al sprite del esquiador que deba ser mostrado por pantalla. El esquiador comenzarÃ¡ mirando hacia abajo, ya que no se estÃ¡ moviendo ni a izquierda ni a derecha; por lo tanto, <i>ski</i> apuntarÃ¡ al sprite <i>spriteSkiCentrado</i>, que es el que deberÃ¡ ser visualizado. Cada vez que el esquiador se mueva a izquierda o derecha, <i>ski</i> apuntarÃ¡, respectivamente, a <i>spriteSkiIzquierda</i> y <i>spriteSkiDerecha</i>.</p>
 
-<p>En el bucle principal iniciado por la sentencia <i>while(1)</i> y que se ejecutará de forma infinita, vemos como se resuelve el tema de la animación del protagonista, la limitación de sus movimientos por la pantalla, y el movimiento de las rocas. Comencemos por la primera parte de dicho bucle, que es donde encontramos el código referido al movimiento del esquiador:</p>
+<p>En el bucle principal iniciado por la sentencia <i>while(1)</i> y que se ejecutarÃ¡ de forma infinita, vemos como se resuelve el tema de la animaciÃ³n del protagonista, la limitaciÃ³n de sus movimientos por la pantalla, y el movimiento de las rocas. Comencemos por la primera parte de dicho bucle, que es donde encontramos el cÃ³digo referido al movimiento del esquiador:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
@@ -1293,17 +1293,17 @@ defb @00000000, @11111111
 </pre>
     </p></td></tr>
 </table>
-<p>Cada vez que el esquiador cambia de posición, se debe hacer apuntar a <i>ski</i> hacia el sprite adecuado. Esto sólo se debe hacer en la primera iteración en la que estemos moviéndonos en esa dirección. Para ello se observa que se utiliza una variable <i>posicion</i>, inicializada a cero, y que valdrá precisamente 0 si el sprite a mostrar por pantalla debe ser <i>spriteSkiCentrado</i>, y -1 o 1 si se debe mostrar el esquiador desplazándose hacia la izquierda o la derecha, respectivamente. Este valor nos va a permitir saber cuándo debemos hacer que el puntero <i>ski</i> apunte hacia otro sprite diferente del que lo estaba haciendo hasta ese momento.</p>
-<p>Veámoslo con un ejemplo. Supongamos que el esquiador se está deslizando ladera abajo, sin que el jugador lo mueva a izquierda o derecha. En este caso, <i>ski</i> apunta a <i>spriteSkiCentrado</i>, y <i>posicion</i> vale 0. A continuación, el jugador pulsa la tecla de la derecha y la mantiene presionada. En la primera iteración en la que esto sucede, se realizan las siguientes acciones:</p>
+<p>Cada vez que el esquiador cambia de posiciÃ³n, se debe hacer apuntar a <i>ski</i> hacia el sprite adecuado. Esto sÃ³lo se debe hacer en la primera iteraciÃ³n en la que estemos moviÃ©ndonos en esa direcciÃ³n. Para ello se observa que se utiliza una variable <i>posicion</i>, inicializada a cero, y que valdrÃ¡ precisamente 0 si el sprite a mostrar por pantalla debe ser <i>spriteSkiCentrado</i>, y -1 o 1 si se debe mostrar el esquiador desplazÃ¡ndose hacia la izquierda o la derecha, respectivamente. Este valor nos va a permitir saber cuÃ¡ndo debemos hacer que el puntero <i>ski</i> apunte hacia otro sprite diferente del que lo estaba haciendo hasta ese momento.</p>
+<p>VeÃ¡moslo con un ejemplo. Supongamos que el esquiador se estÃ¡ deslizando ladera abajo, sin que el jugador lo mueva a izquierda o derecha. En este caso, <i>ski</i> apunta a <i>spriteSkiCentrado</i>, y <i>posicion</i> vale 0. A continuaciÃ³n, el jugador pulsa la tecla de la derecha y la mantiene presionada. En la primera iteraciÃ³n en la que esto sucede, se realizan las siguientes acciones:</p>
 
 <ul>
-<li>Se mueve <i>spriteSkiDerecha</i>, que representa al esquiador desplazándose en esa dirección, a la misma posición de la pantalla donde se encuentra el sprite del esquiador centrado, que es el que se estaba mostrando hasta ahora. Para conocer esa posición se hace uso de los campos <i>row</i> y <i>col</i> de la estructura <i>ski</i>.</li>
-<li>A continuación, el sprite apuntado por <i>ski</i> se mueve fuera de la pantalla, pues no va a ser mostrado más.</li>
+<li>Se mueve <i>spriteSkiDerecha</i>, que representa al esquiador desplazÃ¡ndose en esa direcciÃ³n, a la misma posiciÃ³n de la pantalla donde se encuentra el sprite del esquiador centrado, que es el que se estaba mostrando hasta ahora. Para conocer esa posiciÃ³n se hace uso de los campos <i>row</i> y <i>col</i> de la estructura <i>ski</i>.</li>
+<li>A continuaciÃ³n, el sprite apuntado por <i>ski</i> se mueve fuera de la pantalla, pues no va a ser mostrado mÃ¡s.</li>
 
 <li>La variable <i>ski</i> apunta a <i>spriteSkiDerecha</i>, para poder mostrarlo por la pantalla.</li>
-<li>Se cambia el valor de <i>posicion</i> a 1, indicando que ya hemos estado al menos una iteración desplazándonos hacia la derecha y que no es necesario repetir todas estas operaciones en el caso en el que sigamos moviéndonos en esta dirección.</li>
+<li>Se cambia el valor de <i>posicion</i> a 1, indicando que ya hemos estado al menos una iteraciÃ³n desplazÃ¡ndonos hacia la derecha y que no es necesario repetir todas estas operaciones en el caso en el que sigamos moviÃ©ndonos en esta direcciÃ³n.</li>
 </ul>
-<p>Sólo podremos desplazarnos hacia la izquierda o la derecha siempre que nos encontremos dentro de los límites de la pantalla. Esto se controla de la siguiente forma:</p>
+<p>SÃ³lo podremos desplazarnos hacia la izquierda o la derecha siempre que nos encontremos dentro de los lÃ­mites de la pantalla. Esto se controla de la siguiente forma:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
@@ -1314,7 +1314,7 @@ else if ((i & sp_RIGHT) == 0 <font color="red">&& ski->col < 30</font>)
 </pre>
     </p></td></tr>
 </table>
-<p>Con respecto a las rocas, moveremos tan solo una en cada iteración del bucle principal. Esto no es más que una medida preliminar para conseguir un mínimo de velocidad y algo de sincronización, pero es evidente que deberemos modificar este apartado del código más adelante. Para poder desplazar tan solo una roca en cada iteración, hacemos uso de la variable <i>roca</i>, inicializada a cero, que nos va a indicar cual de todas las rocas va a ser movida. Esta variable se incrementa en 1 cada vez, volviéndole a asignar el valor 0 cuando almacena un entero superior al valor indicado por NUM_ROCAS. Finalmente, y como se puede observar en el código siguiente, esta variable <i>roca</i> se utiliza como indice del array de sprites de tipo roca, determinando qué roca se mueve.</p>
+<p>Con respecto a las rocas, moveremos tan solo una en cada iteraciÃ³n del bucle principal. Esto no es mÃ¡s que una medida preliminar para conseguir un mÃ­nimo de velocidad y algo de sincronizaciÃ³n, pero es evidente que deberemos modificar este apartado del cÃ³digo mÃ¡s adelante. Para poder desplazar tan solo una roca en cada iteraciÃ³n, hacemos uso de la variable <i>roca</i>, inicializada a cero, que nos va a indicar cual de todas las rocas va a ser movida. Esta variable se incrementa en 1 cada vez, volviÃ©ndole a asignar el valor 0 cuando almacena un entero superior al valor indicado por NUM_ROCAS. Finalmente, y como se puede observar en el cÃ³digo siguiente, esta variable <i>roca</i> se utiliza como indice del array de sprites de tipo roca, determinando quÃ© roca se mueve.</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
@@ -1336,22 +1336,22 @@ else if ((i & sp_RIGHT) == 0 <font color="red">&& ski->col < 30</font>)
 </pre>
     </p></td></tr>
 </table>
-<p>Cada roca se desplazará hacia arriba en la pantalla usando un valor de desplazamiento <i>dy = -4</i>, hasta llegar a un valor de -10 en su coordenada y. En ese momento, la roca ya habrá desaparecido de la pantalla por su parte superior. Si una roca está fuera de la pantalla, volveremos a sacarla por debajo de nuevo en una posición x al azar (como si fuera otra roca distinta) con una probabilidad del 98% (para que una roca que ha salido por la parte superior de la pantalla no vuelva a aparecer inmediatamente por la parte inferior y que efectivamente parezca una roca diferente). Se podría modificar el valor de la constante <i>NUM_ROCAS</i> para cambiar el número de obstáculos, pero se ha escogido un valor que hace que el juego no vaya demasiado lento.</p>
+<p>Cada roca se desplazarÃ¡ hacia arriba en la pantalla usando un valor de desplazamiento <i>dy = -4</i>, hasta llegar a un valor de -10 en su coordenada y. En ese momento, la roca ya habrÃ¡ desaparecido de la pantalla por su parte superior. Si una roca estÃ¡ fuera de la pantalla, volveremos a sacarla por debajo de nuevo en una posiciÃ³n x al azar (como si fuera otra roca distinta) con una probabilidad del 98% (para que una roca que ha salido por la parte superior de la pantalla no vuelva a aparecer inmediatamente por la parte inferior y que efectivamente parezca una roca diferente). Se podrÃ­a modificar el valor de la constante <i>NUM_ROCAS</i> para cambiar el nÃºmero de obstÃ¡culos, pero se ha escogido un valor que hace que el juego no vaya demasiado lento.</p>
 
-<p>Una vez que compilamos y ejecutamos nuestro juego, nos encontramos con tres problemas, que trataremos de resolver en artículos sucesivos:</p>
+<p>Una vez que compilamos y ejecutamos nuestro juego, nos encontramos con tres problemas, que trataremos de resolver en artÃ­culos sucesivos:</p>
 <ul>
-<li>No hay colisiones. Nuestro esquiador parece un fantasma, pues puede atravesar las rocas sin que éstas le afecten. Eso es porque no hemos establecido un control de colisiones.</li>
-<li>No hay sincronización. Esto quiere decir que la velocidad del juego es diferente según el número de rocas que se estén mostrando en determinado momento por la pantalla. Haciendo uso de las interrupciones podremos conseguir que haya el número de rocas que haya, la velocidad de descenso se mantenga constante.</li>
-<li>Colour clash. Cuando nuestro esquiador y las rocas entran en contacto, se produce un choque de atributos bastante desagradable (los colores de los sprites parecen "mezclarse"). Esto también se puede medio resolver.</li>
+<li>No hay colisiones. Nuestro esquiador parece un fantasma, pues puede atravesar las rocas sin que Ã©stas le afecten. Eso es porque no hemos establecido un control de colisiones.</li>
+<li>No hay sincronizaciÃ³n. Esto quiere decir que la velocidad del juego es diferente segÃºn el nÃºmero de rocas que se estÃ©n mostrando en determinado momento por la pantalla. Haciendo uso de las interrupciones podremos conseguir que haya el nÃºmero de rocas que haya, la velocidad de descenso se mantenga constante.</li>
+<li>Colour clash. Cuando nuestro esquiador y las rocas entran en contacto, se produce un choque de atributos bastante desagradable (los colores de los sprites parecen "mezclarse"). Esto tambiÃ©n se puede medio resolver.</li>
 </ul>
-<p>Por último, un apunte sobre la liberación de memoria. Como hemos visto, cada vez que queremos mostrar un sprite por pantalla, debemos reservar memoria para el mismo. En el caso en el que un sprite no vaya a ser mostrado nunca más, lo más adecuado es liberar la memoria correspondiente, <b>tras</b> haber movido dicho sprite fuera de la pantalla para evitar efectos no deseados.</p>
-<p><b>Y EN EL PRÓXIMO NUMERO</b></p>
+<p>Por Ãºltimo, un apunte sobre la liberaciÃ³n de memoria. Como hemos visto, cada vez que queremos mostrar un sprite por pantalla, debemos reservar memoria para el mismo. En el caso en el que un sprite no vaya a ser mostrado nunca mÃ¡s, lo mÃ¡s adecuado es liberar la memoria correspondiente, <b>tras</b> haber movido dicho sprite fuera de la pantalla para evitar efectos no deseados.</p>
+<p><b>Y EN EL PRÃ“XIMO NUMERO</b></p>
 
-<p>¡La programación de nuestro juego ha comenzado! Sin embargo, nos encontramos con varios problemas, tal como se ha comentado anteriormente; problemas que intentaremos resolver en sucesivas entregas del curso centrándonos en tres aspectos: cómo solucionar el problema conocido como colour clash, el uso de IM2 (interrupciones), y la intersección de rectángulos para detección de colisiones. Gracias a estos elementos nuestro juego quedará mucho más completo y jugable. Con unos pocos añadidos más podría incluso compararse a las grandes producciones comerciales de 1983 ;).</p>
+<p>Â¡La programaciÃ³n de nuestro juego ha comenzado! Sin embargo, nos encontramos con varios problemas, tal como se ha comentado anteriormente; problemas que intentaremos resolver en sucesivas entregas del curso centrÃ¡ndonos en tres aspectos: cÃ³mo solucionar el problema conocido como colour clash, el uso de IM2 (interrupciones), y la intersecciÃ³n de rectÃ¡ngulos para detecciÃ³n de colisiones. Gracias a estos elementos nuestro juego quedarÃ¡ mucho mÃ¡s completo y jugable. Con unos pocos aÃ±adidos mÃ¡s podrÃ­a incluso compararse a las grandes producciones comerciales de 1983 ;).</p>
 <b>LINKS</b>
 </p>
 <ul>
-    <li><a href="revistas/14/src/z88dk9_codigo.tar.gz" onClick="window.open(this.href); return false;">Código fuente</a></li>
+    <li><a href="revistas/14/src/z88dk9_codigo.tar.gz" onClick="window.open(this.href); return false;">CÃ³digo fuente</a></li>
 </ul>
 </div>
         </td>
@@ -1380,14 +1380,14 @@ function RecargarPie(url)
     <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
     <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
         <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
+        <option value="editorial.html">Ãndice - Editorial</option>
 
         <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+        <option value="analisis.html">AnÃ¡lisis</option>
         <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
+        <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
         <option value="input.html">INPUT</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
+        <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
 
     </select>
     <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
@@ -1396,7 +1396,7 @@ function RecargarPie(url)
                 <a href="#arriba">Volver arriba</a>
             </td>
         </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÃNDICE DE REVISTAS</b></a> <</td></tr>
 
     </form>
 </table>
