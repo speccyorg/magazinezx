@@ -1,310 +1,610 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Programación Ensamblador - Magazine ZX número 13 - Enero 2006</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('input.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="el-aventurero.html">El Aventurero</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-        <option value="rem.html">REM</option>
-
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 13 - Enero 2006</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-
-</table>
-</a>
-                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>Programación Ensamblador - Magazine ZX número 13 - Enero 2006</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
+                </tr>
+            </table>
+        </td>
 
-<div align="justify">
-<p align="center"><font size="5">Arquitectura y funcionamiento del Spectrum</font></p>
-<p><strong>LA ARQUITECTURA DEL SPECTRUM</strong></p>
-<p>Antes de comenzar a programar el Spectrum necesitamos conocer su arquitectura: ¿qué hay dentro de nuestro pequeño ordenador y cómo funciona? En BASIC muchas veces podemos olvidarnos de los detalles a nivel de hardware (para eso es un lenguaje de Alto Nivel), pero en ensamblador no: al hablar directamente un lenguaje que se traduce a código máquina, necesitamos conocer exactamente cómo funciona internamente.</p>
-<p>Aquí veremos una visión simplificada de la arquitectura hardware del Spectrum pero que en el fondo es todo lo que necesitaremos para la mayoría de programas. Para empezar veremos un esquema de cómo es internamente nuestro Spectrum a nivel de hardware, y después comentaremos uno a uno los elementos que lo componen:</p>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
 
-<table border="0" cellspacing="0" cellpadding="2" width="500">
-	<tr align="right">
-		<td><img src="img/esquema_zx.gif" width="500" height="400"  alt="Esquema del hardware de un ZX Spectrum" />
-</td>
-	</tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
 
-	<tr>
-		<td class="piefoto" align="right">Esquema del hardware de un ZX Spectrum</td>
-	</tr>
-</table>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="el-aventurero.html">El Aventurero</option>
+                                <option value="z88dk.html">Programación Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="ensamblador.html" selected>Programación Ensamblador</option>
+                                <option value="rem.html">REM</option>
 
-<p>En un vistazo general, podemos ver que el microprocesador Z80 se conecta mediante los puertos de entrada/salida de la CPU a los periféricos externos (teclado, cassette y altavoz de audio), pudiendo leer el estado de los mismos (leer del teclado, leer del cassette) y escribir en ellos (escribir en el altavoz para reproducir sonido, escribir en el cassette) por medio de estas conexiones conocidas como "I/O Ports".</p>
-<p>Al mismo tiempo, los Buses de Datos y de Direcciones conectan al microprocesador con la memoria. Esta conexión es la que permite que el Z80 pueda leer y escribir en cualquier posición de la memoria. Cuando encendemos el Spectrum, lo que éste lee de la memoria son instrucciones. Empezando por la posición 0000 (0 Kb), el Spectrum comienza a leer instrucciones y a ejecutarlas, una a una. En la primera parte de la memoria tenemos la ROM del Spectrum, que contiene instrucciones de programa preprogramadas y que no podemos modificar: es el menú del Spectrum y el intérprete de BASIC.</p>
-<p>Por otro lado, nuestro microprocesador tiene una serie de registros internos con los que trabaja y que son los que manipula y utiliza para ejecutar las instrucciones almacenadas en la memoria.</p>
-<p>Algo muy importante sobre la memoria es que hay una zona de ella que se conoce como videomemoria. Es memoria RAM normal y corriente, sólo que los datos que contiene son leídos por un chip llamado ULA muchas veces por segundo, y conforman la imagen que vemos en el televisor de nuestro Spectrum. Escribiendo un valor en una de estas direcciones de memoria (poniendo a 1 uno de sus bits), veremos aparecer en el televisor un punto. La ULA es, pues, el chip encargado de representar en el televisor el contenido de la videomemoria y nosotros, cuando queramos escribir o dibujar algo en pantalla, ya no utilizaremos funciones como PLOT o DRAW, sino que escribiremos directamente valores en esta zona de memoria.</p>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 13 - Enero 2006</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
 
-<p>Por último, el puerto de expansión del Spectrum permite conectar nuevos periféricos (como el adaptador de Joystick Kempston o el Interface 1 ó 2) directamente a las patillas de la CPU, ampliando las funcionalidades del ordenador.</p>
-<p>Veamos más detalladamente los diferentes componentes de la arquitectura del Spectrum, y cómo funcionan.</p>
-<p><strong>EL MICROPROCESADOR Z80</strong></p>
-<p>Como podemos distinguir en el esquema, el cerebro de nuestro Spectrum es un microprocesador Zilog Z80 a 3,54Mhz. Un microprocesador es un circuito integrado que consta (principalmente) de registros, microcódigo, puertos de entrada/salida, un bus de datos y uno de direcciones.</p>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
 
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/Z80.jpg" width="400" height="227"  alt="Imagen de un C.I. Z80 de Zilog" />
-</td>
-	</tr>
+                        <div align="justify">
+                            <p align="center"><font size="5">Arquitectura y funcionamiento del Spectrum</font></p>
+                            <p><strong>LA ARQUITECTURA DEL SPECTRUM</strong></p>
+                            <p>Antes de comenzar a programar el Spectrum necesitamos conocer su arquitectura: ¿qué hay
+                                dentro de nuestro pequeño ordenador y cómo funciona? En BASIC muchas veces podemos
+                                olvidarnos de los detalles a nivel de hardware (para eso es un lenguaje de Alto Nivel),
+                                pero en ensamblador no: al hablar directamente un lenguaje que se traduce a código
+                                máquina, necesitamos conocer exactamente cómo funciona internamente.</p>
+                            <p>Aquí veremos una visión simplificada de la arquitectura hardware del Spectrum pero que en
+                                el fondo es todo lo que necesitaremos para la mayoría de programas. Para empezar veremos
+                                un esquema de cómo es internamente nuestro Spectrum a nivel de hardware, y después
+                                comentaremos uno a uno los elementos que lo componen:</p>
 
-	<tr>
-		<td class="piefoto" align="right">Imagen de un C.I. Z80 de Zilog</td>
-	</tr>
-</table>
+                            <table border="0" cellspacing="0" cellpadding="2" width="500">
+                                <tr align="right">
+                                    <td><img src="img/esquema_zx.gif" width="500" height="400"
+                                             alt="Esquema del hardware de un ZX Spectrum"/>
+                                    </td>
+                                </tr>
 
-<p>Los registros son variables (igual que cualquier variable de BASIC) que residen dentro de la misma CPU. En el caso del Z80, tiene 2 juegos de registros con unos nombres concretos: entre otros, lo forman registros de un byte como A, F, B, C, D, E, H, L, I y R, y los registros de dos bytes IX, IY, SP y PC. Veremos los registros en detalle en su momento (así como el segundo juego de registros disponible), pero podemos hacernos a la idea de que los registros son simples variables de 8 ó 16 bits que utilizaremos en nuestros programas en ensamblador. Así, podremos cargar un valor en un registro (LD A, 25), sumar un registro con otro (ADD A, B), activar o desactivar determinados bits de un registro (SET 7,A), etc.</p>
+                                <tr>
+                                    <td class="piefoto" align="right">Esquema del hardware de un ZX Spectrum</td>
+                                </tr>
+                            </table>
 
-<table border="0" cellspacing="0" cellpadding="2" width="510">
-	<tr align="right">
-		<td><img src="img/debugger1.gif" width="510" height="458"  alt="Parte del debugger de FUSE mostrando los registros de la CPU" />
+                            <p>En un vistazo general, podemos ver que el microprocesador Z80 se conecta mediante los
+                                puertos de entrada/salida de la CPU a los periféricos externos (teclado, cassette y
+                                altavoz de audio), pudiendo leer el estado de los mismos (leer del teclado, leer del
+                                cassette) y escribir en ellos (escribir en el altavoz para reproducir sonido, escribir
+                                en el cassette) por medio de estas conexiones conocidas como "I/O Ports".</p>
+                            <p>Al mismo tiempo, los Buses de Datos y de Direcciones conectan al microprocesador con la
+                                memoria. Esta conexión es la que permite que el Z80 pueda leer y escribir en cualquier
+                                posición de la memoria. Cuando encendemos el Spectrum, lo que éste lee de la memoria son
+                                instrucciones. Empezando por la posición 0000 (0 Kb), el Spectrum comienza a leer
+                                instrucciones y a ejecutarlas, una a una. En la primera parte de la memoria tenemos la
+                                ROM del Spectrum, que contiene instrucciones de programa preprogramadas y que no podemos
+                                modificar: es el menú del Spectrum y el intérprete de BASIC.</p>
+                            <p>Por otro lado, nuestro microprocesador tiene una serie de registros internos con los que
+                                trabaja y que son los que manipula y utiliza para ejecutar las instrucciones almacenadas
+                                en la memoria.</p>
+                            <p>Algo muy importante sobre la memoria es que hay una zona de ella que se conoce como
+                                videomemoria. Es memoria RAM normal y corriente, sólo que los datos que contiene son
+                                leídos por un chip llamado ULA muchas veces por segundo, y conforman la imagen que vemos
+                                en el televisor de nuestro Spectrum. Escribiendo un valor en una de estas direcciones de
+                                memoria (poniendo a 1 uno de sus bits), veremos aparecer en el televisor un punto. La
+                                ULA es, pues, el chip encargado de representar en el televisor el contenido de la
+                                videomemoria y nosotros, cuando queramos escribir o dibujar algo en pantalla, ya no
+                                utilizaremos funciones como PLOT o DRAW, sino que escribiremos directamente valores en
+                                esta zona de memoria.</p>
 
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Parte del debugger de FUSE mostrando los registros de la CPU</td>
-	</tr>
-</table>
+                            <p>Por último, el puerto de expansión del Spectrum permite conectar nuevos periféricos (como
+                                el adaptador de Joystick Kempston o el Interface 1 ó 2) directamente a las patillas de
+                                la CPU, ampliando las funcionalidades del ordenador.</p>
+                            <p>Veamos más detalladamente los diferentes componentes de la arquitectura del Spectrum, y
+                                cómo funcionan.</p>
+                            <p><strong>EL MICROPROCESADOR Z80</strong></p>
+                            <p>Como podemos distinguir en el esquema, el cerebro de nuestro Spectrum es un
+                                microprocesador Zilog Z80 a 3,54Mhz. Un microprocesador es un circuito integrado que
+                                consta (principalmente) de registros, microcódigo, puertos de entrada/salida, un bus de
+                                datos y uno de direcciones.</p>
 
-<p>El juego de registros es todo lo que tenemos (aparte de la memoria) para realizar operaciones en nuestro programa: siempre que estemos operando con datos o utilizando variables, tendrá que ser por fuerza un registro, o una posición de memoria que usemos como variable. Por ejemplo, podemos escribir el siguiente programa en ensamblador, que sumaría dos números:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                            <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                <tr align="right">
+                                    <td><img src="img/Z80.jpg" width="400" height="227"
+                                             alt="Imagen de un C.I. Z80 de Zilog"/>
+                                    </td>
+                                </tr>
 
-<pre>
+                                <tr>
+                                    <td class="piefoto" align="right">Imagen de un C.I. Z80 de Zilog</td>
+                                </tr>
+                            </table>
+
+                            <p>Los registros son variables (igual que cualquier variable de BASIC) que residen dentro de
+                                la misma CPU. En el caso del Z80, tiene 2 juegos de registros con unos nombres
+                                concretos: entre otros, lo forman registros de un byte como A, F, B, C, D, E, H, L, I y
+                                R, y los registros de dos bytes IX, IY, SP y PC. Veremos los registros en detalle en su
+                                momento (así como el segundo juego de registros disponible), pero podemos hacernos a la
+                                idea de que los registros son simples variables de 8 ó 16 bits que utilizaremos en
+                                nuestros programas en ensamblador. Así, podremos cargar un valor en un registro (LD A,
+                                25), sumar un registro con otro (ADD A, B), activar o desactivar determinados bits de un
+                                registro (SET 7,A), etc.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="510">
+                                <tr align="right">
+                                    <td><img src="img/debugger1.gif" width="510" height="458"
+                                             alt="Parte del debugger de FUSE mostrando los registros de la CPU"/>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Parte del debugger de FUSE mostrando los registros
+                                        de la CPU
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>El juego de registros es todo lo que tenemos (aparte de la memoria) para realizar
+                                operaciones en nuestro programa: siempre que estemos operando con datos o utilizando
+                                variables, tendrá que ser por fuerza un registro, o una posición de memoria que usemos
+                                como variable. Por ejemplo, podemos escribir el siguiente programa en ensamblador, que
+                                sumaría dos números:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+
+                                        <pre>
   LD A, 10
   LD B, 20
   ADD A, B
 </pre>
-    </p></td></tr>
-</table>
-<p>El anterior programa, una vez ensamblado y ejecutado en un Z80, vendría a decir:</p>
-<ul>
-	<li>Carga en el registro A el valor "10".</li>
-	<li>Carga en el registro B el valor "20".</li>
-	<li>Suma el valor del registro A con el del registro B y deja el resultado en el registro A (A=A+B).</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>El anterior programa, una vez ensamblado y ejecutado en un Z80, vendría a decir:</p>
+                            <ul>
+                                <li>Carga en el registro A el valor "10".</li>
+                                <li>Carga en el registro B el valor "20".</li>
+                                <li>Suma el valor del registro A con el del registro B y deja el resultado en el
+                                    registro A (A=A+B).
+                                </li>
 
-</ul>
-<p>Tras ejecutar el anterior programa en un Z80, el contenido del registro A sería 30 (10+20). Cuando comencemos a explicar las diferentes instrucciones del Z80 veremos en más detalle los registros, su tamaño, cómo se agrupan, y de qué forma podemos usarlos para operar entre ellos y realizar nuestras rutinas o programas.</p>
-<p>Existe un registro especial llamado PC (Program Counter, o Contador de Programa). Este registro de 16 bits puede contener un valor entre 0 y 65535, y su utilidad es la de apuntar a la dirección de memoria de la siguiente instrucción a ejecutar. Así, cuando arrancamos nuestro Spectrum, el registro PC vale 0000h, con lo que lo primero que se ejecuta en el Spectrum es el código que hay en 0000. Una vez leído y ejecutado ese primer código de instrucción, se incrementa PC para apuntar al siguiente, y así continuadamente. Los programas se ejecutan linealmente mediante (como veremos) un ciclo basado en: Leer instrucción en la dirección de memoria apuntada por PC, incrementar registro PC, ejecutar instrucción. Posteriormente veremos más acerca de PC.</p>
-<p>Ya hemos visto lo que son los registros del microprocesador. Ahora bien, en el ejemplo anterior, ¿cómo sabe el microprocesador qué tiene que hacer cuando se encuentra un comando "LD" o "ADD"? Esto es tarea del microcódigo. El microcódigo del microprocesador es una definición de qué tiene que hacer el microprocesador ante cada una de las posibles órdenes que nosotros le demos.</p>
-<p>Por ejemplo, cuando el microprocesador está ejecutando nuestro anterior programa y lee "LD A, 10" (en realidad, lee de la memoria los opcodes 62 y 10), el Z80 utiliza el microcódigo encargado de mover el valor 10 al registro A. Este microcódigo no es más que una secuencia de señales hardware y cambios de estados electrónicos cuyo resultado será, exactamente, activar y desactivar BITs en el registro A (que no es más que una serie de 8 biestables electrónicos que pueden estar a 0 voltios o a 5 voltios cada uno de ellos, representando el estado de los 8 bits del registro A). Lo mismo ocurrirá cuando se lea la instrucción "LD B, 20", sólo que se ejecutará otra porción de microcódigo que lo que hará será modificar el registro B.</p>
-<p>Este microcódigo está dentro del microprocesador porque sus diseñadores implementaron todas y cada una de las operaciones que puede hacer el Z80. Cuando pedimos meter un valor en un registro, leer el valor de un registro, sumar un registro con otro, escribir el valor de un registro en una dirección de memoria, saltar a otra parte del programa, etc, para cada una de esas situaciones, hay un microcódigo (implementado mediante hardware) que realiza esa tarea. Nosotros no tendremos que preocuparnos pues de cómo hace el Z80 las cosas internamente a nivel de microcódigo, aunque es bueno que conozcáis cómo llega el Spectrum a ejecutar nuestros comandos: gracias al microcódigo.</p>
-<p><strong>PUERTOS DE ENTRADA/SALIDA</strong></p>
-<p>Si cogemos un microprocesador Z80, podremos distinguir muchas patillas de conexión. Además de las patillas que se utilizan para alimentar el Z80 desde la fuente de alimentación, existen otra serie de patillas para "Puertos de Entrada/Salida" y "Bus de datos y de direcciones". Esas patillas son la conexión del microprocesador con el resto de elementos del ordenador.</p>
+                            </ul>
+                            <p>Tras ejecutar el anterior programa en un Z80, el contenido del registro A sería 30
+                                (10+20). Cuando comencemos a explicar las diferentes instrucciones del Z80 veremos en
+                                más detalle los registros, su tamaño, cómo se agrupan, y de qué forma podemos usarlos
+                                para operar entre ellos y realizar nuestras rutinas o programas.</p>
+                            <p>Existe un registro especial llamado PC (Program Counter, o Contador de Programa). Este
+                                registro de 16 bits puede contener un valor entre 0 y 65535, y su utilidad es la de
+                                apuntar a la dirección de memoria de la siguiente instrucción a ejecutar. Así, cuando
+                                arrancamos nuestro Spectrum, el registro PC vale 0000h, con lo que lo primero que se
+                                ejecuta en el Spectrum es el código que hay en 0000. Una vez leído y ejecutado ese
+                                primer código de instrucción, se incrementa PC para apuntar al siguiente, y así
+                                continuadamente. Los programas se ejecutan linealmente mediante (como veremos) un ciclo
+                                basado en: Leer instrucción en la dirección de memoria apuntada por PC, incrementar
+                                registro PC, ejecutar instrucción. Posteriormente veremos más acerca de PC.</p>
+                            <p>Ya hemos visto lo que son los registros del microprocesador. Ahora bien, en el ejemplo
+                                anterior, ¿cómo sabe el microprocesador qué tiene que hacer cuando se encuentra un
+                                comando "LD" o "ADD"? Esto es tarea del microcódigo. El microcódigo del microprocesador
+                                es una definición de qué tiene que hacer el microprocesador ante cada una de las
+                                posibles órdenes que nosotros le demos.</p>
+                            <p>Por ejemplo, cuando el microprocesador está ejecutando nuestro anterior programa y lee
+                                "LD A, 10" (en realidad, lee de la memoria los opcodes 62 y 10), el Z80 utiliza el
+                                microcódigo encargado de mover el valor 10 al registro A. Este microcódigo no es más que
+                                una secuencia de señales hardware y cambios de estados electrónicos cuyo resultado será,
+                                exactamente, activar y desactivar BITs en el registro A (que no es más que una serie de
+                                8 biestables electrónicos que pueden estar a 0 voltios o a 5 voltios cada uno de ellos,
+                                representando el estado de los 8 bits del registro A). Lo mismo ocurrirá cuando se lea
+                                la instrucción "LD B, 20", sólo que se ejecutará otra porción de microcódigo que lo que
+                                hará será modificar el registro B.</p>
+                            <p>Este microcódigo está dentro del microprocesador porque sus diseñadores implementaron
+                                todas y cada una de las operaciones que puede hacer el Z80. Cuando pedimos meter un
+                                valor en un registro, leer el valor de un registro, sumar un registro con otro, escribir
+                                el valor de un registro en una dirección de memoria, saltar a otra parte del programa,
+                                etc, para cada una de esas situaciones, hay un microcódigo (implementado mediante
+                                hardware) que realiza esa tarea. Nosotros no tendremos que preocuparnos pues de cómo
+                                hace el Z80 las cosas internamente a nivel de microcódigo, aunque es bueno que conozcáis
+                                cómo llega el Spectrum a ejecutar nuestros comandos: gracias al microcódigo.</p>
+                            <p><strong>PUERTOS DE ENTRADA/SALIDA</strong></p>
+                            <p>Si cogemos un microprocesador Z80, podremos distinguir muchas patillas de conexión.
+                                Además de las patillas que se utilizan para alimentar el Z80 desde la fuente de
+                                alimentación, existen otra serie de patillas para "Puertos de Entrada/Salida" y "Bus de
+                                datos y de direcciones". Esas patillas son la conexión del microprocesador con el resto
+                                de elementos del ordenador.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="325">
+                            <table border="0" cellspacing="0" cellpadding="2" width="325">
 
-	<tr align="right">
-		<td><img src="img/pinout.gif" width="325" height="453"  alt="Las 40 patillas del microprocesador Z80. donde vemos el bus de direcciones (A0 a A15) y el bus de datos (D0 a D7), que se conectan a los puertos de entrada/salida y a la memoria" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Las 40 patillas del microprocesador Z80. donde vemos el bus de direcciones (A0 a A15) y el bus de datos (D0 a D7), que se conectan a los puertos de entrada/salida y a la memoria</td>
-	</tr>
-</table>
+                                <tr align="right">
+                                    <td><img src="img/pinout.gif" width="325" height="453"
+                                             alt="Las 40 patillas del microprocesador Z80. donde vemos el bus de direcciones (A0 a A15) y el bus de datos (D0 a D7), que se conectan a los puertos de entrada/salida y a la memoria"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Las 40 patillas del microprocesador Z80. donde
+                                        vemos el bus de direcciones (A0 a A15) y el bus de datos (D0 a D7), que se
+                                        conectan a los puertos de entrada/salida y a la memoria
+                                    </td>
+                                </tr>
+                            </table>
 
-<p>Los registros del microprocesador y el microcódigo son internos al procesador, y ninguna de las patillas que podemos ver en la imagen anterior nos comunica con ellos. Es el procesador (internamente) quien lee/modifica los registros o quien ejecuta microcódigo cuando nosotros se lo decimos con las instrucciones de nuestro programa.</p>
+                            <p>Los registros del microprocesador y el microcódigo son internos al procesador, y ninguna
+                                de las patillas que podemos ver en la imagen anterior nos comunica con ellos. Es el
+                                procesador (internamente) quien lee/modifica los registros o quien ejecuta microcódigo
+                                cuando nosotros se lo decimos con las instrucciones de nuestro programa.</p>
 
-<p>Pero nuestro procesador, como hemos dicho, necesita conectarse con elementos del exterior, entre ellos (y casi exclusivamente en el caso del Spectrum) tenemos la memoria, el teclado, el altavoz y la unidad de cinta.</p>
-<p>Visto de un modo muy simple, el Z80 puede acceder a través de una serie de patillas hasta a 65536 elementos externos. Esos elementos se conectan a la CPU Z80 a través de las patillas de "Buses de datos y direcciones" (que podemos leer en los puertos de Entrada/Salida). Una vez conectados (la conexión se realiza físicamente a nivel de hardware, con pistas en la placa base), el microprocesador Z80 puede leer los valores que el dispositivo pone en esas pistas, o puede escribir valores en esas pistas para que el dispositivo los utilice.</p>
-<p>Supongamos el ejemplo del teclado: un teclado es (a un nivel muy simple) una matriz de pulsadores. Al final de toda esa matriz de pulsadores, lo que acabamos teniendo es un número de 8 bits (0-255) cuyos bits nos dicen la teclas pulsadas. Pues bien, ese número de 8 bits es lo que el mismo teclado pone en los "cables" que lo unen con el Z80. El teclado se conecta a la CPU mediante una conexión a uno de los puertos (una serie de patillas de datos y direcciones) del microprocesador y gracias a esto el microprocesador (y nuestro programa) puede leer en todo momento el estado del teclado (y saber qué teclas están pulsadas y cuales no) leyendo del puerto correspondiente.</p>
+                            <p>Pero nuestro procesador, como hemos dicho, necesita conectarse con elementos del
+                                exterior, entre ellos (y casi exclusivamente en el caso del Spectrum) tenemos la
+                                memoria, el teclado, el altavoz y la unidad de cinta.</p>
+                            <p>Visto de un modo muy simple, el Z80 puede acceder a través de una serie de patillas hasta
+                                a 65536 elementos externos. Esos elementos se conectan a la CPU Z80 a través de las
+                                patillas de "Buses de datos y direcciones" (que podemos leer en los puertos de
+                                Entrada/Salida). Una vez conectados (la conexión se realiza físicamente a nivel de
+                                hardware, con pistas en la placa base), el microprocesador Z80 puede leer los valores
+                                que el dispositivo pone en esas pistas, o puede escribir valores en esas pistas para que
+                                el dispositivo los utilice.</p>
+                            <p>Supongamos el ejemplo del teclado: un teclado es (a un nivel muy simple) una matriz de
+                                pulsadores. Al final de toda esa matriz de pulsadores, lo que acabamos teniendo es un
+                                número de 8 bits (0-255) cuyos bits nos dicen la teclas pulsadas. Pues bien, ese número
+                                de 8 bits es lo que el mismo teclado pone en los "cables" que lo unen con el Z80. El
+                                teclado se conecta a la CPU mediante una conexión a uno de los puertos (una serie de
+                                patillas de datos y direcciones) del microprocesador y gracias a esto el microprocesador
+                                (y nuestro programa) puede leer en todo momento el estado del teclado (y saber qué
+                                teclas están pulsadas y cuales no) leyendo del puerto correspondiente.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="567">
-	<tr align="right">
-		<td><img src="img/teclado.jpg" width="567" height="349"  alt="Matriz de teclado del Spectrum y conexiones al Z80" />
-</td>
-	</tr>
-	<tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="567">
+                                <tr align="right">
+                                    <td><img src="img/teclado.jpg" width="567" height="349"
+                                             alt="Matriz de teclado del Spectrum y conexiones al Z80"/>
+                                    </td>
+                                </tr>
+                                <tr>
 
-		<td class="piefoto" align="right">Matriz de teclado del Spectrum y conexiones al Z80</td>
-	</tr>
-</table>
+                                    <td class="piefoto" align="right">Matriz de teclado del Spectrum y conexiones al
+                                        Z80
+                                    </td>
+                                </tr>
+                            </table>
 
-<p>Así, en nuestros programas podemos leer el estado del teclado mediante (por ejemplo):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Así, en nuestros programas podemos leer el estado del teclado mediante (por ejemplo):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 5  REM Mostrando el estado de la fila 1-5 del teclado
 10 LET puerto=63486
 20 LET V=IN puerto: PRINT AT 20,0; V ; "  " : GO TO 20
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Este ejemplo lee (en un bucle infinito) una de las diferentes filas del teclado, mediante la lectura del puerto 63486 (F7FEh) con la instrucción de lectura de puertos de BASIC "IN". El estado de las 5 teclas desde el 1 hasta el 5 del teclado del Spectrum está conectado a 5 "hilos" de los 8 que llegan al puerto 63486 del micro Z80. Cuando se pulsa una tecla, el teclado pone a 0 (a 0 voltios) el "hilo" correspondiente de esos 8, y nosotros podemos conocer el estado de la tecla leyendo dicho puerto y mirando el bit en cuestión. Al ejecutar el ejemplo anterior, veremos que la pulsación de la tecla "1" cambiará el valor que aparece en pantalla. Si pasamos los diferentes valores que aparecen a binario y nos fijamos en el estado de los 5 últimos bits, nos daremos cuenta como al pulsar y soltar las diferentes teclas del 1 al 5 estaremos variando esos bits entre 0 (al pulsarlas) y 1 (al liberarlas). Los 3 bits más altos del byte debemos ignorarlos, ya que no tienen relación con el teclado.</p>
-<p>Si no hay ninguna tecla pulsada, los 5 bits más bajos del byte que hay en el puerto estarán todos a 1, mientras que si se pulsa alguna de las teclas del 1 al 5, el bit correspondiente a dicha tecla pasará a estado 0. Nosotros podemos leer el estado del puerto y saber, mirando los unos y los ceros, si las teclas están pulsadas o no.</p>
+                            </table>
+                            <p>Este ejemplo lee (en un bucle infinito) una de las diferentes filas del teclado, mediante
+                                la lectura del puerto 63486 (F7FEh) con la instrucción de lectura de puertos de BASIC
+                                "IN". El estado de las 5 teclas desde el 1 hasta el 5 del teclado del Spectrum está
+                                conectado a 5 "hilos" de los 8 que llegan al puerto 63486 del micro Z80. Cuando se pulsa
+                                una tecla, el teclado pone a 0 (a 0 voltios) el "hilo" correspondiente de esos 8, y
+                                nosotros podemos conocer el estado de la tecla leyendo dicho puerto y mirando el bit en
+                                cuestión. Al ejecutar el ejemplo anterior, veremos que la pulsación de la tecla "1"
+                                cambiará el valor que aparece en pantalla. Si pasamos los diferentes valores que
+                                aparecen a binario y nos fijamos en el estado de los 5 últimos bits, nos daremos cuenta
+                                como al pulsar y soltar las diferentes teclas del 1 al 5 estaremos variando esos bits
+                                entre 0 (al pulsarlas) y 1 (al liberarlas). Los 3 bits más altos del byte debemos
+                                ignorarlos, ya que no tienen relación con el teclado.</p>
+                            <p>Si no hay ninguna tecla pulsada, los 5 bits más bajos del byte que hay en el puerto
+                                estarán todos a 1, mientras que si se pulsa alguna de las teclas del 1 al 5, el bit
+                                correspondiente a dicha tecla pasará a estado 0. Nosotros podemos leer el estado del
+                                puerto y saber, mirando los unos y los ceros, si las teclas están pulsadas o no.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/leer_teclado.gif" width="320" height="240"  alt="Pulsando "1", ponemos a 0 el bit 0, pasando de 191 a 190" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Pulsando "1", ponemos a 0 el bit 0, pasando de 191 a 190</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/leer_teclado.gif" width="320" height="240" alt="Pulsando " 1",
+                                        ponemos a 0 el bit 0, pasando de 191 a 190" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Pulsando "1", ponemos a 0 el bit 0, pasando de 191
+                                        a 190
+                                    </td>
 
-	</tr>
-</table>
+                                </tr>
+                            </table>
 
-<p>Así, leyendo del puerto 63486 obtenemos un byte cuyos 8 bits tienen como significado el estado de cada una de las teclas de la semifila del "1" al "5".</p>
-<table>
-	<tr>
-		<th style="border-bottom: 1px solid #000;">Bits</th><td style="border-bottom: 1px solid #000;">D7</td><td style="border-bottom: 1px solid #000;">D6</td><td style="border-bottom: 1px solid #000;">D5</td><td style="border-bottom: 1px solid #000;">D4</td><td style="border-bottom: 1px solid #000;">D3</td><td style="border-bottom: 1px solid #000;">D2</td><td style="border-bottom: 1px solid #000;">D1</td><td style="border-bottom: 1px solid #000;">D0</td>
+                            <p>Así, leyendo del puerto 63486 obtenemos un byte cuyos 8 bits tienen como significado el
+                                estado de cada una de las teclas de la semifila del "1" al "5".</p>
+                            <table>
+                                <tr>
+                                    <th style="border-bottom: 1px solid #000;">Bits</th>
+                                    <td style="border-bottom: 1px solid #000;">D7</td>
+                                    <td style="border-bottom: 1px solid #000;">D6</td>
+                                    <td style="border-bottom: 1px solid #000;">D5</td>
+                                    <td style="border-bottom: 1px solid #000;">D4</td>
+                                    <td style="border-bottom: 1px solid #000;">D3</td>
+                                    <td style="border-bottom: 1px solid #000;">D2</td>
+                                    <td style="border-bottom: 1px solid #000;">D1</td>
+                                    <td style="border-bottom: 1px solid #000;">D0</td>
 
-	</tr>
-	<tr>
-		<th>Teclas</th><td>XX</td><td>XX</td><td>XX</td><td>"5"</td><td>"4"</td><td>"3"</td><td>"2"</td><td>"1"</td>
-	</tr>
+                                </tr>
+                                <tr>
+                                    <th>Teclas</th>
+                                    <td>XX</td>
+                                    <td>XX</td>
+                                    <td>XX</td>
+                                    <td>"5"</td>
+                                    <td>"4"</td>
+                                    <td>"3"</td>
+                                    <td>"2"</td>
+                                    <td>"1"</td>
+                                </tr>
 
-</table>
-<p>Los bits D7 a D5 no nos interesan en el caso del teclado (por ejemplo, D6 tiene relación con la unidad de cinta), mientras que los bits de D5 a D0 son bits de teclas (0=pulsada, 1=no pulsada). Tenemos pues el teclado dividido en filas de teclas y disponemos de una serie de puertos para leer el estado de todas ellas:</p>
-<table>
-	<tr><th style="border-bottom: 1px solid #000;">Puerto</th><th style="border-bottom: 1px solid #000;">Teclas</th></tr>
-	<tr><td>65278d (FEFEh)</td><td>de CAPS SHIFT a V</tr>
-	<tr><td>65022d (FDFEh)</td><td>de A a G</tr>
-	<tr><td>64510d (FBFEh)</td><td>de Q a T</tr>
+                            </table>
+                            <p>Los bits D7 a D5 no nos interesan en el caso del teclado (por ejemplo, D6 tiene relación
+                                con la unidad de cinta), mientras que los bits de D5 a D0 son bits de teclas (0=pulsada,
+                                1=no pulsada). Tenemos pues el teclado dividido en filas de teclas y disponemos de una
+                                serie de puertos para leer el estado de todas ellas:</p>
+                            <table>
+                                <tr>
+                                    <th style="border-bottom: 1px solid #000;">Puerto</th>
+                                    <th style="border-bottom: 1px solid #000;">Teclas</th>
+                                </tr>
+                                <tr>
+                                    <td>65278d (FEFEh)</td>
+                                    <td>de CAPS SHIFT a V
+                                </tr>
+                                <tr>
+                                    <td>65022d (FDFEh)</td>
+                                    <td>de A a G
+                                </tr>
+                                <tr>
+                                    <td>64510d (FBFEh)</td>
+                                    <td>de Q a T
+                                </tr>
 
-	<tr><td>63486d (F7FEh)</td><td>de 1 a 5 (and JOYSTICK 1)</tr>
-	<tr><td>61438d (EFFEh)</td><td>de 6 a 0 (and JOYSTICK 2)</tr>
-	<tr><td>57342d (DFFEh)</td><td>de P a Y</tr>
-	<tr><td>49150d (BFFEh)</td><td>de ENTER a H</tr>
-	<tr><td>32766d (7FFEh)</td><td>de (space) a B</tr>
+                                <tr>
+                                    <td>63486d (F7FEh)</td>
+                                    <td>de 1 a 5 (and JOYSTICK 1)
+                                </tr>
+                                <tr>
+                                    <td>61438d (EFFEh)</td>
+                                    <td>de 6 a 0 (and JOYSTICK 2)
+                                </tr>
+                                <tr>
+                                    <td>57342d (DFFEh)</td>
+                                    <td>de P a Y
+                                </tr>
+                                <tr>
+                                    <td>49150d (BFFEh)</td>
+                                    <td>de ENTER a H
+                                </tr>
+                                <tr>
+                                    <td>32766d (7FFEh)</td>
+                                    <td>de (space) a B
+                                </tr>
 
-</table>
-<p>A la hora de leer estos puertos, el bit menos significativo (D0) siempre hace referencia a la tecla más alejada del centro del teclado ("1" en nuestro ejemplo), mientras que el más significativo de los 5 (D5) lo hace a la tecla más cercana al centro del teclado.</p>
-<p>En ensamblador también hay disponibles 2 instrucciones para leer el contenido de un puerto de Entrada/Salida y para escribir un valor en un puerto determinado, las instrucciones se llaman igual que en BASIC: IN y OUT:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>A la hora de leer estos puertos, el bit menos significativo (D0) siempre hace referencia
+                                a la tecla más alejada del centro del teclado ("1" en nuestro ejemplo), mientras que el
+                                más significativo de los 5 (D5) lo hace a la tecla más cercana al centro del
+                                teclado.</p>
+                            <p>En ensamblador también hay disponibles 2 instrucciones para leer el contenido de un
+                                puerto de Entrada/Salida y para escribir un valor en un puerto determinado, las
+                                instrucciones se llaman igual que en BASIC: IN y OUT:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  ; Cargamos en BC el valor del puerto a leer
  LD BC, F7FEh
 
  ; Leemos en el registro A el valor del puerto
  IN A, (C)
 </pre>
-    </p></td></tr>
-</table>
-<p>Queríamos mostraros el ejemplo del teclado, aunque estamos todavía empezando y puede haber sido algo complicado de entender, por diferentes motivos:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Queríamos mostraros el ejemplo del teclado, aunque estamos todavía empezando y puede
+                                haber sido algo complicado de entender, por diferentes motivos:</p>
 
-<ul>
-	<li>El primero, explicar qué son los puertos de E/S y cómo están conectados a nivel de hardware con el microprocesador. Como habéis visto, del teclado salen una serie de "hilos" o pistas de circuito impreso que van directamente al Z80, a través de sus diferentes buses y puertos.</li>
-	<li>Nosotros podemos, en cualquier momento, leer y escribir en los puertos de E/S. Con esto conseguimos comunicarnos con los periféricos externos. En este caso, podemos leer del teclado (o escribir o leer del cassette, o en el altavoz) con simples operaciones de lectura y escritura.</li>
-</ul>
-<p>El lector debería extraer una conclusión extra del ejemplo del teclado: la gran diferencia de proceso que hay entre programar en ensamblador y programar en BASIC. Supongamos que nos interesa leer el estado del teclado para saber si unas determinadas teclas están pulsadas o no. Para esto, en ensamblador (aunque esto también podemos hacerlo en BASIC) leemos directamente el estado del teclado con un par de simples instrucciones (LD + IN). En BASIC, por contra al leer de un INKEY$ estamos esperando la ejecución de un código que, además de leer TODAS las filas del teclado (no sólo aquellas de las teclas que nos interesen), realiza una conversión de todos los bits pulsados o no pulsados mediante una tabla ASCII para al final proporcionarnos el código ASCII de la tecla pulsada. Lo que son varias simples instrucciones IN en ASM, en BASIC se realiza mediante cientos de instrucciones en ensamblador que nos acaban dando la última tecla pulsada. Es por eso que el intérprete BASIC es tan lento: cada operación BASIC son decenas, cientos o miles de instrucciones en ensamblador que nosotros ni vemos ni controlamos. Programando directamente en ASM, el microprocesador hara EXCLUSIVAMENTE lo que nosotros le digamos que haga. He aquí la "mágica" diferencia de velocidad entre ambos lenguajes.</p>
-<p>Podéis encontrar más información sobre los puertos de Entrada y Salida en el capítulo 8 sección 32 del manual del +2A y +3, que tenéis disponible online en World Of Spectrum.</p>
-<p><strong>MEMORIA</strong></p>
-<p>Al igual que en el caso de los puertos de entrada/salida, nuestro microprocesador está también conectado a los diferentes chips de memoria (hay más de uno). La conexión se realiza siguiendo unas normas definidas por los ingenieros de Sinclair, de tal forma que la memoria se mapea linealmente. ¿Qué quiere decir esto? Que aunque tengamos varios chips de memoria, vemos la memoria como una gran y única memoria de 64KB.</p>
-<p>El Spectrum básico (48KB de RAM y 16KB de ROM) tiene disponibles 64KB de memoria, es decir, 65536 bytes a los cuales podemos acceder. Podemos pensar en esta memoria como un gran baúl con 65536 cajones, uno encima de otro. El primer cajón es el cajón 0 (posición de memoria 0), el segundo el cajón 1 (posición de memoria 1), y así hasta el cajón 65535 (posición de memoria 65535).</p>
+                            <ul>
+                                <li>El primero, explicar qué son los puertos de E/S y cómo están conectados a nivel de
+                                    hardware con el microprocesador. Como habéis visto, del teclado salen una serie de
+                                    "hilos" o pistas de circuito impreso que van directamente al Z80, a través de sus
+                                    diferentes buses y puertos.
+                                </li>
+                                <li>Nosotros podemos, en cualquier momento, leer y escribir en los puertos de E/S. Con
+                                    esto conseguimos comunicarnos con los periféricos externos. En este caso, podemos
+                                    leer del teclado (o escribir o leer del cassette, o en el altavoz) con simples
+                                    operaciones de lectura y escritura.
+                                </li>
+                            </ul>
+                            <p>El lector debería extraer una conclusión extra del ejemplo del teclado: la gran
+                                diferencia de proceso que hay entre programar en ensamblador y programar en BASIC.
+                                Supongamos que nos interesa leer el estado del teclado para saber si unas determinadas
+                                teclas están pulsadas o no. Para esto, en ensamblador (aunque esto también podemos
+                                hacerlo en BASIC) leemos directamente el estado del teclado con un par de simples
+                                instrucciones (LD + IN). En BASIC, por contra al leer de un INKEY$ estamos esperando la
+                                ejecución de un código que, además de leer TODAS las filas del teclado (no sólo aquellas
+                                de las teclas que nos interesen), realiza una conversión de todos los bits pulsados o no
+                                pulsados mediante una tabla ASCII para al final proporcionarnos el código ASCII de la
+                                tecla pulsada. Lo que son varias simples instrucciones IN en ASM, en BASIC se realiza
+                                mediante cientos de instrucciones en ensamblador que nos acaban dando la última tecla
+                                pulsada. Es por eso que el intérprete BASIC es tan lento: cada operación BASIC son
+                                decenas, cientos o miles de instrucciones en ensamblador que nosotros ni vemos ni
+                                controlamos. Programando directamente en ASM, el microprocesador hara EXCLUSIVAMENTE lo
+                                que nosotros le digamos que haga. He aquí la "mágica" diferencia de velocidad entre
+                                ambos lenguajes.</p>
+                            <p>Podéis encontrar más información sobre los puertos de Entrada y Salida en el capítulo 8
+                                sección 32 del manual del +2A y +3, que tenéis disponible online en World Of
+                                Spectrum.</p>
+                            <p><strong>MEMORIA</strong></p>
+                            <p>Al igual que en el caso de los puertos de entrada/salida, nuestro microprocesador está
+                                también conectado a los diferentes chips de memoria (hay más de uno). La conexión se
+                                realiza siguiendo unas normas definidas por los ingenieros de Sinclair, de tal forma que
+                                la memoria se mapea linealmente. ¿Qué quiere decir esto? Que aunque tengamos varios
+                                chips de memoria, vemos la memoria como una gran y única memoria de 64KB.</p>
+                            <p>El Spectrum básico (48KB de RAM y 16KB de ROM) tiene disponibles 64KB de memoria, es
+                                decir, 65536 bytes a los cuales podemos acceder. Podemos pensar en esta memoria como un
+                                gran baúl con 65536 cajones, uno encima de otro. El primer cajón es el cajón 0 (posición
+                                de memoria 0), el segundo el cajón 1 (posición de memoria 1), y así hasta el cajón 65535
+                                (posición de memoria 65535).</p>
 
-<p>Nuestro Spectrum no puede tener más de 65536 cajones porque el "bus de direcciones" del microprocesador Z80 es de 16 bits, es decir, las líneas que conectan al microprocesador con la memoria sólo permiten 16 "conexiones"; lo que nos da la posibilidad de acceder a 2 elevado a 16 bytes de memoria, exactamente 65536 bytes.</p>
+                            <p>Nuestro Spectrum no puede tener más de 65536 cajones porque el "bus de direcciones" del
+                                microprocesador Z80 es de 16 bits, es decir, las líneas que conectan al microprocesador
+                                con la memoria sólo permiten 16 "conexiones"; lo que nos da la posibilidad de acceder a
+                                2 elevado a 16 bytes de memoria, exactamente 65536 bytes.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/memoria.gif" width="400" height="300"  alt="Aspecto de nuestras 65536 celdillas de memoria" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Aspecto de nuestras 65536 celdillas de memoria</td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                <tr align="right">
+                                    <td><img src="img/memoria.gif" width="400" height="300"
+                                             alt="Aspecto de nuestras 65536 celdillas de memoria"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Aspecto de nuestras 65536 celdillas de memoria
+                                    </td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>Cada uno de estos cajones (más técnicamente, "celdillas de memoria" o "posiciones de memoria") puede contener un número de 8 bits, con un valor, por tanto, entre 0 y 255. Esto es así porque el "bus de datos" del microprocesador Z80 es de 8 bits, lo que implica que "sólo hay 8 conexiones" entre la salida de datos de la memoria y nuestro procesador.</p>
-<p>El microprocesador Z80 puede acceder a cualquier posición de memoria tanto para leer como para escribir. Internamente, cuando le pedimos al microprocesador que meta en el registro A el contenido de la celdilla de memoria 1234h, mediante una instrucción de ensamblador "LD A, (1234h)" (nota, el operador () en ensamblador significa acceso a memoria, y equivaldría en este caso a un "LET A=PEEK 4660" en BASIC) lo que hace el microprocesador internamente es:</p>
-<p><em>Ejecución de LD A, (1234h):</em></p>
-<ul>
-	<li>1234h en binario es 00010010 00110100, de modo que el Z80 coge las 16 líneas que conectan al microprocesador con la memoria y las pone a esos estados (0 = 0 voltios, 1 = 5 voltios).</li>
-	<li>A continuación, el microprocesador utiliza una conexión especial que le conecta con la memoria donde le indica qué operación quiere realizar. Poniendo al valor apropiado la línea de control que le comunica con la memoria, el Z80 informa al chip de memoria de que quiere realizar una operación de lectura.</li>
-	<li>La memoria recibe la señal de "quiero leer un dato" por esta señal de control, y mira el bus de direcciones que le conecta con el Spectrum. Mirando el estado de las 16 líneas encuentra el "00010010 00110100" (1234h). Con eso, la memoria sabe a qué "casilla" o "cajón" quiere acceder el microprocesador.</li>
+                            <p>Cada uno de estos cajones (más técnicamente, "celdillas de memoria" o "posiciones de
+                                memoria") puede contener un número de 8 bits, con un valor, por tanto, entre 0 y 255.
+                                Esto es así porque el "bus de datos" del microprocesador Z80 es de 8 bits, lo que
+                                implica que "sólo hay 8 conexiones" entre la salida de datos de la memoria y nuestro
+                                procesador.</p>
+                            <p>El microprocesador Z80 puede acceder a cualquier posición de memoria tanto para leer como
+                                para escribir. Internamente, cuando le pedimos al microprocesador que meta en el
+                                registro A el contenido de la celdilla de memoria 1234h, mediante una instrucción de
+                                ensamblador "LD A, (1234h)" (nota, el operador () en ensamblador significa acceso a
+                                memoria, y equivaldría en este caso a un "LET A=PEEK 4660" en BASIC) lo que hace el
+                                microprocesador internamente es:</p>
+                            <p><em>Ejecución de LD A, (1234h):</em></p>
+                            <ul>
+                                <li>1234h en binario es 00010010 00110100, de modo que el Z80 coge las 16 líneas que
+                                    conectan al microprocesador con la memoria y las pone a esos estados (0 = 0 voltios,
+                                    1 = 5 voltios).
+                                </li>
+                                <li>A continuación, el microprocesador utiliza una conexión especial que le conecta con
+                                    la memoria donde le indica qué operación quiere realizar. Poniendo al valor
+                                    apropiado la línea de control que le comunica con la memoria, el Z80 informa al chip
+                                    de memoria de que quiere realizar una operación de lectura.
+                                </li>
+                                <li>La memoria recibe la señal de "quiero leer un dato" por esta señal de control, y
+                                    mira el bus de direcciones que le conecta con el Spectrum. Mirando el estado de las
+                                    16 líneas encuentra el "00010010 00110100" (1234h). Con eso, la memoria sabe a qué
+                                    "casilla" o "cajón" quiere acceder el microprocesador.
+                                </li>
 
-	<li>La memoria lee el valor de la celdilla de memoria 1234h (por ejemplo 0Fh, que es 00001111 en binario) y cambia las 8 conexiones del Bus de Datos para que contengan 00001111 (4 "líneas" las pone a 0 voltios, y las otras 4 a 5 voltios).</li>
-	<li>El Z80 consulta el bus de datos y ve el estado de las líneas, con lo que lee el "00001111" o 0Fh.</li>
-	<li>El Z80 coloca en el registro A el valor 0Fh.</li>
-</ul>
-<p>El procedimiento para escribir es similar, salvo que la línea de control entre el Z80 y la memoria en lugar de indicar "lectura" indica "escritura", y que es el Z80 quien pone en el bus de datos el valor que quiere escribir en la celdilla indicada en el bus de direcciones:</p>
-<p><em>Ejecución de LD (1234h), A</em></p>
-<ul>
-	<li>Supongamos que A contiene el valor 15 (0Fh): el Z80 coloca las líneas del bus de datos a los valores 00001111.</li>
+                                <li>La memoria lee el valor de la celdilla de memoria 1234h (por ejemplo 0Fh, que es
+                                    00001111 en binario) y cambia las 8 conexiones del Bus de Datos para que contengan
+                                    00001111 (4 "líneas" las pone a 0 voltios, y las otras 4 a 5 voltios).
+                                </li>
+                                <li>El Z80 consulta el bus de datos y ve el estado de las líneas, con lo que lee el
+                                    "00001111" o 0Fh.
+                                </li>
+                                <li>El Z80 coloca en el registro A el valor 0Fh.</li>
+                            </ul>
+                            <p>El procedimiento para escribir es similar, salvo que la línea de control entre el Z80 y
+                                la memoria en lugar de indicar "lectura" indica "escritura", y que es el Z80 quien pone
+                                en el bus de datos el valor que quiere escribir en la celdilla indicada en el bus de
+                                direcciones:</p>
+                            <p><em>Ejecución de LD (1234h), A</em></p>
+                            <ul>
+                                <li>Supongamos que A contiene el valor 15 (0Fh): el Z80 coloca las líneas del bus de
+                                    datos a los valores 00001111.
+                                </li>
 
-	<li>El Z80 coloca las líneas del bus de direcciones a 00010010 00110100 (1234h).</li>
-	<li>A continuación, el microprocesador pone la línea de control READ/WRITE a tal valor que la memoria sabe que el micro le pide una operación de escritura.</li>
-	<li>La memoria recibe la señal de "quiero escribir un dato", y mira el bus de direcciones que le conecta con el Spectrum. Mirando el estado de las 16 líneas encuentra el "00010010 00110100" (1234h). Con eso, la memoria sabe a qué "casilla" o "cajón" quiere acceder el microprocesador para escribir.</li>
-	<li>La memoria lee el valor del bus de datos para saber qué dato tiene que escribir.</li>
-	<li>La memoria escribe en su cajón número 1234h el valor 0Fh.</li>
-</ul>
-<p>Estas son las 2 operaciones básicas que el Z80 puede realizar con la memoria: leer una posición de memoria y escribir en una posición de memoria. Nosotros no tenemos que preocuparnos de ninguna de las señales necesarias para realizar lecturas y escrituras, de eso se encarga el microprocesador. Para nosotros, a nivel de ensamblador, nos bastará con ejecutar "LD A, (1234h)" o "LD (1234h), A", por ejemplo.</p>
+                                <li>El Z80 coloca las líneas del bus de direcciones a 00010010 00110100 (1234h).</li>
+                                <li>A continuación, el microprocesador pone la línea de control READ/WRITE a tal valor
+                                    que la memoria sabe que el micro le pide una operación de escritura.
+                                </li>
+                                <li>La memoria recibe la señal de "quiero escribir un dato", y mira el bus de
+                                    direcciones que le conecta con el Spectrum. Mirando el estado de las 16 líneas
+                                    encuentra el "00010010 00110100" (1234h). Con eso, la memoria sabe a qué "casilla" o
+                                    "cajón" quiere acceder el microprocesador para escribir.
+                                </li>
+                                <li>La memoria lee el valor del bus de datos para saber qué dato tiene que escribir.
+                                </li>
+                                <li>La memoria escribe en su cajón número 1234h el valor 0Fh.</li>
+                            </ul>
+                            <p>Estas son las 2 operaciones básicas que el Z80 puede realizar con la memoria: leer una
+                                posición de memoria y escribir en una posición de memoria. Nosotros no tenemos que
+                                preocuparnos de ninguna de las señales necesarias para realizar lecturas y escrituras,
+                                de eso se encarga el microprocesador. Para nosotros, a nivel de ensamblador, nos bastará
+                                con ejecutar "LD A, (1234h)" o "LD (1234h), A", por ejemplo.</p>
 
-<p>Las celdillas desde la nº 0 a la 16383 están ocupadas por un chip que es la ROM del Spectrum. Este chip es de sólo lectura (ROM = Read Only Memory), lo cual quiere decir que si intentamos escribir en las celdillas desde la 0 a la 16383 no conseguiremos cambiar el valor almacenado en ellas. ¿Por qué no se puede escribir aquí? Porque es la ROM del Spectrum, es un chip que contiene el sistema operativo del Spectrum, su intérprete BASIC, como veremos posteriormente.</p>
+                            <p>Las celdillas desde la nº 0 a la 16383 están ocupadas por un chip que es la ROM del
+                                Spectrum. Este chip es de sólo lectura (ROM = Read Only Memory), lo cual quiere decir
+                                que si intentamos escribir en las celdillas desde la 0 a la 16383 no conseguiremos
+                                cambiar el valor almacenado en ellas. ¿Por qué no se puede escribir aquí? Porque es la
+                                ROM del Spectrum, es un chip que contiene el sistema operativo del Spectrum, su
+                                intérprete BASIC, como veremos posteriormente.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="200">
-	<tr align="right">
-		<td><img src="img/romram.gif" width="200" height="300"  alt="ROM y RAM" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">ROM y RAM</td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="200">
+                                <tr align="right">
+                                    <td><img src="img/romram.gif" width="200" height="300" alt="ROM y RAM"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">ROM y RAM</td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>Para trabajar (ejecutar programas, realizar operaciones y tareas) podemos utilizar el resto de la memoria. Desde el cajón o celdilla número 16384 hasta el 65535 podremos escribir y leer.</p>
-<p>La memoria RAM (celdillas 16384 a 65536) es muy importante para el Spectrum. Para empezar, en ella es donde se almacenan los datos y donde se cargan los programas, y de ella es de donde lee el microprocesador estos programas (como veremos posteriormente) para ejecutarlos instrucción a instrucción. Cuando en nuestra anterior entrega del curso pokeamos la rutina en código máquina en la dirección 40000, estabamos escribiendo un programa en memoria para después ejecutarlo.</p>
-<p>Hay una parte de la memoria RAM que es especial. El trozo de 6912 bytes que va desde la dirección 16384 hasta la 23296 es conocida como VideoRAM. Esta porción de la memoria no se utiliza para almacenar programas ni datos, sino que es una representación numérica de los gráficos que aparecen en nuestro televisor. La ULA (un chip que hay dentro de nuestro Spectrum) lee continuamente esta zona de memoria y transforma los unos y ceros que en ella encuentra en puntos y colores en el televisor.</p>
-<p>Visto de una manera simple (pero real): al escribir un valor numérico (por ejemplo un 1) en alguna dirección de esta parte de la RAM, de forma inmediata aparece un punto en nuestro televisor, ya que la ULA está continuamente "escaneando" la videoram (de forma independiente del Z80) para reflejar en el televisor todos los valores numéricos que introduzcamos en ella.</p>
-<p>Por ejemplo, el siguiente programa pinta 2 píxeles en el centro de la pantalla escribiendo en la videomemoria:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Para trabajar (ejecutar programas, realizar operaciones y tareas) podemos utilizar el
+                                resto de la memoria. Desde el cajón o celdilla número 16384 hasta el 65535 podremos
+                                escribir y leer.</p>
+                            <p>La memoria RAM (celdillas 16384 a 65536) es muy importante para el Spectrum. Para
+                                empezar, en ella es donde se almacenan los datos y donde se cargan los programas, y de
+                                ella es de donde lee el microprocesador estos programas (como veremos posteriormente)
+                                para ejecutarlos instrucción a instrucción. Cuando en nuestra anterior entrega del curso
+                                pokeamos la rutina en código máquina en la dirección 40000, estabamos escribiendo un
+                                programa en memoria para después ejecutarlo.</p>
+                            <p>Hay una parte de la memoria RAM que es especial. El trozo de 6912 bytes que va desde la
+                                dirección 16384 hasta la 23296 es conocida como VideoRAM. Esta porción de la memoria no
+                                se utiliza para almacenar programas ni datos, sino que es una representación numérica de
+                                los gráficos que aparecen en nuestro televisor. La ULA (un chip que hay dentro de
+                                nuestro Spectrum) lee continuamente esta zona de memoria y transforma los unos y ceros
+                                que en ella encuentra en puntos y colores en el televisor.</p>
+                            <p>Visto de una manera simple (pero real): al escribir un valor numérico (por ejemplo un 1)
+                                en alguna dirección de esta parte de la RAM, de forma inmediata aparece un punto en
+                                nuestro televisor, ya que la ULA está continuamente "escaneando" la videoram (de forma
+                                independiente del Z80) para reflejar en el televisor todos los valores numéricos que
+                                introduzcamos en ella.</p>
+                            <p>Por ejemplo, el siguiente programa pinta 2 píxeles en el centro de la pantalla
+                                escribiendo en la videomemoria:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 10 REM Pintando 2 pixeles en pantalla mediante POKE
 20 LET DIRECCION= 16384 + 2000
 25 REM 129 = 10000001
@@ -312,83 +612,181 @@ function RecargarCabecera(url)
 40 PAUSE 0
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Si ejecutamos el programa, veremos 2 puntos en el centro de la pantalla. Estos 2 puntos aparecen al escribir el byte de valor 129 en la dirección 18384. El número 129, en binario, es 10000001. Esos 2 unos son los que se convierten en 2 puntos cuando la ULA lee la videomemoria y transforma los unos en colores de tinta y los ceros en papel.</p>
-<p>Lo que nos tiene que quedar claro al respecto de la memoria es lo siguiente:</p>
-<ul>
-	<li>El microprocesador puede acceder a la memoria tanto para leer como para escribir, y lo hará cuando nosotros se lo pidamos (para leer o escribir datos en memoria). También lo hará para leer las instrucciones a ejecutar, como veremos posteriormente.</li>
-	<li>La memoria está formada por la ROM, la VideoRAM y la RAM.</li>
- 	<li>En la ROM no podemos escribir (pero sí leer). Almacena el "código" de arranque del Spectrum, así como el intérprete de BASIC. En ella existen rutinas que usa BASIC que podremos aprovechar en nuestros programas en ensamblador.</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Si ejecutamos el programa, veremos 2 puntos en el centro de la pantalla. Estos 2 puntos
+                                aparecen al escribir el byte de valor 129 en la dirección 18384. El número 129, en
+                                binario, es 10000001. Esos 2 unos son los que se convierten en 2 puntos cuando la ULA
+                                lee la videomemoria y transforma los unos en colores de tinta y los ceros en papel.</p>
+                            <p>Lo que nos tiene que quedar claro al respecto de la memoria es lo siguiente:</p>
+                            <ul>
+                                <li>El microprocesador puede acceder a la memoria tanto para leer como para escribir, y
+                                    lo hará cuando nosotros se lo pidamos (para leer o escribir datos en memoria).
+                                    También lo hará para leer las instrucciones a ejecutar, como veremos posteriormente.
+                                </li>
+                                <li>La memoria está formada por la ROM, la VideoRAM y la RAM.</li>
+                                <li>En la ROM no podemos escribir (pero sí leer). Almacena el "código" de arranque del
+                                    Spectrum, así como el intérprete de BASIC. En ella existen rutinas que usa BASIC que
+                                    podremos aprovechar en nuestros programas en ensamblador.
+                                </li>
 
- 	<li>En la videoRAM sólo leeremos y escribiremos cuando queramos dibujar cosas en pantalla (puntos y colores).</li>
- 	<li>En el resto de la RAM (a partir de la dirección 23296) es donde realizaremos todo el trabajo: allí situaremos nuestros programas, nuestras variables, datos, gráficos que después copiaremos a la videoRAM, etc.</li>
-</ul>
-<p><strong>EL PUERTO DE EXPANSIÓN</strong></p>
-<p>El puerto de expansión del Spectrum no será importante en nuestro curso, ya que no lo utilizaremos para nada. Para vuestra información, basta con conocer que los diferentes pines del puerto de expansión de nuestro ZX están conectados directamente a diferentes patillas del microprocesador. Es decir, cada una de las líneas que podemos ver físicamente en el puerto de expansión es una pista de circuito (como si fuera un cable) que va directamente a alguna de las patillas del Z80.</p>
-<p>Es por eso que mediante el puerto de expansión se puede implementar casi cualquier cosa hardware en el Spectrum sin tener que abrirlo: estamos conectando cosas directamente al micro y tras hacerlo, podemos realizar programas que accedan a esos elementos recién conectados: podemos leer los joysticks (porque los estamos conectando a puertos de Entrada/Salida mediante los buses de datos y direcciones), podemos leer cartuchos (porque "ocultamos" la memoria del Spectrum y la reemplazamos con otra memoria que contiene el juego ya cargado en ella, poniéndo esta memoria en el Bus de datos y Direcciones), etc.</p>
-<p><strong>CÓMO FUNCIONA EL SPECTRUM</strong></p>
-<p>Una vez hemos visto todas las partes funcionales, veamos cómo funciona el Spectrum a nivel de ciclo de instrucción.</p>
+                                <li>En la videoRAM sólo leeremos y escribiremos cuando queramos dibujar cosas en
+                                    pantalla (puntos y colores).
+                                </li>
+                                <li>En el resto de la RAM (a partir de la dirección 23296) es donde realizaremos todo el
+                                    trabajo: allí situaremos nuestros programas, nuestras variables, datos, gráficos que
+                                    después copiaremos a la videoRAM, etc.
+                                </li>
+                            </ul>
+                            <p><strong>EL PUERTO DE EXPANSIÓN</strong></p>
+                            <p>El puerto de expansión del Spectrum no será importante en nuestro curso, ya que no lo
+                                utilizaremos para nada. Para vuestra información, basta con conocer que los diferentes
+                                pines del puerto de expansión de nuestro ZX están conectados directamente a diferentes
+                                patillas del microprocesador. Es decir, cada una de las líneas que podemos ver
+                                físicamente en el puerto de expansión es una pista de circuito (como si fuera un cable)
+                                que va directamente a alguna de las patillas del Z80.</p>
+                            <p>Es por eso que mediante el puerto de expansión se puede implementar casi cualquier cosa
+                                hardware en el Spectrum sin tener que abrirlo: estamos conectando cosas directamente al
+                                micro y tras hacerlo, podemos realizar programas que accedan a esos elementos recién
+                                conectados: podemos leer los joysticks (porque los estamos conectando a puertos de
+                                Entrada/Salida mediante los buses de datos y direcciones), podemos leer cartuchos
+                                (porque "ocultamos" la memoria del Spectrum y la reemplazamos con otra memoria que
+                                contiene el juego ya cargado en ella, poniéndo esta memoria en el Bus de datos y
+                                Direcciones), etc.</p>
+                            <p><strong>CÓMO FUNCIONA EL SPECTRUM</strong></p>
+                            <p>Una vez hemos visto todas las partes funcionales, veamos cómo funciona el Spectrum a
+                                nivel de ciclo de instrucción.</p>
 
-<p>Para empezar, los diferentes dispositivos externos (teclado, altavoz, cassette, elementos conectados al puerto de expansión, joysticks) se comunican con la CPU por medio de puertos de Entrada/Salida (Puertos E/S o I/O Ports). Para acceder a ellos simplemente leemos o escribimos en el puerto correspondiente mediante las instrucciones IN y OUT del Z80.</p>
-<p>Por otra parte, nuestro Z80 puede leer y escribir de la memoria mediante instrucciones LD ("LD valor, (direccion)" y "LD (direccion), valor"), pudiendo utilizar también otro tipo de instrucciones para hacerlo (que veremos en su momento).</p>
-<p>En realidad el Z80, visto de una forma simplificada, sólo puede hacer 3 cosas: leer/escribir en la memoria, leer/escribir en los dispositivos de Entrada/Salida y decodificar/ejecutar instrucciones. La parte de lectura/decodificación/ejecución es el funcionamiento principal del microprocesador, y es lo que trataremos a continuación.</p>
-<p><strong>CICLO DE EJECUCIÓN DE UN SPECTRUM</strong></p>
-<p>Como ya hemos visto, la parte central del Spectrum es un microprocesador Z80 el cual ve la ROM y la RAM de forma continuada como la totalidad de su memoria. Es decir, ve 64KB de memoria de los cuales los primeros 16K son el contenido de chip de ROM, y los siguientes 48K los del chip de RAM. Recordemos que el Spectrum puede leer el contenido de cualquiera de estas 65536 celdillas (así como escribir en ellas, pero sólo a partir de la 16384, ya que los primeros 16KB son de ROM).</p>
-<p>Al encender el Spectrum éste se inicializa y muestra el BASIC en pantalla. ¿Por qué ocurre esto? Esto ocurre porque el microprocesador Z80 comienza a ejecutar instrucciones desde la dirección de memoria 0, donde está el principio de la ROM de 16K, es decir, el intérprete BASIC.</p>
-<p>Al alimentar con corriente eléctrica el ordenador se ejecuta la ROM: al encender un Spectrum (que perdió en su apagado toda alimentación eléctrica) todos los registros del microprocesador Z80 valen 0 (sin alimentación eléctrica, todos los bits de la CPU están a 0 Voltios, es decir, a 0 lógico), incluído el registro PC (Program Counter o Contador de Programa), que es el que apunta a la siguiente instrucción que el Z80 debe leer y ejecutar. Un microprocesador funciona a grandes rasgos de la siguiente forma:</p>
-<ul>
-	<li>Leer instrucción apuntada por el registro PC.</li>
+                            <p>Para empezar, los diferentes dispositivos externos (teclado, altavoz, cassette, elementos
+                                conectados al puerto de expansión, joysticks) se comunican con la CPU por medio de
+                                puertos de Entrada/Salida (Puertos E/S o I/O Ports). Para acceder a ellos simplemente
+                                leemos o escribimos en el puerto correspondiente mediante las instrucciones IN y OUT del
+                                Z80.</p>
+                            <p>Por otra parte, nuestro Z80 puede leer y escribir de la memoria mediante instrucciones LD
+                                ("LD valor, (direccion)" y "LD (direccion), valor"), pudiendo utilizar también otro tipo
+                                de instrucciones para hacerlo (que veremos en su momento).</p>
+                            <p>En realidad el Z80, visto de una forma simplificada, sólo puede hacer 3 cosas:
+                                leer/escribir en la memoria, leer/escribir en los dispositivos de Entrada/Salida y
+                                decodificar/ejecutar instrucciones. La parte de lectura/decodificación/ejecución es el
+                                funcionamiento principal del microprocesador, y es lo que trataremos a continuación.</p>
+                            <p><strong>CICLO DE EJECUCIÓN DE UN SPECTRUM</strong></p>
+                            <p>Como ya hemos visto, la parte central del Spectrum es un microprocesador Z80 el cual ve
+                                la ROM y la RAM de forma continuada como la totalidad de su memoria. Es decir, ve 64KB
+                                de memoria de los cuales los primeros 16K son el contenido de chip de ROM, y los
+                                siguientes 48K los del chip de RAM. Recordemos que el Spectrum puede leer el contenido
+                                de cualquiera de estas 65536 celdillas (así como escribir en ellas, pero sólo a partir
+                                de la 16384, ya que los primeros 16KB son de ROM).</p>
+                            <p>Al encender el Spectrum éste se inicializa y muestra el BASIC en pantalla. ¿Por qué
+                                ocurre esto? Esto ocurre porque el microprocesador Z80 comienza a ejecutar instrucciones
+                                desde la dirección de memoria 0, donde está el principio de la ROM de 16K, es decir, el
+                                intérprete BASIC.</p>
+                            <p>Al alimentar con corriente eléctrica el ordenador se ejecuta la ROM: al encender un
+                                Spectrum (que perdió en su apagado toda alimentación eléctrica) todos los registros del
+                                microprocesador Z80 valen 0 (sin alimentación eléctrica, todos los bits de la CPU están
+                                a 0 Voltios, es decir, a 0 lógico), incluído el registro PC (Program Counter o Contador
+                                de Programa), que es el que apunta a la siguiente instrucción que el Z80 debe leer y
+                                ejecutar. Un microprocesador funciona a grandes rasgos de la siguiente forma:</p>
+                            <ul>
+                                <li>Leer instrucción apuntada por el registro PC.</li>
 
-	<li>Incrementar PC para apuntar a la siguiente instrucción.</li>
-	<li>Ejecutar la instrucción recién leída.</li>
-	<li>Repetir continuadamente los 3 pasos anteriores.</li>
-</ul>
-<p>Visto en pseudocódigo, como si fuera un programa (de hecho, es el pseudocódigo de cualquier emulador de Spectrum), un Z80 actúa así:</p>
-<ul>
-	<li>
-		Encendido de ordenador:
-		<ul>
+                                <li>Incrementar PC para apuntar a la siguiente instrucción.</li>
+                                <li>Ejecutar la instrucción recién leída.</li>
+                                <li>Repetir continuadamente los 3 pasos anteriores.</li>
+                            </ul>
+                            <p>Visto en pseudocódigo, como si fuera un programa (de hecho, es el pseudocódigo de
+                                cualquier emulador de Spectrum), un Z80 actúa así:</p>
+                            <ul>
+                                <li>
+                                    Encendido de ordenador:
+                                    <ul>
 
-			<li>Todos los registros (A, B, C, ..., SP, PC) valen 0.</li>
-		</ul>
-	</li>
-	<li>
- 		Mientras No Se Apague el Ordenador:<br />
- 		Leer de la memoria la siguiente instrucción, mediante (contenido de la dirección apuntada por PC):
- 		<ul>
- 			<li>Instruccion = [PC] (Instrucción es un opcode, un número que indica la operación a realizar. Podría ser de más de un byte.)</li>
+                                        <li>Todos los registros (A, B, C, ..., SP, PC) valen 0.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Mientras No Se Apague el Ordenador:<br/>
+                                    Leer de la memoria la siguiente instrucción, mediante (contenido de la dirección
+                                    apuntada por PC):
+                                    <ul>
+                                        <li>Instruccion = [PC] (Instrucción es un opcode, un número que indica la
+                                            operación a realizar. Podría ser de más de un byte.)
+                                        </li>
 
- 			<li>PC = PC + 1</li>
- 			<li>Si la instrucción necesita algún operando, leerlo:
-	 			<ul>
-	 				<li>Operando1 = [PC]</li>
-	 				<li>PC = PC + 1</li>
-	 				<li>Operando2 = [PC]      (Opcional)</li>
-	 				<li>PC = PC + 1           (Opcional)</li>
+                                        <li>PC = PC + 1</li>
+                                        <li>Si la instrucción necesita algún operando, leerlo:
+                                            <ul>
+                                                <li>Operando1 = [PC]</li>
+                                                <li>PC = PC + 1</li>
+                                                <li>Operando2 = [PC] (Opcional)</li>
+                                                <li>PC = PC + 1 (Opcional)</li>
 
-	 			</ul>
- 			</li>
- 			<li>Decodificar la instrucción (mirar en una tabla interna y ver qué microcódigo hay que ejecutar para la instrucción leída).</li>
- 			<li>Ejecutar la instrucción</li>
- 		</ul>
- 		Fin Mientras
- 	</li>
-</ul>
-<p>Así pues, al encender el ordenador, PC vale 0. Al estar la ROM mapeada en la posición de memoria 0 (mediante cableado hardware de los chips de memoria en la placa del Spectrum), lo que pasa al encender el ordenador es que ese contador de programa (PC) está apuntando al principio de la ROM, y es por eso que se ejecuta la ROM paso a paso, instrucción a instrucción, cada vez que lo encendemos. No hay misterio: para el Spectrum todos los chips de memoria de su interior (porque hay varios chips, no sólo 2) son como si fuera un gran baúl de 64KB continuados, algo que se consigue mediante cableado de los diferentes chips a las patillas correctas del microprocesador (como hemos visto en el apartado dedicado a la Memoria). A grandes rasgos, las patillas de datos y de direcciones del microprocesador están conectadas a los diferentes chips de memoria de forma que cuando el micro lee datos de la memoria, lo ve todo como si fuera un sólo chip de memoria de 64KB. Esto se consigue con un sencillo proceso de diseño (al hacer el esquema del ordenador antes de fabricarlo) conocido como "mapeado de memoria".</p>
+                                            </ul>
+                                        </li>
+                                        <li>Decodificar la instrucción (mirar en una tabla interna y ver qué microcódigo
+                                            hay que ejecutar para la instrucción leída).
+                                        </li>
+                                        <li>Ejecutar la instrucción</li>
+                                    </ul>
+                                    Fin Mientras
+                                </li>
+                            </ul>
+                            <p>Así pues, al encender el ordenador, PC vale 0. Al estar la ROM mapeada en la posición de
+                                memoria 0 (mediante cableado hardware de los chips de memoria en la placa del Spectrum),
+                                lo que pasa al encender el ordenador es que ese contador de programa (PC) está apuntando
+                                al principio de la ROM, y es por eso que se ejecuta la ROM paso a paso, instrucción a
+                                instrucción, cada vez que lo encendemos. No hay misterio: para el Spectrum todos los
+                                chips de memoria de su interior (porque hay varios chips, no sólo 2) son como si fuera
+                                un gran baúl de 64KB continuados, algo que se consigue mediante cableado de los
+                                diferentes chips a las patillas correctas del microprocesador (como hemos visto en el
+                                apartado dedicado a la Memoria). A grandes rasgos, las patillas de datos y de
+                                direcciones del microprocesador están conectadas a los diferentes chips de memoria de
+                                forma que cuando el micro lee datos de la memoria, lo ve todo como si fuera un sólo chip
+                                de memoria de 64KB. Esto se consigue con un sencillo proceso de diseño (al hacer el
+                                esquema del ordenador antes de fabricarlo) conocido como "mapeado de memoria".</p>
 
-<p>En el mapa de memoria del Spectrum, los primeros 16KB son la ROM (que está en un chip aparte, pero que como acabamos de ver es algo que el Spectrum no distingue, ya que la visualiza como una sección de memoria continua desde la posición 0 hasta la 16383 de su "baúl total" de 64KB) y luego viene la RAM, a partir de la posición 16384. Ahí es donde se almacenan los programas, los gráficos de la pantalla (en un trozo determinado de esa memoria), etc. En esta RAM es donde el intérprete de BASIC introduce los programas para su ejecución.</p>
-<p>Estos programas pueden entrar desde los diferentes dispositivos de entrada/salida (gestionados por el Z80) como el teclado, la cinta o disco, etc.</p>
-<p>Cabe hacer una mención especial (como ya hemos visto) a que una parte de la memoria RAM (desde el byte 16384 hasta el 23296) está conectada con la ULA, el chip "gráfico" del Spectrum, y encargado de convertir el contenido de esta "videoram" o VRAM a señales de vídeo para la televisión. Cuando los juegos dibujan gráficos, sprites o cualquier otra cosa en pantalla, en realidad están escribiendo bytes en estas posiciones de memoria, que la ULA muestra en la TV en el siguiente refresco de la pantalla.</p>
-<p>Así pues, nuestro Z80 en el momento del arranque lo que hace es comenzar a ejecutar uno a uno los opcodes que hay a partir de la dirección 0000h de la memoria, que se corresponde con la ROM. ¿Y qué es la ROM? No es más que un programa realizado por la gente que creó el Spectrum. Ese programa es, entre otras cosas, el intérprete BASIC. Los señores de Sinclair programaron un intérprete BASIC en lenguaje ensamblador de Z80, lo ensamblaron con un ensamblador de Z80 y grabaron el código binario resultante ensamblado en un CHIP ROM de 16KB. Por eso al encender nuestro Spectrum aparece el intérprete de BASIC; el Sistema Operativo de nuestro ZX. Nada nos impediría realizar nuestro propio "sistema operativo" para Spectrum creando una ROM nueva (mirando siempre la compatibilidad con la ROM vieja, de forma que contenga las mismas rutinas de ROM y variables en memoria que utilizan muchos programas) y reemplazando el chip ROM del Spectrum por nuestro propio chip de ROM.</p>
-<p><strong>OPCODES Y CÓDIGO MÁQUINA</strong></p>
-<p>Nuestro microprocesador Z80 no entiende los comandos en ensamblador que hemos estado viendo en estos 2 primeros capítulos del curso de código máquina; el Z80 sólo entiende números binarios, números de 8 bits de 0 a 255 (o de 00h a FFh en hexadecimal).</p>
-<p>De entre los registros del microprocesador hay uno llamado PC (Program Counter o Contador de Programa), que es el "puntero" que apunta a la instrucción actual que se está ejecutando. Cuando ejecutamos un programa, lo que hacemos es meterlo en memoria (por ejemplo, como cuando en la primera entrega del curso POKEábamos nuestra rutina a partir de la dirección 40.000) y después saltar al inicio del mismo.</p>
-<p>Supongamos por ejemplo que pokeamos el siguiente programa en la dirección 40000:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                            <p>En el mapa de memoria del Spectrum, los primeros 16KB son la ROM (que está en un chip
+                                aparte, pero que como acabamos de ver es algo que el Spectrum no distingue, ya que la
+                                visualiza como una sección de memoria continua desde la posición 0 hasta la 16383 de su
+                                "baúl total" de 64KB) y luego viene la RAM, a partir de la posición 16384. Ahí es donde
+                                se almacenan los programas, los gráficos de la pantalla (en un trozo determinado de esa
+                                memoria), etc. En esta RAM es donde el intérprete de BASIC introduce los programas para
+                                su ejecución.</p>
+                            <p>Estos programas pueden entrar desde los diferentes dispositivos de entrada/salida
+                                (gestionados por el Z80) como el teclado, la cinta o disco, etc.</p>
+                            <p>Cabe hacer una mención especial (como ya hemos visto) a que una parte de la memoria RAM
+                                (desde el byte 16384 hasta el 23296) está conectada con la ULA, el chip "gráfico" del
+                                Spectrum, y encargado de convertir el contenido de esta "videoram" o VRAM a señales de
+                                vídeo para la televisión. Cuando los juegos dibujan gráficos, sprites o cualquier otra
+                                cosa en pantalla, en realidad están escribiendo bytes en estas posiciones de memoria,
+                                que la ULA muestra en la TV en el siguiente refresco de la pantalla.</p>
+                            <p>Así pues, nuestro Z80 en el momento del arranque lo que hace es comenzar a ejecutar uno a
+                                uno los opcodes que hay a partir de la dirección 0000h de la memoria, que se corresponde
+                                con la ROM. ¿Y qué es la ROM? No es más que un programa realizado por la gente que creó
+                                el Spectrum. Ese programa es, entre otras cosas, el intérprete BASIC. Los señores de
+                                Sinclair programaron un intérprete BASIC en lenguaje ensamblador de Z80, lo ensamblaron
+                                con un ensamblador de Z80 y grabaron el código binario resultante ensamblado en un CHIP
+                                ROM de 16KB. Por eso al encender nuestro Spectrum aparece el intérprete de BASIC; el
+                                Sistema Operativo de nuestro ZX. Nada nos impediría realizar nuestro propio "sistema
+                                operativo" para Spectrum creando una ROM nueva (mirando siempre la compatibilidad con la
+                                ROM vieja, de forma que contenga las mismas rutinas de ROM y variables en memoria que
+                                utilizan muchos programas) y reemplazando el chip ROM del Spectrum por nuestro propio
+                                chip de ROM.</p>
+                            <p><strong>OPCODES Y CÓDIGO MÁQUINA</strong></p>
+                            <p>Nuestro microprocesador Z80 no entiende los comandos en ensamblador que hemos estado
+                                viendo en estos 2 primeros capítulos del curso de código máquina; el Z80 sólo entiende
+                                números binarios, números de 8 bits de 0 a 255 (o de 00h a FFh en hexadecimal).</p>
+                            <p>De entre los registros del microprocesador hay uno llamado PC (Program Counter o Contador
+                                de Programa), que es el "puntero" que apunta a la instrucción actual que se está
+                                ejecutando. Cuando ejecutamos un programa, lo que hacemos es meterlo en memoria (por
+                                ejemplo, como cuando en la primera entrega del curso POKEábamos nuestra rutina a partir
+                                de la dirección 40.000) y después saltar al inicio del mismo.</p>
+                            <p>Supongamos por ejemplo que pokeamos el siguiente programa en la dirección 40000:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD A, 0
  INC A
  LD B, $FFh
@@ -396,213 +794,423 @@ function RecargarCabecera(url)
  LD DE, $AABB
  RET
 </pre>
-    </p></td></tr>
-</table>
-<p>Si ensamblamos este programa obtendremos los siguientes números (técnicamente llamados "código máquina"):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Si ensamblamos este programa obtendremos los siguientes números (técnicamente llamados
+                                "código máquina"):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  3e 00 3c 06 ff 04 11 bb aa c9
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Al pokear en memoria estos valores, dejaremos la memoria así:</p>
-<table>
-	<tr><th style="border-bottom: 1px solid #000;">Dirección</th><th style="border-bottom: 1px solid #000;">Valor</th></tr>
-	<tr><td>40000</td><td>3e</td></tr>
-   	<tr><td>40001</td><td>00</td></tr>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Al pokear en memoria estos valores, dejaremos la memoria así:</p>
+                            <table>
+                                <tr>
+                                    <th style="border-bottom: 1px solid #000;">Dirección</th>
+                                    <th style="border-bottom: 1px solid #000;">Valor</th>
+                                </tr>
+                                <tr>
+                                    <td>40000</td>
+                                    <td>3e</td>
+                                </tr>
+                                <tr>
+                                    <td>40001</td>
+                                    <td>00</td>
+                                </tr>
 
-   	<tr><td>40002</td><td>3c</td></tr>
-   	<tr><td>40003</td><td>06</td></tr>
-   	<tr><td>40004</td><td>ff</td></tr>
-   	<tr><td>40005</td><td>04</td></tr>
-   	<tr><td>40006</td><td>11</td></tr>
+                                <tr>
+                                    <td>40002</td>
+                                    <td>3c</td>
+                                </tr>
+                                <tr>
+                                    <td>40003</td>
+                                    <td>06</td>
+                                </tr>
+                                <tr>
+                                    <td>40004</td>
+                                    <td>ff</td>
+                                </tr>
+                                <tr>
+                                    <td>40005</td>
+                                    <td>04</td>
+                                </tr>
+                                <tr>
+                                    <td>40006</td>
+                                    <td>11</td>
+                                </tr>
 
-   	<tr><td>40007</td><td>bb</td></tr>
-   	<tr><td>40008</td><td>aa</td></tr>
-   	<tr><td>40009</td><td>c9</td></tr>
-</table>
-<p>Para nosotros estos números no quieren decir nada, pero para el Spectrum tienen un total significado. Concretamente:</p>
-<table>
-	<tr><th style="border-bottom: 1px solid #000;">Dirección</th><th style="border-bottom: 1px solid #000;">Valor</th><th style="border-bottom: 1px solid #000;">Significado</th></tr>
+                                <tr>
+                                    <td>40007</td>
+                                    <td>bb</td>
+                                </tr>
+                                <tr>
+                                    <td>40008</td>
+                                    <td>aa</td>
+                                </tr>
+                                <tr>
+                                    <td>40009</td>
+                                    <td>c9</td>
+                                </tr>
+                            </table>
+                            <p>Para nosotros estos números no quieren decir nada, pero para el Spectrum tienen un total
+                                significado. Concretamente:</p>
+                            <table>
+                                <tr>
+                                    <th style="border-bottom: 1px solid #000;">Dirección</th>
+                                    <th style="border-bottom: 1px solid #000;">Valor</th>
+                                    <th style="border-bottom: 1px solid #000;">Significado</th>
+                                </tr>
 
-	<tr><td>40000</td><td>3e</td><td>LD A,</td></tr>
-   	<tr><td>40001</td><td>00</td><td>00h</td></tr>
-   	<tr><td>40002</td><td>3c</td><td>INC A</td></tr>
-   	<tr><td>40003</td><td>06</td><td>LD B,</td></tr>
+                                <tr>
+                                    <td>40000</td>
+                                    <td>3e</td>
+                                    <td>LD A,</td>
+                                </tr>
+                                <tr>
+                                    <td>40001</td>
+                                    <td>00</td>
+                                    <td>00h</td>
+                                </tr>
+                                <tr>
+                                    <td>40002</td>
+                                    <td>3c</td>
+                                    <td>INC A</td>
+                                </tr>
+                                <tr>
+                                    <td>40003</td>
+                                    <td>06</td>
+                                    <td>LD B,</td>
+                                </tr>
 
-   	<tr><td>40004</td><td>ff</td><td>FFh</td></tr>
-   	<tr><td>40005</td><td>04</td><td>INC B</td></tr>
-   	<tr><td>40006</td><td>11</td><td>LD DE,</td></tr>
-   	<tr><td>40007</td><td>bb</td><td>BBh</td></tr>
+                                <tr>
+                                    <td>40004</td>
+                                    <td>ff</td>
+                                    <td>FFh</td>
+                                </tr>
+                                <tr>
+                                    <td>40005</td>
+                                    <td>04</td>
+                                    <td>INC B</td>
+                                </tr>
+                                <tr>
+                                    <td>40006</td>
+                                    <td>11</td>
+                                    <td>LD DE,</td>
+                                </tr>
+                                <tr>
+                                    <td>40007</td>
+                                    <td>bb</td>
+                                    <td>BBh</td>
+                                </tr>
 
-   	<tr><td>40008</td><td>aa</td><td>AAh</td></tr>
-   	<tr><td>40009</td><td>c9</td><td>RET</td></tr>
-</table>
-<p>A la hora de ejecutar el programa, nuestro RANDOMIZE USR 40000 lo que hace en realidad es cambiar el valor del registro "PC" del microprocesador. Hace PC igual a 40000. Así, el "bucle" del programa que hemos visto arriba en pseudocódigo lo que hace es:</p>
-<ul>
-	<li>Leer el byte contenido en la dirección de memoria "PC" (40000).</li>
+                                <tr>
+                                    <td>40008</td>
+                                    <td>aa</td>
+                                    <td>AAh</td>
+                                </tr>
+                                <tr>
+                                    <td>40009</td>
+                                    <td>c9</td>
+                                    <td>RET</td>
+                                </tr>
+                            </table>
+                            <p>A la hora de ejecutar el programa, nuestro RANDOMIZE USR 40000 lo que hace en realidad es
+                                cambiar el valor del registro "PC" del microprocesador. Hace PC igual a 40000. Así, el
+                                "bucle" del programa que hemos visto arriba en pseudocódigo lo que hace es:</p>
+                            <ul>
+                                <li>Leer el byte contenido en la dirección de memoria "PC" (40000).</li>
 
-	<li>Incrementar PC (PC=PC+1).</li>
-	<li>El byte es "3eh", con lo cual el Spectrum sabe que tiene que meter en A un valor numérico.</li>
-	<li>El valor extra para "LD A," está a continuación en memoria, así que se lee la memoria de nuevo:
-	<ul>
-		<li>operando = [PC] = 00h</li>
-		<li>Incrementar PC (PC=PC+1)</l>
-	</ul>
+                                <li>Incrementar PC (PC=PC+1).</li>
+                                <li>El byte es "3eh", con lo cual el Spectrum sabe que tiene que meter en A un valor
+                                    numérico.
+                                </li>
+                                <li>El valor extra para "LD A," está a continuación en memoria, así que se lee la
+                                    memoria de nuevo:
+                                    <ul>
+                                        <li>operando = [PC] = 00h</li>
+                                        <li>Incrementar PC (PC=PC+1)</l>
+                                    </ul>
 
-	</li>
-	<li>Ya se tiene el "código de instrucción completo", así que se ejecuta: "LD A, 00". (se ejecuta el microcódigo correspondiente dentro de la CPU).</li>
-</ul>
-<p>Esto que hemos visto es el proceso de "Lectura de Instrucción (fetch)", "decodificación (decode)", y "ejecución (execute)". Pero recordemos que este proceso se ejecuta una y otra vez, sin parar, de modo que el procesador sigue con la siguiente instrucción (INC A):</p>
-<ul>
-	<li>Leer el byte contenido en la dirección de memoria "PC" (40002).</li>
-	<li>Incrementar PC (PC=PC+1).</li>
-	<li>El byte es "3ch", con lo cual el Spectrum sabe que tiene que incrementar A.</li>
+                                </li>
+                                <li>Ya se tiene el "código de instrucción completo", así que se ejecuta: "LD A, 00". (se
+                                    ejecuta el microcódigo correspondiente dentro de la CPU).
+                                </li>
+                            </ul>
+                            <p>Esto que hemos visto es el proceso de "Lectura de Instrucción (fetch)", "decodificación
+                                (decode)", y "ejecución (execute)". Pero recordemos que este proceso se ejecuta una y
+                                otra vez, sin parar, de modo que el procesador sigue con la siguiente instrucción (INC
+                                A):</p>
+                            <ul>
+                                <li>Leer el byte contenido en la dirección de memoria "PC" (40002).</li>
+                                <li>Incrementar PC (PC=PC+1).</li>
+                                <li>El byte es "3ch", con lo cual el Spectrum sabe que tiene que incrementar A.</li>
 
-	<li>No hacen falta operandos extra, INC A no requiere nada más.</li>
-	<li>Ya se tiene el "código de instrucción completo", así que se ejecuta: "INC A".</li>
-</ul>
-<p>Y este ciclo se vuelve a repetir, una y otra vez, hasta que llegamos al RET:</p>
-<ul>
-	<li>Leer el byte contenido en la dirección de memoria "PC" (40009).</li>
-	<li>Incrementar PC (PC=PC+1).</li>
-	<li>El byte es "c9h", con lo cual el Spectrum sabe que tiene que hacer un RET.</li>
+                                <li>No hacen falta operandos extra, INC A no requiere nada más.</li>
+                                <li>Ya se tiene el "código de instrucción completo", así que se ejecuta: "INC A".</li>
+                            </ul>
+                            <p>Y este ciclo se vuelve a repetir, una y otra vez, hasta que llegamos al RET:</p>
+                            <ul>
+                                <li>Leer el byte contenido en la dirección de memoria "PC" (40009).</li>
+                                <li>Incrementar PC (PC=PC+1).</li>
+                                <li>El byte es "c9h", con lo cual el Spectrum sabe que tiene que hacer un RET.</li>
 
-	<li>No hacen falta operandos extra, RET no requiere nada más.</li>
-	<li>Ya se tiene el "código de instrucción completo", así que se ejecuta: "RET".</li>
-</ul>
-<p>Un par de detalles a tener en cuenta:</p>
-<ul>
-	<li>Como véis, el microprocesador no entiende el lenguaje ensamblador, sólo la traducción de este a Lenguaje Máquina (los números u opcodes que estamos viendo).</li>
-	<li>La primera parte leída de la instrucción es el OPCODE (código de operación), y es lo que permite al Spectrum, mediante una "tabla interna", saber qué tarea exacta tiene que realizar. Si la instrucción necesita datos extra para leer de memoria, se almacenan tras el opcode, y se conocen como "operandos". Así, "LD A, 00" se corresponde con la instrucción "3E 00", donde "3E" es el código de operación (opcode) y "00" es el operando.</li>
-	<li>Cuando un operando es de 16 bits (2 bytes), primero encontramos el byte bajo y luego el byte alto. Así, nuestro "LD DE, $AABB" no se codifica como "11 AA BB" sino como "11 BB AA". El opcode para "LD DE" es "11", y "BB AA" los operandos (en este caso, un valor numérico directo). Esta forma de almacenamiento se denomina técnicamente "little endian".</li>
+                                <li>No hacen falta operandos extra, RET no requiere nada más.</li>
+                                <li>Ya se tiene el "código de instrucción completo", así que se ejecuta: "RET".</li>
+                            </ul>
+                            <p>Un par de detalles a tener en cuenta:</p>
+                            <ul>
+                                <li>Como véis, el microprocesador no entiende el lenguaje ensamblador, sólo la
+                                    traducción de este a Lenguaje Máquina (los números u opcodes que estamos viendo).
+                                </li>
+                                <li>La primera parte leída de la instrucción es el OPCODE (código de operación), y es lo
+                                    que permite al Spectrum, mediante una "tabla interna", saber qué tarea exacta tiene
+                                    que realizar. Si la instrucción necesita datos extra para leer de memoria, se
+                                    almacenan tras el opcode, y se conocen como "operandos". Así, "LD A, 00" se
+                                    corresponde con la instrucción "3E 00", donde "3E" es el código de operación
+                                    (opcode) y "00" es el operando.
+                                </li>
+                                <li>Cuando un operando es de 16 bits (2 bytes), primero encontramos el byte bajo y luego
+                                    el byte alto. Así, nuestro "LD DE, $AABB" no se codifica como "11 AA BB" sino como
+                                    "11 BB AA". El opcode para "LD DE" es "11", y "BB AA" los operandos (en este caso,
+                                    un valor numérico directo). Esta forma de almacenamiento se denomina técnicamente
+                                    "little endian".
+                                </li>
 
-	<li>Para el Spectrum, no hay diferencia entre instrucciones y datos. Un "3Ch" puede ser un "INC A" o un valor númerico "3Ch". ¿Cómo distingue el Spectrum uno de otro? Sencillo: todo depende de si se encuentra al principio de un ciclo de decodificación o no. Es decir, si cuando vamos a empezar a leer una instrucción leemos un "3Ch", es un INC A. Pero si lo leemos en el proceso de lectura de un operando, su significado cambia. Pensad en por ejemplo en "LD A, 3Ch", que se codificaría como "3E 3C", pero no ejecutaría un INC A porque la lectura del "3Ch" se realiza como operando para el "LD A,".</li>
-	<li>Al no existir diferencia entre instrucciones y datos, si cambiamos PC de forma que apunte a una zona de la memoria donde hay datos y no código, el Z80 no se enterará de ello y tratará de ejecutar los números que va leyendo como si fuera código (con resultados imprecedibles, seguramente con el cuelgue del Spectrum o un reset).</li>
-	<li>Por último, existen una serie de opcodes compuestos (dejando de lado los operandos) que ocupan más de 1 byte. Esos opcodes suelen comenzar por CB, ED o FD, de forma que, por ejemplo el opcode "CB 04" se corresponde con la operación "RLC L". Si sólo pudieramos utilizar un byte para representar el opcode, sólo tendríamos disponibles 256 posibles instrucciones en el procesador. Para poder disponer de más instrucciones se utilizan códigos de instrucción de más de un byte. Así, cuando nuestro procesador encuentra un CB, ED o FD sabe que el próximo código que lea después tendrá un significado diferente al que tendría sin el CB, ED o FD delante. Es por eso que "04h" significa "INC B", y "CBh O4h" significa "RLC L" (otra instrucción diferente).</li>
-</ul>
-<p><strong>ENSAMBLADO MANUAL</strong></p>
-<p>Al igual que el Spectrum consulta una tabla interna para saber a qué instrucción corresponde cada número (cada opcode) nosotros podemos consultar una tabla para ensamblar manualmente nuestros programas en ensamblador y obtener los valores de código máquina. Si no tenemos a mano un programa ensamblador que lo haga por nosotros (que, al fin y al cabo, no es más que un traductor con una tabla similar), podemos utilizar tablas para traducir el programa manualmente. Cabe decir que es una labor repetitiva y larga, y se recomienda encarecidamente la utilización de un programa ensamblador para ello.</p>
-<p>Cuando lleguemos a la parte de definición del lenguaje veremos que ensamblando manualmente resulta bastante costoso calcular las direcciones de los saltos relativos y absolutos, cosa que el programa ensamblador hace con bastante facilidad.</p>
-<p>Aún así, quien quiera intentar ensamblar manualmente podrá hacerlo incluso con la tabla de "Juego de caracteres" que tiene disponible en el manual del +2A/+3, capítulo 8, sección 28 (además de no ser la única tabla de ensamblado manual que existe, ya que hay varias disponibles en Internet).</p>
+                                <li>Para el Spectrum, no hay diferencia entre instrucciones y datos. Un "3Ch" puede ser
+                                    un "INC A" o un valor númerico "3Ch". ¿Cómo distingue el Spectrum uno de otro?
+                                    Sencillo: todo depende de si se encuentra al principio de un ciclo de decodificación
+                                    o no. Es decir, si cuando vamos a empezar a leer una instrucción leemos un "3Ch", es
+                                    un INC A. Pero si lo leemos en el proceso de lectura de un operando, su significado
+                                    cambia. Pensad en por ejemplo en "LD A, 3Ch", que se codificaría como "3E 3C", pero
+                                    no ejecutaría un INC A porque la lectura del "3Ch" se realiza como operando para el
+                                    "LD A,".
+                                </li>
+                                <li>Al no existir diferencia entre instrucciones y datos, si cambiamos PC de forma que
+                                    apunte a una zona de la memoria donde hay datos y no código, el Z80 no se enterará
+                                    de ello y tratará de ejecutar los números que va leyendo como si fuera código (con
+                                    resultados imprecedibles, seguramente con el cuelgue del Spectrum o un reset).
+                                </li>
+                                <li>Por último, existen una serie de opcodes compuestos (dejando de lado los operandos)
+                                    que ocupan más de 1 byte. Esos opcodes suelen comenzar por CB, ED o FD, de forma
+                                    que, por ejemplo el opcode "CB 04" se corresponde con la operación "RLC L". Si sólo
+                                    pudieramos utilizar un byte para representar el opcode, sólo tendríamos disponibles
+                                    256 posibles instrucciones en el procesador. Para poder disponer de más
+                                    instrucciones se utilizan códigos de instrucción de más de un byte. Así, cuando
+                                    nuestro procesador encuentra un CB, ED o FD sabe que el próximo código que lea
+                                    después tendrá un significado diferente al que tendría sin el CB, ED o FD delante.
+                                    Es por eso que "04h" significa "INC B", y "CBh O4h" significa "RLC L" (otra
+                                    instrucción diferente).
+                                </li>
+                            </ul>
+                            <p><strong>ENSAMBLADO MANUAL</strong></p>
+                            <p>Al igual que el Spectrum consulta una tabla interna para saber a qué instrucción
+                                corresponde cada número (cada opcode) nosotros podemos consultar una tabla para
+                                ensamblar manualmente nuestros programas en ensamblador y obtener los valores de código
+                                máquina. Si no tenemos a mano un programa ensamblador que lo haga por nosotros (que, al
+                                fin y al cabo, no es más que un traductor con una tabla similar), podemos utilizar
+                                tablas para traducir el programa manualmente. Cabe decir que es una labor repetitiva y
+                                larga, y se recomienda encarecidamente la utilización de un programa ensamblador para
+                                ello.</p>
+                            <p>Cuando lleguemos a la parte de definición del lenguaje veremos que ensamblando
+                                manualmente resulta bastante costoso calcular las direcciones de los saltos relativos y
+                                absolutos, cosa que el programa ensamblador hace con bastante facilidad.</p>
+                            <p>Aún así, quien quiera intentar ensamblar manualmente podrá hacerlo incluso con la tabla
+                                de "Juego de caracteres" que tiene disponible en el manual del +2A/+3, capítulo 8,
+                                sección 28 (además de no ser la única tabla de ensamblado manual que existe, ya que hay
+                                varias disponibles en Internet).</p>
 
-<p><a href="src/opcodes.txt" onclick="window.open(this.href); return false">Tabla de opcodes</a></p>
-<p><strong>TIEMPOS DE EJECUCIÓN</strong></p>
-<p>Cada instrucción necesita un tiempo diferente para ejecutarse. No es lo mismo un simple "INC A", que requiere leer un único byte como opcode, no requiere parámetros, y sólo realiza un incremento en un registro, que un complejo "LD A, (1234h)", que requiere leer el opcode, a continuación leer 2 bytes para el operando "1234h", después acceder a la memoria y extraer el dato contenido en (1234h) para, finalmente, depositarlo en A.</p>
-<p>Los tiempos de ejecución de cada instrucción son, pues, diferentes, y para conocerlos tendremos que consultar cualquier tabla de tiempos (t-states o t-estados). Podéis acceder a alguna de estas tablas en los enlaces que veréis al final de este artículo.</p>
-<p><strong>EL SOFTWARE DE SPECTRUM</strong></p>
-<p>A estas alturas ya debemos tener claro cómo funciona el Spectrum, con su microprocesador Z80 continuamente ejecutando el código apuntado por "PC", incrementando este y de nuevo repitiendo el ciclo.</p>
-<p>Cuando encendemos nuestro Spectrum, PC vale 0000h y se ejecuta la ROM que, como ya hemos comentado, no es más que un programa hecho por los ingenieros que desarrollaron el Spectrum. Dicho programa está disponible en formato código fuente para consultas ya que usuarios de Spectrum realizaron un desensamblado (a partir de los opcodes, obtener el código fuente original) y comentaron todas las rutinas, variables del sistema y procedimientos que se ejecutan en nuestro Spectrum nada más arrancarlo. El libro "The Complete Spectrum ROM Disassembly" (El desensamblado Completo de la ROM del Spectrum) contiene este desensamblado, y podemos obtenerlo en Internet, por si tenemos curiosidad en conocer las interioridades de la ROM del Spectrum y cómo está programado el intérprete BASIC y las diferentes funciones de la ROM del mismo (con el objetivo de poder "usarlas" en nuestros programas en ensamblador).</p>
-<p>Pero aparte de la ROM del Spectrum, ¿cómo llega a la memoria de nuestro ordenador (o emulador) los programas que ejecutamos?. Veamos las diferentes maneras:</p>
-<ol style="list-style-type: lower-alpha">
+                            <p><a href="src/opcodes.txt" onclick="window.open(this.href); return false">Tabla de
+                                opcodes</a></p>
+                            <p><strong>TIEMPOS DE EJECUCIÓN</strong></p>
+                            <p>Cada instrucción necesita un tiempo diferente para ejecutarse. No es lo mismo un simple
+                                "INC A", que requiere leer un único byte como opcode, no requiere parámetros, y sólo
+                                realiza un incremento en un registro, que un complejo "LD A, (1234h)", que requiere leer
+                                el opcode, a continuación leer 2 bytes para el operando "1234h", después acceder a la
+                                memoria y extraer el dato contenido en (1234h) para, finalmente, depositarlo en A.</p>
+                            <p>Los tiempos de ejecución de cada instrucción son, pues, diferentes, y para conocerlos
+                                tendremos que consultar cualquier tabla de tiempos (t-states o t-estados). Podéis
+                                acceder a alguna de estas tablas en los enlaces que veréis al final de este
+                                artículo.</p>
+                            <p><strong>EL SOFTWARE DE SPECTRUM</strong></p>
+                            <p>A estas alturas ya debemos tener claro cómo funciona el Spectrum, con su microprocesador
+                                Z80 continuamente ejecutando el código apuntado por "PC", incrementando este y de nuevo
+                                repitiendo el ciclo.</p>
+                            <p>Cuando encendemos nuestro Spectrum, PC vale 0000h y se ejecuta la ROM que, como ya hemos
+                                comentado, no es más que un programa hecho por los ingenieros que desarrollaron el
+                                Spectrum. Dicho programa está disponible en formato código fuente para consultas ya que
+                                usuarios de Spectrum realizaron un desensamblado (a partir de los opcodes, obtener el
+                                código fuente original) y comentaron todas las rutinas, variables del sistema y
+                                procedimientos que se ejecutan en nuestro Spectrum nada más arrancarlo. El libro "The
+                                Complete Spectrum ROM Disassembly" (El desensamblado Completo de la ROM del Spectrum)
+                                contiene este desensamblado, y podemos obtenerlo en Internet, por si tenemos curiosidad
+                                en conocer las interioridades de la ROM del Spectrum y cómo está programado el
+                                intérprete BASIC y las diferentes funciones de la ROM del mismo (con el objetivo de
+                                poder "usarlas" en nuestros programas en ensamblador).</p>
+                            <p>Pero aparte de la ROM del Spectrum, ¿cómo llega a la memoria de nuestro ordenador (o
+                                emulador) los programas que ejecutamos?. Veamos las diferentes maneras:</p>
+                            <ol style="list-style-type: lower-alpha">
 
-	<li>Desde cinta: Nuestro LOAD "" provoca en BASIC la llamada a una rutina de la ROM que carga desde cinta el código y los datos de los programas. Lo único que se hace es leer de la cinta los opcodes y sus operandos, así como cualquier otro dato (gráficos, sonidos) del programa, e introducirlos en memoria en una zona a la que luego saltaremos (cambiaremos PC a ella). Cuando grabamos a cinta, lo que hacemos es leer el contenido de un trozo de memoria y escribirlo en cinta (escribir los valores numéricos de los opcodes, operandos y datos).</li>
-	<li>Desde disco: exactamente igual que en el caso de la cinta, pero el medio de almacenamiento es un disco de 3" o de 3.5".</li>
-	<li>Ficheros TAP y TZX: son ficheros de ordenador que almacenan los datos exactamente igual que si fuera una cinta real: almacenan opcodes, datos y operandos, que luego serán cargados en memoria.</li>
-	<li>Ficheros .SP, .SNA y .Z80 (en general, cualquier fichero de snapshot). No son más que volcados de la memoria. Por ejemplo, un fichero .SP o .SNA contiene el contenido de las 49152 celdillas de memoria desde 16384 hasta 65536. Para cargar ese .SNA en un emulador, lo que realiza el emulador es un simple "POKEado" del contenido del fichero en las celdillas de memoria. Así, un fichero snapshot no es más que una "copia" de la memoria (de su contenido) que volcamos a fichero.</li>
-</ol>
-<p><strong>EN RESUMEN</strong></p>
-<p>Hemos visto cómo funciona internamente nuestro ordenador Spectrum y el microprocesador Z80. A partir de la próxima entrega comenzaremos ya con la sintaxis del lenguaje ensamblador y una descripción de las diferentes instrucciones disponibles. No obstante, creemos que los conceptos introducidos ya en estas 2 primeras entregas del curso deben de haber llevado ya al lector a un punto en el cual podrá realizar sus primeras pruebas en ensamblador mediante la documentación a la cual nos referimos en los enlaces. Basta con consultar el juego de instrucciones del Spectrum en la página oficial del Z80 o de Zilog para poder realizar ya nuestros primeros programas en ensamblador para nuestro querido Sinclair ZX Spectrum.</p>
+                                <li>Desde cinta: Nuestro LOAD "" provoca en BASIC la llamada a una rutina de la ROM que
+                                    carga desde cinta el código y los datos de los programas. Lo único que se hace es
+                                    leer de la cinta los opcodes y sus operandos, así como cualquier otro dato
+                                    (gráficos, sonidos) del programa, e introducirlos en memoria en una zona a la que
+                                    luego saltaremos (cambiaremos PC a ella). Cuando grabamos a cinta, lo que hacemos es
+                                    leer el contenido de un trozo de memoria y escribirlo en cinta (escribir los valores
+                                    numéricos de los opcodes, operandos y datos).
+                                </li>
+                                <li>Desde disco: exactamente igual que en el caso de la cinta, pero el medio de
+                                    almacenamiento es un disco de 3" o de 3.5".
+                                </li>
+                                <li>Ficheros TAP y TZX: son ficheros de ordenador que almacenan los datos exactamente
+                                    igual que si fuera una cinta real: almacenan opcodes, datos y operandos, que luego
+                                    serán cargados en memoria.
+                                </li>
+                                <li>Ficheros .SP, .SNA y .Z80 (en general, cualquier fichero de snapshot). No son más
+                                    que volcados de la memoria. Por ejemplo, un fichero .SP o .SNA contiene el contenido
+                                    de las 49152 celdillas de memoria desde 16384 hasta 65536. Para cargar ese .SNA en
+                                    un emulador, lo que realiza el emulador es un simple "POKEado" del contenido del
+                                    fichero en las celdillas de memoria. Así, un fichero snapshot no es más que una
+                                    "copia" de la memoria (de su contenido) que volcamos a fichero.
+                                </li>
+                            </ol>
+                            <p><strong>EN RESUMEN</strong></p>
+                            <p>Hemos visto cómo funciona internamente nuestro ordenador Spectrum y el microprocesador
+                                Z80. A partir de la próxima entrega comenzaremos ya con la sintaxis del lenguaje
+                                ensamblador y una descripción de las diferentes instrucciones disponibles. No obstante,
+                                creemos que los conceptos introducidos ya en estas 2 primeras entregas del curso deben
+                                de haber llevado ya al lector a un punto en el cual podrá realizar sus primeras pruebas
+                                en ensamblador mediante la documentación a la cual nos referimos en los enlaces. Basta
+                                con consultar el juego de instrucciones del Spectrum en la página oficial del Z80 o de
+                                Zilog para poder realizar ya nuestros primeros programas en ensamblador para nuestro
+                                querido Sinclair ZX Spectrum.</p>
 
-<p><strong>FICHEROS</strong></p>
-<ul>
-    <li><a href="src/teclado.bas" onClick="window.open(this.href); return false;">Programa en BASIC que lee el teclado mediante acceso a puertos</a></li>
-    <li><a href="tap/teclado.tap" onClick="window.open(this.href); return false;">Fichero tap del ejemplo teclado.bas</a></li>
-    <li><a href="src/pantalla.bas" onClick="window.open(this.href); return false;">Programa en BASIC que dibuja en pantalla mediante POKE</a></li>
-    <li><a href="tap/pantalla.tap" onClick="window.open(this.href); return false;">Fichero tap del ejemplo pantalla.bas</a></li>
-    <li><a href="src/opcodes.txt" onClick="window.open(this.href); return false;">Listado de opcodes para ensamblado manual</a></li>
+                            <p><strong>FICHEROS</strong></p>
+                            <ul>
+                                <li><a href="src/teclado.bas" onClick="window.open(this.href); return false;">Programa
+                                    en BASIC que lee el teclado mediante acceso a puertos</a></li>
+                                <li><a href="tap/teclado.tap" onClick="window.open(this.href); return false;">Fichero
+                                    tap del ejemplo teclado.bas</a></li>
+                                <li><a href="src/pantalla.bas" onClick="window.open(this.href); return false;">Programa
+                                    en BASIC que dibuja en pantalla mediante POKE</a></li>
+                                <li><a href="tap/pantalla.tap" onClick="window.open(this.href); return false;">Fichero
+                                    tap del ejemplo pantalla.bas</a></li>
+                                <li><a href="src/opcodes.txt" onClick="window.open(this.href); return false;">Listado de
+                                    opcodes para ensamblado manual</a></li>
 
-</ul>
-<p><strong>LINKS</strong></p>
-<ul>
-    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt32.html" onClick="window.open(this.href); return false;">Puertos E/S</a></li>
-    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt26.html" onClick="window.open(this.href); return false;">Usando CM</a></li>
-    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt24.html" onClick="window.open(this.href); return false;">La Memoria</a></li>
-    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt25.html" onClick="window.open(this.href); return false;">Variables del sistema</a></li>
-    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt28.html" onClick="window.open(this.href); return false;">Set de caracteres</a></li>
+                            </ul>
+                            <p><strong>LINKS</strong></p>
+                            <ul>
+                                <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt32.html"
+                                       onClick="window.open(this.href); return false;">Puertos E/S</a></li>
+                                <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt26.html"
+                                       onClick="window.open(this.href); return false;">Usando CM</a></li>
+                                <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt24.html"
+                                       onClick="window.open(this.href); return false;">La Memoria</a></li>
+                                <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt25.html"
+                                       onClick="window.open(this.href); return false;">Variables del sistema</a></li>
+                                <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt28.html"
+                                       onClick="window.open(this.href); return false;">Set de caracteres</a></li>
 
-    <li><a href="http://www.Z80.info" onClick="window.open(this.href); return false;">Web del Z80</a></li>
-    <li><a href="http://www.worldofspectrum.org/faq/reference/Z80reference.htm" onClick="window.open(this.href); return false;">Z80 Reference de WOS</a></li>
-    <li><a href="http://ti86.acz.org/Z80_ref.htm" onClick="window.open(this.href); return false;">Z80 Reference de TI86</a></li>
-    <li><a href="http://www.ticalc.org/pub/text/Z80/" onClick="window.open(this.href); return false;">Tablas de ensamblado y t-estados</a> (pulsar en Z80.txt, Z80_reference.txt, Z80time.txt)</li>
-    <li><a href="http://freestuff.grok.co.uk/rom-dis/" onClick="window.open(this.href); return false;">Complete Spectrum ROM disassembly project</a></li>
+                                <li><a href="http://www.Z80.info" onClick="window.open(this.href); return false;">Web
+                                    del Z80</a></li>
+                                <li><a href="http://www.worldofspectrum.org/faq/reference/Z80reference.htm"
+                                       onClick="window.open(this.href); return false;">Z80 Reference de WOS</a></li>
+                                <li><a href="http://ti86.acz.org/Z80_ref.htm"
+                                       onClick="window.open(this.href); return false;">Z80 Reference de TI86</a></li>
+                                <li><a href="http://www.ticalc.org/pub/text/Z80/"
+                                       onClick="window.open(this.href); return false;">Tablas de ensamblado y
+                                    t-estados</a> (pulsar en Z80.txt, Z80_reference.txt, Z80time.txt)
+                                </li>
+                                <li><a href="http://freestuff.grok.co.uk/rom-dis/"
+                                       onClick="window.open(this.href); return false;">Complete Spectrum ROM disassembly
+                                    project</a></li>
 
-</ul>
-</div>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>SROMERO</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="el-aventurero.html">El Aventurero</option>
+
+                                <option value="z88dk.html">Programación Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="ensamblador.html" selected>Programación Ensamblador</option>
+                                <option value="rem.html">REM</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
         </td>
     </tr>
     <tr>
-        <td align="right"><br><br>SROMERO</td>
-    </tr>
-</table>
-                    </td>
-                </tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
 
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('input.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="el-aventurero.html">El Aventurero</option>
-
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-        <option value="rem.html">REM</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
                 </tr>
             </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
 
-    </body>
+</body>
 
 </html>

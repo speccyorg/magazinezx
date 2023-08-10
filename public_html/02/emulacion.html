@@ -1,920 +1,996 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Emulación - Magazine ZX número 2 - Agosto 2003</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="emulacion.html" selected>Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 2 - Agosto 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p align="center"><font size="5">Introducción a la Emulación (I)</font></p>
-<p>
-
-<i>Algunos de nuestros lectores nos han expresado una serie de dudas
-relacionadas con la emulación, especialmente dudas de base y
-de concepto. Estas mismas personas nos han comentado la posibilidad
-de que desde Magazine ZX se muestre a la gente nueva en el mundo de la
-emulación un tutorial sencillo que explique qué es y cómo funciona un
-emulador, focalizándolo finalmente en la emulación de Spectrum.</i>
-</p>
-<a name="figura1">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/figura1.jpg" width="400" height="298"  alt="" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
-
-</table>
-
-</a><br>
-<p>
-Los tiempos cambian y resulta cada vez más difícil encontrar en el mercado
-aquellos viejos ordenadores, consolas o máquinas recreativas que utilizábamos
-hace algunos años. En algunos casos en que todavía están disponibles, a veces lo
-son a precios muy elevados, como en el caso de ordenadores Sinclair Spectrum +3
-o QL, por ejemplo. En otros casos los precios pueden ser desorbitados, como los
-de las consolas NOMAD de SEGA, o ciertas máquinas recreativas. También existen
-sistemas antiguos muy baratos, pero cada vez quedan menos (debido a averías, o
-consolas y ordenadores que acaban en los contenedores de basura por usuarios que
-no las valoran) y llegará un momento en que será realmente complicado
-conseguirlos.
-</p>
-<a name="figura2">
-<table border="0" cellspacing="0" cellpadding="2" width="250">
-	<tr align="right">
-		<td><img src="img/zx81.jpg" width="250" height="242"  alt="Figura 2. Sinclair ZX81: difícil de encontrar" />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right">Figura 2. Sinclair ZX81: difícil de encontrar</td>
-	</tr>
-</table>
-
-</a><br>
-<p>
-No hay nada
-mejor que tener la máquina original y software de la misma para divertirse con
-ella, pero en ocasiones nos puede resultar imposible.
-</p>
-<p>
-Los emuladores son
-programas destinados a recrear arquitecturas de ordenadores, consolas o
-recreativas en un determinado Sistema. Por ejemplo, existen emuladores que nos
-permiten jugar a juegos de Spectrum (o de otros ordenadores antiguos) en nuestro
-ordenador actual. Existen también emuladores de las diferentes consolas
-clásicas, de forma que podemos jugar a la Nintendo NES o a la SEGA Megadrive en
-nuestro ordenador, y cargar en ellos los juegos tal y como eran en cartucho,
-disco o cinta.
-</p>
-<p>
-Los emuladores nacieron por diversos motivos:
-<ul>
-
-<li>Como reto para los programadores, que querían hacer programas capaces
-de recrear o emular una determinada máquina antigua en una moderna.</li>
-
-<li>Para poder jugar y utilizar arquitecturas antiguas que no tenemos a nuestro
-alcance.</li>
-
-<li>Con el fin de preservar todo el legado de estas arquitecturas, de forma que
-cuando estas ya no estén disponibles, todavía tengamos emuladores que nos
-permitan ver todo su catálogo de software.</li>
-
-<li>Para desarrollar en estas consolas y ordenadores, trabajando en nuestro
-ordenador habitual y probándolo en un emulador. Con esto nos evitamos grabar el
-juego en un cartucho, disco o cinta para tener que probarlo en el sistema
-real.</li>
-</ul>
-</p>
-<p>
-<b>Qué es un emulador</b>
-</p>
-
-<p>
-Un emulador es un programa destinado a recrear internamente el
-funcionamiento de una arquitectura diferente a aquella en que se
-ejecuta. El emulador no es más que un programa, sin partes hardware,
-que utilizando los recursos de la máquina donde se ejecuta, simula el
-comportamiento de la CPU, memoria y demás elementos de una máquina
-determinada.
-</p>
-<a name="figura2">
-<table border="0" cellspacing="0" cellpadding="2" width="675">
-	<tr align="right">
-		<td><img src="img/emuls.jpg" width="675" height="576"  alt="Figura 3. Emuladores de Spectrum, Megadrive, NES y Master System" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 3. Emuladores de Spectrum, Megadrive, NES y Master System</td>
-
-	</tr>
-</table>
-
-</a>
-<p>
- Por ejemplo, Realspectrum es un emulador de Spectrum, ya que es
-un programa diseñado para emular un micro Z80 (que es el micro del
-Spectrum), una ULA (que es el "chip gráfico" del Spectrum), una unidad
-de cinta o de disco, etc... Del mismo modo que existe Realspectrum,
-NESticle es un emulador de NES que emula el micro de la NES, los
-chips de la NES, es capaz de ejecutar juegos en cartucho de NES,
-etc.
-</p>
-Normalmente los emuladores son programas que simulan una única
-arquitectura, aunque en algunos casos existen "macroemuladores"
-capaces de emular varios sistemas, como por ejemplo MAME (Multi
-Arcade Machine Emulator) que emula gran variedad de microprocesadores
-diferentes, lo cual le permite recrear gran cantidad de máquinas
-recreativas.
-</p>
-<p>
-Nótese un detalle muy importante: un emulador no es más que un
-programa como cualquier otro instalado en la máquina. La diferencia
-está en que es vez de editar un texto, hacer cálculos,
-dibujar, o jugar (como el resto de programas), lo que hace es
-comportarse tal y como lo haría el sistema emulado. Posteriormente
-veremos con más detalle cómo.
-</p>
-<p>
-<b>Arquitecturas emuladas</b>
-
-</p>
-<p>
-Actualmente hay muchísimos sistemas emulados. Veamos algunos de
-los más conocidos (no están todos, pero sirven para hacernos una idea).
-<ul>
-<li>Consolas:<br>
-  Nintendo: Nintendo NES, SuperNES, GameBoy, Nintendo64...<br>
-  Sega: GameGear, Master System, Megadrive/Genesis, Saturn...<br>
-  Atari: VCS 2600, 7800, Lynx...<br>
-  Otros: NeoGeo, PCEngine/TurboGrafx...<br>
-
-</li>
-<li>Máquinas recreativas: <br>
-  Emuladas casi el 100% de ellas (salvo excepciones en determinados
-  sistemas) por MAME (MultiArcade Machine Emulator) o RAINE.
-</li>
-<li>Microordenadores y ordenadores de 16 bits:<br>
-  Spectrum, Amstrad, MSX, Commodore, Atari ST, Amiga...
-</li>
-<li>Otros:<br>
-  Consolas de una y dos pantallas HandHeld y Game&Watch,
-  Máquinas de pinball, etc...
-</li>
-
-</ul>
-</p>
-<p>
-Si buscas un emulador que te permita emular alguno de estos sistemas,
-puedes encontrarlo fácilmente en <a href="http://www.emulatronia.com" onClick="window.open(this.href); return false;">
-Emulatronia</a>, pulsando en la sección
-correspondiente en la barra de menú de la izquierda.
-</p>
-<p>
-¡Ojo! En algunas circunstancias puede ser ilegal descargar juegos de
-arquitecturas que todavía están a la venta, ya que al usarlas estás
-evitando al compra de la máquina y del juego. Es por ello que en algunas Webs de
-ROMS para emuladores encontrarás
-letreros indicando que sólo puedes descargar la ROM si eres el propietario
-del juego original, o bien que sólo puedes probarlas 24 horas, y condiciones
-similares. Quede claro que desde Magazine ZX estamos a favor de un uso
-correcto de la emulación: siempre hay que emular sistemas permitidos, usando
-ROMs cuya distribución haya sido permitida. Hacer lo contrario es perjudicial
-para el mundillo de la emulación, como veremos en la sección de Ventajas y
-Desventajas.
-</p>
-<p>
- Debe quedar claro que los emuladores no son exclusivos de la
-plataforma PC. Es decir, no sólo hay emuladores de los diferentes sistemas
-para usarlos en PCs. Existen emuladores de Spectrum para Amiga,
-emuladores de Atari 2600 para Atari ST, o emuladores de NES para
-Playstation, por ejemplo. Recordemos que el emulador no es más que un programa que
-puede realizarse para cualquier plataforma.
-</p>
-<p>
-<b>Cómo funciona un emulador</b>
-
-</p>
-<p>
- Y bien, se preguntará algún lector, ¿cómo es posible que se pueda
-emular una máquina? ¿Qué tipo de "magia" realiza el emulador para
-mostrar un Spectrum dentro de mi ordenador? Lo que vamos
-a ver a continuación es cómo funciona a nivel interno un emulador.
-El usuario realmente no necesita saberlo, porque para él basta con abrir el emulador,
-cargar un juego o programa dentro del mismo (con las opciones que tiene el
-emulador para seleccionar un fichero ROM, cinta o disco de nuestro disco duro), y
-utilizarlo, pero nunca viene mal entender cómo funcionan las cosas, y si estás leyendo
-este artículo es, precisamente, porque estás interesado en aprender el cómo y porqué
-de la emulación. No debes preocuparte si no conoces o entiendes algún concepto
-(aunque para algunos, esto será una explicación básica): lo importante es quedarse
-con la idea general de lo que vamos a ver durante este apartado.
-</p>
-<p>
- Lo que en realidad el programador crea es, a grandes rasgos, el
-emulador de un microprocesador. Por ejemplo, es posible hacer un
-programa que lea instrucciones del microprocesador Z80, las comprenda,
-las ejecute, y guarde los resultados de las ejecuciones.
-</p>
-<p>
- Un emulador de Z80 podría ser un programa hecho en C, en Visual
-BASIC, en PASCAL o en ensamblador (por citar algunos lenguajes
-comunes) que entienda las instrucciones en código máquina del Z80
-proporcionadas al emulador, las ejecute y cambie los registros
-emulados del microprocesador, quedando todos los registros emulados
-igual que quedarían en un Z80 real si ejecutara el mismo código.
-Así, se podría realizar un programa en código máquina de Z80, y al
-ejecutarlo en un emulador, o en un Z80 real, obtendríamos exactamente
-los mismos resultados en los diferentes registros del microprocesador.
-Lo que estamos haciendo es recrear el hardware del sistema.
-</p>
-<p>
- Ahora bien, con esto tenemos programas capaces de emular el hardware de
-una máquina, pero estos programas en sí mismos sólo emulan un
-microprocesador, o un chip gráfico, y no son capaces de hacer nada
-por sí mismos. Sería como si cogiéramos un PC y le quitáramos el
-disco duro y el chip de la BIOS. Al encenderlo tendríamos la pantalla
-en negro, ya que el micro (que lo único que hace es ejecutar una
-instrucción tras otra) no tiene nada que ejecutar. Para que puedan
-realmente hacer algo, necesitan un Sistema Operativo (más o menos
-complejo). Este sistema suele ser un chip ROM (memoria de sólo
-lectura) con las funciones básicas grabadas en él.
-</p>
-
-<p>
- Al arrancar un Spectrum, por ejemplo, lo que se tiene es una ROM
-de 16KB (16384 bytes) que contiene el arranque de la máquina, el
-intérprete de BASIC, y todas las funciones necesarias para cargar
-y ejecutar el software de Spectrum. Esta ROM en realidad es un
-chip de memoria con el Sistema Operativo del Spectrum (un programa
-escrito en código máquina de microprocesador Z80) grabado en él.
-Este programa no tiene diferencias prácticas con un juego o un
-programa en cinta o disco de Spectrum, simplemente que su función
-no es jugar, sino dotarnos de un interfaz de gestión del Spectrum
-(el BASIC) y que en lugar de estar grabado en una cinta, lo está
-en una memoria de sólo lectura. Es decir, sí: hubo una persona
-(o varias) que programó (como si fuera un juego) el arranque de
-la máquina, el menú, el BASIC, etc., y lo ensambló con un
-"programa ensamblador" para obtener el código máquina almacenado
-en esa memoria ROM.
-</p>
-<p>
-Nada nos impediría programarnos nuestro propio S.O. para Spectrum, grabarlo en
-un chip ROM igual que el original (de 16KB), abrir el Spectrum y reemplazar el chip
-de memoria de la ROM por el nuestro. Al arrancar el ordenador (suponiendo que
-hayamos hecho un S.O. bien programado) tendríamos un ordenador nuevo, totalmente
-diferente, con su sistema operativo. No sería un Spectrum tal y como lo conocemos,
-sino un ordenador nuevo que podría comportarse como un Spectrum o no (según cómo
-hayamos programado su BIOS). Estaríamos usando el mismo hardware del Spectrum
-(un Z80, una ULA, etc.) pero al ser diferente el Sistema Operativo, el ordenador funcionaría
-de forma diferente. Es el mismo caso que un PC (Micro Intel, tarjeta gráfica determinada,
-etc.) al que le podemos poner Linux, o Windows, y se comportaría de forma diferente
-(siendo el mismo hardware). He ahí la importancia de la ROM del sistema: es la que
-define cómo se comporta el ordenador, la que le da identidad. Sin ella, el ordenador
-no haría nada. Esa ROM en el caso del Spectrum (y de muchos otros
-sistemas) se graba en un chip.
-</p>
-<p>
-Nuestro querido Spectrum toma el contenido de ese chip y lo ejecuta,
-instrucción a instrucción, como si fuera un programa (que de hecho,
-es lo que es), y va realizando todas las acciones que éste le dicta:
-borrar la pantalla, imprimir el mensaje de "(c) 1982 Sinclair Ltd
-Research", esperar la pulsación de una tecla, interpretar nuestros
-comandos, etc.
-</p>
-<p>
- El emulador, como el Spectrum real, realiza la misma función.
-Éste emula un micro Z80 (y los demás componentes del Spectrum), y
-lo primero que hace el emulador es cargar desde fichero (como por
-ejemplo, rom48k.rom) el contenido de esta ROM del Spectrum, de forma
-que el emulador, al igual que el Spectrum real, pueda arrancar,
-ejecutando las instrucciones de la ROM del Spectrum mediante su
-"microprocesador emulado". ¿Cómo se ha obtenido este fichero con la
-ROM? Sencillo: se coge un chip con la ROM del Spectrum, se inserta en
-un lector/grabador de memorias, y se lee, grabando el contenido de los
-16384 bytes en un fichero. Cada byte de este fichero se podría decir
-que es una instrucción del programa de la ROM del Spectrum.
-</p>
-<a name="figura4">
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-
-		<td><img src="img/esquema_spectrum.gif" width="640" height="300"  alt="Figura 4. Esquema básico de un Spectrum real" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 4. Esquema básico de un Spectrum real</td>
-	</tr>
-</table>
-
-</a><br>
-<p>
-La parte central es un micro Z80 el cual ve la ROM y la RAM
-de forma continuada como la totalidad de su memoria. Es decir,
-ve 64KB de memoria de los cuales los primeros 16K son el
-contenido de chip de ROM, y los siguientes 48K los del chip de
-RAM. Al encender el Spectrum éste se inicializa y muestra el
-BASIC porque comienza a ejecutar instrucciones desde la dirección
-de memoria 0, donde está el principio de la ROM de 16K, es decir,
-el intérprete BASIC.
-
-</p>
-<p>
-Es por eso que cuando encendemos el ordenador
-se "ejecuta" la ROM. Al encender un Spectrum (que perdió en su apagado toda
-alimentación eléctrica) todos los registros del microprocesador Z80 valen 0, incluido
-uno que se llama PC (Program Counter o Contador de Programa), que es el que apunta
-a la siguiente instrucción que el Z80 debe leer y ejecutar. Un microprocesador funciona
-a grandes rasgos de la siguiente forma:
-<ul>
-<li>Leer instrucción apuntada por el registro PC.</li>
-<li>Incrementar PC para apuntar a la siguiente instrucción.</li>
-<li>Ejecutar la instrucción recién leída.</li>
-<li>Repetir continuadamente los 3 pasos anteriores.</li>
-</ul>
-</p>
-<p>
-Así pues, al encender el ordenador, PC vale 0. Al estar la ROM mapeada en la posición
-de memoria 0 (mediante cableado hardware de los chips de memoria en la
-placa del Spectrum), lo que pasa al encender el ordenador es que ese contador
-de programa (PC) está apuntando al principio de la ROM, y es por eso que se
-ejecuta la ROM paso a paso, instrucción a instrucción, cada vez que lo encendemos.
-No hay misterio: para el Spectrum todos los chips de memoria de su interior son
-como si fuera un gran baúl de 64KB continuados, algo que se consigue mediante
-cableado de los diferentes chips a las patillas correctas del microprocesador. A grandes rasgos,
-las patillas de datos y de direcciones del microprocesador están conectadas
-a los diferentes chips de memoria de forma que cuando el micro lee datos de la memoria,
-lo ve todo como si fuera un sólo chip de memoria de 64KB. Esto se consigue con un
-sencillo proceso de diseño (al hacer el esquema del ordenador antes de fabricarlo)
-conocido como "mapeado de memoria".
-</p>
-
-<p>
- En el mapa de memoria del Spectrum, los primeros 16KB son la ROM
-(que está en un chip aparte, pero que como acabamos de ver es algo que el
-Spectrum no distingue, ya que la visualiza como una sección de memoria continua desde
-la posición 0 hasta la 16383 de su "baúl total" de 64KB) y luego viene la RAM, a
-partir de la posición 16384. Ahí es donde se almacenan los programas, los gráficos
-de la pantalla (en un trozo determinado de esa memoria), etc. En esta RAM es
-donde el intérprete de BASIC introduce los programas para su ejecución.
-</p>
-<p>
-Estos programas pueden entrar desde los diferentes dispositivos
-de entrada/salida (gestionados por el Z80) como el teclado, la
-cinta o disco, etc.
-</p>
-<p>
-Cabe hacer una mención especial a que una parte de la memoria
-RAM (desde el byte 16384 hasta el 23296) está conectada con la
-ULA, el chip "gráfico" del Spectrum, y encargado de convertir
-el contenido de esta "videoram" o VRAM a señales de vídeo para
-la televisión. Cuando los juegos dibujan gráficos, sprites o
-cualquier otra cosa en pantalla, en realidad están escribiendo
-bytes en estas posiciones de memoria, que la ULA muestra en la
-TV en el siguiente refresco de la pantalla.
-</p>
-<p>
-Visto de una manera simple (pero real): al escribir un valor numérico (por
-ejemplo un 1) en alguna dirección de esta parte de la RAM, de forma inmediata
-aparece un punto en nuestro monitor, ya que la ULA está continuamente
-"escaneando" la videoram (de forma independiente del Z80) para reflejar en
-el monitor o televisión todos los valores numéricos que introduzcamos en
-ella. En los PCs ocurre igual: al escribir un valor numérico en una determinada
-posición de memoria, aparecen puntos en pantalla. Según en qué dirección
-escribamos aparecen en un lugar u otro de la pantalla. En algunos modos
-de vídeo (320x200, por ejemplo), escribir en la posición 0xA000 hace aparecer
-un punto de color en la posición (0,0) del monitor, hacerlo en 0xA001, lo hace
-aparecer en (1,0), y así un pixel tras otro.
-</p>
-<p>
- Con esto obtenemos un software que emula un micro (el Z80) y que
-gracias a la ROM del mismo arranca y nos muestra y permite usar el
-Spectrum en sí mismo, tal y como se podría usar un Spectrum recién
-arrancado. El emulador lo que hace, en resumen, es leer los eventos
-de teclado y comunicarlos al micro emulado de la misma forma en que
-lo hacía el Spectrum real al pulsar una tecla. Al mismo tiempo,
-lee de la memoria del Spectrum el contenido de la pantalla, y lo
-muestra en nuestro monitor tal y como lo "leería" la Televisión. El
-microprocesador virtual, mientras tanto, se dedica simple y únicamente
-a ejecutar instrucciones, ya sea de la ROM o de un juego que carguemos
-o ejecutemos en él.
-</p>
-
-<p>
- La ROM es muy importante, ya que indica cómo debe de comportarse el
-microprocesador en todo momento, cómo debe atender las interrupciones
-recibidas por el teclado y los mandos, etc. Por ejemplo, un ordenador
-ZX Spectrum y un Amstrad CPC tienen el mismo microprocesador, un Z80,
-pero sin embargo son sustancialmente diferentes. ¿Por qué? Pues porque
-aparte de que los circuitos que acompañan al micro son diferentes, la
-ROM es totalmente diferente, de forma que cambia el Sistema Operativo,
-las direcciones de memoria donde se guardan los datos de pantalla,
-etc.
-</p>
-<p>
-<b>¿De dónde sale el software para los emuladores?</b>
-</p>
-<p>
- El mero hecho de poder utilizar una arquitectura determinada y
-su sistema operativo ya podría ser un gran
-aliciente, pero por si esto fuera poco, en la mayoría de los casos
-podemos además usar todo el software original del sistema físico
-en el emulador.
-</p>
-<p>
- Ya sea un cartucho, una cinta o un disco, el objetivo es obtener
-una copia en formato digital (en un fichero) de sus datos, de forma que se puedan
-cargar en el emulador. Veamos los diferentes tipos de software a
-emular:
-<ul>
-<li>ROMs del sistema: como ya hemos visto, las ROMs de las máquinas
-se obtienen volcando el contenido de los chips de memoria de las
-mismas, donde están almacenados los programas en Código Máquina,
-mediante lectores de memorias o similares.<br>
-
-<br>
-<a name="figura5">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/rom.jpg" width="400" height="157"  alt="Figura 5. Una de esas pequeñas cucarachas negras (o varias, según el sistema) alberga la ROM del aparato." />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 5. Una de esas pequeñas cucarachas negras (o varias, según el sistema) alberga la ROM del aparato.</td>
-	</tr>
-
-</table>
-
-</a><br>
-<br>
-</li>
-<li><p>ROMs de cartuchos: los cartuchos de consola no suelen ser más que
-soportes de plástico de una forma determinada, que en su interior
-contienen chips de memoria (iguales que los chips de la ROM)
-conectados eléctricamente a los contactos metálicos o pines que
-sobresalen del plástico del cartucho. Si os fijáis, en realidad los
-juegos de consola no son más que ROMs del sistema, ya que realmente
-las consolas no suelen tener ROM (si las encendemos sin juego dentro,
-no hacen nada), y somos nosotros los que introducimos una ROM (que
-en realidad es el juego) al introducir el cartucho. Esa ROM, en
-lugar de ser un Sistema Operativo, es un juego. Recordemos que el
-microprocesador lo único que sabe hacer es ejecutar instrucciones en
-código máquina, sea un juego, o sea un intérprete de BASIC.
-</p>
-<a name="figura6">
-<table border="0" cellspacing="0" cellpadding="2" width="599">
-	<tr align="right">
-		<td><img src="img/nes_game.jpg" width="599" height="408"  alt="Figura 6. Cartucho de NES. En su interior sólo hay un pequeño circuito con una memoria ROM que contiene el juego grabado. En la captura podemos ver el circuito del juego Super Mario Bros 3 de Nintendo NES. Como puede verse, el juego está grabado en 2 chips de memoria y éstos vienen con la lógica necesaria para conectarse a la consola. Todos los chips están puenteados a las patillas del conector que se introduce en el cartucho. La carcasa gris de plástico tan sólo le da consistencia para su agarre e introducción en la consola, y para poner la portada del juego." />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right">Figura 6. Cartucho de NES. En su interior sólo hay un pequeño circuito con una memoria ROM que contiene el juego grabado. En la captura podemos ver el circuito del juego Super Mario Bros 3 de Nintendo NES. Como puede verse, el juego está grabado en 2 chips de memoria y éstos vienen con la lógica necesaria para conectarse a la consola. Todos los chips están puenteados a las patillas del conector que se introduce en el cartucho. La carcasa gris de plástico tan sólo le da consistencia para su agarre e introducción en la consola, y para poner la portada del juego.</td>
-	</tr>
-</table>
-
-</a>
-<p>
- En algunos sistemas sí que tenemos una ROM pregrabada en la máquina
-capaz de realizar tareas cuando no introducimos ningún juego. De esta
-forma, las consolas clónicas de NES podían llevar cientos de juegos
-grabados en un chip ROM interno, de forma que cuando la encendemos sin
-introducir un cartucho, ese chip se activa y se ejecuta su contenido.
-Cuando insertamos un juego, por contra, el chip que realmente se
-convierte en la memoria de la máquina (y que por tanto se ejecuta) es
-el ubicado en el interior del cartucho.
-</p>
-<p>
- Para volcar los juegos a ficheros de disco de forma que se puedan
-usar en los emuladores, basta con desmontar el cartucho, sacar el
-chip de memoria con el código del juego grabado, y al igual que en
-el caso de las ROMs del sistema, volcarlo a fichero con un lector
-de chips de memoria. Otra opción sería utilizar alguno de los
-lectores de cartuchos que se insertaban en la máquina y permitían
-grabar a disquete los contenidos de las ROMs. Estos aparatos fueron
-principalmente utilizados como "copiones".
-</p>
-<p>
-
-En general, en el mundo de la emulación, se
-le llama ROM a todo fichero volcado a disco desde una memoria. Los
-ficheros de ROM tendrán diferentes formatos según la arquitectura
-de la máquina. Por ejemplo, fichero.smc será una ROM de cartucho de
-SuperNES, fichero.smd de Sega MegaDrive, fichero.nes un juego de NES,
-fichero.gb de Gameboy, etc. Así mismo, existen ROMs en el Spectrum,
-obtenidas de los cartuchos del Interface 2 (un periférico de Spectrum
-que permitía cargar juegos en cartucho, realizando exactamente la
-misma función que la inserción del cartucho en una consola).
-</p>
-<p>
-Las máquinas recreativas son placas con microprocesadores y
-circuitos propios (al estilo de una consola) donde los juegos suelen
-estar grabados también en chips de ROM, o bien se introducen como
-si fueran cartuchos. El procedimiento para extraer las ROMs de las
-recreativas es similar al de los cartuchos en la mayoría de los
-casos.
-</p>
-</li>
-<br><br>
-<li>Cintas: Las cintas de Spectrum contienen software igual que los
-cartuchos de consola, sólo que en lugar de estar grabado el programa
-en un chip, lo está grabado de forma magnética en una cinta. La cinta
-contiene contiene audio grabado a una velocidad determinada y con
-un formato determinado para que el ordenador pueda leerlo (y grabar
-también software en cinta). El lector de cintas del ordenador lee
-este audio y lo interpreta, almacenando en memoria las instrucciones.
-Las cintas de Spectrum suelen ser ficheros con extensión .tap o .tzx,
-las cuales se han obtenido utilizando un programa de grabación de
-audio (con lo cual se guardan en disco en formato *.wav o *.voc).
-Un programa como Taper o Maketzx se encargará posteriormente de
-analizar este fichero wav/voc y convertirlo en un fichero de datos
-TAP o TZX con el programa en un formato perfecto y legible por los
-emuladores de Spectrum. Un fichero TZX contiene la cinta tal y como
-la tenemos grabada físicamente, pero en formato de unos y ceros en
-lugar de audio (por eso un TZX puede ocupar unos 100KB mientras que
-el WAV ocupa hasta 10MB, y son equivalentes). Lo más interesante es
-que a partir de un fichero TZX podemos obtener el WAV de la cinta
-(para regrabarla) o incluso es posible "reproducir" archivos TZX con
-programas como Playtzx, y cargar este juego en un Spectrum real con un
-cable macho-macho apropiado.
-<br><br>
- Este formato de ficheros (TZX) es el más importante en el Spectrum.
-Esto es así porque al ser copias exactas de las cintas, y a partir de
-las cuales se puede regrabar una cinta original, al pasar a formato
-TZX todos los juegos disponibles, en realidad los estamos preservando
-y evitando la pérdida y deterioro de las cintas originales con el
-tiempo. Si una cinta, pasados los años, pierde sus propiedades magnéticas
-y el juego no carga, podemos regrabarla en la cinta original usando un grabador de
-cassette y el fichero TZX de la cinta obtenido de Internet.
-<br><br>
- Hay que destacar que los ficheros TAP y TZX no son ROMS. Son
-"ficheros de cinta" o "tape files". El término ROM, como ya hemos visto,
-se asocia a programas o juegos obtenidos desde hardware, y no es
-aplicable a estos ficheros.
-</li>
-<br><br>
-<li>Discos: Al igual que las cintas, los discos de diferentes sistemas
-(incluidos los de 3 pulgadas) se pueden pasar a ficheros de disco con
-las unidades de disco apropiadas y programas que los interpreten y
-graben en los formatos adecuados. Por ejemplo, los ficheros .dsk, .tcl
-y .trd son imágenes de disco de Spectrum pasados a fichero y utilizables
-por los emuladores. Al igual que ocurre con las cintas, desde un DSK
-podemos recrear un disco de Spectrum en su formato original.
-
-</li>
-<br><br>
-<li><p>Snapshots: son volcados de la memoria del Spectrum con los juegos
-ya cargados desde Cinta o Disco. Es decir, supongamos que en un Spectrum
-con 48KB de memoria (ZX Spectrum 48K) cargamos desde cinta un juego
-determinado. Este juego (que sin duda ocupará menos de 48KB) se almacena
-en la RAM del Spectrum listo para ser jugado (por ejemplo, en el menú
-del juego). Si en este momento grabamos el contenido de la RAM en un
-fichero, y al mismo tiempo almacenamos el estado completo de la CPU,
-tenemos una "copia" del estado de la máquina. Al cargar este fichero
-en otra máquina igual, o en un emulador, pondremos al sistema destino
-en el mismo estado exacto que estaba la máquina original. Es decir,
-delante del menú, o del juego, en el punto en que lo grabamos.
-</p>
-<p>
- Los Snapshots (que tampoco son ROMs) se suelen obtener cargando cintas
-en los emuladores y grabando el contenido de la memoria a disco con un
-formato especial según el tipo de Snapshot. Tenemos ficheros .z80 (que
-empezó a utilizar el emulador Z80 para MS-DOS), ficheros .sp y .sna
-(usados por emuladores antiguos), y ficheros .szx (el futuro posible
-formato estándar de snapshots), entre otros. Este formato de
-fichero no es el ideal para preservar los juegos, ya que no permiten
-recrear las cintas, tan sólo jugar de una forma rápida y directa a los
-juegos. En general podemos grabar y cargar snapshots en los emuladores
-de una forma muy rápida (como ficheros) y en cualquier momento, de forma
-que pueden ser usados como método para "grabar las partidas" y continuar
-posteriormente. En algunas Webs incluso se han acumulado Snapshots
-grabados justo antes de finalizar ciertos juegos, para que la gente
-pueda ver el final de un juego determinado sin tener que jugarlo
-(ver The Congratulations Archive en la sección de enlaces).
-</p>
-<a name="figura7">
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/getroms.gif" width="640" height="480"  alt="Figura 7. Obtención de software para los emuladores, visto de una manera simplificada" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right">Figura 7. Obtención de software para los emuladores, visto de una manera simplificada</td>
-	</tr>
-</table>
-
-</a><br>
-</li>
-</ul>
-<p>
-<b>Aclaraciones</b>
-</p>
-<p>
-
-Existe una pequeña confusión entre 2 conceptos similares pero
-diferentes que suelen inducir a error: es la confusión entre
-"emulador" y "simulador". Hay 2 grandes definiciones sobre las
-diferentes entre ambos términos. La primera está basada en
-que el emulador es, como ya hemos visto, un
-programa más o menos complejo que emula la arquitectura de una
-máquina, sin apoyarse en nada más. Un simulador incorpora un emulador
-además de componentes hardware. Por ejemplo: un emulador de Spectrum
-emula todos los componentes del Spectrum vía software, mientras que un
-simulador de Spectrum podría ser un sistema con un micro Z80 conectable
-al puerto paralelo de un PC, de forma que el PC en vez de emular el
-Z80, le pidiera a éste la ejecución de las instrucciones, emulando el
-resto del sistema en el PC. Es decir, el simulador tiene una parte
-hardware, mientras que el emulador no.
-</p>
-<p>
- En otros libros se realiza una descripción totalmente diferente, en
-la que el emulador es un dispositivo (software o hardware) que se
-encarga de implementar con la mayor exactitud posible todas las
-funciones del sistema emulado, mientras que el simulador es una caja
-negra que, independientemente de su contenido, se comportará igual
-que el sistema recreado. Es decir, ante un determinado conjunto de
-entradas proporcionará las mismas salidas que lo haría el sistema real.
-</p>
-<p>
- Ambas definiciones se encuentran en diferentes libros de texto de
-Arquitectura de Computadores, y se pueden aplicar en diferentes ámbitos.
-La diferencia entre una u otra definición suele aparecer cuando se trata
-el tema de la Electrónica (momento en que se suele aplicar más la
-primera definición), frente a su uso en la Informática como desarrollo
-de software (donde se aplica más la segunda).
-</p>
-
-<p>
- Otra pequeña confusión para los neófitos es aquella entre emulador y
-remake. Un remake es un juego programado desde cero de forma que se
-parezca a un juego antiguo o clásico de otro sistema. Por ejemplo, un
-remake de Manic Miner es un juego que tiene las mismas pantallas que
-el Manic Miner original de Spectrum, que simula los mismos personajes,
-enemigos y estilo de juego, pero que no está recreado mediante un
-emulador y el juego original, sino que está programado desde cero por
-uno o más programadores que realizan el juego con diferentes gráficos
-(aunque a veces pueden usarse los mismos capturados para darle un
-aspecto más fiel al original), mejores melodías y sonidos, etc. Los
-autores de remakes están en realidad realizando un juego como el
-original, pero hecho por ellos mismos. Con los remakes se consigue
-(además de satisfacer un reto personal y honrar al programador del
-juego original) acercar juegos clásicos a arquitecturas actuales, sin
-necesidad de emuladores.
-</p>
-<a name="figura8">
-<table border="0" cellspacing="0" cellpadding="2" width="700">
-
-	<tr align="right">
-		<td><img src="img/manic.gif" width="700" height="263"  alt="Manic Miner original (izquierda) y uno de sus innumerables remakes (derecha)" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Manic Miner original (izquierda) y uno de sus innumerables remakes (derecha)</td>
-	</tr>
-</table>
-
-</a>
-
-<p>
-<b>Ventajas y desventajas de los emuladores</b>
-</p>
-<p>
-Existe un gran debate sobre la conveniencia o inconveniencia del uso
-y programación de emuladores. La gente se alinea directamente a favor
-o en contra de ellos según algunos de estos criterios:
-</p>
-<p>
- A favor:
-<ul>
-<li>Permiten utilizar sistemas que de otro modo no podríamos usar, por
-su no disponibilidad, su precio, etc.</li>
-
-<li>Permiten preservar todos los sistemas hardware mediante una
-emulación lógica por software (que es cada vez más perfecta) y que
-certifica que siempre podremos reutilizar los programas y juegos de
-los sistemas emulados, y además desde cualquier arquitectura actual y
-futura.</li>
-
-<li>Permiten encontrar más información sobre los sistemas emulados,
-y documentarlos de una manera efectiva para una posible futura
-reimplementación.</li>
-
-<li>Permiten probar sistemas que no conocías, y es posible que
-hagan que te aficiones a ellos, y trates de conseguir las máquinas
-propiamente dichas.</li>
-
-<li>Proporcionan facilidades al programador de estos sistemas para
-el desarrollo de aplicaciones y juegos para ellos, ya que éstos se
-pueden probar directamente en el emulador sin necesidad de pasarlos al
-sistema de prueba, acelerando la depuración de errores.</li>
-</ul>
-</p>
-<p>
- En contra:
-<ul>
-<li>La utilización de emuladores hace que la gente se centre en la
-utilización de los mismos y la obtención de juegos y programas como
-ROMs con el único fin de acaparar juegos de todos los sistemas. Esto
-produce que la gente no se sienta realmente interesada en buscar,
-comprar y potenciar los sistemas físicos en sí mismos. Por ejemplo,
-¿cuánta gente que use un emulador de SuperNintendo acaba comprando
-una SuperNintendo física y juegos para la misma? El disponer de los
-emuladores y las ROMs en CD en Internet hace que no se molesten en
-disfrutar del hardware en sí mismo.</li>
-
-<li>Los emuladores no son perfectos: no emulan al 100% todos los aspectos
-ni del microprocesador ni de los demás elementos asociados al sistema,
-por lo que la emulación (aunque sea casi perfecta) no es comparable
-a la sensación y <i>feeling</i> de la máquina real.</li>
-
-<li>El volcado de juegos que todavía se comercializan y la emulación de
-recreativas actuales y sistemas a la venta es dañino para el mercado
-del videojuego. Actualmente podemos jugar en emuladores Arcade a
-juegos de recreativa que todavía están en los salones. El disponer de
-estos juegos en casa hace que, al igual que ocurría en el primer punto
-enumerado, no hagamos uso de las máquinas pagando por usarlas.</li>
-</ul>
-</p>
-<p>
- La elección de una u otra postura es una cuestión personal, aunque
-el autor de este artículo puede decir sin tapujos que está a favor de
-la emulación, siempre que sea realizada de máquinas que actualmente
-no generen dinero en el mercado (es decir, recreativas antiguas,
-microordenadores y consolas de 8 y 16 bits). Estoy personalmente en
-contra de la emulación de recreativas modernas de última generación
-y sistemas actuales todavía a la
-venta (venta al por mayor, ya que el hecho de que todavía se vendan
-Atari 2600 en algún bazar no quiere decir que no se deban emular).
-</p>
-<p>
-<b>Resumiendo</b>
-
-</p>
-<p>
- Los emuladores son herramientas que nos van a permitir revivir
-tiempos pasados con sistemas que ya no están a nuestro alcance, o
-bien descubrir nuevas máquinas de las que nunca oímos hablar, o que
-nunca llegaron al lugar donde vivimos. Estos emuladores no son más que
-programas que emulan todos los aspectos hardware y software de la
-máquina con la mayor fidelidad posible. Al hacer esto, son capaces
-de entender lo que es la ROM de la máquina, y por tanto arrancar,
-y ejecutar las tareas de su "Sistema Operativo" básico (como por
-ejemplo, la ROM del Spectrum con su BASIC) y por lo tanto entender
-también el software escrito para esta arquitectura, que es pasado a
-formato digital desde las cintas, discos o cartuchos donde estaban
-almacenados originalmente.
-</p>
-<p>
- Espero que este pequeño artículo sirva como introducción a la
-emulación para aquellos que tenían dudas sobre ella.
-</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-	<li>Emulatronia (Juega con tu pasado): <a href="http://www.emulatronia.com" onClick="window.open(this.href); return false;">http://www.emulatronia.com</a></li>
-
-	<li>Emudek: <a href="http://www.emudek.org" onClick="window.open(this.href); return false;">http://www.emudek.org</a></li>
-	<li>Congratulations Archive: <a href="http://www.thespian.demon.co.uk/congrat/" onClick="window.open(this.href); return false;">http://www.thespian.demon.co.uk/congrat/</a></li>
-	<li>Cualquier utilidad de Spectrum como Taper, Maketzx o Playtzx: <a href="http://www.worldofspectrum.org/utilities.html#tzxtools" onClick="window.open(this.href); return false;">http://www.worldofspectrum.org/utilities.html#tzxtools</a></li>
-	<li>Remake de Manic Miner para Windows: <a href="http://www.xmixdrix.com/manicminer/" onClick="window.open(this.href); return false;">http://www.xmixdrix.com/manicminer/</a></li>
-</ul>
-
-</div>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br>SROMERO (NoP)</td>
-	</tr>
-</table>
-                    </td>
-                </tr>
-
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-
-        <option value="basic.html">Programación BASIC</option>
-        <option value="emulacion.html" selected>Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
-</td>
-
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Emulación - Magazine ZX número 2 - Agosto 2003</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
                 </tr>
             </table>
+        </td>
 
-    </body>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="emulacion.html" selected>Emulación</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 2 - Agosto 2003</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">Introducción a la Emulación (I)</font></p>
+                            <p>
+
+                                <i>Algunos de nuestros lectores nos han expresado una serie de dudas
+                                    relacionadas con la emulación, especialmente dudas de base y
+                                    de concepto. Estas mismas personas nos han comentado la posibilidad
+                                    de que desde Magazine ZX se muestre a la gente nueva en el mundo de la
+                                    emulación un tutorial sencillo que explique qué es y cómo funciona un
+                                    emulador, focalizándolo finalmente en la emulación de Spectrum.</i>
+                            </p>
+                            <a name="figura1">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/figura1.jpg" width="400" height="298" alt=""/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right"></td>
+                                    </tr>
+
+                                </table>
+
+                            </a><br>
+                            <p>
+                                Los tiempos cambian y resulta cada vez más difícil encontrar en el mercado
+                                aquellos viejos ordenadores, consolas o máquinas recreativas que utilizábamos
+                                hace algunos años. En algunos casos en que todavía están disponibles, a veces lo
+                                son a precios muy elevados, como en el caso de ordenadores Sinclair Spectrum +3
+                                o QL, por ejemplo. En otros casos los precios pueden ser desorbitados, como los
+                                de las consolas NOMAD de SEGA, o ciertas máquinas recreativas. También existen
+                                sistemas antiguos muy baratos, pero cada vez quedan menos (debido a averías, o
+                                consolas y ordenadores que acaban en los contenedores de basura por usuarios que
+                                no las valoran) y llegará un momento en que será realmente complicado
+                                conseguirlos.
+                            </p>
+                            <a name="figura2">
+                                <table border="0" cellspacing="0" cellpadding="2" width="250">
+                                    <tr align="right">
+                                        <td><img src="img/zx81.jpg" width="250" height="242"
+                                                 alt="Figura 2. Sinclair ZX81: difícil de encontrar"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td class="piefoto" align="right">Figura 2. Sinclair ZX81: difícil de
+                                            encontrar
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a><br>
+                            <p>
+                                No hay nada
+                                mejor que tener la máquina original y software de la misma para divertirse con
+                                ella, pero en ocasiones nos puede resultar imposible.
+                            </p>
+                            <p>
+                                Los emuladores son
+                                programas destinados a recrear arquitecturas de ordenadores, consolas o
+                                recreativas en un determinado Sistema. Por ejemplo, existen emuladores que nos
+                                permiten jugar a juegos de Spectrum (o de otros ordenadores antiguos) en nuestro
+                                ordenador actual. Existen también emuladores de las diferentes consolas
+                                clásicas, de forma que podemos jugar a la Nintendo NES o a la SEGA Megadrive en
+                                nuestro ordenador, y cargar en ellos los juegos tal y como eran en cartucho,
+                                disco o cinta.
+                            </p>
+                            <p>
+                                Los emuladores nacieron por diversos motivos:
+                            <ul>
+
+                                <li>Como reto para los programadores, que querían hacer programas capaces
+                                    de recrear o emular una determinada máquina antigua en una moderna.
+                                </li>
+
+                                <li>Para poder jugar y utilizar arquitecturas antiguas que no tenemos a nuestro
+                                    alcance.
+                                </li>
+
+                                <li>Con el fin de preservar todo el legado de estas arquitecturas, de forma que
+                                    cuando estas ya no estén disponibles, todavía tengamos emuladores que nos
+                                    permitan ver todo su catálogo de software.
+                                </li>
+
+                                <li>Para desarrollar en estas consolas y ordenadores, trabajando en nuestro
+                                    ordenador habitual y probándolo en un emulador. Con esto nos evitamos grabar el
+                                    juego en un cartucho, disco o cinta para tener que probarlo en el sistema
+                                    real.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                <b>Qué es un emulador</b>
+                            </p>
+
+                            <p>
+                                Un emulador es un programa destinado a recrear internamente el
+                                funcionamiento de una arquitectura diferente a aquella en que se
+                                ejecuta. El emulador no es más que un programa, sin partes hardware,
+                                que utilizando los recursos de la máquina donde se ejecuta, simula el
+                                comportamiento de la CPU, memoria y demás elementos de una máquina
+                                determinada.
+                            </p>
+                            <a name="figura2">
+                                <table border="0" cellspacing="0" cellpadding="2" width="675">
+                                    <tr align="right">
+                                        <td><img src="img/emuls.jpg" width="675" height="576"
+                                                 alt="Figura 3. Emuladores de Spectrum, Megadrive, NES y Master System"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 3. Emuladores de Spectrum, Megadrive,
+                                            NES y Master System
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Por ejemplo, Realspectrum es un emulador de Spectrum, ya que es
+                                un programa diseñado para emular un micro Z80 (que es el micro del
+                                Spectrum), una ULA (que es el "chip gráfico" del Spectrum), una unidad
+                                de cinta o de disco, etc... Del mismo modo que existe Realspectrum,
+                                NESticle es un emulador de NES que emula el micro de la NES, los
+                                chips de la NES, es capaz de ejecutar juegos en cartucho de NES,
+                                etc.
+                            </p>
+                            Normalmente los emuladores son programas que simulan una única
+                            arquitectura, aunque en algunos casos existen "macroemuladores"
+                            capaces de emular varios sistemas, como por ejemplo MAME (Multi
+                            Arcade Machine Emulator) que emula gran variedad de microprocesadores
+                            diferentes, lo cual le permite recrear gran cantidad de máquinas
+                            recreativas.
+                            </p>
+                            <p>
+                                Nótese un detalle muy importante: un emulador no es más que un
+                                programa como cualquier otro instalado en la máquina. La diferencia
+                                está en que es vez de editar un texto, hacer cálculos,
+                                dibujar, o jugar (como el resto de programas), lo que hace es
+                                comportarse tal y como lo haría el sistema emulado. Posteriormente
+                                veremos con más detalle cómo.
+                            </p>
+                            <p>
+                                <b>Arquitecturas emuladas</b>
+
+                            </p>
+                            <p>
+                                Actualmente hay muchísimos sistemas emulados. Veamos algunos de
+                                los más conocidos (no están todos, pero sirven para hacernos una idea).
+                            <ul>
+                                <li>Consolas:<br>
+                                    Nintendo: Nintendo NES, SuperNES, GameBoy, Nintendo64...<br>
+                                    Sega: GameGear, Master System, Megadrive/Genesis, Saturn...<br>
+                                    Atari: VCS 2600, 7800, Lynx...<br>
+                                    Otros: NeoGeo, PCEngine/TurboGrafx...<br>
+
+                                </li>
+                                <li>Máquinas recreativas: <br>
+                                    Emuladas casi el 100% de ellas (salvo excepciones en determinados
+                                    sistemas) por MAME (MultiArcade Machine Emulator) o RAINE.
+                                </li>
+                                <li>Microordenadores y ordenadores de 16 bits:<br>
+                                    Spectrum, Amstrad, MSX, Commodore, Atari ST, Amiga...
+                                </li>
+                                <li>Otros:<br>
+                                    Consolas de una y dos pantallas HandHeld y Game&Watch,
+                                    Máquinas de pinball, etc...
+                                </li>
+
+                            </ul>
+                            </p>
+                            <p>
+                                Si buscas un emulador que te permita emular alguno de estos sistemas,
+                                puedes encontrarlo fácilmente en <a href="http://www.emulatronia.com"
+                                                                    onClick="window.open(this.href); return false;">
+                                Emulatronia</a>, pulsando en la sección
+                                correspondiente en la barra de menú de la izquierda.
+                            </p>
+                            <p>
+                                ¡Ojo! En algunas circunstancias puede ser ilegal descargar juegos de
+                                arquitecturas que todavía están a la venta, ya que al usarlas estás
+                                evitando al compra de la máquina y del juego. Es por ello que en algunas Webs de
+                                ROMS para emuladores encontrarás
+                                letreros indicando que sólo puedes descargar la ROM si eres el propietario
+                                del juego original, o bien que sólo puedes probarlas 24 horas, y condiciones
+                                similares. Quede claro que desde Magazine ZX estamos a favor de un uso
+                                correcto de la emulación: siempre hay que emular sistemas permitidos, usando
+                                ROMs cuya distribución haya sido permitida. Hacer lo contrario es perjudicial
+                                para el mundillo de la emulación, como veremos en la sección de Ventajas y
+                                Desventajas.
+                            </p>
+                            <p>
+                                Debe quedar claro que los emuladores no son exclusivos de la
+                                plataforma PC. Es decir, no sólo hay emuladores de los diferentes sistemas
+                                para usarlos en PCs. Existen emuladores de Spectrum para Amiga,
+                                emuladores de Atari 2600 para Atari ST, o emuladores de NES para
+                                Playstation, por ejemplo. Recordemos que el emulador no es más que un programa que
+                                puede realizarse para cualquier plataforma.
+                            </p>
+                            <p>
+                                <b>Cómo funciona un emulador</b>
+
+                            </p>
+                            <p>
+                                Y bien, se preguntará algún lector, ¿cómo es posible que se pueda
+                                emular una máquina? ¿Qué tipo de "magia" realiza el emulador para
+                                mostrar un Spectrum dentro de mi ordenador? Lo que vamos
+                                a ver a continuación es cómo funciona a nivel interno un emulador.
+                                El usuario realmente no necesita saberlo, porque para él basta con abrir el emulador,
+                                cargar un juego o programa dentro del mismo (con las opciones que tiene el
+                                emulador para seleccionar un fichero ROM, cinta o disco de nuestro disco duro), y
+                                utilizarlo, pero nunca viene mal entender cómo funcionan las cosas, y si estás leyendo
+                                este artículo es, precisamente, porque estás interesado en aprender el cómo y porqué
+                                de la emulación. No debes preocuparte si no conoces o entiendes algún concepto
+                                (aunque para algunos, esto será una explicación básica): lo importante es quedarse
+                                con la idea general de lo que vamos a ver durante este apartado.
+                            </p>
+                            <p>
+                                Lo que en realidad el programador crea es, a grandes rasgos, el
+                                emulador de un microprocesador. Por ejemplo, es posible hacer un
+                                programa que lea instrucciones del microprocesador Z80, las comprenda,
+                                las ejecute, y guarde los resultados de las ejecuciones.
+                            </p>
+                            <p>
+                                Un emulador de Z80 podría ser un programa hecho en C, en Visual
+                                BASIC, en PASCAL o en ensamblador (por citar algunos lenguajes
+                                comunes) que entienda las instrucciones en código máquina del Z80
+                                proporcionadas al emulador, las ejecute y cambie los registros
+                                emulados del microprocesador, quedando todos los registros emulados
+                                igual que quedarían en un Z80 real si ejecutara el mismo código.
+                                Así, se podría realizar un programa en código máquina de Z80, y al
+                                ejecutarlo en un emulador, o en un Z80 real, obtendríamos exactamente
+                                los mismos resultados en los diferentes registros del microprocesador.
+                                Lo que estamos haciendo es recrear el hardware del sistema.
+                            </p>
+                            <p>
+                                Ahora bien, con esto tenemos programas capaces de emular el hardware de
+                                una máquina, pero estos programas en sí mismos sólo emulan un
+                                microprocesador, o un chip gráfico, y no son capaces de hacer nada
+                                por sí mismos. Sería como si cogiéramos un PC y le quitáramos el
+                                disco duro y el chip de la BIOS. Al encenderlo tendríamos la pantalla
+                                en negro, ya que el micro (que lo único que hace es ejecutar una
+                                instrucción tras otra) no tiene nada que ejecutar. Para que puedan
+                                realmente hacer algo, necesitan un Sistema Operativo (más o menos
+                                complejo). Este sistema suele ser un chip ROM (memoria de sólo
+                                lectura) con las funciones básicas grabadas en él.
+                            </p>
+
+                            <p>
+                                Al arrancar un Spectrum, por ejemplo, lo que se tiene es una ROM
+                                de 16KB (16384 bytes) que contiene el arranque de la máquina, el
+                                intérprete de BASIC, y todas las funciones necesarias para cargar
+                                y ejecutar el software de Spectrum. Esta ROM en realidad es un
+                                chip de memoria con el Sistema Operativo del Spectrum (un programa
+                                escrito en código máquina de microprocesador Z80) grabado en él.
+                                Este programa no tiene diferencias prácticas con un juego o un
+                                programa en cinta o disco de Spectrum, simplemente que su función
+                                no es jugar, sino dotarnos de un interfaz de gestión del Spectrum
+                                (el BASIC) y que en lugar de estar grabado en una cinta, lo está
+                                en una memoria de sólo lectura. Es decir, sí: hubo una persona
+                                (o varias) que programó (como si fuera un juego) el arranque de
+                                la máquina, el menú, el BASIC, etc., y lo ensambló con un
+                                "programa ensamblador" para obtener el código máquina almacenado
+                                en esa memoria ROM.
+                            </p>
+                            <p>
+                                Nada nos impediría programarnos nuestro propio S.O. para Spectrum, grabarlo en
+                                un chip ROM igual que el original (de 16KB), abrir el Spectrum y reemplazar el chip
+                                de memoria de la ROM por el nuestro. Al arrancar el ordenador (suponiendo que
+                                hayamos hecho un S.O. bien programado) tendríamos un ordenador nuevo, totalmente
+                                diferente, con su sistema operativo. No sería un Spectrum tal y como lo conocemos,
+                                sino un ordenador nuevo que podría comportarse como un Spectrum o no (según cómo
+                                hayamos programado su BIOS). Estaríamos usando el mismo hardware del Spectrum
+                                (un Z80, una ULA, etc.) pero al ser diferente el Sistema Operativo, el ordenador
+                                funcionaría
+                                de forma diferente. Es el mismo caso que un PC (Micro Intel, tarjeta gráfica
+                                determinada,
+                                etc.) al que le podemos poner Linux, o Windows, y se comportaría de forma diferente
+                                (siendo el mismo hardware). He ahí la importancia de la ROM del sistema: es la que
+                                define cómo se comporta el ordenador, la que le da identidad. Sin ella, el ordenador
+                                no haría nada. Esa ROM en el caso del Spectrum (y de muchos otros
+                                sistemas) se graba en un chip.
+                            </p>
+                            <p>
+                                Nuestro querido Spectrum toma el contenido de ese chip y lo ejecuta,
+                                instrucción a instrucción, como si fuera un programa (que de hecho,
+                                es lo que es), y va realizando todas las acciones que éste le dicta:
+                                borrar la pantalla, imprimir el mensaje de "(c) 1982 Sinclair Ltd
+                                Research", esperar la pulsación de una tecla, interpretar nuestros
+                                comandos, etc.
+                            </p>
+                            <p>
+                                El emulador, como el Spectrum real, realiza la misma función.
+                                Éste emula un micro Z80 (y los demás componentes del Spectrum), y
+                                lo primero que hace el emulador es cargar desde fichero (como por
+                                ejemplo, rom48k.rom) el contenido de esta ROM del Spectrum, de forma
+                                que el emulador, al igual que el Spectrum real, pueda arrancar,
+                                ejecutando las instrucciones de la ROM del Spectrum mediante su
+                                "microprocesador emulado". ¿Cómo se ha obtenido este fichero con la
+                                ROM? Sencillo: se coge un chip con la ROM del Spectrum, se inserta en
+                                un lector/grabador de memorias, y se lee, grabando el contenido de los
+                                16384 bytes en un fichero. Cada byte de este fichero se podría decir
+                                que es una instrucción del programa de la ROM del Spectrum.
+                            </p>
+                            <a name="figura4">
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+
+                                        <td><img src="img/esquema_spectrum.gif" width="640" height="300"
+                                                 alt="Figura 4. Esquema básico de un Spectrum real"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 4. Esquema básico de un Spectrum real
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a><br>
+                            <p>
+                                La parte central es un micro Z80 el cual ve la ROM y la RAM
+                                de forma continuada como la totalidad de su memoria. Es decir,
+                                ve 64KB de memoria de los cuales los primeros 16K son el
+                                contenido de chip de ROM, y los siguientes 48K los del chip de
+                                RAM. Al encender el Spectrum éste se inicializa y muestra el
+                                BASIC porque comienza a ejecutar instrucciones desde la dirección
+                                de memoria 0, donde está el principio de la ROM de 16K, es decir,
+                                el intérprete BASIC.
+
+                            </p>
+                            <p>
+                                Es por eso que cuando encendemos el ordenador
+                                se "ejecuta" la ROM. Al encender un Spectrum (que perdió en su apagado toda
+                                alimentación eléctrica) todos los registros del microprocesador Z80 valen 0, incluido
+                                uno que se llama PC (Program Counter o Contador de Programa), que es el que apunta
+                                a la siguiente instrucción que el Z80 debe leer y ejecutar. Un microprocesador funciona
+                                a grandes rasgos de la siguiente forma:
+                            <ul>
+                                <li>Leer instrucción apuntada por el registro PC.</li>
+                                <li>Incrementar PC para apuntar a la siguiente instrucción.</li>
+                                <li>Ejecutar la instrucción recién leída.</li>
+                                <li>Repetir continuadamente los 3 pasos anteriores.</li>
+                            </ul>
+                            </p>
+                            <p>
+                                Así pues, al encender el ordenador, PC vale 0. Al estar la ROM mapeada en la posición
+                                de memoria 0 (mediante cableado hardware de los chips de memoria en la
+                                placa del Spectrum), lo que pasa al encender el ordenador es que ese contador
+                                de programa (PC) está apuntando al principio de la ROM, y es por eso que se
+                                ejecuta la ROM paso a paso, instrucción a instrucción, cada vez que lo encendemos.
+                                No hay misterio: para el Spectrum todos los chips de memoria de su interior son
+                                como si fuera un gran baúl de 64KB continuados, algo que se consigue mediante
+                                cableado de los diferentes chips a las patillas correctas del microprocesador. A grandes
+                                rasgos,
+                                las patillas de datos y de direcciones del microprocesador están conectadas
+                                a los diferentes chips de memoria de forma que cuando el micro lee datos de la memoria,
+                                lo ve todo como si fuera un sólo chip de memoria de 64KB. Esto se consigue con un
+                                sencillo proceso de diseño (al hacer el esquema del ordenador antes de fabricarlo)
+                                conocido como "mapeado de memoria".
+                            </p>
+
+                            <p>
+                                En el mapa de memoria del Spectrum, los primeros 16KB son la ROM
+                                (que está en un chip aparte, pero que como acabamos de ver es algo que el
+                                Spectrum no distingue, ya que la visualiza como una sección de memoria continua desde
+                                la posición 0 hasta la 16383 de su "baúl total" de 64KB) y luego viene la RAM, a
+                                partir de la posición 16384. Ahí es donde se almacenan los programas, los gráficos
+                                de la pantalla (en un trozo determinado de esa memoria), etc. En esta RAM es
+                                donde el intérprete de BASIC introduce los programas para su ejecución.
+                            </p>
+                            <p>
+                                Estos programas pueden entrar desde los diferentes dispositivos
+                                de entrada/salida (gestionados por el Z80) como el teclado, la
+                                cinta o disco, etc.
+                            </p>
+                            <p>
+                                Cabe hacer una mención especial a que una parte de la memoria
+                                RAM (desde el byte 16384 hasta el 23296) está conectada con la
+                                ULA, el chip "gráfico" del Spectrum, y encargado de convertir
+                                el contenido de esta "videoram" o VRAM a señales de vídeo para
+                                la televisión. Cuando los juegos dibujan gráficos, sprites o
+                                cualquier otra cosa en pantalla, en realidad están escribiendo
+                                bytes en estas posiciones de memoria, que la ULA muestra en la
+                                TV en el siguiente refresco de la pantalla.
+                            </p>
+                            <p>
+                                Visto de una manera simple (pero real): al escribir un valor numérico (por
+                                ejemplo un 1) en alguna dirección de esta parte de la RAM, de forma inmediata
+                                aparece un punto en nuestro monitor, ya que la ULA está continuamente
+                                "escaneando" la videoram (de forma independiente del Z80) para reflejar en
+                                el monitor o televisión todos los valores numéricos que introduzcamos en
+                                ella. En los PCs ocurre igual: al escribir un valor numérico en una determinada
+                                posición de memoria, aparecen puntos en pantalla. Según en qué dirección
+                                escribamos aparecen en un lugar u otro de la pantalla. En algunos modos
+                                de vídeo (320x200, por ejemplo), escribir en la posición 0xA000 hace aparecer
+                                un punto de color en la posición (0,0) del monitor, hacerlo en 0xA001, lo hace
+                                aparecer en (1,0), y así un pixel tras otro.
+                            </p>
+                            <p>
+                                Con esto obtenemos un software que emula un micro (el Z80) y que
+                                gracias a la ROM del mismo arranca y nos muestra y permite usar el
+                                Spectrum en sí mismo, tal y como se podría usar un Spectrum recién
+                                arrancado. El emulador lo que hace, en resumen, es leer los eventos
+                                de teclado y comunicarlos al micro emulado de la misma forma en que
+                                lo hacía el Spectrum real al pulsar una tecla. Al mismo tiempo,
+                                lee de la memoria del Spectrum el contenido de la pantalla, y lo
+                                muestra en nuestro monitor tal y como lo "leería" la Televisión. El
+                                microprocesador virtual, mientras tanto, se dedica simple y únicamente
+                                a ejecutar instrucciones, ya sea de la ROM o de un juego que carguemos
+                                o ejecutemos en él.
+                            </p>
+
+                            <p>
+                                La ROM es muy importante, ya que indica cómo debe de comportarse el
+                                microprocesador en todo momento, cómo debe atender las interrupciones
+                                recibidas por el teclado y los mandos, etc. Por ejemplo, un ordenador
+                                ZX Spectrum y un Amstrad CPC tienen el mismo microprocesador, un Z80,
+                                pero sin embargo son sustancialmente diferentes. ¿Por qué? Pues porque
+                                aparte de que los circuitos que acompañan al micro son diferentes, la
+                                ROM es totalmente diferente, de forma que cambia el Sistema Operativo,
+                                las direcciones de memoria donde se guardan los datos de pantalla,
+                                etc.
+                            </p>
+                            <p>
+                                <b>¿De dónde sale el software para los emuladores?</b>
+                            </p>
+                            <p>
+                                El mero hecho de poder utilizar una arquitectura determinada y
+                                su sistema operativo ya podría ser un gran
+                                aliciente, pero por si esto fuera poco, en la mayoría de los casos
+                                podemos además usar todo el software original del sistema físico
+                                en el emulador.
+                            </p>
+                            <p>
+                                Ya sea un cartucho, una cinta o un disco, el objetivo es obtener
+                                una copia en formato digital (en un fichero) de sus datos, de forma que se puedan
+                                cargar en el emulador. Veamos los diferentes tipos de software a
+                                emular:
+                            <ul>
+                                <li>ROMs del sistema: como ya hemos visto, las ROMs de las máquinas
+                                    se obtienen volcando el contenido de los chips de memoria de las
+                                    mismas, donde están almacenados los programas en Código Máquina,
+                                    mediante lectores de memorias o similares.<br>
+
+                                    <br>
+                                    <a name="figura5">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                            <tr align="right">
+                                                <td><img src="img/rom.jpg" width="400" height="157"
+                                                         alt="Figura 5. Una de esas pequeñas cucarachas negras (o varias, según el sistema) alberga la ROM del aparato."/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">Figura 5. Una de esas pequeñas
+                                                    cucarachas negras (o varias, según el sistema) alberga la ROM del
+                                                    aparato.
+                                                </td>
+                                            </tr>
+
+                                        </table>
+
+                                    </a><br>
+                                    <br>
+                                </li>
+                                <li><p>ROMs de cartuchos: los cartuchos de consola no suelen ser más que
+                                    soportes de plástico de una forma determinada, que en su interior
+                                    contienen chips de memoria (iguales que los chips de la ROM)
+                                    conectados eléctricamente a los contactos metálicos o pines que
+                                    sobresalen del plástico del cartucho. Si os fijáis, en realidad los
+                                    juegos de consola no son más que ROMs del sistema, ya que realmente
+                                    las consolas no suelen tener ROM (si las encendemos sin juego dentro,
+                                    no hacen nada), y somos nosotros los que introducimos una ROM (que
+                                    en realidad es el juego) al introducir el cartucho. Esa ROM, en
+                                    lugar de ser un Sistema Operativo, es un juego. Recordemos que el
+                                    microprocesador lo único que sabe hacer es ejecutar instrucciones en
+                                    código máquina, sea un juego, o sea un intérprete de BASIC.
+                                </p>
+                                    <a name="figura6">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="599">
+                                            <tr align="right">
+                                                <td><img src="img/nes_game.jpg" width="599" height="408"
+                                                         alt="Figura 6. Cartucho de NES. En su interior sólo hay un pequeño circuito con una memoria ROM que contiene el juego grabado. En la captura podemos ver el circuito del juego Super Mario Bros 3 de Nintendo NES. Como puede verse, el juego está grabado en 2 chips de memoria y éstos vienen con la lógica necesaria para conectarse a la consola. Todos los chips están puenteados a las patillas del conector que se introduce en el cartucho. La carcasa gris de plástico tan sólo le da consistencia para su agarre e introducción en la consola, y para poner la portada del juego."/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="piefoto" align="right">Figura 6. Cartucho de NES. En su
+                                                    interior sólo hay un pequeño circuito con una memoria ROM que
+                                                    contiene el juego grabado. En la captura podemos ver el circuito del
+                                                    juego Super Mario Bros 3 de Nintendo NES. Como puede verse, el juego
+                                                    está grabado en 2 chips de memoria y éstos vienen con la lógica
+                                                    necesaria para conectarse a la consola. Todos los chips están
+                                                    puenteados a las patillas del conector que se introduce en el
+                                                    cartucho. La carcasa gris de plástico tan sólo le da consistencia
+                                                    para su agarre e introducción en la consola, y para poner la portada
+                                                    del juego.
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </a>
+                                    <p>
+                                        En algunos sistemas sí que tenemos una ROM pregrabada en la máquina
+                                        capaz de realizar tareas cuando no introducimos ningún juego. De esta
+                                        forma, las consolas clónicas de NES podían llevar cientos de juegos
+                                        grabados en un chip ROM interno, de forma que cuando la encendemos sin
+                                        introducir un cartucho, ese chip se activa y se ejecuta su contenido.
+                                        Cuando insertamos un juego, por contra, el chip que realmente se
+                                        convierte en la memoria de la máquina (y que por tanto se ejecuta) es
+                                        el ubicado en el interior del cartucho.
+                                    </p>
+                                    <p>
+                                        Para volcar los juegos a ficheros de disco de forma que se puedan
+                                        usar en los emuladores, basta con desmontar el cartucho, sacar el
+                                        chip de memoria con el código del juego grabado, y al igual que en
+                                        el caso de las ROMs del sistema, volcarlo a fichero con un lector
+                                        de chips de memoria. Otra opción sería utilizar alguno de los
+                                        lectores de cartuchos que se insertaban en la máquina y permitían
+                                        grabar a disquete los contenidos de las ROMs. Estos aparatos fueron
+                                        principalmente utilizados como "copiones".
+                                    </p>
+                                    <p>
+
+                                        En general, en el mundo de la emulación, se
+                                        le llama ROM a todo fichero volcado a disco desde una memoria. Los
+                                        ficheros de ROM tendrán diferentes formatos según la arquitectura
+                                        de la máquina. Por ejemplo, fichero.smc será una ROM de cartucho de
+                                        SuperNES, fichero.smd de Sega MegaDrive, fichero.nes un juego de NES,
+                                        fichero.gb de Gameboy, etc. Así mismo, existen ROMs en el Spectrum,
+                                        obtenidas de los cartuchos del Interface 2 (un periférico de Spectrum
+                                        que permitía cargar juegos en cartucho, realizando exactamente la
+                                        misma función que la inserción del cartucho en una consola).
+                                    </p>
+                                    <p>
+                                        Las máquinas recreativas son placas con microprocesadores y
+                                        circuitos propios (al estilo de una consola) donde los juegos suelen
+                                        estar grabados también en chips de ROM, o bien se introducen como
+                                        si fueran cartuchos. El procedimiento para extraer las ROMs de las
+                                        recreativas es similar al de los cartuchos en la mayoría de los
+                                        casos.
+                                    </p>
+                                </li>
+                                <br><br>
+                                <li>Cintas: Las cintas de Spectrum contienen software igual que los
+                                    cartuchos de consola, sólo que en lugar de estar grabado el programa
+                                    en un chip, lo está grabado de forma magnética en una cinta. La cinta
+                                    contiene contiene audio grabado a una velocidad determinada y con
+                                    un formato determinado para que el ordenador pueda leerlo (y grabar
+                                    también software en cinta). El lector de cintas del ordenador lee
+                                    este audio y lo interpreta, almacenando en memoria las instrucciones.
+                                    Las cintas de Spectrum suelen ser ficheros con extensión .tap o .tzx,
+                                    las cuales se han obtenido utilizando un programa de grabación de
+                                    audio (con lo cual se guardan en disco en formato *.wav o *.voc).
+                                    Un programa como Taper o Maketzx se encargará posteriormente de
+                                    analizar este fichero wav/voc y convertirlo en un fichero de datos
+                                    TAP o TZX con el programa en un formato perfecto y legible por los
+                                    emuladores de Spectrum. Un fichero TZX contiene la cinta tal y como
+                                    la tenemos grabada físicamente, pero en formato de unos y ceros en
+                                    lugar de audio (por eso un TZX puede ocupar unos 100KB mientras que
+                                    el WAV ocupa hasta 10MB, y son equivalentes). Lo más interesante es
+                                    que a partir de un fichero TZX podemos obtener el WAV de la cinta
+                                    (para regrabarla) o incluso es posible "reproducir" archivos TZX con
+                                    programas como Playtzx, y cargar este juego en un Spectrum real con un
+                                    cable macho-macho apropiado.
+                                    <br><br>
+                                    Este formato de ficheros (TZX) es el más importante en el Spectrum.
+                                    Esto es así porque al ser copias exactas de las cintas, y a partir de
+                                    las cuales se puede regrabar una cinta original, al pasar a formato
+                                    TZX todos los juegos disponibles, en realidad los estamos preservando
+                                    y evitando la pérdida y deterioro de las cintas originales con el
+                                    tiempo. Si una cinta, pasados los años, pierde sus propiedades magnéticas
+                                    y el juego no carga, podemos regrabarla en la cinta original usando un grabador de
+                                    cassette y el fichero TZX de la cinta obtenido de Internet.
+                                    <br><br>
+                                    Hay que destacar que los ficheros TAP y TZX no son ROMS. Son
+                                    "ficheros de cinta" o "tape files". El término ROM, como ya hemos visto,
+                                    se asocia a programas o juegos obtenidos desde hardware, y no es
+                                    aplicable a estos ficheros.
+                                </li>
+                                <br><br>
+                                <li>Discos: Al igual que las cintas, los discos de diferentes sistemas
+                                    (incluidos los de 3 pulgadas) se pueden pasar a ficheros de disco con
+                                    las unidades de disco apropiadas y programas que los interpreten y
+                                    graben en los formatos adecuados. Por ejemplo, los ficheros .dsk, .tcl
+                                    y .trd son imágenes de disco de Spectrum pasados a fichero y utilizables
+                                    por los emuladores. Al igual que ocurre con las cintas, desde un DSK
+                                    podemos recrear un disco de Spectrum en su formato original.
+
+                                </li>
+                                <br><br>
+                                <li><p>Snapshots: son volcados de la memoria del Spectrum con los juegos
+                                    ya cargados desde Cinta o Disco. Es decir, supongamos que en un Spectrum
+                                    con 48KB de memoria (ZX Spectrum 48K) cargamos desde cinta un juego
+                                    determinado. Este juego (que sin duda ocupará menos de 48KB) se almacena
+                                    en la RAM del Spectrum listo para ser jugado (por ejemplo, en el menú
+                                    del juego). Si en este momento grabamos el contenido de la RAM en un
+                                    fichero, y al mismo tiempo almacenamos el estado completo de la CPU,
+                                    tenemos una "copia" del estado de la máquina. Al cargar este fichero
+                                    en otra máquina igual, o en un emulador, pondremos al sistema destino
+                                    en el mismo estado exacto que estaba la máquina original. Es decir,
+                                    delante del menú, o del juego, en el punto en que lo grabamos.
+                                </p>
+                                    <p>
+                                        Los Snapshots (que tampoco son ROMs) se suelen obtener cargando cintas
+                                        en los emuladores y grabando el contenido de la memoria a disco con un
+                                        formato especial según el tipo de Snapshot. Tenemos ficheros .z80 (que
+                                        empezó a utilizar el emulador Z80 para MS-DOS), ficheros .sp y .sna
+                                        (usados por emuladores antiguos), y ficheros .szx (el futuro posible
+                                        formato estándar de snapshots), entre otros. Este formato de
+                                        fichero no es el ideal para preservar los juegos, ya que no permiten
+                                        recrear las cintas, tan sólo jugar de una forma rápida y directa a los
+                                        juegos. En general podemos grabar y cargar snapshots en los emuladores
+                                        de una forma muy rápida (como ficheros) y en cualquier momento, de forma
+                                        que pueden ser usados como método para "grabar las partidas" y continuar
+                                        posteriormente. En algunas Webs incluso se han acumulado Snapshots
+                                        grabados justo antes de finalizar ciertos juegos, para que la gente
+                                        pueda ver el final de un juego determinado sin tener que jugarlo
+                                        (ver The Congratulations Archive en la sección de enlaces).
+                                    </p>
+                                    <a name="figura7">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                            <tr align="right">
+                                                <td><img src="img/getroms.gif" width="640" height="480"
+                                                         alt="Figura 7. Obtención de software para los emuladores, visto de una manera simplificada"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="piefoto" align="right">Figura 7. Obtención de software para
+                                                    los emuladores, visto de una manera simplificada
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </a><br>
+                                </li>
+                            </ul>
+                            <p>
+                                <b>Aclaraciones</b>
+                            </p>
+                            <p>
+
+                                Existe una pequeña confusión entre 2 conceptos similares pero
+                                diferentes que suelen inducir a error: es la confusión entre
+                                "emulador" y "simulador". Hay 2 grandes definiciones sobre las
+                                diferentes entre ambos términos. La primera está basada en
+                                que el emulador es, como ya hemos visto, un
+                                programa más o menos complejo que emula la arquitectura de una
+                                máquina, sin apoyarse en nada más. Un simulador incorpora un emulador
+                                además de componentes hardware. Por ejemplo: un emulador de Spectrum
+                                emula todos los componentes del Spectrum vía software, mientras que un
+                                simulador de Spectrum podría ser un sistema con un micro Z80 conectable
+                                al puerto paralelo de un PC, de forma que el PC en vez de emular el
+                                Z80, le pidiera a éste la ejecución de las instrucciones, emulando el
+                                resto del sistema en el PC. Es decir, el simulador tiene una parte
+                                hardware, mientras que el emulador no.
+                            </p>
+                            <p>
+                                En otros libros se realiza una descripción totalmente diferente, en
+                                la que el emulador es un dispositivo (software o hardware) que se
+                                encarga de implementar con la mayor exactitud posible todas las
+                                funciones del sistema emulado, mientras que el simulador es una caja
+                                negra que, independientemente de su contenido, se comportará igual
+                                que el sistema recreado. Es decir, ante un determinado conjunto de
+                                entradas proporcionará las mismas salidas que lo haría el sistema real.
+                            </p>
+                            <p>
+                                Ambas definiciones se encuentran en diferentes libros de texto de
+                                Arquitectura de Computadores, y se pueden aplicar en diferentes ámbitos.
+                                La diferencia entre una u otra definición suele aparecer cuando se trata
+                                el tema de la Electrónica (momento en que se suele aplicar más la
+                                primera definición), frente a su uso en la Informática como desarrollo
+                                de software (donde se aplica más la segunda).
+                            </p>
+
+                            <p>
+                                Otra pequeña confusión para los neófitos es aquella entre emulador y
+                                remake. Un remake es un juego programado desde cero de forma que se
+                                parezca a un juego antiguo o clásico de otro sistema. Por ejemplo, un
+                                remake de Manic Miner es un juego que tiene las mismas pantallas que
+                                el Manic Miner original de Spectrum, que simula los mismos personajes,
+                                enemigos y estilo de juego, pero que no está recreado mediante un
+                                emulador y el juego original, sino que está programado desde cero por
+                                uno o más programadores que realizan el juego con diferentes gráficos
+                                (aunque a veces pueden usarse los mismos capturados para darle un
+                                aspecto más fiel al original), mejores melodías y sonidos, etc. Los
+                                autores de remakes están en realidad realizando un juego como el
+                                original, pero hecho por ellos mismos. Con los remakes se consigue
+                                (además de satisfacer un reto personal y honrar al programador del
+                                juego original) acercar juegos clásicos a arquitecturas actuales, sin
+                                necesidad de emuladores.
+                            </p>
+                            <a name="figura8">
+                                <table border="0" cellspacing="0" cellpadding="2" width="700">
+
+                                    <tr align="right">
+                                        <td><img src="img/manic.gif" width="700" height="263"
+                                                 alt="Manic Miner original (izquierda) y uno de sus innumerables remakes (derecha)"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Manic Miner original (izquierda) y uno de sus
+                                            innumerables remakes (derecha)
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+
+                            <p>
+                                <b>Ventajas y desventajas de los emuladores</b>
+                            </p>
+                            <p>
+                                Existe un gran debate sobre la conveniencia o inconveniencia del uso
+                                y programación de emuladores. La gente se alinea directamente a favor
+                                o en contra de ellos según algunos de estos criterios:
+                            </p>
+                            <p>
+                                A favor:
+                            <ul>
+                                <li>Permiten utilizar sistemas que de otro modo no podríamos usar, por
+                                    su no disponibilidad, su precio, etc.
+                                </li>
+
+                                <li>Permiten preservar todos los sistemas hardware mediante una
+                                    emulación lógica por software (que es cada vez más perfecta) y que
+                                    certifica que siempre podremos reutilizar los programas y juegos de
+                                    los sistemas emulados, y además desde cualquier arquitectura actual y
+                                    futura.
+                                </li>
+
+                                <li>Permiten encontrar más información sobre los sistemas emulados,
+                                    y documentarlos de una manera efectiva para una posible futura
+                                    reimplementación.
+                                </li>
+
+                                <li>Permiten probar sistemas que no conocías, y es posible que
+                                    hagan que te aficiones a ellos, y trates de conseguir las máquinas
+                                    propiamente dichas.
+                                </li>
+
+                                <li>Proporcionan facilidades al programador de estos sistemas para
+                                    el desarrollo de aplicaciones y juegos para ellos, ya que éstos se
+                                    pueden probar directamente en el emulador sin necesidad de pasarlos al
+                                    sistema de prueba, acelerando la depuración de errores.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                En contra:
+                            <ul>
+                                <li>La utilización de emuladores hace que la gente se centre en la
+                                    utilización de los mismos y la obtención de juegos y programas como
+                                    ROMs con el único fin de acaparar juegos de todos los sistemas. Esto
+                                    produce que la gente no se sienta realmente interesada en buscar,
+                                    comprar y potenciar los sistemas físicos en sí mismos. Por ejemplo,
+                                    ¿cuánta gente que use un emulador de SuperNintendo acaba comprando
+                                    una SuperNintendo física y juegos para la misma? El disponer de los
+                                    emuladores y las ROMs en CD en Internet hace que no se molesten en
+                                    disfrutar del hardware en sí mismo.
+                                </li>
+
+                                <li>Los emuladores no son perfectos: no emulan al 100% todos los aspectos
+                                    ni del microprocesador ni de los demás elementos asociados al sistema,
+                                    por lo que la emulación (aunque sea casi perfecta) no es comparable
+                                    a la sensación y <i>feeling</i> de la máquina real.
+                                </li>
+
+                                <li>El volcado de juegos que todavía se comercializan y la emulación de
+                                    recreativas actuales y sistemas a la venta es dañino para el mercado
+                                    del videojuego. Actualmente podemos jugar en emuladores Arcade a
+                                    juegos de recreativa que todavía están en los salones. El disponer de
+                                    estos juegos en casa hace que, al igual que ocurría en el primer punto
+                                    enumerado, no hagamos uso de las máquinas pagando por usarlas.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                La elección de una u otra postura es una cuestión personal, aunque
+                                el autor de este artículo puede decir sin tapujos que está a favor de
+                                la emulación, siempre que sea realizada de máquinas que actualmente
+                                no generen dinero en el mercado (es decir, recreativas antiguas,
+                                microordenadores y consolas de 8 y 16 bits). Estoy personalmente en
+                                contra de la emulación de recreativas modernas de última generación
+                                y sistemas actuales todavía a la
+                                venta (venta al por mayor, ya que el hecho de que todavía se vendan
+                                Atari 2600 en algún bazar no quiere decir que no se deban emular).
+                            </p>
+                            <p>
+                                <b>Resumiendo</b>
+
+                            </p>
+                            <p>
+                                Los emuladores son herramientas que nos van a permitir revivir
+                                tiempos pasados con sistemas que ya no están a nuestro alcance, o
+                                bien descubrir nuevas máquinas de las que nunca oímos hablar, o que
+                                nunca llegaron al lugar donde vivimos. Estos emuladores no son más que
+                                programas que emulan todos los aspectos hardware y software de la
+                                máquina con la mayor fidelidad posible. Al hacer esto, son capaces
+                                de entender lo que es la ROM de la máquina, y por tanto arrancar,
+                                y ejecutar las tareas de su "Sistema Operativo" básico (como por
+                                ejemplo, la ROM del Spectrum con su BASIC) y por lo tanto entender
+                                también el software escrito para esta arquitectura, que es pasado a
+                                formato digital desde las cintas, discos o cartuchos donde estaban
+                                almacenados originalmente.
+                            </p>
+                            <p>
+                                Espero que este pequeño artículo sirva como introducción a la
+                                emulación para aquellos que tenían dudas sobre ella.
+                            </p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+                                <ul>
+                                    <li>Emulatronia (Juega con tu pasado): <a href="http://www.emulatronia.com"
+                                                                              onClick="window.open(this.href); return false;">http://www.emulatronia.com</a>
+                                    </li>
+
+                                    <li>Emudek: <a href="http://www.emudek.org"
+                                                   onClick="window.open(this.href); return false;">http://www.emudek.org</a>
+                                    </li>
+                                    <li>Congratulations Archive: <a href="http://www.thespian.demon.co.uk/congrat/"
+                                                                    onClick="window.open(this.href); return false;">http://www.thespian.demon.co.uk/congrat/</a>
+                                    </li>
+                                    <li>Cualquier utilidad de Spectrum como Taper, Maketzx o Playtzx: <a
+                                            href="http://www.worldofspectrum.org/utilities.html#tzxtools"
+                                            onClick="window.open(this.href); return false;">http://www.worldofspectrum.org/utilities.html#tzxtools</a>
+                                    </li>
+                                    <li>Remake de Manic Miner para Windows: <a
+                                            href="http://www.xmixdrix.com/manicminer/"
+                                            onClick="window.open(this.href); return false;">http://www.xmixdrix.com/manicminer/</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br>SROMERO (NoP)</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="emulacion.html" selected>Emulación</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                </form>
+
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
+
+</body>
 </html>

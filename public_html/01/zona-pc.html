@@ -1,456 +1,508 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Zona PC - Magazine ZX número 1 - Julio 2003</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html" selected>Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="emulacion.html">Emulación</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 1 - Julio 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<i>En esta sección
-queremos ir enseñándote, de una manera amena y con ejemplos
-fáciles de comprender, el funcionamiento de las diferentes
-herramientas de las que disponemos para usar en el PC y que nos
-hacen más sencillo el uso habitual de nuestro Spectrum.</i>
-
-<br><br>
-<b>UTILIDADES PARA TRABAJAR CON DISCOS (I)</b>
-<br><br>
-En Internet existe una gran cantidad de archivos conteniendo
-diversos juegos y utilidades para nuestro Spectrum. Entre estos
-archivos tenemos un formato en el cual nos vamos a centrar hoy: son
-los archivos DSK. Estos archivos no son más que una
-imagen fidedigna de los antiguos discos de 3" que
-usábamos en el hermano mayor de la gama Spectrum, el +3.
-Esta primera parte del artículo va a tener como objetivo
-enseñarnos como se realiza la grabación de estos
-archivos a un disco, tanto de 3" cómo de 3" 1/2.<br>
-<br>
-Para poder hacer esto tenemos que tener en cuenta un par de puntos:
-si queremos volcar los archivos a discos de 3 1/2, típicos
-de PC, debemos tener un cable adaptador y una disquetera de 3 1/2
-funcionando con nuestro Spectrum +3, y, si queremos grabarlos en
-discos de 3", tendremos que acoplar una disquetera de 3" al PC.
-Esto es evidente y no es el objeto de este artículo meternos
-en complicaciones con el hardware, por lo cual supondremos que ya
-tenemos decidida de que forma trabajaremos con las disqueteras y
-realizado el montaje que sea necesario.<br>
-
-<br>
-A continuación necesitamos descargar el conjunto de
-programas que vamos a utilizar, las CPDTOOLS, un conjunto de dos
-programas escritos por Ulrich Doewich que funcionan bajo sistemas
-operativos MS-DOS (bajo Windows es muy posible que no funcione
-correctamente, más adelante veremos cómo solucionar
-este problema).<br>
-<br>
-<b>INSTALACIÓN</b>
-<br><br>
-En las CPDTOOLS el proceso de instalación es muy sencillo,
-simplemente descomprimimos en una carpeta el archivo .ZIP que nos
-hemos bajado. Al realizar este proceso, nos queda el programa listo
-para trabajar con él.<br>
-<br>
-<b>CÓMO SE UTILIZA</b>
-
-<br><br>
-CPDWRITE.EXE, que es el programa que nos interesa ahora de los dos
-que trae el pack, es un programa de MS-DOS, y por lo tanto hay que
-utilizarlo desde una consola MS-DOS o símbolo del
-sistema. Cómo comentaba al inicio de éste
-artículo, en PC con Windows suele dar problemas, ya que
-CPDWRITE accede al hardware directamente y Windows no se lo
-permite, para esto la solución más sencilla es
-hacernos con un disco de arranque (al final del artículo, en
-links, podéis encontrar de dónde descargarlos ya hechos). Si
-nuestro disco duro está particionado y formateado usando
-FAT32 tendremos que usar un disco de arranque de Windows 98 o
-superior, y si está en FAT16, nos vale cualquiera a partir
-de MS-DOS. Date cuenta de que deberemos acceder al disco duro donde
-tendremos almacenados los archivos DSK y las CPD TOOLS.<br>
-<br>
-Tenemos en el directorio las cpdtools ya descomprimidas, ahora nos
-hace falta un archivo en formato DSK para copiar al disco. Lo
-descargamos, en Links tenéis varios sitios de dónde
-cogerlos, lo metemos en el directorio de las CPDTOOLS y
-descomprimimos el ZIP en el cual suelen venir almacenados. Una vez
-hecho esto, es recomendable cambiarles el nombre a los DSK para que
-no se pasen del estándar MS-DOS de 8+3 caracteres, ya que los
-nombres largos típicos de Windows, suelen ser una causa de
-que CPDWRITE nos muestre el error "no encuentro el archivo". Valga
-como ejemplo, si nos bajamos un archivo llamado
-LaAbadiaDelCrimen.dsk, lo podemos renombrar como abadia.dsk.<br>
-
-<br>
-Una vez todo preparado vamos a volcar la imagen dsk en el
-disco. Reiniciamos el PC con el disco de arranque, en el caso de
-que no nos funcione en Windows, tal como decíamos antes o
-abrimos una sesión MS-DOS o símbolo del sistema.
-Accedemos a la carpeta donde tenemos almacenadas las CPDTOOLS y
-tecleamos: CPDWRITE abadia.dsk, o el nombre del archivo que
-queremos grabar, y esperamos que el proceso de grabación
-termine, tarda unos pocos segundos. Podemos ver en la pantalla que
-la grabación va avanzando al incrementar el número
-de la pista (track) que se va escribiendo en el disco. Simplemente con esto
-nos copiará el archivo en lo que sería la cara 'A'
-del disco, en caso de que sea de 3 1/2, o, si tenemos una
-disquetera de 3" adaptada al PC, en la cara del disco que tengamos
-introducida hacia arriba. En cuanto al uso de la disquetera de 3"
-poco más hay que decir, el proceso es muy sencillo tal como
-lo haríamos en el Spectrum, nos limitamos a dar la vuelta al
-disco.<br>
-<br>
-<b>TRABAJANDO CON LA DISQUETERA DE 3" 1/2</b>
-<br><br>
-
-Vamos a complicar un poco las cosas y a comentar unas
-consideraciones que tenemos que tener en cuenta si tenemos una
-disquetera de 3" 1/2 trabajando en nuestro Spectrum, cosa que el
-autor de este artículo recomienda. Lo primero es saber el
-tipo de discos que tenemos que utilizar, ya que si no son de doble
-densidad, es decir, de los antiguos de 720k, no sirven y deberemos
-usar uno de alta densidad, los que podemos encontrar ahora en
-cualquier tienda de informático o consumibles de oficina,
-tapando el orificio que tienen a la derecha con un poco de celo.
-Hecho esto, podemos usar el disco como si tuviera dos caras,
-simplemente con añadir un parámetro al programa
-CPDWRITE.exe:<br>
-<br>
-<ul>
-	<li>Para grabar en lo que sería la cara 'A' del disco: <font class="codigo">CPDWRITE abadia.dsk</font></li>
-	<li>Para grabar en la cara 'B': <font class="codigo">CPDWRITE abadia.dsk S</font></li>
-
-</ul>
-Por supuesto, estamos suponiendo que el cable adaptador de la
-disquetera de 3" 1/2 al Spectrum tiene el conmutador necesario para
-cambiar de una cara a otra.<br>
-<br>
-<b>FORMATEANDO DISCOS DE 3" 1/2</b>
-<br><br>
-Otra de las utilidades que nos ofrece CPDWRITE es formatear discos
-de 3" 1/2 con una capacidad mayor de como lo hace el S.O. del
-Spectrum.<br>
-<br>
-Cuando descomprimimos el archivo donde vienen las CPD TOOLS, nos
-crea tres imágenes llamadas 180K.dsk, 360K.dsk y 720K.dsk.
-Si grabamos estas imágenes en disco con el comando visto
-antes: <font class="codigo">CPDWRITE 720K.dsk</font>, tendremos el disco formateado y vacio
-para meter información hasta que completemos esa cantidad de
-espacio libre. Estos discos funcionarán perfectamente con el
-Spectrum, salvo por alguna limitación menor. No podemos
-tener más de 256 archivos en el mismo disco, y al hacer un
-CAT de los mismo, únicamente se nos mostraran los 64 primeros, pero
-podemos listarlos por lotes, por ejemplo, haciendo CAT a*.*, con lo
-cual nos listará los archivos que comiencen por la letra
-'A'. Jugando con los comandos podremos acceder a todos los archivos
-del disco.<br>
-
-<br>
-Si los formateamos a 720K, por ejemplo, debemos tener en cuenta de
-que su utilizan cómo si sólo tuviesen cara 'A' con
-esa capacidad.<br>
-<br>
-<b>CONCLUSIONES</b>
-<br><br>
-Este programa es una magnífica utilidad para nuestro PC, nos
-facilita enormemente la tarea de pasar a disco nuestros programas
-preferidos en una cantidad de tiempo ínfima. Si
-además lo acompañamos con el adaptador para poner una
-disquetera de 3" 1/2 a nuestro Spectrum, tendremos el beneficio de
-poder usar discos nuevos, que compramos a bajo precio comparado con
-el coste que tiene encontrar discos de 3" en el mercado de segunda
-mano, caros gracias a los especuladores con este tipo de material y
-escasos.<br>
-<br>
-El mes que viene nos meteremos en profundidad con el segundo de los
-programas de este magnifico lote, CPDREAD, que nos permitirá
-
-crear archivos DSK a partir de nuestros discos de 3" y 3" 1/2.<br>
-<table border="0" cellspacing="0" cellpadding="0" width="100%" class="texto">
-	<tr>
-		<td align="right"><br>MIGUEL</td>
-	</tr>
-</table>
-<br><hr><br>
-A continuación presentamos un texto que nos ha remitido
-TBrazil que complementa el artículo referente a las CPDTools.
-<br><br>
-<b>CPCFS (cpcemu filesystem maintance) por Derik
-Van Zeutphen</b><br>
-
-<br>
-Texto realizado por Tbrazil basado en la explicación de
-Rafael Molina Chasserot para ECSS<br>
-<br>
-Cpcfs fue creado originalmente como complemento al emulador de
-Amstrad CPC llamado CPCemu.<br>
-<br>
-El programa nos permite insertar bajo MS-DOS ficheros de cualquier
-extensión dentro de un archivo DSK (imágenes de disco para
-emulador). Con ello, por ejemplo, podemos insertar ficheros de
-extensión *.z80 dentro de un DSK y así, con el programa
-z80 loader de Gary Lancaster, poderlos ejecutar en un Spectrum +3
-real.<br>
-<br>
- Otro ejemplo sería el uso que le dio NoP (sromero) a cpcxfs para
-crear un DSK con su aventura conversacional "<a href=
-"http://www.speccy.org/sromero/aventura/ecss/ecss-web.html" onClick="window.open(this.href); return false;">es.comp.sistemas.sinclair: La
-Aventura</a>" para +3. Al programar esa aventura en un PC se generó un fichero .z5
-que contenía el código de la aventura en un formato que los
-intérpretes de aventuras Infocom comprenden. Hay intérpretes para
-muchos sistemas, incluido el Spectrum, de modo que el reto consistía en
-generar un DSK con  el fichero .z5, el intérprete, y el cargador
-BASIC. Para ello NoP descargó una aventura ya hecha para Spectrum
-en formato DSK y que usaba ese intérprete y con cpcfs realizó los
-siguientes pasos:<br><br>
-
-<ul>
-<li>Eliminó del DSK el fichero .z5 de la aventura conversacional
-que iba en el .dsk</li>
-<li>Agregó al DSK el fichero .z5 de su aventura (ecss.z5)</li>
-<li>Sacó del DSK el fichero "DISK", que es un cargador en BASIC
-que llamaba al binario intérprete pasándole como nombre de
-fichero en una variable el nombre de la aventura .z5 original.</li>
-<li>Editó este fichero cambiando la variable para que cargara
-ecss.z5, y subió el fichero DISK de nuevo al DSK</li>
-</ul>
- Con esto se obtuvo un fichero .dsk que se podía cargar en
- emulador y pasar a disco real de +3 y que cargaba y ejecutaba
- la aventura conversacional ecss.z5 como hacía con la
- aventura original del disquete.
-<br><br>
- Pero veamos cómo se usa el programa en sí mismo. Para poder usar el programa, por tanto, iniciaremos una sesión
-DOS en nuestros PC's.<br>
-
-<br>
-Esta utilidad usa gran cantidad de comandos de MS-DOS y para mejor
-entendimiento os pondré un ejemplo práctico de su
-utilización, es muy práctico antes de realizar
-cualquier operación hacer antes una copia de seguridad de
-nuestro fichero DSK inicial.<br>
-<br>
-Los pasos a seguir son los siguientes:
-
-<ul>
-<li>Lo primero es conseguir un fichero DSK vacio al que llamaremos
-juego.dsk. Podemos encontrar discos vacíos dentro del paquete de
-utilidades CPDtools disponible en:<br>
-<a href="http://www.speccy.org/sinclairmania/arch/cpdtools.zip">http://www.speccy.org/sinclairmania/arch/cpdtools.zip</a></li>
-
-<li>Haremos una copia del fichero juego.dsk escribiendo en la
-línea de comandos de DOS:<br>
-<font class="codigo">copy juego.dsk juego1.dsk</font></li>
-
-<li>Acto seguido ponemos en el mismo directorio/carpeta el fichero
-juego.dsk, el ejecutable de CPCFS y los ficheros de extensión
-*.z80.</li>
-
-<li>Ahora ejecutamos el programa CPCFS y nos saldrá esto en
-pantalla:<br><br>
- <font class="codigo">cpcfs></font></a><br><br>
-
- </li>
-
-<li>Lo siguiente es abrir (open) el disco y lo hacemos de la
-siguiente manera:<br><br>
-
- <font class="codigo">cpcfs> open juego<br>
- cpcfs> dir</font><br>
-<br>
-
-Con esto vemos abrimos y examinamos el contenido del disco. O sea,
-que el programa usa comandos básicos del DOS que hacen la
-misma función.</li>
-
-<li>El siguiente paso es insertar los arhivos *.z80 dentro del
-disco y se hace así:<br>
-<br>
-<font class="codigo">cpcfs> mput -b *.z80</font><br>
-<br>
-De este modo insertamos todos los archivos de extensión z80
-dentro del disco. Si hacemos un DIR nos saldrán todos los
-archivos que hay dentro del disco. Podemos poner cualquier
-extensión o incluso insertar fichero por fichero.</li>
-
-<li>Si quisiéramos borrar archivos solo tendríamos que poner al
-igual que en MS-DOS:<br>
-<br>
-<font class="codigo">cpcfs> del *.z80</font><br>
-<br>
-Esto borraría los archivos de extensión z80.</li>
-
-<li>Para cerrar el disco y salir del programa ponemos lo
-siguiente:<br>
-<br>
-
-<font class="codigo">cpcfs> quit</font></li>
-</ul>
-Como veis la manera de insertar archivos dentro de un disco es
-realmente sencilla.
-<br>
-<table border="0" cellspacing="0" cellpadding="0" width="100%" class="texto">
-	<tr>
-		<td align="right"><br>TBRAZIL</td>
-	</tr>
-</table>
-</div>
-
-<br><hr><br>
-<div align="left">
-<b>LINKS</b>
-<br><br>
-<ul>
-	<li>Discos de arranque: <a href="http://www.bootdisk.com/" onClick="window.open(this.href); return false;">http://www.bootdisk.com/</a></li>
-	<li>Cpdtools: <a href="http://www.speccy.org/sinclairmania/arch/cpdtools.zip" onClick="window.open(this.href); return false;">http://www.speccy.org/sinclairmania/arch/cpdtools.zip</a></li>
-	<li>Webs con dsk de juegos y programas:
-	<ul>
-
-		<li><a href="http://www.speccy.org/trastero" onClick="window.open(this.href); return false;">El Trastero del Spectrum</a></li>
-		<li><a href="http://www.speccy.org/spa2" onClick="window.open(this.href); return false;">SPA2</a></li>
-		<li><a href="http://www.worldofspectrum.org" onClick="window.open(this.href); return false;">WOS (World Of Spectrum)</a></li>
-	</ul>
-	</li>
-<li>La web de CPCFS por
-Derik, allí encontraréis las instrucciones completas del
-programa y todas sus opciones.<br>
-
-<a href=" http://home.t-online.de/home/derik/cpcfs.htm" onClick="window.open(this.href); return false;"> http://home.t-online.de/home/derik/cpcfs.htm</a></li>
-<li>Web del z80 loader y otros útiles programas:<br>
-<a href="http://www.zxplus3e.plus.com/espanol/software.html" onClick="window.open(this.href); return false;">http://www.zxplus3e.plus.com/espanol/software.html</a></li>
-<li>Web donde
-podéis encontrar el paquete de utilidades CPDTOOLS, que contiene
-discos vacíos en formato DSK y las interesantes utilidades CPDWRITE
-y CPDREAD.<br>
-<a href="http://www.speccy.org/sinclairmania/arch/cpdtools.zip" onClick="window.open(this.href); return false;">http://www.speccy.org/sinclairmania/arch/cpdtools.zip</a></li>
-</ul>
-</div>
-</div>
-		</td>
-	</tr>
-
-</table>
-                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html" selected>Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="emulacion.html">Emulación</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Zona PC - Magazine ZX número 1 - Julio 2003</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
                 </tr>
             </table>
+        </td>
 
-    </body>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html" selected>Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="emulacion.html">Emulación</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 1 - Julio 2003</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <i>En esta sección
+                                queremos ir enseñándote, de una manera amena y con ejemplos
+                                fáciles de comprender, el funcionamiento de las diferentes
+                                herramientas de las que disponemos para usar en el PC y que nos
+                                hacen más sencillo el uso habitual de nuestro Spectrum.</i>
+
+                            <br><br>
+                            <b>UTILIDADES PARA TRABAJAR CON DISCOS (I)</b>
+                            <br><br>
+                            En Internet existe una gran cantidad de archivos conteniendo
+                            diversos juegos y utilidades para nuestro Spectrum. Entre estos
+                            archivos tenemos un formato en el cual nos vamos a centrar hoy: son
+                            los archivos DSK. Estos archivos no son más que una
+                            imagen fidedigna de los antiguos discos de 3" que
+                            usábamos en el hermano mayor de la gama Spectrum, el +3.
+                            Esta primera parte del artículo va a tener como objetivo
+                            enseñarnos como se realiza la grabación de estos
+                            archivos a un disco, tanto de 3" cómo de 3" 1/2.<br>
+                            <br>
+                            Para poder hacer esto tenemos que tener en cuenta un par de puntos:
+                            si queremos volcar los archivos a discos de 3 1/2, típicos
+                            de PC, debemos tener un cable adaptador y una disquetera de 3 1/2
+                            funcionando con nuestro Spectrum +3, y, si queremos grabarlos en
+                            discos de 3", tendremos que acoplar una disquetera de 3" al PC.
+                            Esto es evidente y no es el objeto de este artículo meternos
+                            en complicaciones con el hardware, por lo cual supondremos que ya
+                            tenemos decidida de que forma trabajaremos con las disqueteras y
+                            realizado el montaje que sea necesario.<br>
+
+                            <br>
+                            A continuación necesitamos descargar el conjunto de
+                            programas que vamos a utilizar, las CPDTOOLS, un conjunto de dos
+                            programas escritos por Ulrich Doewich que funcionan bajo sistemas
+                            operativos MS-DOS (bajo Windows es muy posible que no funcione
+                            correctamente, más adelante veremos cómo solucionar
+                            este problema).<br>
+                            <br>
+                            <b>INSTALACIÓN</b>
+                            <br><br>
+                            En las CPDTOOLS el proceso de instalación es muy sencillo,
+                            simplemente descomprimimos en una carpeta el archivo .ZIP que nos
+                            hemos bajado. Al realizar este proceso, nos queda el programa listo
+                            para trabajar con él.<br>
+                            <br>
+                            <b>CÓMO SE UTILIZA</b>
+
+                            <br><br>
+                            CPDWRITE.EXE, que es el programa que nos interesa ahora de los dos
+                            que trae el pack, es un programa de MS-DOS, y por lo tanto hay que
+                            utilizarlo desde una consola MS-DOS o símbolo del
+                            sistema. Cómo comentaba al inicio de éste
+                            artículo, en PC con Windows suele dar problemas, ya que
+                            CPDWRITE accede al hardware directamente y Windows no se lo
+                            permite, para esto la solución más sencilla es
+                            hacernos con un disco de arranque (al final del artículo, en
+                            links, podéis encontrar de dónde descargarlos ya hechos). Si
+                            nuestro disco duro está particionado y formateado usando
+                            FAT32 tendremos que usar un disco de arranque de Windows 98 o
+                            superior, y si está en FAT16, nos vale cualquiera a partir
+                            de MS-DOS. Date cuenta de que deberemos acceder al disco duro donde
+                            tendremos almacenados los archivos DSK y las CPD TOOLS.<br>
+                            <br>
+                            Tenemos en el directorio las cpdtools ya descomprimidas, ahora nos
+                            hace falta un archivo en formato DSK para copiar al disco. Lo
+                            descargamos, en Links tenéis varios sitios de dónde
+                            cogerlos, lo metemos en el directorio de las CPDTOOLS y
+                            descomprimimos el ZIP en el cual suelen venir almacenados. Una vez
+                            hecho esto, es recomendable cambiarles el nombre a los DSK para que
+                            no se pasen del estándar MS-DOS de 8+3 caracteres, ya que los
+                            nombres largos típicos de Windows, suelen ser una causa de
+                            que CPDWRITE nos muestre el error "no encuentro el archivo". Valga
+                            como ejemplo, si nos bajamos un archivo llamado
+                            LaAbadiaDelCrimen.dsk, lo podemos renombrar como abadia.dsk.<br>
+
+                            <br>
+                            Una vez todo preparado vamos a volcar la imagen dsk en el
+                            disco. Reiniciamos el PC con el disco de arranque, en el caso de
+                            que no nos funcione en Windows, tal como decíamos antes o
+                            abrimos una sesión MS-DOS o símbolo del sistema.
+                            Accedemos a la carpeta donde tenemos almacenadas las CPDTOOLS y
+                            tecleamos: CPDWRITE abadia.dsk, o el nombre del archivo que
+                            queremos grabar, y esperamos que el proceso de grabación
+                            termine, tarda unos pocos segundos. Podemos ver en la pantalla que
+                            la grabación va avanzando al incrementar el número
+                            de la pista (track) que se va escribiendo en el disco. Simplemente con esto
+                            nos copiará el archivo en lo que sería la cara 'A'
+                            del disco, en caso de que sea de 3 1/2, o, si tenemos una
+                            disquetera de 3" adaptada al PC, en la cara del disco que tengamos
+                            introducida hacia arriba. En cuanto al uso de la disquetera de 3"
+                            poco más hay que decir, el proceso es muy sencillo tal como
+                            lo haríamos en el Spectrum, nos limitamos a dar la vuelta al
+                            disco.<br>
+                            <br>
+                            <b>TRABAJANDO CON LA DISQUETERA DE 3" 1/2</b>
+                            <br><br>
+
+                            Vamos a complicar un poco las cosas y a comentar unas
+                            consideraciones que tenemos que tener en cuenta si tenemos una
+                            disquetera de 3" 1/2 trabajando en nuestro Spectrum, cosa que el
+                            autor de este artículo recomienda. Lo primero es saber el
+                            tipo de discos que tenemos que utilizar, ya que si no son de doble
+                            densidad, es decir, de los antiguos de 720k, no sirven y deberemos
+                            usar uno de alta densidad, los que podemos encontrar ahora en
+                            cualquier tienda de informático o consumibles de oficina,
+                            tapando el orificio que tienen a la derecha con un poco de celo.
+                            Hecho esto, podemos usar el disco como si tuviera dos caras,
+                            simplemente con añadir un parámetro al programa
+                            CPDWRITE.exe:<br>
+                            <br>
+                            <ul>
+                                <li>Para grabar en lo que sería la cara 'A' del disco: <font class="codigo">CPDWRITE
+                                    abadia.dsk</font></li>
+                                <li>Para grabar en la cara 'B': <font class="codigo">CPDWRITE abadia.dsk S</font></li>
+
+                            </ul>
+                            Por supuesto, estamos suponiendo que el cable adaptador de la
+                            disquetera de 3" 1/2 al Spectrum tiene el conmutador necesario para
+                            cambiar de una cara a otra.<br>
+                            <br>
+                            <b>FORMATEANDO DISCOS DE 3" 1/2</b>
+                            <br><br>
+                            Otra de las utilidades que nos ofrece CPDWRITE es formatear discos
+                            de 3" 1/2 con una capacidad mayor de como lo hace el S.O. del
+                            Spectrum.<br>
+                            <br>
+                            Cuando descomprimimos el archivo donde vienen las CPD TOOLS, nos
+                            crea tres imágenes llamadas 180K.dsk, 360K.dsk y 720K.dsk.
+                            Si grabamos estas imágenes en disco con el comando visto
+                            antes: <font class="codigo">CPDWRITE 720K.dsk</font>, tendremos el disco formateado y vacio
+                            para meter información hasta que completemos esa cantidad de
+                            espacio libre. Estos discos funcionarán perfectamente con el
+                            Spectrum, salvo por alguna limitación menor. No podemos
+                            tener más de 256 archivos en el mismo disco, y al hacer un
+                            CAT de los mismo, únicamente se nos mostraran los 64 primeros, pero
+                            podemos listarlos por lotes, por ejemplo, haciendo CAT a*.*, con lo
+                            cual nos listará los archivos que comiencen por la letra
+                            'A'. Jugando con los comandos podremos acceder a todos los archivos
+                            del disco.<br>
+
+                            <br>
+                            Si los formateamos a 720K, por ejemplo, debemos tener en cuenta de
+                            que su utilizan cómo si sólo tuviesen cara 'A' con
+                            esa capacidad.<br>
+                            <br>
+                            <b>CONCLUSIONES</b>
+                            <br><br>
+                            Este programa es una magnífica utilidad para nuestro PC, nos
+                            facilita enormemente la tarea de pasar a disco nuestros programas
+                            preferidos en una cantidad de tiempo ínfima. Si
+                            además lo acompañamos con el adaptador para poner una
+                            disquetera de 3" 1/2 a nuestro Spectrum, tendremos el beneficio de
+                            poder usar discos nuevos, que compramos a bajo precio comparado con
+                            el coste que tiene encontrar discos de 3" en el mercado de segunda
+                            mano, caros gracias a los especuladores con este tipo de material y
+                            escasos.<br>
+                            <br>
+                            El mes que viene nos meteremos en profundidad con el segundo de los
+                            programas de este magnifico lote, CPDREAD, que nos permitirá
+
+                            crear archivos DSK a partir de nuestros discos de 3" y 3" 1/2.<br>
+                            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="texto">
+                                <tr>
+                                    <td align="right"><br>MIGUEL</td>
+                                </tr>
+                            </table>
+                            <br>
+                            <hr>
+                            <br>
+                            A continuación presentamos un texto que nos ha remitido
+                            TBrazil que complementa el artículo referente a las CPDTools.
+                            <br><br>
+                            <b>CPCFS (cpcemu filesystem maintance) por Derik
+                                Van Zeutphen</b><br>
+
+                            <br>
+                            Texto realizado por Tbrazil basado en la explicación de
+                            Rafael Molina Chasserot para ECSS<br>
+                            <br>
+                            Cpcfs fue creado originalmente como complemento al emulador de
+                            Amstrad CPC llamado CPCemu.<br>
+                            <br>
+                            El programa nos permite insertar bajo MS-DOS ficheros de cualquier
+                            extensión dentro de un archivo DSK (imágenes de disco para
+                            emulador). Con ello, por ejemplo, podemos insertar ficheros de
+                            extensión *.z80 dentro de un DSK y así, con el programa
+                            z80 loader de Gary Lancaster, poderlos ejecutar en un Spectrum +3
+                            real.<br>
+                            <br>
+                            Otro ejemplo sería el uso que le dio NoP (sromero) a cpcxfs para
+                            crear un DSK con su aventura conversacional "<a href=
+                                                                                    "http://www.speccy.org/sromero/aventura/ecss/ecss-web.html"
+                                                                            onClick="window.open(this.href); return false;">es.comp.sistemas.sinclair:
+                            La
+                            Aventura</a>" para +3. Al programar esa aventura en un PC se generó un fichero .z5
+                            que contenía el código de la aventura en un formato que los
+                            intérpretes de aventuras Infocom comprenden. Hay intérpretes para
+                            muchos sistemas, incluido el Spectrum, de modo que el reto consistía en
+                            generar un DSK con el fichero .z5, el intérprete, y el cargador
+                            BASIC. Para ello NoP descargó una aventura ya hecha para Spectrum
+                            en formato DSK y que usaba ese intérprete y con cpcfs realizó los
+                            siguientes pasos:<br><br>
+
+                            <ul>
+                                <li>Eliminó del DSK el fichero .z5 de la aventura conversacional
+                                    que iba en el .dsk
+                                </li>
+                                <li>Agregó al DSK el fichero .z5 de su aventura (ecss.z5)</li>
+                                <li>Sacó del DSK el fichero "DISK", que es un cargador en BASIC
+                                    que llamaba al binario intérprete pasándole como nombre de
+                                    fichero en una variable el nombre de la aventura .z5 original.
+                                </li>
+                                <li>Editó este fichero cambiando la variable para que cargara
+                                    ecss.z5, y subió el fichero DISK de nuevo al DSK
+                                </li>
+                            </ul>
+                            Con esto se obtuvo un fichero .dsk que se podía cargar en
+                            emulador y pasar a disco real de +3 y que cargaba y ejecutaba
+                            la aventura conversacional ecss.z5 como hacía con la
+                            aventura original del disquete.
+                            <br><br>
+                            Pero veamos cómo se usa el programa en sí mismo. Para poder usar el programa, por tanto,
+                            iniciaremos una sesión
+                            DOS en nuestros PC's.<br>
+
+                            <br>
+                            Esta utilidad usa gran cantidad de comandos de MS-DOS y para mejor
+                            entendimiento os pondré un ejemplo práctico de su
+                            utilización, es muy práctico antes de realizar
+                            cualquier operación hacer antes una copia de seguridad de
+                            nuestro fichero DSK inicial.<br>
+                            <br>
+                            Los pasos a seguir son los siguientes:
+
+                            <ul>
+                                <li>Lo primero es conseguir un fichero DSK vacio al que llamaremos
+                                    juego.dsk. Podemos encontrar discos vacíos dentro del paquete de
+                                    utilidades CPDtools disponible en:<br>
+                                    <a href="http://www.speccy.org/sinclairmania/arch/cpdtools.zip">http://www.speccy.org/sinclairmania/arch/cpdtools.zip</a>
+                                </li>
+
+                                <li>Haremos una copia del fichero juego.dsk escribiendo en la
+                                    línea de comandos de DOS:<br>
+                                    <font class="codigo">copy juego.dsk juego1.dsk</font></li>
+
+                                <li>Acto seguido ponemos en el mismo directorio/carpeta el fichero
+                                    juego.dsk, el ejecutable de CPCFS y los ficheros de extensión
+                                    *.z80.
+                                </li>
+
+                                <li>Ahora ejecutamos el programa CPCFS y nos saldrá esto en
+                                    pantalla:<br><br>
+                                    <font class="codigo">cpcfs></font></a><br><br>
+
+                                </li>
+
+                                <li>Lo siguiente es abrir (open) el disco y lo hacemos de la
+                                    siguiente manera:<br><br>
+
+                                    <font class="codigo">cpcfs> open juego<br>
+                                        cpcfs> dir</font><br>
+                                    <br>
+
+                                    Con esto vemos abrimos y examinamos el contenido del disco. O sea,
+                                    que el programa usa comandos básicos del DOS que hacen la
+                                    misma función.
+                                </li>
+
+                                <li>El siguiente paso es insertar los arhivos *.z80 dentro del
+                                    disco y se hace así:<br>
+                                    <br>
+                                    <font class="codigo">cpcfs> mput -b *.z80</font><br>
+                                    <br>
+                                    De este modo insertamos todos los archivos de extensión z80
+                                    dentro del disco. Si hacemos un DIR nos saldrán todos los
+                                    archivos que hay dentro del disco. Podemos poner cualquier
+                                    extensión o incluso insertar fichero por fichero.
+                                </li>
+
+                                <li>Si quisiéramos borrar archivos solo tendríamos que poner al
+                                    igual que en MS-DOS:<br>
+                                    <br>
+                                    <font class="codigo">cpcfs> del *.z80</font><br>
+                                    <br>
+                                    Esto borraría los archivos de extensión z80.
+                                </li>
+
+                                <li>Para cerrar el disco y salir del programa ponemos lo
+                                    siguiente:<br>
+                                    <br>
+
+                                    <font class="codigo">cpcfs> quit</font></li>
+                            </ul>
+                            Como veis la manera de insertar archivos dentro de un disco es
+                            realmente sencilla.
+                            <br>
+                            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="texto">
+                                <tr>
+                                    <td align="right"><br>TBRAZIL</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br>
+                        <hr>
+                        <br>
+                        <div align="left">
+                            <b>LINKS</b>
+                            <br><br>
+                            <ul>
+                                <li>Discos de arranque: <a href="http://www.bootdisk.com/"
+                                                           onClick="window.open(this.href); return false;">http://www.bootdisk.com/</a>
+                                </li>
+                                <li>Cpdtools: <a href="http://www.speccy.org/sinclairmania/arch/cpdtools.zip"
+                                                 onClick="window.open(this.href); return false;">http://www.speccy.org/sinclairmania/arch/cpdtools.zip</a>
+                                </li>
+                                <li>Webs con dsk de juegos y programas:
+                                    <ul>
+
+                                        <li><a href="http://www.speccy.org/trastero"
+                                               onClick="window.open(this.href); return false;">El Trastero del
+                                            Spectrum</a></li>
+                                        <li><a href="http://www.speccy.org/spa2"
+                                               onClick="window.open(this.href); return false;">SPA2</a></li>
+                                        <li><a href="http://www.worldofspectrum.org"
+                                               onClick="window.open(this.href); return false;">WOS (World Of
+                                            Spectrum)</a></li>
+                                    </ul>
+                                </li>
+                                <li>La web de CPCFS por
+                                    Derik, allí encontraréis las instrucciones completas del
+                                    programa y todas sus opciones.<br>
+
+                                    <a href=" http://home.t-online.de/home/derik/cpcfs.htm"
+                                       onClick="window.open(this.href); return false;">
+                                        http://home.t-online.de/home/derik/cpcfs.htm</a></li>
+                                <li>Web del z80 loader y otros útiles programas:<br>
+                                    <a href="http://www.zxplus3e.plus.com/espanol/software.html"
+                                       onClick="window.open(this.href); return false;">http://www.zxplus3e.plus.com/espanol/software.html</a>
+                                </li>
+                                <li>Web donde
+                                    podéis encontrar el paquete de utilidades CPDTOOLS, que contiene
+                                    discos vacíos en formato DSK y las interesantes utilidades CPDWRITE
+                                    y CPDREAD.<br>
+                                    <a href="http://www.speccy.org/sinclairmania/arch/cpdtools.zip"
+                                       onClick="window.open(this.href); return false;">http://www.speccy.org/sinclairmania/arch/cpdtools.zip</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html" selected>Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="emulacion.html">Emulación</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+
+                </tr>
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
+
+</body>
 
 </html>

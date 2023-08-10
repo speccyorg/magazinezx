@@ -1,280 +1,312 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Emulación - Magazine ZX número 1 - Julio 2003</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="emulacion.html" selected>Emulación</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 1 - Julio 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p align="center"><font size="5">El formato RZX</font></p>
-<i>Los autores de emuladores de Spectrum al fin se han puesto de
-acuerdo en un formato de intercambio de eventos como es el formato
-RZX. Veamos sus principales características.</i><br>
-
-<br>
- La primera pregunta que nos surge es: ¿qué es el
-formato RZX y qué necesidades pretende suplir? RZX viene a
-ser un sustituto libre del formato AIR que utiliza Realspectrum, de
-forma que sea estándar en todos los emuladores. El objetivo
-es disponer de un método común para grabar eventos en
-los emuladores, como puedan serlo las pulsaciones de teclado y los
-movimientos del joystick, y almacenarlos en ficheros. Estos
-ficheros podrán posteriormente ser cargados en el mismo
-emulador o en otro (de ahí la importancia de que sean
-formatos estandarizados) de forma que se reproduzcan las entradas
-almacenadas, tal y como si estuviéramos volviendo a presionar las
-mismas teclas o movimientos de joystick en los mismos instantes de
-tiempo.<br>
-<br>
- ¿El resultado? Algo similar a un vídeo. Se puede
-así grabar partidas completas para mostrar a alguien
-cómo se termina un juego, la solución, el camino
-más corto, la demostración de que hacemos un
-determinado número de puntos (y que se pueda ver cómo
-lo hacemos), etc. Además, con estos ficheros podemos cortar
-la reproducción del RZX en cualquier punto y retomar el
-control del programa, es decir, en una determinada fase del juego
-podemos tomar de nuevo el mando y continuar nosotros con la
-ejecución del mismo. Otra utilidad sería la de
-complementar tutoriales acerca de utilidades o programas de
-Spectrum, mostrando su uso.<br>
-
-<br>
-Además los ficheros están realmente optimizados. Si grabar un vídeo
-de 6 horas puede ocupar en formato DIVX (como AVI) entre 600MB
-y 1.2GB (según la calidad), el fichero .AIR (equivalente al RZX
-pero sin la compresión de éste) de una partida de seis horas al
-juego Tetris 2 que podéis encontrar en la web de The Espian
-ocupa cerca de 500KB. Esto es así porque realmente no se almacena
-el sonido y el vídeo como en los ficheros multimedia, sino que se
-almacenan las pulsaciones de teclado y joystick a través de las
-cuales se reproduce la partida como si fuera un vídeo.<br><br>
- Esto permitirá crear verdaderos repositorios con soluciones
-y finales de juegos capaces de ser reproducidos en cualquier
-emulador que soporte RZX, en lugar de los repositorios actuales de
-ficheros AIR que sólo pueden ser ejecutados en RealSpectrum.
-Podemos encontrar algunos de estos repositorios en las siguientes
-URLs:
-<ul>
-<li><a href="http://www.thespian.demon.co.uk/air/main.htm" onClick="window.open(this.href); return false;">http://www.thespian.demon.co.uk/air/main.htm</a> Web de partidas grabadas de The Spian, dónde podéis encontrar (entre otras) una partida de 6 horas de Tetris 2 en menos de 600KB, y mi partida completa y finalizada de Target Renegade sin perder una sola vida.</li>
-<li><a href="http://www.jaivan.net/Partidas_grabadas.htm" onClick="window.open(this.href); return false;">http://www.jaivan.net/Partidas_grabadas.htm</a>
- (pulsando en los iconos del menú superior, podemos elegir
-entre Partidas Acabadas, de Competición, Alternativas y de
-competiciones anteriores, entre otras)</li>
-
-</ul>
- Esta necesidad surgió principalmente para las competiciones
-de juegos de Spectrum: hay que mostrar la partida completa para que
-el jurado verifique que no hay trampas de ninguna clase. No es suficiente
-con mostrar una captura de pantalla de la puntuación obtenida ni tampoco
-un snapshot de memoria con la partida en el instante de obtener la
-puntuación, ya que estos valores se podrían haber modificado previamente
-de diferentes formas, e incluso se podría haber hecho trampa ralentizando
-el emulador (o acelerándolo), grabando y cargando partidas, etc. El
-problema es que el formato AIR usado hasta el momento sólo
-era usable en ciertos emuladores como RealSpectrum. Este formato no
-podía ser usado en otros emuladores ya que era muy
-dependiente de las rutinas de temporización de éste
-emulador.<br>
-<br>
- Los programadores de varios emuladores de Spectrum, unidos a la
-gente de RAMSOFT (autores de RealSpectrum) pusieron en común
-un borrador para un nuevo formato de fichero llamado RZX como
-sustitución activa a los ficheros AIR. El formato se
-comenzó a definir discutiendo de forma activa en el grupo de
-news de Spectrum en inglés: <a href="news:comp.sys.sinclair">comp.sys.sinclair</a>, y
-acabó el hilo con una propuesta en firme de Ramsoft el 2 de
-Febrero del 2002.<br>
-
-<br>
- Este formato se basa en:
-
-<ul>
-<li>API de uso directamente utilizable por los emuladores, para
-facilitar su adaptación.</li>
-
-<li>Portabilidad (código escrito en C puro).</li>
-
-<li>Seguridad frente a trampas en competiciones: los datos pueden
-ir cifrados de forma simétrica o asimétrica.
-Además tiene 2 características que lo hacen muy
-atractivo para las competiciones, y es que tiene un sistema para
-detectar la presencia de autofires, y un control de la velocidad la
-que se ha usado el emulador, para que no sea ni mayor ni menor que
-la real del Spectrum.</li>
-
-<li>Tamaño de ficheros reducidos, comprimiendo diferentes
-partes del fichero internamente con Zlib.</li>
-</ul>
-
-<b>Requerimientos básicos</b>
-<br><br>
- No todos los emuladores pueden utilizar la librería de RZX.
-Existen una serie de requerimientos básicos a cumplir:
-
-<ul>
-<li>Buena emulación de la CPU Z80, especialmente la
-emulación de flags. Afortunadamente el formato RZX se ha
-diseñado para funcionar independientemente de las temporizaciones de
-las instrucciones (que varían según cada emulador,
-algo que era el principal problema para extender el formato
-AIR).</li>
-
-<li>Un curioso evento que sucede cuando se habilitan las
-interrupciones inmediatamente de que hayan sido llamadas (dentro la
-función de gestión de las mismas).</li>
-</ul>
-
-Algunos emuladores actuales ya soportan RZX o lo harán
-próximamente: FUSE o Realspectrum (por nombrar los
-más representativos para los S.O. mayoritarios) entre ellos.
-No obstante, Ramsoft indica en una nota en su página que
-ningún emulador debería implementarlo hasta que se
-termine de especificar totalmente el formato y se libere la
-versión 1.0. Esto es así porque el objetivo de Ramsoft
-es evitar que circulen diferentes versiones ficheros RZX que
-puedan ser incompatibles con futuras revisiones del formato.
-Aún así emuladores como FUSE lo
-implementan en la actualidad, en sus versiones de fichero
-más modernas.<br>
-
-<br>
- Para más información sobre el formato RZX, se puede
-consultar el borrador más actualizado del mismo en
-<a href="http://www.ramsoft.bbk.org/rzxform.html" onClick="window.open(this.href); return false;">http://www.ramsoft.bbk.org/rzxform.html</a>.
-
-
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br>SROMERO (NoP)</td>
-
-	</tr>
-</table>
-                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="emulacion.html" selected>Emulación</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Emulación - Magazine ZX número 1 - Julio 2003</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
                 </tr>
             </table>
+        </td>
 
-    </body>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="emulacion.html" selected>Emulación</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 1 - Julio 2003</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">El formato RZX</font></p>
+                            <i>Los autores de emuladores de Spectrum al fin se han puesto de
+                                acuerdo en un formato de intercambio de eventos como es el formato
+                                RZX. Veamos sus principales características.</i><br>
+
+                            <br>
+                            La primera pregunta que nos surge es: ¿qué es el
+                            formato RZX y qué necesidades pretende suplir? RZX viene a
+                            ser un sustituto libre del formato AIR que utiliza Realspectrum, de
+                            forma que sea estándar en todos los emuladores. El objetivo
+                            es disponer de un método común para grabar eventos en
+                            los emuladores, como puedan serlo las pulsaciones de teclado y los
+                            movimientos del joystick, y almacenarlos en ficheros. Estos
+                            ficheros podrán posteriormente ser cargados en el mismo
+                            emulador o en otro (de ahí la importancia de que sean
+                            formatos estandarizados) de forma que se reproduzcan las entradas
+                            almacenadas, tal y como si estuviéramos volviendo a presionar las
+                            mismas teclas o movimientos de joystick en los mismos instantes de
+                            tiempo.<br>
+                            <br>
+                            ¿El resultado? Algo similar a un vídeo. Se puede
+                            así grabar partidas completas para mostrar a alguien
+                            cómo se termina un juego, la solución, el camino
+                            más corto, la demostración de que hacemos un
+                            determinado número de puntos (y que se pueda ver cómo
+                            lo hacemos), etc. Además, con estos ficheros podemos cortar
+                            la reproducción del RZX en cualquier punto y retomar el
+                            control del programa, es decir, en una determinada fase del juego
+                            podemos tomar de nuevo el mando y continuar nosotros con la
+                            ejecución del mismo. Otra utilidad sería la de
+                            complementar tutoriales acerca de utilidades o programas de
+                            Spectrum, mostrando su uso.<br>
+
+                            <br>
+                            Además los ficheros están realmente optimizados. Si grabar un vídeo
+                            de 6 horas puede ocupar en formato DIVX (como AVI) entre 600MB
+                            y 1.2GB (según la calidad), el fichero .AIR (equivalente al RZX
+                            pero sin la compresión de éste) de una partida de seis horas al
+                            juego Tetris 2 que podéis encontrar en la web de The Espian
+                            ocupa cerca de 500KB. Esto es así porque realmente no se almacena
+                            el sonido y el vídeo como en los ficheros multimedia, sino que se
+                            almacenan las pulsaciones de teclado y joystick a través de las
+                            cuales se reproduce la partida como si fuera un vídeo.<br><br>
+                            Esto permitirá crear verdaderos repositorios con soluciones
+                            y finales de juegos capaces de ser reproducidos en cualquier
+                            emulador que soporte RZX, en lugar de los repositorios actuales de
+                            ficheros AIR que sólo pueden ser ejecutados en RealSpectrum.
+                            Podemos encontrar algunos de estos repositorios en las siguientes
+                            URLs:
+                            <ul>
+                                <li><a href="http://www.thespian.demon.co.uk/air/main.htm"
+                                       onClick="window.open(this.href); return false;">http://www.thespian.demon.co.uk/air/main.htm</a>
+                                    Web de partidas grabadas de The Spian, dónde podéis encontrar (entre otras) una
+                                    partida de 6 horas de Tetris 2 en menos de 600KB, y mi partida completa y finalizada
+                                    de Target Renegade sin perder una sola vida.
+                                </li>
+                                <li><a href="http://www.jaivan.net/Partidas_grabadas.htm"
+                                       onClick="window.open(this.href); return false;">http://www.jaivan.net/Partidas_grabadas.htm</a>
+                                    (pulsando en los iconos del menú superior, podemos elegir
+                                    entre Partidas Acabadas, de Competición, Alternativas y de
+                                    competiciones anteriores, entre otras)
+                                </li>
+
+                            </ul>
+                            Esta necesidad surgió principalmente para las competiciones
+                            de juegos de Spectrum: hay que mostrar la partida completa para que
+                            el jurado verifique que no hay trampas de ninguna clase. No es suficiente
+                            con mostrar una captura de pantalla de la puntuación obtenida ni tampoco
+                            un snapshot de memoria con la partida en el instante de obtener la
+                            puntuación, ya que estos valores se podrían haber modificado previamente
+                            de diferentes formas, e incluso se podría haber hecho trampa ralentizando
+                            el emulador (o acelerándolo), grabando y cargando partidas, etc. El
+                            problema es que el formato AIR usado hasta el momento sólo
+                            era usable en ciertos emuladores como RealSpectrum. Este formato no
+                            podía ser usado en otros emuladores ya que era muy
+                            dependiente de las rutinas de temporización de éste
+                            emulador.<br>
+                            <br>
+                            Los programadores de varios emuladores de Spectrum, unidos a la
+                            gente de RAMSOFT (autores de RealSpectrum) pusieron en común
+                            un borrador para un nuevo formato de fichero llamado RZX como
+                            sustitución activa a los ficheros AIR. El formato se
+                            comenzó a definir discutiendo de forma activa en el grupo de
+                            news de Spectrum en inglés: <a href="news:comp.sys.sinclair">comp.sys.sinclair</a>, y
+                            acabó el hilo con una propuesta en firme de Ramsoft el 2 de
+                            Febrero del 2002.<br>
+
+                            <br>
+                            Este formato se basa en:
+
+                            <ul>
+                                <li>API de uso directamente utilizable por los emuladores, para
+                                    facilitar su adaptación.
+                                </li>
+
+                                <li>Portabilidad (código escrito en C puro).</li>
+
+                                <li>Seguridad frente a trampas en competiciones: los datos pueden
+                                    ir cifrados de forma simétrica o asimétrica.
+                                    Además tiene 2 características que lo hacen muy
+                                    atractivo para las competiciones, y es que tiene un sistema para
+                                    detectar la presencia de autofires, y un control de la velocidad la
+                                    que se ha usado el emulador, para que no sea ni mayor ni menor que
+                                    la real del Spectrum.
+                                </li>
+
+                                <li>Tamaño de ficheros reducidos, comprimiendo diferentes
+                                    partes del fichero internamente con Zlib.
+                                </li>
+                            </ul>
+
+                            <b>Requerimientos básicos</b>
+                            <br><br>
+                            No todos los emuladores pueden utilizar la librería de RZX.
+                            Existen una serie de requerimientos básicos a cumplir:
+
+                            <ul>
+                                <li>Buena emulación de la CPU Z80, especialmente la
+                                    emulación de flags. Afortunadamente el formato RZX se ha
+                                    diseñado para funcionar independientemente de las temporizaciones de
+                                    las instrucciones (que varían según cada emulador,
+                                    algo que era el principal problema para extender el formato
+                                    AIR).
+                                </li>
+
+                                <li>Un curioso evento que sucede cuando se habilitan las
+                                    interrupciones inmediatamente de que hayan sido llamadas (dentro la
+                                    función de gestión de las mismas).
+                                </li>
+                            </ul>
+
+                            Algunos emuladores actuales ya soportan RZX o lo harán
+                            próximamente: FUSE o Realspectrum (por nombrar los
+                            más representativos para los S.O. mayoritarios) entre ellos.
+                            No obstante, Ramsoft indica en una nota en su página que
+                            ningún emulador debería implementarlo hasta que se
+                            termine de especificar totalmente el formato y se libere la
+                            versión 1.0. Esto es así porque el objetivo de Ramsoft
+                            es evitar que circulen diferentes versiones ficheros RZX que
+                            puedan ser incompatibles con futuras revisiones del formato.
+                            Aún así emuladores como FUSE lo
+                            implementan en la actualidad, en sus versiones de fichero
+                            más modernas.<br>
+
+                            <br>
+                            Para más información sobre el formato RZX, se puede
+                            consultar el borrador más actualizado del mismo en
+                            <a href="http://www.ramsoft.bbk.org/rzxform.html"
+                               onClick="window.open(this.href); return false;">http://www.ramsoft.bbk.org/rzxform.html</a>.
+
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br>SROMERO (NoP)</td>
+
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="emulacion.html" selected>Emulación</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+
+                </tr>
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
+
+</body>
 
 </html>

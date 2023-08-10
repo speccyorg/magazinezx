@@ -1,341 +1,395 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Programación Z88DK - Magazine ZX número 6 - Marzo 2004</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 6 - Marzo 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p><b>CONTENIDOS DE z88dk</b></p>
-<p>
-
-<i>No, en esta ocasión no vamos a hablar de qué contiene cada directorio de
-la instalación de z88dk, o cuál es la función de cada uno de los ejecutables.
-Vamos a intentar enumerar qué es lo que nos proporciona z88dk a nivel de
-código, es decir, a nivel de librería. Esto es necesario porque la documentación
-es bastante pobre en lo que respecta a la descripción de las funciones que
-podemos utilizar, o de los archivos .h y su contenido. De hecho, este punto no
-se explica en absoluto, por lo que en un primer momento somos incapaces de
-determinar las posibilidades que se nos ofrecen.</i>
-</p>
-<p>
-Sin duda alguna, el lugar donde más información encontraremos sobre las
-funciones disponibles es en los archivos de cabecera (archivos .h). Ya se
-comentó en la anterior entrega que no era la intención de esta serie de
-artículos el explicar los entresijos del lenguaje C, pues hay en la
-red tutoriales muy buenos sobre el tema, y además no acabaríamos nunca.
-Baste con decir que los archivos de cabecera nos proporcionan los prototipos
-de las funciones (nombre y parámetros) y la definición de las variables que
-la librería pone a nuestra disposición. Deberemos incluir en nuestro código los
-archivos de cabecera que contengan las funciones que queramos utilizar para que
-durante el proceso de compilación se enlace con la parte de la librería adecuada.
-</p>
-<p>
-Sin más preámbulo procedamos a realizar una pequeña descripción de los
-principales archivos de cabecera incluidos con z88dk, siempre y
-cuando el contenido sea importante en la programación de aplicaciones para
-Spectrum. Estos ficheros se encuentran en el directorio <i>include</i>,
-donde podemos localizar, además de algunos .h, unos pocos directorios... pero,
-¿qué podemos encontrar entre tanta hache?
-</p>
-<p>
-Como vimos en el capítulo anterior que z88dk permitía programar para
-diversas máquinas; así pues, nos centramos en funcionalidades que a primera
-vista podrán ser utilizadas en el Spectrum. Esto hace que descartemos todos
-los archivos incluidos dentro de los directorios de la carpeta <i>include</i>.
-Y de esta carpeta, solo explicaremos algunos de los archivos.h incluidos.
-</p>
-<p>
-
-Así pues, comencemos con archivos de cabecera que proporcionan funciones más
-o menos estándar, que podríamos encontrar en la mayoría de los compiladores de C:
-</p>
-<ul>
-<li><b>stdio.h</b>: tiene el mismo nombre que la librería estándar de entrada y
-salida de C, y de hecho cumple con el mismo cometido. Incluye, como en el
-caso de la librería de C, funciones para escribir en pantalla y leer de teclado,
-tanto variables de todo tipo como carácteres individuales. También hay
-funciones para... ¡lectura y escritura de ficheros!. Ya veremos en
-el futuro para qué sirve todo esto, o si es posible utilizarlo para generar
-código para el Spectrum. Por último podemos encontrar unas funciones que no son
-estándar, pero que son muy útiles para juegos: una función que devuelve la
-tecla que se está pulsando en ese momento, otra que no termina hasta que no
-se pulsa una tecla, etc.</li>
-<li><b>stdlib.h</b>: equivalente a la librería estándar de C. Contiene funciones
-para generar números aleatorios, detener el programa durante un
-tiempo determinado, o convertir enteros a flotantes y viceversa.</li>
-<li><b>float.h</b>: rutinas para el manejo de número en punto flotante, como
-valor absoluto, redondeo hacia abajo y hacia arriba (floor y ceiling),
-etc. También se definen una serie de constantes empleadas por math.h.</li>
-<li><b>iso646.h</b>: contiene definición de constantes asignando nombres a
-las operaciones booleanas como &&, ||, &=, etc.</li>
-
-<li><b>malloc.h</b>: funciones para el manejo de memoria (reserva y liberación,
-etc). </li>
-<li><b>math.h</b>: funciones matemáticas, como senos, cosenos,
-logaritmos, potencias...</li>
-<li><b>limits.h</b>: contiene constantes que definen el valor máximo y mínimo
-para los tipos de datos como el entero, el carácter (recordemos que en
-C los caracteres son equivalentes a los enteros), etc.</li>
-<li><b>string.h</b>: equivalente al string.h del lenguaje C estándar. Contiene
-métodos para crear cadenas, concatenarlas, estimar su longitud, compararlas,
-obtener posiciones de caracteres dentro de cadenas, obtener tokens, etc. Es
-curioso resaltar que también se incluye el archivo strings.h, el cual tan
-solo contiene un #include <string.h>. El autor del presente texto supone que la
-causa será mantener la compatibilidad con programas realizados con
-versiones anteriores de la librería.</li>
-<br>
-
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-
-		<td><img src="img/z88dk2_1.png" width="328" height="290"  alt="Uno de los sencillos ejemplos que acompañan a z88dk. El texto en acción." />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Uno de los sencillos ejemplos que acompañan a z88dk. El texto en acción.</td>
-	</tr>
-</table>
-
-<br>
-<li><b>ctype.h</b>: funciones para el manejo de carácteres. Permiten comprobar si
-un carácter es un ASCII, es un carácter de control, es numérico, es
-alfanumérico, es imprimible, está en mayúsculas o minúsculas, etc. También
-se permite pasar un carácter a mayúsculas o minúsculas.</li>
-
-</ul>
-<p>
-El cómo podremos utilizar estas funciones más o menos estándar en nuestros
-programas de Spectrum es algo que iremos desvelando en capítulos sucesivos.
-Ahora nos fijamos en los archivos de cabecera más interesantes a priori, los que
-permiten programación específica de gráficos, sonidos, sprites, cintas, etc.
-</p>
-<ul>
-<li><b>spectrum.h</b>: funciones propias para el Spectrum. Tenemos en este
-fichero un tipo estructura que define una cabecera de una cinta, y funciones
-de manejo de cinta, para salvar o cargar bloques. </li>
-<li><b>graphics.h</b>: rutinas gráficas básicas; dibujo de líneas, círculos,
-cajas, puntos, rellenar figuras, borrar puntos, borrado de la pantalla (o
-un área de la misma). Se permite tambien el empleo de XOR con puntos. El
-XOR es una operación lógica que devuelve 1 si los dos operandos son distintos.
-Se suele utilizar en gráficos para realizar mascaras, o para dibujar y
-borrar sprites. Al final del fichero hay unas funciones no utilizables por
-el Spectrum, como por ejemplo una para crear ventanas. Como se puede observar,
-la mayoría de las rutinas gráficas de graphics.h se refieren al dibujo de
-primitivas, lo cual se puede realizar sin ningún problema en BASIC, por lo que
-en un principio parece bastante limitado.</li>
-<br>
-
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk2_3.png" width="328" height="290"  alt="Desde sencillas rutinas gráficas que podríamos crear con el BASIC gracias a graphics.h..." />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Desde sencillas rutinas gráficas que podríamos crear con el BASIC gracias a graphics.h...</td>
-	</tr>
-</table>
-
-<br>
-<li><b>sound.h</b>: rutinas para sonido de 1 bit, es decir, nada de
-polifonías. Esto, una vez más (como en el caso de graphics.h) es bastante
-limitado. Se puede producir un sonido durante un tiempo determinado, ya sea
-indicando periodo o frecuencia. También se pueden hacer sonar notas sucesivas
-mediante una función que acepta como parámetro una cadena, que represente
-la melodía.</li>
-<li><b>games.h</b>: funciones interesantes, si lo que deseamos con z88dk es
-crear juegos. Contiene funciones para el manejo de sprites (obtener un
-sprite de la pantalla - función no terminada, dibujar un sprite de tamaño variable
-en la pantalla, funciones para joysticks, y definición de constantes referidas
-a operaciones lógicas con los sprites). Las variables que representan a
-los sprites se almacenan como punteros a void, es decir, como punteros a
-una dirección de memoria en los que no se especifica el formato. Ya veremos cual
-es dicho formato en próximos artículos. Lo que queda claro es que quizás el
-apoyo para la realización de juegos es algo pobre. No hay nada referente a
-scroll, no hay nada referente a colisiones, etc. </li>
-
-<br>
-
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk2_2.png" width="328" height="290"  alt="... hasta cosas más complicadas, e incluso sprites, gracias a games.h." />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">... hasta cosas más complicadas, e incluso sprites, gracias a games.h.</td>
-	</tr>
-
-</table>
-
-<br>
-<li><b>rs232.h</b>: para el manejo del interfaz serie. El spectrum dispone de
-uno de estos. Aplicaciones de esto las podemos encontrar en internet, como
-la conexión mediante RS232 entre un Sinclair QL y un Spectrum
-o el terminal Spectrum que en su día intento llevar a cabo Santiago
-Romero. </li>
-<li><b>debug.h</b>: contiene dos prototipos de funciones de depuración. Una
-permite el desensamblado de una línea de código, y la otra permite examinar el
-contenido de n posiciones de la pila a partir de una dirección dada.</li>
-<li><b>assert.h</b>: contiene otra función de depuración. Esta función admite un
-parámetro, en forma de expresión. Si la expresión no evalúa a cero no ocurre
-nada y el programa sigue ejecutándose. En caso contrario, el programa se
-detiene, indicándose la línea y el fichero donde se ha producido dicha
-detención.</li>
-<li><b>time.h</b>: funciones de tiempo, aunque lo que nos interesa en este
-archivo es la definición de una constante que nos indica los ciclos por segundo
-de las distintas máquinas, como el Spectrum o el ZX81, por ejemplo.</li>
-</ul>
-<p>
-
-Esto es, por lo tanto, y a grandes rasgos, lo que se nos ofrece. Será el
-cometido del presente tutorial el, a lo largo de las sucesivas entregas,
-permitirnos saber si todas estas funcionalidades serán suficientes para
-realizar programas o juegos para nuestro Spectrum de forma asequible,
-entendiendo por asequible mayor facilidad al usar el lenguaje C que
-el lenguaje ensamblador. Es decir, se va a tener que programar de todas formas,
-pero siempre es mejor hacerlo en un lenguaje de alto nivel.
-</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-	<li>Conexión RS232 entre un Sinclair QL y un Spectrum: <a href="http://www.speccy.org/QL/docs/com/rs232-sp.htm" onClick="window.open(this.href); return false;">http://www.speccy.org/QL/docs/com/rs232-sp.htm</a></li>
-	<li>Terminal Spectrum de Santiago Romero: <a href="http://www.speccy.org/sromero/hardware/hardware.html" onClick="window.open(this.href); return false;">http://www.speccy.org/sromero/hardware/hardware.html</a></li>
-</ul>
-
-</div>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>SIEW</td>
-	</tr>
-</table>
-                    </td>
-                </tr>
-
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
-</td>
-
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Programación Z88DK - Magazine ZX número 6 - Marzo 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
                 </tr>
             </table>
+        </td>
 
-    </body>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                                <option value="opinion.html">Opinión</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 6 - Marzo 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/"
+                                                                          onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p><b>CONTENIDOS DE z88dk</b></p>
+                            <p>
+
+                                <i>No, en esta ocasión no vamos a hablar de qué contiene cada directorio de
+                                    la instalación de z88dk, o cuál es la función de cada uno de los ejecutables.
+                                    Vamos a intentar enumerar qué es lo que nos proporciona z88dk a nivel de
+                                    código, es decir, a nivel de librería. Esto es necesario porque la documentación
+                                    es bastante pobre en lo que respecta a la descripción de las funciones que
+                                    podemos utilizar, o de los archivos .h y su contenido. De hecho, este punto no
+                                    se explica en absoluto, por lo que en un primer momento somos incapaces de
+                                    determinar las posibilidades que se nos ofrecen.</i>
+                            </p>
+                            <p>
+                                Sin duda alguna, el lugar donde más información encontraremos sobre las
+                                funciones disponibles es en los archivos de cabecera (archivos .h). Ya se
+                                comentó en la anterior entrega que no era la intención de esta serie de
+                                artículos el explicar los entresijos del lenguaje C, pues hay en la
+                                red tutoriales muy buenos sobre el tema, y además no acabaríamos nunca.
+                                Baste con decir que los archivos de cabecera nos proporcionan los prototipos
+                                de las funciones (nombre y parámetros) y la definición de las variables que
+                                la librería pone a nuestra disposición. Deberemos incluir en nuestro código los
+                                archivos de cabecera que contengan las funciones que queramos utilizar para que
+                                durante el proceso de compilación se enlace con la parte de la librería adecuada.
+                            </p>
+                            <p>
+                                Sin más preámbulo procedamos a realizar una pequeña descripción de los
+                                principales archivos de cabecera incluidos con z88dk, siempre y
+                                cuando el contenido sea importante en la programación de aplicaciones para
+                                Spectrum. Estos ficheros se encuentran en el directorio <i>include</i>,
+                                donde podemos localizar, además de algunos .h, unos pocos directorios... pero,
+                                ¿qué podemos encontrar entre tanta hache?
+                            </p>
+                            <p>
+                                Como vimos en el capítulo anterior que z88dk permitía programar para
+                                diversas máquinas; así pues, nos centramos en funcionalidades que a primera
+                                vista podrán ser utilizadas en el Spectrum. Esto hace que descartemos todos
+                                los archivos incluidos dentro de los directorios de la carpeta <i>include</i>.
+                                Y de esta carpeta, solo explicaremos algunos de los archivos.h incluidos.
+                            </p>
+                            <p>
+
+                                Así pues, comencemos con archivos de cabecera que proporcionan funciones más
+                                o menos estándar, que podríamos encontrar en la mayoría de los compiladores de C:
+                            </p>
+                            <ul>
+                                <li><b>stdio.h</b>: tiene el mismo nombre que la librería estándar de entrada y
+                                    salida de C, y de hecho cumple con el mismo cometido. Incluye, como en el
+                                    caso de la librería de C, funciones para escribir en pantalla y leer de teclado,
+                                    tanto variables de todo tipo como carácteres individuales. También hay
+                                    funciones para... ¡lectura y escritura de ficheros!. Ya veremos en
+                                    el futuro para qué sirve todo esto, o si es posible utilizarlo para generar
+                                    código para el Spectrum. Por último podemos encontrar unas funciones que no son
+                                    estándar, pero que son muy útiles para juegos: una función que devuelve la
+                                    tecla que se está pulsando en ese momento, otra que no termina hasta que no
+                                    se pulsa una tecla, etc.
+                                </li>
+                                <li><b>stdlib.h</b>: equivalente a la librería estándar de C. Contiene funciones
+                                    para generar números aleatorios, detener el programa durante un
+                                    tiempo determinado, o convertir enteros a flotantes y viceversa.
+                                </li>
+                                <li><b>float.h</b>: rutinas para el manejo de número en punto flotante, como
+                                    valor absoluto, redondeo hacia abajo y hacia arriba (floor y ceiling),
+                                    etc. También se definen una serie de constantes empleadas por math.h.
+                                </li>
+                                <li><b>iso646.h</b>: contiene definición de constantes asignando nombres a
+                                    las operaciones booleanas como &&, ||, &=, etc.
+                                </li>
+
+                                <li><b>malloc.h</b>: funciones para el manejo de memoria (reserva y liberación,
+                                    etc).
+                                </li>
+                                <li><b>math.h</b>: funciones matemáticas, como senos, cosenos,
+                                    logaritmos, potencias...
+                                </li>
+                                <li><b>limits.h</b>: contiene constantes que definen el valor máximo y mínimo
+                                    para los tipos de datos como el entero, el carácter (recordemos que en
+                                    C los caracteres son equivalentes a los enteros), etc.
+                                </li>
+                                <li><b>string.h</b>: equivalente al string.h del lenguaje C estándar. Contiene
+                                    métodos para crear cadenas, concatenarlas, estimar su longitud, compararlas,
+                                    obtener posiciones de caracteres dentro de cadenas, obtener tokens, etc. Es
+                                    curioso resaltar que también se incluye el archivo strings.h, el cual tan
+                                    solo contiene un #include
+                                    <string.h>. El autor del presente texto supone que la
+                                        causa será mantener la compatibilidad con programas realizados con
+                                        versiones anteriores de la librería.
+                                </li>
+                                <br>
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                    <tr align="right">
+
+                                        <td><img src="img/z88dk2_1.png" width="328" height="290"
+                                                 alt="Uno de los sencillos ejemplos que acompañan a z88dk. El texto en acción."/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Uno de los sencillos ejemplos que acompañan a
+                                            z88dk. El texto en acción.
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <br>
+                                <li><b>ctype.h</b>: funciones para el manejo de carácteres. Permiten comprobar si
+                                    un carácter es un ASCII, es un carácter de control, es numérico, es
+                                    alfanumérico, es imprimible, está en mayúsculas o minúsculas, etc. También
+                                    se permite pasar un carácter a mayúsculas o minúsculas.
+                                </li>
+
+                            </ul>
+                            <p>
+                                El cómo podremos utilizar estas funciones más o menos estándar en nuestros
+                                programas de Spectrum es algo que iremos desvelando en capítulos sucesivos.
+                                Ahora nos fijamos en los archivos de cabecera más interesantes a priori, los que
+                                permiten programación específica de gráficos, sonidos, sprites, cintas, etc.
+                            </p>
+                            <ul>
+                                <li><b>spectrum.h</b>: funciones propias para el Spectrum. Tenemos en este
+                                    fichero un tipo estructura que define una cabecera de una cinta, y funciones
+                                    de manejo de cinta, para salvar o cargar bloques.
+                                </li>
+                                <li><b>graphics.h</b>: rutinas gráficas básicas; dibujo de líneas, círculos,
+                                    cajas, puntos, rellenar figuras, borrar puntos, borrado de la pantalla (o
+                                    un área de la misma). Se permite tambien el empleo de XOR con puntos. El
+                                    XOR es una operación lógica que devuelve 1 si los dos operandos son distintos.
+                                    Se suele utilizar en gráficos para realizar mascaras, o para dibujar y
+                                    borrar sprites. Al final del fichero hay unas funciones no utilizables por
+                                    el Spectrum, como por ejemplo una para crear ventanas. Como se puede observar,
+                                    la mayoría de las rutinas gráficas de graphics.h se refieren al dibujo de
+                                    primitivas, lo cual se puede realizar sin ningún problema en BASIC, por lo que
+                                    en un principio parece bastante limitado.
+                                </li>
+                                <br>
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                    <tr align="right">
+                                        <td><img src="img/z88dk2_3.png" width="328" height="290"
+                                                 alt="Desde sencillas rutinas gráficas que podríamos crear con el BASIC gracias a graphics.h..."/>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Desde sencillas rutinas gráficas que podríamos
+                                            crear con el BASIC gracias a graphics.h...
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <br>
+                                <li><b>sound.h</b>: rutinas para sonido de 1 bit, es decir, nada de
+                                    polifonías. Esto, una vez más (como en el caso de graphics.h) es bastante
+                                    limitado. Se puede producir un sonido durante un tiempo determinado, ya sea
+                                    indicando periodo o frecuencia. También se pueden hacer sonar notas sucesivas
+                                    mediante una función que acepta como parámetro una cadena, que represente
+                                    la melodía.
+                                </li>
+                                <li><b>games.h</b>: funciones interesantes, si lo que deseamos con z88dk es
+                                    crear juegos. Contiene funciones para el manejo de sprites (obtener un
+                                    sprite de la pantalla - función no terminada, dibujar un sprite de tamaño variable
+                                    en la pantalla, funciones para joysticks, y definición de constantes referidas
+                                    a operaciones lógicas con los sprites). Las variables que representan a
+                                    los sprites se almacenan como punteros a void, es decir, como punteros a
+                                    una dirección de memoria en los que no se especifica el formato. Ya veremos cual
+                                    es dicho formato en próximos artículos. Lo que queda claro es que quizás el
+                                    apoyo para la realización de juegos es algo pobre. No hay nada referente a
+                                    scroll, no hay nada referente a colisiones, etc.
+                                </li>
+
+                                <br>
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                    <tr align="right">
+                                        <td><img src="img/z88dk2_2.png" width="328" height="290"
+                                                 alt="... hasta cosas más complicadas, e incluso sprites, gracias a games.h."/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">... hasta cosas más complicadas, e incluso
+                                            sprites, gracias a games.h.
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                                <br>
+                                <li><b>rs232.h</b>: para el manejo del interfaz serie. El spectrum dispone de
+                                    uno de estos. Aplicaciones de esto las podemos encontrar en internet, como
+                                    la conexión mediante RS232 entre un Sinclair QL y un Spectrum
+                                    o el terminal Spectrum que en su día intento llevar a cabo Santiago
+                                    Romero.
+                                </li>
+                                <li><b>debug.h</b>: contiene dos prototipos de funciones de depuración. Una
+                                    permite el desensamblado de una línea de código, y la otra permite examinar el
+                                    contenido de n posiciones de la pila a partir de una dirección dada.
+                                </li>
+                                <li><b>assert.h</b>: contiene otra función de depuración. Esta función admite un
+                                    parámetro, en forma de expresión. Si la expresión no evalúa a cero no ocurre
+                                    nada y el programa sigue ejecutándose. En caso contrario, el programa se
+                                    detiene, indicándose la línea y el fichero donde se ha producido dicha
+                                    detención.
+                                </li>
+                                <li><b>time.h</b>: funciones de tiempo, aunque lo que nos interesa en este
+                                    archivo es la definición de una constante que nos indica los ciclos por segundo
+                                    de las distintas máquinas, como el Spectrum o el ZX81, por ejemplo.
+                                </li>
+                            </ul>
+                            <p>
+
+                                Esto es, por lo tanto, y a grandes rasgos, lo que se nos ofrece. Será el
+                                cometido del presente tutorial el, a lo largo de las sucesivas entregas,
+                                permitirnos saber si todas estas funcionalidades serán suficientes para
+                                realizar programas o juegos para nuestro Spectrum de forma asequible,
+                                entendiendo por asequible mayor facilidad al usar el lenguaje C que
+                                el lenguaje ensamblador. Es decir, se va a tener que programar de todas formas,
+                                pero siempre es mejor hacerlo en un lenguaje de alto nivel.
+                            </p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+                                <ul>
+                                    <li>Conexión RS232 entre un Sinclair QL y un Spectrum: <a
+                                            href="http://www.speccy.org/QL/docs/com/rs232-sp.htm"
+                                            onClick="window.open(this.href); return false;">http://www.speccy.org/QL/docs/com/rs232-sp.htm</a>
+                                    </li>
+                                    <li>Terminal Spectrum de Santiago Romero: <a
+                                            href="http://www.speccy.org/sromero/hardware/hardware.html"
+                                            onClick="window.open(this.href); return false;">http://www.speccy.org/sromero/hardware/hardware.html</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>SIEW</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                </form>
+
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
+
+</body>
 </html>

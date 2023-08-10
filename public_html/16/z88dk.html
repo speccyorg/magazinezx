@@ -1,187 +1,296 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Z88DK - Magazine ZX número 16 - Enero 2008</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 16 - Enero 2008</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>Z88DK - Magazine ZX número 16 - Enero 2008</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p align="center"><font size="5">Z88DK y SPLIB (SP1)</font></p>
-<p><i>Ha pasado mucho tiempo desde que se publicara la anterior entrega de este curso de z88dk. Desde entonces se han puesto a disposición de los ávidos jugones algunos juegos de calidad que fueron programados utilizando esta herramienta y la librería de gráficos splib. No solo el contexto en el que nos movemos ha cambiado, sino que incluso la propia herramienta ha sufrido transformaciones relativamente profundas. Sin duda el cambio más importante es que la librería splib ha pasado a formar parte de z88dk. Eso le hace plantearse al autor de este texto si es conveniente o no continuar con aquel ejemplo del ski visto en la entrega anterior, hecho con versiones anteriores del software de desarrollo. Volver a empezar desde el principio supondría un paso atrás para aquella gente que estuviera siguiendo los ejemplos. Tan solo explicar los cambios sería muy confuso y sería poco productivo. ¿Cuál podría ser pues la solución?</i></p>
-<p>Personalmente creo que para tratar esta situación, lo mejor es adoptar una posición intermedia. Vamos a desarrollar un ejemplo sencillo pero jugable, desde la instalación de la herramienta (z88dk y splib) a los toques finales. Eso sí, la intención no es hacer una explicación detallada de todos los pasos (al menos de los tratados en el presente artículo), pues al principio veremos conceptos que ya han sido tratados anteriormente. Sirva pues esta entrega de receta tanto para antiguos lectores como para novatos. Para los primeros, la ventaja será tener resumido en un solo capítulo todos los pasos necesarios para llegar al punto en el que nos encontrábamos utilizando la nueva versión de la herramienta (se puede tomar si se quiere como una receta de primeros pasos casi siempre que se quiera hacer un juego con z88dk sin scroll). Para los segundos, la ventaja es que con un poco de su parte se podrán poner al día en muy poco tiempo.</p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
+                </tr>
+            </table>
+        </td>
 
-<p>Para seguir este artículo y el siguiente se requieren conocimientos del lenguaje de programación C. No es necesario, por otra parte, tener un profundo conocimiento del hardware del Spectrum, del que nos abstraeremos en un principio (dado que no es la temática de este curso y para cubrir esa disciplina existen cursos de ensamblador en esta misma revista). Así que, sin más preámbulos, vamos a ponernos manos a la obra.</p>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
 
-<p><b>Instalación y primeros pasos</b></p>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
 
-<p>Empezamos el viaje realizando la instalación de la herramienta, que se puede encontrar en la remozada web http://www.z88dk.org. Los usuarios de Windows lo tienen fácil; en el menú de la izquierda disponen de un enlace con el título de Downloads @ z88dk.org (snapshots) desde el que descargar un binario con la última versión. Por lo tanto, no se va a hablar mucho de este sistema, y pasamos directamente a la instalación en Linux, que se hará a partir de las fuentes.</p>
-<p>Justo debajo del enlace anterior tenemos Downloads @ Sourceforge, que nos permitirá acceder Sourceforge para descargar los fuentes. En concreto, el archivo descargado ha sido z88dk-src-1.7.tgz, que debe ser descomprimido en un directorio cualquiera de nuestro disco duro con la instrucción habitual para ello:</p>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 16 - Enero 2008</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">Z88DK y SPLIB (SP1)</font></p>
+                            <p><i>Ha pasado mucho tiempo desde que se publicara la anterior entrega de este curso de
+                                z88dk. Desde entonces se han puesto a disposición de los ávidos jugones algunos juegos
+                                de calidad que fueron programados utilizando esta herramienta y la librería de gráficos
+                                splib. No solo el contexto en el que nos movemos ha cambiado, sino que incluso la propia
+                                herramienta ha sufrido transformaciones relativamente profundas. Sin duda el cambio más
+                                importante es que la librería splib ha pasado a formar parte de z88dk. Eso le hace
+                                plantearse al autor de este texto si es conveniente o no continuar con aquel ejemplo del
+                                ski visto en la entrega anterior, hecho con versiones anteriores del software de
+                                desarrollo. Volver a empezar desde el principio supondría un paso atrás para aquella
+                                gente que estuviera siguiendo los ejemplos. Tan solo explicar los cambios sería muy
+                                confuso y sería poco productivo. ¿Cuál podría ser pues la solución?</i></p>
+                            <p>Personalmente creo que para tratar esta situación, lo mejor es adoptar una posición
+                                intermedia. Vamos a desarrollar un ejemplo sencillo pero jugable, desde la instalación
+                                de la herramienta (z88dk y splib) a los toques finales. Eso sí, la intención no es hacer
+                                una explicación detallada de todos los pasos (al menos de los tratados en el presente
+                                artículo), pues al principio veremos conceptos que ya han sido tratados anteriormente.
+                                Sirva pues esta entrega de receta tanto para antiguos lectores como para novatos. Para
+                                los primeros, la ventaja será tener resumido en un solo capítulo todos los pasos
+                                necesarios para llegar al punto en el que nos encontrábamos utilizando la nueva versión
+                                de la herramienta (se puede tomar si se quiere como una receta de primeros pasos casi
+                                siempre que se quiera hacer un juego con z88dk sin scroll). Para los segundos, la
+                                ventaja es que con un poco de su parte se podrán poner al día en muy poco tiempo.</p>
+
+                            <p>Para seguir este artículo y el siguiente se requieren conocimientos del lenguaje de
+                                programación C. No es necesario, por otra parte, tener un profundo conocimiento del
+                                hardware del Spectrum, del que nos abstraeremos en un principio (dado que no es la
+                                temática de este curso y para cubrir esa disciplina existen cursos de ensamblador en
+                                esta misma revista). Así que, sin más preámbulos, vamos a ponernos manos a la obra.</p>
+
+                            <p><b>Instalación y primeros pasos</b></p>
+
+                            <p>Empezamos el viaje realizando la instalación de la herramienta, que se puede encontrar en
+                                la remozada web http://www.z88dk.org. Los usuarios de Windows lo tienen fácil; en el
+                                menú de la izquierda disponen de un enlace con el título de Downloads @ z88dk.org
+                                (snapshots) desde el que descargar un binario con la última versión. Por lo tanto, no se
+                                va a hablar mucho de este sistema, y pasamos directamente a la instalación en Linux, que
+                                se hará a partir de las fuentes.</p>
+                            <p>Justo debajo del enlace anterior tenemos Downloads @ Sourceforge, que nos permitirá
+                                acceder Sourceforge para descargar los fuentes. En concreto, el archivo descargado ha
+                                sido z88dk-src-1.7.tgz, que debe ser descomprimido en un directorio cualquiera de
+                                nuestro disco duro con la instrucción habitual para ello:</p>
+
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 tar -xvzf z88dk-src-1.7.tgz
 </pre>
 
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Una vez hecho esto, nos introducimos en el directorio recién desempaquetado, y para realizar una instalación válida para todos los usuarios, ejecutamos lo siguiente como root, tal como se nos indica en las instrucciones que vienen con las fuentes:</p>
+                            <p>Una vez hecho esto, nos introducimos en el directorio recién desempaquetado, y para
+                                realizar una instalación válida para todos los usuarios, ejecutamos lo siguiente como
+                                root, tal como se nos indica en las instrucciones que vienen con las fuentes:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 sh build.sh
 make install
 make libs
 make install-libs
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Llama la atención el hecho de que la primera vez que ejecutemos ./build.sh obtendremos un mensaje de error. Esto es así porque además de compilar las propias herramientas, antes de que éstas estén instaladas se intentan compilar los ejemplos. La solución es bien sencilla. Tras el make install volvemos a repetir el build.sh. Al instalar siguiendo estos pasos no será necesario utilizar ninguna variable de entorno.</p>
-<p>¿Por qué sucede esto? Sencillamente, porque la primera parte del proceso de compilación con make consiste en la compilación con gcc del compilador-cruzado en sí mismo (zcc y demás binarios asociados), mientras que una segunda parte del proceso definido en el Makefile consiste en compilar las librerías de z88dk (librerías matemáticas, de stdio, splib, etc) utilizando "zcc" para ello. Obviamente, si no hemos realizado el "make install", zcc no estará en el PATH y no se podrá completar la compilación de todo el "paquete". Así pues, bastará con hacer:</p>
+                            <p>Llama la atención el hecho de que la primera vez que ejecutemos ./build.sh obtendremos un
+                                mensaje de error. Esto es así porque además de compilar las propias herramientas, antes
+                                de que éstas estén instaladas se intentan compilar los ejemplos. La solución es bien
+                                sencilla. Tras el make install volvemos a repetir el build.sh. Al instalar siguiendo
+                                estos pasos no será necesario utilizar ninguna variable de entorno.</p>
+                            <p>¿Por qué sucede esto? Sencillamente, porque la primera parte del proceso de compilación
+                                con make consiste en la compilación con gcc del compilador-cruzado en sí mismo (zcc y
+                                demás binarios asociados), mientras que una segunda parte del proceso definido en el
+                                Makefile consiste en compilar las librerías de z88dk (librerías matemáticas, de stdio,
+                                splib, etc) utilizando "zcc" para ello. Obviamente, si no hemos realizado el "make
+                                install", zcc no estará en el PATH y no se podrá completar la compilación de todo el
+                                "paquete". Así pues, bastará con hacer:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 sh build.sh
 make install
 sh build.sh
 make libs
 make install-libs
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>(También podemos usar el comando "make all" seguido de un "make install", seguido de otro "make all").</p>
+                            <p>(También podemos usar el comando "make all" seguido de un "make install", seguido de otro
+                                "make all").</p>
 
-<p>Con esto ya tendremos compilado e instalado tanto el compilador en sí mismo (zcc) como las librerías en que nos apoyaremos a la hora de programar. La ubicación habitual destino de los ficheros instalados colgará de /usr/local, como /usr/local/bin para los binarios o /usr/local/lib/z88dk para los ficheros de cabecera y librerías.</p>
-<p>Si no queremos realizar el make install "intermedio" y queremos poder compilar todo con un solo comando (como en el listado de órdenes anterior), o bien queremos utilizar Z88DK desde un directorio concreto sin realizar la instalación, podemos definir una serie de variables entorno en nuestro "profile" de usuario del sistema:</p>
+                            <p>Con esto ya tendremos compilado e instalado tanto el compilador en sí mismo (zcc) como
+                                las librerías en que nos apoyaremos a la hora de programar. La ubicación habitual
+                                destino de los ficheros instalados colgará de /usr/local, como /usr/local/bin para los
+                                binarios o /usr/local/lib/z88dk para los ficheros de cabecera y librerías.</p>
+                            <p>Si no queremos realizar el make install "intermedio" y queremos poder compilar todo con
+                                un solo comando (como en el listado de órdenes anterior), o bien queremos utilizar Z88DK
+                                desde un directorio concreto sin realizar la instalación, podemos definir una serie de
+                                variables entorno en nuestro "profile" de usuario del sistema:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 export Z88DK="/opt/sromero/prog/z88dk"
 export PATH="$PATH:$Z88DK/bin"
 export Z80_OZFILES="$Z88DK/lib/"
 export ZCCCFG="$Z88DK/lib/config/"
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Con esto, incluiremos los binarios y librerías en nuestro PATH y no será necesario realizar el "make install" para trabajar con Z88DK. No obstante, recomendamos realizar la instalación "estándar" (make y make install) para asegurarnos de que Z88DK tiene todos los ficheros donde el compilador espera encontrarlos, especialmente para evitar posteriores problemas de compilación que pudiéramos encontrar.</p>
+                            <p>Con esto, incluiremos los binarios y librerías en nuestro PATH y no será necesario
+                                realizar el "make install" para trabajar con Z88DK. No obstante, recomendamos realizar
+                                la instalación "estándar" (make y make install) para asegurarnos de que Z88DK tiene
+                                todos los ficheros donde el compilador espera encontrarlos, especialmente para evitar
+                                posteriores problemas de compilación que pudiéramos encontrar.</p>
 
-<p><b>Compilando SP1</b></p>
+                            <p><b>Compilando SP1</b></p>
 
-<p>La librería SP1, que utilizaremos para la creación de sprites, está incluida con z88dk pero es necesaria compilarla aparte. Para ello, desde el directorio raíz de las fuentes de z88dk, debemos entrar al directorio libsrc/sprites/software/sp1/ y teclear lo siguiente como root:</p>
+                            <p>La librería SP1, que utilizaremos para la creación de sprites, está incluida con z88dk
+                                pero es necesaria compilarla aparte. Para ello, desde el directorio raíz de las fuentes
+                                de z88dk, debemos entrar al directorio libsrc/sprites/software/sp1/ y teclear lo
+                                siguiente como root:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 mv spectrum-customize.asm customize.asm
 make spectrum
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>El autor de este texto tuvo que hacer una "triquiñuela" después de esto, que fue volver a ejecutar un make install general desde el raíz de las fuentes de z88dk. El procedimiento global sería:</p>
-<ul>
-	<li>Compilar e instalar Z88DK y sus librerías (como se vio anteriormente, mediante build.sh y make install).</li>
-	<li>Compilar la librería SP1 (con los 2 comandos que acabamos de ver).</li>
-	<li>Volver al raíz de Z88DK y realizar un make install para copiar la librería y su fichero de cabecera recién compilada a /usr/local/lib/z88dk/.</li>
-</ul>
+                            <p>El autor de este texto tuvo que hacer una "triquiñuela" después de esto, que fue volver a
+                                ejecutar un make install general desde el raíz de las fuentes de z88dk. El procedimiento
+                                global sería:</p>
+                            <ul>
+                                <li>Compilar e instalar Z88DK y sus librerías (como se vio anteriormente, mediante
+                                    build.sh y make install).
+                                </li>
+                                <li>Compilar la librería SP1 (con los 2 comandos que acabamos de ver).</li>
+                                <li>Volver al raíz de Z88DK y realizar un make install para copiar la librería y su
+                                    fichero de cabecera recién compilada a /usr/local/lib/z88dk/.
+                                </li>
+                            </ul>
 
-<p>Otra herramienta que nos va a resultar muy útil, además de las proporcionadas por z88dk, recibe el nombre de bin2tap, que permitirá convertir los archivos binarios obtenidos como resultado de la compilación en ficheros .tap que podremos utilizar directamente con nuestro emulador (o incluso pasar a cinta de verdad ;). Un sitio desde donde obtener el código fuente de este programa es <a href="http://www.speccy.org/metalbrain/">http://www.speccy.org/metalbrain/</a>. Por un extraño motivo se debe incluir la línea #include<string.h>, y ya es posible compilarlo con:</p>
+                            <p>Otra herramienta que nos va a resultar muy útil, además de las proporcionadas por z88dk,
+                                recibe el nombre de bin2tap, que permitirá convertir los archivos binarios obtenidos
+                                como resultado de la compilación en ficheros .tap que podremos utilizar directamente con
+                                nuestro emulador (o incluso pasar a cinta de verdad ;). Un sitio desde donde obtener el
+                                código fuente de este programa es <a href="http://www.speccy.org/metalbrain/">http://www.speccy.org/metalbrain/</a>.
+                                Por un extraño motivo se debe incluir la línea #include
+                                <string.h>, y ya es posible compilarlo con:
+                            </p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 cc -o bin2tap bin2tap.c
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Por último, podemos mover el ejecutable obtenido a la carpeta donde hayamos dejado los ejecutables de z88dk, si así lo deseamos. Si usamos Windows, desde el enlace anterior también podemos descargar un ejecutable para este sistema operativo para poder utilizarlo sin necesidad de compilar nada.</p>
-<p>Para comprobar que todo esté correcto, compilaremos y ejecutaremos un ejemplo. Tras introducirnos en la carpeta examples/spectrum/, tecleamos lo siguiente:</p>
+                            <p>Por último, podemos mover el ejecutable obtenido a la carpeta donde hayamos dejado los
+                                ejecutables de z88dk, si así lo deseamos. Si usamos Windows, desde el enlace anterior
+                                también podemos descargar un ejecutable para este sistema operativo para poder
+                                utilizarlo sin necesidad de compilar nada.</p>
+                            <p>Para comprobar que todo esté correcto, compilaremos y ejecutaremos un ejemplo. Tras
+                                introducirnos en la carpeta examples/spectrum/, tecleamos lo siguiente:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 make gfx
 bin2tap gfx.bin gfx.tap
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Solo falta utilizar el fichero gfx.tap en un emulador y disfrutar del resultado de nuestros esfuerzos.</p>
+                            <p>Solo falta utilizar el fichero gfx.tap en un emulador y disfrutar del resultado de
+                                nuestros esfuerzos.</p>
 
-<p><b>El "esqueleto" del juego</b></p>
+                            <p><b>El "esqueleto" del juego</b></p>
 
-<p>Tal como se ha comentado anteriormente, se va a hacer uso de la librería SP1 de z88dk (SPLIB), que ahora viene incluida en su interior y no es necesario descargar por separado, para dibujar sprites en movimiento. Más adelante hablaremos de sus características principales y novedades. Antes de eso, presentamos un esqueleto de código que deberá ser tecleado siempre que vayamos a implementar un juego que haga uso de SP1, y que deberemos rellenar con nuestras rutinas del juego. Por ejemplo, introducimos el siguiente código en un fichero llamado juego.c:</p>
+                            <p>Tal como se ha comentado anteriormente, se va a hacer uso de la librería SP1 de z88dk
+                                (SPLIB), que ahora viene incluida en su interior y no es necesario descargar por
+                                separado, para dibujar sprites en movimiento. Más adelante hablaremos de sus
+                                características principales y novedades. Antes de eso, presentamos un esqueleto de
+                                código que deberá ser tecleado siempre que vayamos a implementar un juego que haga uso
+                                de SP1, y que deberemos rellenar con nuestras rutinas del juego. Por ejemplo,
+                                introducimos el siguiente código en un fichero llamado juego.c:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #include <sprites/sp1.h>
 #include <malloc.h>
 #include <spectrum.h>
@@ -231,63 +340,119 @@ main()
 }
 </pre>
 
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>¡Ojo! Es muy importante añadir un retorno de carro al final del código; en caso contrario, obtendremos un error de compilación de final de fichero inesperado.</p>
-<p>Este programa no hace nada útil en sí mismo, es tan sólo el "esqueleto" al que añadir nuestras funciones, instrucciones, gráficos, etc. El "ejemplo" puede ser compilado y se puede crear un fichero tap de la siguiente forma (los usuarios de Linux pueden utilizar un fichero Makefile para no tener que teclear esto manualmente cada vez):</p>
+                            <p>¡Ojo! Es muy importante añadir un retorno de carro al final del código; en caso
+                                contrario, obtendremos un error de compilación de final de fichero inesperado.</p>
+                            <p>Este programa no hace nada útil en sí mismo, es tan sólo el "esqueleto" al que añadir
+                                nuestras funciones, instrucciones, gráficos, etc. El "ejemplo" puede ser compilado y se
+                                puede crear un fichero tap de la siguiente forma (los usuarios de Linux pueden utilizar
+                                un fichero Makefile para no tener que teclear esto manualmente cada vez):</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 zcc +zx -vn juego.c -o juego.bin -lndos -lsp1 -lmalloc
 bin2tap juego.bin juego.tap
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>Si ejecutamos el ejemplo anterior tal cual, el Spectrum (o el emulador) se quedará "congelado".</p>
-<p>Para alguien que haya hecho uso de la librería de sprites anteriormente, el código anterior será totalmente diferente al que haya usado normalmente para inicializar sus programas. Para empezar, ya no se hace uso de las funciones relacionadas con IM2 (de hecho, las interrupciones se deshabilitan totalmente). Además, se hace uso de algunas funciones de malloc.h para inicializar la pila. No entraremos en mucho detalle ahora mismo. Simplemente se deberá recordar que este código deberá ser lo primero que se teclee, es decir, será el esqueleto de nuestra aplicación.</p>
+                            <p>Si ejecutamos el ejemplo anterior tal cual, el Spectrum (o el emulador) se quedará
+                                "congelado".</p>
+                            <p>Para alguien que haya hecho uso de la librería de sprites anteriormente, el código
+                                anterior será totalmente diferente al que haya usado normalmente para inicializar sus
+                                programas. Para empezar, ya no se hace uso de las funciones relacionadas con IM2 (de
+                                hecho, las interrupciones se deshabilitan totalmente). Además, se hace uso de algunas
+                                funciones de malloc.h para inicializar la pila. No entraremos en mucho detalle ahora
+                                mismo. Simplemente se deberá recordar que este código deberá ser lo primero que se
+                                teclee, es decir, será el esqueleto de nuestra aplicación.</p>
 
-<p><b>Una nueva forma de trabajar</b></p>
-<p>Así pues, recapitulando lo visto hasta ahora, tenemos:</p>
-<ul>
-	<li>La forma de instalar y compilar Z88DK y SPLIB.</li>
-	<li>Un esqueleto de programa como "origen" de nuestros programas con SPLIB.</li>
+                            <p><b>Una nueva forma de trabajar</b></p>
+                            <p>Así pues, recapitulando lo visto hasta ahora, tenemos:</p>
+                            <ul>
+                                <li>La forma de instalar y compilar Z88DK y SPLIB.</li>
+                                <li>Un esqueleto de programa como "origen" de nuestros programas con SPLIB.</li>
 
-  <li>La afirmación de que la nueva SPLIB (la integrada con Z88DK) se utiliza de forma ligeramente diferente a como se venía haciendo hasta ahora.</li>
-</ul>
+                                <li>La afirmación de que la nueva SPLIB (la integrada con Z88DK) se utiliza de forma
+                                    ligeramente diferente a como se venía haciendo hasta ahora.
+                                </li>
+                            </ul>
 
-<p>El lector se preguntará... ¿Realizar este cambio de librería (última versión del compilador, con SPLIB integrado en ella) merece la pena? Además de tener que cambiar totalmente los programas que hubiéramos creado con versiones anteriores de la librería, y de que la librería venga incluida en el propio paquete z88dk, hay algunas novedades muy interesantes, que pueden ser consultadas en el anuncio realizado por el propio autor en los foros de WOS: <a href="http://www.worldofspectrum.org/forums/showthread.php?t=11729">http://www.worldofspectrum.org/forums/showthread.php?t=11729</a>. El objetivo de muchas de estas mejoras es incrementar la velocidad de los programas, hacer el código más limpio y más compacto, y dotar de herramientas para solucionar problemas como el color clash.</p>
+                            <p>El lector se preguntará... ¿Realizar este cambio de librería (última versión del
+                                compilador, con SPLIB integrado en ella) merece la pena? Además de tener que cambiar
+                                totalmente los programas que hubiéramos creado con versiones anteriores de la librería,
+                                y de que la librería venga incluida en el propio paquete z88dk, hay algunas novedades
+                                muy interesantes, que pueden ser consultadas en el anuncio realizado por el propio autor
+                                en los foros de WOS: <a
+                                        href="http://www.worldofspectrum.org/forums/showthread.php?t=11729">http://www.worldofspectrum.org/forums/showthread.php?t=11729</a>.
+                                El objetivo de muchas de estas mejoras es incrementar la velocidad de los programas,
+                                hacer el código más limpio y más compacto, y dotar de herramientas para solucionar
+                                problemas como el color clash.</p>
 
-<p><b>Un ejemplo de sprite</b></p>
+                            <p><b>Un ejemplo de sprite</b></p>
 
-<p>Pero volvamos a nuestra re-introducción a SPLIB y Z88DK a partir de nuestro "esqueleto de programa" para SPLIB.</p>
-<p>Ahora empezaremos a crear gráficos, empezando con un ejemplo sencillo. Sin embargo, es necesario primero explicar la diferencia entre los dos tipos de gráficos que puede manejar la librería.</p>
+                            <p>Pero volvamos a nuestra re-introducción a SPLIB y Z88DK a partir de nuestro "esqueleto de
+                                programa" para SPLIB.</p>
+                            <p>Ahora empezaremos a crear gráficos, empezando con un ejemplo sencillo. Sin embargo, es
+                                necesario primero explicar la diferencia entre los dos tipos de gráficos que puede
+                                manejar la librería.</p>
 
-<p>Por una parte tenemos los background tiles, que como su propio nombre se utilizarán normalmente para definir los gráficos del fondo de la pantalla sobre los que los personajes se van a desplazar.</p>
-<p>Un tile puede ser un carácter (como por ejemplo la letra 'A') o una dirección absoluta de memoria cuyo contenido se asignará al tile. En cierta forma se pueden entender como UDGs coloreados de tamaño 8×8. La pantalla se divide en 32×24 tiles que podremos modificar. Por otra parte disponemos de sprites, entidades gráficas cuyo tamaño puede ser mayor de 8×8, y que pueden desplazarse a nivel de píxel, y que representarán los personajes, los obstáculos, los disparos, etc.</p>
-<p>Otra característica de la librería que deberemos conocer antes de ponernos a picar código es el método que sigue la misma para dibujar en la pantalla. En lugar de actualizarla totalmente, tan solo se actualizan aquellas posiciones que han cambiado desde la última "impresión". El proceso por el cual indicamos a la librería que una posición debe ser dibujada porque se ha modificado se denomina invalidación; es decir, debemos invalidar aquellas partes de la pantalla que queremos que se redibujen.</p>
-<p>Por ejemplo, supongamos que hacemos un juego donde se mueve por una pantalla fija un personaje que esquiva a 5 enemigos. Cada vez que dibujemos al sprite protagonista y los 5 enemigos, invalidamos las áreas donde los hemos dibujado. Esto permite que SPLIB sólo redibuje en pantalla los 6 bloques de cambios, e incluso que agrupe bloques rectangulares que se solapen (si 2 enemigos están uno encima de otro, no es necesario actualizar 2 veces esa zona de la pantalla, sino sólo una). Esto hace que la librería no pueda aplicarse a juegos con scroll, ya que implicarían invalidar toda la pantalla en cada fotograma, algo bastante costoso y que implicaría trabajar desde el principio con esa idea en mente, y dejar de lado SPLIB y cualquier otra librería de propósito general.</p>
-<p>Y una vez dicho todo esto, vamos a empezar a teclear código, modificando el archivo juego.c que hemos creado anteriormente. El código marcado entre tags comentados "Inicio código nuevo" y "Fin código nuevo" ha sido añadido con un doble objetivo; en primer lugar se inicializa la librería, y en segundo se modifican todos los tiles de la pantalla para que tengan el aspecto que se muestra en la siguiente captura de pantalla:</p>
+                            <p>Por una parte tenemos los background tiles, que como su propio nombre se utilizarán
+                                normalmente para definir los gráficos del fondo de la pantalla sobre los que los
+                                personajes se van a desplazar.</p>
+                            <p>Un tile puede ser un carácter (como por ejemplo la letra 'A') o una dirección absoluta de
+                                memoria cuyo contenido se asignará al tile. En cierta forma se pueden entender como UDGs
+                                coloreados de tamaño 8×8. La pantalla se divide en 32×24 tiles que podremos modificar.
+                                Por otra parte disponemos de sprites, entidades gráficas cuyo tamaño puede ser mayor de
+                                8×8, y que pueden desplazarse a nivel de píxel, y que representarán los personajes, los
+                                obstáculos, los disparos, etc.</p>
+                            <p>Otra característica de la librería que deberemos conocer antes de ponernos a picar código
+                                es el método que sigue la misma para dibujar en la pantalla. En lugar de actualizarla
+                                totalmente, tan solo se actualizan aquellas posiciones que han cambiado desde la última
+                                "impresión". El proceso por el cual indicamos a la librería que una posición debe ser
+                                dibujada porque se ha modificado se denomina invalidación; es decir, debemos invalidar
+                                aquellas partes de la pantalla que queremos que se redibujen.</p>
+                            <p>Por ejemplo, supongamos que hacemos un juego donde se mueve por una pantalla fija un
+                                personaje que esquiva a 5 enemigos. Cada vez que dibujemos al sprite protagonista y los
+                                5 enemigos, invalidamos las áreas donde los hemos dibujado. Esto permite que SPLIB sólo
+                                redibuje en pantalla los 6 bloques de cambios, e incluso que agrupe bloques
+                                rectangulares que se solapen (si 2 enemigos están uno encima de otro, no es necesario
+                                actualizar 2 veces esa zona de la pantalla, sino sólo una). Esto hace que la librería no
+                                pueda aplicarse a juegos con scroll, ya que implicarían invalidar toda la pantalla en
+                                cada fotograma, algo bastante costoso y que implicaría trabajar desde el principio con
+                                esa idea en mente, y dejar de lado SPLIB y cualquier otra librería de propósito
+                                general.</p>
+                            <p>Y una vez dicho todo esto, vamos a empezar a teclear código, modificando el archivo
+                                juego.c que hemos creado anteriormente. El código marcado entre tags comentados "Inicio
+                                código nuevo" y "Fin código nuevo" ha sido añadido con un doble objetivo; en primer
+                                lugar se inicializa la librería, y en segundo se modifican todos los tiles de la
+                                pantalla para que tengan el aspecto que se muestra en la siguiente captura de
+                                pantalla:</p>
 
 
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/z88dk16_1.png" width="320" height="238"  alt="La librería inicializada y el fondo colocado" />
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/z88dk16_1.png" width="320" height="238"
+                                             alt="La librería inicializada y el fondo colocado"/>
 
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">La librería inicializada y el fondo colocado</td>
-	</tr>
-</table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">La librería inicializada y el fondo colocado</td>
+                                </tr>
+                            </table>
 
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 #include <sprites/sp1.h>
 #include <malloc.h>
@@ -359,14 +524,22 @@ main()
 }
 
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Veamos en primer lugar el significado de las declaraciones antes de la función main(). El array de unsigned char y de nombre fondo contiene una descripción del carácter 8×8 que vamos a utilizar como tile de fondo en todas las posiciones de la pantalla. Cada posición del array representa una de las 8 filas de dicho carácter, y para cada una de ellas almacenamos el valor hexadecimal correspondiente a su representación binaria (con el bit más significativo a la derecha). Viendo el siguiente gráfico se entenderá mejor cómo se ha construido ese array:</p>
+                            <p>Veamos en primer lugar el significado de las declaraciones antes de la función main(). El
+                                array de unsigned char y de nombre fondo contiene una descripción del carácter 8×8 que
+                                vamos a utilizar como tile de fondo en todas las posiciones de la pantalla. Cada
+                                posición del array representa una de las 8 filas de dicho carácter, y para cada una de
+                                ellas almacenamos el valor hexadecimal correspondiente a su representación binaria (con
+                                el bit más significativo a la derecha). Viendo el siguiente gráfico se entenderá mejor
+                                cómo se ha construido ese array:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 1 0 0 0 0 0 0 0 -> Decimal: 128  -> Hexadecimal: 80
 0 0 0 0 0 0 0 0 -> Decimal: 0    -> Hexadecimal: 0
 0 0 0 0 0 1 0 0 -> Decimal: 4    -> Hexadecimal: 4
@@ -376,31 +549,83 @@ main()
 0 0 0 0 0 0 1 0 -> Decimal: 2    -> Hexadecimal: 2
 0 0 0 0 0 0 0 0 -> Decimal: 0    -> Hexadecimal: 0
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>La segunda declaración antes de la función main() consiste en la creación de un rectángulo, que no es más que una estructura de tipo sp1_Rect. Los valores con los que se inicializa la variable representan la esquina superior izquierda del rectángulo (tile en la fila 0 y columna 0) y la esquina inferior derecha (fila 32 columna 24). Por lo tanto, este rectángulo representa a la pantalla completa, y se utilizará para rellenarla completamente con el tile definido en la línea anterior, como veremos más adelante.</p>
-<p>Adéntremonos ahora en la función main en sí misma. La primera instrucción nueva es sencilla de comprender; coloreamos el borde de la pantalla de color azul mediante la función zx_border de spectrum.h. El valor BLUE es una constante definida en dicho archivo de cabecera, donde podremos encontrar constantes similares para el resto de colores.</p>
-<p>A continuación inicializamos la librería gráfica SP1 con la instrucción sp1_Initialize. Dicha función consta de tres parámetros:</p>
-<ul>
-	<li>El primer parámetro recibe como valor máscaras binarias que se pueden combinar con el operador or (|). Según el archivo de cabecera de la librería, parece ser que los tres valores que utilizamos en el ejemplo son los únicos existentes. Son parámetros no documentados (de momento) y parecen ser usados en todos los ejemplos vistos, por lo que parece conveniente dejar ese parámetro como está.</li>
-	<li>El segundo parámetro, que también recibe como parámetro dos máscaras binarias combinadas (en esta caso solo dos), tiene una interpretación muy sencilla. Simplemente indicamos el color de fondo de papel (con una constante de tipo PAPER_COLOR, donde COLOR es el color que nosotros queramos) y de la tinta (INK_COLOR) que se utilizarán para dibujar los tiles en la pantalla.</li>
-	<li>Por último indicamos el tile que vamos a usar de fondo.</li>
+                            <p>La segunda declaración antes de la función main() consiste en la creación de un
+                                rectángulo, que no es más que una estructura de tipo sp1_Rect. Los valores con los que
+                                se inicializa la variable representan la esquina superior izquierda del rectángulo (tile
+                                en la fila 0 y columna 0) y la esquina inferior derecha (fila 32 columna 24). Por lo
+                                tanto, este rectángulo representa a la pantalla completa, y se utilizará para rellenarla
+                                completamente con el tile definido en la línea anterior, como veremos más adelante.</p>
+                            <p>Adéntremonos ahora en la función main en sí misma. La primera instrucción nueva es
+                                sencilla de comprender; coloreamos el borde de la pantalla de color azul mediante la
+                                función zx_border de spectrum.h. El valor BLUE es una constante definida en dicho
+                                archivo de cabecera, donde podremos encontrar constantes similares para el resto de
+                                colores.</p>
+                            <p>A continuación inicializamos la librería gráfica SP1 con la instrucción sp1_Initialize.
+                                Dicha función consta de tres parámetros:</p>
+                            <ul>
+                                <li>El primer parámetro recibe como valor máscaras binarias que se pueden combinar con
+                                    el operador or (|). Según el archivo de cabecera de la librería, parece ser que los
+                                    tres valores que utilizamos en el ejemplo son los únicos existentes. Son parámetros
+                                    no documentados (de momento) y parecen ser usados en todos los ejemplos vistos, por
+                                    lo que parece conveniente dejar ese parámetro como está.
+                                </li>
+                                <li>El segundo parámetro, que también recibe como parámetro dos máscaras binarias
+                                    combinadas (en esta caso solo dos), tiene una interpretación muy sencilla.
+                                    Simplemente indicamos el color de fondo de papel (con una constante de tipo
+                                    PAPER_COLOR, donde COLOR es el color que nosotros queramos) y de la tinta
+                                    (INK_COLOR) que se utilizarán para dibujar los tiles en la pantalla.
+                                </li>
+                                <li>Por último indicamos el tile que vamos a usar de fondo.</li>
 
-</ul>
+                            </ul>
 
-<p>Lo que vamos a comentar a continuación cambia un poco con respecto a la versión anterior de la librería. Antes cogíamos un carácter ASCII normal y corriente (como podría ser por ejemplo el espacio) y le asociábamos un tile de fondo (como el definido con el array fondo de nuestro código), para a continuación llamar a la función Initialize usando ese tile. Con la nueva versión, primero se hace la llamada a sp1_Initialize y a continuación se asocia al carácter el tile fondo. Esto tiene como consecuencia que para que realmente aparezca nuestro tile de fondo en toda la pantalla tenemos que ejecutar dos instrucciones más. Dichas instrucciones son sp1_invalidate() y sp1_UpdateNow() y son el fundamento de la librería SP1.</p>
-<p>Como se ha comentado anteriormente, en lugar de andar redibujando la pantalla completa repetidamente, desde el código del programa indicaremos que partes son las que han cambiado, por un proceso denominado invalidación, de tal forma que tan solo se actualizarán las partes invalidadas. Con sp1_Invalidate indicamos que parte de la pantalla queremos invalidar, y con sp1_UpdateNow forzamos a una actualización de las partes invalidadas. Como hemos tenido que asociar el tile de fondo al carácter ' ' después de inicializar la librería, nos vemos en la necesidad de invalidar toda la pantalla y actualizarla. Para invalidar toda la pantalla lo tenemos fácil. Simplemente pasamos como parámetro a sp1_Invalidate una variable de tipo rectángulo; en nuestro caso el rectángulo que definimos al inicio del programa y que cubría la pantalla completa.</p>
-<p>Por fin tenemos el fondo de la pantalla. Es posible, por supuesto, rellenar con tiles diferentes regiones distintas de la pantalla, e incluso volcar de memoria, pero eso se verá en un futuro artículo. De momento avancemos intentando añadir un personaje en forma de Sprite que pueble nuestra solitaria pantalla azul. Dicho sprite ocupará el tamaño de un cáracter (es decir, tendrá un tamaño de 8 filas x 8 columnas en pantalla). Con la librería libsp debemos definir cada columna del sprite por separado, entendiendo que cada columna del sprite se refiere a una columna en tamaño carácter.</p>
-<p>Para crear el sprite del protagonista, vamos a necesitar añadir cuatro porciones de código al programa anterior:</p>
+                            <p>Lo que vamos a comentar a continuación cambia un poco con respecto a la versión anterior
+                                de la librería. Antes cogíamos un carácter ASCII normal y corriente (como podría ser por
+                                ejemplo el espacio) y le asociábamos un tile de fondo (como el definido con el array
+                                fondo de nuestro código), para a continuación llamar a la función Initialize usando ese
+                                tile. Con la nueva versión, primero se hace la llamada a sp1_Initialize y a continuación
+                                se asocia al carácter el tile fondo. Esto tiene como consecuencia que para que realmente
+                                aparezca nuestro tile de fondo en toda la pantalla tenemos que ejecutar dos
+                                instrucciones más. Dichas instrucciones son sp1_invalidate() y sp1_UpdateNow() y son el
+                                fundamento de la librería SP1.</p>
+                            <p>Como se ha comentado anteriormente, en lugar de andar redibujando la pantalla completa
+                                repetidamente, desde el código del programa indicaremos que partes son las que han
+                                cambiado, por un proceso denominado invalidación, de tal forma que tan solo se
+                                actualizarán las partes invalidadas. Con sp1_Invalidate indicamos que parte de la
+                                pantalla queremos invalidar, y con sp1_UpdateNow forzamos a una actualización de las
+                                partes invalidadas. Como hemos tenido que asociar el tile de fondo al carácter ' '
+                                después de inicializar la librería, nos vemos en la necesidad de invalidar toda la
+                                pantalla y actualizarla. Para invalidar toda la pantalla lo tenemos fácil. Simplemente
+                                pasamos como parámetro a sp1_Invalidate una variable de tipo rectángulo; en nuestro caso
+                                el rectángulo que definimos al inicio del programa y que cubría la pantalla
+                                completa.</p>
+                            <p>Por fin tenemos el fondo de la pantalla. Es posible, por supuesto, rellenar con tiles
+                                diferentes regiones distintas de la pantalla, e incluso volcar de memoria, pero eso se
+                                verá en un futuro artículo. De momento avancemos intentando añadir un personaje en forma
+                                de Sprite que pueble nuestra solitaria pantalla azul. Dicho sprite ocupará el tamaño de
+                                un cáracter (es decir, tendrá un tamaño de 8 filas x 8 columnas en pantalla). Con la
+                                librería libsp debemos definir cada columna del sprite por separado, entendiendo que
+                                cada columna del sprite se refiere a una columna en tamaño carácter.</p>
+                            <p>Para crear el sprite del protagonista, vamos a necesitar añadir cuatro porciones de
+                                código al programa anterior:</p>
 
-<ul>
-	<li><p>En primer lugar, definimos el sprite al final de nuestro código, utilizando una notación parecida a la de los tiles; es decir, el valor decimal correspondiente a la representación binaria de cada fila del sprite. Esta definición la tenemos que hacer por cada columna del sprite; en nuestro caso, tan solo definimos una columna de un carácter de alto, y referenciamos a la primera posición en memoria donde está almacenada esta columna del sprite como ._prota_col0:</p>
+                            <ul>
+                                <li><p>En primer lugar, definimos el sprite al final de nuestro código, utilizando una
+                                    notación parecida a la de los tiles; es decir, el valor decimal correspondiente a la
+                                    representación binaria de cada fila del sprite. Esta definición la tenemos que hacer
+                                    por cada columna del sprite; en nuestro caso, tan solo definimos una columna de un
+                                    carácter de alto, y referenciamos a la primera posición en memoria donde está
+                                    almacenada esta columna del sprite como ._prota_col0:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
 #asm
 ._prota_col0
 
@@ -412,16 +637,28 @@ main()
 
 #endasm
 </pre>
-    </p></td></tr>
-</table>
+                                                </p></td>
+                                        </tr>
+                                    </table>
 
-	<p>Cada línea del sprite consta de dos bytes; el primero define la máscara de transparencia del sprite y el segundo el sprite en sí mismo. Como el sprite tiene 8 líneas de alto, deberemos tener 16 bytes en total (las dos primeras líneas DEFB). Además, tal como se puede apreciar, añadimos otros 16 bytes más a la columna; esto es así porque cada columna de un sprite debe tener un carácter vacío al final. Esto es necesario para que el motor de movimiento de la librería funcione correctamente (y está relacionado con la rotación del Sprite para poder moverlo píxel a píxel). Por supuesto, NO es necesario que definamos 8 bytes por línea DEFB, pero es lo que hace todo el mundo. ;)</p>
+                                    <p>Cada línea del sprite consta de dos bytes; el primero define la máscara de
+                                        transparencia del sprite y el segundo el sprite en sí mismo. Como el sprite
+                                        tiene 8 líneas de alto, deberemos tener 16 bytes en total (las dos primeras
+                                        líneas DEFB). Además, tal como se puede apreciar, añadimos otros 16 bytes más a
+                                        la columna; esto es así porque cada columna de un sprite debe tener un carácter
+                                        vacío al final. Esto es necesario para que el motor de movimiento de la librería
+                                        funcione correctamente (y está relacionado con la rotación del Sprite para poder
+                                        moverlo píxel a píxel). Por supuesto, NO es necesario que definamos 8 bytes por
+                                        línea DEFB, pero es lo que hace todo el mundo. ;)</p>
 
-	<p>¿Y qué carácter estamos definiendo con el código anterior? Para ello nos fijamos en el segundo byte de cada pareja de bytes. Mostramos a continuación la representación binaria de cada fila, junto con su valor decimal:</p>
+                                    <p>¿Y qué carácter estamos definiendo con el código anterior? Para ello nos fijamos
+                                        en el segundo byte de cada pareja de bytes. Mostramos a continuación la
+                                        representación binaria de cada fila, junto con su valor decimal:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
 00111000 -> 56
 01111100 -> 124
 00111000 -> 56
@@ -431,15 +668,19 @@ main()
 00101000 -> 40
 00101000 -> 40
 </pre>
-    </p></td></tr>
-</table>
+                                                </p></td>
+                                        </tr>
+                                    </table>
 
-	<p>Con respecto al primer byte, con la que representamos la máscara del sprite (y con el que indicamos a través de que partes del sprite se ve el fondo), usamos los siguientes valores:</p>
+                                    <p>Con respecto al primer byte, con la que representamos la máscara del sprite (y
+                                        con el que indicamos a través de que partes del sprite se ve el fondo), usamos
+                                        los siguientes valores:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        <tr>
+                                            <td><p class="codigo">
 
-<pre>
+                                                <pre>
 11000111 -> 199
 10000011 -> 131
 11000111 -> 199
@@ -449,17 +690,23 @@ main()
 11010111 -> 215
 11010111 -> 215
 </pre>
-    </p></td></tr>
-</table>
+                                                </p></td>
+                                        </tr>
+                                    </table>
 
-	<p>Las máscaras indican qué zonas del Sprite son transparentes y cuáles no a la hora de dibujar el Sprite sobre un fondo, de forma que nuestro sprite sea un "hombrecito" de un color y fondo determinado y no un bloque cuadrado con un hombrecito dentro.</p>
-	</li>
-	<li><p>Añadimos las siguientes definiciones al principio del fichero, justo después de la definición de la variable heap:</p>
+                                    <p>Las máscaras indican qué zonas del Sprite son transparentes y cuáles no a la hora
+                                        de dibujar el Sprite sobre un fondo, de forma que nuestro sprite sea un
+                                        "hombrecito" de un color y fondo determinado y no un bloque cuadrado con un
+                                        hombrecito dentro.</p>
+                                </li>
+                                <li><p>Añadimos las siguientes definiciones al principio del fichero, justo después de
+                                    la definición de la variable heap:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
 struct personaje {
    struct sp1_ss  *sprite;
    char           dx;
@@ -468,27 +715,40 @@ struct personaje {
 
 extern uchar prota_col0[];
 </pre>
-    </p></td></tr>
-</table>
+                                                </p></td>
+                                        </tr>
+                                    </table>
 
-	<p>La estructura personaje va a ser utilizada para modelar todos los personajes del juego, incluido el protagonista. Los campos dx y dy serán utilizados más tarde para almacenar la dirección de desplazamiento de los enemigos, mientras que la variable sprite es la que almacena la información del sprite en sí mismo. Con respecto a la variable prota_col0[], la usaremos para almacenar los bytes de la primera columna del sprite, que hemos definido a partir de la posición de memoria etiquetada como ._prota_col0. En el caso de que el sprite tuviera más columnas, deberíamos crear un array de este tipo por cada una de ellas.</p>
-	</li>
-	<li><p>También añadimos una simple definición al comienzo del método main, en la que creamos una variable del tipo struct personaje, para el sprite que va a mover el jugador:</p>
+                                    <p>La estructura personaje va a ser utilizada para modelar todos los personajes del
+                                        juego, incluido el protagonista. Los campos dx y dy serán utilizados más tarde
+                                        para almacenar la dirección de desplazamiento de los enemigos, mientras que la
+                                        variable sprite es la que almacena la información del sprite en sí mismo. Con
+                                        respecto a la variable prota_col0[], la usaremos para almacenar los bytes de la
+                                        primera columna del sprite, que hemos definido a partir de la posición de
+                                        memoria etiquetada como ._prota_col0. En el caso de que el sprite tuviera más
+                                        columnas, deberíamos crear un array de este tipo por cada una de ellas.</p>
+                                </li>
+                                <li><p>También añadimos una simple definición al comienzo del método main, en la que
+                                    creamos una variable del tipo struct personaje, para el sprite que va a mover el
+                                    jugador:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
 struct personaje p;
 </pre>
-    </p></td></tr>
-</table>
-	</li>
-	<li><p>Por último, el código que inicializa y muestra el sprite por pantalla:</p>
+                                                </p></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li><p>Por último, el código que inicializa y muestra el sprite por pantalla:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
    // El tercer parametro es la altura (tiene que valer uno mas de lo que
    // realmente tiene, porque se deja un caracter vacio por debajo de cada
    // columna), El cuarto parametro es 0 (es el offset respecto a la
@@ -518,62 +778,109 @@ struct personaje p;
    sp1_Invalidate(&cr);
    sp1_UpdateNow();
 </pre>
-    </p></td></tr>
-</table>
+                                                </p></td>
+                                        </tr>
+                                    </table>
 
-	<p>Con sp1_CreateSpr creamos el sprite. El resultado es una variable de tipo struct sp1_ss que almacenamos en el campo sprite de la estructura que representa a nuestro personaje. Los dos primeros parámetros indican que el modo de dibujo será con máscara, y que por lo tanto el sprite está definido usando dos bytes por píxel. El siguiente parámetro, que vale 2, es la altura del sprite, en caracteres. Hemos de recordar que debemos siempre añadir un carácter en blanco al final; esto explica por qué la altura no vale 1. El cuarto parámetro, que vale 0, es el offset con respecto a la dirección inicial del sprite. El último de los parámetros lo veremos más tarde, a la hora de crear a los enemigos.</p>
-	<p>Una vez creado el sprite, debemos ir añadiendo una a una las columnas del mismo. En nuestro caso solo usamos una columna, por lo que solo haremos una llamada a sp1_AddColSpr indicando a qué sprite se le va a añadir la columna en el primer parámetro. El segundo parámetro indica el modo de dibujo, y debe valer siempre, tal cual hemos creado el sprite, SP1_DRAW_MASK2 para todas las columnas menos para la última, en la que debe valer SP1_DRAW_MASK2RB. Esto último añade una columna en blanco al final del sprite, que también es necesaria para que el movimiento funcione correctamente, y que en versiones anteriores de la librería había que introducir a mano. Como nuestro sprite solo tiene una columna, utilizamos únicamente el valor SP1_DRAW_MASK2RB. El cuarto parámetro es el número de bytes que ocupa la definición de la columna del sprite (2 bytes por fila x 8 filas = 16 bytes). No es necesario añadir el carácter en blanco del final de cada columna. El resto de parámetros se explicará más adelante.</p>
+                                    <p>Con sp1_CreateSpr creamos el sprite. El resultado es una variable de tipo struct
+                                        sp1_ss que almacenamos en el campo sprite de la estructura que representa a
+                                        nuestro personaje. Los dos primeros parámetros indican que el modo de dibujo
+                                        será con máscara, y que por lo tanto el sprite está definido usando dos bytes
+                                        por píxel. El siguiente parámetro, que vale 2, es la altura del sprite, en
+                                        caracteres. Hemos de recordar que debemos siempre añadir un carácter en blanco
+                                        al final; esto explica por qué la altura no vale 1. El cuarto parámetro, que
+                                        vale 0, es el offset con respecto a la dirección inicial del sprite. El último
+                                        de los parámetros lo veremos más tarde, a la hora de crear a los enemigos.</p>
+                                    <p>Una vez creado el sprite, debemos ir añadiendo una a una las columnas del mismo.
+                                        En nuestro caso solo usamos una columna, por lo que solo haremos una llamada a
+                                        sp1_AddColSpr indicando a qué sprite se le va a añadir la columna en el primer
+                                        parámetro. El segundo parámetro indica el modo de dibujo, y debe valer siempre,
+                                        tal cual hemos creado el sprite, SP1_DRAW_MASK2 para todas las columnas menos
+                                        para la última, en la que debe valer SP1_DRAW_MASK2RB. Esto último añade una
+                                        columna en blanco al final del sprite, que también es necesaria para que el
+                                        movimiento funcione correctamente, y que en versiones anteriores de la librería
+                                        había que introducir a mano. Como nuestro sprite solo tiene una columna,
+                                        utilizamos únicamente el valor SP1_DRAW_MASK2RB. El cuarto parámetro es el
+                                        número de bytes que ocupa la definición de la columna del sprite (2 bytes por
+                                        fila x 8 filas = 16 bytes). No es necesario añadir el carácter en blanco del
+                                        final de cada columna. El resto de parámetros se explicará más adelante.</p>
 
-	<p>Terminamos esta parte del código colocando el sprite en el centro de la pantalla con sp1_MoveSprAbs (el valor 12 y 16 indican fila y columna en tiles, mientras que los dos últimos valores indican el offset en número de píxels a partir de esa posición inicial), dándole al desplazamiento en x e y del protagonista el valor 0, y redibujando la pantalla. El resultado se puede observar en la siguiente captura:</p>
+                                    <p>Terminamos esta parte del código colocando el sprite en el centro de la pantalla
+                                        con sp1_MoveSprAbs (el valor 12 y 16 indican fila y columna en tiles, mientras
+                                        que los dos últimos valores indican el offset en número de píxels a partir de
+                                        esa posición inicial), dándole al desplazamiento en x e y del protagonista el
+                                        valor 0, y redibujando la pantalla. El resultado se puede observar en la
+                                        siguiente captura:</p>
 
 
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/z88dk16_2.png" width="320" height="240"  alt="Nuestro sprite preparado para moverse" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Nuestro sprite preparado para moverse</td>
+                                    <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                        <tr align="right">
+                                            <td><img src="img/z88dk16_2.png" width="320" height="240"
+                                                     alt="Nuestro sprite preparado para moverse"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="piefoto" align="right">Nuestro sprite preparado para moverse</td>
 
-	</tr>
-</table>
+                                        </tr>
+                                    </table>
 
 
-	</li>
-</ul>
-<p><b>Cómo mover nuestro sprite</b></p>
+                                </li>
+                            </ul>
+                            <p><b>Cómo mover nuestro sprite</b></p>
 
-<p>Como viene siendo habitual, el apartado de movimiento también ha sufrido modificaciones respecto a versiones anteriores de la librería. El objetivo de este apartado es conseguir que nuestro personaje principal se pueda mover con el teclado, utilizando la combinación de teclas o, p, q, a a la que estamos tan acostumbrados los jugones de Spectrum. Para ello, es necesario ir introduciendo una serie de cambios a lo largo del código.</p>
-<p>En primer lugar, añadimos los siguientes campos al struct personaje:</p>
+                            <p>Como viene siendo habitual, el apartado de movimiento también ha sufrido modificaciones
+                                respecto a versiones anteriores de la librería. El objetivo de este apartado es
+                                conseguir que nuestro personaje principal se pueda mover con el teclado, utilizando la
+                                combinación de teclas o, p, q, a a la que estamos tan acostumbrados los jugones de
+                                Spectrum. Para ello, es necesario ir introduciendo una serie de cambios a lo largo del
+                                código.</p>
+                            <p>En primer lugar, añadimos los siguientes campos al struct personaje:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    struct in_UDK keys;
    void *getjoy;
    uchar *frameoffset;
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>El campo getjoy lo utilizaremos para indicar el tipo de entrada con el que se moverá el sprite, ya sea teclado, kempston o sinclair. El objetivo de la estructura keys es el mismo que en versiones anteriores de la librería: indicar qué teclas se corresponden con cada uno de los movimientos básicos (arriba, abajo, izquierda, derecha y disparo).</p>
-<p>Añadimos una nueva variable a las variables locales del método main:</p>
+                            <p>El campo getjoy lo utilizaremos para indicar el tipo de entrada con el que se moverá el
+                                sprite, ya sea teclado, kempston o sinclair. El objetivo de la estructura keys es el
+                                mismo que en versiones anteriores de la librería: indicar qué teclas se corresponden con
+                                cada uno de los movimientos básicos (arriba, abajo, izquierda, derecha y disparo).</p>
+                            <p>Añadimos una nueva variable a las variables locales del método main:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
    uchar input;
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Como su propio nombre indica, esta variable nos va a permitir obtener la entrada de teclado, para decidir que hacemos en funcion de ella. El siguiente cambio es un tema delicado, porque implica algo que no es realmente muy intuitivo. Anteriormente habíamos comentado que era necesario que, al definir cada una de las columnas de un sprite, añadiésemos a todas ellas un carácter en blanco al final; de esta forma conseguiríamos que el movimiento fuera correcto. Pues bien, después de hacer varias pruebas, parece ser que también es necesario añadir un carácter en blanco ANTES de nuestro sprite. En concreto, hemos añadido dos nuevas líneas DEFB antes del sprite del protagonista:</p>
+                            <p>Como su propio nombre indica, esta variable nos va a permitir obtener la entrada de
+                                teclado, para decidir que hacemos en funcion de ella. El siguiente cambio es un tema
+                                delicado, porque implica algo que no es realmente muy intuitivo. Anteriormente habíamos
+                                comentado que era necesario que, al definir cada una de las columnas de un sprite,
+                                añadiésemos a todas ellas un carácter en blanco al final; de esta forma conseguiríamos
+                                que el movimiento fuera correcto. Pues bien, después de hacer varias pruebas, parece ser
+                                que también es necesario añadir un carácter en blanco ANTES de nuestro sprite. En
+                                concreto, hemos añadido dos nuevas líneas DEFB antes del sprite del protagonista:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #asm
 ._prota_col0
    DEFB 255, 0, 255, 0, 255, 0, 255, 0
@@ -586,25 +893,37 @@ struct personaje p;
 #endasm
 </pre>
 
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Esto, evidentemente, va a producir un cambio en una de las líneas de nuestro programa, en concreto, en la que creábamos nuestro sprite, que ahora pasa a ser de la siguiente forma (el cambio es el parámetro "16"):</p>
+                            <p>Esto, evidentemente, va a producir un cambio en una de las líneas de nuestro programa, en
+                                concreto, en la que creábamos nuestro sprite, que ahora pasa a ser de la siguiente forma
+                                (el cambio es el parámetro "16"):</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    p.sprite = sp1_CreateSpr(SP1_DRAW_MASK2LB, SP1_TYPE_2BYTE, 2, 16, 0);
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>En concreto, la altura del sprite sigue siendo la misma (2 carácteres, el de nuestro sprite y el carácter en blanco al final), solo que añadimos un offset de 16 bytes, lo que quiere decir que la definición del sprite comienza 16 bytes más adelante de la dirección de memoria etiquetada como ._prota_col0.</p>
-<p>Y por fin, al final del método main, añadimos dos nuevos trozos de código. El primero de ellos inicializa las estructuras que permitirán mover a nuestro protagonista con el teclado. Esto se hace prácticamente igual que con la versión anterior de la librería, y además es muy fácil de entender, así que no es necesario comentar nada más:</p>
+                            <p>En concreto, la altura del sprite sigue siendo la misma (2 carácteres, el de nuestro
+                                sprite y el carácter en blanco al final), solo que añadimos un offset de 16 bytes, lo
+                                que quiere decir que la definición del sprite comienza 16 bytes más adelante de la
+                                dirección de memoria etiquetada como ._prota_col0.</p>
+                            <p>Y por fin, al final del método main, añadimos dos nuevos trozos de código. El primero de
+                                ellos inicializa las estructuras que permitirán mover a nuestro protagonista con el
+                                teclado. Esto se hace prácticamente igual que con la versión anterior de la librería, y
+                                además es muy fácil de entender, así que no es necesario comentar nada más:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    p.getjoy = in_JoyKeyboard;	/* Con esto decimos que el sprite se controla mediante teclado */
    p.keys.left = in_LookupKey('o');
    p.keys.right = in_LookupKey('p');
@@ -613,14 +932,17 @@ struct personaje p;
    p.keys.fire = in_LookupKey('m');
    p.frameoffset = (uchar *) 0;
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>La segunda porción de código conforma el bucle principal (e infinito) de nuestro programa, y permite por fin añadir el ansiado movimiento:</p>
+                            <p>La segunda porción de código conforma el bucle principal (e infinito) de nuestro
+                                programa, y permite por fin añadir el ansiado movimiento:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   while (1)
   {
       sp1_UpdateNow();
@@ -644,62 +966,101 @@ struct personaje p;
   }
 
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>La función utilizada para mover el sprite es sp1_MoveSprRel. Los parámetros interesantes son los dos últimos, que permiten mover en incrementos de un píxel en y y en x. Los dos anteriores permiten hacerlo en incrementos de tiles, pero no los vamos a usar en nuestro programa. Los valores de desplazamiento en y y en x p.dy y p.dx son inicializados en las cuatro sentencias if anteriores, en las que se determina qué teclas se han pulsado. Lo bueno de esta función es que nos ahorramos todos los cálculos a bases de divisiones y módulos que debíamos utilizar en la versión anterior para poder desplazar un sprite a nivel de píxel.</p>
-<p>¿Y cómo sabemos qué teclas ha pulsado el usuario? Mediante la siguiente instrucción:</p>
+                            <p>La función utilizada para mover el sprite es sp1_MoveSprRel. Los parámetros interesantes
+                                son los dos últimos, que permiten mover en incrementos de un píxel en y y en x. Los dos
+                                anteriores permiten hacerlo en incrementos de tiles, pero no los vamos a usar en nuestro
+                                programa. Los valores de desplazamiento en y y en x p.dy y p.dx son inicializados en las
+                                cuatro sentencias if anteriores, en las que se determina qué teclas se han pulsado. Lo
+                                bueno de esta función es que nos ahorramos todos los cálculos a bases de divisiones y
+                                módulos que debíamos utilizar en la versión anterior para poder desplazar un sprite a
+                                nivel de píxel.</p>
+                            <p>¿Y cómo sabemos qué teclas ha pulsado el usuario? Mediante la siguiente instrucción:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    input = (p.getjoy)(&p.keys);
 
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>De esta forma, almacenamos en input un byte en el que se pondrán a 1 las posiciones correspondientes a las de las direcciones cuyas teclas hayan sido pulsadas. Así pues, para conocer exactamente las teclas pulsadas, hacemos un AND lógico con unas máscaras binarias definidas como constantes en la librería, de la forma in_DIRECCION. Por ejemplo, en el siguiente ejemplo...</p>
+                            <p>De esta forma, almacenamos en input un byte en el que se pondrán a 1 las posiciones
+                                correspondientes a las de las direcciones cuyas teclas hayan sido pulsadas. Así pues,
+                                para conocer exactamente las teclas pulsadas, hacemos un AND lógico con unas máscaras
+                                binarias definidas como constantes en la librería, de la forma in_DIRECCION. Por
+                                ejemplo, en el siguiente ejemplo...</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    if (input & in_RIGHT)
    {
 	// cuerpo del if
    }
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>... continuaremos la ejecución en el cuerpo del if si la tecla pulsada se corresponde con la dirección derecha. Por último, para controlar que el personaje no supere los límites de la pantalla, hacemos uso de los campos de la estructura sprite col y row, que indican la posición (expresada en tiles) del sprite, y hrot y vrot, que indican el desplazamiento en píxeles horizontal y verticalmente a partir del tile correspondiente. En el caso de vrot, hay que tener en cuenta que el septimo bit siempre valdrá 1 para sprites definidos usando dos bytes (como el nuestro), por lo que realmente los valores de vrot oscilarán entre el 128 y 135. Los valores mostrados en el código anterior significan:</p>
+                            <p>... continuaremos la ejecución en el cuerpo del if si la tecla pulsada se corresponde con
+                                la dirección derecha. Por último, para controlar que el personaje no supere los límites
+                                de la pantalla, hacemos uso de los campos de la estructura sprite col y row, que indican
+                                la posición (expresada en tiles) del sprite, y hrot y vrot, que indican el
+                                desplazamiento en píxeles horizontal y verticalmente a partir del tile correspondiente.
+                                En el caso de vrot, hay que tener en cuenta que el septimo bit siempre valdrá 1 para
+                                sprites definidos usando dos bytes (como el nuestro), por lo que realmente los valores
+                                de vrot oscilarán entre el 128 y 135. Los valores mostrados en el código anterior
+                                significan:</p>
 
-<ul>
-	<li><p>if (input & in_RIGHT && !(p.sprite?col > 30 && p.sprite?hrot > 0)):</p>
-		<p>Solo mover hacia la derecha si el tile no está situado más allá de la columna 30 con un desplazamiento en x de 0. Esto es así porque nuestro sprite solo tiene una columna de ancho. Habría que restar uno al 30 por cada columna adicional.</p>
+                            <ul>
+                                <li><p>if (input & in_RIGHT && !(p.sprite?col > 30 && p.sprite?hrot > 0)):</p>
+                                    <p>Solo mover hacia la derecha si el tile no está situado más allá de la columna 30
+                                        con un desplazamiento en x de 0. Esto es así porque nuestro sprite solo tiene
+                                        una columna de ancho. Habría que restar uno al 30 por cada columna
+                                        adicional.</p>
 
-	</li>
-	<li><p>if (input & in_LEFT && !(p.sprite?col < 1 && p.sprite?hrot < 1)):</p>
-		<p>Solo mover hacia la izquierda en el caso de que la columna en la que se encuentra no sea la primera, o sea la primera pero no se encuentre en el primer píxel de todos.</p>
-	</li>
+                                </li>
+                                <li><p>if (input & in_LEFT && !(p.sprite?col < 1 && p.sprite?hrot < 1)):</p>
+                                    <p>Solo mover hacia la izquierda en el caso de que la columna en la que se encuentra
+                                        no sea la primera, o sea la primera pero no se encuentre en el primer píxel de
+                                        todos.</p>
+                                </li>
 
-	<li><p>if (input & in_DOWN && !(p.sprite?row > 22)):</p>
-		<p>Solo mover hacia abajo si la fila en la que se encuentra el sprite es menor de 21. Habría que restar si la altura de nuestro sprite fuera mayor.</p>
-	</li>
-	<li><p>if (input & in_UP && !(p.sprite?row < 1 && p.sprite?vrot < 129)):</p>
+                                <li><p>if (input & in_DOWN && !(p.sprite?row > 22)):</p>
+                                    <p>Solo mover hacia abajo si la fila en la que se encuentra el sprite es menor de
+                                        21. Habría que restar si la altura de nuestro sprite fuera mayor.</p>
+                                </li>
+                                <li><p>if (input & in_UP && !(p.sprite?row < 1 && p.sprite?vrot < 129)):</p>
 
-		<p>Igual que en el caso del movimiento hacia la izquierda, solo permitir mover hacia arriba si no nos encontramos en la primera fila, o si nos encontramos en la primera fila pero no en el primer píxel.</p>
-	</li>
-</ul>
+                                    <p>Igual que en el caso del movimiento hacia la izquierda, solo permitir mover hacia
+                                        arriba si no nos encontramos en la primera fila, o si nos encontramos en la
+                                        primera fila pero no en el primer píxel.</p>
+                                </li>
+                            </ul>
 
-<p><b>Enemigos</b></p>
+                            <p><b>Enemigos</b></p>
 
-<p>Vamos a añadir 6 enemigos que se moverán en línea recta por la pantalla, rebotando en los bordes cuando lleguen hasta ellos. Más tarde añadiremos detección de colisiones para terminar la partida en el caso de que alguno de ellos impacte con nuestro personaje, consiguiendo un juego muy sencillo. En primer lugar incorporamos la definición del sprite de los enemigos en la directiva #asm que se encontraba al final del código, donde también definimos el sprite del protagonista. La nueva porción de código tendrá este aspecto:</p>
+                            <p>Vamos a añadir 6 enemigos que se moverán en línea recta por la pantalla, rebotando en los
+                                bordes cuando lleguen hasta ellos. Más tarde añadiremos detección de colisiones para
+                                terminar la partida en el caso de que alguno de ellos impacte con nuestro personaje,
+                                consiguiendo un juego muy sencillo. En primer lugar incorporamos la definición del
+                                sprite de los enemigos en la directiva #asm que se encontraba al final del código, donde
+                                también definimos el sprite del protagonista. La nueva porción de código tendrá este
+                                aspecto:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 ._enemigo_col0
     DEFB 255, 0, 255, 0, 255, 0, 255, 0
@@ -709,14 +1070,20 @@ struct personaje p;
     DEFB 255,0,255,0,255,0,255,0
     DEFB 255,0,255,0,255,0,255,0
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Como se puede observar, se ha dejado un carácter en blanco tanto antes como después de nuestro sprite 8×8, exactamente igual que en el caso del protagonista. Esta definición se corresponde al siguiente sprite, en el que en la parte izquierda vemos el sprite en sí mismo y en la parte derecha la máscara que indica la transparencia (qué partes del sprite son transparentes):</p>
+                            <p>Como se puede observar, se ha dejado un carácter en blanco tanto antes como después de
+                                nuestro sprite 8×8, exactamente igual que en el caso del protagonista. Esta definición
+                                se corresponde al siguiente sprite, en el que en la parte izquierda vemos el sprite en
+                                sí mismo y en la parte derecha la máscara que indica la transparencia (qué partes del
+                                sprite son transparentes):</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 00011000 -> 24              11100111 -> 231
 00100100 -> 36              11000011 -> 195
 01011010 -> 90              10000001 -> 129
@@ -726,41 +1093,59 @@ struct personaje p;
 00011000 -> 24              11100111 -> 231
 00000000 -> 0               11111111 -> 255
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>A continuación añadimos las variables globales que necesitaremos, justo a continuación de la línea extern uchar prota_col0[]; de la siguiente forma:</p>
+                            <p>A continuación añadimos las variables globales que necesitaremos, justo a continuación de
+                                la línea extern uchar prota_col0[]; de la siguiente forma:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 extern uchar enemigo_col0[];
 short int posiciones[] = {5,4,20,25,20,3,1,5,12,12,18,18};
 short int desplazamientos[] = {1,1,-1,1,1,-1,-1,-1,-1,-1,1,1};
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>El array enemigo_col0 se encargará de almacenar los bytes con los que definiremos tanto el sprite como la máscara de los enemigos. Los dos arrays definidos a continuación almacenan, para los 6 enemigos, tanto su posición inicial (en número de tile, primero la coordenada y y a continuación la coordenada x) como su desplazamiento inicial (un desplazamiento en y y otro en x para cada enemigo). Es decir, los enemigos tendrán un desplazamiento constante en los dos ejes. Cuando un enemigo colisione con un borde se cambiará el sentido de su marcha simplemente asignando a su dx o dy la inversa, según si se ha colisionado con un borde lateral, o con el superior o inferior.</p>
+                            <p>El array enemigo_col0 se encargará de almacenar los bytes con los que definiremos tanto
+                                el sprite como la máscara de los enemigos. Los dos arrays definidos a continuación
+                                almacenan, para los 6 enemigos, tanto su posición inicial (en número de tile, primero la
+                                coordenada y y a continuación la coordenada x) como su desplazamiento inicial (un
+                                desplazamiento en y y otro en x para cada enemigo). Es decir, los enemigos tendrán un
+                                desplazamiento constante en los dos ejes. Cuando un enemigo colisione con un borde se
+                                cambiará el sentido de su marcha simplemente asignando a su dx o dy la inversa, según si
+                                se ha colisionado con un borde lateral, o con el superior o inferior.</p>
 
-<p>En el método main añadimos las siguientes variables:</p>
+                            <p>En el método main añadimos las siguientes variables:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 struct personaje enemigos[6];
 int i;
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>El primer array almacenará toda la información sobre los sprites enemigos (el propio sprite, sus desplazamientos en x e y, etc, igual que en el caso del sprite protagonista). La variable i se utilizará como iterador. Ya casi estamos terminando. Creamos las seis estructuras necesarias para los sprites de los enemigos, exactamente igual que se hizo para el protagonista, de la siguiente forma:</p>
+                            <p>El primer array almacenará toda la información sobre los sprites enemigos (el propio
+                                sprite, sus desplazamientos en x e y, etc, igual que en el caso del sprite
+                                protagonista). La variable i se utilizará como iterador. Ya casi estamos terminando.
+                                Creamos las seis estructuras necesarias para los sprites de los enemigos, exactamente
+                                igual que se hizo para el protagonista, de la siguiente forma:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 for (i=0;i<6;i++)
 {
    enemigos[i].sprite = sp1_CreateSpr(SP1_DRAW_MASK2LB, SP1_TYPE_2BYTE, 2, 16, 0);
@@ -773,15 +1158,19 @@ for (i=0;i<6;i++)
    enemigos[i].dy = desplazamientos[2*i];
 }
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Y por último, añadimos el movimiento de estos enemigos dentro del bucle principal del programa; es decir, justo al final del bucle infinito que comenzaba por while(1) añadimos el siguiente código:</p>
+                            <p>Y por último, añadimos el movimiento de estos enemigos dentro del bucle principal del
+                                programa; es decir, justo al final del bucle infinito que comenzaba por while(1)
+                                añadimos el siguiente código:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 for (i=0;i<6;i++)
 {
     if (enemigos[i].sprite->col > 30 && enemigos[i].sprite->hrot > 0)
@@ -793,71 +1182,110 @@ for (i=0;i<6;i++)
                    0, 0, enemigos[i].dy, enemigos[i].dx);
 }
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>En dicho código simplemente modificamos la dirección de movimiento del enemigo correspondiente si se encuentra en los límites de la pantalla, y utilizamos sp1_MoveSprRel para realizar el movimiento en sí mismo.</p>
-<p>¡Ya podemos ejecutar nuestro juego! Al hacerlo, veremos a nuestros enemigos desplazándose por la pantalla, mientras que nosotros podremos seguir moviéndonos con el teclado, aunque no pasará nada en especial si entramos en contacto con ellos. Sin embargo, observaremos que el movimiento se ha ralentizado muchísimo. De momento arreglamos el problema eliminando la línea in_Wait(5); que utilizábamos de retardo.</p>
-
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/z88dk16_3.png" width="320" height="240"  alt="Los enemigos hacen acto de presencia" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Los enemigos hacen acto de presencia</td>
-	</tr>
-</table>
+                            <p>En dicho código simplemente modificamos la dirección de movimiento del enemigo
+                                correspondiente si se encuentra en los límites de la pantalla, y utilizamos
+                                sp1_MoveSprRel para realizar el movimiento en sí mismo.</p>
+                            <p>¡Ya podemos ejecutar nuestro juego! Al hacerlo, veremos a nuestros enemigos desplazándose
+                                por la pantalla, mientras que nosotros podremos seguir moviéndonos con el teclado,
+                                aunque no pasará nada en especial si entramos en contacto con ellos. Sin embargo,
+                                observaremos que el movimiento se ha ralentizado muchísimo. De momento arreglamos el
+                                problema eliminando la línea in_Wait(5); que utilizábamos de retardo.</p>
 
 
-<p><b>Colisiones</b></p>
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/z88dk16_3.png" width="320" height="240"
+                                             alt="Los enemigos hacen acto de presencia"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Los enemigos hacen acto de presencia</td>
+                                </tr>
+                            </table>
 
-<p>Solo queda un detalle para tener un pequeño juego funcional, el proceso de detección de colisiones. Lo que haremos será permitir que el programa detecte cuando algún enemigo ha entrado en contacto con el personaje principal. Cuando esto suceda, el juego parará y se mostrará el borde de color rojo, lo que nos dará a entender que se ha terminado la partida. Tal y como se puede comprobar en diversos foros a lo largo de Internet, parece ser que es más eficiente realizar esta parte de la implementación directamente en lugar de utilizar los métodos facilitados por la librería, por lo que esta es la aproximación que vamos a utilizar.</p>
-<p>En primer lugar introducimos las siguientes variables en el método main:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p><b>Colisiones</b></p>
+
+                            <p>Solo queda un detalle para tener un pequeño juego funcional, el proceso de detección de
+                                colisiones. Lo que haremos será permitir que el programa detecte cuando algún enemigo ha
+                                entrado en contacto con el personaje principal. Cuando esto suceda, el juego parará y se
+                                mostrará el borde de color rojo, lo que nos dará a entender que se ha terminado la
+                                partida. Tal y como se puede comprobar en diversos foros a lo largo de Internet, parece
+                                ser que es más eficiente realizar esta parte de la implementación directamente en lugar
+                                de utilizar los métodos facilitados por la librería, por lo que esta es la aproximación
+                                que vamos a utilizar.</p>
+                            <p>En primer lugar introducimos las siguientes variables en el método main:</p>
+
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    int xp, yp;
    int xe, ye;
    short int final;
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>Las variables xp e yp almacenarán las coordenadas en la pantalla del centro del personaje principal, mientras que xe e ye almacenarán las coordenadas de la esquina superior izquierda de los enemigos. La razón de esta disparidad es que al hacerlo así los cálculos serán mas sencillos. La utilidad de la variable final será tan solo la de indicar al bucle principal cuando tiene que dejar de repetirse.</p>
-<p>El siguiente paso es sustituir la línea while(1), que se correspondía con el inicio de nuestro bucle infinito, por las dos siguientes líneas:</p>
+                            <p>Las variables xp e yp almacenarán las coordenadas en la pantalla del centro del personaje
+                                principal, mientras que xe e ye almacenarán las coordenadas de la esquina superior
+                                izquierda de los enemigos. La razón de esta disparidad es que al hacerlo así los
+                                cálculos serán mas sencillos. La utilidad de la variable final será tan solo la de
+                                indicar al bucle principal cuando tiene que dejar de repetirse.</p>
+                            <p>El siguiente paso es sustituir la línea while(1), que se correspondía con el inicio de
+                                nuestro bucle infinito, por las dos siguientes líneas:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    final = 0;
    while (!final)
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Con esto permitimos que cuando se detecte una colisión se le de el valor 1 a la variable final, deteniendo la ejecución del juego. Un paso más consistirá en calcular las coordenadas del centro del sprite protagonista en la pantalla una vez que ha movido, para poder comparar su posición con la de los enemigos. Esto lo haremos inmediatamente antes del bucle for que utilizábamos para mover a los enemigos:</p>
+                            <p>Con esto permitimos que cuando se detecte una colisión se le de el valor 1 a la variable
+                                final, deteniendo la ejecución del juego. Un paso más consistirá en calcular las
+                                coordenadas del centro del sprite protagonista en la pantalla una vez que ha movido,
+                                para poder comparar su posición con la de los enemigos. Esto lo haremos inmediatamente
+                                antes del bucle for que utilizábamos para mover a los enemigos:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    xp = p.sprite->col*8 + p.sprite->hrot + 4;
    yp = p.sprite->row*8 + p.sprite->vrot + 4;
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>El calculo se hace en función del tile y de la rotación. Por ejemplo, para la coordenada horizontal se multiplica la columna actual del sprite (que recordemos que está expresada en tiles) por 8, que es el número de píxeles de anchura por tile, y a continuación añadimos la rotación u offset, que nos da la posición exacta. A esto le sumamos también 4, para obtener aproximadamente la coordenada del centro del sprite (y decimos aproximadamente, porque en un sprite de 8×8 como el nuestro, el centro exacto se obtendría al sumar 3.5, pero los píxeles en pantalla son unidades discretas). Para la coordenada vertical el proceso es exactamente el mismo.</p>
+                            <p>El calculo se hace en función del tile y de la rotación. Por ejemplo, para la coordenada
+                                horizontal se multiplica la columna actual del sprite (que recordemos que está expresada
+                                en tiles) por 8, que es el número de píxeles de anchura por tile, y a continuación
+                                añadimos la rotación u offset, que nos da la posición exacta. A esto le sumamos también
+                                4, para obtener aproximadamente la coordenada del centro del sprite (y decimos
+                                aproximadamente, porque en un sprite de 8×8 como el nuestro, el centro exacto se
+                                obtendría al sumar 3.5, pero los píxeles en pantalla son unidades discretas). Para la
+                                coordenada vertical el proceso es exactamente el mismo.</p>
 
-<p>Por último añadimos el código que detecta si el sprite del protagonista entra en contacto con el sprite de alguno de los enemigos. En concreto, en el interior del bucle for que utilizamos para mover los enemigos, añadimos este código al final:</p>
+                            <p>Por último añadimos el código que detecta si el sprite del protagonista entra en contacto
+                                con el sprite de alguno de los enemigos. En concreto, en el interior del bucle for que
+                                utilizamos para mover los enemigos, añadimos este código al final:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    xe = enemigos[i].sprite->col*8 + enemigos[i].sprite->hrot;
    ye = enemigos[i].sprite->row*8 + enemigos[i].sprite->vrot;
    if (xe + 8  >= xp && xe <= xp && ye + 8 >= yp && ye <= yp)
@@ -867,103 +1295,145 @@ for (i=0;i<6;i++)
    }
 
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Una vez que se mueve el enemigo i, se obtienen las coordenadas de su esquina superior izquierda. Ahora tenemos que ver si alguna de las partes del sprite del enemigo entra en contacto con alguna de las partes del sprite del protagonista, por lo que reducimos el problema a determinar si se ha producido la intersección entre dos rectángulos de los que conocemos el centro del primero (el sprite del protagonista) y las coordenadas de la esquina superior izquierda del segundo (el sprite del enemigo). La solución a este problema se encuentra en la condición de la instrucción if mostrada en el trozo de código anterior. Si la coordenada x del centro del sprite del protagonista se encuentra entre el lado izquierdo y el lado derecho del sprite del enemigo, y además la coordenada y del centro del sprite del protagonista se encuentra entre el límite inferior y superior del sprite del enemigo, tendremos un contacto ;). Lo que hacemos en esta situación es simplemente cambiar el color del borde, y darle a la variable final el valor 1 para terminar la ejecución del bucle principal.</p>
-<p>¡Ya tenemos un juego completo! Si, es muy simple, no hay puntos ni tabla de records, solo podemos usar unas teclas que no se pueden redefinir, pero tenemos algo que es jugable.</p>
+                            <p>Una vez que se mueve el enemigo i, se obtienen las coordenadas de su esquina superior
+                                izquierda. Ahora tenemos que ver si alguna de las partes del sprite del enemigo entra en
+                                contacto con alguna de las partes del sprite del protagonista, por lo que reducimos el
+                                problema a determinar si se ha producido la intersección entre dos rectángulos de los
+                                que conocemos el centro del primero (el sprite del protagonista) y las coordenadas de la
+                                esquina superior izquierda del segundo (el sprite del enemigo). La solución a este
+                                problema se encuentra en la condición de la instrucción if mostrada en el trozo de
+                                código anterior. Si la coordenada x del centro del sprite del protagonista se encuentra
+                                entre el lado izquierdo y el lado derecho del sprite del enemigo, y además la coordenada
+                                y del centro del sprite del protagonista se encuentra entre el límite inferior y
+                                superior del sprite del enemigo, tendremos un contacto ;). Lo que hacemos en esta
+                                situación es simplemente cambiar el color del borde, y darle a la variable final el
+                                valor 1 para terminar la ejecución del bucle principal.</p>
+                            <p>¡Ya tenemos un juego completo! Si, es muy simple, no hay puntos ni tabla de records, solo
+                                podemos usar unas teclas que no se pueden redefinir, pero tenemos algo que es
+                                jugable.</p>
 
-<p><b>¿Y ahora qué?</b></p>
+                            <p><b>¿Y ahora qué?</b></p>
 
-<p>Hay una serie de aspectos que nos dejamos en el tintero y que trataremos en próximos artículos:</p>
+                            <p>Hay una serie de aspectos que nos dejamos en el tintero y que trataremos en próximos
+                                artículos:</p>
 
-<ul>
+                            <ul>
 
-	<li>¿Cómo definimos sprites más grandes? Veremos como crear sprites de un tamaño superior a 8×8. En realidad es algo muy sencillo una vez que ya sabemos crear sprites de 8×8.</li>
-	<li>¿Cómo podemos cambiar tan solo algunos de los tiles de fondo en lugar de todos? Por ejemplo, podríamos cambiar tan solo los de una región determinada de la pantalla, o incluso leer una disposición de tiles desde memoria.</li>
-	<li>¿Cómo añadimos atributos? ¿Y como tratamos el color clash? Queda un poco soso el juego si solo utilizamos el color azul. Estaría bien poder cambiar el color de los sprites del protagonista y de los enemigos para distinguirlos mejor.</li>
-	<li>¿Cómo podemos utilizar otros métodos de control aparte del teclado? Muy sencillo también, tan solo es cuestión de conocer los posibles valores a utilizar a la hora de inicializar la estructura de entrada de un sprite.</li>
-	<li>¿Cómo creamos enemigos con un poquito de inteligencia? Esto puede dar pie a artículos y artículos sobre Inteligencia Artificial en el Spectrum, en el que los recursos limitados supondrán un reto también en este campo.</li>
-</ul>
+                                <li>¿Cómo definimos sprites más grandes? Veremos como crear sprites de un tamaño
+                                    superior a 8×8. En realidad es algo muy sencillo una vez que ya sabemos crear
+                                    sprites de 8×8.
+                                </li>
+                                <li>¿Cómo podemos cambiar tan solo algunos de los tiles de fondo en lugar de todos? Por
+                                    ejemplo, podríamos cambiar tan solo los de una región determinada de la pantalla, o
+                                    incluso leer una disposición de tiles desde memoria.
+                                </li>
+                                <li>¿Cómo añadimos atributos? ¿Y como tratamos el color clash? Queda un poco soso el
+                                    juego si solo utilizamos el color azul. Estaría bien poder cambiar el color de los
+                                    sprites del protagonista y de los enemigos para distinguirlos mejor.
+                                </li>
+                                <li>¿Cómo podemos utilizar otros métodos de control aparte del teclado? Muy sencillo
+                                    también, tan solo es cuestión de conocer los posibles valores a utilizar a la hora
+                                    de inicializar la estructura de entrada de un sprite.
+                                </li>
+                                <li>¿Cómo creamos enemigos con un poquito de inteligencia? Esto puede dar pie a
+                                    artículos y artículos sobre Inteligencia Artificial en el Spectrum, en el que los
+                                    recursos limitados supondrán un reto también en este campo.
+                                </li>
+                            </ul>
 
-<p>De todas formas, gracias a este artículo se disponen de las bases necesarias no solo para programar ejemplos tan sencillos como el que se presenta, sino que incluso para profundizar en las cabeceras de la librería e intentar llegar más allá.</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-    <li><a href="src/z88dk16_codigo.zip" onClick="window.open(this.href); return false;">Código fuente</a></li>
-</ul>
-</div>
+                            <p>De todas formas, gracias a este artículo se disponen de las bases necesarias no solo para
+                                programar ejemplos tan sencillos como el que se presenta, sino que incluso para
+                                profundizar en las cabeceras de la librería e intentar llegar más allá.</p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+                                <ul>
+                                    <li><a href="src/z88dk16_codigo.zip"
+                                           onClick="window.open(this.href); return false;">Código fuente</a></li>
+                                </ul>
+                            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="right"><br><br>SIEW</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
         </td>
     </tr>
 
-    <tr>
-        <td align="right"><br><br>SIEW</td>
-    </tr>
-</table>                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
 </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
 
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
-                </tr>
-
-            </table>
-
-    </body>
+</body>
 </html>

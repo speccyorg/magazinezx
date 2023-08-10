@@ -1,100 +1,132 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Programación Ensamblador - Magazine ZX número 15 - Marzo 2007</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-    </select>
-    <input type="button" onclick="return false;" name="siguiente" value=">" disabled  />
-</td>
-            <td align="center" class="texto">Número 15 - Marzo 2007</td>
-
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>Programación Ensamblador - Magazine ZX número 15 - Marzo 2007</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p align="center"><font size="5">Lenguaje Ensamblador del Z80 (II)</font></p>
-<p><strong>DESPLAZAMIENTO DE MEMORIA, MANIPULACIÓN DE BITS Y OPERACIONES LÓGICAS</strong></p>
-<p>En nuestra anterior entrega comenzamos nuestra andadura en el lenguaje ensamblador del Z80 por medio de las instrucciones de carga (LD), operaciones aritméticas (ADD, ADC, SUB, SBC, INC, DEC) y de intercambio (EXX y EX). Mientras se introducían las diferentes instrucciones, os mostramos la manera de emplear los registros y cómo los resultados podían afectar a los flags del registro F, mediante las "tablas de afectación de flags".</p>
-<p>Toda la teoría explicada en el anterior capítulo del curso nos permitirá avanzar ahora mucho más rápido, ya que con todos los conceptos asimilados podemos ir realizando una rápida introducción a nuevas instrucciones, bastando ahora con una simple descripción de cada una de ellas. Las tablas de afectación de flags y comentarios sobre los operandos permitidos (o prohibidos) para cada una de ellas completarán la formación necesaria.</p>
-<p>Para poder continuar con éste y posteriores capítulos del curso será imprescindible haber comprendido y asimilado todos los conocimientos de las entregas anteriores, de modo que si no es así, recomendamos al lector que relea las entregas 1, 2 y 3, y que se asegure de comprender todos los conceptos explicados.</p>
-<p>En esta entrega trataremos las operaciones con bits (NEG, CPL, BIT, SET y RES), las operaciones lógicas (AND, OR y XOR) y las operaciones de desplazamiento de bits (RR, RL, RLC, RRC, SLA, SRA y SRL).</p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
+                </tr>
+            </table>
+        </td>
 
-<p>No obstante, antes de pasar a hablar de las operaciones con bits finalizaremos con la descripción de las instrucciones de carga (en este caso las repetitivas), y veremos 4 instrucciones muy sencillas: SCF, CCF, NOP y DAA.</p>
-<p><strong>INSTRUCCIONES DE DESPLAZAMIENTO DE MEMORIA</strong></p>
-<p>En la entrega anterior conocimos la existencia de las instrucciones de carga (LD), que nos permitían mover valores entre registros. Lo que vamos a ver a continuación es cómo podemos copiar un byte de una posición de memoria a otra, con una sóla instrucción.</p>
-<p>Las 2 instrucciones que vamos a describir: LDI y LDD, no admiten parámetros. Lo que hacen estas instrucciones es:</p>
-<p>LDI (Load And Increment):</p>
-<ul>
-	<li>Leer el byte de la posición de memoria apuntada por el registro HL.</li>
-	<li>Escribir ese byte en la posición de memoria apuntada por el registro DE.</li>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
 
-	<li>Incrementar DE en una unidad (DE=DE+1).</li>
-	<li>Incrementar HL en una unidad (HL=HL+1).</li>
-	<li>Decrementar BC en una unidad (BC=BC-1).</li>
-</ul>
-<p>LDD (Load And Decrement):</p>
-<ul>
-	<li>Leer el byte de la posición de memoria apuntada por el registro HL.</li>
-	<li>Escribir ese byte en la posición de memoria apuntada por el registro DE.</li>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
 
-	<li>Decrementar DE en una unidad (DE=DE-1).</li>
-	<li>Decrementar HL en una unidad (HL=HL-1).</li>
-	<li>Decrementar BC en una unidad (BC=BC-1).</li>
-</ul>
-<p>En pseudocódigo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html" selected>Programación Ensamblador</option>
+                            </select>
+                            <input type="button" onclick="return false;" name="siguiente" value=">" disabled/>
+                        </td>
+                        <td align="center" class="texto">Número 15 - Marzo 2007</td>
+
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">Lenguaje Ensamblador del Z80 (II)</font></p>
+                            <p><strong>DESPLAZAMIENTO DE MEMORIA, MANIPULACIÓN DE BITS Y OPERACIONES LÓGICAS</strong>
+                            </p>
+                            <p>En nuestra anterior entrega comenzamos nuestra andadura en el lenguaje ensamblador del
+                                Z80 por medio de las instrucciones de carga (LD), operaciones aritméticas (ADD, ADC,
+                                SUB, SBC, INC, DEC) y de intercambio (EXX y EX). Mientras se introducían las diferentes
+                                instrucciones, os mostramos la manera de emplear los registros y cómo los resultados
+                                podían afectar a los flags del registro F, mediante las "tablas de afectación de
+                                flags".</p>
+                            <p>Toda la teoría explicada en el anterior capítulo del curso nos permitirá avanzar ahora
+                                mucho más rápido, ya que con todos los conceptos asimilados podemos ir realizando una
+                                rápida introducción a nuevas instrucciones, bastando ahora con una simple descripción de
+                                cada una de ellas. Las tablas de afectación de flags y comentarios sobre los operandos
+                                permitidos (o prohibidos) para cada una de ellas completarán la formación necesaria.</p>
+                            <p>Para poder continuar con éste y posteriores capítulos del curso será imprescindible haber
+                                comprendido y asimilado todos los conocimientos de las entregas anteriores, de modo que
+                                si no es así, recomendamos al lector que relea las entregas 1, 2 y 3, y que se asegure
+                                de comprender todos los conceptos explicados.</p>
+                            <p>En esta entrega trataremos las operaciones con bits (NEG, CPL, BIT, SET y RES), las
+                                operaciones lógicas (AND, OR y XOR) y las operaciones de desplazamiento de bits (RR, RL,
+                                RLC, RRC, SLA, SRA y SRL).</p>
+
+                            <p>No obstante, antes de pasar a hablar de las operaciones con bits finalizaremos con la
+                                descripción de las instrucciones de carga (en este caso las repetitivas), y veremos 4
+                                instrucciones muy sencillas: SCF, CCF, NOP y DAA.</p>
+                            <p><strong>INSTRUCCIONES DE DESPLAZAMIENTO DE MEMORIA</strong></p>
+                            <p>En la entrega anterior conocimos la existencia de las instrucciones de carga (LD), que
+                                nos permitían mover valores entre registros. Lo que vamos a ver a continuación es cómo
+                                podemos copiar un byte de una posición de memoria a otra, con una sóla instrucción.</p>
+                            <p>Las 2 instrucciones que vamos a describir: LDI y LDD, no admiten parámetros. Lo que hacen
+                                estas instrucciones es:</p>
+                            <p>LDI (Load And Increment):</p>
+                            <ul>
+                                <li>Leer el byte de la posición de memoria apuntada por el registro HL.</li>
+                                <li>Escribir ese byte en la posición de memoria apuntada por el registro DE.</li>
+
+                                <li>Incrementar DE en una unidad (DE=DE+1).</li>
+                                <li>Incrementar HL en una unidad (HL=HL+1).</li>
+                                <li>Decrementar BC en una unidad (BC=BC-1).</li>
+                            </ul>
+                            <p>LDD (Load And Decrement):</p>
+                            <ul>
+                                <li>Leer el byte de la posición de memoria apuntada por el registro HL.</li>
+                                <li>Escribir ese byte en la posición de memoria apuntada por el registro DE.</li>
+
+                                <li>Decrementar DE en una unidad (DE=DE-1).</li>
+                                <li>Decrementar HL en una unidad (HL=HL-1).</li>
+                                <li>Decrementar BC en una unidad (BC=BC-1).</li>
+                            </ul>
+                            <p>En pseudocódigo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 LDI:    Copiar [HL] en [DE]
         DE=DE+1
         HL=HL+1
@@ -106,24 +138,36 @@ LDD:    Copiar [HL] en [DE]
         BC=BC-1
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Estas instrucciones lo que nos permiten es copiar datos de una zona de la memoria a otra. Por ejemplo, supongamos que queremos copiar el byte contenido en 16384 a la posición de memoria 40000:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Estas instrucciones lo que nos permiten es copiar datos de una zona de la memoria a otra.
+                                Por ejemplo, supongamos que queremos copiar el byte contenido en 16384 a la posición de
+                                memoria 40000:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD HL, 16384
  LD DE, 40000
  LDI
 </pre>
-    </p></td></tr>
-</table>
- <p>Qué tiene de especial LDI con respecto a realizar la copia a mano con operaciones LD? Pues que al incrementar HL y DE, lo que hace es apuntar a los siguientes elementos en memoria (HL=16385 y DE=40001), con lo cual nos facilita la posibilidad de copiar múltiples datos (no sólo 1), con varios LDI. Lo mismo ocurre con LDD, que al decrementar DE y HL los hace apuntar a los bytes anteriores de origen y destino.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Qué tiene de especial LDI con respecto a realizar la copia a mano con operaciones LD?
+                                Pues que al incrementar HL y DE, lo que hace es apuntar a los siguientes elementos en
+                                memoria (HL=16385 y DE=40001), con lo cual nos facilita la posibilidad de copiar
+                                múltiples datos (no sólo 1), con varios LDI. Lo mismo ocurre con LDD, que al decrementar
+                                DE y HL los hace apuntar a los bytes anteriores de origen y destino.</p>
 
- <p>Pero para facilitarnos más aún la tarea de copia (y no tener que realizar bucles manualmente), el Z80 nos proporciona las instrucciones LDIR y LDDR, que funcionan igual que LDI y LDD pero copiando tantos bytes como valga el registro BC. Es decir:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Pero para facilitarnos más aún la tarea de copia (y no tener que realizar bucles
+                                manualmente), el Z80 nos proporciona las instrucciones LDIR y LDDR, que funcionan igual
+                                que LDI y LDD pero copiando tantos bytes como valga el registro BC. Es decir:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 LDIR = Repetir LDI hasta que BC valga 0
      = Repetir:
           Copiar [HL] en [DE]
@@ -140,25 +184,35 @@ LDDR = Repetir LDD hasta que BC valga 0
           BC=BC-1
        Hasta que BC = 0
 </pre>
-    </p></td></tr>
-</table>
-<p>Estas instrucciones son enormemente útiles porque nos permiten copiar bloques de datos desde una zona de la memoria a otra. Por ejemplo, podemos hacernos una copia del estado de la pantalla en una zona de memoria mediante:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Estas instrucciones son enormemente útiles porque nos permiten copiar bloques de datos
+                                desde una zona de la memoria a otra. Por ejemplo, podemos hacernos una copia del estado
+                                de la pantalla en una zona de memoria mediante:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
   LD HL, 16384
   LD DE, 50000
   LD BC, 6912
   LDIR
 </pre>
-    </p></td></tr>
-</table>
-<p>Con el anterior programa, copiamos los 6912 bytes que hay a partir de la dirección de memoria 16384 (la pantalla) y los copiamos a partir de la dirección 50000. De este modo, desde 50000 a 56912 tendremos una copia del estado de la pantalla (podría servir, por ejemplo, para modificar cosas en esta "pantalla virtual" y después copiarla de nuevo a la videoram, tomando HL=50000 y DE=16384).</p>
-<p>Para demostrar esto, ensamblemos y ejecutemos el siguiente ejemplo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Con el anterior programa, copiamos los 6912 bytes que hay a partir de la dirección de
+                                memoria 16384 (la pantalla) y los copiamos a partir de la dirección 50000. De este modo,
+                                desde 50000 a 56912 tendremos una copia del estado de la pantalla (podría servir, por
+                                ejemplo, para modificar cosas en esta "pantalla virtual" y después copiarla de nuevo a
+                                la videoram, tomando HL=50000 y DE=16384).</p>
+                            <p>Para demostrar esto, ensamblemos y ejecutemos el siguiente ejemplo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  ; Ejemplo de LDIR donde copiamos 6144 bytes de la ROM
  ; a la videomemoria. Digamos que "veremos la ROM" :)
  ORG 40000
@@ -171,36 +225,47 @@ LDDR = Repetir LDD hasta que BC valga 0
  RET
 
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<table border="0" cellspacing="0" cellpadding="2" width="317">
-	<tr align="right">
-		<td><img src="img/la_rom.gif" width="317" height="238"  alt="Aspecto de la rom al copiarla a la VRAM" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Aspecto de la rom al copiarla a la VRAM</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="317">
+                                <tr align="right">
+                                    <td><img src="img/la_rom.gif" width="317" height="238"
+                                             alt="Aspecto de la rom al copiarla a la VRAM"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Aspecto de la rom al copiarla a la VRAM</td>
 
-	</tr>
-</table>
+                                </tr>
+                            </table>
 
-<p>Os animo a que probéis el equivalente BASIC del ejemplo anterior y verifiquéis las diferencias de velocidad existentes:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Os animo a que probéis el equivalente BASIC del ejemplo anterior y verifiquéis las
+                                diferencias de velocidad existentes:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   5 REM Ejecutar "bas2tap -a10 copiarom.bas copiarom.tap"
  10 REM Copiamos la ROM en la VideoRAM
  20 FOR I=0 TO 6144 : POKE (16384+I), (PEEK I) : NEXT I
  30 PAUSE 0
 </pre>
-    </p></td></tr>
-</table>
-</p>Concluimos pues que en todas estas instrucciones de copia de memoria o transferencia, HL es el origen, DE el destino y BC el número de bytes a transferir. Con LDI y LDD sólo copiaremos 1 byte (independientemente del valor de BC, aunque lo decrementará), y con LDIR y LDDR copiaremos tantos bytes como valga BC, decrementando BC hasta que su valor llega a cero. Los flags quedarán afectados, especialmente con LDI y LDD para indicarnos mediante el registro P/V si BC ha llegado a cero.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            </p>Concluimos pues que en todas estas instrucciones de copia de memoria o transferencia, HL
+                            es el origen, DE el destino y BC el número de bytes a transferir. Con LDI y LDD sólo
+                            copiaremos 1 byte (independientemente del valor de BC, aunque lo decrementará), y con LDIR y
+                            LDDR copiaremos tantos bytes como valga BC, decrementando BC hasta que su valor llega a
+                            cero. Los flags quedarán afectados, especialmente con LDI y LDD para indicarnos mediante el
+                            registro P/V si BC ha llegado a cero.</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                          Flags
    Instrucción       |S Z H P N C|
  ----------------------------------
@@ -209,12 +274,15 @@ LDDR = Repetir LDD hasta que BC valga 0
    LDDR              |- - 0 0 0 -|
    LDIR              |- - 0 0 0 -|
  </pre>
-    </p></td></tr>
-</table>
-<p>Recordemos el significado de los símbolos de la tabla de afectación de flags (válido para todas las tablas de instrucciones que utilizaremos a lo largo del curso):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Recordemos el significado de los símbolos de la tabla de afectación de flags (válido para
+                                todas las tablas de instrucciones que utilizaremos a lo largo del curso):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  - = El flag NO se ve afectado por la operación.
  * = El flag se ve afectado por la operación acorde al resultado.
  0 = El flag se pone a cero.
@@ -224,60 +292,82 @@ LDDR = Repetir LDD hasta que BC valga 0
  ? = El flag toma un valor indeterminado.
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Una duda que puede asaltarle al lector es: "si tenemos LDIR para copiar bloques, ¿para qué nos puede servir LDDR? ¿No es una instrucción redundante, que podemos no necesitar nunca gracias a LDIR? Pues como bien nos apunta Miguel (devil_net) LDDR es especialmente útil cuando hay que hacer copias de bloques de datos que se superponen.</p>
-<p>Supongamos que tenemos que realizar una copia de 1000 bytes desde 25000 hasta 25100. Supongamos que preparamos el siguiente código:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Una duda que puede asaltarle al lector es: "si tenemos LDIR para copiar bloques, ¿para
+                                qué nos puede servir LDDR? ¿No es una instrucción redundante, que podemos no necesitar
+                                nunca gracias a LDIR? Pues como bien nos apunta Miguel (devil_net) LDDR es especialmente
+                                útil cuando hay que hacer copias de bloques de datos que se superponen.</p>
+                            <p>Supongamos que tenemos que realizar una copia de 1000 bytes desde 25000 hasta 25100.
+                                Supongamos que preparamos el siguiente código:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD HL, 25000
  LD DE, 25100
  LD BC, 1000
  LDIR
  </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Este código no funcionará como esperamos. Ambas zonas se superponen, con lo cual si lo ejecutamos, ocurrirá lo siguiente:</p>
-<ul>
-	<li>El byte en [25000] se copiará a [25100].</li>
-	<li>El byte en [25001] se copiará a [25101].</li>
-	<li>etc...</li>
-</ul>
-<p>¿Qué ocurrirá cuando LDIR llegue al byte número 25100 y lo intente copiar a 25200? Sencillamente, que hemos perdido el contenido REAL del byte número 25100, porque fue machacado al principio de la ejecución del LDIR por el byte contenido en [25000]. No estamos moviendo el bloque correctamente, porque las zonas se superponen y cuando llegamos a la zona destino, estamos copiando bytes que movimos desde el origen.</p>
-<p>Para ello, lo correcto sería utilizar el siguiente código:</p>
+                            </table>
+                            <p>Este código no funcionará como esperamos. Ambas zonas se superponen, con lo cual si lo
+                                ejecutamos, ocurrirá lo siguiente:</p>
+                            <ul>
+                                <li>El byte en [25000] se copiará a [25100].</li>
+                                <li>El byte en [25001] se copiará a [25101].</li>
+                                <li>etc...</li>
+                            </ul>
+                            <p>¿Qué ocurrirá cuando LDIR llegue al byte número 25100 y lo intente copiar a 25200?
+                                Sencillamente, que hemos perdido el contenido REAL del byte número 25100, porque fue
+                                machacado al principio de la ejecución del LDIR por el byte contenido en [25000]. No
+                                estamos moviendo el bloque correctamente, porque las zonas se superponen y cuando
+                                llegamos a la zona destino, estamos copiando bytes que movimos desde el origen.</p>
+                            <p>Para ello, lo correcto sería utilizar el siguiente código:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD HL, 26000
  LD DE, 26100
  LD BC, 1000
  LDDR
 </pre>
-    </p></td></tr>
-</table>
-<p>Es decir, apuntamos HL y DE al final de los 2 bloques de copia, y copiamos los bloques desde abajo, decrementando. De este modo nunca "machacamos" una posición de memoria que vayamos a copiar posteriormente con un dato.</p>
-<p>En este ejemplo:</p>
-<ul>
-	<li>El byte en [26000] se copia en [26100].</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Es decir, apuntamos HL y DE al final de los 2 bloques de copia, y copiamos los bloques
+                                desde abajo, decrementando. De este modo nunca "machacamos" una posición de memoria que
+                                vayamos a copiar posteriormente con un dato.</p>
+                            <p>En este ejemplo:</p>
+                            <ul>
+                                <li>El byte en [26000] se copia en [26100].</li>
 
-	<li>El byte en [25999] se copia en [26099].</li>
-	<li>El byte en [25998] se copia en [26098].</li>
-	<li>(...)</li>
-	<li>El byte en [25001] se copia en [25101].</li>
-	<li>El byte en [25000] se copia en [25100].</li>
-</ul>
-<p>Que es, efectivamente, lo que queríamos hacer, pero sin perder datos en la copia: copiar 1000 bytes desde 25000 a 25100 (sólo que realizamos la copia de abajo a arriba).</p>
+                                <li>El byte en [25999] se copia en [26099].</li>
+                                <li>El byte en [25998] se copia en [26098].</li>
+                                <li>(...)</li>
+                                <li>El byte en [25001] se copia en [25101].</li>
+                                <li>El byte en [25000] se copia en [25100].</li>
+                            </ul>
+                            <p>Que es, efectivamente, lo que queríamos hacer, pero sin perder datos en la copia: copiar
+                                1000 bytes desde 25000 a 25100 (sólo que realizamos la copia de abajo a arriba).</p>
 
-<p><strong>UN EJEMPLO DE RUTINA CON LDIR</strong></p>
-<p>Vamos a ver un ejemplo de rutina en ensamblador que utiliza LDIR con un propósito concreto: vamos a cargar una pantalla de carga (por ejemplo, para nuestros juegos) de forma que no aparezca poco a poco como lo haría con LOAD "" SCREEN$, sino que aparezca de golpe.</p>
-<p>Para eso lo que haremos será lo siguiente:</p>
-<p>Crearemos una rutina en ensamblador que copiará 6912 bytes desde la dirección 50000 hasta la posición 16384 (la videoram). La rutina ya la hemos visto:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p><strong>UN EJEMPLO DE RUTINA CON LDIR</strong></p>
+                            <p>Vamos a ver un ejemplo de rutina en ensamblador que utiliza LDIR con un propósito
+                                concreto: vamos a cargar una pantalla de carga (por ejemplo, para nuestros juegos) de
+                                forma que no aparezca poco a poco como lo haría con LOAD "" SCREEN$, sino que aparezca
+                                de golpe.</p>
+                            <p>Para eso lo que haremos será lo siguiente:</p>
+                            <p>Crearemos una rutina en ensamblador que copiará 6912 bytes desde la dirección 50000 hasta
+                                la posición 16384 (la videoram). La rutina ya la hemos visto:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  ORG 40000
   LD HL, 50000     ; Origen: 50000
   LD DE, 16384     ; Destino: la VideoRAM
@@ -285,22 +375,27 @@ LDDR = Repetir LDD hasta que BC valga 0
   LDIR             ; copiar
  RET
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>La ensamblamos con pasmo y obtenemos el siguiente código máquina:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>La ensamblamos con pasmo y obtenemos el siguiente código máquina:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  33, 80, 195, 017, 0, 64, 1, 0, 27, 237, 176, 201
 </pre>
-    </p></td></tr>
-</table>
-<p>Nos crearemos un cargador BASIC que realice el trabajo de pokear nuestra rutina en 40000 y cargar la pantalla en 50000:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Nos crearemos un cargador BASIC que realice el trabajo de pokear nuestra rutina en 40000
+                                y cargar la pantalla en 50000:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 10 REM Ejemplo de volcado de pantalla de carga
 20 CLEAR 39999
 30 DATA 33, 80, 195, 017, 0, 64, 1, 0, 27, 237, 176, 201
@@ -309,41 +404,80 @@ LDDR = Repetir LDD hasta que BC valga 0
 60 RANDOMIZE USR 40000
 70 PAUSE 0
 </pre>
-    </p></td></tr>
-</table>
-<p>Grabamos este cargador en cinta (o tap/tzx), y a continuación, tras el cargador, grabamos una pantalla de carga.</p>
-<p>Ejecutamos el programa resultante en emulador o Spectrum, y veremos cómo la carga de la pantalla no puede verse en el monitor. Cuando está termina su carga, la rutina ensamblador se ejecuta y se vuelca, de golpe, a la videoram (estad atentos a la carga, porque el volcado es muy rápido).</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Grabamos este cargador en cinta (o tap/tzx), y a continuación, tras el cargador, grabamos
+                                una pantalla de carga.</p>
+                            <p>Ejecutamos el programa resultante en emulador o Spectrum, y veremos cómo la carga de la
+                                pantalla no puede verse en el monitor. Cuando está termina su carga, la rutina
+                                ensamblador se ejecuta y se vuelca, de golpe, a la videoram (estad atentos a la carga,
+                                porque el volcado es muy rápido).</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="318">
-	<tr align="right">
-		<td><img src="img/carga.gif" width="318" height="239"  alt="La pantalla de carga de ZXColumns, volcada a videoram" />
-</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="318">
+                                <tr align="right">
+                                    <td><img src="img/carga.gif" width="318" height="239"
+                                             alt="La pantalla de carga de ZXColumns, volcada a videoram"/>
+                                    </td>
 
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">La pantalla de carga de ZXColumns, volcada a videoram</td>
-	</tr>
-</table>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">La pantalla de carga de ZXColumns, volcada a
+                                        videoram
+                                    </td>
+                                </tr>
+                            </table>
 
-<p><strong>ALGUNAS INSTRUCCIONES ESPECIALES</strong></p>
-<p>Antes de comenzar con las instrucciones de manipulación de registros y datos a nivel de bits vamos a ver una serie de instrucciones difíciles de encuadrar en futuros apartados y que pueden sernos de utilidad en nuestros programas:</p>
-<ul>
-	<li><p>SCF: Set Carry Flag</p>
+                            <p><strong>ALGUNAS INSTRUCCIONES ESPECIALES</strong></p>
+                            <p>Antes de comenzar con las instrucciones de manipulación de registros y datos a nivel de
+                                bits vamos a ver una serie de instrucciones difíciles de encuadrar en futuros apartados
+                                y que pueden sernos de utilidad en nuestros programas:</p>
+                            <ul>
+                                <li><p>SCF: Set Carry Flag</p>
 
-		<p>Esta instrucción (que no admite parámetros) pone a 1 el Carry Flag del registro F. Puede sernos útil en determinadas operaciones aritméticas.</p></li>
-	<li><p>CCF: Complement Carry Flag</p>
-		<p>Esta instrucción (que tampoco admite parámetros) invierte el estado del bit de Carry Flag: si está a 1 lo pone a 0, y viceversa. Puede servirnos para poner a 0 el carry flag mediante la combinación de SCF + CCF.</p></li>
-	<li><p>NOP: No OPeration</p>
-		<p>Esta instrucción especial del microprocesador ocupa un byte en el código (opcode 00h) y no efectúa ninguna operación ni afecta a ningún flag. Eso sí, se toma 4 t-states (t-estados, o ciclos del procesador) para ejecutarse. ¿Para qué puede servir una instrucción que no realiza ninguna acción y que requiere tiempo del procesador (aunque sea muy poco) para ejecutarse? Muy sencillo: para múltiples cosas. Por un lado, podemos utilizarla en bucles de retardos (varios NOPs ejecutados en un bucle que se repita varias veces) para poner retardos en nuestros programas o juegos. Por otro, como ocupa un byte en memoria (en el código) y no realiza ninguna operación, podemos utilizarla para rellenar zonas de nuestro código, y así alinear código posterior en una determinada dirección que nos interese.</p></li>
-	<li><p>DAA: Decimal Adjust Accumulator</p>
+                                    <p>Esta instrucción (que no admite parámetros) pone a 1 el Carry Flag del registro
+                                        F. Puede sernos útil en determinadas operaciones aritméticas.</p></li>
+                                <li><p>CCF: Complement Carry Flag</p>
+                                    <p>Esta instrucción (que tampoco admite parámetros) invierte el estado del bit de
+                                        Carry Flag: si está a 1 lo pone a 0, y viceversa. Puede servirnos para poner a 0
+                                        el carry flag mediante la combinación de SCF + CCF.</p></li>
+                                <li><p>NOP: No OPeration</p>
+                                    <p>Esta instrucción especial del microprocesador ocupa un byte en el código (opcode
+                                        00h) y no efectúa ninguna operación ni afecta a ningún flag. Eso sí, se toma 4
+                                        t-states (t-estados, o ciclos del procesador) para ejecutarse. ¿Para qué puede
+                                        servir una instrucción que no realiza ninguna acción y que requiere tiempo del
+                                        procesador (aunque sea muy poco) para ejecutarse? Muy sencillo: para múltiples
+                                        cosas. Por un lado, podemos utilizarla en bucles de retardos (varios NOPs
+                                        ejecutados en un bucle que se repita varias veces) para poner retardos en
+                                        nuestros programas o juegos. Por otro, como ocupa un byte en memoria (en el
+                                        código) y no realiza ninguna operación, podemos utilizarla para rellenar zonas
+                                        de nuestro código, y así alinear código posterior en una determinada dirección
+                                        que nos interese.</p></li>
+                                <li><p>DAA: Decimal Adjust Accumulator</p>
 
-		<p> Esta instrucción permite realizar ajustes en los resultados de operaciones con números BCD (tras operaciones aritméticas). ¿Qué son los números en formato BCD? Es una manera de representar números en los registros (o memoria) de forma que de los 8 bits de un byte se utilizan los 4 bits del 0 al 3 para representar un número del 0 al 9 (4 bits = desde 0000 hasta 1111), y los 4 bits del bit 4 al 7 para representar otro número del 0 al 9. A los 2 números BCD juntos se les llama "Byte BCD" o "números en formato BCD". Un número BCD puede estar formado por varios bytes BCD, siendo cada byte 2 cifras del mismo. Así, para representar un número de 10 cifras en BCD sólo es necesario utilizar 5 bytes. Además, podemos utilizar un byte extra que indique la posición de la "coma decimal" para así poder trabajar con números decimales en ensamblador. Si queremos realizar operaciones entre este tipo de números deberemos programarnos nosotros mismos las rutinas para realizarlas.</p></li>
-</ul>
-<p>A lo largo del curso no utilizaremos números en BCD y por lo tanto es muy probable que no lleguemos a utilizar DAA, pero conviene saber que el Z80 nos brinda la oportunidad de utilizar números más grandes de 16 bits, operando con números en BCD. Para realizar juegos normalmente no necesitaremos de estas instrucciones.</p>
-<p>Todas estas instrucciones afectan a los flags de la siguiente manera:</p>
- <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                    <p> Esta instrucción permite realizar ajustes en los resultados de operaciones con
+                                        números BCD (tras operaciones aritméticas). ¿Qué son los números en formato BCD?
+                                        Es una manera de representar números en los registros (o memoria) de forma que
+                                        de los 8 bits de un byte se utilizan los 4 bits del 0 al 3 para representar un
+                                        número del 0 al 9 (4 bits = desde 0000 hasta 1111), y los 4 bits del bit 4 al 7
+                                        para representar otro número del 0 al 9. A los 2 números BCD juntos se les llama
+                                        "Byte BCD" o "números en formato BCD". Un número BCD puede estar formado por
+                                        varios bytes BCD, siendo cada byte 2 cifras del mismo. Así, para representar un
+                                        número de 10 cifras en BCD sólo es necesario utilizar 5 bytes. Además, podemos
+                                        utilizar un byte extra que indique la posición de la "coma decimal" para así
+                                        poder trabajar con números decimales en ensamblador. Si queremos realizar
+                                        operaciones entre este tipo de números deberemos programarnos nosotros mismos
+                                        las rutinas para realizarlas.</p></li>
+                            </ul>
+                            <p>A lo largo del curso no utilizaremos números en BCD y por lo tanto es muy probable que no
+                                lleguemos a utilizar DAA, pero conviene saber que el Z80 nos brinda la oportunidad de
+                                utilizar números más grandes de 16 bits, operando con números en BCD. Para realizar
+                                juegos normalmente no necesitaremos de estas instrucciones.</p>
+                            <p>Todas estas instrucciones afectan a los flags de la siguiente manera:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                          Flags
    Instrucción       |S Z H P N C|
  ----------------------------------
@@ -353,84 +487,118 @@ LDDR = Repetir LDD hasta que BC valga 0
    DAA               |* * * P - *|
 </pre>
 
-    </p></td></tr>
-</table>
-<p><strong>OPERACIONES CON BITS</strong></p>
-<p>El conjunto de instrucciones que vamos a ver hoy está pensado para trabajar con los bits individuales de un registro: invertir los bits de un registro, obtener el complemento a dos de un registro y poner a 0 o a 1, o comprobar, un determinado bit de un registro.</p>
-<p><em>CPL Y NEG</em></p>
-<p>CPL es una instrucción que se usa para obtener el inverso del registro A. No admite parámetros (el operando destino es el registro A) y cuando la ejecutamos, se invierte el estado de cada uno de los bits de A, de forma que los unos pasan a valer cero, y los ceros, uno.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><strong>OPERACIONES CON BITS</strong></p>
+                            <p>El conjunto de instrucciones que vamos a ver hoy está pensado para trabajar con los bits
+                                individuales de un registro: invertir los bits de un registro, obtener el complemento a
+                                dos de un registro y poner a 0 o a 1, o comprobar, un determinado bit de un
+                                registro.</p>
+                            <p><em>CPL Y NEG</em></p>
+                            <p>CPL es una instrucción que se usa para obtener el inverso del registro A. No admite
+                                parámetros (el operando destino es el registro A) y cuando la ejecutamos, se invierte el
+                                estado de cada uno de los bits de A, de forma que los unos pasan a valer cero, y los
+                                ceros, uno.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD A, %10000001
  CPL                 ; A = %01111110
 
 </pre>
-    </p></td></tr>
-</table>
-<p>La tabla de afectación de flags de CPL es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La tabla de afectación de flags de CPL es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                          Flags
    Instrucción       |S Z H P N C|
  ----------------------------------
    CPL               |- - 1 - 1 -|
 </pre>
-    </p></td></tr>
-</table>
-<p>Es decir, se deja a uno el flag de Resta (N) y el de HalfCarry (H). El resto de flags no se ven afectados.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Es decir, se deja a uno el flag de Resta (N) y el de HalfCarry (H). El resto de flags no
+                                se ven afectados.</p>
 
-<p>Existe una instrucción similar a CPL, pero que además de realizar la inversión de unos y ceros suma 00000001 al resultado de la inversión del registro A. El resultado es que en A obtenemos el valor negativo del número en complemento a dos almacenado en este registro (A = -A).</p>
-<p>Por ejemplo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Existe una instrucción similar a CPL, pero que además de realizar la inversión de unos y
+                                ceros suma 00000001 al resultado de la inversión del registro A. El resultado es que en
+                                A obtenemos el valor negativo del número en complemento a dos almacenado en este
+                                registro (A = -A).</p>
+                            <p>Por ejemplo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD A, 1     ; A = +1
  NEG         ; A = -1 = %11111111
 </pre>
-    </p></td></tr>
-</table>
-<p>La tabla de afectación de flags de NEG es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La tabla de afectación de flags de NEG es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                          Flags
    Instrucción       |S Z H P N C|
  ----------------------------------
    NEG               |* * * V 1 *|
 </pre>
-    </p></td></tr>
-</table>
-<p><em>SET, RES Y BIT</em></p>
-<p>Las siguientes instrucciones que vamos a ver nos permitirán el manejo de cualquiera de los bits de un registro o posición de memoria: activar un bit (ponerlo a uno), desactivar un bit (ponerlo a cero), o comprobar su valor (averiguar si es cero o uno) afectando a los flags.</p>
-<p>Comencemos con "SET". Esta instrucción activa (pone a valor 1) uno de los bits de un registro o dirección de memoria. El formato de la instrucción es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><em>SET, RES Y BIT</em></p>
+                            <p>Las siguientes instrucciones que vamos a ver nos permitirán el manejo de cualquiera de
+                                los bits de un registro o posición de memoria: activar un bit (ponerlo a uno),
+                                desactivar un bit (ponerlo a cero), o comprobar su valor (averiguar si es cero o uno)
+                                afectando a los flags.</p>
+                            <p>Comencemos con "SET". Esta instrucción activa (pone a valor 1) uno de los bits de un
+                                registro o dirección de memoria. El formato de la instrucción es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
  SET bit, DESTINO
 </pre>
-    </p></td></tr>
-</table>
-<p>donde Bit es un número entre 0 (el bit menos significativo o bit 0) y 7 (el de más valor o más significativo), y destino puede ser cualquier registro de 8 bits (A, B, C, D, E, H y L), una dirección de memoria apuntada por HL (es decir, el destino puede ser [HL]), o una dirección de memoria indexada por [IX+N] o [IY+N]. Con esto, las siguientes instrucciones serían válidas:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>donde Bit es un número entre 0 (el bit menos significativo o bit 0) y 7 (el de más valor
+                                o más significativo), y destino puede ser cualquier registro de 8 bits (A, B, C, D, E, H
+                                y L), una dirección de memoria apuntada por HL (es decir, el destino puede ser [HL]), o
+                                una dirección de memoria indexada por [IX+N] o [IY+N]. Con esto, las siguientes
+                                instrucciones serían válidas:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  SET 5, A         ; Activar el bit 5 del registro A
  SET 0, H         ; Activar el bit 0 del registro H
  SET 7, [HL]      ; Activar el bit 7 del dato contenido en
                   ; la dirección de memoria apuntada por HL
  SET 1, [IX+10]   ; Activar el bit 1 del dato en [IX+10]
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>La instrucción contraria a SET es RES (de reset), que pone a cero uno de los bits del destino especificado. Su formato es igual que el de SET, como podemos ver en los siguientes ejemplos:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>La instrucción contraria a SET es RES (de reset), que pone a cero uno de los bits del
+                                destino especificado. Su formato es igual que el de SET, como podemos ver en los
+                                siguientes ejemplos:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  RES bit, DESTINO
 
  RES 0, H         ; Desactivar el bit 0 del registro H
@@ -438,42 +606,56 @@ LDDR = Repetir LDD hasta que BC valga 0
                   ; la dirección de memoria apuntada por HL
  RES 1, [IX-5]    ; Desactivar el bit 0 del dato en [IX-5]
 </pre>
-    </p></td></tr>
-</table>
-<p>SET y RES no afectan a los flags, como podemos ver en su tabla de afectación de indicadores:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>SET y RES no afectan a los flags, como podemos ver en su tabla de afectación de
+                                indicadores:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
                         Flags
   Instrucción       |S Z H P N C|
  ----------------------------------
   SET b, s          |- - - - - -|
   RES b, s          |- - - - - -|
 </pre>
-    </p></td></tr>
-</table>
-<p>La última instrucción de manipulación de bits individuales que veremos en este apartado es BIT. Esta instrucción modifica el flag de cero (Z) y deja su valor en 0 ó 1 dependiendo del valor del bit que estamos probando. Si estamos probando, por ejemplo, el bit 5 del registro A, ocurrirá lo siguiente:</p>
-<ul>
-	<li>Si el bit 5 del registro A es cero: el Flag Z se pone a 1.</li>
-	<li>Si el bit 5 del registro A es uno: el flag Z se pone a 0.</li>
-</ul>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La última instrucción de manipulación de bits individuales que veremos en este apartado
+                                es BIT. Esta instrucción modifica el flag de cero (Z) y deja su valor en 0 ó 1
+                                dependiendo del valor del bit que estamos probando. Si estamos probando, por ejemplo, el
+                                bit 5 del registro A, ocurrirá lo siguiente:</p>
+                            <ul>
+                                <li>Si el bit 5 del registro A es cero: el Flag Z se pone a 1.</li>
+                                <li>Si el bit 5 del registro A es uno: el flag Z se pone a 0.</li>
+                            </ul>
 
-<p>En otras palabras, Z toma la inversa del valor del Bit que comprobamos: esto es así porque Z no es una COPIA del bit que estamos testeando, sino el resultado de evaluar si dicho bit es cero o no, y una evaluación así pone a uno el flag Z sólo cuando lo que se evalúa es cero.</p>
-<p>Su formato es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>En otras palabras, Z toma la inversa del valor del Bit que comprobamos: esto es así
+                                porque Z no es una COPIA del bit que estamos testeando, sino el resultado de evaluar si
+                                dicho bit es cero o no, y una evaluación así pone a uno el flag Z sólo cuando lo que se
+                                evalúa es cero.</p>
+                            <p>Su formato es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  BIT bit, DESTINO
 </pre>
-    </p></td></tr>
-</table>
-<p>El destino puede ser el mismo que en SET y RES: un registro, posición de memoria apuntado por HL o posición de memoria apuntada por un registro índice más un desplazamiento.</p>
-<p>Por ejemplo:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>El destino puede ser el mismo que en SET y RES: un registro, posición de memoria apuntado
+                                por HL o posición de memoria apuntada por un registro índice más un desplazamiento.</p>
+                            <p>Por ejemplo:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD A, 8       ; A = %00001000
  BIT 7, A      ; El flag Z vale 1
                ; porque el bit 7 es 0
@@ -481,14 +663,21 @@ LDDR = Repetir LDD hasta que BC valga 0
                ; porque el bit 3 no es 0
                ; (es 1).
 </pre>
-    </p></td></tr>
-</table>
-<p>El lector se preguntará ... ¿cuál es la utilidad de BIT? Bien, el hecho de que BIT modifique el Zero Flag de acuerdo al bit que queremos comprobar nos permitirá utilizar instrucciones condicionales para realizar muchas tareas. Por ejemplo, podemos comprobar el bit 0 de un registro (algo que nos permitiría saber si es par o impar) y en caso de que se active el flag de Zero (Si z=1, el bit 0 vale 0, luego es par), realizar un salto a una determinada línea de programa.</p>
-<p>Por ejemplo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>El lector se preguntará ... ¿cuál es la utilidad de BIT? Bien, el hecho de que BIT
+                                modifique el Zero Flag de acuerdo al bit que queremos comprobar nos permitirá utilizar
+                                instrucciones condicionales para realizar muchas tareas. Por ejemplo, podemos comprobar
+                                el bit 0 de un registro (algo que nos permitiría saber si es par o impar) y en caso de
+                                que se active el flag de Zero (Si z=1, el bit 0 vale 0, luego es par), realizar un salto
+                                a una determinada línea de programa.</p>
+                            <p>Por ejemplo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 
  BIT 0, A      ; Que valor tiene el bit 0?
                ; Ahora Z = bit 0 de A.
@@ -496,26 +685,35 @@ LDDR = Repetir LDD hasta que BC valga 0
                ; (si Z=1 -> salta a es_par)
                ; ya que si Z=1, es porque e
 </pre>
-    </p></td></tr>
-</table>
-<p>Esta instrucción es, como veremos en muchas ocasiones, muy útil, y como ya hemos dicho sí que altera el registro F:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Esta instrucción es, como veremos en muchas ocasiones, muy útil, y como ya hemos dicho sí
+                                que altera el registro F:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                         Flags
   Instrucción       |S Z H P N C|
  ----------------------------------
   BIT b, s          |? * 1 ? 0 -|
 
 </pre>
-    </p></td></tr>
-</table>
-<p><em>ROTACION DE BITS</em></p>
-<p>El siguiente set de instrucciones que veremos nos permitirá ROTAR (ROTATE) los bits de un dato de 8 bits (por ejemplo, almacenado en un registro o en memoria) hacia la izquierda o hacia la derecha.</p>
-<p>Para realizar esta tarea tenemos disponibles 2 instrucciones básicas: RLC y RRC. La primera de ellas, RLC, rota el registro o dato en un bit a la izquierda (RLC = Rotate Left Circular), y la segunda lo hace a la derecha.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><em>ROTACION DE BITS</em></p>
+                            <p>El siguiente set de instrucciones que veremos nos permitirá ROTAR (ROTATE) los bits de un
+                                dato de 8 bits (por ejemplo, almacenado en un registro o en memoria) hacia la izquierda
+                                o hacia la derecha.</p>
+                            <p>Para realizar esta tarea tenemos disponibles 2 instrucciones básicas: RLC y RRC. La
+                                primera de ellas, RLC, rota el registro o dato en un bit a la izquierda (RLC = Rotate
+                                Left Circular), y la segunda lo hace a la derecha.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Bit      7 6 5 4 3 2 1 0                 7 6 5 4 3 2 1 0
          ----------------- -> RLC ->     -----------------
  Valor    a b c d e f g h                 b c d e f g h a
@@ -526,26 +724,33 @@ LDDR = Repetir LDD hasta que BC valga 0
  Valor    a b c d e f g h                 h a b c d e f g
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Así, RLC de 00000001 daría como resultado 00000010. Como la rotación es circular, todos los bits se mueven una posición a la izquierda y el bit 7 se copia en el bit 0. Asímismo, RRC de 00000001 daría como resultado 10000000, ya que el bit 0 al rotarse a la derecha (como todos los demás bits) se copia donde estaba el bit 7. Cabe destacar que el Carry Flag se vé afectado, ya que el bit 7 en RLC y el 0 en RRC también se copiará allí.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Así, RLC de 00000001 daría como resultado 00000010. Como la rotación es circular, todos
+                                los bits se mueven una posición a la izquierda y el bit 7 se copia en el bit 0.
+                                Asímismo, RRC de 00000001 daría como resultado 10000000, ya que el bit 0 al rotarse a la
+                                derecha (como todos los demás bits) se copia donde estaba el bit 7. Cabe destacar que el
+                                Carry Flag se vé afectado, ya que el bit 7 en RLC y el 0 en RRC también se copiará
+                                allí.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="500">
-	<tr align="right">
-		<td><img src="img/rlc_rrc.gif" width="500" height="400"  alt="RLC y RRC" />
-</td>
-	</tr>
-	<tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="500">
+                                <tr align="right">
+                                    <td><img src="img/rlc_rrc.gif" width="500" height="400" alt="RLC y RRC"/>
+                                    </td>
+                                </tr>
+                                <tr>
 
-		<td class="piefoto" align="right">RLC y RRC</td>
-	</tr>
-</table>
+                                    <td class="piefoto" align="right">RLC y RRC</td>
+                                </tr>
+                            </table>
 
-<p>Por ejemplo, supongamos el valor 10000001 almacenado en el registro B:</p>
-<p>El resultado las 2 operaciones descritas sería:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Por ejemplo, supongamos el valor 10000001 almacenado en el registro B:</p>
+                            <p>El resultado las 2 operaciones descritas sería:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD B, %10000001   ; B = 10000001
  RLC B             ; B = 00000011
 
@@ -553,13 +758,22 @@ LDDR = Repetir LDD hasta que BC valga 0
  RRC B             ; B = 00000011
 
 </pre>
-    </p></td></tr>
-</table>
-<p>No sólo podemos rotar registros: en general el destino de la rotación podrá ser un registro, el contenido de la dirección de memoria apuntada por [HL], o bien el contenido de la memoria apuntada por un registro índice más desplazamiento ([IX+N] o [IY+N]). Más adelante veremos la tabla de afectación de flags de esta y otras instrucciones que veremos a continuación.</p>
-<p>Además de RLC y RRC (rotación circular), tenemos disponibles 2 instrucciones más que nos permiten apoyarnos en el Carry Flag del registro F como si fuera un bit más de nuestro registro, comportándose como el noveno bit (de más valor) del registro: hablamos de las instrucciones RL y RC:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>No sólo podemos rotar registros: en general el destino de la rotación podrá ser un
+                                registro, el contenido de la dirección de memoria apuntada por [HL], o bien el contenido
+                                de la memoria apuntada por un registro índice más desplazamiento ([IX+N] o [IY+N]). Más
+                                adelante veremos la tabla de afectación de flags de esta y otras instrucciones que
+                                veremos a continuación.</p>
+                            <p>Además de RLC y RRC (rotación circular), tenemos disponibles 2 instrucciones más que nos
+                                permiten apoyarnos en el Carry Flag del registro F como si fuera un bit más de nuestro
+                                registro, comportándose como el noveno bit (de más valor) del registro: hablamos de las
+                                instrucciones RL y RC:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Bit     C   7 6 5 4 3 2 1 0               C   7 6 5 4 3 2 1 0
         ---------------------- ->  RL  ->  ---------------------
  Valor   X   a b c d e f g h               a   b c d e f g h X
@@ -570,26 +784,31 @@ LDDR = Repetir LDD hasta que BC valga 0
  Valor   X   a b c d e f g h               h   X a b c d e f g
 
 </pre>
-    </p></td></tr>
-</table>
-<p>El CarryFlag hace de bit extra: por un lado se copia al Bit 0 o al Bit 7 según estemos rotando a izquierda o a derecha, y por otra parte recibe el valor del bit 7 del bit 0 (respectivamente para RL y RR).</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>El CarryFlag hace de bit extra: por un lado se copia al Bit 0 o al Bit 7 según estemos
+                                rotando a izquierda o a derecha, y por otra parte recibe el valor del bit 7 del bit 0
+                                (respectivamente para RL y RR).</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="500">
-	<tr align="right">
-		<td><img src="img/rl_rr.gif" width="500" height="400"  alt="RL y RR" />
-</td>
-	</tr>
-	<tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="500">
+                                <tr align="right">
+                                    <td><img src="img/rl_rr.gif" width="500" height="400" alt="RL y RR"/>
+                                    </td>
+                                </tr>
+                                <tr>
 
-		<td class="piefoto" align="right">RL y RR</td>
-	</tr>
-</table>
+                                    <td class="piefoto" align="right">RL y RR</td>
+                                </tr>
+                            </table>
 
-<p>Por ejemplo, supongamos el valor 10000001 almacenado en el registro B y que el carry flag estuviera a uno:</p>
-<p>El resultado las 2 operaciones descritas sería:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Por ejemplo, supongamos el valor 10000001 almacenado en el registro B y que el carry flag
+                                estuviera a uno:</p>
+                            <p>El resultado las 2 operaciones descritas sería:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  SCF              ; Set Carry Flag (hace C=1)
  LD B, %00000010  ; B = 00000010
  RL B             ; B = 00000101 y C=0 (del bit 7)
@@ -599,13 +818,17 @@ LDDR = Repetir LDD hasta que BC valga 0
  RR B             ; B = 10100000 y C=1 (del bit 0)
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Así pues, RLC y RRC son circulares y no utilizan el Carry Flag, mientras que RR y RL sí que lo utilizan, como un bit extra. Utilizando RR/RL 9 veces o bien RLC/RRC 8 veces sobre un mismo registro obtenemos el valor original antes de comenzar a rotar.</p>
-<p>Veamos la tabla de afectación de flags de estas nuevas instrucciones:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Así pues, RLC y RRC son circulares y no utilizan el Carry Flag, mientras que RR y RL sí
+                                que lo utilizan, como un bit extra. Utilizando RR/RL 9 veces o bien RLC/RRC 8 veces
+                                sobre un mismo registro obtenemos el valor original antes de comenzar a rotar.</p>
+                            <p>Veamos la tabla de afectación de flags de estas nuevas instrucciones:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                         Flags
   Instrucción       |S Z H P N C|         Significado
  -----------------------------------------------------------------
@@ -614,14 +837,26 @@ LDDR = Repetir LDD hasta que BC valga 0
   RL s              |* * 0 P 0 *|         Rotate Left (con Carry)
   RR s              |* * 0 P 0 *|         Rotate Right (con Carry)
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>El destino "s" puede ser cualquier registro de 8 bits, memoria apuntada por HL o registros índice con desplazamiento. Como veis hay muchos flags afectados, y en esta ocasión el flag P/V ya no nos sirve para indicar desbordamientos sino que su estado nos da la PARIDAD del resultado de la operación de rotación. Con el flag P a uno, tenemos paridad par (even), es decir, el número de bits a uno en el resultado es par. Si está a cero significa que el número de bits a uno en el resultado es impar.</p>
-<p>Aunque pueda parecer sorprendente (ya que podemos utilizar las 4 operaciones anteriores con el registro A como operando), existen 4 instrucciones más dedicadas exclusivamente a trabajar con "A": hablamos de RLA, RRA, RLCA y RRCA. La diferencia entre estas 4 instrucciones y su versión con un espacio en medio (RL A, RR A, RLC A y RRC A) radica simplemente en que las nuevas 4 instrucciones (sin espacio) alteran los flags de una forma diferente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>El destino "s" puede ser cualquier registro de 8 bits, memoria apuntada por HL o
+                                registros índice con desplazamiento. Como veis hay muchos flags afectados, y en esta
+                                ocasión el flag P/V ya no nos sirve para indicar desbordamientos sino que su estado nos
+                                da la PARIDAD del resultado de la operación de rotación. Con el flag P a uno, tenemos
+                                paridad par (even), es decir, el número de bits a uno en el resultado es par. Si está a
+                                cero significa que el número de bits a uno en el resultado es impar.</p>
+                            <p>Aunque pueda parecer sorprendente (ya que podemos utilizar las 4 operaciones anteriores
+                                con el registro A como operando), existen 4 instrucciones más dedicadas exclusivamente a
+                                trabajar con "A": hablamos de RLA, RRA, RLCA y RRCA. La diferencia entre estas 4
+                                instrucciones y su versión con un espacio en medio (RL A, RR A, RLC A y RRC A) radica
+                                simplemente en que las nuevas 4 instrucciones (sin espacio) alteran los flags de una
+                                forma diferente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                         Flags
   Instrucción       |S Z H P N C|       Significado
  -----------------------------------------------------------------
@@ -630,23 +865,29 @@ LDDR = Repetir LDD hasta que BC valga 0
   RLCA              |- - 0 - 0 *|       Rotate Left Circular Acc.
   RRCA              |- - 0 - 0 *|       Rotate Right Circular Acc.
 </pre>
-    </p></td></tr>
-</table>
-<p>Como veis, están pensadas para alterar MENOS flags que sus homónimas de propósito general (algo que nos puede interesar en alguna ocasión).</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como veis, están pensadas para alterar MENOS flags que sus homónimas de propósito general
+                                (algo que nos puede interesar en alguna ocasión).</p>
 
-<p>Y para acabar con las instrucciones de rotación, tenemos RLD y RRD, que realiza una rotación entre A y el contenido de la memoria apuntada por HL.</p>
-<p>Concretamente, RRD lo que hace es:</p>
-<ul>
-	<li>Leer el dato contenido en la dirección de memoria apuntada por HL.</li>
-	<li>Coger los 4 bits más significativos (bit 4-7) de ese valor.</li>
-	<li>Rotar A hacia la izquierda 4 veces (copiando los bits 0-3 en las posiciones 4-7).</li>
-	<li>Copiar los 4 bits extraídos de la memoria en los 4 bits menos significativos de A.</li>
+                            <p>Y para acabar con las instrucciones de rotación, tenemos RLD y RRD, que realiza una
+                                rotación entre A y el contenido de la memoria apuntada por HL.</p>
+                            <p>Concretamente, RRD lo que hace es:</p>
+                            <ul>
+                                <li>Leer el dato contenido en la dirección de memoria apuntada por HL.</li>
+                                <li>Coger los 4 bits más significativos (bit 4-7) de ese valor.</li>
+                                <li>Rotar A hacia la izquierda 4 veces (copiando los bits 0-3 en las posiciones 4-7).
+                                </li>
+                                <li>Copiar los 4 bits extraídos de la memoria en los 4 bits menos significativos de A.
+                                </li>
 
-</ul>
-<p>Resumiendo, supongamos los siguientes valores de A y [HL]:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </ul>
+                            <p>Resumiendo, supongamos los siguientes valores de A y [HL]:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Registro A:   Bit 7 6 5 4 3 2 1 0
                --------------------
                    a b c d e f g h
@@ -655,139 +896,181 @@ LDDR = Repetir LDD hasta que BC valga 0
                --------------------
                    s t u v w x y z
 </pre>
-    </p></td></tr>
-</table>
-<p>Resultado de RRD:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Resultado de RRD:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
  Registro A:   Bit 7 6 5 4 3 2 1 0
                --------------------
                    e f g h s t u v
 </pre>
-    </p></td></tr>
-</table>
-<p>Resultado de RLD:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Resultado de RLD:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
  Registro A:   Bit 7 6 5 4 3 2 1 0
                --------------------
                    s t u v e f g h
 </pre>
 
-    </p></td></tr>
-</table>
-<p>En pseudocódigo C:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>En pseudocódigo C:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
  RRD:  A = ( A<<4 )    | ([HL]>>4)
  RLD:  A = ( [HL]<<4 ) | (A & 0x0F)
 </pre>
 
-    </p></td></tr>
-</table>
-<p>La afectación de flags sería:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La afectación de flags sería:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                         Flags
   Instrucción       |S Z H P N C|         Significado
  -----------------------------------------------------------------
   RLD               |* * 0 P 0 -|         Rotate Left 4 bits
   RRD               |* * 0 P 0 -|         Rotate Right 4 bits
 </pre>
-    </p></td></tr>
-</table>
-<p>Aunque ahora todo este conjunto de instrucciones pueda parecernos carente de utilidad, lo que hace el microprocesador Z80 es proveernos de toda una serie de pequeñas herramientas (como estas de manipulación, chequeo y rotación de bits) para que con ellas podamos resolver cualquier problema, mediante la combinación de las mismas. Os aseguramos que en más de una rutina tendréis que usar instrucciones de rotación o desplazamiento.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Aunque ahora todo este conjunto de instrucciones pueda parecernos carente de utilidad, lo
+                                que hace el microprocesador Z80 es proveernos de toda una serie de pequeñas herramientas
+                                (como estas de manipulación, chequeo y rotación de bits) para que con ellas podamos
+                                resolver cualquier problema, mediante la combinación de las mismas. Os aseguramos que en
+                                más de una rutina tendréis que usar instrucciones de rotación o desplazamiento.</p>
 
-<p><strong>DESPLAZAMIENTO DE BITS</strong></p>
-<p>El siguiente set de instrucciones que veremos nos permitirá DESPLAZAR (SHIFT) los bits de un dato de 8 bits (por ejemplo, almacenado en un registro o en memoria) hacia la izquierda o hacia la derecha. Desplazar es parecido a rotar, sólo que el desplazamiento no es circular; es decir, los bits que salen por un lado no entran por otro, sino que entran ceros:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p><strong>DESPLAZAMIENTO DE BITS</strong></p>
+                            <p>El siguiente set de instrucciones que veremos nos permitirá DESPLAZAR (SHIFT) los bits de
+                                un dato de 8 bits (por ejemplo, almacenado en un registro o en memoria) hacia la
+                                izquierda o hacia la derecha. Desplazar es parecido a rotar, sólo que el desplazamiento
+                                no es circular; es decir, los bits que salen por un lado no entran por otro, sino que
+                                entran ceros:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  00010001 ROTADO A LA IZQUIERDA es 00100010
  (movemos todos los bits hacia la izquierda y el bit 0 entra como 0. El bit 7 se copia al Carry)
 
  10000001 ROTADO A LA DERECHA es 01000000
  (el 0 del bit 7 del resultado entra nuevo, el 1 del bit 0 origen se pierde)
 </pre>
-    </p></td></tr>
-</table>
-<p>Las instrucciones de desplazamiento a izquierda y derecha en Z80 se llaman SLA (Shift Left Arithmetic) y SRA (Shift Right Arithmetic), y su formato es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Las instrucciones de desplazamiento a izquierda y derecha en Z80 se llaman SLA (Shift
+                                Left Arithmetic) y SRA (Shift Right Arithmetic), y su formato es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  SRA operando
  SLA operando
 </pre>
-    </p></td></tr>
-</table>
-<p>Donde operando puede ser el mismo tipo de operando que en las instrucciones de rotación: un registro de 8 bits, [HL] o [IX/IY+N]. Lo que realizan estas operaciones sobre el dato operando es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Donde operando puede ser el mismo tipo de operando que en las instrucciones de rotación:
+                                un registro de 8 bits, [HL] o [IX/IY+N]. Lo que realizan estas operaciones sobre el dato
+                                operando es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Bit 7 6 5 4 3 2 1 0                C    7 6 5 4 3 2 1 0
     ----------------- -> SLA ->  ------------------------
      a b c d e f g h                a    b c d e f g h 0
 
 </pre>
-    </p></td></tr>
-</table>
- <p>Literalmente:</p>
- <ul>
- 	<li>Rotar los bits a la izquierda (<<).</li>
- 	<li>El bit "a" (bit 7) se copia al Carry Flag.</li>
- 	<li>Por la derecha entra un cero.</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Literalmente:</p>
+                            <ul>
+                                <li>Rotar los bits a la izquierda (<<).</li>
+                                <li>El bit "a" (bit 7) se copia al Carry Flag.</li>
+                                <li>Por la derecha entra un cero.</li>
 
- </ul>
- <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </ul>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Bit 7 6 5 4 3 2 1 0                C    7 6 5 4 3 2 1 0
     ----------------- -> SRA ->  ------------------------
      a b c d e f g h                h    a a b c d e f g
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Literalmente:</p>
-<ul>
-	<li>Rotar los bits a la derecha (>>).</li>
-	<li>El bit "h" (bit 0) se copia al Carry Flag.</li>
-	<li>En la izquierda (bit 7) se mantiene su valor anterior.</li>
-</ul>
-<p>Nótese pues que SLA y SRA nos permiten trabajar también con números negativos. En el caso de SLA se utiliza el carry flag para almacenar el estado del bit 7 tras la rotación (con lo cual podemos conservar el signo si sabemos dónde buscarlo). En el caso de SRA, porque el bit 7 además de desplazarse hacia la derecha se mantiene en su posición (manteniendo el signo).</p>
-<p>El hecho de desplazar un número binario una posición a izquierda o derecha tiene una curiosa propiedad: el número resultante se multiplica o divide por 2.</p>
+                            <p>Literalmente:</p>
+                            <ul>
+                                <li>Rotar los bits a la derecha (>>).</li>
+                                <li>El bit "h" (bit 0) se copia al Carry Flag.</li>
+                                <li>En la izquierda (bit 7) se mantiene su valor anterior.</li>
+                            </ul>
+                            <p>Nótese pues que SLA y SRA nos permiten trabajar también con números negativos. En el caso
+                                de SLA se utiliza el carry flag para almacenar el estado del bit 7 tras la rotación (con
+                                lo cual podemos conservar el signo si sabemos dónde buscarlo). En el caso de SRA, porque
+                                el bit 7 además de desplazarse hacia la derecha se mantiene en su posición (manteniendo
+                                el signo).</p>
+                            <p>El hecho de desplazar un número binario una posición a izquierda o derecha tiene una
+                                curiosa propiedad: el número resultante se multiplica o divide por 2.</p>
 
-<p>Pensemos un poco en nuestro sistema decimal: si tenemos un determinado número y desplazamos todos los dígitos una posición a la izquierda y añadimos un cero, lo que está sucediendo es que multiplicamos el valor del número por la base:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Pensemos un poco en nuestro sistema decimal: si tenemos un determinado número y
+                                desplazamos todos los dígitos una posición a la izquierda y añadimos un cero, lo que
+                                está sucediendo es que multiplicamos el valor del número por la base:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  1 5  -> Desplazar y cero  ->  1 5 0
  (equivale a multiplicar por la base, es decir, por 10)
 </pre>
-    </p></td></tr>
-</table>
-<p>Si desplazamos el número a la derecha, por contra, estamos dividiendo por la base:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Si desplazamos el número a la derecha, por contra, estamos dividiendo por la base:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
  1 5 2 -> Desplazar y cero -> 0 1 5
  (equivale a dividir por la base, es decir, por 10).
 </pre>
-    </p></td></tr>
-</table>
-<p>En binario ocurre lo mismo: al desplazar un byte a la izquierda estamos multiplicando por 2, y al hacerlo a la derecha estamos dividiendo por 2 (siempre divisiones enteras). Veamos unos ejemplos:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>En binario ocurre lo mismo: al desplazar un byte a la izquierda estamos multiplicando por
+                                2, y al hacerlo a la derecha estamos dividiendo por 2 (siempre divisiones enteras).
+                                Veamos unos ejemplos:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  33 = 00100001
           << 1   (<< significa desplazamiento de bits a izquierda)
     ------------
@@ -800,12 +1083,15 @@ LDDR = Repetir LDD hasta que BC valga 0
       00000111 = 7 (14/2)
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Cada vez que realizamos un desplazamiento estamos multiplicando el resultado por dos, de forma que:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Cada vez que realizamos un desplazamiento estamos multiplicando el resultado por dos, de
+                                forma que:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Dirección        Núm. desplazamientos   Operación
 -----------------------------------------------------------------
  SLA:
@@ -826,44 +1112,56 @@ LDDR = Repetir LDD hasta que BC valga 0
  Derecha   (>>)         7                 N = (...) N/128
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Así, desplazar una vez a la izquierda equivale a multiplicar por 2, 2 veces, por 4, 3 veces, por 8, etc. En resumen, desplazar un registro N veces a la izquierda equivale a multiplicarlo por 2 elevado a N. Lo mismo ocurre con la multiplicación.</p>
-<p>De este modo, acabamos de descubrir una manera muy sencilla y efectiva (y rápida, muy rápida para el microprocesador) de efectuar multiplicaciones y divisiones por 2, 4, 8, 16, 32, 64 y 128.</p>
-<p>Existe una pequeña variante de SRA llamada SRL que realiza la misma acción que SRA pero que, a diferencia de esta, lo que hace es introducir un cero a la izquierda (en lugar de copiar el bit de signo). La diferencia es que SRA es un desplazamiento aritmético (tiene en cuenta el signo) y SRL es un desplazamiento lógico (simplemente desplaza los bits):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Así, desplazar una vez a la izquierda equivale a multiplicar por 2, 2 veces, por 4, 3
+                                veces, por 8, etc. En resumen, desplazar un registro N veces a la izquierda equivale a
+                                multiplicarlo por 2 elevado a N. Lo mismo ocurre con la multiplicación.</p>
+                            <p>De este modo, acabamos de descubrir una manera muy sencilla y efectiva (y rápida, muy
+                                rápida para el microprocesador) de efectuar multiplicaciones y divisiones por 2, 4, 8,
+                                16, 32, 64 y 128.</p>
+                            <p>Existe una pequeña variante de SRA llamada SRL que realiza la misma acción que SRA pero
+                                que, a diferencia de esta, lo que hace es introducir un cero a la izquierda (en lugar de
+                                copiar el bit de signo). La diferencia es que SRA es un desplazamiento aritmético (tiene
+                                en cuenta el signo) y SRL es un desplazamiento lógico (simplemente desplaza los
+                                bits):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Bit 7 6 5 4 3 2 1 0                C    7 6 5 4 3 2 1 0
     ----------------- -> SRL ->  ------------------------
      a b c d e f g h                h    0 a b c d e f g
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Literalmente:</p>
-<ul>
-	<li>Rotar los bits a la derecha (>>).</li>
-	<li>El bit "h" (bit 0) se copia al Carry Flag.</li>
-	<li>Por la izquierda entra un cero.</li>
-</ul>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Literalmente:</p>
+                            <ul>
+                                <li>Rotar los bits a la derecha (>>).</li>
+                                <li>El bit "h" (bit 0) se copia al Carry Flag.</li>
+                                <li>Por la izquierda entra un cero.</li>
+                            </ul>
 
 
-<table border="0" cellspacing="0" cellpadding="2" width="500">
-	<tr align="right">
-		<td><img src="img/sla_sra_srl.gif" width="500" height="400"  alt="SLA, SRA y SLR" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">SLA, SRA y SLR</td>
-	</tr>
-</table>
+                            <table border="0" cellspacing="0" cellpadding="2" width="500">
+                                <tr align="right">
+                                    <td><img src="img/sla_sra_srl.gif" width="500" height="400" alt="SLA, SRA y SLR"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">SLA, SRA y SLR</td>
+                                </tr>
+                            </table>
 
 
-<p>Nuestra ya conocida tabla:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Nuestra ya conocida tabla:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                         Flags
   Instrucción       |S Z H P N C|        Significado
  -----------------------------------------------------------------
@@ -871,24 +1169,33 @@ LDDR = Repetir LDD hasta que BC valga 0
   SRA s             |* * 0 P 0 *|        Shift Right Arithmetic (s=s/2)
   SRL s             |* * 0 P 0 *|        Shift Right Logical (s=s>>1)
 </pre>
-    </p></td></tr>
-</table>
-<p>Cabe destacar que gracias al Carry flag podremos realizar operaciones que desborden los 8 bits de que dispone un registro. Por ejemplo, supongamos que queremos realizar una multiplicación por 152 por 2. El resultado del desplazamiento sería:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Cabe destacar que gracias al Carry flag podremos realizar operaciones que desborden los 8
+                                bits de que dispone un registro. Por ejemplo, supongamos que queremos realizar una
+                                multiplicación por 152 por 2. El resultado del desplazamiento sería:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  152 = 10011000
            << 1 (*2)
      ------------
        00110000 = 48
 </pre>
-    </p></td></tr>
-</table>
-<p>¿Por qué nuestro registro acaba con un valor 48? Porque el resultado es mayor que 255, el valor máximo que podemos representar con 8 bits. Para representar el resultado (304), necesitaríamos un bit extra (9 bits) que nos daría acceso a representar números en el rango de 0 a 511. Ese bit extra es el carry flag, ya que en realidad:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>¿Por qué nuestro registro acaba con un valor 48? Porque el resultado es mayor que 255, el
+                                valor máximo que podemos representar con 8 bits. Para representar el resultado (304),
+                                necesitaríamos un bit extra (9 bits) que nos daría acceso a representar números en el
+                                rango de 0 a 511. Ese bit extra es el carry flag, ya que en realidad:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
  152 =     10011000
                << 1 (*2)
@@ -896,36 +1203,47 @@ LDDR = Repetir LDD hasta que BC valga 0
       1    00110000 = 304
      (C)
 </pre>
-    </p></td></tr>
-</table>
-<p>Además, gracias a la combinación de instrucciones de rotación y desplazamiento podemos realizar operaciones con registros de 16 bits. Por ejemplo, supongamos que queremos multiplicar por 2 el valor positivo que tenemos en el registro DE:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Además, gracias a la combinación de instrucciones de rotación y desplazamiento podemos
+                                realizar operaciones con registros de 16 bits. Por ejemplo, supongamos que queremos
+                                multiplicar por 2 el valor positivo que tenemos en el registro DE:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   SLA E
   RL  D
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Lo que hacemos con "SLA E" es desplazar el byte más bajo del registros 16 bits DE hacia la izquierda, dejando el bit 7 de "E" en el Carry Flag, y después realizar una rotación de "D" hacia la izquierda introduciendo el carry flag de la operación anterior en el bit 0 de "D".</p>
-<p>Registro DE original:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Lo que hacemos con "SLA E" es desplazar el byte más bajo del registros 16 bits DE hacia
+                                la izquierda, dejando el bit 7 de "E" en el Carry Flag, y después realizar una rotación
+                                de "D" hacia la izquierda introduciendo el carry flag de la operación anterior en el bit
+                                0 de "D".</p>
+                            <p>Registro DE original:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                D                       E
  DE:   ---------------------   ---------------------
  Bit  15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00      Carry
      -------------------------------------------------     -----
        a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p        ?
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Primero con SLA E rotamos la parte baja, metiendo el bit "i" en el Carry Flag:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Primero con SLA E rotamos la parte baja, metiendo el bit "i" en el Carry Flag:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  SLA E:
                D                       E
  DE:   ---------------------   ---------------------
@@ -933,51 +1251,67 @@ LDDR = Repetir LDD hasta que BC valga 0
      -------------------------------------------------     -----
        a  b  c  d  e  f  g  h  j  k  l  m  n  o  p  0        i
 </pre>
-    </p></td></tr>
-</table>
-<p>Ahora con RL D rotamos D introduciendo el bit "i" en su bit 0:</p>
-<p>RL D:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Ahora con RL D rotamos D introduciendo el bit "i" en su bit 0:</p>
+                            <p>RL D:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                D                       E
  DE:   ---------------------   ---------------------
  Bit  15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00      Carry
      -------------------------------------------------     -----
        b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  0           a
 </pre>
-    </p></td></tr>
-</table>
-<p>Podemos repetir la operación para multiplicar por 4, 8, 16, etc. dicho par de registros.</p>
-<p>De igual forma, podemos realizar rotaciones de 16 bits a la derecha, haciendo el proceso inverso y comenzando primero con el byte alto:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Podemos repetir la operación para multiplicar por 4, 8, 16, etc. dicho par de
+                                registros.</p>
+                            <p>De igual forma, podemos realizar rotaciones de 16 bits a la derecha, haciendo el proceso
+                                inverso y comenzando primero con el byte alto:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
  SRA D
  RR E
 </pre>
-    </p></td></tr>
-</table>
-<p>Las operaciones de este tipo sobre registros de 16 bits son muy importantes para realizar otro tipo de operaciones de más amplitud como multiplicaciones y divisiones.</p>
-<p>Y, para finalizar, veamos cómo el operando destino de 16 bits puede ser un par de bytes de memoria, como en el siguiente código de ejemplo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Las operaciones de este tipo sobre registros de 16 bits son muy importantes para realizar
+                                otro tipo de operaciones de más amplitud como multiplicaciones y divisiones.</p>
+                            <p>Y, para finalizar, veamos cómo el operando destino de 16 bits puede ser un par de bytes
+                                de memoria, como en el siguiente código de ejemplo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  LD IX, 16384
  SLA (IX)
  RL (IX+01H)
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Recordad para este ejemplo que en memoria se almacena primero el byte menos significativo de la palabra de 16 bits, y en la siguiente posición de memoria el más significativo.</p>
-<p><em>OPERACIONES LOGICAS: AND, OR Y XOR</em></p>
-<p>Para acabar con el artículo de hoy vamos a ver 3 operaciones a nivel de bits: AND, OR y XOR. Estas 3 operaciones lógicas se realizan entre 2 bits, dando un tercer bit como resultado:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Recordad para este ejemplo que en memoria se almacena primero el byte menos significativo
+                                de la palabra de 16 bits, y en la siguiente posición de memoria el más
+                                significativo.</p>
+                            <p><em>OPERACIONES LOGICAS: AND, OR Y XOR</em></p>
+                            <p>Para acabar con el artículo de hoy vamos a ver 3 operaciones a nivel de bits: AND, OR y
+                                XOR. Estas 3 operaciones lógicas se realizan entre 2 bits, dando un tercer bit como
+                                resultado:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   Bit  Bit   Resultado
    1    2       AND
 ----------------------
@@ -1004,45 +1338,67 @@ LDDR = Repetir LDD hasta que BC valga 0
    0    1        1
    0    0        0
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Podría decirse que:</p>
-<ul>
-	<li>AND es la multiplicación lógica: si cualquiera de los 2 bits es cero, el resultado es cero (0*0=0, 0*1=0, 1*0=0); dicho resultado sólo será uno cuando ambos bits sean 1 (1*1=1).</li>
-	<li>OR es la suma lógica: si alguno de los bits es uno, el resultado es uno (1+1=1, 0+1=1, 1+0=1). Sólo obtendremos un 0 al hacer un OR entre 2 bits cuando ambos son cero.</li>
-	<li>XOR es una operación de "O EXCLUSIVO" (exclusive OR) donde el resultado es cero cuando los 2 bits operandos son iguales, y uno cuando los 2 bits operandos son diferentes.</li>
-</ul>
-<p>Ejemplos:<p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                            </table>
+                            <p>Podría decirse que:</p>
+                            <ul>
+                                <li>AND es la multiplicación lógica: si cualquiera de los 2 bits es cero, el resultado
+                                    es cero (0*0=0, 0*1=0, 1*0=0); dicho resultado sólo será uno cuando ambos bits sean
+                                    1 (1*1=1).
+                                </li>
+                                <li>OR es la suma lógica: si alguno de los bits es uno, el resultado es uno (1+1=1,
+                                    0+1=1, 1+0=1). Sólo obtendremos un 0 al hacer un OR entre 2 bits cuando ambos son
+                                    cero.
+                                </li>
+                                <li>XOR es una operación de "O EXCLUSIVO" (exclusive OR) donde el resultado es cero
+                                    cuando los 2 bits operandos son iguales, y uno cuando los 2 bits operandos son
+                                    diferentes.
+                                </li>
+                            </ul>
+                            <p>Ejemplos:
+                            <p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  10010101 AND 0000111  = 00000101
 
  00000101 OR  1100000  = 11000101
 
  11000011 XOR 10011001 = 01011010
 </pre>
-    </p></td></tr>
-</table>
-<p>A la hora de realizar estas operaciones lógicas en nuestro Z80 disponemos de 3 instrucciones cuyos nombres son, como podéis imaginar, AND, OR y XOR. Las tres tienen el mismo formato:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>A la hora de realizar estas operaciones lógicas en nuestro Z80 disponemos de 3
+                                instrucciones cuyos nombres son, como podéis imaginar, AND, OR y XOR. Las tres tienen el
+                                mismo formato:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  AND ORIGEN
  OR  ORIGEN
  XOR ORIGEN
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Donde ORIGEN puede ser cualquier registro de 8 bits, valor inmediato de 8 bits, contenido de la memoria apuntada por [HL], o contenido de la memoria apuntada por un registro índice más un desplazamiento. El formato de la instrucción no requiere 2 operandos, ya que el registro destino sólo puede ser A.</p>
-<p>La operación CPL, que vimos al principio de esta entrega, también se considera una operación lógica, equivalente a NOT (0->1 y 1->0).</p>
-<p>Pero continuemos con AND, OR y XOR. Veamos algunos ejemplos de instrucciones válidas:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Donde ORIGEN puede ser cualquier registro de 8 bits, valor inmediato de 8 bits, contenido
+                                de la memoria apuntada por [HL], o contenido de la memoria apuntada por un registro
+                                índice más un desplazamiento. El formato de la instrucción no requiere 2 operandos, ya
+                                que el registro destino sólo puede ser A.</p>
+                            <p>La operación CPL, que vimos al principio de esta entrega, también se considera una
+                                operación lógica, equivalente a NOT (0->1 y 1->0).</p>
+                            <p>Pero continuemos con AND, OR y XOR. Veamos algunos ejemplos de instrucciones válidas:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  AND B
  OR C
  OR [HL]
@@ -1050,25 +1406,32 @@ LDDR = Repetir LDD hasta que BC valga 0
  AND 45
 </pre>
 
-    </p></td></tr>
-</table>
-<p>La operación realizada por estas instrucciones sería:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La operación realizada por estas instrucciones sería:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  AND ORIGEN -> A = A & ORIGEN
  OR  ORIGEN -> A = A | ORIGEN
  XOR ORIGEN -> A = A ^ ORIGEN
 
  ( Donde & = AND, | = OR y ^ = XOR )
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Recordemos que AND, OR y XOR son operaciones de un sólo bit, de modo que al trabajar con registros (o memoria, o valores inmediatos), en realidad estamos realizando 8 operaciones AND, OR o XOR. Por ejemplo, al hacer un AND entre los registros A y B con "AND B" (A=A&B), realizamos las siguientes operaciones:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Recordemos que AND, OR y XOR son operaciones de un sólo bit, de modo que al trabajar con
+                                registros (o memoria, o valores inmediatos), en realidad estamos realizando 8
+                                operaciones AND, OR o XOR. Por ejemplo, al hacer un AND entre los registros A y B con
+                                "AND B" (A=A&B), realizamos las siguientes operaciones:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Registro A:   Bit  7  6  5  4  3  2  1  0
                ----------------------------
                    A7 A6 A5 A4 A3 A2 A1 A0
@@ -1077,13 +1440,15 @@ LDDR = Repetir LDD hasta que BC valga 0
                ----------------------------
                    B7 B6 B5 B4 B3 B2 B1 B0
 </pre>
-    </p></td></tr>
-</table>
-<p>Resultado:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Resultado:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
  A7 = A7 AND B7
  A6 = A6 AND B6
  A5 = A5 AND B5
@@ -1093,68 +1458,87 @@ LDDR = Repetir LDD hasta que BC valga 0
  A1 = A1 AND B1
  A0 = A0 AND B0
 </pre>
-    </p></td></tr>
-</table>
-<p>Es decir, se hace una operación AND entre el bit 7 de A y el bit 7 de B, y se almacena el resultado en el bit 7 de A, y lo mismo para los bits restantes.</p>
-<p>¿Para qué pueden servirnos estas 3 operaciones lógicas? Os aseguro que a lo largo de vuestros programas tendréis que usarlas, y mucho, porque son operaciones muy importantes a la hora de manipular registros. Por ejemplo, supongamos que queremos eliminar los 4 bits más altos de un registro, dejándolos a cero, y dejar sin alterar el estado de los 4 bits menos significativos.</p>
-<p>Podríamos hacer:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Es decir, se hace una operación AND entre el bit 7 de A y el bit 7 de B, y se almacena el
+                                resultado en el bit 7 de A, y lo mismo para los bits restantes.</p>
+                            <p>¿Para qué pueden servirnos estas 3 operaciones lógicas? Os aseguro que a lo largo de
+                                vuestros programas tendréis que usarlas, y mucho, porque son operaciones muy importantes
+                                a la hora de manipular registros. Por ejemplo, supongamos que queremos eliminar los 4
+                                bits más altos de un registro, dejándolos a cero, y dejar sin alterar el estado de los 4
+                                bits menos significativos.</p>
+                            <p>Podríamos hacer:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
  RES 7, A
  RES 6, A
  RES 5, A
  RES 4, A
 </pre>
-    </p></td></tr>
-</table>
-<p>Pero sería mucho más sencillo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Pero sería mucho más sencillo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  AND %00001111
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>O sea, realizar la operación:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>O sea, realizar la operación:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  A = A AND 00001111b
 </pre>
-    </p></td></tr>
-</table>
-<p>Veamos un ejemplo del porqué:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Veamos un ejemplo del porqué:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
  Sea A = 10101011
  valor = 00001111
        ------------ <-- Operación AND
          00001011
 </pre>
-    </p></td></tr>
-</table>
-<p>Como AND es la operación lógica de la multiplicación, al hacer un AND de A con 00001111, todos aquellos bits que son cero en 00001111 quedarán a cero en el resultado, y todos aquellos bits que son uno en 00001111 no modificarán el estado de los bits de A.</p>
-<p>De la misma forma, por ejemplo, OR nos permite fusionar 2 cuartetos de bits:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como AND es la operación lógica de la multiplicación, al hacer un AND de A con 00001111,
+                                todos aquellos bits que son cero en 00001111 quedarán a cero en el resultado, y todos
+                                aquellos bits que son uno en 00001111 no modificarán el estado de los bits de A.</p>
+                            <p>De la misma forma, por ejemplo, OR nos permite fusionar 2 cuartetos de bits:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Sea A = 10100000
  Sea B = 00001111
        ------------ <-- Operación OR
          10101111
 
 </pre>
-    </p></td></tr>
-</table>
-<p>La afectación de flags de las 3 instrucciones es idéntica:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La afectación de flags de las 3 instrucciones es idéntica:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
                         Flags
   Instrucción       |S Z H P N C|
  ----------------------------------
@@ -1162,109 +1546,142 @@ LDDR = Repetir LDD hasta que BC valga 0
   OR s              |* * * P 0 0|
   XOR s             |* * * P 0 0|
 </pre>
-    </p></td></tr>
-</table>
-<p>Una curiosidad: XOR A es equivalente a "LD A, 0". Dejamos como ejercicio al lector comprobar por qué mediante algún ejemplo práctico.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Una curiosidad: XOR A es equivalente a "LD A, 0". Dejamos como ejercicio al lector
+                                comprobar por qué mediante algún ejemplo práctico.</p>
 
-<p><strong>EN LA PROXIMA ENTREGA</strong></p>
-<p>Veremos conceptos e instrucciones muy importantes en cualquier programa en ensamblador: qué es y cómo se usa la PILA (stack) del Spectrum, y cómo realizar cambios en el flujo del programa con sentencias condicionales equivalentes al IF/THEN/ELSE.</p>
-<p><strong>FICHEROS</strong></p>
-<ul>
-    <li><a href="src/sumaresta.txt" onClick="window.open(this.href); return false;">Ejemplos de suma y resta en BCD</a></li>
-    <li><a href="src/copiarom.bas" onClick="window.open(this.href); return false;">Ejemplo de programa en BASIC que copia la ROM en la VRAM</a></li>
-    <li><a href="src/compiarom.tap" onClick="window.open(this.href); return false;">Fichero tap del ejemplo copiarom.bas</a></li>
-    <li><a href="src/carga.asm" onClick="window.open(this.href); return false;">Rutina de volcado de pantalla en ASM</a></li>
+                            <p><strong>EN LA PROXIMA ENTREGA</strong></p>
+                            <p>Veremos conceptos e instrucciones muy importantes en cualquier programa en ensamblador:
+                                qué es y cómo se usa la PILA (stack) del Spectrum, y cómo realizar cambios en el flujo
+                                del programa con sentencias condicionales equivalentes al IF/THEN/ELSE.</p>
+                            <p><strong>FICHEROS</strong></p>
+                            <ul>
+                                <li><a href="src/sumaresta.txt" onClick="window.open(this.href); return false;">Ejemplos
+                                    de suma y resta en BCD</a></li>
+                                <li><a href="src/copiarom.bas" onClick="window.open(this.href); return false;">Ejemplo
+                                    de programa en BASIC que copia la ROM en la VRAM</a></li>
+                                <li><a href="src/compiarom.tap" onClick="window.open(this.href); return false;">Fichero
+                                    tap del ejemplo copiarom.bas</a></li>
+                                <li><a href="src/carga.asm" onClick="window.open(this.href); return false;">Rutina de
+                                    volcado de pantalla en ASM</a></li>
 
-    <li><a href="src/carga.bin" onClick="window.open(this.href); return false;">Rutina de volcado de pantalla en ASM (binario)</a></li>
-    <li><a href="src/carga.bas" onClick="window.open(this.href); return false;">Cargador BASIC de la rutina anterior</a></li>
-    <li><a href="src/ejemplo.asm" onClick="window.open(this.href); return false;">Ejemplo ejecutable de carga de pantalla con volcado</a></li>
-    <li><a href="src/ejemplo.asm" onClick="window.open(this.href); return false;">Ejemplo de programa en ASM</a></li>
-    <li><a href="src/ejemplo.tap" onClick="window.open(this.href); return false;">Fichero tap del ejemplo anterior</a></li>
-</ul>
-<p><strong>LINKS</strong></p>
+                                <li><a href="src/carga.bin" onClick="window.open(this.href); return false;">Rutina de
+                                    volcado de pantalla en ASM (binario)</a></li>
+                                <li><a href="src/carga.bas" onClick="window.open(this.href); return false;">Cargador
+                                    BASIC de la rutina anterior</a></li>
+                                <li><a href="src/ejemplo.asm" onClick="window.open(this.href); return false;">Ejemplo
+                                    ejecutable de carga de pantalla con volcado</a></li>
+                                <li><a href="src/ejemplo.asm" onClick="window.open(this.href); return false;">Ejemplo de
+                                    programa en ASM</a></li>
+                                <li><a href="src/ejemplo.tap" onClick="window.open(this.href); return false;">Fichero
+                                    tap del ejemplo anterior</a></li>
+                            </ul>
+                            <p><strong>LINKS</strong></p>
 
-<ul>
-    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt28.html" onClick="window.open(this.href); return false;">Juego de caracteres</a></li>
-    <li><a href="http://www.z80.info/" onClick="window.open(this.href); return false;">Web del Z80</a></li>
-    <li><a href="http://www.worldofspectrum.org/faq/reference/z80reference.htm" onClick="window.open(this.href); return false;">Z80 Reference de WOS</a></li>
-    <li><a href="http://ti86.acz.org/z80_ref.htm" onClick="window.open(this.href); return false;">Z80 Reference de TI86</a></li>
-    <li><a href="http://icarus.ticalc.org/articles/z80_faq.html" onClick="window.open(this.href); return false;">FAQ de Icarus Productions</a></li>
-    <li><a href="http://www.speccy.org/trastero/cosas/Fichas/fichas.htm" onClick="window.open(this.href); return false;">Microfichas de CM de MicroHobby</a></li>
+                            <ul>
+                                <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt28.html"
+                                       onClick="window.open(this.href); return false;">Juego de caracteres</a></li>
+                                <li><a href="http://www.z80.info/" onClick="window.open(this.href); return false;">Web
+                                    del Z80</a></li>
+                                <li><a href="http://www.worldofspectrum.org/faq/reference/z80reference.htm"
+                                       onClick="window.open(this.href); return false;">Z80 Reference de WOS</a></li>
+                                <li><a href="http://ti86.acz.org/z80_ref.htm"
+                                       onClick="window.open(this.href); return false;">Z80 Reference de TI86</a></li>
+                                <li><a href="http://icarus.ticalc.org/articles/z80_faq.html"
+                                       onClick="window.open(this.href); return false;">FAQ de Icarus Productions</a>
+                                </li>
+                                <li><a href="http://www.speccy.org/trastero/cosas/Fichas/fichas.htm"
+                                       onClick="window.open(this.href); return false;">Microfichas de CM de
+                                    MicroHobby</a></li>
 
-    <li><a href="http://www.ticalc.org/pub/text/z80/" onClick="window.open(this.href); return false;">Tablas de ensamblado y t-estados (pulsar en z80.txt, z80_reference.txt, z80time.txt)</a></li>
-    <li><a href="http://www.worldofspectrum.org/faq/reference/Z80reference.htm" onClick="window.open(this.href); return false;">Z80 Reference de WOS</a></li>
-    <li><a href="http://www.z80.info/lesson1.htm" onClick="window.open(this.href); return false;">Curso de ensamblador de z80.info</a></li>
-    <li><a href="http://www.arrakis.es/~ninsesabe/pasmo/" onClick="window.open(this.href); return false;">Pasmo</li>
-</ul>
-</div>
-        </td>
-    </tr>
-
-    <tr>
-        <td align="right"><br><br>SROMERO</td>
-    </tr>
-</table>
+                                <li><a href="http://www.ticalc.org/pub/text/z80/"
+                                       onClick="window.open(this.href); return false;">Tablas de ensamblado y t-estados
+                                    (pulsar en z80.txt, z80_reference.txt, z80time.txt)</a></li>
+                                <li><a href="http://www.worldofspectrum.org/faq/reference/Z80reference.htm"
+                                       onClick="window.open(this.href); return false;">Z80 Reference de WOS</a></li>
+                                <li><a href="http://www.z80.info/lesson1.htm"
+                                       onClick="window.open(this.href); return false;">Curso de ensamblador de
+                                    z80.info</a></li>
+                                <li><a href="http://www.arrakis.es/~ninsesabe/pasmo/"
+                                       onClick="window.open(this.href); return false;">Pasmo</li>
+                            </ul>
+                        </div>
                     </td>
                 </tr>
-                <tr><td> </td></tr>
+
                 <tr>
-                    <td>
-
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-    </select>
-
-    <input type="button" onclick="return false;" name="siguiente" value=">" disabled  />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+                    <td align="right"><br><br>SROMERO</td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
 
-    </body>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html" selected>Programación Ensamblador</option>
+                            </select>
+
+                            <input type="button" onclick="return false;" name="siguiente" value=">" disabled/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+
+                </tr>
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
+
+</body>
 
 </html>

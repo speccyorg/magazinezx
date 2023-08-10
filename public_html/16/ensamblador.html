@@ -1,84 +1,114 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Programación Ensamblador - Magazine ZX número 16 - Enero 2008</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 16 - Enero 2008</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<style type="text/css">
-table.flags { background: grey; margin: 0; padding: 0;}
-table.flags td, table.flags th { background: white; margin: 0; padding: 4px;}
-</style>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>Programación Ensamblador - Magazine ZX número 16 - Enero 2008</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p align="center"><font size="5">Lenguaje Ensamblador del Z80 (III)</font></p>
-<p><b>Instrucciones condicionales</b></p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
+                </tr>
+            </table>
+        </td>
 
-<p>Una vez hemos visto la mayoría de instrucciones aritméticas y lógicas, es el momento de utilizarlas como condicionales para realizar cambios en el flujo lineal de nuestro programa. En esta entrega aprenderemos a usar etiquetas y saltos mediante instrucciones condicionales (CP, JR + condición, JP + condición, etc.), lo que nos permitirá implementar en ensamblador las típicas instrucciones IF/THEN/ELSE y los GOTO de BASIC.</p>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
 
-<p><b>Las etiquetas en los programas ASM</b></p>
-<p>Las etiquetas son unas directivas de los ensambladores (muy útiles) que nos permitirán hacer referencia a posiciones concretas de memoria, tanto dentro de nuestro programa como en otras áreas de memoria, por medio de nombres, en lugar de tener que utilizar valores numéricos.</p>
-<p>Veamos un ejemplo de etiqueta en un programa ensamblador:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="hardware.html">Hardware</option>
+                                <option value="z88dk.html">Programación Z88DK</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html" selected>Programación Ensamblador</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 16 - Enero 2008</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <style type="text/css">
+                table.flags {
+                    background: grey;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                table.flags td, table.flags th {
+                    background: white;
+                    margin: 0;
+                    padding: 4px;
+                }
+            </style>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">Lenguaje Ensamblador del Z80 (III)</font></p>
+                            <p><b>Instrucciones condicionales</b></p>
+
+                            <p>Una vez hemos visto la mayoría de instrucciones aritméticas y lógicas, es el momento de
+                                utilizarlas como condicionales para realizar cambios en el flujo lineal de nuestro
+                                programa. En esta entrega aprenderemos a usar etiquetas y saltos mediante instrucciones
+                                condicionales (CP, JR + condición, JP + condición, etc.), lo que nos permitirá
+                                implementar en ensamblador las típicas instrucciones IF/THEN/ELSE y los GOTO de
+                                BASIC.</p>
+
+                            <p><b>Las etiquetas en los programas ASM</b></p>
+                            <p>Las etiquetas son unas directivas de los ensambladores (muy útiles) que nos permitirán
+                                hacer referencia a posiciones concretas de memoria, tanto dentro de nuestro programa
+                                como en otras áreas de memoria, por medio de nombres, en lugar de tener que utilizar
+                                valores numéricos.</p>
+                            <p>Veamos un ejemplo de etiqueta en un programa ensamblador:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
         ORG 50000
 
         NOP
@@ -90,22 +120,26 @@ bucle:
         JP bucle
         RET
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Este es el código binario que genera el listado anterior al ser ensamblado:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>Este es el código binario que genera el listado anterior al ser ensamblado:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  00 06 0a 3e 14 00 (...) c3 53 c3 c9
 </pre>
-    </p></td></tr>
-</table>
-<p>Concretamente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Concretamente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 DIRECCION 	OPCODE 	INSTRUCCION
 50000 	00 	NOP
 50001 	06 0a 	LD B, 10
@@ -114,12 +148,14 @@ DIRECCION 	OPCODE 	INSTRUCCION
  	c3 53 c3 	JP C353 (53000)
 +1 	c9 	RET
 </pre>
-    </p></td></tr>
-</table>
-<p>Si mostramos las direcciones de memoria en que se ensambla cada instrucción, veremos:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Si mostramos las direcciones de memoria en que se ensambla cada instrucción, veremos:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 50000   NOP              ; (opcode = 1 byte)
 50001   LD B, 10         ; (opcode = 2 bytes)
 50003   LD A, 20         ; (opcode = 2 bytes)
@@ -130,23 +166,46 @@ DIRECCION 	OPCODE 	INSTRUCCION
 50020   JP bucle
 50023   RET
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>¿Dónde está en ese listado de instrucciones nuestra etiqueta "bucle"? Sencillo: no está. No es ninguna instrucción, sino, para el ensamblador, una referencia a la celdilla de memoria 50003, donde está la instrucción que sigue a la etiqueta.</p>
-<p>En nuestro ejemplo anterior, mediante ORG 50000 le decimos al programa ensamblador que nuestro código, una vez ensamblado, pretendemos que quede situado a partir de la dirección 50000, con lo cual cuando calcule las direcciones de las etiquetas deberá hacerlo en relación a esta dirección de origen. Así, en nuestro ejemplo anterior la instrucción NOP, que se ensambla con el opcode 00h, será "pokeada" (por nuestro cargador BASIC) en la dirección 50000. La instrucción LD B, 10, cuyo opcode tiene 2 bytes, será "pokeada" en 50001 y 50002, y así con todas las instrucciones del programa.</p>
-<p>Cuando el ensamblador se encuentra la etiqueta "bucle:" después del "LD B, 10", ¿cómo la ensambla? Supuestamente le corresponde la posición 50003, pero recordemos que esto no es una instrucción, sino una etiqueta: no tiene ningún significado para el microprocesador, sólo para el programa ensamblador. Por eso, cuando el ensamblador encuentra la etiqueta "bucle:", "mentalmente" asocia esta etiqueta (el texto "bucle") a la dirección 50003, que es la dirección donde hemos puesto la etiqueta.</p>
-<p>Si la etiqueta fuera una instrucción, se ensamblaría en la dirección 50003, pero como no lo es, el programa ensamblador simplemente la agrega a una tabla interna de referencias, donde lo que anota es:</p>
-<ul>
-	<li>La etiqueta "bucle" apunta a la dirección 50003</li>
-</ul>
-<p>Lo que realmente ensamblará en la dirección 50003 (y 50004) es la instrucción siguiente: "LD A, 20".</p>
-<p>Pero, entonces, ¿para qué nos sirve la etiqueta? Sencillo: para poder hacer referencia en cualquier momento a esa posición de memoria (del programa, en este caso), mediante una cadena fácil de recordar en lugar de mediante un número. Es más sencillo recordar "bucle" que recordar "50003", y si nuestro programa es largo y tenemos muchos saltos, funciones o variables, acabaremos manejando decenas y centenares de números para saltos, con lo que el programa sería inmanejable.</p>
+                            <p>¿Dónde está en ese listado de instrucciones nuestra etiqueta "bucle"? Sencillo: no está.
+                                No es ninguna instrucción, sino, para el ensamblador, una referencia a la celdilla de
+                                memoria 50003, donde está la instrucción que sigue a la etiqueta.</p>
+                            <p>En nuestro ejemplo anterior, mediante ORG 50000 le decimos al programa ensamblador que
+                                nuestro código, una vez ensamblado, pretendemos que quede situado a partir de la
+                                dirección 50000, con lo cual cuando calcule las direcciones de las etiquetas deberá
+                                hacerlo en relación a esta dirección de origen. Así, en nuestro ejemplo anterior la
+                                instrucción NOP, que se ensambla con el opcode 00h, será "pokeada" (por nuestro cargador
+                                BASIC) en la dirección 50000. La instrucción LD B, 10, cuyo opcode tiene 2 bytes, será
+                                "pokeada" en 50001 y 50002, y así con todas las instrucciones del programa.</p>
+                            <p>Cuando el ensamblador se encuentra la etiqueta "bucle:" después del "LD B, 10", ¿cómo la
+                                ensambla? Supuestamente le corresponde la posición 50003, pero recordemos que esto no es
+                                una instrucción, sino una etiqueta: no tiene ningún significado para el microprocesador,
+                                sólo para el programa ensamblador. Por eso, cuando el ensamblador encuentra la etiqueta
+                                "bucle:", "mentalmente" asocia esta etiqueta (el texto "bucle") a la dirección 50003,
+                                que es la dirección donde hemos puesto la etiqueta.</p>
+                            <p>Si la etiqueta fuera una instrucción, se ensamblaría en la dirección 50003, pero como no
+                                lo es, el programa ensamblador simplemente la agrega a una tabla interna de referencias,
+                                donde lo que anota es:</p>
+                            <ul>
+                                <li>La etiqueta "bucle" apunta a la dirección 50003</li>
+                            </ul>
+                            <p>Lo que realmente ensamblará en la dirección 50003 (y 50004) es la instrucción siguiente:
+                                "LD A, 20".</p>
+                            <p>Pero, entonces, ¿para qué nos sirve la etiqueta? Sencillo: para poder hacer referencia en
+                                cualquier momento a esa posición de memoria (del programa, en este caso), mediante una
+                                cadena fácil de recordar en lugar de mediante un número. Es más sencillo recordar
+                                "bucle" que recordar "50003", y si nuestro programa es largo y tenemos muchos saltos,
+                                funciones o variables, acabaremos manejando decenas y centenares de números para saltos,
+                                con lo que el programa sería inmanejable.</p>
 
-<p>El siguiente programa es equivalente al anterior, pero sin usar etiquetas:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>El siguiente programa es equivalente al anterior, pero sin usar etiquetas:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  ORG 50000
 
  NOP
@@ -157,13 +216,20 @@ DIRECCION 	OPCODE 	INSTRUCCION
  JP 50003
  RET
 </pre>
-    </p></td></tr>
-</table>
-<p>Las etiquetas son muy útiles. Veamos por qué: imaginemos que una vez acabado nuestro programa sin etiquetas (con direcciones numéricas), con muchos saltos (JP) a diferentes partes del mismo, tenemos que modificarlo porque hay un error. Al añadir o quitar instrucciones del programa, estamos variando las posiciones donde se ensambla todo el programa. Si por ejemplo, añadiéramos un NOP extra al principio del mismo, ya no habría que saltar a 50003 sino a 50004:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Las etiquetas son muy útiles. Veamos por qué: imaginemos que una vez acabado nuestro
+                                programa sin etiquetas (con direcciones numéricas), con muchos saltos (JP) a diferentes
+                                partes del mismo, tenemos que modificarlo porque hay un error. Al añadir o quitar
+                                instrucciones del programa, estamos variando las posiciones donde se ensambla todo el
+                                programa. Si por ejemplo, añadiéramos un NOP extra al principio del mismo, ya no habría
+                                que saltar a 50003 sino a 50004:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
  ORG 50000
 
  NOP
@@ -175,13 +241,22 @@ DIRECCION 	OPCODE 	INSTRUCCION
  JP 50004   ; La dirección de salto cambia
  RET
 </pre>
-    </p></td></tr>
-</table>
-<p>Para que nuestro programa funcione, tendríamos que cambiar TODAS las direcciones numéricas de salto del programa, a mano (calculando todas). Las etiquetas evitan esto, ya que es el programa ensamblador quien, en tiempo de ensamblado, cuando está convirtiendo el programa a código objeto, cambia todas las referencias a la etiqueta por el valor numérico correcto (por la posición donde aparece la etiqueta).</p>
-<p>Como veremos posteriormente, la instrucción JP realiza un salto de ejecución de código a una posición de memoria dada. Literalmente, un JP XX hace el registro PC = XX, de forma que alteramos el orden de ejecución del programa. Las etiquetas nos permiten establecer posiciones donde saltar en nuestro programa para utilizarlas luego fácilmente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Para que nuestro programa funcione, tendríamos que cambiar TODAS las direcciones
+                                numéricas de salto del programa, a mano (calculando todas). Las etiquetas evitan esto,
+                                ya que es el programa ensamblador quien, en tiempo de ensamblado, cuando está
+                                convirtiendo el programa a código objeto, cambia todas las referencias a la etiqueta por
+                                el valor numérico correcto (por la posición donde aparece la etiqueta).</p>
+                            <p>Como veremos posteriormente, la instrucción JP realiza un salto de ejecución de código a
+                                una posición de memoria dada. Literalmente, un JP XX hace el registro PC = XX, de forma
+                                que alteramos el orden de ejecución del programa. Las etiquetas nos permiten establecer
+                                posiciones donde saltar en nuestro programa para utilizarlas luego fácilmente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  ORG 50000
 
 ; Al salir de esta rutina, A=tecla pulsada
@@ -207,13 +282,19 @@ RutinaDibujarSprite:
  (etc...)
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Así, podremos especificar múltiples etiquetas para hacer referencia a todas las posiciones que necesitemos dentro de nuestro programa.</p>
-<p>Por suerte, no sólo existen etiquetas para referenciar posiciones del programa. Además podemos insertar en cualquier posición de la memoria datos en formato numérico o de texto y hacer referencia a ellos, con comandos como DB (DEFB), DW (DEFW) o DS (DEFS). Por ejemplo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Así, podremos especificar múltiples etiquetas para hacer referencia a todas las
+                                posiciones que necesitemos dentro de nuestro programa.</p>
+                            <p>Por suerte, no sólo existen etiquetas para referenciar posiciones del programa. Además
+                                podemos insertar en cualquier posición de la memoria datos en formato numérico o de
+                                texto y hacer referencia a ellos, con comandos como DB (DEFB), DW (DEFW) o DS (DEFS).
+                                Por ejemplo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  ; Principio del programa
  ORG 50000
 
@@ -240,27 +321,36 @@ texto DB "Esto es una cadena de texto"
    ; Fin del programa
    END
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="316">
-	<tr align="right">
-		<td><img src="img/db.gif" width="316" height="237"  alt="Resultado de RANDOMIZE USR 50000 en nuestro programa" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Resultado de RANDOMIZE USR 50000 en nuestro programa</td>
-	</tr>
-
-</table>
+                            </table>
 
 
-<p>Como puede verse, con DB hemos "insertado" datos directamente dentro de nuestro programa. Estos datos se cargarán en memoria (pokeados) también como parte del programa, y podremos acceder a ellos posteriormente. Los datos, en nuestro programa, están situados en la memoria, justo después de las instrucciones ensambladas (tras el último RET). Podemos verlo si ensamblamos el programa:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="2" width="316">
+                                <tr align="right">
+                                    <td><img src="img/db.gif" width="316" height="237"
+                                             alt="Resultado de RANDOMIZE USR 50000 en nuestro programa"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Resultado de RANDOMIZE USR 50000 en nuestro
+                                        programa
+                                    </td>
+                                </tr>
+
+                            </table>
+
+
+                            <p>Como puede verse, con DB hemos "insertado" datos directamente dentro de nuestro programa.
+                                Estos datos se cargarán en memoria (pokeados) también como parte del programa, y
+                                podremos acceder a ellos posteriormente. Los datos, en nuestro programa, están situados
+                                en la memoria, justo después de las instrucciones ensambladas (tras el último RET).
+                                Podemos verlo si ensamblamos el programa:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 $ pasmo --bin db.asm db.bin
 
 00000000  21 66 c3 11 00 40 01 0a  00 ed b0 06 1b 21 71 c3  |!f...@.......!q.|
@@ -269,31 +359,47 @@ $ pasmo --bin db.asm db.bin
 00000030  65 6e 61 20 64 65 20 74  65 78 74 6f              |ena de texto|
 0000003c
 </pre>
-    </p></td></tr>
-</table>
-<p>Si os fijáis, podemos ver el RET (201, o $C9) justo antes del bloque de datos FF, FF, 0, FF. Concretamente, la etiqueta "datos" en el programa hará referencia (al pokear el programa a partir de 50000), a la posición de memoria 50022, que contendrá el 00 inicial de nuestros datos DB.</p>
-<p>Cuando en el programa hacemos "LD HL, datos", el ensamblador transforma esa instrucción en realidad en "LD HL, 50022" (fijaos en el principio del programa: 21 66 C3, que corresponde a LD HL, C366, que es 50022). Gracias a esto podemos manipular los datos (que están en memoria) y leerlos y cambiarlos, utilizando un "nombre" como referencia a la celdilla de memoria de inicio de los mismos.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Si os fijáis, podemos ver el RET (201, o $C9) justo antes del bloque de datos FF, FF, 0,
+                                FF. Concretamente, la etiqueta "datos" en el programa hará referencia (al pokear el
+                                programa a partir de 50000), a la posición de memoria 50022, que contendrá el 00 inicial
+                                de nuestros datos DB.</p>
+                            <p>Cuando en el programa hacemos "LD HL, datos", el ensamblador transforma esa instrucción
+                                en realidad en "LD HL, 50022" (fijaos en el principio del programa: 21 66 C3, que
+                                corresponde a LD HL, C366, que es 50022). Gracias a esto podemos manipular los datos
+                                (que están en memoria) y leerlos y cambiarlos, utilizando un "nombre" como referencia a
+                                la celdilla de memoria de inicio de los mismos.</p>
 
-<p>Lo mismo ocurre con el texto que se ha definido entre dobles comillas. A partir de la dirección definida por "texto" se colocan todos los bytes que forman la cadena "Esto es una cadena de texto". Cada byte en memoria es una letra de la cadena, en formato ASCII (La "E" es 45h, la "s" es 73h", etc.).</p>
-<p>Con DB (o DEFB, que es equivalente por compatibilidad con otros ensambladores) podremos definir:</p>
-<ul>
-	<li>Cadenas de texto (todos los mensajes de texto de nuestros programas/juegos).</li>
-	<li>Datos numéricos con los que trabajar (bytes, words, caracteres).</li>
-	<li>Tablas precalculadas para optimizar. Por ejemplo, podemos tener un listado como el siguiente:
+                            <p>Lo mismo ocurre con el texto que se ha definido entre dobles comillas. A partir de la
+                                dirección definida por "texto" se colocan todos los bytes que forman la cadena "Esto es
+                                una cadena de texto". Cada byte en memoria es una letra de la cadena, en formato ASCII
+                                (La "E" es 45h, la "s" es 73h", etc.).</p>
+                            <p>Con DB (o DEFB, que es equivalente por compatibilidad con otros ensambladores) podremos
+                                definir:</p>
+                            <ul>
+                                <li>Cadenas de texto (todos los mensajes de texto de nuestros programas/juegos).</li>
+                                <li>Datos numéricos con los que trabajar (bytes, words, caracteres).</li>
+                                <li>Tablas precalculadas para optimizar. Por ejemplo, podemos tener un listado como el
+                                    siguiente:
 
-		<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
 
  numeros_primos  DB  1, 3, 5, 7, 11, 13, (etc...)
  </pre>
-    </p></td></tr>
-</table>
-	</li>
-	<li>Variables en memoria para trabajar en nuestro programa:
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                                </p></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>Variables en memoria para trabajar en nuestro programa:
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
    vidas  DB   3
    x      DB   0
    y      DB   0
@@ -308,25 +414,34 @@ muerte:
    LD (vidas), A
 </pre>
 
-    </p></td></tr>
-</table>
+                                                </p></td>
+                                        </tr>
+                                    </table>
 
-	</li>
-	<li>Datos gráficos de nuestros sprites (creados con utilidades como SevenuP o ZXPaintBrush, por ejemplo):
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                </li>
+                                <li>Datos gráficos de nuestros sprites (creados con utilidades como SevenuP o
+                                    ZXPaintBrush, por ejemplo):
+                                    <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        <tr>
+                                            <td><p class="codigo">
+                                                <pre>
  Enemigo  DB 12, 13, 25, 123, 210 (etc...)
 </pre>
-    </p></td></tr>
-</table>
-	</li>
+                                                </p></td>
+                                        </tr>
+                                    </table>
+                                </li>
 
-</ul>
-<p>Ahora bien, es muy importante tener clara una consideración: los datos que introducimos con DB (o DW, o cualquier otra directiva de inclusión) no se ensamblan, pero se insertan dentro del código resultante tal cual. Y el Z80 no puede distinguir un 201 introducido con DB de un opcode 201 (RET), con lo cual tenemos que asegurarnos de que dicho código no se ejecute, como en el siguiente programa:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </ul>
+                            <p>Ahora bien, es muy importante tener clara una consideración: los datos que introducimos
+                                con DB (o DW, o cualquier otra directiva de inclusión) no se ensamblan, pero se insertan
+                                dentro del código resultante tal cual. Y el Z80 no puede distinguir un 201 introducido
+                                con DB de un opcode 201 (RET), con lo cual tenemos que asegurarnos de que dicho código
+                                no se ejecute, como en el siguiente programa:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  ORG 50000
 
 ; Cuidado, al situar los datos aquí, cuando saltemos a 50000
@@ -338,13 +453,15 @@ datos DB 00, 201, 100, 12, 255, 11
   (más instrucciones)
   RET
  </pre>
-    </p></td></tr>
-</table>
- <p>Lo correcto sería:</p>
- <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Lo correcto sería:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   ORG 50000
 
   ; Ahora el salto a 50000 ejecutará el LD B, A, no los
@@ -356,40 +473,67 @@ datos DB 00, 201, 100, 12, 255, 11
 ; Aquí nunca serán ejecutados, el RET está antes.
 datos DB 00, 201, 100, 12, 255, 11
 </pre>
-    </p></td></tr>
-</table>
-<p>Los microprocesadores como el Z80 no saben distinguir entre datos e instrucciones, y es por eso que tenemos que tener cuidado de no ejecutar datos como si fueran códigos de instrucción del Z80. De hecho, si hacemos un RANDOMIZE USR XX (siendo XX cualquier valor de la memoria), lo más probable es que ejecutemos datos como si fueran instrucciones y el Spectrum se cuelgue, ya que los datos no son un programa, y el programa resultante de interpretar esos datos no tendría ningún sentido.</p>
-<p>Lo que nos tiene que quedar claro de este apartado son dos conceptos: cuando el ensamblador encuentra la definición de una etiqueta, guarda en una tabla interna la dirección de ensamblado de la siguiente instrucción a dicha etiqueta. Después, cada vez que hay una aparición de esa etiqueta en el código, sustituye la etiqueta por dicha dirección de memoria. Además, podemos utilizar la etiqueta incluso aunque la definamos después (más adelante) del código, ya que el ensamblador hace varias pasadas en la compilación: no es necesario primero definir la etiqueta y después hacer referencia a ella, podemos hacerlo también a la inversa.</p>
-<p>Es decir, es válido tanto:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Los microprocesadores como el Z80 no saben distinguir entre datos e instrucciones, y es
+                                por eso que tenemos que tener cuidado de no ejecutar datos como si fueran códigos de
+                                instrucción del Z80. De hecho, si hacemos un RANDOMIZE USR XX (siendo XX cualquier valor
+                                de la memoria), lo más probable es que ejecutemos datos como si fueran instrucciones y
+                                el Spectrum se cuelgue, ya que los datos no son un programa, y el programa resultante de
+                                interpretar esos datos no tendría ningún sentido.</p>
+                            <p>Lo que nos tiene que quedar claro de este apartado son dos conceptos: cuando el
+                                ensamblador encuentra la definición de una etiqueta, guarda en una tabla interna la
+                                dirección de ensamblado de la siguiente instrucción a dicha etiqueta. Después, cada vez
+                                que hay una aparición de esa etiqueta en el código, sustituye la etiqueta por dicha
+                                dirección de memoria. Además, podemos utilizar la etiqueta incluso aunque la definamos
+                                después (más adelante) del código, ya que el ensamblador hace varias pasadas en la
+                                compilación: no es necesario primero definir la etiqueta y después hacer referencia a
+                                ella, podemos hacerlo también a la inversa.</p>
+                            <p>Es decir, es válido tanto:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 etiqueta:
     (más código)
     JP etiqueta
 </pre>
-    </p></td></tr>
-</table>
-<p>Como:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  JP etiqueta
  (más código)
 etiqueta:
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Por otra parte, podemos utilizar etiquetas junto a la directiva DB (también podríamos usar DB sin etiqueta) para definir variables, bloques de datos, gráficos, cadenas, y en general cualquier tipo de dato en crudo que queramos insertar dentro de nuestro programa.</p>
+                            </table>
+                            <p>Por otra parte, podemos utilizar etiquetas junto a la directiva DB (también podríamos
+                                usar DB sin etiqueta) para definir variables, bloques de datos, gráficos, cadenas, y en
+                                general cualquier tipo de dato en crudo que queramos insertar dentro de nuestro
+                                programa.</p>
 
-<p><b>Saltos absolutos incondicionales: JP</b></p>
-<p>Ya sabemos definir etiquetas en nuestros programas y referenciarlas. Ahora la pregunta es: ¿para qué sirven estas etiquetas? Ya lo hemos visto: aparte de referencias para usarlas como variables o datos, su principal uso será saltar a ellas con las instrucciones de salto.</p>
-<p>Para empezar vamos a ver 2 instrucciones de salto incondicionales, es decir, cuando lleguemos a una de esas 2 instrucciones, se modificará el registro PC para cambiar la ejecución del programa. ¿Qué quiere decir esto? Que podemos realizar bucles, saltos a rutinas o funciones, etc. Empecemos con JP (de JumP):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p><b>Saltos absolutos incondicionales: JP</b></p>
+                            <p>Ya sabemos definir etiquetas en nuestros programas y referenciarlas. Ahora la pregunta
+                                es: ¿para qué sirven estas etiquetas? Ya lo hemos visto: aparte de referencias para
+                                usarlas como variables o datos, su principal uso será saltar a ellas con las
+                                instrucciones de salto.</p>
+                            <p>Para empezar vamos a ver 2 instrucciones de salto incondicionales, es decir, cuando
+                                lleguemos a una de esas 2 instrucciones, se modificará el registro PC para cambiar la
+                                ejecución del programa. ¿Qué quiere decir esto? Que podemos realizar bucles, saltos a
+                                rutinas o funciones, etc. Empecemos con JP (de JumP):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
       ; Ejemplo de un programa con un bucle infinito
       ORG 50000
 
@@ -401,80 +545,161 @@ bucle:
       RET     ; Esto nunca se ejecutará
 </pre>
 
-    </p></td></tr>
-</table>
-<p>¿Qué hace el ejemplo anterior? Ensamblémoslo con "pasmo tapbas bucle.asm bucle.tap" y ejecutémoslo en BASIC con un RUN y RANDOMIZE USR 50000 una vez cargado. Nada más entrar en 50000, se ejecuta un "INC A". Después se hace un "LD (16384), A", es decir, escribimos en la celdilla (16384) de la memoria el valor que contiene A. Esta celdilla se corresponde con los primeros 8 píxeles de la pantalla, con lo cual estaremos cambiando el contenido de la misma.</p>
-<p>Tras esta escritura, encontramos un "JP bucle", que lo que hace es cambiar el valor de PC y hacerlo, de nuevo, PC=50000 (como hizo el RANDOMIZE USR 50000). El código se volverá a repetir, y de nuevo al llegar a JP volveremos a saltar a la dirección definida por la etiqueta "bucle". Es un bucle infinito, realizado gracias a este salto condicional (podemos reiniciar el Spectrum para retomar el control). Estaremos repitiendo una y otra vez la misma porción de código, que cambia el contenido de los 8 primeros píxeles de pantalla poniendo en ellos el valor de A (que varía desde 0 a 255 continuadamente).</p>
-<p>Utilizaremos pues JP para cambiar el rumbo del programa y cambiar PC para ejecutar otras porciones de código (anteriores o posteriores a la posición actual) del mismo. JP realiza pues lo que se conoce como "SALTO INCONDICIONAL ABSOLUTO", es decir, saltar a una posición absoluta de memoria (una celdilla de 0 a 65535), mediante la asignación de dicho valor al registro PC.</p>
-<p>Existen 3 maneras de usar JP:</p>
-<ol style="list-style-type: lower-alpha;">
-	<li><p>JP NN:</p>
-		<p>Saltar a la dirección NN. Literalmente: PC = NN</p></li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>¿Qué hace el ejemplo anterior? Ensamblémoslo con "pasmo tapbas bucle.asm bucle.tap" y
+                                ejecutémoslo en BASIC con un RUN y RANDOMIZE USR 50000 una vez cargado. Nada más entrar
+                                en 50000, se ejecuta un "INC A". Después se hace un "LD (16384), A", es decir,
+                                escribimos en la celdilla (16384) de la memoria el valor que contiene A. Esta celdilla
+                                se corresponde con los primeros 8 píxeles de la pantalla, con lo cual estaremos
+                                cambiando el contenido de la misma.</p>
+                            <p>Tras esta escritura, encontramos un "JP bucle", que lo que hace es cambiar el valor de PC
+                                y hacerlo, de nuevo, PC=50000 (como hizo el RANDOMIZE USR 50000). El código se volverá a
+                                repetir, y de nuevo al llegar a JP volveremos a saltar a la dirección definida por la
+                                etiqueta "bucle". Es un bucle infinito, realizado gracias a este salto condicional
+                                (podemos reiniciar el Spectrum para retomar el control). Estaremos repitiendo una y otra
+                                vez la misma porción de código, que cambia el contenido de los 8 primeros píxeles de
+                                pantalla poniendo en ellos el valor de A (que varía desde 0 a 255 continuadamente).</p>
+                            <p>Utilizaremos pues JP para cambiar el rumbo del programa y cambiar PC para ejecutar otras
+                                porciones de código (anteriores o posteriores a la posición actual) del mismo. JP
+                                realiza pues lo que se conoce como "SALTO INCONDICIONAL ABSOLUTO", es decir, saltar a
+                                una posición absoluta de memoria (una celdilla de 0 a 65535), mediante la asignación de
+                                dicho valor al registro PC.</p>
+                            <p>Existen 3 maneras de usar JP:</p>
+                            <ol style="list-style-type: lower-alpha;">
+                                <li><p>JP NN:</p>
+                                    <p>Saltar a la dirección NN. Literalmente: PC = NN</p></li>
 
-	<li><p>JP (HL)</p>
-		<p>Saltar a la dirección contenida en el registro HL (ojo, no a la dirección apuntada por el registro HL, sino directamente a su valor). Literalmente: PC = HL</p>
-	</li>
-	<li><p>JP (registro_indice)</p>
-		<p>Saltar a la dirección contenida en IX o IY. Literalmente: PC = IX o PC = IY</p>
-	</li>
-</ul>
+                                <li><p>JP (HL)</p>
+                                    <p>Saltar a la dirección contenida en el registro HL (ojo, no a la dirección
+                                        apuntada por el registro HL, sino directamente a su valor). Literalmente: PC =
+                                        HL</p>
+                                </li>
+                                <li><p>JP (registro_indice)</p>
+                                    <p>Saltar a la dirección contenida en IX o IY. Literalmente: PC = IX o PC = IY</p>
+                                </li>
+                                </ul>
 
-<p>Ninguna de estas 4 instrucciones afecta a los flags:</p>
+                                <p>Ninguna de estas 4 instrucciones afecta a los flags:</p>
 
-<table class="flags">
-	<tr><th></th><th colspan="6">Flags</th></tr>
-	<tr><th>Instrucción</th><th>S</th><th>Z</th><th>H</th><th>P</th><th>N</th><th>C</th></tr>
-	<tr><td>JP NN</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                                <table class="flags">
+                                    <tr>
+                                        <th></th>
+                                        <th colspan="6">Flags</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Instrucción</th>
+                                        <th>S</th>
+                                        <th>Z</th>
+                                        <th>H</th>
+                                        <th>P</th>
+                                        <th>N</th>
+                                        <th>C</th>
+                                    </tr>
+                                    <tr>
+                                        <td>JP NN</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
 
-	<tr><td>JP (HL) </td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-	<tr><td>JP (IX)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                                    <tr>
+                                        <td>JP (HL)</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>JP (IX)</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
 
-	<tr><td>JP (IY)</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-</table>
+                                    <tr>
+                                        <td>JP (IY)</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
 
-<p>A la hora de ensamblar un salto como "JP 50000" (JP C350), dicha instrucción se ensamblará como:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <p>A la hora de ensamblar un salto como "JP 50000" (JP C350), dicha instrucción se
+                                    ensamblará como:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
 
  C3 50 C3
 </pre>
-    </p></td></tr>
-</table>
-<p>que quiere decir:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>que quiere decir:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  JP 50 C3  ->  JP C350  ->  JP 50000
 </pre>
-    </p></td></tr>
+                                            </p></td>
+                                    </tr>
 
-</table>
+                                </table>
 
-<p>(Recordemos que nuestra CPU almacena primero en memoria los bytes bajos de los números de 16 bits). Como podéis ver, aparte del código de instrucción (C3) almacenamos un valor numérico, absoluto, de la posición a la que saltar. Es pues una instrucción de 3 bytes.</p>
-<p>Literalmente, JP NN se traduce por PC=NN.</p>
+                                <p>(Recordemos que nuestra CPU almacena primero en memoria los bytes bajos de los
+                                    números de 16 bits). Como podéis ver, aparte del código de instrucción (C3)
+                                    almacenamos un valor numérico, absoluto, de la posición a la que saltar. Es pues una
+                                    instrucción de 3 bytes.</p>
+                                <p>Literalmente, JP NN se traduce por PC=NN.</p>
 
-<p><b>Saltos relativos incondicionales: JR</b></p>
-<p>Además de JP, tenemos otra instrucción para realizar saltos incondicionales: JR. JR trabaja exactamente igual que JP: realiza un salto (cambiando el valor del registro PC), pero lo hace de forma diferente.</p>
-<p>JR son las siglas de "Jump Relative", y es que esta instrucción en lugar de realizar un salto absoluto (a una posición de memoria 0-65535), lo hace de forma relativa, es decir, a una posición de memoria alrededor de la posición actual (una vez decodificada la instrucción JR). El argumento de JR no es pues un valor numérico de 16 bits (0-65535) sino un valor de 8 bits en complemento a dos que nos permite saltar desde la posición actual (referenciada en el ensamblador como "$") hasta 127 bytes hacia adelante y 128 bytes hacia atrás:</p>
+                                <p><b>Saltos relativos incondicionales: JR</b></p>
+                                <p>Además de JP, tenemos otra instrucción para realizar saltos incondicionales: JR. JR
+                                    trabaja exactamente igual que JP: realiza un salto (cambiando el valor del registro
+                                    PC), pero lo hace de forma diferente.</p>
+                                <p>JR son las siglas de "Jump Relative", y es que esta instrucción en lugar de realizar
+                                    un salto absoluto (a una posición de memoria 0-65535), lo hace de forma relativa, es
+                                    decir, a una posición de memoria alrededor de la posición actual (una vez
+                                    decodificada la instrucción JR). El argumento de JR no es pues un valor numérico de
+                                    16 bits (0-65535) sino un valor de 8 bits en complemento a dos que nos permite
+                                    saltar desde la posición actual (referenciada en el ensamblador como "$") hasta 127
+                                    bytes hacia adelante y 128 bytes hacia atrás:</p>
 
-<p>Ejemplos de instrucciones JR:</p>
+                                <p>Ejemplos de instrucciones JR:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  JR $+25      ; Saltar adelante 25 bytes: PC = PC+25
  JR $-100     ; Saltar atrás 100 bytes:   PC = PC-100
 </pre>
-    </p></td></tr>
-</table>
-<p>Nosotros, gracias a las etiquetas, podemos olvidarnos de calcular posiciones y hacer referencia de una forma más sencilla a posiciones en nuestro programa:</p>
-<p>Veamos el mismo ejemplo anterior de JP, con JR:</p>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Nosotros, gracias a las etiquetas, podemos olvidarnos de calcular posiciones y hacer
+                                    referencia de una forma más sencilla a posiciones en nuestro programa:</p>
+                                <p>Veamos el mismo ejemplo anterior de JP, con JR:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
 
-<pre>
+                                            <pre>
       ; Ejemplo de un programa con un bucle infinito
       ORG 50000
 
@@ -485,99 +710,193 @@ bucle:
 
       RET ; Esto nunca se ejecutará
 </pre>
-    </p></td></tr>
-</table>
-<p>Como puede verse, el ejemplo es exactamente igual que en el caso anterior. No tenemos que utilizar el carácter $ (posición actual de ensamblado) porque al hacer uso de etiquetas es el ensamblador quien se encarga de traducir la etiqueta a un desplazamiento de 8 bits y ensamblarlo.</p>
-<p>¿Qué diferencia tiene JP con JR? Pues bien: para empezar en lugar de ocupar 3 bytes (JP + la dirección de 16 bits), ocupa sólo 2 (JR + el desplaziento de 8 bits) con lo cual se decodifica y ejecuta más rápido.</p>
-<p>Además, como la dirección del salto no es absoluta, sino relativa, y de 8 bits en complemento a dos, no podemos saltar a cualquier punto del programa, sino que sólo podremos saltar a código que esté cerca de la línea actual: como máximo 128 bytes por encima o 127 bytes por debajo de la posición actual en memoria.</p>
-<p>¿Cuál es la utilidad o ventaja de esto? Pues que los saltos realizados en rutinas que usen JR y no JP son todos relativos a la posición actual, con lo cual la rutina es REUBICABLE. Es decir, si cambiamos nuestra rutina de 50000 a 60000 (por ejemplo), funcionará, porque los saltos son relativos a "$". En una rutina programada con JP, si la pokeamos en 60000 en lugar de en 50000, cuando hagamos saltos (JP 50003, por ejemplo), saltaremos a lugares donde no está el código (ahora está en 60003) y el programa no hará lo que esperamos. En resumen: JR permite programar rutinas reubicables y JP no.</p>
-<p>(Nota: se dice que una rutina es reubicable cuando estando programada a partir de una determinada dirección de memoria, podemos copiar la rutina a otra dirección y que sus saltos funcionen correctamente por no ser absolutos).</p>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Como puede verse, el ejemplo es exactamente igual que en el caso anterior. No tenemos
+                                    que utilizar el carácter $ (posición actual de ensamblado) porque al hacer uso de
+                                    etiquetas es el ensamblador quien se encarga de traducir la etiqueta a un
+                                    desplazamiento de 8 bits y ensamblarlo.</p>
+                                <p>¿Qué diferencia tiene JP con JR? Pues bien: para empezar en lugar de ocupar 3 bytes
+                                    (JP + la dirección de 16 bits), ocupa sólo 2 (JR + el desplaziento de 8 bits) con lo
+                                    cual se decodifica y ejecuta más rápido.</p>
+                                <p>Además, como la dirección del salto no es absoluta, sino relativa, y de 8 bits en
+                                    complemento a dos, no podemos saltar a cualquier punto del programa, sino que sólo
+                                    podremos saltar a código que esté cerca de la línea actual: como máximo 128 bytes
+                                    por encima o 127 bytes por debajo de la posición actual en memoria.</p>
+                                <p>¿Cuál es la utilidad o ventaja de esto? Pues que los saltos realizados en rutinas que
+                                    usen JR y no JP son todos relativos a la posición actual, con lo cual la rutina es
+                                    REUBICABLE. Es decir, si cambiamos nuestra rutina de 50000 a 60000 (por ejemplo),
+                                    funcionará, porque los saltos son relativos a "$". En una rutina programada con JP,
+                                    si la pokeamos en 60000 en lugar de en 50000, cuando hagamos saltos (JP 50003, por
+                                    ejemplo), saltaremos a lugares donde no está el código (ahora está en 60003) y el
+                                    programa no hará lo que esperamos. En resumen: JR permite programar rutinas
+                                    reubicables y JP no.</p>
+                                <p>(Nota: se dice que una rutina es reubicable cuando estando programada a partir de una
+                                    determinada dirección de memoria, podemos copiar la rutina a otra dirección y que
+                                    sus saltos funcionen correctamente por no ser absolutos).</p>
 
-<p>¿Recordáis en los cursos y rutinas de Microhobby cuando se decía "Esta rutina es reubicable"? Pues quería decir exactamente eso, que podías copiar la rutina en cualquier lugar de la memoria y llamarla, dado que el autor de la misma había utilizado sólo saltos relativos y no absolutos.</p>
-<p>En nuestro caso, al usar un programa ensamblador en lugar de simplemente disponer de las rutinas en código máquina (ya ensambladas) que nos mostraba microhobby, no se nos plantearán esos problemas, dado que nosotros podemos usar etiquetas y copiar cualquier porción del código a dónde queramos de nuestro programa. Aquellas rutinas utilizaban direcciones de memoria numéricas o saltos relativos.</p>
-<p>Nuestro ensamblador (Pasmo, o el que sea) nos permite utilizar etiquetas, que serán reemplazadas por sus direcciones de memoria durante el proceso de ensamblado. Nosotros podemos modificar las posibles de nuestras rutinas en el código, y dejar que el ensamblador las "reubique" por nosotros, ya que al ensamblará cambiará todas las referencias a las etiquetas que usamos.</p>
-<p>Esta facilidad de trabajo contrasta con las dificultades que tenían los programadores de la época que no disponían de ensambladores profesionales. Imaginad la cantidad de usuarios que ensamblaban sus programas a mano, usando etiquetas, saltos absolutos (y como veremos, llamadas a subrutinas), que en lugar de sencillos nombres (JP A_mayor_que_B) utilizaban directamente direcciones en memoria. E imaginad el trabajo que suponía mantener un listado en papel de todas los saltos, subrutinas y variables, referenciados por direcciones de memoria y no por nombres, y tener que cambiar muchos de ellos cada vez que tenían que arreglar un fallo en una subrutina y cambiaban los destinos de los saltos por crecer el código que había entre ellos.</p>
-<p>Dejando ese tema aparte, a tabla de afectación de flags de JR es la misma que para JP: nula.</p>
+                                <p>¿Recordáis en los cursos y rutinas de Microhobby cuando se decía "Esta rutina es
+                                    reubicable"? Pues quería decir exactamente eso, que podías copiar la rutina en
+                                    cualquier lugar de la memoria y llamarla, dado que el autor de la misma había
+                                    utilizado sólo saltos relativos y no absolutos.</p>
+                                <p>En nuestro caso, al usar un programa ensamblador en lugar de simplemente disponer de
+                                    las rutinas en código máquina (ya ensambladas) que nos mostraba microhobby, no se
+                                    nos plantearán esos problemas, dado que nosotros podemos usar etiquetas y copiar
+                                    cualquier porción del código a dónde queramos de nuestro programa. Aquellas rutinas
+                                    utilizaban direcciones de memoria numéricas o saltos relativos.</p>
+                                <p>Nuestro ensamblador (Pasmo, o el que sea) nos permite utilizar etiquetas, que serán
+                                    reemplazadas por sus direcciones de memoria durante el proceso de ensamblado.
+                                    Nosotros podemos modificar las posibles de nuestras rutinas en el código, y dejar
+                                    que el ensamblador las "reubique" por nosotros, ya que al ensamblará cambiará todas
+                                    las referencias a las etiquetas que usamos.</p>
+                                <p>Esta facilidad de trabajo contrasta con las dificultades que tenían los programadores
+                                    de la época que no disponían de ensambladores profesionales. Imaginad la cantidad de
+                                    usuarios que ensamblaban sus programas a mano, usando etiquetas, saltos absolutos (y
+                                    como veremos, llamadas a subrutinas), que en lugar de sencillos nombres (JP
+                                    A_mayor_que_B) utilizaban directamente direcciones en memoria. E imaginad el trabajo
+                                    que suponía mantener un listado en papel de todas los saltos, subrutinas y
+                                    variables, referenciados por direcciones de memoria y no por nombres, y tener que
+                                    cambiar muchos de ellos cada vez que tenían que arreglar un fallo en una subrutina y
+                                    cambiaban los destinos de los saltos por crecer el código que había entre ellos.</p>
+                                <p>Dejando ese tema aparte, a tabla de afectación de flags de JR es la misma que para
+                                    JP: nula.</p>
 
-<table class="flags">
-	<tr><th></th><th colspan="6">Flags</th></tr>
-	<tr><th>Instrucción</th><th>S</th><th>Z</th><th>H</th><th>P</th><th>N</th><th>C</th></tr>
+                                <table class="flags">
+                                    <tr>
+                                        <th></th>
+                                        <th colspan="6">Flags</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Instrucción</th>
+                                        <th>S</th>
+                                        <th>Z</th>
+                                        <th>H</th>
+                                        <th>P</th>
+                                        <th>N</th>
+                                        <th>C</th>
+                                    </tr>
 
-	<tr><td>JR d</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-</table>
+                                    <tr>
+                                        <td>JR d</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
 
-<p>Donde "d" es un desplazamiento de 8 bits.</p>
-<p>Literalmente, JR d se traduce por PC=PC+d.</p>
+                                <p>Donde "d" es un desplazamiento de 8 bits.</p>
+                                <p>Literalmente, JR d se traduce por PC=PC+d.</p>
 
-<p><b>Saltos condicionales con los flags</b></p>
+                                <p><b>Saltos condicionales con los flags</b></p>
 
-<p>Hemos visto la forma de realizar saltos incondicionales. A continuación veremos cómo realizar los saltos (ya sean absolutos con JP o relativos con JR) de acuerdo a unas determinadas condiciones.</p>
-<p>Las instrucciones condicionales disponibles trabajan con el estado de los flags del registro F, y son:</p>
+                                <p>Hemos visto la forma de realizar saltos incondicionales. A continuación veremos cómo
+                                    realizar los saltos (ya sean absolutos con JP o relativos con JR) de acuerdo a unas
+                                    determinadas condiciones.</p>
+                                <p>Las instrucciones condicionales disponibles trabajan con el estado de los flags del
+                                    registro F, y son:</p>
 
-<ul>
-	<li>JP NZ, direccion : Salta si el indicador de cero (Z) está a cero (resultado no cero).</li>
-	<li>JP Z, direccion : Salta si el indicador de cero (Z) está a uno (resultado cero).</li>
-	<li>JP NC, direccion : Salta si el indicador de carry (C) está a cero.</li>
-	<li>JP C, direccion : Salta si el indicador de carry (C) está a uno.</li>
+                                <ul>
+                                    <li>JP NZ, direccion : Salta si el indicador de cero (Z) está a cero (resultado no
+                                        cero).
+                                    </li>
+                                    <li>JP Z, direccion : Salta si el indicador de cero (Z) está a uno (resultado
+                                        cero).
+                                    </li>
+                                    <li>JP NC, direccion : Salta si el indicador de carry (C) está a cero.</li>
+                                    <li>JP C, direccion : Salta si el indicador de carry (C) está a uno.</li>
 
-	<li>JP PO, direccion : Salta si el indicador de paridad/desbordamiento (P/O) está a cero.</li>
-	<li>JP PE, direccion : Salta si el indicador de paridad/desbordamiento (P/O) está a uno.</li>
-	<li>JP P, direccion : Salta si el indicador de signo S está a cero (resultado positivo).</li>
-	<li>JP M, direccion : Salta si el indicador de signo S está a uno (resultado negativo).</li>
-</ul>
-<ul>
-	<li>JR NZ, relativo : Salta si el indicador de cero (Z) está a cero (resultado no cero).</li>
+                                    <li>JP PO, direccion : Salta si el indicador de paridad/desbordamiento (P/O) está a
+                                        cero.
+                                    </li>
+                                    <li>JP PE, direccion : Salta si el indicador de paridad/desbordamiento (P/O) está a
+                                        uno.
+                                    </li>
+                                    <li>JP P, direccion : Salta si el indicador de signo S está a cero (resultado
+                                        positivo).
+                                    </li>
+                                    <li>JP M, direccion : Salta si el indicador de signo S está a uno (resultado
+                                        negativo).
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>JR NZ, relativo : Salta si el indicador de cero (Z) está a cero (resultado no
+                                        cero).
+                                    </li>
 
-	<li>JR Z, relativo : Salta si el indicador de cero (Z) está a uno (resultado cero).</li>
-	<li>JR NC, relativo : Salta si el indicador de carry (C) está a cero.</li>
-	<li>JR C, relativo : Salta si el indicador de carry (C) está a uno.</li>
-</ul>
+                                    <li>JR Z, relativo : Salta si el indicador de cero (Z) está a uno (resultado
+                                        cero).
+                                    </li>
+                                    <li>JR NC, relativo : Salta si el indicador de carry (C) está a cero.</li>
+                                    <li>JR C, relativo : Salta si el indicador de carry (C) está a uno.</li>
+                                </ul>
 
-<p>Donde "dirección" es un valor absoluto 0-65535, y "relativo" es un desplazamiento de 8 bits con signo -128 a +127.</p>
-<p>(Nota: en el listado de instrucciones, positivo o negativo se refiere a considerando el resultado de la operación anterior en complemento a dos).</p>
-<p>Así, supongamos el siguiente programa:</p>
+                                <p>Donde "dirección" es un valor absoluto 0-65535, y "relativo" es un desplazamiento de
+                                    8 bits con signo -128 a +127.</p>
+                                <p>(Nota: en el listado de instrucciones, positivo o negativo se refiere a considerando
+                                    el resultado de la operación anterior en complemento a dos).</p>
+                                <p>Así, supongamos el siguiente programa:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
    JP Z, bucle
    LD A, 10
 bucle:
    NOP
 </pre>
-    </p></td></tr>
-</table>
-<p>(donde "bucle" es una etiqueta definida en algún lugar de nuestro programa, aunque también habríamos podido especificar directamente una dirección como por ejemplo 50004).</p>
-<p>Cuando el procesador lee el "JP Z, bucle", lo que hace es lo siguiente:</p>
-<ul>
-	<li>Si el flag Z está activado (a uno), saltamos a "bucle" (con lo cual no se ejecuta el "LD A, 10"), ejecutándose el código a partir del "NOP".</li>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>(donde "bucle" es una etiqueta definida en algún lugar de nuestro programa, aunque
+                                    también habríamos podido especificar directamente una dirección como por ejemplo
+                                    50004).</p>
+                                <p>Cuando el procesador lee el "JP Z, bucle", lo que hace es lo siguiente:</p>
+                                <ul>
+                                    <li>Si el flag Z está activado (a uno), saltamos a "bucle" (con lo cual no se
+                                        ejecuta el "LD A, 10"), ejecutándose el código a partir del "NOP".
+                                    </li>
 
-	<li>Si no está activo (a cero) no se realiza ningún salto, con lo que se ejecutaría el "LD A, 10", y seguiría después con el "NOP".</li>
-</ul>
+                                    <li>Si no está activo (a cero) no se realiza ningún salto, con lo que se ejecutaría
+                                        el "LD A, 10", y seguiría después con el "NOP".
+                                    </li>
+                                </ul>
 
-<p>En BASIC, "JP Z, bucle" sería algo como:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <p>En BASIC, "JP Z, bucle" sería algo como:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  IF FLAG_ZERO = 1 THEN GOTO bucle
  </pre>
-    </p></td></tr>
-</table>
+                                            </p></td>
+                                    </tr>
+                                </table>
 
-<p>Y "JP NZ, bucle" sería:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <p>Y "JP NZ, bucle" sería:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  IF FLAG_ZERO = 0 THEN GOTO bucle
 </pre>
-    </p></td></tr>
-</table>
-<p>Con estas instrucciones podemos realizar saltos condicionales en función del estado de los flags o indicadores del registro F: podemos saltar si el resultado de una operación es cero, si no es cero, si hubo acarreo, si no lo hubo...</p>
-<p>Y el lector se preguntará: ¿y tiene utilidad para mí realizar saltos en función de los flags? Pues la respuesta es: bien usados, lo tiene para todo tipo de tareas:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Con estas instrucciones podemos realizar saltos condicionales en función del estado
+                                    de los flags o indicadores del registro F: podemos saltar si el resultado de una
+                                    operación es cero, si no es cero, si hubo acarreo, si no lo hubo...</p>
+                                <p>Y el lector se preguntará: ¿y tiene utilidad para mí realizar saltos en función de
+                                    los flags? Pues la respuesta es: bien usados, lo tiene para todo tipo de tareas:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
   ; Repetir 100 veces la instruccion NOP
   LD A, 100
 bucle:
@@ -589,24 +908,36 @@ bucle:
   LD A, 200      ; Aquí llegaremos cuando Z sea 1 (A valga 0)
   ; resto del programa
 </pre>
-    </p></td></tr>
-</table>
-<p>Es decir: cargamos en A el valor 100, y tras hacer nuestro "NOP", hacemos un "DEC A" que decrementa su valor (a 99). Como el resultado de "DEC A" es 99 y no cero, el flag de Z (de cero) se queda a 0, (recordemos que sólo se pone a uno cuando la última operación resultó ser cero).</p>
-<p>Como el flag Z es cero (NON ZERO = no activado el flag zero) la instrucción "JR NZ, bucle" realiza un salto a la etiqueta "bucle". Allí se ejecuta el NOP y de nuevo el "DEC A", dejando ahora A en 98.</p>
-<p>Tras repetirse 100 veces el proceso, llegará un momento en que A valga cero tras el "DEC A". En ese momento se activará el flag de ZERO con lo que la instrucción "JR NZ, bucle" no realizará el salto y continuará con el "LD A, 200".</p>
-<p>Veamos otro ejemplo más gráfico: vamos a implementar en ASM una comparación de igualdad:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Es decir: cargamos en A el valor 100, y tras hacer nuestro "NOP", hacemos un "DEC A"
+                                    que decrementa su valor (a 99). Como el resultado de "DEC A" es 99 y no cero, el
+                                    flag de Z (de cero) se queda a 0, (recordemos que sólo se pone a uno cuando la
+                                    última operación resultó ser cero).</p>
+                                <p>Como el flag Z es cero (NON ZERO = no activado el flag zero) la instrucción "JR NZ,
+                                    bucle" realiza un salto a la etiqueta "bucle". Allí se ejecuta el NOP y de nuevo el
+                                    "DEC A", dejando ahora A en 98.</p>
+                                <p>Tras repetirse 100 veces el proceso, llegará un momento en que A valga cero tras el
+                                    "DEC A". En ese momento se activará el flag de ZERO con lo que la instrucción "JR
+                                    NZ, bucle" no realizará el salto y continuará con el "LD A, 200".</p>
+                                <p>Veamos otro ejemplo más gráfico: vamos a implementar en ASM una comparación de
+                                    igualdad:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  IF A=B THEN GOTO iguales ELSE GOTO distintos
 </pre>
-    </p></td></tr>
-</table>
-<p>En ensamblador:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>En ensamblador:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
    SUB B              ; A = A-B
    JR Z, iguales      ; Si Z=1 saltar a iguales
    JR NZ, distintos   ; Si Z=0 saltar a distintos
@@ -622,64 +953,126 @@ distintos:
 seguir:
 
 </pre>
-    </p></td></tr>
-</table>
-<p>(Nota: se podría haber usado JP en vez de JR)</p>
-<p>Para comparar A con B los restamos (A=A-B). Si el resultado de la resta es cero, es porque A era igual a B. Si no es cero, es que eran distintos. Y utilizando el flag de Zero con JP Z y JP NZ podemos detectar esa diferencia.</p>
-<p>Pronto veremos más a fondo otras instrucciones de comparación, pero este ejemplo debe bastar para demostrar la importancia de los flags y de su uso en instrucciones de salto condicionales. Bien utilizadas podemos alterar el flujo del programa a voluntad. Es cierto que no es tan inmediato ni cómodo como los >, <, = y <> de BASIC, pero el resultado es el mismo, y es fácil acostumbrarse a este tipo de comparaciones mediante el estado de los flags.</p>
-<p>Para finalizar, un detalle sobre DEC+JR: La combinación DEC B / JR NZ se puede sustituir (es más eficiente, y más sencillo) por el comando DJNZ, que literalmente significa "Decrementa B y si no es cero, salta a <direccion>".</p>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>(Nota: se podría haber usado JP en vez de JR)</p>
+                                <p>Para comparar A con B los restamos (A=A-B). Si el resultado de la resta es cero, es
+                                    porque A era igual a B. Si no es cero, es que eran distintos. Y utilizando el flag
+                                    de Zero con JP Z y JP NZ podemos detectar esa diferencia.</p>
+                                <p>Pronto veremos más a fondo otras instrucciones de comparación, pero este ejemplo debe
+                                    bastar para demostrar la importancia de los flags y de su uso en instrucciones de
+                                    salto condicionales. Bien utilizadas podemos alterar el flujo del programa a
+                                    voluntad. Es cierto que no es tan inmediato ni cómodo como los >, <, = y <> de
+                                    BASIC, pero el resultado es el mismo, y es fácil acostumbrarse a este tipo de
+                                    comparaciones mediante el estado de los flags.</p>
+                                <p>Para finalizar, un detalle sobre DEC+JR: La combinación DEC B / JR NZ se puede
+                                    sustituir (es más eficiente, y más sencillo) por el comando DJNZ, que literalmente
+                                    significa "Decrementa B y si no es cero, salta a
+                                    <direccion>".
+                                </p>
 
-<p><i>DJNZ dirección</i></p>
+                                <p><i>DJNZ dirección</i></p>
 
-<p>Esta instrucción se usa habitualmente en bucles (usando B como iterador del mismo) y, al igual que JP y JR, no afecta al estado de los flags:</p>
+                                <p>Esta instrucción se usa habitualmente en bucles (usando B como iterador del mismo) y,
+                                    al igual que JP y JR, no afecta al estado de los flags:</p>
 
-<table class="flags">
-	<tr><th></th><th colspan="6">Flags</th></tr>
-	<tr><th>Instrucción</th><th>S</th><th>Z</th><th>H</th><th>P</th><th>N</th><th>C</th></tr>
-	<tr><td>JP COND, NN</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                                <table class="flags">
+                                    <tr>
+                                        <th></th>
+                                        <th colspan="6">Flags</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Instrucción</th>
+                                        <th>S</th>
+                                        <th>Z</th>
+                                        <th>H</th>
+                                        <th>P</th>
+                                        <th>N</th>
+                                        <th>C</th>
+                                    </tr>
+                                    <tr>
+                                        <td>JP COND, NN</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
 
-	<tr><td>JR d</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-	<tr><td>DJNZ d</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+                                    <tr>
+                                        <td>JR d</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DJNZ d</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
 
-</table>
+                                </table>
 
-<p><b>Instrucción de comparación CP</b></p>
-<p>Para realizar comparaciones (especialmente de igualdad, mayor que y menor que) utilizaremos la instrucción CP. Su formato es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <p><b>Instrucción de comparación CP</b></p>
+                                <p>Para realizar comparaciones (especialmente de igualdad, mayor que y menor que)
+                                    utilizaremos la instrucción CP. Su formato es:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  CP origen
 </pre>
-    </p></td></tr>
-</table>
-<p>Donde "origen" puede ser A, F, B, C, D, E, H, L, un valor numérico de 8 bits directo, (HL), (IX+d) o (IY+d).</p>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Donde "origen" puede ser A, F, B, C, D, E, H, L, un valor numérico de 8 bits directo,
+                                    (HL), (IX+d) o (IY+d).</p>
 
-<p>Al realizar una instrucción "CP origen", el microprocesador ejecuta la operación "A-origen", pero no almacena el resultado en ningún sitio. Lo que sí que hace es alterar el estado de los flags de acuerdo al resultado de la operación.</p>
-<p>Recordemos el ejemplo de comparación anterior donde realizábamos una resta, perdiendo por tanto el valor de A:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <p>Al realizar una instrucción "CP origen", el microprocesador ejecuta la operación
+                                    "A-origen", pero no almacena el resultado en ningún sitio. Lo que sí que hace es
+                                    alterar el estado de los flags de acuerdo al resultado de la operación.</p>
+                                <p>Recordemos el ejemplo de comparación anterior donde realizábamos una resta, perdiendo
+                                    por tanto el valor de A:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
    SUB B              ; A = A-B
    JR Z, iguales      ; Si Z=1 saltar a iguales
    JR NZ, distintos   ; Si Z=0 saltar a distintos
 </pre>
-    </p></td></tr>
-</table>
-<p>Gracias a CP, podemos hacer la misma operación pero sin perder el valor de A (por la resta):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Gracias a CP, podemos hacer la misma operación pero sin perder el valor de A (por la
+                                    resta):</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
    CP B               ; Flags = estado(A-B)
    JR Z, iguales      ; Si Z=1 saltar a iguales
    JR NZ, distintos   ; Si Z=0 saltar a distintos
 </pre>
-    </p></td></tr>
-</table>
-<p>¿Qué nos permite esto? Aprovechando todos los flags del registro F (flag de acarreo, flag de zero, etc), realizar comparaciones como las siguientes:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>¿Qué nos permite esto? Aprovechando todos los flags del registro F (flag de acarreo,
+                                    flag de zero, etc), realizar comparaciones como las siguientes:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
   ; Comparación entre A Y B (=, > y <)
   LD B, 5
   LD A, 3
@@ -689,28 +1082,39 @@ seguir:
   JP NC, A_Mayor_que_B    ; IF(a-b)>0 THEN a>b
   JP C, A_Menor_que_B     ; IF(a-b)<0 THEN a<b
 
-A_Mayor_que_B:
-  (instrucciones)
-  JP fin
+                                                    A_Mayor_que_B:
+                                                    (instrucciones)
+                                                    JP fin
 
-A_Menor_que_B:
-  (instrucciones)
-  JP fin
+                                                    A_Menor_que_B:
+                                                    (instrucciones)
+                                                    JP fin
 
-A_Igual_que_B:
-  (instrucciones)
+                                                    A_Igual_que_B:
+                                                    (instrucciones)
 
-fin:
-  (continúa el programa)
+                                                    fin:
+                                                    (continúa el programa)
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Vamos a ilustrar la anterior porción de código con un ejemplo que nos permitirá, además, descubrir una forma muy singular de hacer debugging en vuestras pruebas aprendiendo ensamblador. Vamos a sacar información por pantalla de forma que podamos ver en qué parte del programa estamos. Este mismo "sistema" podéis emplearlo (hasta que veamos cómo sacar texto o gráficos concretos por pantalla) para "depurar" vuestros programas y hacer pruebas.</p>
-<p>Consiste en escribir valor en la memoria, justo en la zona de la pantalla, para así distinguir las partes de nuestro programa por las que pasamos. Así, escribiremos 255 (8 pixeles activos) en una línea de la parte superior de la pantalla izquierda (16960), en el centro de la misma (19056), o en la parte inferior derecha (21470):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Vamos a ilustrar la anterior porción de código con un ejemplo que nos permitirá,
+                                    además, descubrir una forma muy singular de hacer debugging en vuestras pruebas
+                                    aprendiendo ensamblador. Vamos a sacar información por pantalla de forma que podamos
+                                    ver en qué parte del programa estamos. Este mismo "sistema" podéis emplearlo (hasta
+                                    que veamos cómo sacar texto o gráficos concretos por pantalla) para "depurar"
+                                    vuestros programas y hacer pruebas.</p>
+                                <p>Consiste en escribir valor en la memoria, justo en la zona de la pantalla, para así
+                                    distinguir las partes de nuestro programa por las que pasamos. Así, escribiremos 255
+                                    (8 pixeles activos) en una línea de la parte superior de la pantalla izquierda
+                                    (16960), en el centro de la misma (19056), o en la parte inferior derecha
+                                    (21470):</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  ; Principio del programa
  ORG 50000
 
@@ -723,48 +1127,58 @@ fin:
   JP NC, A_Mayor_que_B    ; IF(a-b)>0 THEN a>b
   JP C, A_Menor_que_B     ; IF(a-b)<0 THEN a<b
 
-A_Mayor_que_B:
-  LD A, 255
-  LD (16960), A           ; 8 pixels en la parte sup-izq
-  JP fin
+                                                    A_Mayor_que_B:
+                                                    LD A, 255
+                                                    LD (16960), A ; 8 pixels en la parte sup-izq
+                                                    JP fin
 
-A_Menor_que_B:
-  LD A, 255
-  LD (19056), A           ; centro de la pantalla
-  JP fin
+                                                    A_Menor_que_B:
+                                                    LD A, 255
+                                                    LD (19056), A ; centro de la pantalla
+                                                    JP fin
 
-A_Igual_que_B:
-  LD A, 255
-  LD (21470), A           ; parte inferior derecha
+                                                    A_Igual_que_B:
+                                                    LD A, 255
+                                                    LD (21470), A ; parte inferior derecha
 
-fin:
-  JP fin                  ; bucle infinito, para que podamos ver
-                          ; el resultado de la ejecucion
+                                                    fin:
+                                                    JP fin ; bucle infinito, para que podamos ver
+                                                    ; el resultado de la ejecucion
 
-  END 50000
+                                                    END 50000
 </pre>
-    </p></td></tr>
+                                            </p></td>
+                                    </tr>
 
-</table>
-<p>Lo ensamblamos con: pasmo tapbas compara.asm compara.tap, y lo cargamos en el Spectrum o emulador. La sentencia END 50000 nos ahorra el teclear "RANDOMIZE USR 50000" ya que pasmo lo introducirá en el cargador BASIC por nosotros. Jugando con los valores de A y B del listado deberemos ver cómo cambia el lugar al que saltamos (representado por el lugar de la pantalla en que vemos dibujada nuestra pequeña línea de 8 píxeles).</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/compara.png" width="320" height="240"  alt="Salida del programa anterior con A=5 y B=7" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Salida del programa anterior con A=5 y B=7</td>
-
-	</tr>
-</table>
+                                </table>
+                                <p>Lo ensamblamos con: pasmo tapbas compara.asm compara.tap, y lo cargamos en el
+                                    Spectrum o emulador. La sentencia END 50000 nos ahorra el teclear "RANDOMIZE USR
+                                    50000" ya que pasmo lo introducirá en el cargador BASIC por nosotros. Jugando con
+                                    los valores de A y B del listado deberemos ver cómo cambia el lugar al que saltamos
+                                    (representado por el lugar de la pantalla en que vemos dibujada nuestra pequeña
+                                    línea de 8 píxeles).</p>
 
 
-<p>Finalmente, destacar que nada nos impide el hacer comparaciones multiples o anidadas:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                    <tr align="right">
+                                        <td><img src="img/compara.png" width="320" height="240"
+                                                 alt="Salida del programa anterior con A=5 y B=7"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Salida del programa anterior con A=5 y B=7
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+
+                                <p>Finalmente, destacar que nada nos impide el hacer comparaciones multiples o
+                                    anidadas:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
   LD B, 5
   LD A, 3
   LD C, 6
@@ -784,25 +1198,51 @@ A_Igual_a_C:
 Fin:
   (resto del programa)
 </pre>
-    </p></td></tr>
-</table>
+                                            </p></td>
+                                    </tr>
+                                </table>
 
-<p>La instrucción CP afecta a todos los flags:</p>
+                                <p>La instrucción CP afecta a todos los flags:</p>
 
-<table class="flags">
-	<tr><th></th><th colspan="6">Flags</th></tr>
-	<tr><th>Instrucción</th><th>S</th><th>Z</th><th>H</th><th>P</th><th>N</th><th>C</th></tr>
-	<tr><td>CP s </td><td>*</td><td>*</td><td>*</td><td>V</td><td>1</td><td>*</td></tr>
+                                <table class="flags">
+                                    <tr>
+                                        <th></th>
+                                        <th colspan="6">Flags</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Instrucción</th>
+                                        <th>S</th>
+                                        <th>Z</th>
+                                        <th>H</th>
+                                        <th>P</th>
+                                        <th>N</th>
+                                        <th>C</th>
+                                    </tr>
+                                    <tr>
+                                        <td>CP s</td>
+                                        <td>*</td>
+                                        <td>*</td>
+                                        <td>*</td>
+                                        <td>V</td>
+                                        <td>1</td>
+                                        <td>*</td>
+                                    </tr>
 
-</table>
+                                </table>
 
-<p>El flag "N" se pone a uno porque, aunque se ignore el resultado, la operación efectuada es una resta.</p>
+                                <p>El flag "N" se pone a uno porque, aunque se ignore el resultado, la operación
+                                    efectuada es una resta.</p>
 
-<p><b>Consideraciones de las condiciones</b></p>
-<p>A la hora de utilizar instrucciones condicionales hay que tener en cuenta que no todas las instrucciones afectan a los flags. Por ejemplo, la instrucción "DEC BC" no pondrá el flag Z a uno cuando BC sea cero. Si intentamos montar un bucle mediante DEC BC + JR NZ, nunca saldremos del mismo, ya que DEC BC no afecta al flag de zero.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <p><b>Consideraciones de las condiciones</b></p>
+                                <p>A la hora de utilizar instrucciones condicionales hay que tener en cuenta que no
+                                    todas las instrucciones afectan a los flags. Por ejemplo, la instrucción "DEC BC" no
+                                    pondrá el flag Z a uno cuando BC sea cero. Si intentamos montar un bucle mediante
+                                    DEC BC + JR NZ, nunca saldremos del mismo, ya que DEC BC no afecta al flag de
+                                    zero.</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
     LD BC, 1000        ; BC = 1000
 bucle:
     (...)
@@ -810,14 +1250,20 @@ bucle:
     DEC BC             ; BC = BC-1 (pero NO ALTERA el Carry Flag)
     JR NZ, bucle       ; Nunca se pondrá a uno el ZF, siempre salta
 </pre>
-    </p></td></tr>
+                                            </p></td>
+                                    </tr>
 
-</table>
-<p>Para evitar estas situaciones necesitamos conocer la afectación de los flags ante cada instrucción, que podéis consultar en todas las tablas que os hemos proporcionado.</p>
-<p>Podemos realizar algo similar al ejemplo anterior aprovechándonos (de nuevo) de los flags y de los resultados de las operaciones lógicas (y sus efectos sobre el registro F):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                </table>
+                                <p>Para evitar estas situaciones necesitamos conocer la afectación de los flags ante
+                                    cada instrucción, que podéis consultar en todas las tablas que os hemos
+                                    proporcionado.</p>
+                                <p>Podemos realizar algo similar al ejemplo anterior aprovechándonos (de nuevo) de los
+                                    flags y de los resultados de las operaciones lógicas (y sus efectos sobre el
+                                    registro F):</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
     LD BC, 1000        ; BC = 1000
 
 bucle:
@@ -830,110 +1276,216 @@ bucle:
                        ; del OR será cero y el ZF se pondrá a 1.
     JR NZ, bucle       ; ahora sí que funcionará el salto si BC=0
 </pre>
-    </p></td></tr>
-</table>
-<p>Más detalles sobre los saltos condicionales: esta vez respecto al signo. Las condiciones P y M (JP P, JP M) nos permitirán realizar saltos según el estado del bit de signo. Resultará especialmente útil después de operaciones aritméticas.</p>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Más detalles sobre los saltos condicionales: esta vez respecto al signo. Las
+                                    condiciones P y M (JP P, JP M) nos permitirán realizar saltos según el estado del
+                                    bit de signo. Resultará especialmente útil después de operaciones aritméticas.</p>
 
-<p>Los saltos por Paridad/Overflow (JP PO, JP PE) permitirán realizar saltos en función de la paridad cuando la última operación realizada modifique ese bit de F según la paridad del resultado. La misma condición nos servirá para desbordamientos si la última operación que afecta a flags realizada modifica este bit con respecto a dicha condición. ¿Qué quiere decir esto? Que si, por ejemplo, realizamos una suma o resta, JP PO y JP PE responderán en función de si ha habido un desbordamiento o no y no en función de la paridad, porque las sumas y restas actualizan dicho flag según los desbordamientos, no según la paridad.</p>
+                                <p>Los saltos por Paridad/Overflow (JP PO, JP PE) permitirán realizar saltos en función
+                                    de la paridad cuando la última operación realizada modifique ese bit de F según la
+                                    paridad del resultado. La misma condición nos servirá para desbordamientos si la
+                                    última operación que afecta a flags realizada modifica este bit con respecto a dicha
+                                    condición. ¿Qué quiere decir esto? Que si, por ejemplo, realizamos una suma o resta,
+                                    JP PO y JP PE responderán en función de si ha habido un desbordamiento o no y no en
+                                    función de la paridad, porque las sumas y restas actualizan dicho flag según los
+                                    desbordamientos, no según la paridad.</p>
 
-<p><b>La importancia de la probabilidad de salto</b></p>
-<p>Ante una instrucción condicional, el microprocesador tendrá 2 opciones, según los valores que comparemos y el tipo de comparación que hagamos (si es cero, si no es cero, si es mayor o menor, etc.). Al final, sólo habrá 2 caminos posibles: saltar a una dirección de destino, o no saltar y continuar en la dirección de memoria siguiente al salto condicional.</p>
-<p>Aunque pueda parecer una pérdida de tiempo, en rutinas críticas es muy interesante el pararse a pensar cuál puede ser el caso con más probabilidades de ejecución, ya que el tiempo empleado en la opción "CONDICION CIERTA, POR LO QUE SE PRODUCE EL SALTO" es mayor que el empleado en "CONDICION FALSA, NO SALTO Y SIGO".</p>
-<p>Por ejemplo, ante un "JP Z, direccion", el microprocesador tardará 10 ciclos de reloj en ejecutar un salto si la condición se cumple, y sólo 1 si no se cumple (ya que entonces no tiene que realizar salto alguno).</p>
-<p>Supongamos que tenemos una rutina que recorre una zona de memoria y lee los diferentes valores de 0 a 255. Si el valor es mayor de 240 (es decir, en el intervalor 241-255), lo pone a cero, mientras que si es menor de 240 (en el intervalo 0-240), lo cambia por un 1.</p>
-<p>Lo normal es que, ante datos aleatorios, haya más probabilidad de encontrar datos del segundo caso (0-240) que del primero (241-255), simplemente por el hecho de que hay 240 probabilides de 255, mientras que del primero hay 15 probabilidades de 255. En tal caso, dicha rutina debería organizarse de forma que la comparación realice el salto cuando encuentre un dato mayor de 255, dado que ese supuesto se dará menos veces. Si lo hicieramos a la inversa, se saltaría más veces y la rutina tardaría más en realizar el mismo trabajo.</p>
+                                <p><b>La importancia de la probabilidad de salto</b></p>
+                                <p>Ante una instrucción condicional, el microprocesador tendrá 2 opciones, según los
+                                    valores que comparemos y el tipo de comparación que hagamos (si es cero, si no es
+                                    cero, si es mayor o menor, etc.). Al final, sólo habrá 2 caminos posibles: saltar a
+                                    una dirección de destino, o no saltar y continuar en la dirección de memoria
+                                    siguiente al salto condicional.</p>
+                                <p>Aunque pueda parecer una pérdida de tiempo, en rutinas críticas es muy interesante el
+                                    pararse a pensar cuál puede ser el caso con más probabilidades de ejecución, ya que
+                                    el tiempo empleado en la opción "CONDICION CIERTA, POR LO QUE SE PRODUCE EL SALTO"
+                                    es mayor que el empleado en "CONDICION FALSA, NO SALTO Y SIGO".</p>
+                                <p>Por ejemplo, ante un "JP Z, direccion", el microprocesador tardará 10 ciclos de reloj
+                                    en ejecutar un salto si la condición se cumple, y sólo 1 si no se cumple (ya que
+                                    entonces no tiene que realizar salto alguno).</p>
+                                <p>Supongamos que tenemos una rutina que recorre una zona de memoria y lee los
+                                    diferentes valores de 0 a 255. Si el valor es mayor de 240 (es decir, en el
+                                    intervalor 241-255), lo pone a cero, mientras que si es menor de 240 (en el
+                                    intervalo 0-240), lo cambia por un 1.</p>
+                                <p>Lo normal es que, ante datos aleatorios, haya más probabilidad de encontrar datos del
+                                    segundo caso (0-240) que del primero (241-255), simplemente por el hecho de que hay
+                                    240 probabilides de 255, mientras que del primero hay 15 probabilidades de 255. En
+                                    tal caso, dicha rutina debería organizarse de forma que la comparación realice el
+                                    salto cuando encuentre un dato mayor de 255, dado que ese supuesto se dará menos
+                                    veces. Si lo hicieramos a la inversa, se saltaría más veces y la rutina tardaría más
+                                    en realizar el mismo trabajo.</p>
 
-<p><b>Instrucciones de comparacion repetitivas</b></p>
+                                <p><b>Instrucciones de comparacion repetitivas</b></p>
 
-<p>Para acabar con las instrucciones de comparación vamos a ver las instrucciones de comparación repetitivas. Son parecidas a CP, pero trabajan (igual que LDI, LDIR, LDD y LDDR) con HL y BC para realizar las comparaciones con la memoria: son CPI, CPD, CPIR y CPDR.</p>
-<p>Comencemos con CPI (ComPare and Increment):</p>
-<p><i>CPI:</i></p>
-<ul>
-	<li>Al registro A se le resta el byte contenido en la posición de memoria apuntada por HL.</li>
-	<li>El resultado de la resta no se almacena en ningún sitio.</li>
-	<li>Los flags resultan afectados por la comparación:
-		<ul>
-			<li>Si A==(HL), se pone a 1 el flag de Zero (si no es igual se pone a 0).</li>
+                                <p>Para acabar con las instrucciones de comparación vamos a ver las instrucciones de
+                                    comparación repetitivas. Son parecidas a CP, pero trabajan (igual que LDI, LDIR, LDD
+                                    y LDDR) con HL y BC para realizar las comparaciones con la memoria: son CPI, CPD,
+                                    CPIR y CPDR.</p>
+                                <p>Comencemos con CPI (ComPare and Increment):</p>
+                                <p><i>CPI:</i></p>
+                                <ul>
+                                    <li>Al registro A se le resta el byte contenido en la posición de memoria apuntada
+                                        por HL.
+                                    </li>
+                                    <li>El resultado de la resta no se almacena en ningún sitio.</li>
+                                    <li>Los flags resultan afectados por la comparación:
+                                        <ul>
+                                            <li>Si A==(HL), se pone a 1 el flag de Zero (si no es igual se pone a 0).
+                                            </li>
 
-			<li>Si BC==0000, se pone a 0 el flag Parity/Overflow (a 1 en caso contrario).</li>
-		</ul>
-	</li>
-	<li>Se incrementa HL.</li>
-	<li>Se decrementa BC.</li>
-</ul>
+                                            <li>Si BC==0000, se pone a 0 el flag Parity/Overflow (a 1 en caso
+                                                contrario).
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Se incrementa HL.</li>
+                                    <li>Se decrementa BC.</li>
+                                </ul>
 
-<p>Técnicamente (con un pequeño matiz que veremos ahora), CPI equivale a:</p>
+                                <p>Técnicamente (con un pequeño matiz que veremos ahora), CPI equivale a:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  CPI =     CP [HL]
            INC HL
            DEC BC
 </pre>
-    </p></td></tr>
-</table>
-<p>Su instrucción "hermana" CPD (ComPare and Decrement) funciona de idéntica forma, pero decrementando HL:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Su instrucción "hermana" CPD (ComPare and Decrement) funciona de idéntica forma, pero
+                                    decrementando HL:</p>
+                                <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                    <tr>
+                                        <td><p class="codigo">
+                                            <pre>
  CPD =     CP [HL]
            DEC HL
            DEC BC
 
 </pre>
-    </p></td></tr>
+                                            </p></td>
+                                    </tr>
+                                </table>
+                                <p>Y el pequeño matiz: así como CP [HL] afecta al indicador C de Carry, CPI y CPD,
+                                    aunque realizan esa operación intermedia, no lo afectan. Las instrucciones CPIR y
+                                    CPDR son equivalentes a CPI y CPD, pero ejecutándose múltiples veces: hasta que BC
+                                    sea cero o bien se encuentre en la posición de memoria apuntada por HL un valor
+                                    numérico igual al que contiene el registro A. Literalmente, es una instrucción de
+                                    búsqueda: buscamos hacia adelante (CPIR) o hacia atrás (CPDR), desde una posición de
+                                    memoria inicial (HL), un valor (A), entre dicha posición inicial (HL) y una posición
+                                    final (HL+BC o HL-BC para CPIR y CPDR).</p>
+
+                                <p><i>CPIR:</i></p>
+                                <ul>
+                                    <li>Al registro A se le resta el byte contenido en la posición de memoria apuntada
+                                        por HL.
+                                    </li>
+                                    <li>El resultado de la resta no se almacena en ningún sitio.</li>
+                                    <li>Los flags resultan afectados por la comparación:
+                                        <ul>
+
+                                            <li>Si A==(HL), se pone a 1 el flag de Zero (si no es igual se pone a 0).
+                                            </li>
+                                            <li>Si BC==0000, se pone a 0 el flag Parity/Overflow (a 1 en caso
+                                                contrario).
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Se incrementa HL.</li>
+                                    <li>Se decrementa BC.</li>
+                                    <li>Si BC===0 o A=(HL), se finaliza la instrucción. Si no, repetimos el proceso.
+                                    </li>
+
+                                </ul>
+
+                                <p>CPDR es, como podéis imaginar, el equivalente a CPIR pero decrementando HL, para
+                                    buscar hacia atrás en la memoria.</p>
+                                <p>Como ya hemos comentado, muchos flags se ven afectados:</p>
+
+                                <table class="flags">
+                                    <tr>
+                                        <th></th>
+                                        <th colspan="6">Flags</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Instrucción</th>
+                                        <th>S</th>
+                                        <th>Z</th>
+                                        <th>H</th>
+                                        <th>P</th>
+                                        <th>N</th>
+                                        <th>C</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>CPI</td>
+                                        <td>*</td>
+                                        <td>*</td>
+                                        <td>*</td>
+                                        <td>*</td>
+                                        <td>1</td>
+                                        <td-
+                    </td>
+                </tr>
+                <tr>
+                    <td>CPD</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>*</td>
+                    <td>1</td>
+                    <td-
+        </td>
+    </tr>
+    <tr>
+        <td>CPIR</td>
+        <td>*</td>
+        <td>*</td>
+        <td>*</td>
+        <td>*</td>
+        <td>1</td>
+        <td-
+        </td></tr>
+
+    <tr>
+        <td>CPDR</td>
+        <td>*</td>
+        <td>*</td>
+        <td>*</td>
+        <td>*</td>
+        <td>1</td>
+        <td-
+        </td></tr>
 </table>
-<p>Y el pequeño matiz: así como CP [HL] afecta al indicador C de Carry, CPI y CPD, aunque realizan esa operación intermedia, no lo afectan. Las instrucciones CPIR y CPDR son equivalentes a CPI y CPD, pero ejecutándose múltiples veces: hasta que BC sea cero o bien se encuentre en la posición de memoria apuntada por HL un valor numérico igual al que contiene el registro A. Literalmente, es una instrucción de búsqueda: buscamos hacia adelante (CPIR) o hacia atrás (CPDR), desde una posición de memoria inicial (HL), un valor (A), entre dicha posición inicial (HL) y una posición final (HL+BC o HL-BC para CPIR y CPDR).</p>
 
-<p><i>CPIR:</i></p>
-<ul>
-	<li>Al registro A se le resta el byte contenido en la posición de memoria apuntada por HL.</li>
-	<li>El resultado de la resta no se almacena en ningún sitio.</li>
-	<li>Los flags resultan afectados por la comparación:
-		<ul>
-
-			<li>Si A==(HL), se pone a 1 el flag de Zero (si no es igual se pone a 0).</li>
-			<li>Si BC==0000, se pone a 0 el flag Parity/Overflow (a 1 en caso contrario).</li>
-		</ul>
-	</li>
-	<li>Se incrementa HL.</li>
-	<li>Se decrementa BC.</li>
-	<li>Si BC===0 o A=(HL), se finaliza la instrucción. Si no, repetimos el proceso.</li>
-
-</ul>
-
-<p>CPDR es, como podéis imaginar, el equivalente a CPIR pero decrementando HL, para buscar hacia atrás en la memoria.</p>
-<p>Como ya hemos comentado, muchos flags se ven afectados:</p>
-
-<table class="flags">
-	<tr><th></th><th colspan="6">Flags</th></tr>
-	<tr><th>Instrucción</th><th>S</th><th>Z</th><th>H</th><th>P</th><th>N</th><th>C</th></tr>
-
-	<tr><td>CPI </td><td>*</td><td>*</td><td>*</td><td>*</td><td>1</td><td-</td></tr>
-	<tr><td>CPD </td><td>*</td><td>*</td><td>*</td><td>*</td><td>1</td><td-</td></tr>
-	<tr><td>CPIR </td><td>*</td><td>*</td><td>*</td><td>*</td><td>1</td><td-</td></tr>
-
-	<tr><td>CPDR </td><td>*</td><td>*</td><td>*</td><td>*</td><td>1</td><td-</td></tr>
-</table>
-
-<p>Un ejemplo de uso de un CP repetitivo es realizar búsquedas de un determinado valor en memoria. Supongamos que deseamos buscar la primera aparición del valor "123" en la memoria a partir de la dirección 20000, y hasta la dirección 30000, es decir, encontrar la dirección de la primera celdilla de memoria entre 20000 y 30000 que contenga el valor 123.</p>
+<p>Un ejemplo de uso de un CP repetitivo es realizar búsquedas de un determinado valor en memoria. Supongamos que
+    deseamos buscar la primera aparición del valor "123" en la memoria a partir de la dirección 20000, y hasta la
+    dirección 30000, es decir, encontrar la dirección de la primera celdilla de memoria entre 20000 y 30000 que contenga
+    el valor 123.</p>
 <p>Podemos hacerlo mediante el siguiente ejemplo con CPIR:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+    <tr>
+        <td><p class="codigo">
 
-<pre>
+            <pre>
    LD HL, 20000      ; Origen de la busqueda
    LD BC, 10000      ; Número de bytes a buscar (20000-30000)
    LD A, 123         ; Valor a buscar
    CPIR
 </pre>
-    </p></td></tr>
+            </p></td>
+    </tr>
 </table>
 <p>Este código realizará lo siguiente:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+    <tr>
+        <td><p class="codigo">
+            <pre>
   HL = 20000
   BC = 10000
   A  = 123
@@ -947,18 +1499,27 @@ Repetir:
   BC = BC-1
 Fin_de_CPIR:
 </pre>
-    </p></td></tr>
+            </p></td>
+    </tr>
 
 </table>
-<p>Con esto, si la celdilla 15000 contiene el valor "123", la instrucción CPIR del ejemplo anterior acabará su ejecución, dejando en HL el valor 15001 (tendremos que decrementar HL para obtener la posición exacta). Dejará además el flag "P/O" (paridad/desbordamiento) y el flag Z a uno. En BC tendremos restado el número de iteraciones del "bucle" realizadas.</p>
-<p>Si no se encuentra ninguna aparición de "123", BC llegará a valer cero, porque el "bucle CPI" se ejecutará 10000 veces. El flag P/O estará a cero, al igual que Z, indicando que se finalizó el CPIR y no se encontró nada.</p>
-<p>Nótese que si en vez de utilizar CPIR hubiéramos utilizado CPDR, podríamos haber buscado hacia atrás, desde 20000 a 10000, decrementando HL. Incluso haciendo HL=0 y usando CPDR, podemos encontrar la última aparición del valor de A en la memoria (ya que 0000 - 1 = FFFFh, es decir: 0-1=65535 en nuestros 16 bits).</p>
+<p>Con esto, si la celdilla 15000 contiene el valor "123", la instrucción CPIR del ejemplo anterior acabará su
+    ejecución, dejando en HL el valor 15001 (tendremos que decrementar HL para obtener la posición exacta). Dejará
+    además el flag "P/O" (paridad/desbordamiento) y el flag Z a uno. En BC tendremos restado el número de iteraciones
+    del "bucle" realizadas.</p>
+<p>Si no se encuentra ninguna aparición de "123", BC llegará a valer cero, porque el "bucle CPI" se ejecutará 10000
+    veces. El flag P/O estará a cero, al igual que Z, indicando que se finalizó el CPIR y no se encontró nada.</p>
+<p>Nótese que si en vez de utilizar CPIR hubiéramos utilizado CPDR, podríamos haber buscado hacia atrás, desde 20000 a
+    10000, decrementando HL. Incluso haciendo HL=0 y usando CPDR, podemos encontrar la última aparición del valor de A
+    en la memoria (ya que 0000 - 1 = FFFFh, es decir: 0-1=65535 en nuestros 16 bits).</p>
 
 <p><b>Un ejemplo con CPIR</b></p>
-<p>Veamos un ejemplo práctico con CPIR. El código que veremos a continuación realiza una búsqueda de un determinado carácter ASCII en una cadena de texto:</p>
+<p>Veamos un ejemplo práctico con CPIR. El código que veremos a continuación realiza una búsqueda de un determinado
+    carácter ASCII en una cadena de texto:</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+    <tr>
+        <td><p class="codigo">
+            <pre>
  ; Principio del programa
  ORG 50000
 
@@ -996,39 +1557,49 @@ texto DB "Esto es una X cadena de texto."
   END
 
 </pre>
-    </p></td></tr>
+            </p></td>
+    </tr>
 </table>
-<p>Lo compilamos con "pasmo tapbas buscatxt.asm buscatxt.tap", lo cargamos en el emulador y tras un RUN ejecutamos nuestra rutina como "PRINT AT 10,10 ; USR 50000". En pantalla aparecerá el valor 12:</p>
+<p>Lo compilamos con "pasmo tapbas buscatxt.asm buscatxt.tap", lo cargamos en el emulador y tras un RUN ejecutamos
+    nuestra rutina como "PRINT AT 10,10 ; USR 50000". En pantalla aparecerá el valor 12:</p>
 
 
 <table border="0" cellspacing="0" cellpadding="2" width="318">
-	<tr align="right">
-		<td><img src="img/buscatxt.gif" width="318" height="236"  alt="Salida del programa buscatxt.asm" />
-</td>
-	</tr>
-	<tr>
+    <tr align="right">
+        <td><img src="img/buscatxt.gif" width="318" height="236" alt="Salida del programa buscatxt.asm"/>
+        </td>
+    </tr>
+    <tr>
 
-		<td class="piefoto" align="right">Salida del programa buscatxt.asm</td>
-	</tr>
+        <td class="piefoto" align="right">Salida del programa buscatxt.asm</td>
+    </tr>
 </table>
 
 
-<p>¿Qué significa este "12"? Es la posición del carácter 'X' dentro de la cadena de texto. La hemos obtenido de la siguiente forma:</p>
+<p>¿Qué significa este "12"? Es la posición del carácter 'X' dentro de la cadena de texto. La hemos obtenido de la
+    siguiente forma:</p>
 <ul>
-	<li>Hacemos HL = posición de memoria donde empieza la cadena.</li>
-	<li>Hacemos A = 'X'.</li>
+    <li>Hacemos HL = posición de memoria donde empieza la cadena.</li>
+    <li>Hacemos A = 'X'.</li>
 
-	<li>Ejecutamos un CPIR</li>
-	<li>En HL obtendremos la posición absoluta + 1 donde se encuentra el carácter 'X' encontrado (o FFFFh si no se encuentra). Exactamente 50041.</li>
-	<li>Decrementamos HL para que apunte a la 'X' (50040).</li>
-	<li>Realizamos la resta de Posicion('X') - PrincipioCadena para obtener la posición del carácter dentro de la cadena. De esta forma, si la 'E' de la cadena está en 50028, y la X encontrada en 50040, eso quiere decir que la 'X' está dentro del array en la posición 50040-50028 = 12.</li>
-	<li>Volvemos al BASIC con el resultado en BC. El PRINT USR 50000 imprimirá dicho valor de retorno.</li>
+    <li>Ejecutamos un CPIR</li>
+    <li>En HL obtendremos la posición absoluta + 1 donde se encuentra el carácter 'X' encontrado (o FFFFh si no se
+        encuentra). Exactamente 50041.
+    </li>
+    <li>Decrementamos HL para que apunte a la 'X' (50040).</li>
+    <li>Realizamos la resta de Posicion('X') - PrincipioCadena para obtener la posición del carácter dentro de la
+        cadena. De esta forma, si la 'E' de la cadena está en 50028, y la X encontrada en 50040, eso quiere decir que la
+        'X' está dentro del array en la posición 50040-50028 = 12.
+    </li>
+    <li>Volvemos al BASIC con el resultado en BC. El PRINT USR 50000 imprimirá dicho valor de retorno.</li>
 </ul>
-<p>Nótese que el bloque desde "SCF" hasta "LD C, L" tiene como objetivo ser el equivalente a "HL = HL - BC", y se tiene que hacer de esta forma porque no existe "SUB HL, BC" ni "LD BC, HL":</p>
+<p>Nótese que el bloque desde "SCF" hasta "LD C, L" tiene como objetivo ser el equivalente a "HL = HL - BC", y se tiene
+    que hacer de esta forma porque no existe "SUB HL, BC" ni "LD BC, HL":</p>
 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+    <tr>
+        <td><p class="codigo">
+            <pre>
 SUB HL, BC =  SCF
               CCF              ; Ponemos el carry flag a 0 (SCF+CCF)
               SBC HL, BC       ; HL = HL - BC
@@ -1036,112 +1607,144 @@ SUB HL, BC =  SCF
 LD BC, HL  =  LD B, H
               LD C, L          ; BC = HL
 </pre>
-    </p></td></tr>
+            </p></td>
+    </tr>
 </table>
-<p>(Podemos dar las gracias por estas extrañas operaciones a la no ortogonalidad del juego de instrucciones del Z80).</p>
+<p>(Podemos dar las gracias por estas extrañas operaciones a la no ortogonalidad del juego de instrucciones del
+    Z80).</p>
 
 <p><b>En resumen</b></p>
 <p>En esta entrega hemos aprendido a utilizar todas las funciones condicionales y de salto de que nos provee el Z80.</p>
-<p>En el próximo capítulo trataremos la PILA (Stack) del Spectrum, gracias a la cual podremos implementar en ensamblador el equivalente a GOSUB/RETURN de BASIC, es decir, subrutinas.</p>
+<p>En el próximo capítulo trataremos la PILA (Stack) del Spectrum, gracias a la cual podremos implementar en ensamblador
+    el equivalente a GOSUB/RETURN de BASIC, es decir, subrutinas.</p>
 
 <p><strong>FICHEROS</strong></p>
 <ul>
-    <li><a href="src/05_db.asm" onclick="window.open(this.href); return false;">La directiva DB utilizada en un ejemplo</a>.</li>
+    <li><a href="src/05_db.asm" onclick="window.open(this.href); return false;">La directiva DB utilizada en un
+        ejemplo</a>.
+    </li>
     <li><a href="src/05_db.tap" onclick="window.open(this.href); return false;">Fichero tap del ejemplo db.asm</a>.</li>
-    <li><a href="src/05_bucle.asm" onclick="window.open(this.href); return false;">Ejemplo de bucle infinito con JP</a>.</li>
-    <li><a href="src/05_bucle.tap" onclick="window.open(this.href); return false;">Fichero tap del ejemplo bucle.asm</a>.</li>
+    <li><a href="src/05_bucle.asm" onclick="window.open(this.href); return false;">Ejemplo de bucle infinito con JP</a>.
+    </li>
+    <li><a href="src/05_bucle.tap" onclick="window.open(this.href); return false;">Fichero tap del ejemplo bucle.asm</a>.
+    </li>
 
-    <li><a href="src/05_buscatxt.asm" onclick="window.open(this.href); return false;">Búsqueda de cadenas de texto con CPIR</a>.</li>
-    <li><a href="src/05_buscatxt.tap" onclick="window.open(this.href); return false;">Fichero tap del ejemplo buscatxt.asm</a>.</li>
+    <li><a href="src/05_buscatxt.asm" onclick="window.open(this.href); return false;">Búsqueda de cadenas de texto con
+        CPIR</a>.
+    </li>
+    <li><a href="src/05_buscatxt.tap" onclick="window.open(this.href); return false;">Fichero tap del ejemplo
+        buscatxt.asm</a>.
+    </li>
     <li><a href="src/05_compara.asm" onclick="window.open(this.href); return false;">Comparación <, >, =</a>.</li>
     <li><a href="src/05_compara.tap" onclick="window.open(this.href); return false;">Tap del ejemplo anterior</a>.</li>
 
 </ul>
 <p><strong>LINKS</strong></p>
 <ul>
-    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt28.html" onclick="window.open(this.href); return false;">Set de caracteres</a>.</li>
+    <li><a href="http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt28.html"
+           onclick="window.open(this.href); return false;">Set de caracteres</a>.
+    </li>
     <li><a href="http://www.z80.info/" onclick="window.open(this.href); return false;">Web del Z80</a>.</li>
-    <li><a href="http://www.worldofspectrum.org/faq/reference/z80reference.htm" onclick="window.open(this.href); return false;">Z80 Reference de WOS</a>.</li>
-    <li><a href="http://ti86.acz.org/z80_ref.htm" onclick="window.open(this.href); return false;">Z80 Reference de TI86</a>.</li>
+    <li><a href="http://www.worldofspectrum.org/faq/reference/z80reference.htm"
+           onclick="window.open(this.href); return false;">Z80 Reference de WOS</a>.
+    </li>
+    <li><a href="http://ti86.acz.org/z80_ref.htm" onclick="window.open(this.href); return false;">Z80 Reference de
+        TI86</a>.
+    </li>
 
-    <li><a href="http://icarus.ticalc.org/articles/z80_faq.html" onclick="window.open(this.href); return false;">FAQ de Icarus Productions</a>.</li>
-    <li><a href="http://www.speccy.org/trastero/cosas/Fichas/fichas.htm" onclick="window.open(this.href); return false;">Microfichas de CM de MicroHobby</a>.</li>
-    <li><a href="http://www.ticalc.org/pub/text/z80/" onclick="window.open(this.href); return false;">Tablas de ensamblado y t-estados</a> (pulsar en z80.txt, z80_reference.txt, z80time.txt).</li>
-    <li><a href="http://www.z80.info/lesson1.htm" onclick="window.open(this.href); return false;">Curso de ASM de z80.info</a>.</li>
+    <li><a href="http://icarus.ticalc.org/articles/z80_faq.html" onclick="window.open(this.href); return false;">FAQ de
+        Icarus Productions</a>.
+    </li>
+    <li><a href="http://www.speccy.org/trastero/cosas/Fichas/fichas.htm"
+           onclick="window.open(this.href); return false;">Microfichas de CM de MicroHobby</a>.
+    </li>
+    <li><a href="http://www.ticalc.org/pub/text/z80/" onclick="window.open(this.href); return false;">Tablas de
+        ensamblado y t-estados</a> (pulsar en z80.txt, z80_reference.txt, z80time.txt).
+    </li>
+    <li><a href="http://www.z80.info/lesson1.htm" onclick="window.open(this.href); return false;">Curso de ASM de
+        z80.info</a>.
+    </li>
 
-    <li><a href="http://www.arrakis.es/~ninsesabe/pasmo/" onclick="window.open(this.href); return false;">PASMO</a>.</li>
+    <li><a href="http://www.arrakis.es/~ninsesabe/pasmo/" onclick="window.open(this.href); return false;">PASMO</a>.
+    </li>
 </ul>
 </div>
-        </td>
-    </tr>
-    <tr>
-        <td align="right"><br><br>SROMERO</td>
-    </tr>
-
-</table>
-                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html" selected>Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
 </td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+</tr>
+<tr>
+    <td align="right"><br><br>SROMERO</td>
+</tr>
 
-    </form>
 </table>
+</td>
+</tr>
+<tr>
+    <td> </td>
+</tr>
+<tr>
+    <td>
+        <script language="JavaScript">
+          function RecargarPie(url) {
+            document.location = url;
+          }
+        </script>
+        <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+            <form name="selector_secciones">
+                <tr>
+
+                    <td align="left">
+                        <input type="button" onclick="RecargarCabecera('rem.html');" name="anterior" value="<"/>
+                        <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                            <option value="index.html">Portada</option>
+                            <option value="editorial.html">Índice - Editorial</option>
+                            <option value="panorama.html">Panorama</option>
+                            <option value="analisis.html">Análisis</option>
+
+                            <option value="hardware.html">Hardware</option>
+                            <option value="z88dk.html">Programación Z88DK</option>
+                            <option value="rem.html">REM</option>
+                            <option value="ensamblador.html" selected>Programación Ensamblador</option>
+                            <option value="opinion.html">Opinión</option>
+                        </select>
+
+                        <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">"/>
+                    </td>
+                    <td align="right" class="texto">
+                        <a href="#arriba">Volver arriba</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+                    <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                        DE REVISTAS</b></a> <
                     </td>
                 </tr>
-            </table>
 
-    </body>
+            </form>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td>
+        <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+            <tr align="center" valign="center">
+                <td>2003-2009 Magazine ZX</td>
+
+            </tr>
+        </table>
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+          try {
+            var pageTracker = _gat._getTracker("UA-8018503-4");
+            pageTracker._trackPageview();
+          } catch (err) {
+          }</script>
+    </td>
+</tr>
+</table>
+
+</body>
 
 </html>

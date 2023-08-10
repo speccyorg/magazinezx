@@ -1,343 +1,507 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Zona PC - Magazine ZX número 10 - Noviembre 2004</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
+<head>
+    <title>Zona PC - Magazine ZX número 10 - Noviembre 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
                 </tr>
+            </table>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html" selected>Zona PC</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="z88dk.html">Programación Z88DK</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 10 - Noviembre 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
                 <tr>
                     <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
+                        <div align="justify">
+                            <p align="center"><font size="5">Creación de ficheros de cinta TZX en GNU/Linux</font></p>
+                            <p><i>Hoy en día, el sistema operativo GNU/Linux está teniendo un gran auge entre los
+                                usuarios de ordenadores personales. En este artículo se va a tratar de orientar al
+                                usuario de este sistema operativo en la manera de poder crear sus propios ficheros de
+                                cinta en formato TZX y, de esta forma, poder colaborar en la preservación de
+                                programas.</i></p>
+                            <p><b>Introducción</b></p>
 
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+                            <p>Primero de todo, hay que decir que en este artículo se va a suponer que disponemos de un
+                                sistema operativo GNU/Linux correctamente instalado en nuestra máquina. Y que además
+                                sabemos manejarnos en él con cierta soltura: manejar comandos desde una consola,
+                                compilar un kernel, etc...</p>
+                            <p>El objeto desde artículo es fomentar en lo posible el uso de herramientas nativas para
+                                GNU/Linux, pero el abanico de estas utilidades es muy escaso, aunque se puede recurrir a
+                                otros artificios como emuladores para poder usar herramientas de otros sistemas
+                                operativos de las que GNU/Linux no dispone (lo cual puede ser motivo de un futuro
+                                artículo).</p>
+                            <p><b>Configuración del equipo</b></p>
+                            <p>En este caso es obligado disponer de una tarjeta de sonido con entrada de línea (LINE-IN)
+                                bien configurada en nuestro equipo. Cualquier tarjeta (incluso las integradas en la
+                                placa base del ordenador) debería disponer de ella.</p>
+                            <p>Además necesitaremos un reproductor de cassette (ya sea un walkman, el mítico Computone
+                                o, incluso, el propio cassette integrado del Spectrum +2A) y un cable de audio con dos
+                                jacks de 3.5mm (son como los de los auriculares de un walkman), uno en cada extremo del
+                                cable. El cable que se suministraba con el propio Spectrum 16K/48K nos puede valer
+                                perfectamente.</p>
+                            <p>Un extremo de este cable se conectará a la salida EAR (u OUT) del reproductor de cassette
+                                y el otro extremo del cable deberá ir a la entrada LINE-IN (o de línea) de la tarjeta de
+                                sonido de nuestro ordenador.</p>
+                            <p>Ahora queda configurar el sonido en GNU/Linux, pero antes un pequeño receso para contar
+                                brevemente algo sobre el sistema de sonido del kernel de Linux.</p>
+                            <p>El kernel de Linux, actualmente en su rama 2.6, dispone de dos tipos de sistemas de
+                                sonido: OSS y ALSA. OSS es el sistema de sonido que se viene usando desde versiones
+                                anteriores del kernel y al que ya no se le da soporte en el kernel (aunque sí dispone de
+                                una versión comercial que lo hace) y se apuesta a favor del uso de ALSA.</p>
+                            <p>ALSA (Advanced Linux Sound Architecture) es un sistema sonido completamente nuevo, hecho
+                                desde cero y con soporte para gran cantidad de tarjetas de sonido tanto antiguas como
+                                actuales (cosa que no se puede asegurar de OSS).</p>
 
-        <option value="zona-pc.html" selected>Zona PC</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 10 - Noviembre 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p align="center"><font size="5">Creación de ficheros de cinta TZX en GNU/Linux</font></p>
-<p><i>Hoy en día, el sistema operativo GNU/Linux está teniendo un gran auge entre los usuarios de ordenadores personales. En este artículo se va a tratar de orientar al usuario de este sistema operativo en la manera de poder crear sus propios ficheros de cinta en formato TZX y, de esta forma, poder colaborar en la preservación de programas.</i></p>
-<p><b>Introducción</b></p>
-
-<p>Primero de todo, hay que decir que en este artículo se va a suponer que disponemos de un sistema operativo GNU/Linux correctamente instalado en nuestra máquina. Y que además sabemos manejarnos en él con cierta soltura: manejar comandos desde una consola, compilar un kernel, etc...</p>
-<p>El objeto desde artículo es fomentar en lo posible el uso de herramientas nativas para GNU/Linux, pero el abanico de estas utilidades es muy escaso, aunque se puede recurrir a otros artificios como emuladores para poder usar herramientas de otros sistemas operativos de las que GNU/Linux no dispone (lo cual puede ser motivo de un futuro artículo).</p>
-<p><b>Configuración del equipo</b></p>
-<p>En este caso es obligado disponer de una tarjeta de sonido con entrada de línea (LINE-IN) bien configurada en nuestro equipo. Cualquier tarjeta (incluso las integradas en la placa base del ordenador) debería disponer de ella.</p>
-<p>Además necesitaremos un reproductor de cassette (ya sea un walkman, el mítico Computone o, incluso, el propio cassette integrado del Spectrum +2A) y un cable de audio con dos jacks de 3.5mm (son como los de los auriculares de un walkman), uno en cada extremo del cable. El cable que se suministraba con el propio Spectrum 16K/48K nos puede valer perfectamente.</p>
-<p>Un extremo de este cable se conectará a la salida EAR (u OUT) del reproductor de cassette y el otro extremo del cable deberá ir a la entrada LINE-IN (o de línea) de la tarjeta de sonido de nuestro ordenador.</p>
-<p>Ahora queda configurar el sonido en GNU/Linux, pero antes un pequeño receso para contar brevemente algo sobre el sistema de sonido del kernel de Linux.</p>
-<p>El kernel de Linux, actualmente en su rama 2.6, dispone de dos tipos de sistemas de sonido: OSS y ALSA. OSS es el sistema de sonido que se viene usando desde versiones anteriores del kernel y al que ya no se le da soporte en el kernel (aunque sí dispone de una versión comercial que lo hace) y se apuesta a favor del uso de ALSA.</p>
-<p>ALSA (Advanced Linux Sound Architecture) es un sistema sonido completamente nuevo, hecho desde cero y con soporte para gran cantidad de tarjetas de sonido tanto antiguas como actuales (cosa que no se puede asegurar de OSS).</p>
-
-<p>Pero lo más interesante es que ALSA tiene soporte para emular OSS, por lo que con el sistema ALSA podremos seguir usando aplicaciones que hayan sido realizadas especifícamente para OSS, como es nuestro caso. Este hecho nos va a ocurrir con algunas de estas aplicaciones por lo que es importante que si usamos ALSA, verifiquemos que disponemos de la emulación OSS, ya que sin ella las aplicaciones como MakeTZX no funcionarán pues no han sido realizadas para utilizar ALSA, sino OSS.</p>
-<p>Para confirmarlo ejecuta en una consola de GNU/Linux el siguiente comando:</p>
-<pre>
+                            <p>Pero lo más interesante es que ALSA tiene soporte para emular OSS, por lo que con el
+                                sistema ALSA podremos seguir usando aplicaciones que hayan sido realizadas
+                                especifícamente para OSS, como es nuestro caso. Este hecho nos va a ocurrir con algunas
+                                de estas aplicaciones por lo que es importante que si usamos ALSA, verifiquemos que
+                                disponemos de la emulación OSS, ya que sin ella las aplicaciones como MakeTZX no
+                                funcionarán pues no han sido realizadas para utilizar ALSA, sino OSS.</p>
+                            <p>Para confirmarlo ejecuta en una consola de GNU/Linux el siguiente comando:</p>
+                            <pre>
 $ grep -i oss /usr/src/linux/.config
 </pre>
-<p>
-y se debería mostrar unas líneas como éstas (en algunas puede aparecer '=y' en vez de '=m' y viceversa. El caso es que no aparezca un '=n'):</p>
-<pre>
+                            <p>
+                                y se debería mostrar unas líneas como éstas (en algunas puede aparecer '=y' en vez de
+                                '=m' y viceversa. El caso es que no aparezca un '=n'):</p>
+                            <pre>
 CONFIG_SND_OSSEMUL=y
 CONFIG_SND_MIXER_OSS=m
 CONFIG_SND_PCM_OSS=m
 CONFIG_SND_SEQUENCER_OSS=y
 </pre>
-<p>Si no, toca compilar el kernel con estas opciones modificadas y rearrancar el ordenador.</p>
-<p>Sobra decir que si no usamos ALSA y usamos sólo OSS, no hará falta hacer ningún cambio de lo que se ha dicho anteriormente pues ya tenemos instalado el sistema de sonido nativo que usarán las aplicaciones que empleemos.</p>
+                            <p>Si no, toca compilar el kernel con estas opciones modificadas y rearrancar el
+                                ordenador.</p>
+                            <p>Sobra decir que si no usamos ALSA y usamos sólo OSS, no hará falta hacer ningún cambio de
+                                lo que se ha dicho anteriormente pues ya tenemos instalado el sistema de sonido nativo
+                                que usarán las aplicaciones que empleemos.</p>
 
-<p>Hecho este breve paréntesis seguimos con la configuración del sonido: ahora toca ajustar el volumen. Es importante que el volumen de la entrada de línea esté activado a un nivel medio-alto, ya que suele ser bastante común olvidarse de modificar este volumen y por tanto no oiremos por los altavoces nada de lo que el ordenador esté digitalizando a fichero TZX.</p>
-<p>Una vez hecho todo esto ya podemos probar si tenemos bien configurado todo el apartado de sonido. Pondremos una cinta cualquiera en el reproductor (recuerda subir también el volumen del reproductor), pulsaremos PLAY y ejcutaremos el siguiente comando en una consola:</p>
-<pre>
+                            <p>Hecho este breve paréntesis seguimos con la configuración del sonido: ahora toca ajustar
+                                el volumen. Es importante que el volumen de la entrada de línea esté activado a un nivel
+                                medio-alto, ya que suele ser bastante común olvidarse de modificar este volumen y por
+                                tanto no oiremos por los altavoces nada de lo que el ordenador esté digitalizando a
+                                fichero TZX.</p>
+                            <p>Una vez hecho todo esto ya podemos probar si tenemos bien configurado todo el apartado de
+                                sonido. Pondremos una cinta cualquiera en el reproductor (recuerda subir también el
+                                volumen del reproductor), pulsaremos PLAY y ejcutaremos el siguiente comando en una
+                                consola:</p>
+                            <pre>
 $ rec prueba.voc
 </pre>
-<p>y una vez escuchado algo de sonido, pararemos el cassette con el STOP, pulsaremos CTRL+C en la consola para parar la grabación y reproduciremos el archivo recién grabado con:</p>
-<pre>
+                            <p>y una vez escuchado algo de sonido, pararemos el cassette con el STOP, pulsaremos CTRL+C
+                                en la consola para parar la grabación y reproduciremos el archivo recién grabado
+                                con:</p>
+                            <pre>
 $ play prueba.voc
 </pre>
-<p>Si escuchamos el sonido del contenido de la cinta podemos seguir a la siguiente sección. Si no, habrá que seguir probando. Recomiendo volver a leer esta sección revisando cada uno de los pasos realizados.</p>
-<p><b>Instalación de la herramienta MakeTZX</b></p>
-<p>MakeTZX es un programa desarrollado por el grupo italiano de programación RAMSOFT que nos permitirá transferir los programas desde la cinta a fichero TZX de una manera, como veremos, bastante sencilla y sin requerir apenas interacción por parte del usuario.</p>
+                            <p>Si escuchamos el sonido del contenido de la cinta podemos seguir a la siguiente sección.
+                                Si no, habrá que seguir probando. Recomiendo volver a leer esta sección revisando cada
+                                uno de los pasos realizados.</p>
+                            <p><b>Instalación de la herramienta MakeTZX</b></p>
+                            <p>MakeTZX es un programa desarrollado por el grupo italiano de programación RAMSOFT que nos
+                                permitirá transferir los programas desde la cinta a fichero TZX de una manera, como
+                                veremos, bastante sencilla y sin requerir apenas interacción por parte del usuario.</p>
 
-<p>Para ello, nos dirigiremos hasta su página web, donde elegiremos la opción MakeTZX y buscaremos el enlace que nos permite descargar la versión GNU/Linux de esta utilidad (a día de hoy la versión 2.31 es la más reciente para el sistema operativo que nos ocupa, a pesar de estar la 2.33 tanto para DOS como para Windows. Aun así la versión de la que disponemos funciona de maravilla).</p>
-<p>Ya sólo nos falta descomprimirlo en un directorio temporal y copiar el fichero 'maketzx' contenido en ese directorio recién creado a un directorio contenido en nuestro PATH de ejecución, por ejemplo, a /usr/local/bin. A su vez otorgaremos los permisos de ejecución y propietarios pertinentes y que creamos convenientes para poder usarlo, pe.e, como usuario y no requerir privilegios de ROOT cada vez que queramos usarlo.</p>
-<p>Una vez hecho esto ya podremos usar el programa y lo podremos probar ejecutando simplemente:</p>
-<pre>
+                            <p>Para ello, nos dirigiremos hasta su página web, donde elegiremos la opción MakeTZX y
+                                buscaremos el enlace que nos permite descargar la versión GNU/Linux de esta utilidad (a
+                                día de hoy la versión 2.31 es la más reciente para el sistema operativo que nos ocupa, a
+                                pesar de estar la 2.33 tanto para DOS como para Windows. Aun así la versión de la que
+                                disponemos funciona de maravilla).</p>
+                            <p>Ya sólo nos falta descomprimirlo en un directorio temporal y copiar el fichero 'maketzx'
+                                contenido en ese directorio recién creado a un directorio contenido en nuestro PATH de
+                                ejecución, por ejemplo, a /usr/local/bin. A su vez otorgaremos los permisos de ejecución
+                                y propietarios pertinentes y que creamos convenientes para poder usarlo, pe.e, como
+                                usuario y no requerir privilegios de ROOT cada vez que queramos usarlo.</p>
+                            <p>Una vez hecho esto ya podremos usar el programa y lo podremos probar ejecutando
+                                simplemente:</p>
+                            <pre>
 $ maketzx
 </pre>
-<p>con los que nos aparecerá un listado de opciones como el siguiente:</p>
+                            <p>con los que nos aparecerá un listado de opciones como el siguiente:</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="560">
-	<tr align="right">
-		<td><img src="img/mtzx_options.png" width="560" height="300"  alt="" />
+                            <table border="0" cellspacing="0" cellpadding="2" width="560">
+                                <tr align="right">
+                                    <td><img src="img/mtzx_options.png" width="560" height="300" alt=""/>
 
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
+                            </table>
 
-<p><b>Transfiriendo las cintas al ordenador</b></p>
-<p>Ya mismo se podría afirmar que hemos llegado a la parte más sencilla de todo el proceso de creación de archivos TZX, pues la mayor parte de las ocasiones consistirá en ejecutar un simple comando en la consola de nuestro ordenador y de pulsar PLAY en el reproductor de cassette.</p>
-<p>Como se ha visto en el apartado anterior, la utilidad MakeTZX dispone de una serie de opciones de las que apenas usaremos un par de ellas y las demás sólo serán necesarias en caso de complicación en el proceso de transferencia.</p>
+                            <p><b>Transfiriendo las cintas al ordenador</b></p>
+                            <p>Ya mismo se podría afirmar que hemos llegado a la parte más sencilla de todo el proceso
+                                de creación de archivos TZX, pues la mayor parte de las ocasiones consistirá en ejecutar
+                                un simple comando en la consola de nuestro ordenador y de pulsar PLAY en el reproductor
+                                de cassette.</p>
+                            <p>Como se ha visto en el apartado anterior, la utilidad MakeTZX dispone de una serie de
+                                opciones de las que apenas usaremos un par de ellas y las demás sólo serán necesarias en
+                                caso de complicación en el proceso de transferencia.</p>
 
-<p>El comando que usaremos más habitualmente es el siguiente:</p>
-<pre>
+                            <p>El comando que usaremos más habitualmente es el siguiente:</p>
+                            <pre>
 $ maketzx -a -r <fichero.tzx>
 </pre>
-<p>donde con la opción '-a' indicamos al MakeTZX que autodetecte el tipo de carga del programa (cosa que hace bastante bien si la soporta), con '-r' le decimos que procese el sonido de carga en tiempo real y, finalmente, <fichero.tzx> será el fichero donde queremos almacenar el TZX resultante.</p>
-<p>Es muy importante no usar nunca jamás la opción '-b' pues esta opción crea archivos TZX imperfectos que serán directamente deshechados por las páginas que preservan estos programas.</p>
-<p>Cuando ejecutemos ese comando y antes de poder empezar la transferencia, nos aparecerán en pantalla un par de ecualizadores, significando uno el volumen y el otro el <i>clipping</i>.</p>
+                            <p>donde con la opción '-a' indicamos al MakeTZX que autodetecte el tipo de carga del
+                                programa (cosa que hace bastante bien si la soporta), con '-r' le decimos que procese el
+                                sonido de carga en tiempo real y, finalmente,
+                                <fichero.tzx> será el fichero donde queremos almacenar el TZX resultante.
+                            </p>
+                            <p>Es muy importante no usar nunca jamás la opción '-b' pues esta opción crea archivos TZX
+                                imperfectos que serán directamente deshechados por las páginas que preservan estos
+                                programas.</p>
+                            <p>Cuando ejecutemos ese comando y antes de poder empezar la transferencia, nos aparecerán
+                                en pantalla un par de ecualizadores, significando uno el volumen y el otro el <i>clipping</i>.
+                            </p>
 
-<p>El significado del volumen es obvio y no deberá ser ni muy bajo ni muy alto, con ponerlo sobre el 75% del total es suficiente.</p>
-<p>El <i>clipping</i> por su parte indica que la señal puede estar demasiado distorsianada y puede aparecer recortada con lo que sería defectuosa y, por tanto, provocar erores de carga.</p>
-<p>Un truco consiste en pulsar PLAY en el reproductor y escuchando sonido de carga, bajar el volumen a 0 (tanto de ordenador como del reproductor) e ir incrementando ambos hasta que ambas barras de ecualización tengan unos valores aceptables. Recomiendo consultar la ayuda del propio MakeTZXdonde se explica este proceso de afinación claramente.</p>
-<p>Una vez realizado este ajuste (no será necesario hacerlo cada vez que queramos usar MakeTZX, salvo que cambiemos los volúmenes antes mencionados), podremos pulsar <RETURN> y comenzar la conversión de nuestro programas.</p>
-<p>En este momento, MakeTZX se pondrá en modo de escucha y es en este momento cuando debemos pulsar PLAY en el reproductor con la cinta del programa que queremos transferir.</p>
-<p>A medida que se oye el sonido de carga, en la pantalla iremos viendo diferentes datos según el programa se va cargando. Una vez finalizado el proceso de transferencia bastará con pulsar de nuevo la tecla <RETURN> con lo que el proceso se dará por finalizado y dispondremos de un flamante archivo TZX listo para ser cargado en nuestro emulador favorito.</p>
+                            <p>El significado del volumen es obvio y no deberá ser ni muy bajo ni muy alto, con ponerlo
+                                sobre el 75% del total es suficiente.</p>
+                            <p>El <i>clipping</i> por su parte indica que la señal puede estar demasiado distorsianada y
+                                puede aparecer recortada con lo que sería defectuosa y, por tanto, provocar erores de
+                                carga.</p>
+                            <p>Un truco consiste en pulsar PLAY en el reproductor y escuchando sonido de carga, bajar el
+                                volumen a 0 (tanto de ordenador como del reproductor) e ir incrementando ambos hasta que
+                                ambas barras de ecualización tengan unos valores aceptables. Recomiendo consultar la
+                                ayuda del propio MakeTZXdonde se explica este proceso de afinación claramente.</p>
+                            <p>Una vez realizado este ajuste (no será necesario hacerlo cada vez que queramos usar
+                                MakeTZX, salvo que cambiemos los volúmenes antes mencionados), podremos pulsar
+                                <RETURN> y comenzar la conversión de nuestro programas.
+                            </p>
+                            <p>En este momento, MakeTZX se pondrá en modo de escucha y es en este momento cuando debemos
+                                pulsar PLAY en el reproductor con la cinta del programa que queremos transferir.</p>
+                            <p>A medida que se oye el sonido de carga, en la pantalla iremos viendo diferentes datos
+                                según el programa se va cargando. Una vez finalizado el proceso de transferencia bastará
+                                con pulsar de nuevo la tecla
+                                <RETURN> con lo que el proceso se dará por finalizado y dispondremos de un flamante
+                                    archivo TZX listo para ser cargado en nuestro emulador favorito.
+                            </p>
 
-<p>A continuación se muestran algunos ejemplos de juegos transferidos a formato TZX, cada uno de ellos condifernetes formatos de carga para comprobar el buen funcionamiento de la utilidad MakeTZX.</p>
-<p><b>Target Renegade (Imagine Software)</b> [<a href="tzx/target_renegade.tzx">target_renegade.tzx</a>]</p>
-<p>Tipo de carga: Estándar de ROM + Custom loader</p>
+                            <p>A continuación se muestran algunos ejemplos de juegos transferidos a formato TZX, cada
+                                uno de ellos condifernetes formatos de carga para comprobar el buen funcionamiento de la
+                                utilidad MakeTZX.</p>
+                            <p><b>Target Renegade (Imagine Software)</b> [<a href="tzx/target_renegade.tzx">target_renegade.tzx</a>]
+                            </p>
+                            <p>Tipo de carga: Estándar de ROM + Custom loader</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="560">
-	<tr align="right">
-		<td><img src="img/targetrenegade_capt.png" width="560" height="320"  alt="" />
-</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="560">
+                                <tr align="right">
+                                    <td><img src="img/targetrenegade_capt.png" width="560" height="320" alt=""/>
+                                    </td>
 
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
+                            </table>
 
-<p>Como se puede apreciar en este juego, los primeros bloques son de carga estándar de la ROM pero las fases están grabadas en un formato turbo. Además este formato turbo tiene una cabecera casi inapreciable (con pausas de apenas 1ms) pero que el MakeTZX detecta perfectamente.</p>
-<p>Aquí vemos como el Target Renegade carga perfectamente y sin errores en el emulador FUSE:</p>
+                            <p>Como se puede apreciar en este juego, los primeros bloques son de carga estándar de la
+                                ROM pero las fases están grabadas en un formato turbo. Además este formato turbo tiene
+                                una cabecera casi inapreciable (con pausas de apenas 1ms) pero que el MakeTZX detecta
+                                perfectamente.</p>
+                            <p>Aquí vemos como el Target Renegade carga perfectamente y sin errores en el emulador
+                                FUSE:</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
 
-		<td><img src="img/targetrenegade_load.png" width="320" height="279"  alt="" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
+                                    <td><img src="img/targetrenegade_load.png" width="320" height="279" alt=""/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
+                            </table>
 
-<p><b>Desperado (Topo Soft)</b> [<a href="tzx/desperado.tzx">desperado.tzx</a>]</p>
+                            <p><b>Desperado (Topo Soft)</b> [<a href="tzx/desperado.tzx">desperado.tzx</a>]</p>
 
-<p>Tipo de carga: Estándar de la ROM</p>
+                            <p>Tipo de carga: Estándar de la ROM</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="560">
-	<tr align="right">
-		<td><img src="img/desperado_capt.png" width="560" height="320"  alt="" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="560">
+                                <tr align="right">
+                                    <td><img src="img/desperado_capt.png" width="560" height="320" alt=""/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>En este caso podemos ver que aunque el juego cargue de un modo colorista y aparentemente no estándar, se comprueba que el modo en que fue grabado fue con la velocidad y el formato estándar de la ROM, excepto por el hecho de que el último bloque no tiene cabecera.</p>
-<p>Y a continuación se muestra la colorista carga del Desperado que, como hemos dicho antes, es simplemente un bloque de datos estándar de la ROM pero cargado de una forma diferente:</p>
+                            <p>En este caso podemos ver que aunque el juego cargue de un modo colorista y aparentemente
+                                no estándar, se comprueba que el modo en que fue grabado fue con la velocidad y el
+                                formato estándar de la ROM, excepto por el hecho de que el último bloque no tiene
+                                cabecera.</p>
+                            <p>Y a continuación se muestra la colorista carga del Desperado que, como hemos dicho antes,
+                                es simplemente un bloque de datos estándar de la ROM pero cargado de una forma
+                                diferente:</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/desperado_load.png" width="320" height="240"  alt="" />
-</td>
-	</tr>
-	<tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/desperado_load.png" width="320" height="240" alt=""/>
+                                    </td>
+                                </tr>
+                                <tr>
 
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
+                            </table>
 
-<p><b>Ramparts (GO!)</b> [<a href="tzx/target_renegade.tzx">ramparts.tzx</a>]</p>
-<p>Tipo de carga: Alkatraz</p>
+                            <p><b>Ramparts (GO!)</b> [<a href="tzx/target_renegade.tzx">ramparts.tzx</a>]</p>
+                            <p>Tipo de carga: Alkatraz</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
+                            <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                <tr align="right">
 
-		<td><img src="img/ramparts_capt.png" width="640" height="360"  alt="" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
+                                    <td><img src="img/ramparts_capt.png" width="640" height="360" alt=""/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
+                            </table>
 
-<p>Y finalmente tenemos un caso de carga un poco más complejo. Como vemos en el proceso de carga en tiempo real del programa, el MakeTZX autodetecta que se va a cargar un programa con sistema Alkatraz y se coloca en ese modo de proceso.</p>
-<p>También se aprecia que el último bloque del sistema Alkatraz se muestra una interrogación antes del campo Length. Esto indica que el bloque no lleva un CRC que calcular y que el MakeTZX no puede determinar si es correcto. Pero no significa necesariamente que la carga sea incorrecta.</p>
+                            <p>Y finalmente tenemos un caso de carga un poco más complejo. Como vemos en el proceso de
+                                carga en tiempo real del programa, el MakeTZX autodetecta que se va a cargar un programa
+                                con sistema Alkatraz y se coloca en ese modo de proceso.</p>
+                            <p>También se aprecia que el último bloque del sistema Alkatraz se muestra una interrogación
+                                antes del campo Length. Esto indica que el bloque no lleva un CRC que calcular y que el
+                                MakeTZX no puede determinar si es correcto. Pero no significa necesariamente que la
+                                carga sea incorrecta.</p>
 
-<p>Bastará cargarlo en un emulador y comprobarlo por nosotros mismos como hacemos a continuación:</p>
+                            <p>Bastará cargarlo en un emulador y comprobarlo por nosotros mismos como hacemos a
+                                continuación:</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/ramparts_load.png" width="320" height="279"  alt="" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/ramparts_load.png" width="320" height="279" alt=""/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p><b>Observaciones y consejos</b></p>
-<ul>
-	<li>La utilidad MakeTZX no puede procesar cargas muy complicadas o de las que desconoce su formato. Como por ejemplo, el sistema Poliload de juegos como Rescate Atlántida o Astro Marine Corps.</li>
-	<li>Cualquier tutorial referente al MakeTZX nos sirve para esa versión en cualesquier sistema operativo de esta utilidad, pues todas las versiones tienen las mismas opciones y operan de igual forma.</li>
-	<li>Si conocemos de antemano el formato de carga del programa que queremos transferir, pordemos obligarle al MakeTZX a que use ese formato con la opción '-l' seguida de la letra que corresponde al tipo de formato. En este caso, no sería necesario usar la opción '-a'.</li>
-	<li>Los filtros digitales que incorpora MakeTZX son útiles para cintas deterioradas o cargas que se resisten, aunque no esperéis milagros. Me remito a la documentación y a los enlaces que se indican más abajo para su conocer más información sobre su uso.</li>
+                            <p><b>Observaciones y consejos</b></p>
+                            <ul>
+                                <li>La utilidad MakeTZX no puede procesar cargas muy complicadas o de las que desconoce
+                                    su formato. Como por ejemplo, el sistema Poliload de juegos como Rescate Atlántida o
+                                    Astro Marine Corps.
+                                </li>
+                                <li>Cualquier tutorial referente al MakeTZX nos sirve para esa versión en cualesquier
+                                    sistema operativo de esta utilidad, pues todas las versiones tienen las mismas
+                                    opciones y operan de igual forma.
+                                </li>
+                                <li>Si conocemos de antemano el formato de carga del programa que queremos transferir,
+                                    pordemos obligarle al MakeTZX a que use ese formato con la opción '-l' seguida de la
+                                    letra que corresponde al tipo de formato. En este caso, no sería necesario usar la
+                                    opción '-a'.
+                                </li>
+                                <li>Los filtros digitales que incorpora MakeTZX son útiles para cintas deterioradas o
+                                    cargas que se resisten, aunque no esperéis milagros. Me remito a la documentación y
+                                    a los enlaces que se indican más abajo para su conocer más información sobre su uso.
+                                </li>
 
-	<li>Lo repito de nuevo: nunca, nunca jamás en la vida useís la opción ('-b') de embellecer los ficheros TZX, pues no respeta la perfecta preservación de los programas al transferirlos al ordenador.</li>
-	<li>Y, finalmente, recomiendo vivamente que todos los programas que se transfieran, sean enviados a cualquier página web que se ocupe de su preservación como pueden ser El Trastero o SPA2.
-	</li>
-</ul>
-<br>
-<b>LINKS</b>
-<br><br>
-<ul>
-	<li>Distribuciones de GNU/Linux:
-		<ul>
-			<li><a href="http://www.debian.org" onClick="window.open(this.href); return false;">http://www.debian.org</a></li>
+                                <li>Lo repito de nuevo: nunca, nunca jamás en la vida useís la opción ('-b') de
+                                    embellecer los ficheros TZX, pues no respeta la perfecta preservación de los
+                                    programas al transferirlos al ordenador.
+                                </li>
+                                <li>Y, finalmente, recomiendo vivamente que todos los programas que se transfieran, sean
+                                    enviados a cualquier página web que se ocupe de su preservación como pueden ser El
+                                    Trastero o SPA2.
+                                </li>
+                            </ul>
+                            <br>
+                            <b>LINKS</b>
+                            <br><br>
+                            <ul>
+                                <li>Distribuciones de GNU/Linux:
+                                    <ul>
+                                        <li><a href="http://www.debian.org"
+                                               onClick="window.open(this.href); return false;">http://www.debian.org</a>
+                                        </li>
 
-			<li><a href="http://www.redhat.com" onClick="window.open(this.href); return false;">http://www.redhat.com</a></li>
-			<li><a href="http://www.mandrakesoft.com" onClick="window.open(this.href); return false;">http://www.mandrakesoft.com</a></li>
-		</ul>
-	</li>
-	<li>Kernel de Linux: <a href="http://www.kernel.org" onClick="window.open(this.href); return false;">http://www.kernel.org</a></li>
-	<li>Avanced Linux Sound Architecture (ALSA): <a href="http://www.alsa-project.org" onClick="window.open(this.href); return false;">http://www.alsa-project.org</a></li>
+                                        <li><a href="http://www.redhat.com"
+                                               onClick="window.open(this.href); return false;">http://www.redhat.com</a>
+                                        </li>
+                                        <li><a href="http://www.mandrakesoft.com"
+                                               onClick="window.open(this.href); return false;">http://www.mandrakesoft.com</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Kernel de Linux: <a href="http://www.kernel.org"
+                                                        onClick="window.open(this.href); return false;">http://www.kernel.org</a>
+                                </li>
+                                <li>Avanced Linux Sound Architecture (ALSA): <a href="http://www.alsa-project.org"
+                                                                                onClick="window.open(this.href); return false;">http://www.alsa-project.org</a>
+                                </li>
 
-	<li>Página oficial de MakeTZX: <a href="http://www.ramsoft.bbk.org/maketzx.html" onClick="window.open(this.href); return false;">http://www.ramsoft.bbk.org/maketzx.html</a></li>
-	<li>Manual en inglés de MakeTZX: <a href="http://www.ramsoft.bbk.org/mtzxman.htm" onClick="window.open(this.href); return false;">http://www.ramsoft.bbk.org/mtzxman.htm</a></li>
-	<li>Cómo pasar cintas al PC: <a href="http://www.speccy.org/trastero/tape2tap.htm" onClick="window.open(this.href); return false;">http://www.speccy.org/trastero/tape2tap.htm</a></li>
-	<li>Esquemas de carga de programas: <a href="http://newton.sunderland.ac.uk/~specfreak/Schemes/schemes.html" onClick="window.open(this.href); return false;">http://newton.sunderland.ac.uk/~specfreak/Schemes/schemes.html</a></li>
-	<li>El Trastero del Spectrum: <a href="http://www.speccy.org/trastero/" onClick="window.open(this.href); return false;">http://www.speccy.org/trastero/</a></li>
+                                <li>Página oficial de MakeTZX: <a href="http://www.ramsoft.bbk.org/maketzx.html"
+                                                                  onClick="window.open(this.href); return false;">http://www.ramsoft.bbk.org/maketzx.html</a>
+                                </li>
+                                <li>Manual en inglés de MakeTZX: <a href="http://www.ramsoft.bbk.org/mtzxman.htm"
+                                                                    onClick="window.open(this.href); return false;">http://www.ramsoft.bbk.org/mtzxman.htm</a>
+                                </li>
+                                <li>Cómo pasar cintas al PC: <a href="http://www.speccy.org/trastero/tape2tap.htm"
+                                                                onClick="window.open(this.href); return false;">http://www.speccy.org/trastero/tape2tap.htm</a>
+                                </li>
+                                <li>Esquemas de carga de programas: <a
+                                        href="http://newton.sunderland.ac.uk/~specfreak/Schemes/schemes.html"
+                                        onClick="window.open(this.href); return false;">http://newton.sunderland.ac.uk/~specfreak/Schemes/schemes.html</a>
+                                </li>
+                                <li>El Trastero del Spectrum: <a href="http://www.speccy.org/trastero/"
+                                                                 onClick="window.open(this.href); return false;">http://www.speccy.org/trastero/</a>
+                                </li>
 
-	<li>SPA2: <a href="http://www.speccy.org/spa2/" onClick="window.open(this.href); return false;">http://www.speccy.org/spa2/</a></li>
-</ul>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>HORACE</td>
-	</tr>
-
-</table>
+                                <li>SPA2: <a href="http://www.speccy.org/spa2/"
+                                             onClick="window.open(this.href); return false;">http://www.speccy.org/spa2/</a>
+                                </li>
+                            </ul>
+                        </div>
                     </td>
                 </tr>
-                <tr><td> </td></tr>
                 <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html" selected>Zona PC</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
+                    <td align="right"><br><br>HORACE</td>
                 </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
 
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html" selected>Zona PC</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="z88dk.html">Programación Z88DK</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+
                 </tr>
             </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
 
-    </body>
+</body>
 
 </html>

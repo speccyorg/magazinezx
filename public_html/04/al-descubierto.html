@@ -1,1131 +1,1241 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Al Descubierto - Magazine ZX número 4 - Noviembre 2003</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="al-descubierto.html" selected>Al Descubierto</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="emulacion.html">Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="input.html">INPUT</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 4 - Noviembre 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p><b>NEBULUS AL DESCUBIERTO</b></p>
-<table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
-
-	<tr valign="center">
-		<td rowspan="10" bgcolor="#EEEEEE"><img src="img/portada_nebulus.jpg" width="194" height="250" alt="Portada NEBULUS" /></td>
-		<td bgcolor="#66AEEF">Título</td>
-		<td bgcolor="#FFFFFF">NEBULUS</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Género</td>
-
-		<td bgcolor="#FFFFFF">Arcade/Plataformas</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Año</td>
-		<td bgcolor="#FFFFFF">1987</td>
-	</tr>
-	<tr>
-
-		<td bgcolor="#66AEEF">Máquina</td>
-		<td bgcolor="#FFFFFF">48K</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Jugadores</td>
-		<td bgcolor="#FFFFFF">1 Jugador</td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#66AEEF">Compañía</td>
-		<td bgcolor="#FFFFFF">Hewson Consultants Ltd (UK)</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Autor</td>
-		<td bgcolor="#FFFFFF">J.M.Phillips</td>
-
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Distribuidora en España</td>
-		<td bgcolor="#FFFFFF">Erbe Software</td>
-	</tr>
-	<tr>
-		<td colspan="2" bgcolor="#66AEEF">Remakes</td>
-
-	</tr>
-	<tr>
-		<td colspan="2" bgcolor="#FFFFFF">
-			<ul>
-<li><a href="http://toppler.sourceforge.net" target="_blank">Tower Toppler</a></li>
-
-			</ul>
-		</td>
-	</tr>
-</table>
-
-<p>
-A principios de agosto de 2003, El Spectrum Hoy convocó un concuso para calentar
-motores con vista al Speccy Tour del mismo año. El objetivo del concurso era
-retar a los participantes para ver quien enviaba la primera partida finalizada de
-Nebulus, siendo una novedad el uso del formato RZX para grabar las partidas.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus_carga.gif" width="320" height="240"  alt="Pantalla de carga de Nebulus" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Pantalla de carga de Nebulus</td>
-
-	</tr>
-</table>
-
-<p>
-De aquel concurso surgió la idea de escribir este artículo, desmontando Nebulus paso
-a paso aprovechando las nuevas posibilidades que nos ofrecen los emuladores.
-Y así, por fin tenéis en vuestros ordenadores una guía para acabaros este
-juego, con una descripción en texto al más puro estilo tradicional, y con
-la novedad de incluir un RZX por cada torre.
-</p>
-<p>
-No me enrollo más, dejo paso al artículo.
-</p>
-<p><b>1. Una breve introducción a Nebulus</b></p>
-<p>
-Para aquellos que aun no conozcáis Nebulus, vamos a describiros brevemente el
-juego. Encarnamos a un gracioso bichejo de dos patas y ojos saltones en su curiosa
-misión de alcanzar lo alto de ocho torres situadas en alta mar y destruirlas.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="74">
-
-	<tr align="right">
-		<td><img src="img/personaje.gif" width="74" height="78"  alt="Nuestro personaje" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Nuestro personaje</td>
-	</tr>
-</table>
-
-<p>
-
-En nuestra misión debermos tener cuidado con una serie de trampas y enemigos,
-de los que pasamos a dar referencia en el siguiente apartado.
-</p>
-<p><b>1.1. Los enemigos</b></p>
-<table border="0" cellspacing="0" cellpadding="4" class="texto">
-	<tr>
-		<td><img src="img/malos-ojo.gif" border="0" width="43" height="36"></td>
-		<td>
-<p>
-<b>El ojo que todo lo ve</b>: Este molesto ojo se encuentra en las torres 1 y 5.
-Vigila la torre haciendo recorridos verticales u horizontales sobre la misma, según
-la situación. No se le puede destruir, por lo que no queda más remedio que esquivarlo.
-</p>
-		</td>
-
-	</tr>
-	<tr>
-		<td><img src="img/malos-esfera_negra.gif" border="0" width="36" height="36"></td>
-		<td>
-<p>
-<b>La esfera negra</b>: Aparece en las torres 1 y 8. Rueda por las plataformas de
-la torre dispuesta a hacernos caer sobre las plataformas inferiores, o si
-se tercia, directamente al agua. Igual que con los ojos, no se la
-puede destruir, pero si parar con un disparo.
-</p>
-		</td>
-	</tr>
-	<tr>
-
-		<td><img src="img/malos-esfera_blanca.gif" border="0" width="34" height="34"></td>
-		<td>
-<p>
-<b>La esfera blanca</b>: Aparece en las torres 1, 3, 4 y 8. Su costumbre es ir botando
-por las plataformas para bloquearnos el paso. Al contrario que la esfera negra,
-la esfera blanca puede ser destruida con un disparo.
-</p>
-		</td>
-	</tr>
-	<tr>
-		<td><img src="img/malos-vigilante.gif" border="0" width="34" height="34"></td>
-		<td>
-
-<p>
-<b>El vigilante</b>: Nos lo vamos a encontrar en las torres 2 y 6. Tiene el mismo comportamiento
-que el ojo que todo lo ve. La única opción, esquivarlo a toda costa.
-</p>
-		</td>
-	</tr>
-	<tr>
-		<td><img src="img/malos-calavera.gif" border="0" width="34" height="34"></td>
-		<td>
-<p>
-<b>La calavera</b>: Es el vigilante de las torres 3 y 7. Como el ojo que todo lo ve
-y el vigilante, realiza bloqueos verticales y horizontales en nuestro recorrido.
-Como no se le puede destruir, no queda más remedio que esquivarle.
-
-</p>
-		</td>
-	</tr>
-	<tr>
-		<td><img src="img/malos-rombos.gif" border="0" width="34" height="34"></td>
-		<td>
-<p>
-<b>Los rombos</b>: A los rombos les corresponde la misión de vigilar en las
-torres 4 y 8. Tienen el mismo comportamiento que el ojo que todo lo ve,
-el vigilante y la calavera.
-</p>
-		</td>
-
-	</tr>
-	<tr>
-		<td><img src="img/malos-orbitante.gif" border="0" width="34" height="34"></td>
-		<td>
-<p>
-<b>La cosa orbitante</b>: Es el único enemigo que nos vamos a encontrar en todas las
-torres. Aparece cada cierto tiempo indeterminado, o cuando nos quedamos mucho
-tiempo esperando en un mismo punto. Realiza un barrido completo de
-la pantalla, de lado a lado, a la altura a la que nos encontremos. No se
-le puede destruir, por lo que tendremos que esquivarla entrando por una
-puerta o cambiando de nivel.
-</p>
-		</td>
-	</tr>
-</table>
-
-<br>
-<p><b>1.2. Los elementos del camino</b></p>
-<p>
-Por el camino nos vamos a encontrar 5 tipos de elementos, algunos de ayuda, y otros que nos obstaculizarán el paso:
-</p>
-<ul>
-<li><b>Las puertas</b>: El elemento fundamental de las torres son las puertas. Por ellas
-atravesamos la torre hasta el otro extremo. En ocasiones estas puertas esconden trampas,
-como veremos en la guía de cada torre.</li>
-<li><b>El ascensor</b>: Para superar algunos desniveles deberemos recurrir a este elemento.
-Aparece sobre la plataforma como un bloque liso al que deberemos subir (basta con seguir
-caminando hasta encontrarnos ya encima). En la guía indicaremos dos pasos con
-los ascensores: entrar (colocarse encima) y subir (pulsar hacia arriba para que el
-ascensor se eleve).</li>
-<li><b>Los bloques</b>: En algunos puntos de las torres aparecen unos bloques que, como su nombre
-indica, nos bloquearán el paso. Tan solo hace falta disparar sobre ellos para despejar el
-camino.</li>
-<li><b>Las falsas losas</b>: En las plataformas del camino hay camufladas algunas falsas losas
-que desaparecen en cuanto las pisamos. Son idénticas a las normales, por lo que para
-detectarlas no queda más remedio que ir probando, o seguir leyendo esta guía.</li>
-
-<li><b>Las losas deslizantes</b>: Algunas losas son como una cinta transportadora, que nos
-llevarán hacia uno de los lados de la pantalla cuando estemos sobre ellas.
-Por lo general el lado al que nos mueven es el contrario al que tenemos que ir.</li>
-</ul>
-<p><b>2. Las torres, una a una</b></p>
-<p>
-Bueno, ya va siendo hora de explicar paso a paso cómo superar cada torre. A partir
-de ahora el texto os resultará más monótono. Aun así, espero que os guste y
-os resulte práctico. Lo aquí descrito lo podéis visualizar en los RZX incluidos con
-el artículo. Comencemos.
-</p>
-<p><b>2.1. <a href="rzx/nebulus-01.rzx" onClick="window.open(this.href); return false;">Torre 1: Torre de ojos</a></b></p>
-<p>
-La primera torre nos presenta pocas dificultades. Las justas para irle cogiendo
-el truco al juego.
-</p>
-<p>
-Comenzamos nuestro periplo dirigiéndonos a la derecha, entrando por la primera
-puerta que aparezca. Al salir al otro lado, observaremos a la izquierda un ojo
-que bloquea el paso haciendo un recorrido vertical. Pasamos por debajo de él y entramos
-en el ascensor. Esperamos encima del ascensor hasta que aparezca por uno de los
-extremos un orbitante, y en ese mismo momento subimos hasta la puerta y entramos en ella.
-
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre1-04.gif" width="320" height="240"  alt="¿Acaso no son los orbitantes los bichos más molestos de este juego?" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">¿Acaso no son los orbitantes los bichos más molestos de este juego?</td>
-	</tr>
-
-</table>
-
-<p>
-Al salir al otro extremo entramos al ascensor que tenemos a la izquierda y subimos.
-En la siguiente plataforma tenemos que entrar al ascensor de la derecha y de nuevo
-subimos. Seguimos el camino hacia la izquierda, donde nos encontraremos con dos bloques
-cerrándonos el paso. Los destruimos con sendos disparos y continuamos la marcha con
-precaución, atentos a la esfera blanca que se nos aproximará rebotando para destruirla
-también de un disparo.
-</p>
-<p>
-A continuación veremos que la plataforma adquiere forma de escalera. No hace falta
-saltar cuando el desnivel es de una sola losa, basta con seguir caminando en
-el mismo sentido. Las losas que forman esta escalera son en su comienzo del
-tipo de losas deslizantes. Y para colmo tenemos un ojo que nos bloquea el paso con
-su vigilancia vertical. Para superar el obstáculo nos situamos al comienzo de la
-escalera, y esperamos a que el ojo esté a punto de tocar el suelo. En ese mismo
-momento empezamos a caminar hacia la izquierda, subiendo así la escalera.En la puerta
-que hay al final de la escalera esperamos a que aparezca un orbitante, y cuando
-se encuentre a la altura de la torre, entramos.
-</p>
-<p>
-Nos dirigimos ahora hacia la derecha, donde nos aparecerá una nueva esfera blanca.
-La destruimos y entramos al ascensor. Otro orbitante estará en camino,
-así que esperamos a que aparezca y justo cuando lo haga, empezamos a subir.
-</p>
-<p>
-Ahora toca ir hacia la izquierda, hasta el borde de la plataforma. Vemos que hay
-un ojo que hace un recorrido vertical, y una esfera blanca. Cuando la
-esfera blanca no nos suponga un riesgo, nos dejamos caer hacia la izquierda.
-Destruimos la esfera blanca y pasamos por debajo del ojo, quedándonos justo en
-la losa previa al grupo de losas apiladas.
-</p>
-<p>
-Vemos que hay una esfera negra en una plataforma superior a la nuestra. Cuando
-esta bola llegue al extremo izquierdo de la plataforma iniciaremos el camino hacia la
-izquierda, situándonos sobre la losa superior del grupo de losas. Las losas
-empezarán a desaparecer una a una hasta dejarnos sobre un ascensor. Subimos
-y, si lo hemos hecho bien, habremos evitado el golpe de la esfera negra.
-</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre1-13.gif" width="320" height="240"  alt="La esfera negra nos indica cuando debemos entrar en la losa que desaparece" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">La esfera negra nos indica cuando debemos entrar en la losa que desaparece</td>
-	</tr>
-</table>
-
-
-<p>
-Donde nos encontramos ahora tenemos una plataforma a la derecha compuesta por
-tres losas. La primera de estas losas desaparece cuando la pisamos, así que
-saltamos por encima de ella y nos vamos hasta la puerta, sin entrar. Allí esperamos a
-la aparición de un orbitante, y entramos.
-</p>
-<p>
-Al salir al otro lado de la torre nos dirigiremos a la izquierda, con cuidado de no
-entrar en el ascensor. Justo encima de nosotros hay un ojo que vigila con
-un recorrido horizontal. Cuando el ojo esté yendo hacia la derecha y acabe de pasar por encima de nuestra cabeza, entramos al ascensor y subimos.
-</p>
-<p>
-Vamos hasta la puerta y esperamos un nuevo orbitante. Entramos, vamos a la
-puerta de la derecha, entramos y ya está.
-</p>
-<p><b>2.2. <a href="rzx/nebulus-02.rzx" onClick="window.open(this.href); return false;">Torre 2: Realm of Robots</a></a></b></p>
-<p>
-Tenemos que empezar la ascensión de esta torre yendo hacia la izquierda. Hay
-discontinuidades en el camino, que debemos superar saltando a la siguiente losa del nivel.
-</p>
-<p>
-
-Entramos al ascensor, subimos y esperamos a que el vigilante pase a nuestra altura
-dirigiéndose hacia abajo. Saltamos entonces a la plataforma de la izquierda y nos
-dirigimos hacia la puerta, donde esperaremos a un orbitante antes de entrar.
-</p>
-<p>
-Hay una plataforma en forma de escalera a la izquierda. La subimos, esquivando al
-vigilante vertical (al comienzo de la escalera), y al vigilante horizontal
-(al final de la escalera), entrando al final en el ascensor y subiendo nada más
-llegar. A la izquierda hay una puerta, donde... ¡efectivamente! Esperamos un orbitante
-y entramos.
-</p>
-<p>
-Salimos sobre una plataforma que nos obliga a ir hacia la derecha. Esperamos en
-el borde hasta que el vigilante vertical nos deje espacio para saltar. Lo hacemos
-y caemos sobre un ascensor. Subimos.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre2-06.gif" width="320" height="240"  alt="A veces hay que saltar para llegar a los ascensores" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right">A veces hay que saltar para llegar a los ascensores</td>
-	</tr>
-</table>
-
-<p>
-El camino hacia la izquierda (el único disponible) está compuesto por losas deslizantes.
-Además, hay un vigilante vertical. Vuando el vigilante inicie su marcha hacia
-arriba y deje espacio libre nos dirigimos a la izquierda, bajando por la plataforma
-en forma de escalera. Al final hay un ascensor, entramos y subimos. Si todo va
-bien, según estemos subiendo aparecerá un orbitante que pasará justo por debajo de
-nuestro personaje.
-</p>
-<p>
-Vamos a la izquierda, y entramos por la primera puerta, cayendo en el otro extremo
-sobre una plataforma unos pocos niveles por debajo. Esperamos a que el vigilante pase
-sobre nosotros, entramos al ascensor de la izquierda y subimos.
-</p>
-<p>
-Pasamos de largo la puerta que hay a la izquierda, y subimos por la plataforma en
-escalera, esquivando a los dos vigilantes horizontales. Conviene pararse en el
-descansillo que hay entre ambos, pues de camino aparecerá un orbitante y,
-de esta forma, podemos esquivarlo dejándolo por debajo de nosotros cuando continuemos
-nuestro ascenso por la escalera.
-
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre2-08.gif" width="320" height="240"  alt="Hay que esperar a que el vigilante deje el camino libre" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Hay que esperar a que el vigilante deje el camino libre</td>
-	</tr>
-
-</table>
-
-</p>
-<p>
-Casi al final de la escalera veremos por encima de nosotros una puerta solitaria.
-Nos paramos en la losa anterior a donde se encuentra la puerta, y esperamos
-a que el vigilante horizontal que vemos por debajo de nuestra plataforma se dirija
-hacia la izquierda. Entonces nos situamos sobre la losa que está debajo de la
-puerta, la cual desaparecerá, dejándonos caer sobre un ascensor. Subimos y entramos por
-la puerta. Con esto ya son dos torres las superadas.
-</p>
-<p><b>2.3. <a href="rzx/nebulus-03.rzx" onClick="window.open(this.href); return false;">Torre 3: Trap of Tricks</a></b></p>
-<p>
-Como resulta evidente, debemos dirigirnos hacia la izquierda al comenzar esta
-torre. Hay una esfera blanca poco despues de la puerta, que si no la
-destruimos, nos golpeará antes de que logremos entrar. Así que le disparamos
-y entramos por la puerta. Entramos en el ascensor de la izquierda, subimos y
-nos dirigimos hacia la derecha, hasta donde no podamos caminar más. Allí esperamos
-la aparición de un orbitante, y le dejamos que nos golpee, cayendo así sobre la
-plataforma inferior.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre3-01.gif" width="320" height="240"  alt="Los orbitantes a veces nos empujan a plataformas a las que de otra forma no podríamos llegar" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Los orbitantes a veces nos empujan a plataformas a las que de otra forma no podríamos llegar</td>
-	</tr>
-</table>
-
-<p>
-Disparamos a la esfera blanca de la derecha y continuamos caminando hasta el
-final. La última losa desaparecerá cuando pasemos por encima de ella. Caemos en
-la plataforma inferior y entramos en el ascensor de la izquierda. Subimos y entramos
-por la puerta de la izquierda. Según estemos dentro de la torre aparecerá un
-orbitante. No hay problema, pues cuando salgamos, lo haremos por una puerta elevada,
-cayendo a una plataforma inferior y dejando al orbitante encima de nosotros.
-</p>
-<p>
-Entramos en el ascensor de la izquierda y subimos. A la izquierda hay una plataforma de
-losas escalonadas en orden descendente, protegidas por una calavera vertical. Pasamos
-por debajo y continuamos descendiendo. Al final de la escalera hay otra calavera
-descendente. Pasamos igualmente por debajo, entramos en el ascensor del final
-de la escalera, esperamos la aparición de un orbitante, y subimos.
-
-</p>
-<p>
-Nos dejamos caer a la izquierda, y esperamos a que la calavera horizontal que
-pasa por encima de nuestra cabeza haya pasado por encima de nosotros. Iniciamos el
-ascenso por la plataforma en escalera de la izquierda hasta que lleguemos al
-final, donde nos encontraremos dos bloques cerrando el paso. Los destruimos y
-nos dejamos caer por la izquierda.
-</p>
-<p>
-Entramos al ascensor y esperamos a que la calavera horizontal pase por encima de
-nuestra cabeza. Subimos entonces, y con esta maniobra habremos esquivado a otra
-calavera horizontal que había más arriba, fuera de pantalla. Ahora entramos por la
-puerta de la izquierda, caemos a una plataforma inferior, entramos por la puerta de
-la izquierda esquivando un nuevo orbitante y por supuesto a la calavera. Entramos en
-el ascensor de la izquierda, subimos, entramos por la puerta de la
-derecha, et voilá, una torre más para nuestro palmarés.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre3-04.gif" width="320" height="240"  alt="La última calavera de la torre nos va a complicar la misión" />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right">La última calavera de la torre nos va a complicar la misión</td>
-	</tr>
-</table>
-
-<p><b>2.4. <a href="rzx/nebulus-04.rzx" onClick="window.open(this.href); return false;">Torre 4: Slippery Slide</a></b></p>
-<p>
-Subimos por la plataforma en escalera de la derecha, parándonos justo en la losa
-previa a donde tenemos un par de rombos verticales bloqueando el paso. Saltamos por
-encima de ambos, de uno en uno, por supuesto. Al final caeremos en un ascensor,
-donde esperaremos la entrada de un orbitante. Subimos y una vez arriba disparamos
-al bloque que hay a la derecha.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-
-		<td><img src="img/nebulus-torre4-01.gif" width="320" height="240"  alt="Los rombos nos dificultan el paso, que deberemos hacer saltando entre plataformas" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Los rombos nos dificultan el paso, que deberemos hacer saltando entre plataformas</td>
-	</tr>
-</table>
-
-<p>
-Caminamos hacia la izquierda, sobre un suelo de losas deslizantes, hasta un
-punto con el paso cerrado por dos bloques. Los destruimos (soltando la tecla de
-dirección antes de disparar, para evitar el salto) y continuamos hacia la izquierda
-hasta llegar a un ascensor. Entramos, subimos nos colocamos frente a la puerta
-de la izquierda y esperamos la aparición de un orbitante antes de entrar.
-</p>
-
-<p>
-Estamos ahora en una plataforma de cuatro losas, tres en el mismo nivel y
-una cuarta elevada. Saltamos por encima de la losa central de las tres que están
-al mismo nivel, pues es una de esas losas que desaparecen. Continuamos hasta la
-cuarta losa a la izquierda y entramos por la puerta.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre4-04.gif" width="320" height="240"  alt="Nunca se sabe donde se esconde una falsa losa" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Nunca se sabe donde se esconde una falsa losa</td>
-
-	</tr>
-</table>
-
-<p>
-Entramos ahora en el ascensor de la izquierda y subimos. Entramos por la puerta
-de la izquieda. Descendemos por la plataforma en forma de escalera, pasando por
-debajo de los dos rombos verticales. Entramos por la puerta inferior. Disparamos al
-bloque de la derecha, descendemos hacia la izquierda y entramos por la puerta. Destruimos
-la esfera blanca, nos situamos en la losa del extremo izquierdo y disparamos al
-bloque de la izquierda. Regresamos entonces a la puerta por donde llegamos y
-entramos. En este momento nos deberá estar acosando un orbitante del que nos
-deberíamos haber librado al entrar por esta última puerta.
-</p>
-<p>
-Subimos por la plataforma en escalera, hacia la derecha, y nos dejamos caer sobre
-el ascensor. Subimos. Destruimos la esfera blanca y continuamos la marcha hacia la
-derecha, hasta encontrarnos sobre un nuevo ascensor. Esperamos a que aparezca un
-orbitante, y subimos.
-</p>
-<p>
-Vamos ahora a situarnos al borde de la losa de la izquierda, sin dejarnos caer
-todavía. Esperamos a que aparezca el rombo horizontal, y a que cambie de
-sentido al golpearse contra el soporte del ascensor. Cuando deje el hueco libre,
-nos dejamos caer hacia la izquierda.
-</p>
-<p>
-Continuamos hacia el extremo de la derecha y saltamos hacia la plataforma de la
-derecha. Entramos por la puerta. Subimos por la plataforma en forma de escalera,
-pasando por debajo de los dos rombos verticales. Llegamos a un descansillo formado
-por tres losas al mismo nivel. La losa central desaparece al pisarla, así que saltamos
-por encima de ella.
-</p>
-<p>
-
-Seguimos caminando hacia la izquierda, destruyendo la esfera blanca. Entramos al
-ascensor y esperamos a un orbitante. Subimos y nos situamos sobre la losa de nuestra
-derecha. Esperamos a que las dos esferas blancas se vayan hacia la derecha y nos
-dejamos caer por ese extremos. Destruimos las dos esferas, y caminamos hacia
-la derecha hasta que no podamos andar más, con la precaución de saltar por encima
-de la losa que esta sobre una torre de losas.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre4-07.gif" width="320" height="240"  alt="De nuevo el orbitante nos ayudará a descender de plataforma" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">De nuevo el orbitante nos ayudará a descender de plataforma</td>
-	</tr>
-
-</table>
-
-<p>
-Esperamos ahora la aparición de un orbitante y le dejamos que nos derribe sobre el
-nivel inferior. Saltamos ahora hacia la derecha, cayendo sobre el ascensor de una
-plataforma inferior. Subimos y nos dirigimos hacia la izquierda hasta la puerta
-que hay en el extremo. Entramos y con esta ya hemos completado la mitad de las torres.
-</p>
-<p><b>2.5. <a href="rzx/nebulus-05.rzx" onClick="window.open(this.href); return false;">Torre 5: Broken Path</a></b></p>
-<p>
-Entramos en el ascensor de la derecha y subimos. A la derecha veremos un
-ojo vertical. Pasamos por debajo y saltamos por encima de la losa que hay justo
-a la derecha del ojo, pues desaparece al pisarla y, de no hacerlo así, daríamos
-con nuestras redondas posaderas en el agua. Esta maniobra es difícil y requiere
-algo de práctica.
-</p>
-<p>
-Destruimos el bloque que hay a la derecha y nos dejamos caer sobre el ascensor.
-Subimos y continuamos nuestro camino hacia la derecha por la plataforma en forma
-de escalera. Según subimos aparecerá un orbitante. Continuamos subiendo hasta
-llegar a la puerta y entramos librándonos de él.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-
-		<td><img src="img/nebulus-torre5-01.gif" width="320" height="240"  alt="Me siento vigilado" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Me siento vigilado</td>
-	</tr>
-</table>
-
-<p>
-Salimos a otra plataforma en forma de escalera hacia la derecha. La subimos y
-llegamos hasta un ascensor, entramos y subimos. Ahora a la izquierda tenemos
-un tramo discontínuo, con losas separadas a un salto, y con un ojo horizontal por
-encima. Esperamos a que el ojo pase por encima de nosotros y saltamos a la losa
-de la izquierda. Repetimos esta operación una vez más y nos dejamos caer sobre la
-losa de la izquierda, que desaparecerá y nos dejará caer sobre un ascensor.
-Disparamos sobre los dos bloques de la izquierda, destruyéndolos. Y, en lugar de
-subir, como dicen algunas guías, nos dejaremos caer hacia la derecha.
-</p>
-
-<p>
-Repetimos el camino, esto es, subimos por la plataforma en escalera hacia la
-derecha hasta el ascensor, subimos, esperamos a que el ojo pase por encima de
-nosotros, saltamos a la izquierda una vez, dejamos que de nuevo pase el ojo por
-encima de nosotros y  saltamos otra vez. Estaremos justo donde lo dejamos
-antes de caer sobre la losa que nos dejaba caer sobre el ascensor. Ahora lo
-que tenemos que hacer es esperar una vez más a que el ojo pase por encima de
-nosotros y saltar hacia la izquierda.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre5-03.gif" width="320" height="240"  alt="Cuando el ojo aparezca por la izquierda, nos dejamos caer" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Cuando el ojo aparezca por la izquierda, nos dejamos caer</td>
-
-	</tr>
-</table>
-
-<p>
-Desde la posición en la que estamos, esperaremos a que el ojo aparezca por el
-extremo izquierdo de la torre. En ese momento nos dejamos caer sobre la losa
-de la izquierda, que desaparecerá, dejándonos caer sobre un ascensor. Sin esperar
-subimos, con lo que de haberlo hecho bien, habremos esquivado al ojo horizontal.
-</p>
-<p>
-Caminamos hacia la izquierda hasta el borde, donde saltaremos hacia la losa de la
-izquierda. Saltamos de nuevo hacia la izquierda, y tendremos un
-ojo vertical bloqueándonos el camino hacia la izquierda. Saltamos por encima
-de él, y ahora nos encontraremos entre dos ojos. Disparamos hacia la izquierda
-hasta que uno de nuestros proyectiles destruya el bloque que se ve en
-el extremo izquierdo de la torre.
-</p>
-<p>
-Saltamos ahora por encima del ojo que saltamos anteriormente, esta vez hacia la
-derecha. Esperamos a que el ojo horizontal que está debajo de nosotros pase hacia
-la izquierda, y nos dejamos caer hacia la derecha, cayendo sobre un ascensor. Subimos.
-Desde el extremo izquierdo del ascensor saltamos hacia la izquierda. Caminamos hacia
-la izquierda, pasando por debajo de un ojo vertical, y dejándonos caer al final
-del camino. Seguimos hacia la izquierda y entramos en el ascensor del
-extremo. Esperamos un poco hasta que aparezca el orbitante y subimos.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-
-		<td><img src="img/nebulus-torre5-05.gif" width="320" height="240"  alt="Otra vez el orbitante nos hará llegar a donde queremos" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Otra vez el orbitante nos hará llegar a donde queremos</td>
-	</tr>
-</table>
-
-<p>
-Nos situamos sobre la losa de la izquierda, y esperamos a que aparezca un orbitante
-que nos golpee y nos haga caer sobre la plataforma inferior. Subimos un peldaño de
-la plataforma en escalera hacia la izquierda, y esperamos a que aparezca el ojo
-horizontal, e inicie su marcha hacia la izquierda. Entonces continuamos en el mismo sentido.
-</p>
-
-<p>
-Nos dejamos caer al llegar al final de la plataforma, y continuamos hacia la
-izquierda, pasando por debajo de dos ojos verticales, y llegando hasta un
-ascensor, en el que iniciamos la subida, dejando por debajo a un orbitante que habrá
-hecho acto de presencia.
-</p>
-<p>
-Entramos por la puerta. Subimos la plataforma en forma de escalera hacia la
-derecha, pasando por debajo del ojo vertical que se situa entre la segunda y
-la tercera puerta del recorrido, hasta llegar a la cuarta puerta, que será por la
-que entremos.
-</p>
-<p>
-Salimos a otra plataforma también en forma de escalera hacia la derecha, con
-un ojo vertical entre la primera y la segunda puerta. Pasamos por debajo y
-nos quedamos esperando en la tercera puerta, hasta que el ojo horizontal haga el
-recorrido hacia la derecha, y pase por encima de nosotros. Entonces
-continuamos la marcha hacia la derecha, saltando al llegar al extremo para
-aterrizar sobre el ascensor que se ve en la plataforma de la derecha. Subimos.
-</p>
-<p>
-Nos dirigimos ahora hacia la izquierda, donde aparecen dos ojos verticales y
-dos esferas blancas. Destruimos la primera esfera blanca, pasamos por debajo
-de los ojos y destruimos la segunda esfera blanca. Continuamos hasta llegar a un
-ascensor, entramos, subimos y entramos por la puerta de la izquierda. Con esto
-llegamos a la sexta torre.
-</p>
-<p><b>2.6. <a href="rzx/nebulus-06.rzx" onClick="window.open(this.href); return false;">Torre 6: Swimmers Delight</a></b></p>
-<p>
-Comenzamos dirigiéndonos hacia la derecha. Entramos en el ascensor, subimos y
-saltamos por encima del hueco hacia la plataforma de la derecha. Pasamos por debajo
-de los dos vigilantes verticales, dejándonos caer al pasar por debajo del segundo.
-Cambiamos de sentido, y pasando de nuevo por debajo del vigilante vertical, nos dirigimos
-hacia la izquierda, hasta el límite con el ascensor. Destruimos el bloque que
-lo bloquea, y cambiamos de sentido otra vez, hacia la derecha, pasando nuevamente
-por debajo del vigilante.
-
-</p>
-<p>
-Entramos en el ascensor del extremo y subimos. Una vez arriba destruimos el bloque
-de la derecha, pasamos por debajo del vigilante de la izquierda y entramos
-por la puerta. Saltamos por encima del vigilante vertical de la izquierda, entramos en
-el ascensor, subimos y nos dirigimos hacia el extremo de la derecha. Destruimos
-el bloque y regresamos al ascensor, esperando a que baje. Esperamos a que el
-vigilante este arriba y nos dejamos caer hacia la derecha.
-</p>
-<p>
-Continuamos el camino hacia la derecha, entramos en el ascensor, subimos,
-y nos dejamos caer por el hueco de la derecha, cayendo sobre otro ascensor. Subimos,
-caminamos hacia la izquierda, entramos en el ascensor y subimos de nuevo.
-</p>
-<p>
-Caminamos ahora hacia la derecha, por una plataforma en forma de escalera. Entramos
-por la primera puerta. A la izquierda nos encontramos con una plataforma en
-forma de escalera en la que los peldaños son de una altura superior. Los subimos
-saltando de uno en uno. Al llegar al extremo saltamos hacia la plataforma de
-la izquierda, pasando por encima del vigilante vertical, y entramos por la puerta.
-</p>
-<p>
-Entramos en el ascensor de la izquierda y subimos. Esperamos a que aparezca un
-orbitante y saltamos sobre la losa de la derecha. Una a una desaparecerán
-todas las losas que hay hasta caer sobre un ascensor. Subimos, caminamos hacia la
-derecha hasta el extremo y disparamos al bloque de la derecha. Regresamos al
-ascensor y esperamos a que baje.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-
-		<td><img src="img/nebulus-torre6-03.gif" width="320" height="240"  alt="Hay que saltar sobre las plataformas de la derecha, que desaparecerán una a una hasta dejarnos sobre un ascensor" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Hay que saltar sobre las plataformas de la derecha, que desaparecerán una a una hasta dejarnos sobre un ascensor</td>
-	</tr>
-</table>
-
-<p>
-Nos situamos ahora en el ascensor de la derecha, y subimos. Caminamos hacia la
-derecha, entramos en el ascensor y subimos. Seguimos hacia la derecha, entramos en un
-nuevo ascensor, y subimos. A la izquierda tenemos tres vigilantes verticales, bajo los
-que tendremos que pasar. El mejor momento para iniciar la marcha es cuando el
-central esta empezando a subir, el de la derecha esta casi arriba, y el de la
-izquierda casi abajo. De todas formas es una maniobra algo complicada que se
-supera con la práctica.
-</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre6-04.gif" width="320" height="240"  alt="Una decisión difícil: ¿Cuándo avanzar?" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Una decisión difícil: ¿Cuándo avanzar?</td>
-	</tr>
-</table>
-
-
-<p>
-Entramos en el ascensor del extremo de la izquierda y subimos. Esperamos ahora a
-que el vigilante vertical esté bajando y saltamos por encima de él hacia la
-plataforma de la derecha.
-</p>
-<p>
-Veremos que de nuevo tenemos una escalera con peldaños de doble altura a
-la derecha. Los tenemos que subir, esquivando al vigilante horizontal. Así
-que empezaremos la subida cuando el vigilante vaya hacia la izquierda y
-acabe de pasar por encima de nuestro personaje. Llegaremos así hasta una puerta
-por la que entraremos y ya sólo nos quedarán dos torres más para completar el juego.
-</p>
-<p><b>2.7. <a href="rzx/nebulus-07.rzx" onClick="window.open(this.href); return false;">Torre 7: Nasty One</a></b></p>
-<p>
-De los dos caminos posibles elegimos el de la derecha. Caminamos hasta que
-una losa desaparezca haciéndonos caer sobre un ascensor. Entonces esperamos
-a que pase por encima una calavera hacia la izquierda y subimos. Caminamos hacia la
-derecha y, de nuevo, desaparecerá una losa bajo nuestros pies.
-</p>
-<p>
-Lo más normal es que hayamos caído sobre el ascensor de la derecha, cuando lo
-que nos interesa es situarnos sobre el de la izquierda. Así que saltaremos hacia
-la plataforma de la derecha (la única accesible por medio de un salto) y,
-desde allí, saltaremos sobre el ascensor de la izquierda. Subimos entonces y
-destruimos el bloque de la derecha.
-</p>
-<p>
-
-Caminamos ahora hacia la izquierda, dejándonos caer, y entrando en el ascensor del
-hueco. De nuevo esperamos a que la calavera nos deje el paso libre y subimos.
-Cuando el ascensor se pare, subimos una vez más. Caminamos entonces hacia la
-derecha, hasta el extremo, donde la última losa desaparecerá al pisarla, y nos
-hará caer sobre la losa del extremo del camino del nivel inferior. Entramos en
-el ascensor del hueco, y subimos.
-</p>
-<p>
-Vamos hacia la derecha, descendiendo por una plataforma en forma de escalera. Esperamos
-antes de continuar por el tramo ascendente hasta que aparezca un orbitante,
-y entonces subimos tres peldaños. Esperamos ahora a que la calavera que hay por
-encima deje el paso libre y continuamos el ascenso hasta la cúspide. Destruimos ahora
-los dos bloques que hay sobre el ascensor del extremo y nos dirigimos hasta él,
-entrando y, por supuesto, subiendo.
-</p>
-<p>
-Caemos sobre el ascensor de la derecha y subimos. Lo repetimos una vez más
-y nos encotramos en una plataforma ascendente/descendente hacia la derecha. Sobre la
-segunda losa de la plataforma hay una calavera vertical, y sobre nuestras cabezas,
-una calavera horizontal.
-</p>
-<p>
-Pasamos por debajo de la calavera vertical y nos quedamos parados en la losa que hay
-justo a su derecha. Esperamos ahora a que la calavera horizontal haga recorrido hacia
-la derecha, y que pase justo sobre nuestras cabezas. Entonces nos dirigimos hacia
-la derecha, saltando de losa superior en losa superior, puesto que las inferiores
-desaparecen si las pisamos. Llegamos a una plataforma lisa con un ascensor al
-final. Entramos y subimos.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre7-07.gif" width="320" height="240"  alt="Las losas inferiores de este camino son falsas" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Las losas inferiores de este camino son falsas</td>
-	</tr>
-</table>
-
-<p>
-De nuevo tenemos una plataforma ascendente/descendente a la derecha, con una calavera
-horizontal por encima de nuestra cabeza. Caminamos hacia la derecha, y nos
-quedamos esperando en la losa inferor de cada descenso hasta que la calavera pase por
-encima y deje el camino despejado. Llegamos así a un ascensor en el extremo. Entramos
-y subimos.
-</p>
-<p>
-Pasamos por debajo de las dos calaveras verticales que tenemos a nuestra derecha,
-llegando a un conjunto de cuatro ascensores. Nos vamos sobre el tercero y
-subimos. Caminamos hacia la derecha, hasta el final, desapareciendo la última losa
-sobre nuestros pies. Destruimos, si están al alcance, las esferas blancas. Caminamos
-hacia la izquierda, hasta el final, desapareciendo la última losa bajo nuestros
-pies, y haciéndonos caer sobre el último camino ascendente/descendente que pisamos
-antes. Nos dirigimos hacia la derecha, hasta el ascensor, en el cual entramos
-y subimos.
-
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre7-08.gif" width="320" height="240"  alt="¿A qué planta quiere subir?" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">¿A qué planta quiere subir?</td>
-	</tr>
-
-</table>
-
-<p>
-Vamos hacia la derecha, de nuevo sobre los cuatro ascensores. Esta vez subimos en
-el cuarto, y caminamos también hacia la derecha, hasta el final, desapareciendo
-igual que antes la última losa del camino. Seguimos ahora hacia la derecha,
-hasta el final, dejándonos caer por la derecha sobre el grupo de cuatro
-ascensores. Elegimos ahora el primer ascensor de la izquierda, y subimos.
-</p>
-<p>
-Caminamos hacia la izquierda hasta el ascensor. Subimos y entramos por la puerta.
-Ya sólo nos queda la última torre.
-</p>
-<p><b>2.8. <a href="rzx/nebulus-08.rzx" onClick="window.open(this.href); return false;">Torre 8: Edge of Doom</a></b></p>
-<p>
-El único camino disponible, hacia la derecha, está bloqueado por cuatro rombos
-verticales que nos dificultan el paso. Nos situamos en la losa más próxima posible
-y esperemos a que estén alineados, haciendo recorrido ascendente, momento que
-aprovecharemos para pasar por debajo de los cuatro. Llegamos así al otro extremo hasta
-un ascensor, en el que entramos y subimos.
-</p>
-<p>
-Caminamos ahora hacia la izquierda, hasta la puerta, y entramos. Salimos en una
-plataforma de cuatro losas. Vamos hasta la tercera, y saltamos sobre
-la cuarta, que desaparecerá bajo nuestros pies, dejándonos caer sobre un bloque.
-Nos giramos hacia la derecha y avanzamos un pasito sin caernos, para que
-la esfera blanca de la plataforma que hay a la derecha se acerque a nosotros.
-La destruimos de un disparo y saltamos sobre dicha plataforma. Giramos hacia
-la izquierda y destruimos el bloque sobre el que estabamos apoyados.
-</p>
-
-<p>
-Nos dejamos ahora caer hacia la izquierda, aterrizando en un ascensor. Subimos
-y entramos por la puerta de la izquierda. Continuamos por la plataforma en forma
-de escalera de la derecha hasta el penúltimo escalón. Esperamos a que el rombo
-vertical comience a subir y nos situamos en el último peldaño. Saltamos ahora a
-la losa de la derecha. Saltamos a la siguiente losa, y así hasta llegar a un
-ascensor. Subimos.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre8-05.gif" width="320" height="240"  alt="Si no bastaba con los huecos, ahora toca esquivar a los rombos" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Si no bastaba con los huecos, ahora toca esquivar a los rombos</td>
-
-	</tr>
-</table>
-
-<p>
-Giramos ahora a la izquierda, y observamos que tenemos un grupo de losas separadas,
-con rombos verticales obstaculizando los saltos entre ellas. Aprovechando cuando
-estos rombos estñen por debajo, saltamos a la siguiente losa de la izquierda hasta
-llegar a un ascensor. Antes de subir, disparamos al bloque de la izquierda y,
-ahora sí, subimos y entramos por la puerta.
-</p>
-<p>
-Saltamos a la plataforma de la izquierda, y repetimos el salto hasta la
-siguiente plataforma, donde hay una puerta. Entramos. Nos dirigimos a la
-derecha y destruimos el bloque que se ve en el extremo. Caminamos ahora hacia la
-izquierda, y desde el borde nos dejamos caer sobre un ascensor. Subimos.
-</p>
-<p>
-Nos encontramos de nuevo con las losas separadas a la izquierda y los incordiantes
-rombos. Saltamos por encima de ellos, de losa en losa, hasta llegar al primer
-ascensor. Pasamos de largo, entramos en el segundo y subimos. Saltamos ahora hacia la
-izquierda, cayendo sobre una plataforma ascendente descendente.
-</p>
-<p>
-Descendemos por el camino hacia la izquierda, hasta llegar a la última losa,
-cima de una torre de losas. Irán desapareciendo una a una hasta que caigamos sobre
-un ascensor. Subimos y esperamos a que aparezca un orbitante. Entonces subimos
-un poco más alto.
-</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/nebulus-torre8-06.gif" width="320" height="240"  alt="¡Lo que hay que hacer para llegar a un ascensor!" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">¡Lo que hay que hacer para llegar a un ascensor!</td>
-	</tr>
-</table>
-
-
-<p>
-Vamos a la izquierda, hasta que veamos aparecer un par de bloques. Destruimos
-uno, pues el otro desde esa posición no podemos. Nos vamos ahora hacia la
-derecha, pasando por encima del hueco del ascensor, hasta un nuevo ascensor.
-Subimos y caminamos hacia la derecha, dejándonos caer. Caminamos hacia la izquierda, por
-encima del bloque y paramos justo en la losa siguiente. Giramos y destruimos el
-bloque de un disparo. Entramos en el ascensor de la derecha, y esperamos a que aparezca un
-orbitante y el rombo horizontal que pasa por encima nos deje el camino libre. Subimos.
-</p>
-<p>
-A la izquierda tenemos una plataforma en forma de escalera con dos rombos verticales.
-Pasamos por debajo de ambos y entramos por la puerta al final de la escalera.
-</p>
-<p>
-Destruimos el bloque de la derecha, y subimos por la escalera de
-la izquierda. Al llegar al final nos dejamos caer. Saltamos a la plataforma de
-la izquierda, Saltamos a la siguiente plataforma de la izquierda y destruimos el bloque.
-Nos dejamos caer a la derecha, sobre una losa que desaparecerá al tocarla, cayendo
-sobre una plataforma inferior.
-</p>
-<p>
-Caminamos hacia la derecha, y entramos en el ascensor del hueco del extremo. Subimos
-y seguimos andando hacia la derecha. Nos dejamos caer, entramos en el ascensor
-de la izquierda, subimos. Tenemos de nuevo frente a nuestro personaje la plataforma
-en escalera a la izquierda con los dos rombos. Pasamos por debajo de ambos y
-entramos por la puerta.
-</p>
-<p>
-Ahora, en lugar de hacer el recorrido que seguimos antes, saltamos hacia el ascensor
-de la derecha y subimos. Encontraremos una serie de cuatro puertas. Entramos por
-la tercera y con esto y un bizcocho, terminada la torre ocho.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-
-	<tr align="right">
-		<td><img src="img/nebulus-torre8-10.gif" width="320" height="240"  alt="¿Qué se esconde detrás de la puerta número tres?" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">¿Qué se esconde detrás de la puerta número tres?</td>
-	</tr>
-</table>
-
-<p>
-
-<hr>
-Descarga la solución completa en formato RZX: <a href="rzx/nebulus_pasoapaso.zip" onClick="window.open(this.href); return false;">nebulus_pasoapaso.zip</a>
-<hr>
-</p>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>NÉSTOR LUCAS</td>
-	</tr>
-
-</table>
-                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="al-descubierto.html" selected>Al Descubierto</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="emulacion.html">Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="input.html">INPUT</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Al Descubierto - Magazine ZX número 4 - Noviembre 2003</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
                 </tr>
             </table>
+        </td>
 
-    </body>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="al-descubierto.html" selected>Al Descubierto</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="emulacion.html">Emulación</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                                <option value="input.html">INPUT</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 4 - Noviembre 2003</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p><b>NEBULUS AL DESCUBIERTO</b></p>
+                            <table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
+
+                                <tr valign="center">
+                                    <td rowspan="10" bgcolor="#EEEEEE"><img src="img/portada_nebulus.jpg" width="194"
+                                                                            height="250" alt="Portada NEBULUS"/></td>
+                                    <td bgcolor="#66AEEF">Título</td>
+                                    <td bgcolor="#FFFFFF">NEBULUS</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Género</td>
+
+                                    <td bgcolor="#FFFFFF">Arcade/Plataformas</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Año</td>
+                                    <td bgcolor="#FFFFFF">1987</td>
+                                </tr>
+                                <tr>
+
+                                    <td bgcolor="#66AEEF">Máquina</td>
+                                    <td bgcolor="#FFFFFF">48K</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Jugadores</td>
+                                    <td bgcolor="#FFFFFF">1 Jugador</td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#66AEEF">Compañía</td>
+                                    <td bgcolor="#FFFFFF">Hewson Consultants Ltd (UK)</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Autor</td>
+                                    <td bgcolor="#FFFFFF">J.M.Phillips</td>
+
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Distribuidora en España</td>
+                                    <td bgcolor="#FFFFFF">Erbe Software</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" bgcolor="#66AEEF">Remakes</td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2" bgcolor="#FFFFFF">
+                                        <ul>
+                                            <li><a href="http://toppler.sourceforge.net" target="_blank">Tower
+                                                Toppler</a></li>
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                A principios de agosto de 2003, El Spectrum Hoy convocó un concuso para calentar
+                                motores con vista al Speccy Tour del mismo año. El objetivo del concurso era
+                                retar a los participantes para ver quien enviaba la primera partida finalizada de
+                                Nebulus, siendo una novedad el uso del formato RZX para grabar las partidas.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus_carga.gif" width="320" height="240"
+                                             alt="Pantalla de carga de Nebulus"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Pantalla de carga de Nebulus</td>
+
+                                </tr>
+                            </table>
+
+                            <p>
+                                De aquel concurso surgió la idea de escribir este artículo, desmontando Nebulus paso
+                                a paso aprovechando las nuevas posibilidades que nos ofrecen los emuladores.
+                                Y así, por fin tenéis en vuestros ordenadores una guía para acabaros este
+                                juego, con una descripción en texto al más puro estilo tradicional, y con
+                                la novedad de incluir un RZX por cada torre.
+                            </p>
+                            <p>
+                                No me enrollo más, dejo paso al artículo.
+                            </p>
+                            <p><b>1. Una breve introducción a Nebulus</b></p>
+                            <p>
+                                Para aquellos que aun no conozcáis Nebulus, vamos a describiros brevemente el
+                                juego. Encarnamos a un gracioso bichejo de dos patas y ojos saltones en su curiosa
+                                misión de alcanzar lo alto de ocho torres situadas en alta mar y destruirlas.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="74">
+
+                                <tr align="right">
+                                    <td><img src="img/personaje.gif" width="74" height="78" alt="Nuestro personaje"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Nuestro personaje</td>
+                                </tr>
+                            </table>
+
+                            <p>
+
+                                En nuestra misión debermos tener cuidado con una serie de trampas y enemigos,
+                                de los que pasamos a dar referencia en el siguiente apartado.
+                            </p>
+                            <p><b>1.1. Los enemigos</b></p>
+                            <table border="0" cellspacing="0" cellpadding="4" class="texto">
+                                <tr>
+                                    <td><img src="img/malos-ojo.gif" border="0" width="43" height="36"></td>
+                                    <td>
+                                        <p>
+                                            <b>El ojo que todo lo ve</b>: Este molesto ojo se encuentra en las torres 1
+                                            y 5.
+                                            Vigila la torre haciendo recorridos verticales u horizontales sobre la
+                                            misma, según
+                                            la situación. No se le puede destruir, por lo que no queda más remedio que
+                                            esquivarlo.
+                                        </p>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><img src="img/malos-esfera_negra.gif" border="0" width="36" height="36"></td>
+                                    <td>
+                                        <p>
+                                            <b>La esfera negra</b>: Aparece en las torres 1 y 8. Rueda por las
+                                            plataformas de
+                                            la torre dispuesta a hacernos caer sobre las plataformas inferiores, o si
+                                            se tercia, directamente al agua. Igual que con los ojos, no se la
+                                            puede destruir, pero si parar con un disparo.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td><img src="img/malos-esfera_blanca.gif" border="0" width="34" height="34"></td>
+                                    <td>
+                                        <p>
+                                            <b>La esfera blanca</b>: Aparece en las torres 1, 3, 4 y 8. Su costumbre es
+                                            ir botando
+                                            por las plataformas para bloquearnos el paso. Al contrario que la esfera
+                                            negra,
+                                            la esfera blanca puede ser destruida con un disparo.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/malos-vigilante.gif" border="0" width="34" height="34"></td>
+                                    <td>
+
+                                        <p>
+                                            <b>El vigilante</b>: Nos lo vamos a encontrar en las torres 2 y 6. Tiene el
+                                            mismo comportamiento
+                                            que el ojo que todo lo ve. La única opción, esquivarlo a toda costa.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/malos-calavera.gif" border="0" width="34" height="34"></td>
+                                    <td>
+                                        <p>
+                                            <b>La calavera</b>: Es el vigilante de las torres 3 y 7. Como el ojo que
+                                            todo lo ve
+                                            y el vigilante, realiza bloqueos verticales y horizontales en nuestro
+                                            recorrido.
+                                            Como no se le puede destruir, no queda más remedio que esquivarle.
+
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/malos-rombos.gif" border="0" width="34" height="34"></td>
+                                    <td>
+                                        <p>
+                                            <b>Los rombos</b>: A los rombos les corresponde la misión de vigilar en las
+                                            torres 4 y 8. Tienen el mismo comportamiento que el ojo que todo lo ve,
+                                            el vigilante y la calavera.
+                                        </p>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><img src="img/malos-orbitante.gif" border="0" width="34" height="34"></td>
+                                    <td>
+                                        <p>
+                                            <b>La cosa orbitante</b>: Es el único enemigo que nos vamos a encontrar en
+                                            todas las
+                                            torres. Aparece cada cierto tiempo indeterminado, o cuando nos quedamos
+                                            mucho
+                                            tiempo esperando en un mismo punto. Realiza un barrido completo de
+                                            la pantalla, de lado a lado, a la altura a la que nos encontremos. No se
+                                            le puede destruir, por lo que tendremos que esquivarla entrando por una
+                                            puerta o cambiando de nivel.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br>
+                            <p><b>1.2. Los elementos del camino</b></p>
+                            <p>
+                                Por el camino nos vamos a encontrar 5 tipos de elementos, algunos de ayuda, y otros que
+                                nos obstaculizarán el paso:
+                            </p>
+                            <ul>
+                                <li><b>Las puertas</b>: El elemento fundamental de las torres son las puertas. Por ellas
+                                    atravesamos la torre hasta el otro extremo. En ocasiones estas puertas esconden
+                                    trampas,
+                                    como veremos en la guía de cada torre.
+                                </li>
+                                <li><b>El ascensor</b>: Para superar algunos desniveles deberemos recurrir a este
+                                    elemento.
+                                    Aparece sobre la plataforma como un bloque liso al que deberemos subir (basta con
+                                    seguir
+                                    caminando hasta encontrarnos ya encima). En la guía indicaremos dos pasos con
+                                    los ascensores: entrar (colocarse encima) y subir (pulsar hacia arriba para que el
+                                    ascensor se eleve).
+                                </li>
+                                <li><b>Los bloques</b>: En algunos puntos de las torres aparecen unos bloques que, como
+                                    su nombre
+                                    indica, nos bloquearán el paso. Tan solo hace falta disparar sobre ellos para
+                                    despejar el
+                                    camino.
+                                </li>
+                                <li><b>Las falsas losas</b>: En las plataformas del camino hay camufladas algunas falsas
+                                    losas
+                                    que desaparecen en cuanto las pisamos. Son idénticas a las normales, por lo que para
+                                    detectarlas no queda más remedio que ir probando, o seguir leyendo esta guía.
+                                </li>
+
+                                <li><b>Las losas deslizantes</b>: Algunas losas son como una cinta transportadora, que
+                                    nos
+                                    llevarán hacia uno de los lados de la pantalla cuando estemos sobre ellas.
+                                    Por lo general el lado al que nos mueven es el contrario al que tenemos que ir.
+                                </li>
+                            </ul>
+                            <p><b>2. Las torres, una a una</b></p>
+                            <p>
+                                Bueno, ya va siendo hora de explicar paso a paso cómo superar cada torre. A partir
+                                de ahora el texto os resultará más monótono. Aun así, espero que os guste y
+                                os resulte práctico. Lo aquí descrito lo podéis visualizar en los RZX incluidos con
+                                el artículo. Comencemos.
+                            </p>
+                            <p><b>2.1. <a href="rzx/nebulus-01.rzx" onClick="window.open(this.href); return false;">Torre
+                                1: Torre de ojos</a></b></p>
+                            <p>
+                                La primera torre nos presenta pocas dificultades. Las justas para irle cogiendo
+                                el truco al juego.
+                            </p>
+                            <p>
+                                Comenzamos nuestro periplo dirigiéndonos a la derecha, entrando por la primera
+                                puerta que aparezca. Al salir al otro lado, observaremos a la izquierda un ojo
+                                que bloquea el paso haciendo un recorrido vertical. Pasamos por debajo de él y entramos
+                                en el ascensor. Esperamos encima del ascensor hasta que aparezca por uno de los
+                                extremos un orbitante, y en ese mismo momento subimos hasta la puerta y entramos en
+                                ella.
+
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre1-04.gif" width="320" height="240"
+                                             alt="¿Acaso no son los orbitantes los bichos más molestos de este juego?"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">¿Acaso no son los orbitantes los bichos más
+                                        molestos de este juego?
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                            <p>
+                                Al salir al otro extremo entramos al ascensor que tenemos a la izquierda y subimos.
+                                En la siguiente plataforma tenemos que entrar al ascensor de la derecha y de nuevo
+                                subimos. Seguimos el camino hacia la izquierda, donde nos encontraremos con dos bloques
+                                cerrándonos el paso. Los destruimos con sendos disparos y continuamos la marcha con
+                                precaución, atentos a la esfera blanca que se nos aproximará rebotando para destruirla
+                                también de un disparo.
+                            </p>
+                            <p>
+                                A continuación veremos que la plataforma adquiere forma de escalera. No hace falta
+                                saltar cuando el desnivel es de una sola losa, basta con seguir caminando en
+                                el mismo sentido. Las losas que forman esta escalera son en su comienzo del
+                                tipo de losas deslizantes. Y para colmo tenemos un ojo que nos bloquea el paso con
+                                su vigilancia vertical. Para superar el obstáculo nos situamos al comienzo de la
+                                escalera, y esperamos a que el ojo esté a punto de tocar el suelo. En ese mismo
+                                momento empezamos a caminar hacia la izquierda, subiendo así la escalera.En la puerta
+                                que hay al final de la escalera esperamos a que aparezca un orbitante, y cuando
+                                se encuentre a la altura de la torre, entramos.
+                            </p>
+                            <p>
+                                Nos dirigimos ahora hacia la derecha, donde nos aparecerá una nueva esfera blanca.
+                                La destruimos y entramos al ascensor. Otro orbitante estará en camino,
+                                así que esperamos a que aparezca y justo cuando lo haga, empezamos a subir.
+                            </p>
+                            <p>
+                                Ahora toca ir hacia la izquierda, hasta el borde de la plataforma. Vemos que hay
+                                un ojo que hace un recorrido vertical, y una esfera blanca. Cuando la
+                                esfera blanca no nos suponga un riesgo, nos dejamos caer hacia la izquierda.
+                                Destruimos la esfera blanca y pasamos por debajo del ojo, quedándonos justo en
+                                la losa previa al grupo de losas apiladas.
+                            </p>
+                            <p>
+                                Vemos que hay una esfera negra en una plataforma superior a la nuestra. Cuando
+                                esta bola llegue al extremo izquierdo de la plataforma iniciaremos el camino hacia la
+                                izquierda, situándonos sobre la losa superior del grupo de losas. Las losas
+                                empezarán a desaparecer una a una hasta dejarnos sobre un ascensor. Subimos
+                                y, si lo hemos hecho bien, habremos evitado el golpe de la esfera negra.
+                            </p>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre1-13.gif" width="320" height="240"
+                                             alt="La esfera negra nos indica cuando debemos entrar en la losa que desaparece"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">La esfera negra nos indica cuando debemos entrar
+                                        en la losa que desaparece
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            <p>
+                                Donde nos encontramos ahora tenemos una plataforma a la derecha compuesta por
+                                tres losas. La primera de estas losas desaparece cuando la pisamos, así que
+                                saltamos por encima de ella y nos vamos hasta la puerta, sin entrar. Allí esperamos a
+                                la aparición de un orbitante, y entramos.
+                            </p>
+                            <p>
+                                Al salir al otro lado de la torre nos dirigiremos a la izquierda, con cuidado de no
+                                entrar en el ascensor. Justo encima de nosotros hay un ojo que vigila con
+                                un recorrido horizontal. Cuando el ojo esté yendo hacia la derecha y acabe de pasar por
+                                encima de nuestra cabeza, entramos al ascensor y subimos.
+                            </p>
+                            <p>
+                                Vamos hasta la puerta y esperamos un nuevo orbitante. Entramos, vamos a la
+                                puerta de la derecha, entramos y ya está.
+                            </p>
+                            <p><b>2.2. <a href="rzx/nebulus-02.rzx" onClick="window.open(this.href); return false;">Torre
+                                2: Realm of Robots</a></a></b></p>
+                            <p>
+                                Tenemos que empezar la ascensión de esta torre yendo hacia la izquierda. Hay
+                                discontinuidades en el camino, que debemos superar saltando a la siguiente losa del
+                                nivel.
+                            </p>
+                            <p>
+
+                                Entramos al ascensor, subimos y esperamos a que el vigilante pase a nuestra altura
+                                dirigiéndose hacia abajo. Saltamos entonces a la plataforma de la izquierda y nos
+                                dirigimos hacia la puerta, donde esperaremos a un orbitante antes de entrar.
+                            </p>
+                            <p>
+                                Hay una plataforma en forma de escalera a la izquierda. La subimos, esquivando al
+                                vigilante vertical (al comienzo de la escalera), y al vigilante horizontal
+                                (al final de la escalera), entrando al final en el ascensor y subiendo nada más
+                                llegar. A la izquierda hay una puerta, donde... ¡efectivamente! Esperamos un orbitante
+                                y entramos.
+                            </p>
+                            <p>
+                                Salimos sobre una plataforma que nos obliga a ir hacia la derecha. Esperamos en
+                                el borde hasta que el vigilante vertical nos deje espacio para saltar. Lo hacemos
+                                y caemos sobre un ascensor. Subimos.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre2-06.gif" width="320" height="240"
+                                             alt="A veces hay que saltar para llegar a los ascensores"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="piefoto" align="right">A veces hay que saltar para llegar a los
+                                        ascensores
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                El camino hacia la izquierda (el único disponible) está compuesto por losas deslizantes.
+                                Además, hay un vigilante vertical. Vuando el vigilante inicie su marcha hacia
+                                arriba y deje espacio libre nos dirigimos a la izquierda, bajando por la plataforma
+                                en forma de escalera. Al final hay un ascensor, entramos y subimos. Si todo va
+                                bien, según estemos subiendo aparecerá un orbitante que pasará justo por debajo de
+                                nuestro personaje.
+                            </p>
+                            <p>
+                                Vamos a la izquierda, y entramos por la primera puerta, cayendo en el otro extremo
+                                sobre una plataforma unos pocos niveles por debajo. Esperamos a que el vigilante pase
+                                sobre nosotros, entramos al ascensor de la izquierda y subimos.
+                            </p>
+                            <p>
+                                Pasamos de largo la puerta que hay a la izquierda, y subimos por la plataforma en
+                                escalera, esquivando a los dos vigilantes horizontales. Conviene pararse en el
+                                descansillo que hay entre ambos, pues de camino aparecerá un orbitante y,
+                                de esta forma, podemos esquivarlo dejándolo por debajo de nosotros cuando continuemos
+                                nuestro ascenso por la escalera.
+
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre2-08.gif" width="320" height="240"
+                                             alt="Hay que esperar a que el vigilante deje el camino libre"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Hay que esperar a que el vigilante deje el camino
+                                        libre
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                            </p>
+                            <p>
+                                Casi al final de la escalera veremos por encima de nosotros una puerta solitaria.
+                                Nos paramos en la losa anterior a donde se encuentra la puerta, y esperamos
+                                a que el vigilante horizontal que vemos por debajo de nuestra plataforma se dirija
+                                hacia la izquierda. Entonces nos situamos sobre la losa que está debajo de la
+                                puerta, la cual desaparecerá, dejándonos caer sobre un ascensor. Subimos y entramos por
+                                la puerta. Con esto ya son dos torres las superadas.
+                            </p>
+                            <p><b>2.3. <a href="rzx/nebulus-03.rzx" onClick="window.open(this.href); return false;">Torre
+                                3: Trap of Tricks</a></b></p>
+                            <p>
+                                Como resulta evidente, debemos dirigirnos hacia la izquierda al comenzar esta
+                                torre. Hay una esfera blanca poco despues de la puerta, que si no la
+                                destruimos, nos golpeará antes de que logremos entrar. Así que le disparamos
+                                y entramos por la puerta. Entramos en el ascensor de la izquierda, subimos y
+                                nos dirigimos hacia la derecha, hasta donde no podamos caminar más. Allí esperamos
+                                la aparición de un orbitante, y le dejamos que nos golpee, cayendo así sobre la
+                                plataforma inferior.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre3-01.gif" width="320" height="240"
+                                             alt="Los orbitantes a veces nos empujan a plataformas a las que de otra forma no podríamos llegar"/>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Los orbitantes a veces nos empujan a plataformas a
+                                        las que de otra forma no podríamos llegar
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                Disparamos a la esfera blanca de la derecha y continuamos caminando hasta el
+                                final. La última losa desaparecerá cuando pasemos por encima de ella. Caemos en
+                                la plataforma inferior y entramos en el ascensor de la izquierda. Subimos y entramos
+                                por la puerta de la izquierda. Según estemos dentro de la torre aparecerá un
+                                orbitante. No hay problema, pues cuando salgamos, lo haremos por una puerta elevada,
+                                cayendo a una plataforma inferior y dejando al orbitante encima de nosotros.
+                            </p>
+                            <p>
+                                Entramos en el ascensor de la izquierda y subimos. A la izquierda hay una plataforma de
+                                losas escalonadas en orden descendente, protegidas por una calavera vertical. Pasamos
+                                por debajo y continuamos descendiendo. Al final de la escalera hay otra calavera
+                                descendente. Pasamos igualmente por debajo, entramos en el ascensor del final
+                                de la escalera, esperamos la aparición de un orbitante, y subimos.
+
+                            </p>
+                            <p>
+                                Nos dejamos caer a la izquierda, y esperamos a que la calavera horizontal que
+                                pasa por encima de nuestra cabeza haya pasado por encima de nosotros. Iniciamos el
+                                ascenso por la plataforma en escalera de la izquierda hasta que lleguemos al
+                                final, donde nos encontraremos dos bloques cerrando el paso. Los destruimos y
+                                nos dejamos caer por la izquierda.
+                            </p>
+                            <p>
+                                Entramos al ascensor y esperamos a que la calavera horizontal pase por encima de
+                                nuestra cabeza. Subimos entonces, y con esta maniobra habremos esquivado a otra
+                                calavera horizontal que había más arriba, fuera de pantalla. Ahora entramos por la
+                                puerta de la izquierda, caemos a una plataforma inferior, entramos por la puerta de
+                                la izquierda esquivando un nuevo orbitante y por supuesto a la calavera. Entramos en
+                                el ascensor de la izquierda, subimos, entramos por la puerta de la
+                                derecha, et voilá, una torre más para nuestro palmarés.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre3-04.gif" width="320" height="240"
+                                             alt="La última calavera de la torre nos va a complicar la misión"/>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td class="piefoto" align="right">La última calavera de la torre nos va a complicar
+                                        la misión
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p><b>2.4. <a href="rzx/nebulus-04.rzx" onClick="window.open(this.href); return false;">Torre
+                                4: Slippery Slide</a></b></p>
+                            <p>
+                                Subimos por la plataforma en escalera de la derecha, parándonos justo en la losa
+                                previa a donde tenemos un par de rombos verticales bloqueando el paso. Saltamos por
+                                encima de ambos, de uno en uno, por supuesto. Al final caeremos en un ascensor,
+                                donde esperaremos la entrada de un orbitante. Subimos y una vez arriba disparamos
+                                al bloque que hay a la derecha.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+
+                                    <td><img src="img/nebulus-torre4-01.gif" width="320" height="240"
+                                             alt="Los rombos nos dificultan el paso, que deberemos hacer saltando entre plataformas"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Los rombos nos dificultan el paso, que deberemos
+                                        hacer saltando entre plataformas
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                Caminamos hacia la izquierda, sobre un suelo de losas deslizantes, hasta un
+                                punto con el paso cerrado por dos bloques. Los destruimos (soltando la tecla de
+                                dirección antes de disparar, para evitar el salto) y continuamos hacia la izquierda
+                                hasta llegar a un ascensor. Entramos, subimos nos colocamos frente a la puerta
+                                de la izquierda y esperamos la aparición de un orbitante antes de entrar.
+                            </p>
+
+                            <p>
+                                Estamos ahora en una plataforma de cuatro losas, tres en el mismo nivel y
+                                una cuarta elevada. Saltamos por encima de la losa central de las tres que están
+                                al mismo nivel, pues es una de esas losas que desaparecen. Continuamos hasta la
+                                cuarta losa a la izquierda y entramos por la puerta.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre4-04.gif" width="320" height="240"
+                                             alt="Nunca se sabe donde se esconde una falsa losa"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Nunca se sabe donde se esconde una falsa losa</td>
+
+                                </tr>
+                            </table>
+
+                            <p>
+                                Entramos ahora en el ascensor de la izquierda y subimos. Entramos por la puerta
+                                de la izquieda. Descendemos por la plataforma en forma de escalera, pasando por
+                                debajo de los dos rombos verticales. Entramos por la puerta inferior. Disparamos al
+                                bloque de la derecha, descendemos hacia la izquierda y entramos por la puerta.
+                                Destruimos
+                                la esfera blanca, nos situamos en la losa del extremo izquierdo y disparamos al
+                                bloque de la izquierda. Regresamos entonces a la puerta por donde llegamos y
+                                entramos. En este momento nos deberá estar acosando un orbitante del que nos
+                                deberíamos haber librado al entrar por esta última puerta.
+                            </p>
+                            <p>
+                                Subimos por la plataforma en escalera, hacia la derecha, y nos dejamos caer sobre
+                                el ascensor. Subimos. Destruimos la esfera blanca y continuamos la marcha hacia la
+                                derecha, hasta encontrarnos sobre un nuevo ascensor. Esperamos a que aparezca un
+                                orbitante, y subimos.
+                            </p>
+                            <p>
+                                Vamos ahora a situarnos al borde de la losa de la izquierda, sin dejarnos caer
+                                todavía. Esperamos a que aparezca el rombo horizontal, y a que cambie de
+                                sentido al golpearse contra el soporte del ascensor. Cuando deje el hueco libre,
+                                nos dejamos caer hacia la izquierda.
+                            </p>
+                            <p>
+                                Continuamos hacia el extremo de la derecha y saltamos hacia la plataforma de la
+                                derecha. Entramos por la puerta. Subimos por la plataforma en forma de escalera,
+                                pasando por debajo de los dos rombos verticales. Llegamos a un descansillo formado
+                                por tres losas al mismo nivel. La losa central desaparece al pisarla, así que saltamos
+                                por encima de ella.
+                            </p>
+                            <p>
+
+                                Seguimos caminando hacia la izquierda, destruyendo la esfera blanca. Entramos al
+                                ascensor y esperamos a un orbitante. Subimos y nos situamos sobre la losa de nuestra
+                                derecha. Esperamos a que las dos esferas blancas se vayan hacia la derecha y nos
+                                dejamos caer por ese extremos. Destruimos las dos esferas, y caminamos hacia
+                                la derecha hasta que no podamos andar más, con la precaución de saltar por encima
+                                de la losa que esta sobre una torre de losas.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre4-07.gif" width="320" height="240"
+                                             alt="De nuevo el orbitante nos ayudará a descender de plataforma"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">De nuevo el orbitante nos ayudará a descender de
+                                        plataforma
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                            <p>
+                                Esperamos ahora la aparición de un orbitante y le dejamos que nos derribe sobre el
+                                nivel inferior. Saltamos ahora hacia la derecha, cayendo sobre el ascensor de una
+                                plataforma inferior. Subimos y nos dirigimos hacia la izquierda hasta la puerta
+                                que hay en el extremo. Entramos y con esta ya hemos completado la mitad de las torres.
+                            </p>
+                            <p><b>2.5. <a href="rzx/nebulus-05.rzx" onClick="window.open(this.href); return false;">Torre
+                                5: Broken Path</a></b></p>
+                            <p>
+                                Entramos en el ascensor de la derecha y subimos. A la derecha veremos un
+                                ojo vertical. Pasamos por debajo y saltamos por encima de la losa que hay justo
+                                a la derecha del ojo, pues desaparece al pisarla y, de no hacerlo así, daríamos
+                                con nuestras redondas posaderas en el agua. Esta maniobra es difícil y requiere
+                                algo de práctica.
+                            </p>
+                            <p>
+                                Destruimos el bloque que hay a la derecha y nos dejamos caer sobre el ascensor.
+                                Subimos y continuamos nuestro camino hacia la derecha por la plataforma en forma
+                                de escalera. Según subimos aparecerá un orbitante. Continuamos subiendo hasta
+                                llegar a la puerta y entramos librándonos de él.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+
+                                    <td><img src="img/nebulus-torre5-01.gif" width="320" height="240"
+                                             alt="Me siento vigilado"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Me siento vigilado</td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                Salimos a otra plataforma en forma de escalera hacia la derecha. La subimos y
+                                llegamos hasta un ascensor, entramos y subimos. Ahora a la izquierda tenemos
+                                un tramo discontínuo, con losas separadas a un salto, y con un ojo horizontal por
+                                encima. Esperamos a que el ojo pase por encima de nosotros y saltamos a la losa
+                                de la izquierda. Repetimos esta operación una vez más y nos dejamos caer sobre la
+                                losa de la izquierda, que desaparecerá y nos dejará caer sobre un ascensor.
+                                Disparamos sobre los dos bloques de la izquierda, destruyéndolos. Y, en lugar de
+                                subir, como dicen algunas guías, nos dejaremos caer hacia la derecha.
+                            </p>
+
+                            <p>
+                                Repetimos el camino, esto es, subimos por la plataforma en escalera hacia la
+                                derecha hasta el ascensor, subimos, esperamos a que el ojo pase por encima de
+                                nosotros, saltamos a la izquierda una vez, dejamos que de nuevo pase el ojo por
+                                encima de nosotros y saltamos otra vez. Estaremos justo donde lo dejamos
+                                antes de caer sobre la losa que nos dejaba caer sobre el ascensor. Ahora lo
+                                que tenemos que hacer es esperar una vez más a que el ojo pase por encima de
+                                nosotros y saltar hacia la izquierda.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre5-03.gif" width="320" height="240"
+                                             alt="Cuando el ojo aparezca por la izquierda, nos dejamos caer"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Cuando el ojo aparezca por la izquierda, nos
+                                        dejamos caer
+                                    </td>
+
+                                </tr>
+                            </table>
+
+                            <p>
+                                Desde la posición en la que estamos, esperaremos a que el ojo aparezca por el
+                                extremo izquierdo de la torre. En ese momento nos dejamos caer sobre la losa
+                                de la izquierda, que desaparecerá, dejándonos caer sobre un ascensor. Sin esperar
+                                subimos, con lo que de haberlo hecho bien, habremos esquivado al ojo horizontal.
+                            </p>
+                            <p>
+                                Caminamos hacia la izquierda hasta el borde, donde saltaremos hacia la losa de la
+                                izquierda. Saltamos de nuevo hacia la izquierda, y tendremos un
+                                ojo vertical bloqueándonos el camino hacia la izquierda. Saltamos por encima
+                                de él, y ahora nos encontraremos entre dos ojos. Disparamos hacia la izquierda
+                                hasta que uno de nuestros proyectiles destruya el bloque que se ve en
+                                el extremo izquierdo de la torre.
+                            </p>
+                            <p>
+                                Saltamos ahora por encima del ojo que saltamos anteriormente, esta vez hacia la
+                                derecha. Esperamos a que el ojo horizontal que está debajo de nosotros pase hacia
+                                la izquierda, y nos dejamos caer hacia la derecha, cayendo sobre un ascensor. Subimos.
+                                Desde el extremo izquierdo del ascensor saltamos hacia la izquierda. Caminamos hacia
+                                la izquierda, pasando por debajo de un ojo vertical, y dejándonos caer al final
+                                del camino. Seguimos hacia la izquierda y entramos en el ascensor del
+                                extremo. Esperamos un poco hasta que aparezca el orbitante y subimos.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+
+                                    <td><img src="img/nebulus-torre5-05.gif" width="320" height="240"
+                                             alt="Otra vez el orbitante nos hará llegar a donde queremos"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Otra vez el orbitante nos hará llegar a donde
+                                        queremos
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                Nos situamos sobre la losa de la izquierda, y esperamos a que aparezca un orbitante
+                                que nos golpee y nos haga caer sobre la plataforma inferior. Subimos un peldaño de
+                                la plataforma en escalera hacia la izquierda, y esperamos a que aparezca el ojo
+                                horizontal, e inicie su marcha hacia la izquierda. Entonces continuamos en el mismo
+                                sentido.
+                            </p>
+
+                            <p>
+                                Nos dejamos caer al llegar al final de la plataforma, y continuamos hacia la
+                                izquierda, pasando por debajo de dos ojos verticales, y llegando hasta un
+                                ascensor, en el que iniciamos la subida, dejando por debajo a un orbitante que habrá
+                                hecho acto de presencia.
+                            </p>
+                            <p>
+                                Entramos por la puerta. Subimos la plataforma en forma de escalera hacia la
+                                derecha, pasando por debajo del ojo vertical que se situa entre la segunda y
+                                la tercera puerta del recorrido, hasta llegar a la cuarta puerta, que será por la
+                                que entremos.
+                            </p>
+                            <p>
+                                Salimos a otra plataforma también en forma de escalera hacia la derecha, con
+                                un ojo vertical entre la primera y la segunda puerta. Pasamos por debajo y
+                                nos quedamos esperando en la tercera puerta, hasta que el ojo horizontal haga el
+                                recorrido hacia la derecha, y pase por encima de nosotros. Entonces
+                                continuamos la marcha hacia la derecha, saltando al llegar al extremo para
+                                aterrizar sobre el ascensor que se ve en la plataforma de la derecha. Subimos.
+                            </p>
+                            <p>
+                                Nos dirigimos ahora hacia la izquierda, donde aparecen dos ojos verticales y
+                                dos esferas blancas. Destruimos la primera esfera blanca, pasamos por debajo
+                                de los ojos y destruimos la segunda esfera blanca. Continuamos hasta llegar a un
+                                ascensor, entramos, subimos y entramos por la puerta de la izquierda. Con esto
+                                llegamos a la sexta torre.
+                            </p>
+                            <p><b>2.6. <a href="rzx/nebulus-06.rzx" onClick="window.open(this.href); return false;">Torre
+                                6: Swimmers Delight</a></b></p>
+                            <p>
+                                Comenzamos dirigiéndonos hacia la derecha. Entramos en el ascensor, subimos y
+                                saltamos por encima del hueco hacia la plataforma de la derecha. Pasamos por debajo
+                                de los dos vigilantes verticales, dejándonos caer al pasar por debajo del segundo.
+                                Cambiamos de sentido, y pasando de nuevo por debajo del vigilante vertical, nos
+                                dirigimos
+                                hacia la izquierda, hasta el límite con el ascensor. Destruimos el bloque que
+                                lo bloquea, y cambiamos de sentido otra vez, hacia la derecha, pasando nuevamente
+                                por debajo del vigilante.
+
+                            </p>
+                            <p>
+                                Entramos en el ascensor del extremo y subimos. Una vez arriba destruimos el bloque
+                                de la derecha, pasamos por debajo del vigilante de la izquierda y entramos
+                                por la puerta. Saltamos por encima del vigilante vertical de la izquierda, entramos en
+                                el ascensor, subimos y nos dirigimos hacia el extremo de la derecha. Destruimos
+                                el bloque y regresamos al ascensor, esperando a que baje. Esperamos a que el
+                                vigilante este arriba y nos dejamos caer hacia la derecha.
+                            </p>
+                            <p>
+                                Continuamos el camino hacia la derecha, entramos en el ascensor, subimos,
+                                y nos dejamos caer por el hueco de la derecha, cayendo sobre otro ascensor. Subimos,
+                                caminamos hacia la izquierda, entramos en el ascensor y subimos de nuevo.
+                            </p>
+                            <p>
+                                Caminamos ahora hacia la derecha, por una plataforma en forma de escalera. Entramos
+                                por la primera puerta. A la izquierda nos encontramos con una plataforma en
+                                forma de escalera en la que los peldaños son de una altura superior. Los subimos
+                                saltando de uno en uno. Al llegar al extremo saltamos hacia la plataforma de
+                                la izquierda, pasando por encima del vigilante vertical, y entramos por la puerta.
+                            </p>
+                            <p>
+                                Entramos en el ascensor de la izquierda y subimos. Esperamos a que aparezca un
+                                orbitante y saltamos sobre la losa de la derecha. Una a una desaparecerán
+                                todas las losas que hay hasta caer sobre un ascensor. Subimos, caminamos hacia la
+                                derecha hasta el extremo y disparamos al bloque de la derecha. Regresamos al
+                                ascensor y esperamos a que baje.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+
+                                    <td><img src="img/nebulus-torre6-03.gif" width="320" height="240"
+                                             alt="Hay que saltar sobre las plataformas de la derecha, que desaparecerán una a una hasta dejarnos sobre un ascensor"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Hay que saltar sobre las plataformas de la
+                                        derecha, que desaparecerán una a una hasta dejarnos sobre un ascensor
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                Nos situamos ahora en el ascensor de la derecha, y subimos. Caminamos hacia la
+                                derecha, entramos en el ascensor y subimos. Seguimos hacia la derecha, entramos en un
+                                nuevo ascensor, y subimos. A la izquierda tenemos tres vigilantes verticales, bajo los
+                                que tendremos que pasar. El mejor momento para iniciar la marcha es cuando el
+                                central esta empezando a subir, el de la derecha esta casi arriba, y el de la
+                                izquierda casi abajo. De todas formas es una maniobra algo complicada que se
+                                supera con la práctica.
+                            </p>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre6-04.gif" width="320" height="240"
+                                             alt="Una decisión difícil: ¿Cuándo avanzar?"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Una decisión difícil: ¿Cuándo avanzar?</td>
+                                </tr>
+                            </table>
+
+
+                            <p>
+                                Entramos en el ascensor del extremo de la izquierda y subimos. Esperamos ahora a
+                                que el vigilante vertical esté bajando y saltamos por encima de él hacia la
+                                plataforma de la derecha.
+                            </p>
+                            <p>
+                                Veremos que de nuevo tenemos una escalera con peldaños de doble altura a
+                                la derecha. Los tenemos que subir, esquivando al vigilante horizontal. Así
+                                que empezaremos la subida cuando el vigilante vaya hacia la izquierda y
+                                acabe de pasar por encima de nuestro personaje. Llegaremos así hasta una puerta
+                                por la que entraremos y ya sólo nos quedarán dos torres más para completar el juego.
+                            </p>
+                            <p><b>2.7. <a href="rzx/nebulus-07.rzx" onClick="window.open(this.href); return false;">Torre
+                                7: Nasty One</a></b></p>
+                            <p>
+                                De los dos caminos posibles elegimos el de la derecha. Caminamos hasta que
+                                una losa desaparezca haciéndonos caer sobre un ascensor. Entonces esperamos
+                                a que pase por encima una calavera hacia la izquierda y subimos. Caminamos hacia la
+                                derecha y, de nuevo, desaparecerá una losa bajo nuestros pies.
+                            </p>
+                            <p>
+                                Lo más normal es que hayamos caído sobre el ascensor de la derecha, cuando lo
+                                que nos interesa es situarnos sobre el de la izquierda. Así que saltaremos hacia
+                                la plataforma de la derecha (la única accesible por medio de un salto) y,
+                                desde allí, saltaremos sobre el ascensor de la izquierda. Subimos entonces y
+                                destruimos el bloque de la derecha.
+                            </p>
+                            <p>
+
+                                Caminamos ahora hacia la izquierda, dejándonos caer, y entrando en el ascensor del
+                                hueco. De nuevo esperamos a que la calavera nos deje el paso libre y subimos.
+                                Cuando el ascensor se pare, subimos una vez más. Caminamos entonces hacia la
+                                derecha, hasta el extremo, donde la última losa desaparecerá al pisarla, y nos
+                                hará caer sobre la losa del extremo del camino del nivel inferior. Entramos en
+                                el ascensor del hueco, y subimos.
+                            </p>
+                            <p>
+                                Vamos hacia la derecha, descendiendo por una plataforma en forma de escalera. Esperamos
+                                antes de continuar por el tramo ascendente hasta que aparezca un orbitante,
+                                y entonces subimos tres peldaños. Esperamos ahora a que la calavera que hay por
+                                encima deje el paso libre y continuamos el ascenso hasta la cúspide. Destruimos ahora
+                                los dos bloques que hay sobre el ascensor del extremo y nos dirigimos hasta él,
+                                entrando y, por supuesto, subiendo.
+                            </p>
+                            <p>
+                                Caemos sobre el ascensor de la derecha y subimos. Lo repetimos una vez más
+                                y nos encotramos en una plataforma ascendente/descendente hacia la derecha. Sobre la
+                                segunda losa de la plataforma hay una calavera vertical, y sobre nuestras cabezas,
+                                una calavera horizontal.
+                            </p>
+                            <p>
+                                Pasamos por debajo de la calavera vertical y nos quedamos parados en la losa que hay
+                                justo a su derecha. Esperamos ahora a que la calavera horizontal haga recorrido hacia
+                                la derecha, y que pase justo sobre nuestras cabezas. Entonces nos dirigimos hacia
+                                la derecha, saltando de losa superior en losa superior, puesto que las inferiores
+                                desaparecen si las pisamos. Llegamos a una plataforma lisa con un ascensor al
+                                final. Entramos y subimos.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre7-07.gif" width="320" height="240"
+                                             alt="Las losas inferiores de este camino son falsas"/>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Las losas inferiores de este camino son falsas
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                De nuevo tenemos una plataforma ascendente/descendente a la derecha, con una calavera
+                                horizontal por encima de nuestra cabeza. Caminamos hacia la derecha, y nos
+                                quedamos esperando en la losa inferor de cada descenso hasta que la calavera pase por
+                                encima y deje el camino despejado. Llegamos así a un ascensor en el extremo. Entramos
+                                y subimos.
+                            </p>
+                            <p>
+                                Pasamos por debajo de las dos calaveras verticales que tenemos a nuestra derecha,
+                                llegando a un conjunto de cuatro ascensores. Nos vamos sobre el tercero y
+                                subimos. Caminamos hacia la derecha, hasta el final, desapareciendo la última losa
+                                sobre nuestros pies. Destruimos, si están al alcance, las esferas blancas. Caminamos
+                                hacia la izquierda, hasta el final, desapareciendo la última losa bajo nuestros
+                                pies, y haciéndonos caer sobre el último camino ascendente/descendente que pisamos
+                                antes. Nos dirigimos hacia la derecha, hasta el ascensor, en el cual entramos
+                                y subimos.
+
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre7-08.gif" width="320" height="240"
+                                             alt="¿A qué planta quiere subir?"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">¿A qué planta quiere subir?</td>
+                                </tr>
+
+                            </table>
+
+                            <p>
+                                Vamos hacia la derecha, de nuevo sobre los cuatro ascensores. Esta vez subimos en
+                                el cuarto, y caminamos también hacia la derecha, hasta el final, desapareciendo
+                                igual que antes la última losa del camino. Seguimos ahora hacia la derecha,
+                                hasta el final, dejándonos caer por la derecha sobre el grupo de cuatro
+                                ascensores. Elegimos ahora el primer ascensor de la izquierda, y subimos.
+                            </p>
+                            <p>
+                                Caminamos hacia la izquierda hasta el ascensor. Subimos y entramos por la puerta.
+                                Ya sólo nos queda la última torre.
+                            </p>
+                            <p><b>2.8. <a href="rzx/nebulus-08.rzx" onClick="window.open(this.href); return false;">Torre
+                                8: Edge of Doom</a></b></p>
+                            <p>
+                                El único camino disponible, hacia la derecha, está bloqueado por cuatro rombos
+                                verticales que nos dificultan el paso. Nos situamos en la losa más próxima posible
+                                y esperemos a que estén alineados, haciendo recorrido ascendente, momento que
+                                aprovecharemos para pasar por debajo de los cuatro. Llegamos así al otro extremo hasta
+                                un ascensor, en el que entramos y subimos.
+                            </p>
+                            <p>
+                                Caminamos ahora hacia la izquierda, hasta la puerta, y entramos. Salimos en una
+                                plataforma de cuatro losas. Vamos hasta la tercera, y saltamos sobre
+                                la cuarta, que desaparecerá bajo nuestros pies, dejándonos caer sobre un bloque.
+                                Nos giramos hacia la derecha y avanzamos un pasito sin caernos, para que
+                                la esfera blanca de la plataforma que hay a la derecha se acerque a nosotros.
+                                La destruimos de un disparo y saltamos sobre dicha plataforma. Giramos hacia
+                                la izquierda y destruimos el bloque sobre el que estabamos apoyados.
+                            </p>
+
+                            <p>
+                                Nos dejamos ahora caer hacia la izquierda, aterrizando en un ascensor. Subimos
+                                y entramos por la puerta de la izquierda. Continuamos por la plataforma en forma
+                                de escalera de la derecha hasta el penúltimo escalón. Esperamos a que el rombo
+                                vertical comience a subir y nos situamos en el último peldaño. Saltamos ahora a
+                                la losa de la derecha. Saltamos a la siguiente losa, y así hasta llegar a un
+                                ascensor. Subimos.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre8-05.gif" width="320" height="240"
+                                             alt="Si no bastaba con los huecos, ahora toca esquivar a los rombos"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Si no bastaba con los huecos, ahora toca esquivar
+                                        a los rombos
+                                    </td>
+
+                                </tr>
+                            </table>
+
+                            <p>
+                                Giramos ahora a la izquierda, y observamos que tenemos un grupo de losas separadas,
+                                con rombos verticales obstaculizando los saltos entre ellas. Aprovechando cuando
+                                estos rombos estñen por debajo, saltamos a la siguiente losa de la izquierda hasta
+                                llegar a un ascensor. Antes de subir, disparamos al bloque de la izquierda y,
+                                ahora sí, subimos y entramos por la puerta.
+                            </p>
+                            <p>
+                                Saltamos a la plataforma de la izquierda, y repetimos el salto hasta la
+                                siguiente plataforma, donde hay una puerta. Entramos. Nos dirigimos a la
+                                derecha y destruimos el bloque que se ve en el extremo. Caminamos ahora hacia la
+                                izquierda, y desde el borde nos dejamos caer sobre un ascensor. Subimos.
+                            </p>
+                            <p>
+                                Nos encontramos de nuevo con las losas separadas a la izquierda y los incordiantes
+                                rombos. Saltamos por encima de ellos, de losa en losa, hasta llegar al primer
+                                ascensor. Pasamos de largo, entramos en el segundo y subimos. Saltamos ahora hacia la
+                                izquierda, cayendo sobre una plataforma ascendente descendente.
+                            </p>
+                            <p>
+                                Descendemos por el camino hacia la izquierda, hasta llegar a la última losa,
+                                cima de una torre de losas. Irán desapareciendo una a una hasta que caigamos sobre
+                                un ascensor. Subimos y esperamos a que aparezca un orbitante. Entonces subimos
+                                un poco más alto.
+                            </p>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre8-06.gif" width="320" height="240"
+                                             alt="¡Lo que hay que hacer para llegar a un ascensor!"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">¡Lo que hay que hacer para llegar a un ascensor!
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            <p>
+                                Vamos a la izquierda, hasta que veamos aparecer un par de bloques. Destruimos
+                                uno, pues el otro desde esa posición no podemos. Nos vamos ahora hacia la
+                                derecha, pasando por encima del hueco del ascensor, hasta un nuevo ascensor.
+                                Subimos y caminamos hacia la derecha, dejándonos caer. Caminamos hacia la izquierda, por
+                                encima del bloque y paramos justo en la losa siguiente. Giramos y destruimos el
+                                bloque de un disparo. Entramos en el ascensor de la derecha, y esperamos a que aparezca
+                                un
+                                orbitante y el rombo horizontal que pasa por encima nos deje el camino libre. Subimos.
+                            </p>
+                            <p>
+                                A la izquierda tenemos una plataforma en forma de escalera con dos rombos verticales.
+                                Pasamos por debajo de ambos y entramos por la puerta al final de la escalera.
+                            </p>
+                            <p>
+                                Destruimos el bloque de la derecha, y subimos por la escalera de
+                                la izquierda. Al llegar al final nos dejamos caer. Saltamos a la plataforma de
+                                la izquierda, Saltamos a la siguiente plataforma de la izquierda y destruimos el bloque.
+                                Nos dejamos caer a la derecha, sobre una losa que desaparecerá al tocarla, cayendo
+                                sobre una plataforma inferior.
+                            </p>
+                            <p>
+                                Caminamos hacia la derecha, y entramos en el ascensor del hueco del extremo. Subimos
+                                y seguimos andando hacia la derecha. Nos dejamos caer, entramos en el ascensor
+                                de la izquierda, subimos. Tenemos de nuevo frente a nuestro personaje la plataforma
+                                en escalera a la izquierda con los dos rombos. Pasamos por debajo de ambos y
+                                entramos por la puerta.
+                            </p>
+                            <p>
+                                Ahora, en lugar de hacer el recorrido que seguimos antes, saltamos hacia el ascensor
+                                de la derecha y subimos. Encontraremos una serie de cuatro puertas. Entramos por
+                                la tercera y con esto y un bizcocho, terminada la torre ocho.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+
+                                <tr align="right">
+                                    <td><img src="img/nebulus-torre8-10.gif" width="320" height="240"
+                                             alt="¿Qué se esconde detrás de la puerta número tres?"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">¿Qué se esconde detrás de la puerta número tres?
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+
+                            <hr>
+                            Descarga la solución completa en formato RZX: <a href="rzx/nebulus_pasoapaso.zip"
+                                                                             onClick="window.open(this.href); return false;">nebulus_pasoapaso.zip</a>
+                            <hr>
+                            </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>NÉSTOR LUCAS</td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="al-descubierto.html" selected>Al Descubierto</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="emulacion.html">Emulación</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                                <option value="input.html">INPUT</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+
+                </tr>
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
+
+</body>
 
 </html>

@@ -1,123 +1,189 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Programación Z88DK - Magazine ZX número 10 - Noviembre 2004</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 10 - Noviembre 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>Programación Z88DK - Magazine ZX número 10 - Noviembre 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p align="center"><font size="5">EL JUEGO DE LA VIDA DE JOHN CONWAY</font></p>
-<p><i>Hasta el momento hemos aprendido a instalar y compilar programas con z88dk, utilizando para ellos ejemplos prácticos basados en la creación de una Aventura Conversacional de Texto. En nuestros anteriores números, y gracias a los ejemplos de aventuras conversacionales, hemos descubierto cómo z88dk nos permite utilizar las diferentes funciones estándar de ANSI C para realizar nuestros pequeños programas.</i></p>
-<p><b>El Juego de la Vida</b></p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
+                </tr>
+            </table>
+        </td>
 
-<p>Esta entrega del curso de z88dk se basará en un ejemplo práctico completo comentado: la implementación para z88dk del clásico "Juego de la Vida" de John Conway. Conway fue un matemático de la Universidad de Cambridge que en 1970 inventó un sencillo juego no interactivo que permitía simular un entorno de vida basado en células individuales que morían o se reproducían mediante unas sencillas reglas.</p>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
 
-<table border="0" cellspacing="0" cellpadding="2" width="556">
-	<tr align="right">
-		<td><img src="img/z88dk_life.png" width="556" height="326"  alt="El juego de la Vida de John Conway" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">El juego de la Vida de John Conway</td>
-	</tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
 
-</table>
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
 
-<p>La mejor definición del Juego de la Vida de John Conway la podemos encontrar en la Wikipedia:</p>
-<hr>
-<p><i>El juego de la vida es un autómata celular diseñado por el matemático británico John Horton Conway en 1970. Es el mejor ejemplo de un autómata celular. Hizo su primera aparición pública en el número de octubre de 1970 de la revista Scientific American, en la columna de juegos matemáticos de Martin Gardner. Desde un punto de vista teórico, es interesante porque es equivalente a una máquina universal de Turing, es decir, todo lo que se puede computar algorítmicamente se puede computar en el juego de la vida.</i></p>
-<p><i>Desde su publicación, ha atraído mucho interés debido a la gran variabilidad de la evolución de los patrones. La vida es un ejemplo de emergencia y autoorganización. Es interesante para los científicos, matemáticos, economistas y otros observar cómo patrones complejos pueden provenir de la implementación de reglas muy sencillas.</i></p>
-<p><i>La vida tiene una variedad de patrones reconocidos que provienen de determinadas posiciones iniciales. Poco después de la publicación, se descubrieron el pentominó R y el planeador (en inglés glider), lo que atrajo un mayor interés hacia el juego. Contribuyó a su popularidad el hecho de que se publicó justo cuando se estaba lanzando al mercado una nueva generación de miniordenadores baratos, lo que significaba que se podía jugar durante horas en máquinas que, por otro lado, no se utilizarían por la noche. Para muchos aficionados, el juego de la vida sólo era un desafío de programación y una manera divertida de usar ciclos de la CPU. Para otros, sin embargo, el juego adquirió más connotaciones filosóficas. Desarrolló un seguimiento casi fanático a lo largo de los años 1970 hasta mediados de los 80.</i></p>
-<hr>
-<p>Cabe decir que el "Juego de la Vida" causó furor en 1970, hasta el punto en que se convirtió en el divertimento de muchos "hackers programadores" la implementación del Juego de la Vida en los potentes mainframes de Universidades y Centros de Cálculo. Hoy en día sigue siendo un buen ejercicio de programación para aquellos que empiezan a dar clases de Informática, ya que la programación es muy sencilla y no requiere grandes conocimientos del lenguaje de programación utilizado.</p>
-<p><b>Reglas básicas de El Juego de la Vida</b></p>
-<p>El Juego de la Vida se basa en una matriz de un tamaño determinado (como por ejemplo, 50x50, ó 32x32), que podríamos considerar nuestro "caldo de cultivo", en la cual mueren y se crean células. De forma efectiva, una célula es un 1 en una posición determinada de la cuadrícula mientras que un "espacio vacío" se representa mediante un cero.</p>
+                            <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 10 - Noviembre 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">EL JUEGO DE LA VIDA DE JOHN CONWAY</font></p>
+                            <p><i>Hasta el momento hemos aprendido a instalar y compilar programas con z88dk, utilizando
+                                para ellos ejemplos prácticos basados en la creación de una Aventura Conversacional de
+                                Texto. En nuestros anteriores números, y gracias a los ejemplos de aventuras
+                                conversacionales, hemos descubierto cómo z88dk nos permite utilizar las diferentes
+                                funciones estándar de ANSI C para realizar nuestros pequeños programas.</i></p>
+                            <p><b>El Juego de la Vida</b></p>
+
+                            <p>Esta entrega del curso de z88dk se basará en un ejemplo práctico completo comentado: la
+                                implementación para z88dk del clásico "Juego de la Vida" de John Conway. Conway fue un
+                                matemático de la Universidad de Cambridge que en 1970 inventó un sencillo juego no
+                                interactivo que permitía simular un entorno de vida basado en células individuales que
+                                morían o se reproducían mediante unas sencillas reglas.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="556">
+                                <tr align="right">
+                                    <td><img src="img/z88dk_life.png" width="556" height="326"
+                                             alt="El juego de la Vida de John Conway"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">El juego de la Vida de John Conway</td>
+                                </tr>
+
+                            </table>
+
+                            <p>La mejor definición del Juego de la Vida de John Conway la podemos encontrar en la
+                                Wikipedia:</p>
+                            <hr>
+                            <p><i>El juego de la vida es un autómata celular diseñado por el matemático británico John
+                                Horton Conway en 1970. Es el mejor ejemplo de un autómata celular. Hizo su primera
+                                aparición pública en el número de octubre de 1970 de la revista Scientific American, en
+                                la columna de juegos matemáticos de Martin Gardner. Desde un punto de vista teórico, es
+                                interesante porque es equivalente a una máquina universal de Turing, es decir, todo lo
+                                que se puede computar algorítmicamente se puede computar en el juego de la vida.</i></p>
+                            <p><i>Desde su publicación, ha atraído mucho interés debido a la gran variabilidad de la
+                                evolución de los patrones. La vida es un ejemplo de emergencia y autoorganización. Es
+                                interesante para los científicos, matemáticos, economistas y otros observar cómo
+                                patrones complejos pueden provenir de la implementación de reglas muy sencillas.</i></p>
+                            <p><i>La vida tiene una variedad de patrones reconocidos que provienen de determinadas
+                                posiciones iniciales. Poco después de la publicación, se descubrieron el pentominó R y
+                                el planeador (en inglés glider), lo que atrajo un mayor interés hacia el juego.
+                                Contribuyó a su popularidad el hecho de que se publicó justo cuando se estaba lanzando
+                                al mercado una nueva generación de miniordenadores baratos, lo que significaba que se
+                                podía jugar durante horas en máquinas que, por otro lado, no se utilizarían por la
+                                noche. Para muchos aficionados, el juego de la vida sólo era un desafío de programación
+                                y una manera divertida de usar ciclos de la CPU. Para otros, sin embargo, el juego
+                                adquirió más connotaciones filosóficas. Desarrolló un seguimiento casi fanático a lo
+                                largo de los años 1970 hasta mediados de los 80.</i></p>
+                            <hr>
+                            <p>Cabe decir que el "Juego de la Vida" causó furor en 1970, hasta el punto en que se
+                                convirtió en el divertimento de muchos "hackers programadores" la implementación del
+                                Juego de la Vida en los potentes mainframes de Universidades y Centros de Cálculo. Hoy
+                                en día sigue siendo un buen ejercicio de programación para aquellos que empiezan a dar
+                                clases de Informática, ya que la programación es muy sencilla y no requiere grandes
+                                conocimientos del lenguaje de programación utilizado.</p>
+                            <p><b>Reglas básicas de El Juego de la Vida</b></p>
+                            <p>El Juego de la Vida se basa en una matriz de un tamaño determinado (como por ejemplo,
+                                50x50, ó 32x32), que podríamos considerar nuestro "caldo de cultivo", en la cual mueren
+                                y se crean células. De forma efectiva, una célula es un 1 en una posición determinada de
+                                la cuadrícula mientras que un "espacio vacío" se representa mediante un cero.</p>
 
 
-<table border="0" cellspacing="0" cellpadding="2" width="114">
-	<tr align="right">
-		<td><img src="img/z88dk_cuadric.png" width="114" height="86"  alt="Células vivas en la cuadrícula" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Células vivas en la cuadrícula</td>
-	</tr>
-</table>
+                            <table border="0" cellspacing="0" cellpadding="2" width="114">
+                                <tr align="right">
+                                    <td><img src="img/z88dk_cuadric.png" width="114" height="86"
+                                             alt="Células vivas en la cuadrícula"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Células vivas en la cuadrícula</td>
+                                </tr>
+                            </table>
 
 
-<p>El Juego de la Vida no requiere interacción por parte del usuario: a partir de un estado inicial (células diseminadas por el caldo de cultivo) se aplican una serie de reglas y se obtiene una nueva generación de células en dicho "caldo". Esta nueva generación será la entrada para volver a aplicar las reglas, y así sucesivamente.</p>
-<p>Las reglas para cada una de las "celdillas" de nuestro caldo de cultivo son:</p>
-<ul>
-<li>Si una celdilla está ocupada por una célula y tiene una sola célula vecina o ninguna (se consideran células vecina aquellas que están alrededor de ella, en cualquiera de las 8 casillas posibles que la rodean), esa célula muere por soledad.</li>
-<li>Si una celdilla está ocupada por una célula y tiene 4 o más células vecinas, muere por superpoblación.</li>
-<li>Si una celdilla está ocupada por una célula y tiene 2 ó 3 células vecinas, sobrevive a la siguiente generación.</li>
-<li>Si una celdilla está vacía (no está ocupada por una célula) y tiene 3 células vecinas, nace una nueva célula en su lugar para la siguiente generación.</li>
-</ul>
-<p>Con estas sencillas reglas se obtienen unos resultados sorprendentes, ya que aparecen patrones de evolución que se cambian, realizan formas y caminos determinados, etc. Así, aparece el "planeador o caminador" (un conjunto de células que se desplazan), el "explosionador" (conjunto de células que parecen formar la onda expansiva de una explosión), etc.</p>
+                            <p>El Juego de la Vida no requiere interacción por parte del usuario: a partir de un estado
+                                inicial (células diseminadas por el caldo de cultivo) se aplican una serie de reglas y
+                                se obtiene una nueva generación de células en dicho "caldo". Esta nueva generación será
+                                la entrada para volver a aplicar las reglas, y así sucesivamente.</p>
+                            <p>Las reglas para cada una de las "celdillas" de nuestro caldo de cultivo son:</p>
+                            <ul>
+                                <li>Si una celdilla está ocupada por una célula y tiene una sola célula vecina o ninguna
+                                    (se consideran células vecina aquellas que están alrededor de ella, en cualquiera de
+                                    las 8 casillas posibles que la rodean), esa célula muere por soledad.
+                                </li>
+                                <li>Si una celdilla está ocupada por una célula y tiene 4 o más células vecinas, muere
+                                    por superpoblación.
+                                </li>
+                                <li>Si una celdilla está ocupada por una célula y tiene 2 ó 3 células vecinas, sobrevive
+                                    a la siguiente generación.
+                                </li>
+                                <li>Si una celdilla está vacía (no está ocupada por una célula) y tiene 3 células
+                                    vecinas, nace una nueva célula en su lugar para la siguiente generación.
+                                </li>
+                            </ul>
+                            <p>Con estas sencillas reglas se obtienen unos resultados sorprendentes, ya que aparecen
+                                patrones de evolución que se cambian, realizan formas y caminos determinados, etc. Así,
+                                aparece el "planeador o caminador" (un conjunto de células que se desplazan), el
+                                "explosionador" (conjunto de células que parecen formar la onda expansiva de una
+                                explosión), etc.</p>
 
-<p><b>Implementación del Juego de la Vida en el Spectrum</b></p>
-<p>Antes de codificar propiamente en C lo que es el "juego", veamos cómo sería el pseudocódigo que implementaría el diseño definido por Conway:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p><b>Implementación del Juego de la Vida en el Spectrum</b></p>
+                            <p>Antes de codificar propiamente en C lo que es el "juego", veamos cómo sería el
+                                pseudocódigo que implementaría el diseño definido por Conway:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 tablero[ANCHO][ALTO]
 
 Programa Principal:
@@ -129,13 +195,16 @@ Programa Principal:
          Crear_Generación_Aleatoria()
   fin repetir
 </pre>
-    </p></td></tr>
-</table>
-<p>El anterior sería el esqueleto de la función principal, que como podréis ver en el código, se corresponde con la siguiente función main():</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>El anterior sería el esqueleto de la función principal, que como podréis ver en el
+                                código, se corresponde con la siguiente función main():</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 //--- Funcion principal main() ----------------------------
 int main( void )
 {
@@ -154,14 +223,25 @@ int main( void )
    return(0);
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>Con esto, el programa principal realizaría la impresión en pantalla de la generación actual de células (para que podamos ver la evolución visualmente) mediante la función Dibujar_Generación_Actual(). Tras esto, se calcularía la siguiente generación de células aplicando las reglas anteriormente explicadas, dentro de la función Calcular_Siguiente_Generacion() . Si en cualquier momento se pulsa la tecla 'r' (en nuestro programa) se modificará de nuevo el tablero aleatoriamente para añadir nuevas células y que en el siguiente paso del bucle comience de nuevo la simulación.</p>
-<p><b>Función Crear_Generación_Aleatoria()</b></p>
-<p>La función Crear_Generación_Aleatoria() se encargaría de vaciar el "tablero de juego" o "caldo de cultivo" (poner todos sus elementos a cero), y rellenar algunas celdillas aleatorias con células (valores 1). Dicha función la hemos definido en pseudocódigo de la siguiente forma:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Con esto, el programa principal realizaría la impresión en pantalla de la generación
+                                actual de células (para que podamos ver la evolución visualmente) mediante la función
+                                Dibujar_Generación_Actual(). Tras esto, se calcularía la siguiente generación de células
+                                aplicando las reglas anteriormente explicadas, dentro de la función
+                                Calcular_Siguiente_Generacion() . Si en cualquier momento se pulsa la tecla 'r' (en
+                                nuestro programa) se modificará de nuevo el tablero aleatoriamente para añadir nuevas
+                                células y que en el siguiente paso del bucle comience de nuevo la simulación.</p>
+                            <p><b>Función Crear_Generación_Aleatoria()</b></p>
+                            <p>La función Crear_Generación_Aleatoria() se encargaría de vaciar el "tablero de juego" o
+                                "caldo de cultivo" (poner todos sus elementos a cero), y rellenar algunas celdillas
+                                aleatorias con células (valores 1). Dicha función la hemos definido en pseudocódigo de
+                                la siguiente forma:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 Crear_Generacion_Aleatoria:
    Para todo 'x' y todo 'y':
      tablero[x][y] = 0
@@ -173,10 +253,15 @@ Crear_Generacion_Aleatoria:
      tablero_temporal[ xcel ][ ycel ] = 1
 
 </pre>
-    </p></td></tr>
-</table>
-<p>En nuestro pseudocódigo utilizamos una matriz [ancho*alto] para representar el caldo de cultivo. Dentro de esta matriz, cada posición matriz[x][y] puede contener o no una célula mediante los valores de 0 y 1 respectivamente. Así, en un tablero de 32x32, podemos poner una célula justo en la mitad del tablero ejecutando "matriz[16][16] = 1".</p>
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>En nuestro pseudocódigo utilizamos una matriz [ancho*alto] para representar el caldo de
+                                cultivo. Dentro de esta matriz, cada posición matriz[x][y] puede contener o no una
+                                célula mediante los valores de 0 y 1 respectivamente. Así, en un tablero de 32x32,
+                                podemos poner una célula justo en la mitad del tablero ejecutando "matriz[16][16] =
+                                1".</p>
+                            <pre>
     dimensiones:      ancho = 32
                       alto  = 16
     Tablero:          mapa[ancho][alto]
@@ -184,69 +269,99 @@ Crear_Generacion_Aleatoria:
     Crear célula:     mapa[x][y] = 1
     Borrar célula:    mapa[x][y] = 0
 </pre>
-<p>En el caso de z88dk, en lugar de utilizar matrices bidimensionales del tipo [ancho][alto] necesitaremos utilizar un vector de tamaño [ancho*alto], ya que la versión actual de z88dk no soporta el primer tipo de matrices.</p>
-<p>De esta forma, ahora los accesos al mapa de células quedarían así:</p>
-<pre>
+                            <p>En el caso de z88dk, en lugar de utilizar matrices bidimensionales del tipo [ancho][alto]
+                                necesitaremos utilizar un vector de tamaño [ancho*alto], ya que la versión actual de
+                                z88dk no soporta el primer tipo de matrices.</p>
+                            <p>De esta forma, ahora los accesos al mapa de células quedarían así:</p>
+                            <pre>
     Tablero:          mapa[ancho*alto]
     Temporal:         temp[ancho*alto]
     Crear célula:     mapa[(y*ancho) + x] = 1
     Borrar célula:    mapa[(y*ancho) + x] = 0
 
 </pre>
-<p>Es decir, que un array unidimensional se puede tratar como un array bidimensional donde cada una de las líneas se coloca a continuación de la anterior, y acceder a cada uno de sus elementos mediante <code>"posición = (y * ancho_fila) + x"</code>.</p>
-<p>Para facilitar el tratamiento de los datos, en el código definimos los siguientes macros o #defines (que hacen las veces de funciones, pero que en lugar de ser llamadas son "incluidas", evitando un CALL con sus PUSHes, POPs y sus RETs):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Es decir, que un array unidimensional se puede tratar como un array bidimensional donde
+                                cada una de las líneas se coloca a continuación de la anterior, y acceder a cada uno de
+                                sus elementos mediante <code>"posición = (y * ancho_fila) + x"</code>.</p>
+                            <p>Para facilitar el tratamiento de los datos, en el código definimos los siguientes macros
+                                o #defines (que hacen las veces de funciones, pero que en lugar de ser llamadas son
+                                "incluidas", evitando un CALL con sus PUSHes, POPs y sus RETs):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #define Celula(x,y)     (mapa[((y)*32)+(x)])
 #define TempCelula(x,y) (temp[((y)*32)+(x)])
 </pre>
-    </p></td></tr>
-</table>
-<p>De esta forma en nuestro código podemos hacer simplemente:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>De esta forma en nuestro código podemos hacer simplemente:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  valor = Celula( 10, 10 );
  Celula( 11, 12 ) = 1;
  </pre>
-    </p></td></tr>
-</table>
-<p>Y al compilar, este código será sustituído por:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Y al compilar, este código será sustituído por:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  valor = (mapa[((10)*32)+(10)]);
  (mapa[((12)*32)+(11)]) = 1;
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Obviamente el código utilizando nuestros #defines es mucho más claro y más fácil de mantener. Si encontramos una manera más óptima de acceder a las células, sólo hará falta modificarlo en el #define para que al recompilar, el cambio se aplique en todo el código fuente (en lugar de tener que ir cambiándolo llamada a llamada, como nos ocurriría en caso de no haber usado #defines). Y como ejemplo de "mejora" de nuestro define, vamos a acelerar la velocidad del cálculo de la posición del array cambiando la multiplicación por 32 por un desplazamiento de bits a la izquierda, ya que en un número almacenado de forma binaria, multiplicar por una potencia n-sima de 2 equivale a desplazar n veces a la izquierda el número que queríamos multiplicar. De esta, forma como 32 es 2 elevado a la quinta potencia, nos queda que:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Obviamente el código utilizando nuestros #defines es mucho más claro y más fácil de
+                                mantener. Si encontramos una manera más óptima de acceder a las células, sólo hará falta
+                                modificarlo en el #define para que al recompilar, el cambio se aplique en todo el código
+                                fuente (en lugar de tener que ir cambiándolo llamada a llamada, como nos ocurriría en
+                                caso de no haber usado #defines). Y como ejemplo de "mejora" de nuestro define, vamos a
+                                acelerar la velocidad del cálculo de la posición del array cambiando la multiplicación
+                                por 32 por un desplazamiento de bits a la izquierda, ya que en un número almacenado de
+                                forma binaria, multiplicar por una potencia n-sima de 2 equivale a desplazar n veces a
+                                la izquierda el número que queríamos multiplicar. De esta, forma como 32 es 2 elevado a
+                                la quinta potencia, nos queda que:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  x * 32 = x << 5
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Reemplazando esto en nuestro #define:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>Reemplazando esto en nuestro #define:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #define Celula(x,y)     (mapa[((y)<<5)+(x)])
 #define TempCelula(x,y) (temp[((y)<<5)+(x)])
 </pre>
-    </p></td></tr>
-</table>
-<p>Se deja al lector como ejercicio realizar la prueba de reemplazar <<5 por *32 en el código fuente y verificar que efectivamente, el desplazamiento de bits es mucho más rápido que la multiplicación (puede apreciarse visiblemente en la velocidad de la simulación).</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Se deja al lector como ejercicio realizar la prueba de reemplazar <<5 por *32 en el
+                                código fuente y verificar que efectivamente, el desplazamiento de bits es mucho más
+                                rápido que la multiplicación (puede apreciarse visiblemente en la velocidad de la
+                                simulación).</p>
 
-<p>El código final correspondiente para nuestra función de generación aleatoria de estados iniciales es el siguiente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>El código final correspondiente para nuestra función de generación aleatoria de estados
+                                iniciales es el siguiente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 //--- Rellenar el tablero con valores aleat. --------------
 void GenLife( void )
 {
@@ -274,32 +389,57 @@ void GenLife( void )
 
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>Como cosas que destacar de esta función tenemos:</p>
-<ul>
-<li><b>srand(clock())</b> : Inicializa la semilla de números aleatorios usando como base el reloj del Spectrum (por reloj del Spectrum consideramos el contador que tiene el sistema y que contabiliza el número de segundos transcurridos desde el inicio del ordenador). Esto asegura que cada vez que ejecutemos el programa (en un Spectrum real o un emulador que no tenga carga automática del .tap al abrirlo con él), tengamos una secuencia de números aleatorios diferentes y no obtengamos siempre la misma generación inicial de células. Los números aleatorios los obtendremos posteriormente con rand().</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como cosas que destacar de esta función tenemos:</p>
+                            <ul>
+                                <li><b>srand(clock())</b> : Inicializa la semilla de números aleatorios usando como base
+                                    el reloj del Spectrum (por reloj del Spectrum consideramos el contador que tiene el
+                                    sistema y que contabiliza el número de segundos transcurridos desde el inicio del
+                                    ordenador). Esto asegura que cada vez que ejecutemos el programa (en un Spectrum
+                                    real o un emulador que no tenga carga automática del .tap al abrirlo con él),
+                                    tengamos una secuencia de números aleatorios diferentes y no obtengamos siempre la
+                                    misma generación inicial de células. Los números aleatorios los obtendremos
+                                    posteriormente con rand().
+                                </li>
 
-<li><b>BORDER() y CLS()</b>: Estas 2 funciones cambian el color del borde y borran la pantalla respectivamente. Están implementadas en ensamblador, como puede verse en el código fuente de ZXlife . La primera cambia el borde mediante un OUT del valor del borde en el puerto que se utiliza para ello, mientras que la segunda utiliza LDIR para borrar la zona de pantalla de memoria. Este ejemplo nos permite ver lo sencillo que es integrar ensamblador en z88dk, embebiendo el código ASM dentro del propio programa.</li>
-<li><b>printf( "\x1B[%u;%uH",(21),(1))</b>: Este comando es el equivalente ANSI de gotoxy(x,y), es decir, posiciona el cursor en la posición (1,21) de pantalla para que el próximo printf comience a trazar las letras en esa posición. En este caso lo utilizamos para posicionar en cursor en la parte baja de la pantalla, donde escribimos el título del programa posteriormente.</li>
-</ul>
-<p><b>La función Dibujar_Generación_Actual()</b></p>
-<p>En cada paso del bucle principal tenemos que redibujar la colonia actual de células. El pseudocódigo para hacer esto es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <li><b>BORDER() y CLS()</b>: Estas 2 funciones cambian el color del borde y borran la
+                                    pantalla respectivamente. Están implementadas en ensamblador, como puede verse en el
+                                    código fuente de ZXlife . La primera cambia el borde mediante un OUT del valor del
+                                    borde en el puerto que se utiliza para ello, mientras que la segunda utiliza LDIR
+                                    para borrar la zona de pantalla de memoria. Este ejemplo nos permite ver lo sencillo
+                                    que es integrar ensamblador en z88dk, embebiendo el código ASM dentro del propio
+                                    programa.
+                                </li>
+                                <li><b>printf( "\x1B[%u;%uH",(21),(1))</b>: Este comando es el equivalente ANSI de
+                                    gotoxy(x,y), es decir, posiciona el cursor en la posición (1,21) de pantalla para
+                                    que el próximo printf comience a trazar las letras en esa posición. En este caso lo
+                                    utilizamos para posicionar en cursor en la parte baja de la pantalla, donde
+                                    escribimos el título del programa posteriormente.
+                                </li>
+                            </ul>
+                            <p><b>La función Dibujar_Generación_Actual()</b></p>
+                            <p>En cada paso del bucle principal tenemos que redibujar la colonia actual de células. El
+                                pseudocódigo para hacer esto es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 Dibujar_Generacion_Actual:
    Para todo 'x' y todo 'y':
      Si tablero[x][y] = 0:  Dibujar Blanco en (x,y)
      Si tablero[x][y] = 1:  Dibujar Célula en (x,y)
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Traducido a código C:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Traducido a código C:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #define DrawCell(x,y,val) \
   *((unsigned char *) (0x4000 + 6144 + ((y)<<5) + (x))) = (val)<<3 ;
 
@@ -316,29 +456,44 @@ void DrawLife( void )
 }
 </pre>
 
-    </p></td></tr>
-</table>
-<p>La clave de esta función está en la macro DrawCell, que es la que efectivamente pinta en pantalla las células. Lo interesante de la función es que no dibuja nada en pantalla, sino que modifica los atributos de la videomemoria para cambiar los "espacios en blanco" que hay en pantalla entre 2 colores diferentes (negro y azul). Concretamente, esta macro lo que hace es modificar los atributos (tinta/papel) de los caracteres de 0,0 a 32,16, accediendo directamente a videomemoria, en la zona de los atributos.</p>
-<p>Como veremos en posteriores entregas (donde ya trataremos el tema de los gráficos), los atributos de los caracteres (tinta/papel) de la pantalla están situados en memoria a partir de la dirección 22528 (0x4000 + 6144 = 22528, es decir, tras la videomemoria gráfica de los píxeles de pantalla).</p>
-<p>Escribiendo en esas 768 (32x24) posiciones consecutivas de memoria modificamos los atributos de los 32x24 caracteres de la pantalla. La organización es lineal, de forma que en 22528 está el atributo del carácter (0,0), en 22529 el de (1,0), en 22528+31 el de (31,0) y en 22528+32 el de (0,1), y así consecutivamente.</p>
-<p>Cuando escribimos un byte en una de esas posiciones estaremos modificando los atributos del caracter (x,y) de la pantalla de forma que:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La clave de esta función está en la macro DrawCell, que es la que efectivamente pinta en
+                                pantalla las células. Lo interesante de la función es que no dibuja nada en pantalla,
+                                sino que modifica los atributos de la videomemoria para cambiar los "espacios en blanco"
+                                que hay en pantalla entre 2 colores diferentes (negro y azul). Concretamente, esta macro
+                                lo que hace es modificar los atributos (tinta/papel) de los caracteres de 0,0 a 32,16,
+                                accediendo directamente a videomemoria, en la zona de los atributos.</p>
+                            <p>Como veremos en posteriores entregas (donde ya trataremos el tema de los gráficos), los
+                                atributos de los caracteres (tinta/papel) de la pantalla están situados en memoria a
+                                partir de la dirección 22528 (0x4000 + 6144 = 22528, es decir, tras la videomemoria
+                                gráfica de los píxeles de pantalla).</p>
+                            <p>Escribiendo en esas 768 (32x24) posiciones consecutivas de memoria modificamos los
+                                atributos de los 32x24 caracteres de la pantalla. La organización es lineal, de forma
+                                que en 22528 está el atributo del carácter (0,0), en 22529 el de (1,0), en 22528+31 el
+                                de (31,0) y en 22528+32 el de (0,1), y así consecutivamente.</p>
+                            <p>Cuando escribimos un byte en una de esas posiciones estaremos modificando los atributos
+                                del caracter (x,y) de la pantalla de forma que:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  Direccion_atributos(x,y) = 22528 + (y*32) + x
 
 </pre>
-    </p></td></tr>
-</table>
-<p>El byte que escribamos define los atributos con el siguiente formato:</p>
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>El byte que escribamos define los atributos con el siguiente formato:</p>
+                            <pre>
    bits 0...2: tinta (0 a 7, orden de los colores del Spectrum)
    bits 3...5: papel (0 a 7, orden de los colores del Spectrum)
    bit      6: brillo (1 ó 0, con o sin brillo)
    bit      7: flash (1 ó 09, con o sin parpadeo)
 </pre>
-<p>Los colores están definidos igual que se detalla en el manual del Spectrum, es decir:</p>
-<pre>
+                            <p>Los colores están definidos igual que se detalla en el manual del Spectrum, es decir:</p>
+                            <pre>
    0. - negro
    1. - azul
    2. - rojo
@@ -348,20 +503,25 @@ void DrawLife( void )
    6. - amarillo
    7. - blanco
 </pre>
-<p>Con los bits indicandos anteriormente, un atributo se construiría con el siguiente código:</p>
+                            <p>Con los bits indicandos anteriormente, un atributo se construiría con el siguiente
+                                código:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  atributo = (flash<<7) + (brillo<<6) + (papel<<3) + (tinta);
 </pre>
-    </p></td></tr>
-</table>
-<p>Por ejemplo, para establecer el caracter (2,5) con color verde (4) sobre fondo rojo (2) y con flash, podemos utilizar el siguiente código:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Por ejemplo, para establecer el caracter (2,5) con color verde (4) sobre fondo rojo (2) y
+                                con flash, podemos utilizar el siguiente código:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  // memaddr = 22528 + (y*32) + x
  memaddr = 22528 + (5*32) + 2;
 
@@ -369,15 +529,25 @@ void DrawLife( void )
  *memaddr = (1<<7) + (2<<3) + (4);
 </pre>
 
-    </p></td></tr>
-</table>
-<p>De este modo podemos activar y desactivar cuadros completos de pantalla modificando su tinta y papel. Este método es mucho más rápido para nuestro programa que dibujar los 8x8 pixels de cada carácter para dibujar o apagar las células (una sóla escritura en memoria modifica el estado de 64 píxeles simultáneamente), y puede servirnos de ejemplo para mostrar cómo modificar los atributos.</p>
-<p><b>La función Calcular_Siguiente_Generación()</b></p>
-<p>En este momento ya tenemos una función que nos genera una colonia inicial de células (aleatoria), y un bucle principal que redibuja la colonia de células actual en memoria. Lo que falta a continuación es implementar la esencia del algoritmo de John Conway para modificar la colonia de células actual (array mapa[]) y obtener el nuevo estado (array temp[]) para, repitiendo el ciclo una y otra vez, realizar la simulación.</p>
-<p>El pseudocódigo es el siguiente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>De este modo podemos activar y desactivar cuadros completos de pantalla modificando su
+                                tinta y papel. Este método es mucho más rápido para nuestro programa que dibujar los 8x8
+                                pixels de cada carácter para dibujar o apagar las células (una sóla escritura en memoria
+                                modifica el estado de 64 píxeles simultáneamente), y puede servirnos de ejemplo para
+                                mostrar cómo modificar los atributos.</p>
+                            <p><b>La función Calcular_Siguiente_Generación()</b></p>
+                            <p>En este momento ya tenemos una función que nos genera una colonia inicial de células
+                                (aleatoria), y un bucle principal que redibuja la colonia de células actual en memoria.
+                                Lo que falta a continuación es implementar la esencia del algoritmo de John Conway para
+                                modificar la colonia de células actual (array mapa[]) y obtener el nuevo estado (array
+                                temp[]) para, repitiendo el ciclo una y otra vez, realizar la simulación.</p>
+                            <p>El pseudocódigo es el siguiente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 Calcular_Siguiente_Generación:
    Para todo 'x' y todo 'y':
 
@@ -395,12 +565,14 @@ Calcular_Siguiente_Generación:
            Si tiene 2 ó 3 vecinas : Creamos una célula
 </pre>
 
-    </p></td></tr>
-</table>
-<p>El código en C que implemente este algoritmo es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>El código en C que implemente este algoritmo es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 //--- Funcion donde se simula la vida ---------------------
 void Life( void )
 {
@@ -411,7 +583,7 @@ void Life( void )
    for( y=0; y<ALTO; y++)
    {
       for( x=0; x<ANCHO ; x++)
-      {
+                        {
         // Las celulas del borde mueren
         if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
            TempCelula(x,y)=0 ;
@@ -454,52 +626,72 @@ void Life( void )
    } // fin for y
 }
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Para compilar el programa puede utilizarse el siguiente comando:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>Para compilar el programa puede utilizarse el siguiente comando:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   zcc +zxansi -vn -O1 zxlife.c -o zxlife.bin -lndos
   bin2tap zxlife.bin zxlife.tap
   rm -f zcc_opt.def
 </pre>
-    </p></td></tr>
-</table>
-<p>Si ejecutamos el programa en nuestro Spectrum (o en un emulador) veremos la evolución de las células en tiempo real en nuestra pantalla:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Si ejecutamos el programa en nuestro Spectrum (o en un emulador) veremos la evolución de
+                                las células en tiempo real en nuestra pantalla:</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="290">
+                            <table border="0" cellspacing="0" cellpadding="2" width="290">
 
-	<tr align="right">
-		<td><img src="img/z88dk_zxlife1.png" width="290" height="212"  alt="Simulaciones en nuestro Spectrum" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Simulaciones en nuestro Spectrum</td>
-	</tr>
-</table>
-
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="300">
-	<tr align="right">
-		<td><img src="img/z88dk_zxlife2.png" width="300" height="219"  alt="Simulaciones en nuestro Spectrum" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Simulaciones en nuestro Spectrum</td>
-	</tr>
-</table>
+                                <tr align="right">
+                                    <td><img src="img/z88dk_zxlife1.png" width="290" height="212"
+                                             alt="Simulaciones en nuestro Spectrum"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Simulaciones en nuestro Spectrum</td>
+                                </tr>
+                            </table>
 
 
-<p>Cada vez que pulsemos 'r' se generará una nueva "remesa" de células para volver a aplicar el algoritmo y ver su evolución.</p>
-<p><b>Optimizaciones del Juego de la Vida</b></p>
-<p>Todos los programas pueden ser optimizados, y zxlife no es una excepción. Como ya se ha mostrado en el ejemplo del cálculo de la posición (x,y) en el array, cambiando una multiplicación por 32 por un desplazamiento binario 5 veces a la izquierda obtenemos un gran incremento de velocidad de ejecución. Este incremento de velocidad es tal porque esa función es llamada muchas veces durante la ejecución del programa. Se demuestra con esto que no por el mero hecho de utilizar C o Ensamblador el programa será más o menos rápido: La velocidad de ejecución del programa reside en que utilicemos los algoritmos adecuados a cada problema; así, desplazar binariamente 5 veces es mucho más rápido que multiplicar por 32, y esa multiplicación sería igual de lenta si la programáramos en ensamblador. De ahí la importancia del diseño del programa y los algoritmos empleados en su implementación.</p>
-<p>En el caso de zxlife, podemos también optimizar el código de obtención de nuevas generaciones evitando cálculos innecesarios. Concretamente, cuando contamos las células vecinas podemos evitar calcular la posición de cada célula en cada caso. El código original sin optimizar es:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="2" width="300">
+                                <tr align="right">
+                                    <td><img src="img/z88dk_zxlife2.png" width="300" height="219"
+                                             alt="Simulaciones en nuestro Spectrum"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Simulaciones en nuestro Spectrum</td>
+                                </tr>
+                            </table>
+
+
+                            <p>Cada vez que pulsemos 'r' se generará una nueva "remesa" de células para volver a aplicar
+                                el algoritmo y ver su evolución.</p>
+                            <p><b>Optimizaciones del Juego de la Vida</b></p>
+                            <p>Todos los programas pueden ser optimizados, y zxlife no es una excepción. Como ya se ha
+                                mostrado en el ejemplo del cálculo de la posición (x,y) en el array, cambiando una
+                                multiplicación por 32 por un desplazamiento binario 5 veces a la izquierda obtenemos un
+                                gran incremento de velocidad de ejecución. Este incremento de velocidad es tal porque
+                                esa función es llamada muchas veces durante la ejecución del programa. Se demuestra con
+                                esto que no por el mero hecho de utilizar C o Ensamblador el programa será más o menos
+                                rápido: La velocidad de ejecución del programa reside en que utilicemos los algoritmos
+                                adecuados a cada problema; así, desplazar binariamente 5 veces es mucho más rápido que
+                                multiplicar por 32, y esa multiplicación sería igual de lenta si la programáramos en
+                                ensamblador. De ahí la importancia del diseño del programa y los algoritmos empleados en
+                                su implementación.</p>
+                            <p>En el caso de zxlife, podemos también optimizar el código de obtención de nuevas
+                                generaciones evitando cálculos innecesarios. Concretamente, cuando contamos las células
+                                vecinas podemos evitar calcular la posición de cada célula en cada caso. El código
+                                original sin optimizar es:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    // Obtenemos el numero de celulas vecinas
    vecinos = 0;
    vecinos += Celula(x-1,y);
@@ -511,13 +703,19 @@ void Life( void )
    vecinos += Celula(x+1,y-1);
    vecinos += Celula(x+1,y+1);
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Cada vez que llamamos a Celula(x,y) estamos realizando el cálculo de la posición absoluta de la célula dentro del vector (en nuestra conversión bidimensional a unidimensional) mediante una serie de operaciones matemáticas. Si tenemos en cuenta que todas las células vecinas están a una distancia fija de -1, +2, -33, -32, -31 y +31, +32 y +33 de cada célula, podemos convertir esto a:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>Cada vez que llamamos a Celula(x,y) estamos realizando el cálculo de la posición absoluta
+                                de la célula dentro del vector (en nuestra conversión bidimensional a unidimensional)
+                                mediante una serie de operaciones matemáticas. Si tenemos en cuenta que todas las
+                                células vecinas están a una distancia fija de -1, +2, -33, -32, -31 y +31, +32 y +33 de
+                                cada célula, podemos convertir esto a:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
    offset = (y<<5)+x;
 
    // Obtenemos el numero de celulas vecinas
@@ -526,26 +724,30 @@ void Life( void )
              mapa[ offset+1  ] + mapa[ offset+31 ] +
              mapa[ offset+32 ] + mapa[ offset+33 ];
 </pre>
-    </p></td></tr>
-</table>
-<p>Esto es así porque como podemos ver en la siguiente figura, podemos obtener las 8 células vecinal a partir de un mismo offset calculado:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Esto es así porque como podemos ver en la siguiente figura, podemos obtener las 8 células
+                                vecinal a partir de un mismo offset calculado:</p>
 
 
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/z88dk_offsets.png" width="320" height="200"  alt="Offset de las 8 células vecinas de una dada" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Offset de las 8 células vecinas de una dada</td>
-	</tr>
-</table>
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/z88dk_offsets.png" width="320" height="200"
+                                             alt="Offset de las 8 células vecinas de una dada"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Offset de las 8 células vecinas de una dada</td>
+                                </tr>
+                            </table>
 
 
-<p>El código resultante de la optimización sería el siguiente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>El código resultante de la optimización sería el siguiente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 //--- Funcion donde se simula la vida ---------------------
 void Life( void )
 {
@@ -556,7 +758,7 @@ void Life( void )
    for( y=0; y<ALTO; y++)
    {
       for( x=0; x<ANCHO ; x++)
-      {
+                        {
         // Las celulas del borde mueren
         if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
            TempCelula(x,y)=0 ;
@@ -595,13 +797,19 @@ void Life( void )
    } // fin for y
 }
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Aparte de la optimización de la función de cálculo de nuevas generaciones, también podemos optimizar la función que dibuja en pantalla de forma que en lugar de realizar el cálculo de posición del atributo en cada célula, lo realice una sola vez y vaya incrementándolo (algo parecido a lo que hemos hecho con el cálculo de células vecinas). Podemos ver la versión optimizada a continuación:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Aparte de la optimización de la función de cálculo de nuevas generaciones, también
+                                podemos optimizar la función que dibuja en pantalla de forma que en lugar de realizar el
+                                cálculo de posición del atributo en cada célula, lo realice una sola vez y vaya
+                                incrementándolo (algo parecido a lo que hemos hecho con el cálculo de células vecinas).
+                                Podemos ver la versión optimizada a continuación:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 //--- Dibujar en pantalla el array de celulas -------------
 void DrawLife( void )
 {
@@ -621,28 +829,57 @@ void DrawLife( void )
    }
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>Lo que hacemos en el ejemplo anterior es apuntar nuestra variable puntero memaddr a la posición de memoria donde comienzan los atributos (memaddr = posición de memoria del atributo del caracter 0,0 de pantalla), tras lo cual podemos escribir el atributo e incrementar el puntero para pasar al siguiente atributo que vamos a modificar. De este modo podemos redibujar nuestros 32x16 caracteres sin tener que recalcular memaddr para cada célula, como se hacía en el caso anterior.</p>
-<p>En el fichero comprimido que acompaña a este artículo están almacenadas las 2 versiones de zxlife: la versión 1 (zxlife.c y zxlife.tap) que es la versión original del programa, y la versión 2 (zxlife2.c y zxlife2.tap) que es la versión optimizada con los cambios que hemos explicado en esta sección.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Lo que hacemos en el ejemplo anterior es apuntar nuestra variable puntero memaddr a la
+                                posición de memoria donde comienzan los atributos (memaddr = posición de memoria del
+                                atributo del caracter 0,0 de pantalla), tras lo cual podemos escribir el atributo e
+                                incrementar el puntero para pasar al siguiente atributo que vamos a modificar. De este
+                                modo podemos redibujar nuestros 32x16 caracteres sin tener que recalcular memaddr para
+                                cada célula, como se hacía en el caso anterior.</p>
+                            <p>En el fichero comprimido que acompaña a este artículo están almacenadas las 2 versiones
+                                de zxlife: la versión 1 (zxlife.c y zxlife.tap) que es la versión original del programa,
+                                y la versión 2 (zxlife2.c y zxlife2.tap) que es la versión optimizada con los cambios
+                                que hemos explicado en esta sección.</p>
 
-<p><b>En conclusión</b></p>
-<p>Con el ejemplo de esta entrega hemos pretendido mostrar un ejemplo completo y práctico de cómo z88dk nos puede ayudar a implementar cualquier tipo de programa o algoritmo que deseemos fácilmente (zxlife.c tiene apenas 200 líneas de código contando comentarios y ha sido programado en apenas 30 minutos). Además, se ha podido ver cómo lo importante no es el lenguaje de programación utilizado, sino los algoritmos que se empleen. Por supuesto, zxlife puede optimizarse más aún: no se ha hecho porque el objetivo es que el programa fuera comprensible para los lectores, pero podemos combinar la potencia de C con funciones en ensamblador en aquellos puntos donde se considere oportuno, o utilizar una implementación diferente del algoritmo para calcular las generaciones de células, obteniendo mejores resultados.</p>
-<p>En las próximas entregas comenzaremos a hablar de gráficos en el Spectrum, de forma que podamos comenzar a aplicar nuestros conocimientos de z88dk para hacer ya cosas visibles (gráficamente) en nuestro Spectrum.</p>
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-    <li><a href="src/zxlife.zip" onClick="window.open(this.href); return false;">Archivos fuente del ejemplo propuesto (zxlife.zip)</a></li>
-    <li>Wikipedia: <a href="http://es.wikipedia.org/wiki/Juego_de_la_vida" onClick="window.open(this.href); return false;">http://es.wikipedia.org/wiki/Juego_de_la_vida</a></li>
+                            <p><b>En conclusión</b></p>
+                            <p>Con el ejemplo de esta entrega hemos pretendido mostrar un ejemplo completo y práctico de
+                                cómo z88dk nos puede ayudar a implementar cualquier tipo de programa o algoritmo que
+                                deseemos fácilmente (zxlife.c tiene apenas 200 líneas de código contando comentarios y
+                                ha sido programado en apenas 30 minutos). Además, se ha podido ver cómo lo importante no
+                                es el lenguaje de programación utilizado, sino los algoritmos que se empleen. Por
+                                supuesto, zxlife puede optimizarse más aún: no se ha hecho porque el objetivo es que el
+                                programa fuera comprensible para los lectores, pero podemos combinar la potencia de C
+                                con funciones en ensamblador en aquellos puntos donde se considere oportuno, o utilizar
+                                una implementación diferente del algoritmo para calcular las generaciones de células,
+                                obteniendo mejores resultados.</p>
+                            <p>En las próximas entregas comenzaremos a hablar de gráficos en el Spectrum, de forma que
+                                podamos comenzar a aplicar nuestros conocimientos de z88dk para hacer ya cosas visibles
+                                (gráficamente) en nuestro Spectrum.</p>
+                            <p>
+                                <b>LINKS</b>
+                            </p>
+                            <ul>
+                                <li><a href="src/zxlife.zip" onClick="window.open(this.href); return false;">Archivos
+                                    fuente del ejemplo propuesto (zxlife.zip)</a></li>
+                                <li>Wikipedia: <a href="http://es.wikipedia.org/wiki/Juego_de_la_vida"
+                                                  onClick="window.open(this.href); return false;">http://es.wikipedia.org/wiki/Juego_de_la_vida</a>
+                                </li>
 
-    <li>Color Game Of Life Visual Exhibition: <a href="http://www.collidoscope.com/cgolve/" onClick="window.open(this.href); return false;">http://www.collidoscope.com/cgolve/</a></li>
-    <li>What is the Game of Life?: <a href="http://www.math.com/students/wonders/life/life.html" onClick="window.open(this.href); return false;">http://www.math.com/students/wonders/life/life.html</a></li>
-</ul>
-<p><b>Listado completo del programa</b></p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <li>Color Game Of Life Visual Exhibition: <a href="http://www.collidoscope.com/cgolve/"
+                                                                             onClick="window.open(this.href); return false;">http://www.collidoscope.com/cgolve/</a>
+                                </li>
+                                <li>What is the Game of Life?: <a
+                                        href="http://www.math.com/students/wonders/life/life.html"
+                                        onClick="window.open(this.href); return false;">http://www.math.com/students/wonders/life/life.html</a>
+                                </li>
+                            </ul>
+                            <p><b>Listado completo del programa</b></p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 /*
  *  ZX-Life  -> Implementacion de ejemplo en C-z88dk del
  *              simulador de vida de John Conway para
@@ -737,7 +974,7 @@ void Life( void )
    for( y=0; y<ALTO; y++)
    {
       for( x=0; x<ANCHO ; x++)
-      {
+                        {
         // Las celulas del borde mueren
         if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
            TempCelula(x,y)=0 ;
@@ -827,79 +1064,87 @@ void BORDER( unsigned char value )
 }
 
 </pre>
-    </p></td></tr>
-</table>
-</div>
-        </td>
-    </tr>
-    <tr>
-        <td align="right"><br><br>SROMERO (NoP)</td>
-    </tr>
-</table>
-
-                    </td>
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+                    <td align="right"><br><br>SROMERO (NoP)</td>
                 </tr>
             </table>
 
-    </body>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">Análisis</option>
+
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+
+                </tr>
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
+    </tr>
+</table>
+
+</body>
 
 </html>

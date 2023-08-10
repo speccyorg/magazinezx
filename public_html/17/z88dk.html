@@ -1,97 +1,133 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Programación Z88DK - Magazine ZX número 17 - Marzo 2009</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body>
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-
-        <option value="el-aventurero.html">El Aventurero</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="computone.html">Computone</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="128k-mode.html">128K MODE</option>
-        <option value="input.html">INPUT</option>
-        <option value="tira-comica.html">Tira cómica</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 17 - Marzo 2009</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>Programación Z88DK - Magazine ZX número 17 - Marzo 2009</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p align="center"><font size="5">Z88DK v1.8 y SP1 (SPLIB3)</font></p>
-<p><em>Desde la última entrega de nuestro curso de Z88DK ha llovido mucho, y hay bastantes novedades que contar. La principal de ellas es que el 9 de Marzo del 2008 se liberó la versión 1.8 de Z88DK.</em></p>
-<p>Una de las novedades más destacables de la versión 1.7 fue la integración de SPLIB en z88dk, rebautizando a splib3 como SP1. En nuestro anterior artículo comenzamos a utilizar SP1 a través de ejemplos que mostraban la instalación del compilador y la utilización de esta librería de funciones para juegos.</p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0"/></a></td>
+                </tr>
+            </table>
+        </td>
 
-<p>En este artículo mostraremos los diferentes módulos de SP1 y otras bibliotecas interesantes de Z88DK para su utilización en la creación de programas y juegos.</p>
-<p><font size="4">La nueva librería SP1</font></p>
-<p>SP1 es una librería de sprites por software (puesto que el Spectrum no dispone de chip hardware para el tratamiento de Sprites), que como el lector sabe, está diseñada para minimizar la cantidad de dibujados de bloques gráficos en pantalla.</p>
-<p>SP1 es la nueva versión de la antigua librería SPLIB. En esta versión (SPLIB3), la biblioteca se divide en diferentes módulos para que el programador pueda elegir cuáles de ellos desea usar y cuales no. Hasta ahora, si un programador quería usar las funciones de teclado o de modo IM2 de interrupciones de SPLIB, se veía obligado a incluir la biblioteca completa, con la consiguiente pérdida de memoria, espacio "ejecutable" y tiempo de carga. Ahora, es posible incluir o no cada módulo individualmente.</p>
-<p><font size="4">Librerías de Z88DK</font></p>
-<p>A continuación se detallan algunas de las librerías incluídas con Z88DK. Algunas son parte del compilador desde sus inicios, y otras son, como ya hemos comentado, diferentes módulos de la antigua SPLIB2, ahora integrada con el nombre de SP1.</p>
-<p><strong>Tipos Abstractos de Datos</strong></p>
-<ul>
-	<li>Fichero de cabecera a incluir: #include <atd.h></li>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
 
-	<li>Librería a enlazar: -ladt.</li>
-</ul>
-<p>Esta librería incluye funciones genéricas para algunos tipos abstractos de datos, como Listas Enlazadas (Linked Lists), Pilas (Stacks), y Colas (Queues). Por el momento, estos tipos de datos son dinámicos (se reserva y libera memoria con su uso), aunque están previstas también implementaciones estáticas. Otros tipos de datos (árboles, buffers circulares, etc.) serán implementados en el futuro.</p>
-<p>Veamos algunas funciones de ejemplo (en este caso, de Pilas / Stacks) que muestran "el aspecto" de la librería:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+
+                                <option value="el-aventurero.html">El Aventurero</option>
+                                <option value="analisis.html">Análisis</option>
+                                <option value="computone.html">Computone</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                                <option value="128k-mode.html">128K MODE</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="tira-comica.html">Tira cómica</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">Número 17 - Marzo 2009</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">Z88DK v1.8 y SP1 (SPLIB3)</font></p>
+                            <p><em>Desde la última entrega de nuestro curso de Z88DK ha llovido mucho, y hay bastantes
+                                novedades que contar. La principal de ellas es que el 9 de Marzo del 2008 se liberó la
+                                versión 1.8 de Z88DK.</em></p>
+                            <p>Una de las novedades más destacables de la versión 1.7 fue la integración de SPLIB en
+                                z88dk, rebautizando a splib3 como SP1. En nuestro anterior artículo comenzamos a
+                                utilizar SP1 a través de ejemplos que mostraban la instalación del compilador y la
+                                utilización de esta librería de funciones para juegos.</p>
+
+                            <p>En este artículo mostraremos los diferentes módulos de SP1 y otras bibliotecas
+                                interesantes de Z88DK para su utilización en la creación de programas y juegos.</p>
+                            <p><font size="4">La nueva librería SP1</font></p>
+                            <p>SP1 es una librería de sprites por software (puesto que el Spectrum no dispone de chip
+                                hardware para el tratamiento de Sprites), que como el lector sabe, está diseñada para
+                                minimizar la cantidad de dibujados de bloques gráficos en pantalla.</p>
+                            <p>SP1 es la nueva versión de la antigua librería SPLIB. En esta versión (SPLIB3), la
+                                biblioteca se divide en diferentes módulos para que el programador pueda elegir cuáles
+                                de ellos desea usar y cuales no. Hasta ahora, si un programador quería usar las
+                                funciones de teclado o de modo IM2 de interrupciones de SPLIB, se veía obligado a
+                                incluir la biblioteca completa, con la consiguiente pérdida de memoria, espacio
+                                "ejecutable" y tiempo de carga. Ahora, es posible incluir o no cada módulo
+                                individualmente.</p>
+                            <p><font size="4">Librerías de Z88DK</font></p>
+                            <p>A continuación se detallan algunas de las librerías incluídas con Z88DK. Algunas son
+                                parte del compilador desde sus inicios, y otras son, como ya hemos comentado, diferentes
+                                módulos de la antigua SPLIB2, ahora integrada con el nombre de SP1.</p>
+                            <p><strong>Tipos Abstractos de Datos</strong></p>
+                            <ul>
+                                <li>Fichero de cabecera a incluir: #include
+                                    <atd.h>
+                                </li>
+
+                                <li>Librería a enlazar: -ladt.</li>
+                            </ul>
+                            <p>Esta librería incluye funciones genéricas para algunos tipos abstractos de datos, como
+                                Listas Enlazadas (Linked Lists), Pilas (Stacks), y Colas (Queues). Por el momento, estos
+                                tipos de datos son dinámicos (se reserva y libera memoria con su uso), aunque están
+                                previstas también implementaciones estáticas. Otros tipos de datos (árboles, buffers
+                                circulares, etc.) serán implementados en el futuro.</p>
+                            <p>Veamos algunas funciones de ejemplo (en este caso, de Pilas / Stacks) que muestran "el
+                                aspecto" de la librería:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 adt_StackCreate();
 adt_StackDelete();
 adt_StackPush();
@@ -99,60 +135,81 @@ adt_StackPop();
 adt_StackPeek();
 adt_StackCount();
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>La Página de documentación de libadt muestra detallados ejemplos de uso de la librería.</p>
-<p><strong>Peticiones de memoria</strong></p>
-<ul>
-	<li>Fichero de cabecera a incluir: #include <malloc.h> e #include <balloc.h></li>
-	<li>Librería a enlazar: -lmalloc y -lballoc.</li>
-</ul>
-<p>Esta librería incluye funciones para pedir y liberar memoria dinámicamente, en lugar de utilizar arrays vacíos estáticos (que aumentan el tiempo de carga).</p>
+                            <p>La Página de documentación de libadt muestra detallados ejemplos de uso de la
+                                librería.</p>
+                            <p><strong>Peticiones de memoria</strong></p>
+                            <ul>
+                                <li>Fichero de cabecera a incluir: #include
+                                    <malloc.h> e #include
+                                        <balloc.h>
+                                </li>
+                                <li>Librería a enlazar: -lmalloc y -lballoc.</li>
+                            </ul>
+                            <p>Esta librería incluye funciones para pedir y liberar memoria dinámicamente, en lugar de
+                                utilizar arrays vacíos estáticos (que aumentan el tiempo de carga).</p>
 
-<p>Veamos algunas funciones de ejemplo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Veamos algunas funciones de ejemplo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 mallinit();
 calloc();
 malloc();
 free();
 realloc();
 </pre>
-    </p></td></tr>
-</table>
-<p>La Página de documentación de malloc y balloc muestra detallados ejemplos de uso de la librería.</p>
-<p><strong>Modo 2 de Interrupciones</strong></p>
-<ul>
-	<li>Fichero de cabecera a incluir: #include <im2.h></li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La Página de documentación de malloc y balloc muestra detallados ejemplos de uso de la
+                                librería.</p>
+                            <p><strong>Modo 2 de Interrupciones</strong></p>
+                            <ul>
+                                <li>Fichero de cabecera a incluir: #include
+                                    <im2.h>
+                                </li>
 
-	<li>Librería a enlazar: -lim2.</li>
-</ul>
-<p>Esta librería incluye funciones de gestión del modo 2 de Interrupciones. Estas funciones nos permitirán enlazar la ejecución de código con el modo 2 de interrupciones, para así poder implementar temporizadores y funciones sincronizadas con IM2.</p>
-<p>Algunas de las funciones de que provee esta librería son:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <li>Librería a enlazar: -lim2.</li>
+                            </ul>
+                            <p>Esta librería incluye funciones de gestión del modo 2 de Interrupciones. Estas funciones
+                                nos permitirán enlazar la ejecución de código con el modo 2 de interrupciones, para así
+                                poder implementar temporizadores y funciones sincronizadas con IM2.</p>
+                            <p>Algunas de las funciones de que provee esta librería son:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 im2_init();
 im2_InstallISR();
 im2_EmptyISR();
 im2_CreateGenericISR();
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>La Página de documentación de im2.h muestra información detallada sobre los modos de interrupciones y ejemplos de uso de la librería.</p>
-<p><strong>Teclado, joystick y ratón</strong></p>
-<ul>
-	<li>Fichero de cabecera a incluir: #include <input.h>.</li>
-	<li>Librería a enlazar: No es necesaria.</li>
-</ul>
-<p>La biblioteca input.h incluye las funciones necesarias para la lectura del teclado en nuestros juegos y programas. Algunas de las funciones más útiles dentro de esta librería son las siguientes:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                            <p>La Página de documentación de im2.h muestra información detallada sobre los modos de
+                                interrupciones y ejemplos de uso de la librería.</p>
+                            <p><strong>Teclado, joystick y ratón</strong></p>
+                            <ul>
+                                <li>Fichero de cabecera a incluir: #include
+                                    <input.h>.
+                                </li>
+                                <li>Librería a enlazar: No es necesaria.</li>
+                            </ul>
+                            <p>La biblioteca input.h incluye las funciones necesarias para la lectura del teclado en
+                                nuestros juegos y programas. Algunas de las funciones más útiles dentro de esta librería
+                                son las siguientes:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 in_GetKeyReset();
 in_GetKey();
 in_InKey();
@@ -164,14 +221,23 @@ in_Pause();
 in_Wait();
 in_JoyKeyboard();
 </pre>
-    </p></td></tr>
-</table>
-<p>Por otra parte, input.h también contiene todas las funciones necesarias para acceder a ratón y joystick, con funciones como las siguientes. Concretamente, la anterior función in_JoyKeyboard() emula la lectura de los joysticks con el mismo formato que la lectura de teclas, con in_LookupKey(). Para hacer uso de la emulación de joystick, será necesario incluir el fichero de cabecera <spectrum.h>.</p>
-<p>Como muestra, el siguiente ejemplo tomado de la documentación de la librería input, que combina el uso de in_JoyKeyboard() con las llamadas a in_LookupKey():</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Por otra parte, input.h también contiene todas las funciones necesarias para acceder a
+                                ratón y joystick, con funciones como las siguientes. Concretamente, la anterior función
+                                in_JoyKeyboard() emula la lectura de los joysticks con el mismo formato que la lectura
+                                de teclas, con in_LookupKey(). Para hacer uso de la emulación de joystick, será
+                                necesario incluir el fichero de cabecera
+                                <spectrum.h>.
+                            </p>
+                            <p>Como muestra, el siguiente ejemplo tomado de la documentación de la librería input, que
+                                combina el uso de in_JoyKeyboard() con las llamadas a in_LookupKey():</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 #include <input.h>
 #include <spectrum.h>
 
@@ -217,18 +283,23 @@ if (dirs & in_FIRE)
 
 ...
 </pre>
-    </p></td></tr>
-</table>
-<p><strong>Librería de Sonido</strong></p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><strong>Librería de Sonido</strong></p>
 
-<ul>
-	<li>Fichero de cabecera a incluir: #include <sound.h>.</li>
-	<li>Librería a enlazar: No es necesaria.</li>
-</ul>
-<p>Esta librería de sonido contiene funciones muy básicas de reproducción sonora, así como algunos "efectos especiales" estándar.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <ul>
+                                <li>Fichero de cabecera a incluir: #include
+                                    <sound.h>.
+                                </li>
+                                <li>Librería a enlazar: No es necesaria.</li>
+                            </ul>
+                            <p>Esta librería de sonido contiene funciones muy básicas de reproducción sonora, así como
+                                algunos "efectos especiales" estándar.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 bit_open();
 bit_close();
 bit_click();
@@ -242,20 +313,27 @@ bit_frequency();
 bit_play();
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Más información sobre sound.h en la página oficial de la librería.</p>
-<p><strong>Librería de Sprites SP1</strong></p>
-<ul>
-	<li>Fichero de cabecera a incluir: #include <sprites/sp1.h>.</li>
-	<li>Librería a enlazar: -lsp1.</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Más información sobre sound.h en la página oficial de la librería.</p>
+                            <p><strong>Librería de Sprites SP1</strong></p>
+                            <ul>
+                                <li>Fichero de cabecera a incluir: #include
+                                    <sprites
+                                    /sp1.h>.
+                                </li>
+                                <li>Librería a enlazar: -lsp1.</li>
 
-</ul>
-<p>La librería sprites/SP1 contiene todo el código dedicado a Sprites de la antigua SPLIB: creación de sprites, movimiento, borrado, etc.</p>
-<p>Algunas de las funciones que se detallan a continuación ya fueron mostradas en nuestro anterior entrega, incluyendo ejemplos de uso:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </ul>
+                            <p>La librería sprites/SP1 contiene todo el código dedicado a Sprites de la antigua SPLIB:
+                                creación de sprites, movimiento, borrado, etc.</p>
+                            <p>Algunas de las funciones que se detallan a continuación ya fueron mostradas en nuestro
+                                anterior entrega, incluyendo ejemplos de uso:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 sp1_CreateSpr();
 sp1_AddColSpr();
 sp1_DeleteSpr();
@@ -267,31 +345,42 @@ sp1_GetTiles();
 sp1_PutTiles();
 sp1_ClearRect();
 </pre>
-    </p></td></tr>
-</table>
-<p>Más información sobre SP1 en la página de SP1 en el wiki de Z88DK.</p>
-<p>Esta biblioteca debe compilarse desde los fuentes de Z88DK para poder utilizarla. Esto se hace entrando en el directorio sp1 y ejecutando el comando make sp1-spectrum:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Más información sobre SP1 en la página de SP1 en el wiki de Z88DK.</p>
+                            <p>Esta biblioteca debe compilarse desde los fuentes de Z88DK para poder utilizarla. Esto se
+                                hace entrando en el directorio sp1 y ejecutando el comando make sp1-spectrum:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 $ cd $Z88DK
 $ cd libsrc/sprites/software/sp1/
 $ make sp1-spectrum
 </pre>
-    </p></td></tr>
-</table>
-<p><strong>Librería general "spectrum.h"</strong></p>
-<ul>
-	<li>Fichero de cabecera a incluir: #include <spectrum.h>.</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><strong>Librería general "spectrum.h"</strong></p>
+                            <ul>
+                                <li>Fichero de cabecera a incluir: #include
+                                    <spectrum.h>.
+                                </li>
 
-	<li>Librería a enlazar: No es necesaria.</li>
-</ul>
-<p>La librería spectrum.h contiene funciones varias, como acceso directo a Joystick y Ratón, identificar el modelo de Spectrum que ejecuta nuestro programa, detectar la existencia de periféricos conectados al Spectrum, funciones de cinta (save/load), cambio de color del borde, cálculo de direcciones de atributos, etc.</p>
-<p>A continuación se muestran algunas de las funciones que podremos utilizar mediante la inclusión de spectrum.h:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <li>Librería a enlazar: No es necesaria.</li>
+                            </ul>
+                            <p>La librería spectrum.h contiene funciones varias, como acceso directo a Joystick y Ratón,
+                                identificar el modelo de Spectrum que ejecuta nuestro programa, detectar la existencia
+                                de periféricos conectados al Spectrum, funciones de cinta (save/load), cambio de color
+                                del borde, cálculo de direcciones de atributos, etc.</p>
+                            <p>A continuación se muestran algunas de las funciones que podremos utilizar mediante la
+                                inclusión de spectrum.h:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 zx_type();
 zx_model();
 zx_soundchip();
@@ -311,40 +400,55 @@ zx_attr();
 zx_screenstr();
 x_cyx2saddr(); (y derivados)
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>La biblioteca define también gran variedad de constantes para su uso en nuestros programas, como colores (BLACK, BLUE, RED, MAGENTA, etc.), identificadores de los tokens del BASIC, etc.</p>
-<p>Se puede consultar la página de spectrum.h para más información.</p>
-<p><strong>Otras librerías</strong></p>
-<p>Otras bibliotecas de las que podemos hacer uso:</p>
-<ul>
-	<li>Funciones de E/S: stdio.h.</li>
-	<li>Funciones de reloj y tiempo: time.h.</li>
-	<li>Funciones de acceso al puerto serie: rs232.h.</li>
+                            <p>La biblioteca define también gran variedad de constantes para su uso en nuestros
+                                programas, como colores (BLACK, BLUE, RED, MAGENTA, etc.), identificadores de los tokens
+                                del BASIC, etc.</p>
+                            <p>Se puede consultar la página de spectrum.h para más información.</p>
+                            <p><strong>Otras librerías</strong></p>
+                            <p>Otras bibliotecas de las que podemos hacer uso:</p>
+                            <ul>
+                                <li>Funciones de E/S: stdio.h.</li>
+                                <li>Funciones de reloj y tiempo: time.h.</li>
+                                <li>Funciones de acceso al puerto serie: rs232.h.</li>
 
-	<li>Implementación del algoritmo A*: algorithm.h.</li>
-	<li>Funciones de cadena: string.h.</li>
-</ul>
-<p>Puede encontrarse la documentación de cada una de ellas en la página principal de Z88DK.</p>
+                                <li>Implementación del algoritmo A*: algorithm.h.</li>
+                                <li>Funciones de cadena: string.h.</li>
+                            </ul>
+                            <p>Puede encontrarse la documentación de cada una de ellas en la página principal de
+                                Z88DK.</p>
 
 
-<p><font size="4">Integrando ASM de Z80 en Z88DK</font></p>
-<p>Una de las cosas más interesantes de Z88DK es que nos permite utilizar ensamblador en-línea dentro de nuestro código en C. Gracias a esto, podemos identificar las rutinas más críticas en necesidades de velocidad (por ejemplo, rutinas gráficas, de sonido, etc), y reescribirlas en ensamblador si es necesario.</p>
-<p>Esto permite acelerar el ciclo de desarrollo y depuración, ya que es posible inicialmente escribir el programa o juego íntegramente en C (simplificando mucho la estructura general del programa), para después pasar a convertir en ensamblador, una a una, aquellas rutinas importantes y críticas.</p>
+                            <p><font size="4">Integrando ASM de Z80 en Z88DK</font></p>
+                            <p>Una de las cosas más interesantes de Z88DK es que nos permite utilizar ensamblador
+                                en-línea dentro de nuestro código en C. Gracias a esto, podemos identificar las rutinas
+                                más críticas en necesidades de velocidad (por ejemplo, rutinas gráficas, de sonido,
+                                etc), y reescribirlas en ensamblador si es necesario.</p>
+                            <p>Esto permite acelerar el ciclo de desarrollo y depuración, ya que es posible inicialmente
+                                escribir el programa o juego íntegramente en C (simplificando mucho la estructura
+                                general del programa), para después pasar a convertir en ensamblador, una a una,
+                                aquellas rutinas importantes y críticas.</p>
 
-<p>El código en lenguaje ensamblador se inyecta dentro de nuestro código C con la directiva asm.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>El código en lenguaje ensamblador se inyecta dentro de nuestro código C con la directiva
+                                asm.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 asm("halt");
 </pre>
-    </p></td></tr>
-</table>
-<p>Para incluir más de una línea de código ensamblador consecutiva, se recurre a las directivas #asm y #endasm. El siguiente código vacía el contenido de la pantalla:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Para incluir más de una línea de código ensamblador consecutiva, se recurre a las
+                                directivas #asm y #endasm. El siguiente código vacía el contenido de la pantalla:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 #asm
    ld hl, 16384
@@ -355,12 +459,15 @@ asm("halt");
    ldir
 #endasm
 </pre>
-    </p></td></tr>
-</table>
-<p>La principal utilidad será, habitualmente implementar el código ensamblador en funciones C para llamarlas desde otras partes de nuestro programa:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La principal utilidad será, habitualmente implementar el código ensamblador en funciones
+                                C para llamarlas desde otras partes de nuestro programa:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void BORDER_BLACK( void )
 {
   #asm
@@ -372,25 +479,30 @@ void BORDER_BLACK( void )
   #endasm
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>Pero para poder aprovechar la integración entre C y ASM, necesitamos conocer los siguientes mecanismos:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Pero para poder aprovechar la integración entre C y ASM, necesitamos conocer los
+                                siguientes mecanismos:</p>
 
-<ul>
-	<li>Creación y referencia de etiquetas ASM.</li>
-	<li>Acceso a variables de C desde bloques ASM.</li>
-	<li>Definición de variables en ASM utilizables desde C.</li>
-	<li>Lectura desde bloques ASM de los parámetros pasados a las funciones.</li>
-	<li>Devolución de valores desde bloques ASM llamados como funciones.</li>
-</ul>
+                            <ul>
+                                <li>Creación y referencia de etiquetas ASM.</li>
+                                <li>Acceso a variables de C desde bloques ASM.</li>
+                                <li>Definición de variables en ASM utilizables desde C.</li>
+                                <li>Lectura desde bloques ASM de los parámetros pasados a las funciones.</li>
+                                <li>Devolución de valores desde bloques ASM llamados como funciones.</li>
+                            </ul>
 
-<p>A continuación se detalla la forma de realizar esto desde Z88DK.</p>
+                            <p>A continuación se detalla la forma de realizar esto desde Z88DK.</p>
 
-<p><strong>Creación y referencia de etiquetas ASM</strong></p>
-<p>Si tenemos que realizar rutinas medianamente largas, necesitaremos utilizar etiquetas para las estructuras condicionales. A continuación se muestra un ejemplo de declaración de una etiqueta y la referencia a la misma:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p><strong>Creación y referencia de etiquetas ASM</strong></p>
+                            <p>Si tenemos que realizar rutinas medianamente largas, necesitaremos utilizar etiquetas
+                                para las estructuras condicionales. A continuación se muestra un ejemplo de declaración
+                                de una etiqueta y la referencia a la misma:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #asm
    LD B, 8
 
@@ -404,16 +516,24 @@ void BORDER_BLACK( void )
 
 #endasm
 </pre>
-    </p></td></tr>
-</table>
-<p>Como puede verse, las etiquetas se definen con un punto delante y se referencian sin el punto.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como puede verse, las etiquetas se definen con un punto delante y se referencian sin el
+                                punto.</p>
 
-<p>Nótese que hemos utilizado el nombre de la rutina dentro de la etiqueta. Esto es así porque las etiquetas son 2 globales y no podemos llamar a 2 etiquetas de igual forma en 2 funciones diferentes. Por eso, en vez de "loop", hemos usado "mirutina_loop", de forma que en una segunda rutina usaremos "mirutina2_loop".</p>
-<p><strong>Accediendo a variables de C desde ASM</strong></p>
-<p>Dentro de los bloques de ASM podemos acceder a las variables globales definidas en el código de C. Esto se mediante el símbolo de subrayado antes del nombre de la variable:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Nótese que hemos utilizado el nombre de la rutina dentro de la etiqueta. Esto es así
+                                porque las etiquetas son 2 globales y no podemos llamar a 2 etiquetas de igual forma en
+                                2 funciones diferentes. Por eso, en vez de "loop", hemos usado "mirutina_loop", de forma
+                                que en una segunda rutina usaremos "mirutina2_loop".</p>
+                            <p><strong>Accediendo a variables de C desde ASM</strong></p>
+                            <p>Dentro de los bloques de ASM podemos acceder a las variables globales definidas en el
+                                código de C. Esto se mediante el símbolo de subrayado antes del nombre de la
+                                variable:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 char borde;
 
 void BORDER( void )
@@ -435,23 +555,34 @@ void BORDER( void )
 #endasm
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>Es de vital importancia, a la hora de leer y escribir valores en variables, que respetemos el tipo de variable en que estamos escribiendo. Si estamos tratando de modificar una variable de 1 sólo byte (apuntada por HL), utilizaremos una operación del tipo LD (HL), A para que, efectivamente, se escriba un sólo byte en la posición de memoria apuntada por la variable. Si escribimos más de un byte, estaremos afectando al byte siguiente al de la variable en cuestión, con lo que modificaremos el valor de la siguiente variable o bloque de código en memoria.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Es de vital importancia, a la hora de leer y escribir valores en variables, que
+                                respetemos el tipo de variable en que estamos escribiendo. Si estamos tratando de
+                                modificar una variable de 1 sólo byte (apuntada por HL), utilizaremos una operación del
+                                tipo LD (HL), A para que, efectivamente, se escriba un sólo byte en la posición de
+                                memoria apuntada por la variable. Si escribimos más de un byte, estaremos afectando al
+                                byte siguiente al de la variable en cuestión, con lo que modificaremos el valor de la
+                                siguiente variable o bloque de código en memoria.</p>
 
-<p>Recuerda para esto que:</p>
-<ul>
-	<li>signed y unsigned char -> 1 byte.</li>
-	<li>signed y unsigned short -> 2 bytes.</li>
-	<li>signed y unsigned int -> 2 bytes.</li>
-	<li>signed y unsigned char * -> 2 bytes (es una dirección de memoria).</li>
-</ul>
-<p>Finalmente, cabe destacar que sólo se pueden acceder a variables globales: no se podrá acceder desde esta forma a variables definidas dentro de las funciones, puesto que son locales y están localizadas en la pila. Tampoco se podrá acceder de esta forma a los parámetros pasados a las funciones.</p>
+                            <p>Recuerda para esto que:</p>
+                            <ul>
+                                <li>signed y unsigned char -> 1 byte.</li>
+                                <li>signed y unsigned short -> 2 bytes.</li>
+                                <li>signed y unsigned int -> 2 bytes.</li>
+                                <li>signed y unsigned char * -> 2 bytes (es una dirección de memoria).</li>
+                            </ul>
+                            <p>Finalmente, cabe destacar que sólo se pueden acceder a variables globales: no se podrá
+                                acceder desde esta forma a variables definidas dentro de las funciones, puesto que son
+                                locales y están localizadas en la pila. Tampoco se podrá acceder de esta forma a los
+                                parámetros pasados a las funciones.</p>
 
-<p>Es decir, los siguientes ejemplos no son válidos:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Es decir, los siguientes ejemplos no son válidos:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void BORDER( unsigned char borde )
 {
    char varlocal;
@@ -465,16 +596,25 @@ void BORDER( unsigned char borde )
 #endasm
 }
 </pre>
-    </p></td></tr>
-</table>
-<p><strong>Uso de variables temporales desde ASM</strong></p>
-<p>También es posible definir "variables" y bloques de datos dentro de lo que es el "binario ejecutable" del programa, y refenciar a ellos después desde ensamblador. Esto es habitual a la hora de utilizar "variables temporales" o de almacenamiento en rutinas ensamblador cuando tenemos necesidades de almacenamiento que hacen a los registros insuficientes.</p>
-<p>Como no vamos a referenciar las variables desde C, no tenemos que utilizar el carácter de subrayado antes del nombre de la variable.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><strong>Uso de variables temporales desde ASM</strong></p>
+                            <p>También es posible definir "variables" y bloques de datos dentro de lo que es el "binario
+                                ejecutable" del programa, y refenciar a ellos después desde ensamblador. Esto es
+                                habitual a la hora de utilizar "variables temporales" o de almacenamiento en rutinas
+                                ensamblador cuando tenemos necesidades de almacenamiento que hacen a los registros
+                                insuficientes.</p>
+                            <p>Como no vamos a referenciar las variables desde C, no tenemos que utilizar el carácter de
+                                subrayado antes del nombre de la variable.</p>
 
-<p>Recuerda, a la hora de guardar los datos dentro de las etiquetas que hacen referencia a ellas, que debes guardar el número de bytes adecuado para no machacar datos o código que vaya tras ellos:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Recuerda, a la hora de guardar los datos dentro de las etiquetas que hacen referencia a
+                                ellas, que debes guardar el número de bytes adecuado para no machacar datos o código que
+                                vaya tras ellos:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #asm
    ld a, (hl)
    ld (valor_temp), a     ; guardamos un byte (A)
@@ -494,25 +634,37 @@ void BORDER( unsigned char borde )
  valor_int   defw  0
 #endasm
 </pre>
-    </p></td></tr>
-</table>
-<p><strong>Definición de variables en bloques ASM</strong></p>
-<p>Acabamos de ver cómo acceder en los bloques de ASM a variables definidas desde C. A continuación veremos el proceso inverso: definiremos variables (incluso bloques de datos contiguos) dentro de bloques de ASM que después podrán ser referenciadas desde código C.</p>
-<p>Para ello, definimos al principio del código C las variables tal y como las referenciaremos desde C. Es importante indicar el tipo de dato adecuado (char, int, o char *):</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><strong>Definición de variables en bloques ASM</strong></p>
+                            <p>Acabamos de ver cómo acceder en los bloques de ASM a variables definidas desde C. A
+                                continuación veremos el proceso inverso: definiremos variables (incluso bloques de datos
+                                contiguos) dentro de bloques de ASM que después podrán ser referenciadas desde código
+                                C.</p>
+                            <p>Para ello, definimos al principio del código C las variables tal y como las
+                                referenciaremos desde C. Es importante indicar el tipo de dato adecuado (char, int, o
+                                char *):</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 extern unsigned char caracter;
 extern unsigned int dato_int;
 extern unsigned char sprite0[];
 </pre>
-    </p></td></tr>
-</table>
-<p>Después, en otra zona del programa (normalmente al final del código o en un fichero .c/.h aparte), se define el dato o array de datos al que referencian las variables que hemos indicado como extern. Para ello utilizaremos las directivas DEFB, teniendo en cuenta que el tipo de la variable C nos indica la longitud que debe tener el dato.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Después, en otra zona del programa (normalmente al final del código o en un fichero .c/.h
+                                aparte), se define el dato o array de datos al que referencian las variables que hemos
+                                indicado como extern. Para ello utilizaremos las directivas DEFB, teniendo en cuenta que
+                                el tipo de la variable C nos indica la longitud que debe tener el dato.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #asm
 ._caracter
         DEFB 52
@@ -527,15 +679,25 @@ extern unsigned char sprite0[];
 #endasm
 </pre>
 
-    </p></td></tr>
-</table>
-<p>En realidad, dentro del bloque #asm sólo estamos definiendo etiquetas a direcciones de memoria (igual que pueda ser la de un bucle) que coincidirán, para el compilador, con las variables (que también son etiquetas a direcciones) definidas como externs del mismo nombre.</p>
-<p><strong>Pasando parámetros a funciones ASM</strong></p>
-<p>Hemos visto que no es posible acceder directamente desde los bloques #asm a las variables locales de una función, así como a los parámetros de llamada, ya que en realidad están almacenados en la pila. Pero aunque no se pueda acceder de forma directa a estos valores, sí que podemos acceder a ellos leyéndolos mediante la ayuda del puntero de pila SP.</p>
-<p>Sin utilizar la pila, la mejor forma de pasar parámetros a las funciones es usar algún conjunto de variables globales que utilicemos en las funciones:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>En realidad, dentro del bloque #asm sólo estamos definiendo etiquetas a direcciones de
+                                memoria (igual que pueda ser la de un bucle) que coincidirán, para el compilador, con
+                                las variables (que también son etiquetas a direcciones) definidas como externs del mismo
+                                nombre.</p>
+                            <p><strong>Pasando parámetros a funciones ASM</strong></p>
+                            <p>Hemos visto que no es posible acceder directamente desde los bloques #asm a las variables
+                                locales de una función, así como a los parámetros de llamada, ya que en realidad están
+                                almacenados en la pila. Pero aunque no se pueda acceder de forma directa a estos
+                                valores, sí que podemos acceder a ellos leyéndolos mediante la ayuda del puntero de pila
+                                SP.</p>
+                            <p>Sin utilizar la pila, la mejor forma de pasar parámetros a las funciones es usar algún
+                                conjunto de variables globales que utilicemos en las funciones:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 // Definimos unas cuantas variables globales que usaremos
 // como parametros para nuestras funciones que usen ASM:
 
@@ -560,14 +722,23 @@ void MiFuncion( void )
 }
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Aunque este método es fáctible (y rápido), resulta más legible el evitar la utilización de este tipo de variables (que haría complicada la creación de funciones recursivas o anidadas). Para ello, utilizaremos el sistema de paso de argumentos basado en la pila.</p>
-<p>En C (y en otros lenguajes de programación) los parámetros se insertan en la pila en el orden en que son leídos. La subrutina debe utilizar el registro SP (mejor dicho, una copia) para acceder a los valores apilados en orden inverso. Estos valores son siempre de 16 bits aunque las variables pasadas sean de 8 bits (en este caso ignoraremos el byte que no contiene datos, el segundo).</p>
-<p>Veamos unos ejemplos:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Aunque este método es fáctible (y rápido), resulta más legible el evitar la utilización
+                                de este tipo de variables (que haría complicada la creación de funciones recursivas o
+                                anidadas). Para ello, utilizaremos el sistema de paso de argumentos basado en la
+                                pila.</p>
+                            <p>En C (y en otros lenguajes de programación) los parámetros se insertan en la pila en el
+                                orden en que son leídos. La subrutina debe utilizar el registro SP (mejor dicho, una
+                                copia) para acceder a los valores apilados en orden inverso. Estos valores son siempre
+                                de 16 bits aunque las variables pasadas sean de 8 bits (en este caso ignoraremos el byte
+                                que no contiene datos, el segundo).</p>
+                            <p>Veamos unos ejemplos:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   int jugador_x, jugador_y;
 
   jugador_x = 10;
@@ -601,14 +772,21 @@ int Funcion( int x, int y )
 #endasm
 }
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>No tenemos que preocuparnos por hacer PUSH y POP de los registros para preservar su valor dado que C lo hace automáticamente antes y después de cada #asm y #endasm.</p>
-<p>El problema es que conforme crece el número de parámetros apilados, es posible que tengamos que hacer malabarismos para almacenarlos, dado que no podemos usar HL (es nuestro puntero a la pila en las lecturas). Veamos el siguiente ejemplo con 3 parámetros, donde tenemos que usar PUSH para guardar el valor de DE y EX DE, HL para acabar asociando el valor final a HL:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>No tenemos que preocuparnos por hacer PUSH y POP de los registros para preservar su valor
+                                dado que C lo hace automáticamente antes y después de cada #asm y #endasm.</p>
+                            <p>El problema es que conforme crece el número de parámetros apilados, es posible que
+                                tengamos que hacer malabarismos para almacenarlos, dado que no podemos usar HL (es
+                                nuestro puntero a la pila en las lecturas). Veamos el siguiente ejemplo con 3
+                                parámetros, donde tenemos que usar PUSH para guardar el valor de DE y EX DE, HL para
+                                acabar asociando el valor final a HL:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 int Funcion( int x, int y, int z )
 {
 
@@ -641,13 +819,18 @@ int Funcion( int x, int y, int z )
 #endasm
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>La manera de leer bytes (char) pulsados en C es de la misma forma que leemos una palabra de 16 bits, pero ignorando la parte alta. En realidad, como la pila es de 16 bits, el compilador convierte el dato de 8 bits en uno de 16 (rellenando con ceros) y pulsa este valor:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La manera de leer bytes (char) pulsados en C es de la misma forma que leemos una palabra
+                                de 16 bits, pero ignorando la parte alta. En realidad, como la pila es de 16 bits, el
+                                compilador convierte el dato de 8 bits en uno de 16 (rellenando con ceros) y pulsa este
+                                valor:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 int Funcion( char x, y )
 {
 
@@ -671,12 +854,16 @@ int Funcion( char x, y )
 #endasm
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>En ocasiones, es posible que incluso tengamos que utilizar variables auxiliares de memoria para guardar datos. En este caso, utilizamos memoria adicional pero evitamos el uso de la pila.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>En ocasiones, es posible que incluso tengamos que utilizar variables auxiliares de
+                                memoria para guardar datos. En este caso, utilizamos memoria adicional pero evitamos el
+                                uso de la pila.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 int Funcion( int x, int y, char z )
 {
 
@@ -711,26 +898,39 @@ int Funcion( int x, int y, char z )
  #endasm
 }
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p><strong>Devolución de valores por funciones</strong></p>
-<p>Por contra, para devolver valores no se utiliza la pila (dado que no podemos tocarla), sino que se utiliza el registro HL. Al finalizar la función C, el valor que contenga el registro HL será el devuelto y asignado en la llamada.</p>
-<p>En tal caso, cuando realicemos una llamada a una función que contenga un bloque ASM, el valor indicado en HL en el momento de retorno será el devuelto por la misma.</p>
-<p>Supongamos pues la siguiente llamada:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p><strong>Devolución de valores por funciones</strong></p>
+                            <p>Por contra, para devolver valores no se utiliza la pila (dado que no podemos tocarla),
+                                sino que se utiliza el registro HL. Al finalizar la función C, el valor que contenga el
+                                registro HL será el devuelto y asignado en la llamada.</p>
+                            <p>En tal caso, cuando realicemos una llamada a una función que contenga un bloque ASM, el
+                                valor indicado en HL en el momento de retorno será el devuelto por la misma.</p>
+                            <p>Supongamos pues la siguiente llamada:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 valor = MiFuncion( a, b, c);
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>En este caso, a valor se le asignará el contenido del registro HL. Como tipos de variables de devolución podremos usar int, short o char (en este último caso sólo se asignará la parte baja de HL).</p>
-<p>A continuación, como ejemplo, se muestra una función que dadas unas coordenadas X, Y de pantalla (con X entre 0 y 31 e Y entre 0 y 24), devuelve la dirección de memoria donde se puede alterar el atributo correspondiente a dichas coordenadas. El ejemplo muestra cómo recibir variables por la pila, realizar cálculos con ellas, y devolver un valor en HL:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>En este caso, a valor se le asignará el contenido del registro HL. Como tipos de
+                                variables de devolución podremos usar int, short o char (en este último caso sólo se
+                                asignará la parte baja de HL).</p>
+                            <p>A continuación, como ejemplo, se muestra una función que dadas unas coordenadas X, Y de
+                                pantalla (con X entre 0 y 31 e Y entre 0 y 24), devuelve la dirección de memoria donde
+                                se puede alterar el atributo correspondiente a dichas coordenadas. El ejemplo muestra
+                                cómo recibir variables por la pila, realizar cálculos con ellas, y devolver un valor en
+                                HL:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 //
 // Devuelve la direccion de memoria del atributo de un caracter
 // de pantalla, de coordenadas (x,y). Usando la dirección que
@@ -763,88 +963,103 @@ int Get_LOWRES_Attrib_Address( char x, char y )
 #endasm
 }
 </pre>
-    </p></td></tr>
-</table>
-<p><strong>En resumen</strong></p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><strong>En resumen</strong></p>
 
-<p>La intención con este artículo final del curso de Z88DK era cerrar un conjunto de contenidos básicos y necesarios a la hora de desarrollar aplicaciones y juegos con este fantástico compilador cruzado de C. En la anterior entrega vimos su instalación y la utilización de la librería SP1, y en esta se han detallado los diferentes módulos de SP1 y la integración de ASM dentro de nuestros programas en C.</p>
-<p>Ambos capítulos, unidos, deberían permitir a un lector con conocimientos de C comenzar su andadura en el desarrollo de aplicaciones o juegos en C para Spectrum, incluyendo la posibilidad de utilizar ensamblador en aquellas partes del programa que lo requieran.</p>
+                            <p>La intención con este artículo final del curso de Z88DK era cerrar un conjunto de
+                                contenidos básicos y necesarios a la hora de desarrollar aplicaciones y juegos con este
+                                fantástico compilador cruzado de C. En la anterior entrega vimos su instalación y la
+                                utilización de la librería SP1, y en esta se han detallado los diferentes módulos de SP1
+                                y la integración de ASM dentro de nuestros programas en C.</p>
+                            <p>Ambos capítulos, unidos, deberían permitir a un lector con conocimientos de C comenzar su
+                                andadura en el desarrollo de aplicaciones o juegos en C para Spectrum, incluyendo la
+                                posibilidad de utilizar ensamblador en aquellas partes del programa que lo
+                                requieran.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>Santiago Romero</td>
+                </tr>
+            </table>
+        </td>
+
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script language="JavaScript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<"/>
+
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+                                <option value="el-aventurero.html">El Aventurero</option>
+
+                                <option value="analisis.html">Análisis</option>
+                                <option value="computone.html">Computone</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html">Programación BASIC</option>
+                                <option value="z88dk.html" selected>Programación Z88DK</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+
+                                <option value="128k-mode.html">128K MODE</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="tira-comica.html">Tira cómica</option>
+                                <option value="opinion.html">Opinión</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                </form>
+
+            </table>
         </td>
     </tr>
     <tr>
-        <td align="right"><br><br>Santiago Romero</td>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+
+            </table>
+            <script type="text/javascript">
+              var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+              document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+              try {
+                var pageTracker = _gat._getTracker("UA-8018503-4");
+                pageTracker._trackPageview();
+              } catch (err) {
+              }</script>
+        </td>
     </tr>
 </table>
-                    </td>
 
-                </tr>
-                <tr><td> </td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('basic.html');" name="anterior" value="<" />
-
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-        <option value="el-aventurero.html">El Aventurero</option>
-
-        <option value="analisis.html">Análisis</option>
-        <option value="computone.html">Computone</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html">Programación BASIC</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-
-        <option value="128k-mode.html">128K MODE</option>
-        <option value="input.html">INPUT</option>
-        <option value="tira-comica.html">Tira cómica</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
-</td>
-
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
-                </tr>
-            </table>
-
-    </body>
+</body>
 </html>
