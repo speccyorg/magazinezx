@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -53,7 +50,7 @@ function RecargarCabecera(url)
     <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
 </td>
             <td align="center" class="texto">Número 1 - Julio 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
@@ -61,18 +58,18 @@ function RecargarCabecera(url)
                     </td>
 
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
 	<tr>
 		<td>
 <div align="justify">
-<i>En esta secci&oacute;n
+<i>En esta sección
 queremos ir enseñándote, de una manera amena y con ejemplos
-f&aacute;ciles de comprender, el funcionamiento de las diferentes
+fáciles de comprender, el funcionamiento de las diferentes
 herramientas de las que disponemos para usar en el PC y que nos
-hacen m&aacute;s sencillo el uso habitual de nuestro Spectrum.</i>
+hacen más sencillo el uso habitual de nuestro Spectrum.</i>
 
 <br><br>
 <b>UTILIDADES PARA TRABAJAR CON DISCOS (I)</b>
@@ -80,64 +77,64 @@ hacen m&aacute;s sencillo el uso habitual de nuestro Spectrum.</i>
 En Internet existe una gran cantidad de archivos conteniendo
 diversos juegos y utilidades para nuestro Spectrum. Entre estos
 archivos tenemos un formato en el cual nos vamos a centrar hoy: son
-los archivos DSK. Estos archivos no son m&aacute;s que una
+los archivos DSK. Estos archivos no son más que una
 imagen fidedigna de los antiguos discos de 3" que
-us&aacute;bamos en el hermano mayor de la gama Spectrum, el +3.
-Esta primera parte del art&iacute;culo va a tener como objetivo
-ense&ntilde;arnos como se realiza la grabaci&oacute;n de estos
-archivos a un disco, tanto de 3" c&oacute;mo de 3" 1/2.<br>
+usábamos en el hermano mayor de la gama Spectrum, el +3.
+Esta primera parte del artículo va a tener como objetivo
+enseñarnos como se realiza la grabación de estos
+archivos a un disco, tanto de 3" cómo de 3" 1/2.<br>
 <br>
 Para poder hacer esto tenemos que tener en cuenta un par de puntos:
-si queremos volcar los archivos a discos de 3 1/2, t&iacute;picos
+si queremos volcar los archivos a discos de 3 1/2, típicos
 de PC, debemos tener un cable adaptador y una disquetera de 3 1/2
 funcionando con nuestro Spectrum +3, y, si queremos grabarlos en
 discos de 3", tendremos que acoplar una disquetera de 3" al PC.
-Esto es evidente y no es el objeto de este art&iacute;culo meternos
+Esto es evidente y no es el objeto de este artículo meternos
 en complicaciones con el hardware, por lo cual supondremos que ya
 tenemos decidida de que forma trabajaremos con las disqueteras y
 realizado el montaje que sea necesario.<br>
 
 <br>
-A continuaci&oacute;n necesitamos descargar el conjunto de
+A continuación necesitamos descargar el conjunto de
 programas que vamos a utilizar, las CPDTOOLS, un conjunto de dos
 programas escritos por Ulrich Doewich que funcionan bajo sistemas
 operativos MS-DOS (bajo Windows es muy posible que no funcione
-correctamente, m&aacute;s adelante veremos c&oacute;mo solucionar
+correctamente, más adelante veremos cómo solucionar
 este problema).<br>
 <br>
-<b>INSTALACI&Oacute;N</b>
+<b>INSTALACIÓN</b>
 <br><br>
-En las CPDTOOLS el proceso de instalaci&oacute;n es muy sencillo,
+En las CPDTOOLS el proceso de instalación es muy sencillo,
 simplemente descomprimimos en una carpeta el archivo .ZIP que nos
 hemos bajado. Al realizar este proceso, nos queda el programa listo
 para trabajar con él.<br>
 <br>
-<b>C&Oacute;MO SE UTILIZA</b>
+<b>CÓMO SE UTILIZA</b>
 
 <br><br>
 CPDWRITE.EXE, que es el programa que nos interesa ahora de los dos
 que trae el pack, es un programa de MS-DOS, y por lo tanto hay que
-utilizarlo desde una consola MS-DOS o s&iacute;mbolo del
-sistema. C&oacute;mo comentaba al inicio de &eacute;ste
-art&iacute;culo, en PC con Windows suele dar problemas, ya que
+utilizarlo desde una consola MS-DOS o símbolo del
+sistema. Cómo comentaba al inicio de éste
+artículo, en PC con Windows suele dar problemas, ya que
 CPDWRITE accede al hardware directamente y Windows no se lo
-permite, para esto la soluci&oacute;n m&aacute;s sencilla es
-hacernos con un disco de arranque (al final del art&iacute;culo, en
+permite, para esto la solución más sencilla es
+hacernos con un disco de arranque (al final del artículo, en
 links, podéis encontrar de dónde descargarlos ya hechos). Si
-nuestro disco duro est&aacute; particionado y formateado usando
+nuestro disco duro está particionado y formateado usando
 FAT32 tendremos que usar un disco de arranque de Windows 98 o
-superior, y si est&aacute; en FAT16, nos vale cualquiera a partir
+superior, y si está en FAT16, nos vale cualquiera a partir
 de MS-DOS. Date cuenta de que deberemos acceder al disco duro donde
 tendremos almacenados los archivos DSK y las CPD TOOLS.<br>
 <br>
 Tenemos en el directorio las cpdtools ya descomprimidas, ahora nos
 hace falta un archivo en formato DSK para copiar al disco. Lo
-descargamos, en Links ten&eacute;is varios sitios de dónde
+descargamos, en Links tenéis varios sitios de dónde
 cogerlos, lo metemos en el directorio de las CPDTOOLS y
 descomprimimos el ZIP en el cual suelen venir almacenados. Una vez
 hecho esto, es recomendable cambiarles el nombre a los DSK para que
 no se pasen del estándar MS-DOS de 8+3 caracteres, ya que los
-nombres largos t&iacute;picos de Windows, suelen ser una causa de
+nombres largos típicos de Windows, suelen ser una causa de
 que CPDWRITE nos muestre el error "no encuentro el archivo". Valga
 como ejemplo, si nos bajamos un archivo llamado
 LaAbadiaDelCrimen.dsk, lo podemos renombrar como abadia.dsk.<br>
@@ -146,19 +143,19 @@ LaAbadiaDelCrimen.dsk, lo podemos renombrar como abadia.dsk.<br>
 Una vez todo preparado vamos a volcar la imagen dsk en el
 disco. Reiniciamos el PC con el disco de arranque, en el caso de
 que no nos funcione en Windows, tal como decíamos antes o
-abrimos una sesi&oacute;n MS-DOS o s&iacute;mbolo del sistema.
+abrimos una sesión MS-DOS o símbolo del sistema.
 Accedemos a la carpeta donde tenemos almacenadas las CPDTOOLS y
 tecleamos: CPDWRITE abadia.dsk, o el nombre del archivo que
-queremos grabar, y esperamos que el proceso de grabaci&oacute;n
+queremos grabar, y esperamos que el proceso de grabación
 termine, tarda unos pocos segundos. Podemos ver en la pantalla que
-la grabaci&oacute;n va avanzando al incrementar el n&uacute;mero
+la grabación va avanzando al incrementar el número
 de la pista (track) que se va escribiendo en el disco. Simplemente con esto
-nos copiar&aacute; el archivo en lo que ser&iacute;a la cara 'A'
+nos copiará el archivo en lo que sería la cara 'A'
 del disco, en caso de que sea de 3 1/2, o, si tenemos una
 disquetera de 3" adaptada al PC, en la cara del disco que tengamos
 introducida hacia arriba. En cuanto al uso de la disquetera de 3"
-poco m&aacute;s hay que decir, el proceso es muy sencillo tal como
-lo har&iacute;amos en el Spectrum, nos limitamos a dar la vuelta al
+poco más hay que decir, el proceso es muy sencillo tal como
+lo haríamos en el Spectrum, nos limitamos a dar la vuelta al
 disco.<br>
 <br>
 <b>TRABAJANDO CON LA DISQUETERA DE 3" 1/2</b>
@@ -167,18 +164,18 @@ disco.<br>
 Vamos a complicar un poco las cosas y a comentar unas
 consideraciones que tenemos que tener en cuenta si tenemos una
 disquetera de 3" 1/2 trabajando en nuestro Spectrum, cosa que el
-autor de este art&iacute;culo recomienda. Lo primero es saber el
+autor de este artículo recomienda. Lo primero es saber el
 tipo de discos que tenemos que utilizar, ya que si no son de doble
 densidad, es decir, de los antiguos de 720k, no sirven y deberemos
 usar uno de alta densidad, los que podemos encontrar ahora en
-cualquier tienda de inform&aacute;tico o consumibles de oficina,
+cualquier tienda de informático o consumibles de oficina,
 tapando el orificio que tienen a la derecha con un poco de celo.
 Hecho esto, podemos usar el disco como si tuviera dos caras,
-simplemente con a&ntilde;adir un par&aacute;metro al programa
+simplemente con añadir un parámetro al programa
 CPDWRITE.exe:<br>
 <br>
 <ul>
-	<li>Para grabar en lo que ser&iacute;a la cara 'A' del disco: <font class="codigo">CPDWRITE abadia.dsk</font></li>
+	<li>Para grabar en lo que sería la cara 'A' del disco: <font class="codigo">CPDWRITE abadia.dsk</font></li>
 	<li>Para grabar en la cara 'B': <font class="codigo">CPDWRITE abadia.dsk S</font></li>
 
 </ul>
@@ -193,30 +190,30 @@ de 3" 1/2 con una capacidad mayor de como lo hace el S.O. del
 Spectrum.<br>
 <br>
 Cuando descomprimimos el archivo donde vienen las CPD TOOLS, nos
-crea tres im&aacute;genes llamadas 180K.dsk, 360K.dsk y 720K.dsk.
-Si grabamos estas im&aacute;genes en disco con el comando visto
+crea tres imágenes llamadas 180K.dsk, 360K.dsk y 720K.dsk.
+Si grabamos estas imágenes en disco con el comando visto
 antes: <font class="codigo">CPDWRITE 720K.dsk</font>, tendremos el disco formateado y vacio
-para meter informaci&oacute;n hasta que completemos esa cantidad de
-espacio libre. Estos discos funcionar&aacute;n perfectamente con el
-Spectrum, salvo por alguna limitaci&oacute;n menor. No podemos
-tener m&aacute;s de 256 archivos en el mismo disco, y al hacer un
+para meter información hasta que completemos esa cantidad de
+espacio libre. Estos discos funcionarán perfectamente con el
+Spectrum, salvo por alguna limitación menor. No podemos
+tener más de 256 archivos en el mismo disco, y al hacer un
 CAT de los mismo, únicamente se nos mostraran los 64 primeros, pero
 podemos listarlos por lotes, por ejemplo, haciendo CAT a*.*, con lo
-cual nos listar&aacute; los archivos que comiencen por la letra
+cual nos listará los archivos que comiencen por la letra
 'A'. Jugando con los comandos podremos acceder a todos los archivos
 del disco.<br>
 
 <br>
 Si los formateamos a 720K, por ejemplo, debemos tener en cuenta de
-que su utilizan c&oacute;mo si s&oacute;lo tuviesen cara 'A' con
+que su utilizan cómo si sólo tuviesen cara 'A' con
 esa capacidad.<br>
 <br>
 <b>CONCLUSIONES</b>
 <br><br>
 Este programa es una magnífica utilidad para nuestro PC, nos
 facilita enormemente la tarea de pasar a disco nuestros programas
-preferidos en una cantidad de tiempo &iacute;nfima. Si
-adem&aacute;s lo acompa&ntilde;amos con el adaptador para poner una
+preferidos en una cantidad de tiempo ínfima. Si
+además lo acompañamos con el adaptador para poner una
 disquetera de 3" 1/2 a nuestro Spectrum, tendremos el beneficio de
 poder usar discos nuevos, que compramos a bajo precio comparado con
 el coste que tiene encontrar discos de 3" en el mercado de segunda
@@ -224,7 +221,7 @@ mano, caros gracias a los especuladores con este tipo de material y
 escasos.<br>
 <br>
 El mes que viene nos meteremos en profundidad con el segundo de los
-programas de este magnifico lote, CPDREAD, que nos permitir&aacute;
+programas de este magnifico lote, CPDREAD, que nos permitirá
 
 crear archivos DSK a partir de nuestros discos de 3" y 3" 1/2.<br>
 <table border="0" cellspacing="0" cellpadding="0" width="100%" class="texto">
@@ -233,23 +230,23 @@ crear archivos DSK a partir de nuestros discos de 3" y 3" 1/2.<br>
 	</tr>
 </table>
 <br><hr><br>
-A continuaci&oacute;n presentamos un texto que nos ha remitido
-TBrazil que complementa el art&iacute;culo referente a las CPDTools.
+A continuación presentamos un texto que nos ha remitido
+TBrazil que complementa el artículo referente a las CPDTools.
 <br><br>
 <b>CPCFS (cpcemu filesystem maintance) por Derik
 Van Zeutphen</b><br>
 
 <br>
-Texto realizado por Tbrazil basado en la explicaci&oacute;n de
+Texto realizado por Tbrazil basado en la explicación de
 Rafael Molina Chasserot para ECSS<br>
 <br>
 Cpcfs fue creado originalmente como complemento al emulador de
 Amstrad CPC llamado CPCemu.<br>
 <br>
 El programa nos permite insertar bajo MS-DOS ficheros de cualquier
-extensi&oacute;n dentro de un archivo DSK (imágenes de disco para
+extensión dentro de un archivo DSK (imágenes de disco para
 emulador). Con ello, por ejemplo, podemos insertar ficheros de
-extensi&oacute;n *.z80 dentro de un DSK y as&iacute;, con el programa
+extensión *.z80 dentro de un DSK y así, con el programa
 z80 loader de Gary Lancaster, poderlos ejecutar en un Spectrum +3
 real.<br>
 <br>
@@ -280,14 +277,14 @@ ecss.z5, y subió el fichero DISK de nuevo al DSK</li>
  la aventura conversacional ecss.z5 como hacía con la
  aventura original del disquete.
 <br><br>
- Pero veamos cómo se usa el programa en sí mismo. Para poder usar el programa, por tanto, iniciaremos una sesi&oacute;n
+ Pero veamos cómo se usa el programa en sí mismo. Para poder usar el programa, por tanto, iniciaremos una sesión
 DOS en nuestros PC's.<br>
 
 <br>
 Esta utilidad usa gran cantidad de comandos de MS-DOS y para mejor
-entendimiento os pondr&eacute; un ejemplo pr&aacute;ctico de su
-utilizaci&oacute;n, es muy pr&aacute;ctico antes de realizar
-cualquier operaci&oacute;n hacer antes una copia de seguridad de
+entendimiento os pondré un ejemplo práctico de su
+utilización, es muy práctico antes de realizar
+cualquier operación hacer antes una copia de seguridad de
 nuestro fichero DSK inicial.<br>
 <br>
 Los pasos a seguir son los siguientes:
@@ -299,52 +296,52 @@ utilidades CPDtools disponible en:<br>
 <a href="http://www.speccy.org/sinclairmania/arch/cpdtools.zip">http://www.speccy.org/sinclairmania/arch/cpdtools.zip</a></li>
 
 <li>Haremos una copia del fichero juego.dsk escribiendo en la
-l&iacute;nea de comandos de DOS:<br>
+línea de comandos de DOS:<br>
 <font class="codigo">copy juego.dsk juego1.dsk</font></li>
 
 <li>Acto seguido ponemos en el mismo directorio/carpeta el fichero
-juego.dsk, el ejecutable de CPCFS y los ficheros de extensi&oacute;n
+juego.dsk, el ejecutable de CPCFS y los ficheros de extensión
 *.z80.</li>
 
-<li>Ahora ejecutamos el programa CPCFS y nos saldr&aacute; esto en
+<li>Ahora ejecutamos el programa CPCFS y nos saldrá esto en
 pantalla:<br><br>
- <font class="codigo">cpcfs&gt;</font></a><br><br>
+ <font class="codigo">cpcfs></font></a><br><br>
 
  </li>
 
 <li>Lo siguiente es abrir (open) el disco y lo hacemos de la
 siguiente manera:<br><br>
 
- <font class="codigo">cpcfs&gt; open juego<br>
- cpcfs&gt; dir</font><br>
+ <font class="codigo">cpcfs> open juego<br>
+ cpcfs> dir</font><br>
 <br>
 
 Con esto vemos abrimos y examinamos el contenido del disco. O sea,
-que el programa usa comandos b&aacute;sicos del DOS que hacen la
-misma funci&oacute;n.</li>
+que el programa usa comandos básicos del DOS que hacen la
+misma función.</li>
 
 <li>El siguiente paso es insertar los arhivos *.z80 dentro del
-disco y se hace as&iacute;:<br>
+disco y se hace así:<br>
 <br>
-<font class="codigo">cpcfs&gt; mput -b *.z80</font><br>
+<font class="codigo">cpcfs> mput -b *.z80</font><br>
 <br>
-De este modo insertamos todos los archivos de extensi&oacute;n z80
-dentro del disco. Si hacemos un DIR nos saldr&aacute;n todos los
+De este modo insertamos todos los archivos de extensión z80
+dentro del disco. Si hacemos un DIR nos saldrán todos los
 archivos que hay dentro del disco. Podemos poner cualquier
 extensión o incluso insertar fichero por fichero.</li>
 
 <li>Si quisiéramos borrar archivos solo tendríamos que poner al
 igual que en MS-DOS:<br>
 <br>
-<font class="codigo">cpcfs&gt; del *.z80</font><br>
+<font class="codigo">cpcfs> del *.z80</font><br>
 <br>
-Esto borrar&iacute;a los archivos de extensi&oacute;n z80.</li>
+Esto borraría los archivos de extensión z80.</li>
 
 <li>Para cerrar el disco y salir del programa ponemos lo
 siguiente:<br>
 <br>
 
-<font class="codigo">cpcfs&gt; quit</font></li>
+<font class="codigo">cpcfs> quit</font></li>
 </ul>
 Como veis la manera de insertar archivos dentro de un disco es
 realmente sencilla.
@@ -372,7 +369,7 @@ realmente sencilla.
 	</ul>
 	</li>
 <li>La web de CPCFS por
-Derik, all&iacute; encontrar&eacute;is las instrucciones completas del
+Derik, allí encontraréis las instrucciones completas del
 programa y todas sus opciones.<br>
 
 <a href=" http://home.t-online.de/home/derik/cpcfs.htm" onClick="window.open(this.href); return false;"> http://home.t-online.de/home/derik/cpcfs.htm</a></li>
@@ -392,7 +389,7 @@ y CPDREAD.<br>
 </table>
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <script language="JavaScript">

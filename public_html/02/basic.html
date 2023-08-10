@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -53,7 +50,7 @@ function RecargarCabecera(url)
     <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente" value=">" />
 </td>
             <td align="center" class="texto">Número 2 - Agosto 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
@@ -61,7 +58,7 @@ function RecargarCabecera(url)
                     </td>
 
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
@@ -134,7 +131,7 @@ que el programa quede de la siguiente forma:
 	</tr>
 	<tr bgcolor="#EAE8A9">
 		<td class="codigo">
-&nbsp;5 LET A=10<br>
+ 5 LET A=10<br>
 10 IF A=10 THEN LET A=A+1
 		</td>
 	</tr>
@@ -485,10 +482,10 @@ saltando las que pudiese haber tanto delante como detrás de la misma:
 	</tr>
 	<tr bgcolor="#EAE8A9">
 		<td class="codigo">
-&nbsp;10 LET A=5<br>
-&nbsp;20 IF A=5 THEN GO TO 100<br>
-&nbsp;30 PRINT "NO ES CIERTO"<br>
-&nbsp;40 STOP<br>
+ 10 LET A=5<br>
+ 20 IF A=5 THEN GO TO 100<br>
+ 30 PRINT "NO ES CIERTO"<br>
+ 40 STOP<br>
 100 PRINT "SI ES CIERTO"
 		</td>
 
@@ -526,10 +523,10 @@ Lo vamos a ver con un ejemplo:
 	</tr>
 	<tr bgcolor="#EAE8A9">
 		<td class="codigo">
-&nbsp;10 LET A =5<br>
-&nbsp;20 IF A=5 THEN GO SUB 100<br>
-&nbsp;30 PRINT "DESPUES DEL GOSUB"<br>
-&nbsp;40 STOP<br>
+ 10 LET A =5<br>
+ 20 IF A=5 THEN GO SUB 100<br>
+ 30 PRINT "DESPUES DEL GOSUB"<br>
+ 40 STOP<br>
 100 PRINT "EL GOSUB HA FUNCIONADO"<br>
 
 110 RETURN
@@ -574,10 +571,10 @@ flujo del programa:
 	<tr bgcolor="#EAE8A9">
 		<td class="codigo">
 
-&nbsp;10 PRINT "HOLA MUNDO"<br>
-&nbsp;20 GO TO 100<br>
-&nbsp;30 REM A ESTA LINEA NO LLEGARA NUNCA LA EJECUCION DEL PROGRAMA<br>
-&nbsp;40 REM YA QUE EL GO TO HACE QUE LA EJECUCION SALTE ESTA LINEA<br>
+ 10 PRINT "HOLA MUNDO"<br>
+ 20 GO TO 100<br>
+ 30 REM A ESTA LINEA NO LLEGARA NUNCA LA EJECUCION DEL PROGRAMA<br>
+ 40 REM YA QUE EL GO TO HACE QUE LA EJECUCION SALTE ESTA LINEA<br>
 100 PRINT "POR AQUI CONTINUA EL PROGRAMA"
 		</td>
 	</tr>
@@ -679,16 +676,16 @@ las instrucciones vistas hasta aquí.
 	</tr>
 	<tr bgcolor="#EAE8A9">
 		<td class="codigo">
-&nbsp;10 PRINT "DEBE ADIVINAR UN NUMERO ELEGIDO ALEATORIAMENTE ENTRE 1 Y 100 EN LA CANTIDAD DE INTENTOS QUE USTED INTRODUZCA"<br>
-&nbsp;20 INPUT "Introduzca el número de intentos (Max.10) ";A<br>
+ 10 PRINT "DEBE ADIVINAR UN NUMERO ELEGIDO ALEATORIAMENTE ENTRE 1 Y 100 EN LA CANTIDAD DE INTENTOS QUE USTED INTRODUZCA"<br>
+ 20 INPUT "Introduzca el número de intentos (Max.10) ";A<br>
 
-&nbsp;30 IF A<1 OR A >10 THEN GO TO 20<br>
-&nbsp;40 LET VALOR=(RND*100)+1<br>
-&nbsp;50 FOR F=1 TO A<br>
-&nbsp;60 INPUT "INTRODUZCA NUMERO ";B<br>
-&nbsp;70 IF B=VALOR THEN PRINT "ENHORABUENA, ACERTO EN ";F;" INTENTOS": STOP<br>
-&nbsp;80 IF B>VALOR THEN PRINT "EL NUMERO INTRODUCIDO ES MAYOR"<br>
-&nbsp;90 IF B&lt;VALOR THEN PRINT "EL NUMERO INTRODUCIDO ES MENOR"<br>
+ 30 IF A<1 OR A >10 THEN GO TO 20<br>
+ 40 LET VALOR=(RND*100)+1<br>
+ 50 FOR F=1 TO A<br>
+ 60 INPUT "INTRODUZCA NUMERO ";B<br>
+ 70 IF B=VALOR THEN PRINT "ENHORABUENA, ACERTO EN ";F;" INTENTOS": STOP<br>
+ 80 IF B>VALOR THEN PRINT "EL NUMERO INTRODUCIDO ES MAYOR"<br>
+ 90 IF B<VALOR THEN PRINT "EL NUMERO INTRODUCIDO ES MENOR"<br>
 100 NEXT F<br>
 
 110 CLS: PRINT "NO HA SIDO CAPAZ DE ADIVINAR EL NUMERO EN ";A; " INTENTOS"<br>
@@ -743,7 +740,7 @@ controlándolo a nuestro antojo.
 </table>
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <script language="JavaScript">

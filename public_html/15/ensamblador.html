@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -50,14 +47,14 @@ function RecargarCabecera(url)
 </td>
             <td align="center" class="texto">Número 15 - Marzo 2007</td>
 
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
 </a>
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 
@@ -496,7 +493,7 @@ LDDR = Repetir LDD hasta que BC valga 0
  BIT 0, A      ; Que valor tiene el bit 0?
                ; Ahora Z = bit 0 de A.
  JP Z es_par   ; Saltar si esta Z activado
-               ; (si Z=1 -&gt; salta a es_par)
+               ; (si Z=1 -> salta a es_par)
                ; ya que si Z=1, es porque e
 </pre>
     </p></td></tr>
@@ -520,12 +517,12 @@ LDDR = Repetir LDD hasta que BC valga 0
     <tr><td><p class="codigo">
 <pre>
  Bit      7 6 5 4 3 2 1 0                 7 6 5 4 3 2 1 0
-         ----------------- -&gt; RLC -&gt;     -----------------
+         ----------------- -> RLC ->     -----------------
  Valor    a b c d e f g h                 b c d e f g h a
 
 
  Bit      7 6 5 4 3 2 1 0                 7 6 5 4 3 2 1 0
-         ----------------- -&gt; RRC -&gt;     -----------------
+         ----------------- -> RRC ->     -----------------
  Valor    a b c d e f g h                 h a b c d e f g
 
 </pre>
@@ -564,12 +561,12 @@ LDDR = Repetir LDD hasta que BC valga 0
     <tr><td><p class="codigo">
 <pre>
  Bit     C   7 6 5 4 3 2 1 0               C   7 6 5 4 3 2 1 0
-        ---------------------- -&gt;  RL  -&gt;  ---------------------
+        ---------------------- ->  RL  ->  ---------------------
  Valor   X   a b c d e f g h               a   b c d e f g h X
 
 
  Bit     C   7 6 5 4 3 2 1 0               C   7 6 5 4 3 2 1 0
-        ---------------------- -&gt;  RR  -&gt;  ---------------------
+        ---------------------- ->  RR  ->  ---------------------
  Valor   X   a b c d e f g h               h   X a b c d e f g
 
 </pre>
@@ -688,8 +685,8 @@ LDDR = Repetir LDD hasta que BC valga 0
     <tr><td><p class="codigo">
 <pre>
 
- RRD:  A = ( A&lt;&lt;4 )    | ([HL]&gt;&gt;4)
- RLD:  A = ( [HL]&lt;&lt;4 ) | (A & 0x0F)
+ RRD:  A = ( A<<4 )    | ([HL]>>4)
+ RLD:  A = ( [HL]<<4 ) | (A & 0x0F)
 </pre>
 
     </p></td></tr>
@@ -736,7 +733,7 @@ LDDR = Repetir LDD hasta que BC valga 0
     <tr><td><p class="codigo">
 <pre>
  Bit 7 6 5 4 3 2 1 0                C    7 6 5 4 3 2 1 0
-    ----------------- -&gt; SLA -&gt;  ------------------------
+    ----------------- -> SLA ->  ------------------------
      a b c d e f g h                a    b c d e f g h 0
 
 </pre>
@@ -744,7 +741,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 </table>
  <p>Literalmente:</p>
  <ul>
- 	<li>Rotar los bits a la izquierda (&lt;&lt;).</li>
+ 	<li>Rotar los bits a la izquierda (<<).</li>
  	<li>El bit "a" (bit 7) se copia al Carry Flag.</li>
  	<li>Por la derecha entra un cero.</li>
 
@@ -753,7 +750,7 @@ LDDR = Repetir LDD hasta que BC valga 0
     <tr><td><p class="codigo">
 <pre>
  Bit 7 6 5 4 3 2 1 0                C    7 6 5 4 3 2 1 0
-    ----------------- -&gt; SRA -&gt;  ------------------------
+    ----------------- -> SRA ->  ------------------------
      a b c d e f g h                h    a a b c d e f g
 </pre>
     </p></td></tr>
@@ -761,7 +758,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 
 <p>Literalmente:</p>
 <ul>
-	<li>Rotar los bits a la derecha (&gt;&gt;).</li>
+	<li>Rotar los bits a la derecha (>>).</li>
 	<li>El bit "h" (bit 0) se copia al Carry Flag.</li>
 	<li>En la izquierda (bit 7) se mantiene su valor anterior.</li>
 </ul>
@@ -846,7 +843,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 </table>
 <p>Literalmente:</p>
 <ul>
-	<li>Rotar los bits a la derecha (&gt;&gt;).</li>
+	<li>Rotar los bits a la derecha (>>).</li>
 	<li>El bit "h" (bit 0) se copia al Carry Flag.</li>
 	<li>Por la izquierda entra un cero.</li>
 </ul>
@@ -872,7 +869,7 @@ LDDR = Repetir LDD hasta que BC valga 0
  -----------------------------------------------------------------
   SLA s             |* * 0 P 0 *|        Shift Left Arithmetic (s=s*2)
   SRA s             |* * 0 P 0 *|        Shift Right Arithmetic (s=s/2)
-  SRL s             |* * 0 P 0 *|        Shift Right Logical (s=s&gt;&gt;1)
+  SRL s             |* * 0 P 0 *|        Shift Right Logical (s=s>>1)
 </pre>
     </p></td></tr>
 </table>
@@ -1148,7 +1145,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 <pre>
  Sea A = 10100000
  Sea B = 00001111
-       ------------ &lt;-- Operación OR
+       ------------ <-- Operación OR
          10101111
 
 </pre>
@@ -1209,7 +1206,7 @@ LDDR = Repetir LDD hasta que BC valga 0
 </table>
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 

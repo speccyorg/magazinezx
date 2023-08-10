@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -51,14 +48,14 @@ function RecargarCabecera(url)
 </td>
 
             <td align="center" class="texto">Número 14 - Diciembre 2006</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
 </a>
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
 
                 <tr>
                     <td>
@@ -99,9 +96,9 @@ struct sp_UDK keys;
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-#include &lt;spritepack.h&gt;
+#include <spritepack.h>
 
-#include &lt;stdlib.h&gt;
+#include <stdlib.h>
 #pragma output STACKPTR=61440
 
 extern struct sp_Rect *sp_ClipStruct;
@@ -295,8 +292,8 @@ defb @00000000, @11111111
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-#include &lt;spritepack.h&gt;
-#include &lt;stdlib.h&gt;
+#include <spritepack.h>
+#include <stdlib.h>
 
 #pragma output STACKPTR=61440
 
@@ -509,8 +506,8 @@ sp_Initialize(INK_WHITE | PAPER_BLACK, ' ');
     <tr><td><p class="codigo">
 
 <pre>
-#include &lt;spritepack.h&gt;
-#include &lt;stdlib.h&gt;
+#include <spritepack.h>
+#include <stdlib.h>
 #pragma output STACKPTR=61440
 
 extern struct sp_Rect *sp_ClipStruct;
@@ -822,8 +819,8 @@ LIB SPNullSprPtr
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-#include &lt;spritepack.h&gt;
-#include &lt;stdlib.h&gt;
+#include <spritepack.h>
+#include <stdlib.h>
 #pragma output STACKPTR=61440
 
 #define NUM_ROCAS 8
@@ -916,7 +913,7 @@ main()
 	   keys.right = sp_LookupKey('p');
 	   keys.left = sp_LookupKey('o');
 
-	   for (i=0;i&lt;NUM_ROCAS;i++)
+	   for (i=0;i<NUM_ROCAS;i++)
 	   {
               n = 0;
               spriteRoca[i] = sp_CreateSpr(sp_OR_SPRITE, 3, roca1, 1, TRANSPARENT);
@@ -963,7 +960,7 @@ main()
 		    }
 		    dx = -3;
 		 }
-		 else if ((i & sp_RIGHT) == 0 && ski->col &lt; 30)
+		 else if ((i & sp_RIGHT) == 0 && ski->col < 30)
 		 {
 	            if (posicion != 1)
 		    {
@@ -1222,7 +1219,7 @@ defb @00000000, @11111111
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
- for (i=0;i&lt;NUM_ROCAS;i++)
+ for (i=0;i<NUM_ROCAS;i++)
  {
     n = 0;
     spriteRoca[i] = sp_CreateSpr(sp_OR_SPRITE, 3, roca1, 1, TRANSPARENT);
@@ -1363,7 +1360,7 @@ else if ((i & sp_RIGHT) == 0 <font color="red">&& ski->col < 30</font>)
 </table>
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <script language="JavaScript">

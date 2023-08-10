@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -59,7 +56,7 @@ function RecargarCabecera(url)
     <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
 </td>
             <td align="center" class="texto">Número 17 - Marzo 2009</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
@@ -67,7 +64,7 @@ function RecargarCabecera(url)
                     </td>
                 </tr>
 
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
@@ -188,7 +185,7 @@ zxb -T -B -a hola.bas
   <li>-t o --tap hace que el formato de salida sea un archivo de cinta .tap. Esta opción y la anterior son excluyentes.</li>
   <li>-B o --BASIC hace que se genere un cargador BASIC que cargue nuestro programa. Si usas esta opción, necesariamente tienes que haber usado una de las anteriores.</li>
   <li>-a o --autorun hace que nuestro programa se ejecute automáticamente tras ser cargado. Esta opción obliga a que se use la opción --BASIC, ya que se requiere un cargador BASIC para que el programa se autoejecute.</li>
-  <li>-o &lt;fichero de salida&gt;. Permite especificar un nombre de archivo distinto para el programa resultante. Generalmente se usará el mismo nombre que el programa de código fuente (.bas), pero con una extensión distinta (.bin, .tap o .tzx)</li>
+  <li>-o <fichero de salida>. Permite especificar un nombre de archivo distinto para el programa resultante. Generalmente se usará el mismo nombre que el programa de código fuente (.bas), pero con una extensión distinta (.bin, .tap o .tzx)</li>
   <li>-A o --asm Hace que no se genere el código objeto. En lugar de eso obtendremos el código ensamblador de todo nuestro programa (un archivo ASCII con extensión .asm). Esta opción es útil si queremos optimizar a mano nuestro programa. Se ha intentado que el código ensamblador generado sea bastante legible y con comentarios incluidos.</li>
 
   <li>-S o --ORG cambia la dirección de comienzo de ejecución del código máquina. Como se dijo antes, por defecto es 32768, pero podemos hacer que se ejecute a partir de una dirección distinta (por ej. 28000) para obtener más memoria.</li>
@@ -365,7 +362,7 @@ DIM a(1 TO 10, 1 TO 5) AS Float : REM  esto es equivalente a DIM a(10, 5) en el 
     <tr><td><p class="codigo">
 <pre>
 REM Definimos un array de 2 filas y 8 columnas
-DIM MiUdg(1, 7) AS uByte =&gt; { {60, 66, 129, 129, 129, 129, 66, 60}, _
+DIM MiUdg(1, 7) AS uByte => { {60, 66, 129, 129, 129, 129, 66, 60}, _
                               {24, 60, 60, 60, 126, 251, 247, 126}}
 </pre>
     </p></td></tr>
@@ -390,7 +387,7 @@ DIM MiUdg(1, 7) AS uByte =&gt; { {60, 66, 129, 129, 129, 129, 66, 60}, _
 <p>Existen además, dos sentencias de control de bucles nuevas:</p>
 <ul>
   <li>EXIT FOR termina el bucle FOR y salta justo al final (solíamos usar on GOTO para esto, ¿verdad?)</li>
-  <li>CONTINUE FOR que "continúa" el bucle, es decir, realiza un NEXT. En el BASIC de Sinclair poníamos un NEXT &lt;variable&gt;, pero en ZX BASIC esto no se permite. Hay que usar CONTINUE.</li>
+  <li>CONTINUE FOR que "continúa" el bucle, es decir, realiza un NEXT. En el BASIC de Sinclair poníamos un NEXT <variable>, pero en ZX BASIC esto no se permite. Hay que usar CONTINUE.</li>
 </ul>
 
 <p><em>IF</em></p>
@@ -398,7 +395,7 @@ DIM MiUdg(1, 7) AS uByte =&gt; { {60, 66, 129, 129, 129, 129, 66, 60}, _
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-IF a &lt; b THEN
+IF a < b THEN
     PRINT "a es menor que b"
     PRINT "Esto es otra sentencia más"
 ELSE : REM si no...
@@ -412,7 +409,7 @@ END IF
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-1000 IF a &lt; b THEN PRINT "a es menor que b": PRINT "Esto es otra sentencia más" : GO TO 1030
+1000 IF a < b THEN PRINT "a es menor que b": PRINT "Esto es otra sentencia más" : GO TO 1030
 1010 REM si no...
 1020 PRINT "a no es menor que b"
 1030 ...
@@ -425,7 +422,7 @@ END IF
     <tr><td><p class="codigo">
 
 <pre>
-WHILE a &lt; 10
+WHILE a < 10
     LET a = a + 1
 END WHILE
 </pre>
@@ -441,7 +438,7 @@ END WHILE
 <pre>
 DO
     LET a = a + 1
-LOOP UNTIL a &gt;= 10
+LOOP UNTIL a >= 10
 </pre>
     </p></td></tr>
 </table>
@@ -538,7 +535,7 @@ WHILE INKEY$ = ""
     PLOT 131, 107: DRAW sx, sy
 
     LET t2 = t()
-    WHILE (t2 &lt;= t1) AND (INKEY$ = "")
+    WHILE (t2 <= t1) AND (INKEY$ = "")
         let t2 = t()
     END WHILE : REM Espera hasta el momento de moverlo
 
@@ -553,7 +550,7 @@ END WHILE
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 <pre>
-#include &lt;screen.bas&gt;
+#include <screen.bas>
 </pre>
     </p></td></tr>
 
@@ -703,7 +700,7 @@ misubrutina(3, 6) : REM imprime 9
 </pre>
     </p></td></tr>
 </table>
-<p>La diferencia principal es que SUB siempre tiene que invocarse. Nunca devuelve un resultado, al contrario que las funciones. De hecho, no puedes usar RETURN &lt;valor&gt; para salir de una subrutina, sino simplemente RETURN. Retornar de una subrutina o función y retornar de un GOSUB son cosas distintas. Al escribir simplemente RETURN, desde dentro de una función o subrutina siempre se supondrá que se retorna de la misma y no de un GOSUB.</p>
+<p>La diferencia principal es que SUB siempre tiene que invocarse. Nunca devuelve un resultado, al contrario que las funciones. De hecho, no puedes usar RETURN <valor> para salir de una subrutina, sino simplemente RETURN. Retornar de una subrutina o función y retornar de un GOSUB son cosas distintas. Al escribir simplemente RETURN, desde dentro de una función o subrutina siempre se supondrá que se retorna de la misma y no de un GOSUB.</p>
 <p>Esto es así porque cada vez que se retorna, el programa tiene que hacer ciertas gestiones con la pila de código máquina antes de regresar. Así pues, no es lo mismo retornar de un GOSUB, que de una función o subrutina. Al declarar una subrutina ya le estamos indicando al compilador que no es necesario devolver ningún valor, y eso permite hacer una pequeña optimización.</p>
 
 <p>Por último, las variables declaradas (DIM) dentro de una subrutina o función son privadas y no son accesibles desde fuera. Además, sólo usan memoria durante la ejecución de la función. Al salir de la misma, esa memoria se libera (se usa la pila de código máquina). Mira este ejemplo:</p>
@@ -757,7 +754,7 @@ END ASM
     <tr><td><p class="codigo">
 <pre>
 REM Importamos la función input
-#include &lt;input.bas&gt;
+#include <input.bas>
 
 LET a$ = input(32): REM Input de una cadena de 32 caracteres como máximo
 PRINT a$
@@ -793,7 +790,7 @@ PRINT a$
 </table>
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
 
                     <td>

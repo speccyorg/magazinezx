@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -52,7 +49,7 @@ function RecargarCabecera(url)
     <input type="button" onclick="RecargarCabecera('opinion.html');" name="siguiente" value=">" />
 </td>
             <td align="center" class="texto">Número 10 - Noviembre 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
@@ -60,7 +57,7 @@ function RecargarCabecera(url)
                     </td>
                 </tr>
 
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
@@ -310,8 +307,8 @@ Dibujar_Generacion_Actual:
 void DrawLife( void )
 {
    int x, y;
-   for( y=0; y&lt;ALTO; y++)
-      for( x=0; x&lt;ANCHO; x++)
+   for( y=0; y<ALTO; y++)
+      for( x=0; x<ANCHO; x++)
       {
          Celula(x,y) = TempCelula(x,y);
          DrawCell(x,y,Celula(x,y));
@@ -411,12 +408,12 @@ void Life( void )
    int vecinos;
 
    // Calculamos la siguiente generacion
-   for( y=0; y&lt;ALTO; y++)
+   for( y=0; y<ALTO; y++)
    {
-      for( x=0; x&lt;ANCHO ; x++)
+      for( x=0; x<ANCHO ; x++)
       {
         // Las celulas del borde mueren
-        if( x==0 || y==0 || x&gt;ANCHO-2 || y&gt;ALTO-2 )
+        if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
            TempCelula(x,y)=0 ;
 
         else
@@ -556,17 +553,17 @@ void Life( void )
    unsigned int vecinos, offset;
 
    // Calculamos la siguiente generacion
-   for( y=0; y&lt;ALTO; y++)
+   for( y=0; y<ALTO; y++)
    {
-      for( x=0; x&lt;ANCHO ; x++)
+      for( x=0; x<ANCHO ; x++)
       {
         // Las celulas del borde mueren
-        if( x==0 || y==0 || x&gt;ANCHO-2 || y&gt;ALTO-2 )
+        if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
            TempCelula(x,y)=0 ;
 
         else
         {
-           offset = (y&lt;&lt;5)+x;
+           offset = (y<<5)+x;
 
            // Obtenemos el numero de celulas vecinas
            vecinos = mapa[ offset-33 ] + mapa[ offset-32 ] +
@@ -612,12 +609,12 @@ void DrawLife( void )
    unsigned char *memaddr;
 
    memaddr = (0x4000 + 6144);
-   for( i=0; i&lt;ANCHO*ALTO; i++ )
+   for( i=0; i<ANCHO*ALTO; i++ )
    {
       mapa[i] = temp[i];
 
       // Dibujamos en pantalla cambiando el ATTR
-      *memaddr = (temp[i]&lt;&lt;4);
+      *memaddr = (temp[i]<<4);
 
       // pasamos al siguiente caracter en pantalla
       memaddr++;
@@ -647,7 +644,7 @@ void DrawLife( void )
     <tr><td><p class="codigo">
 <pre>
 /*
- *  ZX-Life  -&gt; Implementacion de ejemplo en C-z88dk del
+ *  ZX-Life  -> Implementacion de ejemplo en C-z88dk del
  *              simulador de vida de John Conway para
  *              MagazineZX (articulo programacion z88dk).
  *
@@ -669,12 +666,12 @@ char mapa[ANCHO*ALTO], temp[ANCHO*ALTO];
 unsigned char *memoffset;
 unsigned char my_tmp_border;
 
-#define Celula(x,y) (mapa[((y)&lt;&lt;5)+(x)])
+#define Celula(x,y) (mapa[((y)<<5)+(x)])
 
-#define TempCelula(x,y) (temp[((y)&lt;&lt;5)+(x)])
+#define TempCelula(x,y) (temp[((y)<<5)+(x)])
 
 #define DrawCell(x,y,val) \
-  *((unsigned char *) (0x4000 + 6144 + ((y)&lt;&lt;5) + (x))) = (val)&lt;&lt;3 ;
+  *((unsigned char *) (0x4000 + 6144 + ((y)<<5) + (x))) = (val)<<3 ;
 
 void GenLife( void );
 void DrawLife( void );
@@ -716,11 +713,11 @@ void GenLife( void )
    printf(" (r) = nueva generacion aleatoria   ");
 
    // limpiamos el tablero de celulas
-   for( i=0; i&lt;ALTO*ANCHO; i++)
+   for( i=0; i<ALTO*ANCHO; i++)
       mapa[i] = temp[i] = 0;
 
    // generamos unas cuantas celulas aleatorias
-   for( i=0; i&lt; NUM_CELULAS; i++)
+   for( i=0; i< NUM_CELULAS; i++)
    {
       x = (rand() % (ANCHO-2)) +1;
       y = (rand() % (ALTO-2)) +1;
@@ -737,12 +734,12 @@ void Life( void )
    int vecinos;
 
    // Calculamos la siguiente generacion
-   for( y=0; y&lt;ALTO; y++)
+   for( y=0; y<ALTO; y++)
    {
-      for( x=0; x&lt;ANCHO ; x++)
+      for( x=0; x<ANCHO ; x++)
       {
         // Las celulas del borde mueren
-        if( x==0 || y==0 || x&gt;ANCHO-2 || y&gt;ALTO-2 )
+        if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
            TempCelula(x,y)=0 ;
 
         else
@@ -788,8 +785,8 @@ void Life( void )
 void DrawLife( void )
 {
    int x, y;
-   for( y=0; y&lt;ALTO; y++)
-      for( x=0; x&lt;ANCHO; x++)
+   for( y=0; y<ALTO; y++)
+      for( x=0; x<ANCHO; x++)
       {
          Celula(x,y) = TempCelula(x,y);
          DrawCell(x,y,Celula(x,y));
@@ -816,7 +813,7 @@ void CLS( int value )
 //--- Cambiar el borde de la pantalla ---------------------
 void BORDER( unsigned char value )
 {
-   my_tmp_border = value&lt;&lt;3;
+   my_tmp_border = value<<3;
 #asm
    ld hl, 2
    add hl, sp
@@ -842,7 +839,7 @@ void BORDER( unsigned char value )
 
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <script language="JavaScript">

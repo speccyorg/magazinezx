@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -53,7 +50,7 @@ function RecargarCabecera(url)
     <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
 </td>
             <td align="center" class="texto">Número 4 - Noviembre 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
@@ -61,7 +58,7 @@ function RecargarCabecera(url)
                     </td>
 
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
@@ -299,7 +296,7 @@ la siguiente:
 		<td>IX</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>DEFB</td>
 		<td>$30</td>
@@ -311,20 +308,20 @@ la siguiente:
 
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RL</td>
 		<td>(IX)</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>JR</td>
 		<td>Z, DORA</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RET</td>
-		<td>&nbsp;</td>
+		<td> </td>
 
 	</tr>
 	</td></tr></table>
@@ -397,27 +394,27 @@ Vayamos con la siguiente subrutina, que se usa para leer un número fijo de bits
 		<td>LEEB</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>RL</td>
 		<td>C</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>NC, LOLO</td>
 
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>LD</td>
 		<td>L, C</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>RET</td>
-		<td>&nbsp;</td>
+		<td> </td>
 	</tr>
 	</td></tr></table>
 </table>
@@ -453,27 +450,27 @@ con la técnica de gamma encoding:
 		<td>LEEB</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>RL</td>
 		<td>B</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>CALL</td>
 		<td>LEEB</td>
 
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>C, DONE</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>RET</td>
-		<td>&nbsp;</td>
+		<td> </td>
 	</tr>
 	</td></tr></table>
 </table>
@@ -522,18 +519,18 @@ utilizado Antonio en su código. Se pueden desechar si usamos otro ensamblador.
 	<tr><td><table class="codigo">
 
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>.ORG</td>
 		<td>$5D01</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>LD</td>
 
 		<td>IX, 0000</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>LD</td>
 		<td>DE, 0000</td>
 	</tr>
@@ -554,7 +551,7 @@ del nivel de compresión alcanzado con cada archivo en concreto.
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>LD</td>
 		<td>B, C</td>
 
@@ -584,7 +581,7 @@ suceda, añadiendo un dato basura distinto de 0 si fuera necesario.
 		<td>LOLO</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JP</td>
 		<td>Z, $0000</td>
 
@@ -622,18 +619,18 @@ Sigamos...
 		<td>(DE), A</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>DEC</td>
 		<td>HL</td>
 
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>DEC</td>
 		<td>DE</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>DJNZ</td>
 		<td>RDAD</td>
@@ -661,7 +658,7 @@ leer el siguiente en este código:
 	</tr>
 	<tr>
 
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>LD</td>
 		<td>BC, $0501</td>
 	</tr>
@@ -672,13 +669,13 @@ leer el siguiente en este código:
 		<td>LEEB</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>NC, REXU</td>
 	</tr>
 
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>DJNZ</td>
 		<td>RENU</td>
 	</tr>
@@ -704,13 +701,13 @@ patrones 0,10,110,1110 ó 11110 respectivamente.
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>LD</td>
 
 		<td>HL, RUTA+1</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>PUSH</td>
 		<td>HL</td>
 	</tr>
@@ -742,26 +739,26 @@ colocamos la subrutina gamma justo a continuación:
 	</tr>
 
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RL</td>
 		<td>B</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>CALL</td>
 
 		<td>LEEB</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>C, DONE</td>
 	</tr>
 
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RET</td>
-		<td>&nbsp;</td>
+		<td> </td>
 	</tr>
 	</td></tr></table>
 </table>
@@ -782,7 +779,7 @@ etiqueta RUTA), y veamos lo que pasa si el patrón era cualquier otro.
 
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>SUB</td>
 		<td>3</td>
 	</tr>
@@ -805,7 +802,7 @@ Al restar 3 al número de patrón que estaba en B, se obtienen los siguientes ca
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>JR</td>
 		<td>NZ, NLTR</td>
 	</tr>
@@ -818,18 +815,18 @@ Si no estamos en el patrón 110, saltamos a probar los siguientes
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>LD</td>
 		<td>BC, ALAE</td>
 
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>PUSH</td>
 		<td>BC</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>LD</td>
 		<td>BC, $0110</td>
@@ -851,27 +848,27 @@ lo que en la siguiente rutina leemos 4 bits (tal y como requiere el patrón).
 		<td>LEEB</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RL</td>
 
 		<td>C</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>NC, LOLO</td>
 	</tr>
 
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>LD</td>
 		<td>L, C</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RET</td>
 
-		<td>&nbsp;</td>
+		<td> </td>
 	</tr>
 	</td></tr></table>
 </table>
@@ -896,24 +893,24 @@ Si no hay carry estamos en los casos 0 o 10, saltamos a otro sitio para procesar
 	<tr><td><table class="codigo">
 
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>CPL</td>
-		<td>&nbsp;</td>
+		<td> </td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>LD</td>
 
 		<td>B, A</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>INC</td>
 		<td>C</td>
 	</tr>
 
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>KXKX</td>
 	</tr>
@@ -951,7 +948,7 @@ A para estos casos era 2 y 1 respectivamente.
 		<td>B, A</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>DJNZ</td>
 
 		<td>REOT</td>
@@ -975,35 +972,35 @@ Para el caso 10, seguimos ejecutando código...
 
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>CALL</td>
 		<td>DOND</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>DEC</td>
 		<td>B</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>DEC</td>
 		<td>B</td>
 
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>LD</td>
 		<td>H, B</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 
 		<td>LD</td>
 		<td>B, A</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>CALL</td>
 		<td>DONE</td>
 
@@ -1039,7 +1036,7 @@ sigue valiendo 0 para los otros dos patrones que consideramos hasta ahora.
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 
 		<td>POP</td>
 		<td>AF</td>
@@ -1055,48 +1052,48 @@ pero nos da igual porque no vamos a retornar a él de todas formas.
 	<tr><td><table class="codigo">
 
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>XOR</td>
 		<td>A</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>CP</td>
 
 		<td>H</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>NZ, RUTA</td>
 	</tr>
 
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>BIT</td>
 		<td>7, L</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 
 		<td>NZ, RUTA</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>INC</td>
 		<td>B</td>
 	</tr>
 	<tr>
 
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>INC</td>
 		<td>B</td>
 	</tr>
 	<tr>
 		<td>RUTA</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
+		<td> </td>
+		<td> </td>
 
 	</tr>
 	</td></tr></table>
@@ -1141,7 +1138,7 @@ un poco más abajo.
 	<tr><td><table class="codigo">
 
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>PUSH</td>
 		<td>HL</td>
 	</tr>
@@ -1179,7 +1176,7 @@ que queremos comenzar a copiar, y en B tenemos el número de bytes que se van a 
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>ADD</td>
 
 		<td>HL, DE</td>
@@ -1199,7 +1196,7 @@ de origen de la copia en HL.
 		<td>A, (HL)</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 		<td>RAVE</td>
 
@@ -1221,7 +1218,7 @@ Por último viene la rutina de leer bits, que fue la primera en ser comentada.
 		<td>IX</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>DEFB</td>
 		<td>$30</td>
 
@@ -1233,20 +1230,20 @@ Por último viene la rutina de leer bits, que fue la primera en ser comentada.
 	</tr>
 	<tr>
 
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RL</td>
 		<td>(IX)</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>JR</td>
 
 		<td>Z, DORA</td>
 	</tr>
 	<tr>
-		<td>&nbsp;</td>
+		<td> </td>
 		<td>RET</td>
-		<td>&nbsp;</td>
+		<td> </td>
 	</tr>
 	</td></tr></table>
 </table>
@@ -1257,9 +1254,9 @@ Y eso es todo. Con
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 	<tr><td><table class="codigo">
 	<tr>
-		<td width="60">&nbsp;</td>
+		<td width="60"> </td>
 		<td>.END</td>
-		<td>&nbsp;</td>
+		<td> </td>
 	</tr>
 
 	</td></tr></table>
@@ -1314,7 +1311,7 @@ Nos vemos próximamente.
                     </td>
                 </tr>
 
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <script language="JavaScript">

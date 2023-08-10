@@ -3,12 +3,9 @@
     <head>
         <title>Magazine ZX</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <link rel="stylesheet" href="../css/magazine.css" type="text/css">
     </head>
-    <body><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
+    <body>
             <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
                 <tr>
                     <td>
@@ -59,7 +56,7 @@ function RecargarCabecera(url)
     <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
 </td>
             <td align="center" class="texto">Número 17 - Marzo 2009</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
+            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
         </tr>
     </form>
 </table>
@@ -67,7 +64,7 @@ function RecargarCabecera(url)
                     </td>
                 </tr>
 
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
@@ -86,7 +83,7 @@ function RecargarCabecera(url)
 <p>A continuación se detallan algunas de las librerías incluídas con Z88DK. Algunas son parte del compilador desde sus inicios, y otras son, como ya hemos comentado, diferentes módulos de la antigua SPLIB2, ahora integrada con el nombre de SP1.</p>
 <p><strong>Tipos Abstractos de Datos</strong></p>
 <ul>
-	<li>Fichero de cabecera a incluir: #include &lt;atd.h&gt;</li>
+	<li>Fichero de cabecera a incluir: #include <atd.h></li>
 
 	<li>Librería a enlazar: -ladt.</li>
 </ul>
@@ -108,7 +105,7 @@ adt_StackCount();
 <p>La Página de documentación de libadt muestra detallados ejemplos de uso de la librería.</p>
 <p><strong>Peticiones de memoria</strong></p>
 <ul>
-	<li>Fichero de cabecera a incluir: #include &lt;malloc.h&gt; e #include &lt;balloc.h&gt;</li>
+	<li>Fichero de cabecera a incluir: #include <malloc.h> e #include <balloc.h></li>
 	<li>Librería a enlazar: -lmalloc y -lballoc.</li>
 </ul>
 <p>Esta librería incluye funciones para pedir y liberar memoria dinámicamente, en lugar de utilizar arrays vacíos estáticos (que aumentan el tiempo de carga).</p>
@@ -128,7 +125,7 @@ realloc();
 <p>La Página de documentación de malloc y balloc muestra detallados ejemplos de uso de la librería.</p>
 <p><strong>Modo 2 de Interrupciones</strong></p>
 <ul>
-	<li>Fichero de cabecera a incluir: #include &lt;im2.h&gt;</li>
+	<li>Fichero de cabecera a incluir: #include <im2.h></li>
 
 	<li>Librería a enlazar: -lim2.</li>
 </ul>
@@ -148,7 +145,7 @@ im2_CreateGenericISR();
 <p>La Página de documentación de im2.h muestra información detallada sobre los modos de interrupciones y ejemplos de uso de la librería.</p>
 <p><strong>Teclado, joystick y ratón</strong></p>
 <ul>
-	<li>Fichero de cabecera a incluir: #include &lt;input.h&gt;.</li>
+	<li>Fichero de cabecera a incluir: #include <input.h>.</li>
 	<li>Librería a enlazar: No es necesaria.</li>
 </ul>
 <p>La biblioteca input.h incluye las funciones necesarias para la lectura del teclado en nuestros juegos y programas. Algunas de las funciones más útiles dentro de esta librería son las siguientes:</p>
@@ -169,14 +166,14 @@ in_JoyKeyboard();
 </pre>
     </p></td></tr>
 </table>
-<p>Por otra parte, input.h también contiene todas las funciones necesarias para acceder a ratón y joystick, con funciones como las siguientes. Concretamente, la anterior función in_JoyKeyboard() emula la lectura de los joysticks con el mismo formato que la lectura de teclas, con in_LookupKey(). Para hacer uso de la emulación de joystick, será necesario incluir el fichero de cabecera &lt;spectrum.h&gt;.</p>
+<p>Por otra parte, input.h también contiene todas las funciones necesarias para acceder a ratón y joystick, con funciones como las siguientes. Concretamente, la anterior función in_JoyKeyboard() emula la lectura de los joysticks con el mismo formato que la lectura de teclas, con in_LookupKey(). Para hacer uso de la emulación de joystick, será necesario incluir el fichero de cabecera <spectrum.h>.</p>
 <p>Como muestra, el siguiente ejemplo tomado de la documentación de la librería input, que combina el uso de in_JoyKeyboard() con las llamadas a in_LookupKey():</p>
 <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
     <tr><td><p class="codigo">
 
 <pre>
-#include &lt;input.h&gt;
-#include &lt;spectrum.h&gt;
+#include <input.h>
+#include <spectrum.h>
 
 // example for ZX Spectrum target which supplies
 // the following device specific joystick functions:
@@ -225,7 +222,7 @@ if (dirs & in_FIRE)
 <p><strong>Librería de Sonido</strong></p>
 
 <ul>
-	<li>Fichero de cabecera a incluir: #include &lt;sound.h&gt;.</li>
+	<li>Fichero de cabecera a incluir: #include <sound.h>.</li>
 	<li>Librería a enlazar: No es necesaria.</li>
 </ul>
 <p>Esta librería de sonido contiene funciones muy básicas de reproducción sonora, así como algunos "efectos especiales" estándar.</p>
@@ -250,7 +247,7 @@ bit_play();
 <p>Más información sobre sound.h en la página oficial de la librería.</p>
 <p><strong>Librería de Sprites SP1</strong></p>
 <ul>
-	<li>Fichero de cabecera a incluir: #include &lt;sprites/sp1.h&gt;.</li>
+	<li>Fichero de cabecera a incluir: #include <sprites/sp1.h>.</li>
 	<li>Librería a enlazar: -lsp1.</li>
 
 </ul>
@@ -286,7 +283,7 @@ $ make sp1-spectrum
 </table>
 <p><strong>Librería general "spectrum.h"</strong></p>
 <ul>
-	<li>Fichero de cabecera a incluir: #include &lt;spectrum.h&gt;.</li>
+	<li>Fichero de cabecera a incluir: #include <spectrum.h>.</li>
 
 	<li>Librería a enlazar: No es necesaria.</li>
 </ul>
@@ -781,7 +778,7 @@ int Get_LOWRES_Attrib_Address( char x, char y )
                     </td>
 
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td> </td></tr>
                 <tr>
                     <td>
 <script language="JavaScript">
