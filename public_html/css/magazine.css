@@ -29,3 +29,4 @@ body { background-color: #cfcfcf; width: 720px; margin: 0 auto; }
 
 .enlacetitulo:link { color: #DDDDDD; text-decoration: none; }
 
+p.author, p.section { font-size: 130%; font-weight: 500; }
