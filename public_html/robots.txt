@@ -1,8 +1,11 @@
 User-agent: *
-Disalloy: /css/
+Disallow: /css/
 Disallow: /img/
 Disallow: /pdf/
 Disallow: /portadas/
 
+Sitemap: https://magazinezx.speccy.org/sitemap.xml
+
 User-agent: ChatGPT-User
 Disallow: /
+
