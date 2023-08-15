@@ -1,357 +1,412 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<head>
+    <title>Análisis - Magazine ZX número 14 - Diciembre 2006</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÍNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html" selected>Análisis</option>
 
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+                                <option value="hardware.html">Hardware</option>
+                                <option value="z88dk.html">Programación Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
 
+                        <td align="center" class="texto">Número 14 - Diciembre 2006</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a> <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+    </tr>
 
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
                 <tr>
                     <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
+                        <div align="justify">
+                            <p>En este número analizamos pura producción nacional: <a href="#slowglass">Slowglass</a>,
+                                de la mano de Javier Vispe.</p>
+                            <p><a name="slowglass"><strong>SLOWGLASS</strong></a></p>
+                            <table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
 
+                                <tr valign="center">
+                                    <td rowspan="9" bgcolor="#EEEEEE"><img src="img/portada_slowglass.png" width="150"
+                                                                           height="200" alt="Portada Slowglass"/></td>
+                                    <td bgcolor="#66AEEF">Título</td>
+                                    <td bgcolor="#FFFFFF">Slowglass</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Género</td>
+
+                                    <td bgcolor="#FFFFFF">Matamarcianos</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Año</td>
+                                    <td bgcolor="#FFFFFF">1990</td>
+                                </tr>
+                                <tr>
+
+                                    <td bgcolor="#66AEEF">Máquina</td>
+                                    <td bgcolor="#FFFFFF">48K/128K</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Jugadores</td>
+                                    <td bgcolor="#FFFFFF">1 Jugador</td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#66AEEF">Compañía</td>
+                                    <td bgcolor="#FFFFFF">[Inédito]</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Autor</td>
+                                    <td bgcolor="#FFFFFF">Manuel Domínguez, Alberto Pérez</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" bgcolor="#FFFFFF">
+                                        <ul>
+                                            <li>N/A</li>
+
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>2005 nos trajo un buen número de juegos inéditos que no se comercializaron en su momento.
+                                Uno de ellos es Slowglass, el cual disfrutamos gracias a la colaboración de Nach con
+                                Juan Pablo López-Grao para localizar a sus autores, Manuel Dominguez Zaragoza y Alberto
+                                Pérez Torres. Su único trabajo público conocido hasta ahora era Cyberbig, editado en
+                                1989 por Animagic. Esta empresa iba a comercializar el título que nos ocupa, pero tras
+                                su cierre, y fallidas negociaciones con otras distribuidoras, hizo que se quedara
+                                guardado en un cajón.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/slowglass01.png" width="320" height="240"
+                                             alt="Pantalla de carga de Slowglass"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="piefoto" align="right">Pantalla de carga de Slowglass</td>
+                                </tr>
+                            </table>
+
+                            <p>Slowglass es un matamarcianos de desarrollo vertical, con la peculiaridad de que el
+                                "scroll" no es continuo, sino que avanza conforme nosotros nos desplazamos. Debemos
+                                arrastrar una nave nodriza a lo largo del escenario, para lo cual disponemos de un
+                                contador de combustible que disminuye paulatinamente mientras la llevamos. Cuando se
+                                agotan nuestras reservas, hemos de buscar unos portales con forma de cabeza monstruosa.
+                                Por allí se accede a una dimensión paralela, reflejo de la primera. En ella nos
+                                desplazaremos hacia los lagos de cristal, donde se recarga el depósito, y después
+                                regresaremos de nuevo por los portales para continuar con nuestro cometido. El efecto
+                                espejo que relaciona ambas dimensiones, supone que nuestro avance en una de ellas,
+                                implica ir hacia atrás en la otra. Por tanto, al regresar de un "plano de realidad" a
+                                otro, habremos desandado parte del camino que habíamos recorrido.</p>
+                            <p>La misión que se nos encomienda en el juego se verá dificultada por las naves enemigas
+                                que nos atacan. Cada vez que recibimos un impacto, disminuye nuestra barra de energía.
+                                Sin embargo, son mucho más peligrosos los proyectiles que surgen de vez en cuando en
+                                pantalla. Estos nos quitarán una vida con su contacto, al igual que los laterales de los
+                                portales dimensionales, o las estructuras que aparecen cerca del final de nuestro
+                                recorrido. Es recomendable movernos con cautela cerca de dichas zonas.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+
+                                    <td><img src="img/slowglass02.png" width="320" height="240"
+                                             alt="¡Cuidado, nos atacan!"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">¡Cuidado, nos atacan!</td>
+                                </tr>
+                            </table>
+
+                            <p>Para facilitar la misión, contamos con aprovechar los objetos que aparecen con movimiento
+                                diagonal, y que ofrecen invulnerabilidad o una mayor potencia de disparo durante un
+                                período de tiempo limitado.</p>
+                            <p>Si conseguimos llegar con la nave nodriza hasta el final del trayecto, todavía nos
+                                esperan emociones fuertes (y algo surrealistas, porque no decirlo), y que dejo en
+                                incógnita para aquellos que se propongan terminarlo.</p>
+
+                            <p>Slowglass destaca sobre todo por el trabajo realizado en su apartado visual. Hace uso
+                                intensivo del color, tanto en los escenarios como en los sprites. El "scroll" de
+                                desplazamiento se produce de 8 en 8 píxeles para evitar el problema de la mezcla de
+                                atributos, pero está resuelto de forma muy fluida. Además, cuenta con varios planos de
+                                profundidad. Sin embargo, este derroche de barroquismo termina convirtiéndose en un
+                                inconveniente para la jugabilidad:</p>
+                            <ul>
+                                <li>Nuestra nave es muy grande en comparación a la zona de juego, por lo que se hace
+                                    difícil esquivar las ráfagas de disparo enemigas.
+                                </li>
+                                <li>Los fondos tan recargados y coloridos confunden a la hora de ver los misiles o los
+                                    elementos del decorado que nos quitan una vida.
+                                </li>
+                                <li>La activación del "scroll" para avanzar se realiza cuando nuestra nave se sitúa en
+                                    la parte superior de la pantalla. Si por una casualidad, en ese momento sale un
+                                    misil por esa zona, no tenemos tiempo de reacción para esquivarlo.
+                                </li>
+                            </ul>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+
+                                    <td><img src="img/slowglass03.png" width="320" height="240"
+                                             alt="El diseño es tan recargado que la jugabilidad se resiente"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">El diseño es tan recargado que la jugabilidad se
+                                        resiente
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>Estos fallos son una fuente de frustración para el jugador, por ese factor de suerte que
+                                no puede controlar por medio de su habilidad. Son muertes que podrían haberse evitado
+                                para que Slowglass no se viese perjudicado en su disfrute. No es un caso aislado, ya que
+                                muchos juegos de la época no tuvieron la fortuna de contar con una estructura de
+                                producción y testeo tan profesionalizadas como las actuales. De todas formas, también
+                                debemos preguntarnos si hace 15 años, habríamos sido más condescendientes con estos
+                                factores, cuando eramos más inocentes y no llevábamos tantas horas de vuelo en esto de
+                                los videojuegos.</p>
+                            <p>Viendo la evolución del trabajo de Manuel y Alberto, es una lástima que no pudieran
+                                disponer de más medios y tiempo que dedicar al Spectrum. Seguramente habríamos visto
+                                cosas muy interesantes en nuestras pantallas.</p>
+
+                            <table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
+                                <tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
+                                    <td colspan="14">Valoraciones</td>
+                                </tr>
+                                <tr>
+                                    <td>Originalidad:</td>
+                                    <td> </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+
+                                    <td> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                </tr>
+                                <tr>
+                                    <td>Gráficos:</td>
+                                    <td> </td>
+                                    <td bgcolor="#FFFFFF">[8]</td>
+
+                                    <td> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+                                    <td bgcolor="#FF0000" width="10"> </td>
+
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                </tr>
+                                <tr>
+                                    <td>Sonido:</td>
+                                    <td> </td>
+                                    <td bgcolor="#FFFFFF">[6]</td>
+                                    <td> </td>
+
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                </tr>
+                                <tr>
+                                    <td>Jugabilidad:</td>
+                                    <td> </td>
+                                    <td bgcolor="#FFFFFF">[6]</td>
+                                    <td> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Adicción:</td>
+                                    <td> </td>
+                                    <td bgcolor="#FFFFFF">[6]</td>
+                                    <td> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dificultad:</td>
+                                    <td> </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+                                    <td> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#00FF00" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                    <td bgcolor="#FFFFFF" width="10"> </td>
+                                </tr>
+
+                            </table>
+                            <br>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>�NDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">�ndice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html" selected>An�lisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html">Programaci�n Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="ensamblador.html">Programaci�n Ensamblador</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-
-            <td align="center" class="texto">N�mero 14 - Diciembre 2006</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p>En este n�mero analizamos pura producci�n nacional: <a href="#slowglass">Slowglass</a>, de la mano de Javier Vispe.</p>
-<p><a name="slowglass"><strong>SLOWGLASS</strong></a></p>
-<table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
-
-	<tr valign="center">
-		<td rowspan="9" bgcolor="#EEEEEE"><img src="img/portada_slowglass.png" width="150" height="200" alt="Portada Slowglass" /></td>
-		<td bgcolor="#66AEEF">T�tulo</td>
-		<td bgcolor="#FFFFFF">Slowglass</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">G�nero</td>
-
-		<td bgcolor="#FFFFFF">Matamarcianos</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">A�o</td>
-		<td bgcolor="#FFFFFF">1990</td>
-	</tr>
-	<tr>
-
-		<td bgcolor="#66AEEF">M�quina</td>
-		<td bgcolor="#FFFFFF">48K/128K</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Jugadores</td>
-		<td bgcolor="#FFFFFF">1 Jugador</td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#66AEEF">Compa��a</td>
-		<td bgcolor="#FFFFFF">[In�dito]</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Autor</td>
-		<td bgcolor="#FFFFFF">Manuel Dom�nguez, Alberto P�rez</td>
-
-	</tr>
-
-	<tr>
-		<td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
-	</tr>
-	<tr>
-		<td colspan="2" bgcolor="#FFFFFF">
-			<ul>
-<li>N/A</li>
-
-
-			</ul>
-		</td>
-	</tr>
-</table>
-<p>2005 nos trajo un buen n�mero de juegos in�ditos que no se comercializaron en su momento. Uno de ellos es Slowglass, el cual disfrutamos gracias a la colaboraci�n de Nach con Juan Pablo L�pez-Grao para localizar a sus autores, Manuel Dominguez Zaragoza y Alberto P�rez Torres. Su �nico trabajo p�blico conocido hasta ahora era Cyberbig, editado en 1989 por Animagic. Esta empresa iba a comercializar el t�tulo que nos ocupa, pero tras su cierre, y fallidas negociaciones con otras distribuidoras, hizo que se quedara guardado en un caj�n.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/slowglass01.png" width="320" height="240"  alt="Pantalla de carga de Slowglass" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right">Pantalla de carga de Slowglass</td>
-	</tr>
-</table>
-
-<p>Slowglass es un matamarcianos de desarrollo vertical, con la peculiaridad de que el "scroll" no es continuo, sino que avanza conforme nosotros nos desplazamos. Debemos arrastrar una nave nodriza a lo largo del escenario, para lo cual disponemos de un contador de combustible que disminuye paulatinamente mientras la llevamos. Cuando se agotan nuestras reservas, hemos de buscar unos portales con forma de cabeza monstruosa. Por all� se accede a una dimensi�n paralela, reflejo de la primera. En ella nos desplazaremos hacia los lagos de cristal, donde se recarga el dep�sito, y despu�s regresaremos de nuevo por los portales para continuar con nuestro cometido. El efecto espejo que relaciona ambas dimensiones, supone que nuestro avance en una de ellas, implica ir hacia atr�s en la otra. Por tanto, al regresar de un "plano de realidad" a otro, habremos desandado parte del camino que hab�amos recorrido.</p>
-<p>La misi�n que se nos encomienda en el juego se ver� dificultada por las naves enemigas que nos atacan. Cada vez que recibimos un impacto, disminuye nuestra barra de energ�a. Sin embargo, son mucho m�s peligrosos los proyectiles que surgen de vez en cuando en pantalla. Estos nos quitar�n una vida con su contacto, al igual que los laterales de los portales dimensionales, o las estructuras que aparecen cerca del final de nuestro recorrido. Es recomendable movernos con cautela cerca de dichas zonas.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-
-		<td><img src="img/slowglass02.png" width="320" height="240"  alt="�Cuidado, nos atacan!" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">�Cuidado, nos atacan!</td>
-	</tr>
-</table>
-
-<p>Para facilitar la misi�n, contamos con aprovechar los objetos que aparecen con movimiento diagonal, y que ofrecen invulnerabilidad o una mayor potencia de disparo durante un per�odo de tiempo limitado.</p>
-<p>Si conseguimos llegar con la nave nodriza hasta el final del trayecto, todav�a nos esperan emociones fuertes (y algo surrealistas, porque no decirlo), y que dejo en inc�gnita para aquellos que se propongan terminarlo.</p>
-
-<p>Slowglass destaca sobre todo por el trabajo realizado en su apartado visual. Hace uso intensivo del color, tanto en los escenarios como en los sprites. El "scroll" de desplazamiento se produce de 8 en 8 p�xeles para evitar el problema de la mezcla de atributos, pero est� resuelto de forma muy fluida. Adem�s, cuenta con varios planos de profundidad. Sin embargo, este derroche de barroquismo termina convirti�ndose en un inconveniente para la jugabilidad:</p>
-<ul>
-	<li>Nuestra nave es muy grande en comparaci�n a la zona de juego, por lo que se hace dif�cil esquivar las r�fagas de disparo enemigas.</li>
-	<li>Los fondos tan recargados y coloridos confunden a la hora de ver los misiles o los elementos del decorado que nos quitan una vida.</li>
-	<li>La activaci�n del "scroll" para avanzar se realiza cuando nuestra nave se sit�a en la parte superior de la pantalla. Si por una casualidad, en ese momento sale un misil por esa zona, no tenemos tiempo de reacci�n para esquivarlo.</li>
-</ul>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-
-		<td><img src="img/slowglass03.png" width="320" height="240"  alt="El dise�o es tan recargado que la jugabilidad se resiente" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">El dise�o es tan recargado que la jugabilidad se resiente</td>
-	</tr>
-</table>
-
-<p>Estos fallos son una fuente de frustraci�n para el jugador, por ese factor de suerte que no puede controlar por medio de su habilidad. Son muertes que podr�an haberse evitado para que Slowglass no se viese perjudicado en su disfrute. No es un caso aislado, ya que muchos juegos de la �poca no tuvieron la fortuna de contar con una estructura de producci�n y testeo tan profesionalizadas como las actuales. De todas formas, tambi�n debemos preguntarnos si hace 15 a�os, habr�amos sido m�s condescendientes con estos factores, cuando eramos m�s inocentes y no llev�bamos tantas horas de vuelo en esto de los videojuegos.</p>
-<p>Viendo la evoluci�n del trabajo de Manuel y Alberto, es una l�stima que no pudieran disponer de m�s medios y tiempo que dedicar al Spectrum. Seguramente habr�amos visto cosas muy interesantes en nuestras pantallas.</p>
-
-<table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
-	<tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
-		<td colspan="14">Valoraciones</td>
-	</tr>
-	<tr>
-		<td>Originalidad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Gr&aacute;ficos: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[8]</td>
-
-		<td>&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Sonido: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[6]</td>
-		<td>&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Jugabilidad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[6]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<td>Adicci&oacute;n: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[6]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<td>Dificultad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-
-</table>
-<br>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>JAVIER VISPE</td>
-	</tr>
-</table>
-
-                    </td>
-                </tr>
-
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">�ndice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html" selected>An�lisis</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="z88dk.html">Programaci�n Z88DK</option>
-
-        <option value="input.html">INPUT</option>
-        <option value="ensamblador.html">Programaci�n Ensamblador</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>�NDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
-
+                    <td align="right"><br><br>JAVIER VISPE</td>
                 </tr>
             </table>
 
-    </body>
+        </td>
+    </tr>
+
+    <tr>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Índice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html" selected>Análisis</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="z88dk.html">Programación Z88DK</option>
+
+                                <option value="input.html">INPUT</option>
+                                <option value="ensamblador.html">Programación Ensamblador</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

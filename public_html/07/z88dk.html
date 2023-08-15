@@ -1,126 +1,173 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="opinion.html">Opinión</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 7 - Mayo 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>ProgramaciÃ³n Z88DK - Magazine ZX nÃºmero 7 - Mayo 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p><b>CREANDO UNA AVENTURA CONVERSACIONAL CON Z88DK (I)</b></p>
-<p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-<i>Ha llegado el momento de hacer algo útil con la librería y, para ello, damos nuestros primeros pasos creando una sencilla aventura conversacional. Está claro que siempre existirán alternativas mejores para la creación de este tipo de aventuras en nuestro Spectrum (el PAWS, sin ir más lejos, u otros <i>parsers</i>). Sin embargo, una aventura conversacional puede ser un ejemplo didáctico sencillo y a la vez atractivo... ¡estaremos programando un juego desde un primer momento! Más adelante ya hablaremos de sprites, movimiento, colisiones, etc.</i>
-</p>
-<p>
-<b>La historia</b>
-</p>
-<p>
-Como todo buen creador de aventuras conversacionales sabe, el primer paso para crear algo que interese al jugador es tener una buena historia de transfondo; sin ella, la aventura pierde interés. Debemos huir del típico argumento de salvar una princesa o conseguir un tesoro, y pensar en algo original. También debemos pensar en el tipo de público al que se dirige la aventura, entre otras cosas.
-</p>
-<p>
-Como lo que tratamos de hacer nosotros es una aventura de ejemplo, que nos sirva para practicar con el z88dk, está claro que buscaremos sencillez; sencillez en la historia a contar, en el número de habitaciones a visitar y objetos con los que interactuar. Así pues, nuestra (poco original) historia es la siguiente:
-</p>
-<p>
-<i>Guybrush Threepwood quiere ser pirata. Para ello se ha dirigido a la isla de Melêe, donde le han dicho que un maestro le puede enseñar a serlo. La historia comienza en la taberna de la Isla de Melêe, donde Guybrush deberá buscar al maestro e impresionarlo con algún truco para que acepte enseñarle todo lo que sabe.</i>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
 
-</p>
-<p>
-Con este sencillo guión inicial pretendemos construir una aventura con no más de seis habitaciones, tres objetos con los que interactuar, y un personaje pseudo-inteligente o PSI. Para ello haremos uso de la librería z88dk. Iremos viendo que, salvo algunas peculiaridades, es como si estuvieramos programando una aventura conversacional en modo texto en C para un PC actual, ya que nos limitaremos a hacer uso de las librerías stdio.h y string.h incluidas con z88dk, muy parecidas a sus contrapartidas en el mundo de los compiladores estándar actuales. Así pues, comencemos.
-</p>
-<p>
-<b>¿Qué necesitamos?</b>
-</p>
-<p>
-Por supuesto, el primer paso es tener z88dk instalado tal como se comentó en artículos anteriores. Lo siguiente es crear un entorno de trabajo donde tengamos el código fuente de nuestro juego conforme lo desarrollemos. Así pues, creamos un nuevo directorio allá donde queramos, para almacenarlo. No es necesario que el directorio se encuentre dentro de la carpeta donde hubiésemos instalado el z88dk, pues si le damos el valor correcto a las variables de entorno (por ejemplo, ejecutando el setpath.h que se propuso en la primera entrega de z88dk) podremos trabajar en cualquier lugar de nuestro disco duro.
-</p>
-<p>
-Dentro de ese directorio de trabajo tendremos que crear los siguientes archivos:
-</p>
-<ul>
-<li>aventura.c: será el fichero que contendrá el código principal de nuestro juego, y por lo tanto, el método main.</li>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 7 - Mayo 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p><b>CREANDO UNA AVENTURA CONVERSACIONAL CON Z88DK (I)</b></p>
+                            <p>
 
-<li>datos.h: un archivo de cabecera que utilizaremos para definir las estructuras de datos que se utilizarán para la creación de la aventura.</li>
-<li>y, opcionalmente, un archivo Makefile, si utilizamos la herramienta GNU Make para la construcción automática de nuestro programa.</li>
-</ul>
-<p>
-En el caso de que no utilicemos Make, cada vez que queramos compilar el programa y probarlo con un emulador, deberemos teclear lo siguiente:
-</p>
-<pre>
+                                <i>Ha llegado el momento de hacer algo Ãºtil con la librerÃ­a y, para ello, damos nuestros
+                                    primeros pasos creando una sencilla aventura conversacional. EstÃ¡ claro que siempre
+                                    existirÃ¡n alternativas mejores para la creaciÃ³n de este tipo de aventuras en nuestro
+                                    Spectrum (el PAWS, sin ir mÃ¡s lejos, u otros <i>parsers</i>). Sin embargo, una
+                                    aventura conversacional puede ser un ejemplo didÃ¡ctico sencillo y a la vez
+                                    atractivo... Â¡estaremos programando un juego desde un primer momento! MÃ¡s adelante
+                                    ya hablaremos de sprites, movimiento, colisiones, etc.</i>
+                            </p>
+                            <p>
+                                <b>La historia</b>
+                            </p>
+                            <p>
+                                Como todo buen creador de aventuras conversacionales sabe, el primer paso para crear
+                                algo que interese al jugador es tener una buena historia de transfondo; sin ella, la
+                                aventura pierde interÃ©s. Debemos huir del tÃ­pico argumento de salvar una princesa o
+                                conseguir un tesoro, y pensar en algo original. TambiÃ©n debemos pensar en el tipo de
+                                pÃºblico al que se dirige la aventura, entre otras cosas.
+                            </p>
+                            <p>
+                                Como lo que tratamos de hacer nosotros es una aventura de ejemplo, que nos sirva para
+                                practicar con el z88dk, estÃ¡ claro que buscaremos sencillez; sencillez en la historia a
+                                contar, en el nÃºmero de habitaciones a visitar y objetos con los que interactuar. AsÃ­
+                                pues, nuestra (poco original) historia es la siguiente:
+                            </p>
+                            <p>
+                                <i>Guybrush Threepwood quiere ser pirata. Para ello se ha dirigido a la isla de MelÃªe,
+                                    donde le han dicho que un maestro le puede enseÃ±ar a serlo. La historia comienza en
+                                    la taberna de la Isla de MelÃªe, donde Guybrush deberÃ¡ buscar al maestro e
+                                    impresionarlo con algÃºn truco para que acepte enseÃ±arle todo lo que sabe.</i>
+
+                            </p>
+                            <p>
+                                Con este sencillo guiÃ³n inicial pretendemos construir una aventura con no mÃ¡s de seis
+                                habitaciones, tres objetos con los que interactuar, y un personaje pseudo-inteligente o
+                                PSI. Para ello haremos uso de la librerÃ­a z88dk. Iremos viendo que, salvo algunas
+                                peculiaridades, es como si estuvieramos programando una aventura conversacional en modo
+                                texto en C para un PC actual, ya que nos limitaremos a hacer uso de las librerÃ­as
+                                stdio.h y string.h incluidas con z88dk, muy parecidas a sus contrapartidas en el mundo
+                                de los compiladores estÃ¡ndar actuales. AsÃ­ pues, comencemos.
+                            </p>
+                            <p>
+                                <b>Â¿QuÃ© necesitamos?</b>
+                            </p>
+                            <p>
+                                Por supuesto, el primer paso es tener z88dk instalado tal como se comentÃ³ en artÃ­culos
+                                anteriores. Lo siguiente es crear un entorno de trabajo donde tengamos el cÃ³digo fuente
+                                de nuestro juego conforme lo desarrollemos. AsÃ­ pues, creamos un nuevo directorio allÃ¡
+                                donde queramos, para almacenarlo. No es necesario que el directorio se encuentre dentro
+                                de la carpeta donde hubiÃ©semos instalado el z88dk, pues si le damos el valor correcto a
+                                las variables de entorno (por ejemplo, ejecutando el setpath.h que se propuso en la
+                                primera entrega de z88dk) podremos trabajar en cualquier lugar de nuestro disco duro.
+                            </p>
+                            <p>
+                                Dentro de ese directorio de trabajo tendremos que crear los siguientes archivos:
+                            </p>
+                            <ul>
+                                <li>aventura.c: serÃ¡ el fichero que contendrÃ¡ el cÃ³digo principal de nuestro juego, y
+                                    por lo tanto, el mÃ©todo main.
+                                </li>
+
+                                <li>datos.h: un archivo de cabecera que utilizaremos para definir las estructuras de
+                                    datos que se utilizarÃ¡n para la creaciÃ³n de la aventura.
+                                </li>
+                                <li>y, opcionalmente, un archivo Makefile, si utilizamos la herramienta GNU Make para la
+                                    construcciÃ³n automÃ¡tica de nuestro programa.
+                                </li>
+                            </ul>
+                            <p>
+                                En el caso de que no utilicemos Make, cada vez que queramos compilar el programa y
+                                probarlo con un emulador, deberemos teclear lo siguiente:
+                            </p>
+                            <pre>
 zcc +zxansi -vn -o aventura.bin aventura.c -lndos
 bin2tap aventura.bin aventura.tap
 </pre>
-<p>
-El parámetro +zxansi indica que se trata de un programa de solo texto para un Spectrum. El parámetro -vn desactiva el modo verbose, lo cual quiere decir que se nos mostrará la mínima información posible por pantalla durante el proceso de compilación. Y -lndos le dice al compilador zcc que enlace con los archivos de librería adecuados cuando hacemos uso de stdio.h y string.h (no tiene nada que ver con el sistema operativo MS-DOS).
-</p>
-<p>
-Sin embargo, si disponemos de la utilidad Make, podemos crear un archivo Makefile como el siguiente:
-</p>
+                            <p>
+                                El parÃ¡metro +zxansi indica que se trata de un programa de solo texto para un Spectrum.
+                                El parÃ¡metro -vn desactiva el modo verbose, lo cual quiere decir que se nos mostrarÃ¡ la
+                                mÃ­nima informaciÃ³n posible por pantalla durante el proceso de compilaciÃ³n. Y -lndos le
+                                dice al compilador zcc que enlace con los archivos de librerÃ­a adecuados cuando hacemos
+                                uso de stdio.h y string.h (no tiene nada que ver con el sistema operativo MS-DOS).
+                            </p>
+                            <p>
+                                Sin embargo, si disponemos de la utilidad Make, podemos crear un archivo Makefile como
+                                el siguiente:
+                            </p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 all: aventura.tap
 
 aventura.tap: aventura.bin
@@ -129,48 +176,76 @@ aventura.tap: aventura.bin
 aventura.bin: aventura.c
     zcc +zxansi -vn -o aventura.bin aventura.c -lndos
 </pre>
-    </p></td></tr>
-</table>
-<p>
-y ejecutar 'make' en el mismo directorio donde se encuentre este archivo Makefile cada vez que cambiemos el archivo aventura.c y queramos compilar.
-</p>
-<p>
-<b>Creando las habitaciones</b>
-</p>
-<p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                y ejecutar 'make' en el mismo directorio donde se encuentre este archivo Makefile cada
+                                vez que cambiemos el archivo aventura.c y queramos compilar.
+                            </p>
+                            <p>
+                                <b>Creando las habitaciones</b>
+                            </p>
+                            <p>
 
-Para tener claro como va a ser el entorno de juego, es necesario dibujar un mapa. En dicho mapa deben estar claras cúales van a ser las localizaciones o habitaciones por las que va a poder desplazarse el jugador, y cómo van a estar conectadas entre sí. En el caso de nuestro ejemplo concreto, vamos a crear un mapa de la taberna de la isla de Melêe, en donde Guybrush, nuestro personaje, buscará a un maestro de piratería. Un mapa perfectamente válido podría ser el siguiente:
-</p>
+                                Para tener claro como va a ser el entorno de juego, es necesario dibujar un mapa. En
+                                dicho mapa deben estar claras cÃºales van a ser las localizaciones o habitaciones por las
+                                que va a poder desplazarse el jugador, y cÃ³mo van a estar conectadas entre sÃ­. En el
+                                caso de nuestro ejemplo concreto, vamos a crear un mapa de la taberna de la isla de
+                                MelÃªe, en donde Guybrush, nuestro personaje, buscarÃ¡ a un maestro de piraterÃ­a. Un mapa
+                                perfectamente vÃ¡lido podrÃ­a ser el siguiente:
+                            </p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="460">
-	<tr align="right">
-		<td><img src="img/z88dk_1.jpg" width="460" height="289"  alt="" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="460">
+                                <tr align="right">
+                                    <td><img src="img/z88dk_1.jpg" width="460" height="289" alt=""/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right"></td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p>
-Como vemos, cada habitación está numerada. Esto es muy importante, luego veremos por qué. Las líneas que unen dos habitaciones adyacentes indican que dichas habitaciones están comunicadas; esto quiere decir que desde una habitación podremos acceder a la otra y viceversa. Además de dibujar el mapa, debemos escribir una descripción para cada habitación. Para nuestra aventura concreta, podríamos usar las siguientes descripciones:
-</p>
-<ul>
-<li>Habitación 1: "Te encuentras en la entrada de la taberna de Melêe Island. Desde aquí puedes oler los vómitos de los borrachos que vas a encontrar en su interior."</li>
-<li>Habitación 2: "Las sombras del callejón en el que te encuentras te sobrecogen. Estás rodeado de montones de basura."</li>
-<li>Habitación 3: "Estás en uno de los dormitorios de la taberna. Varias literas están alineadas, permitiendo a muchos piratas dormir juntos en una misma habitación."</li>
-<li>Habitación 4: "El salón principal de la taberna. Decenas de piratas se encuentran aquí bebiendo, cantando, peleándose, vomitando, y metiendo mano a las doncellas del lugar. Si te diriges al norte, este u oeste podrás visitar varias de las habitaciones del local."</li>
-<li>Habitación 5: "Una gran cantidad de pucheros sucios están amontonados en la cocina. Platos a medio comer, jarras medio llenas, y cubiertos sucios les hacen compañía."</li>
-<li>Habitación 6: "Tras apartar una cortina accedes a un reservado. Es una zona exclusiva de la taberna a donde muy pocos piratas pueden acceder."</li>
+                            <p>
+                                Como vemos, cada habitaciÃ³n estÃ¡ numerada. Esto es muy importante, luego veremos por
+                                quÃ©. Las lÃ­neas que unen dos habitaciones adyacentes indican que dichas habitaciones
+                                estÃ¡n comunicadas; esto quiere decir que desde una habitaciÃ³n podremos acceder a la otra
+                                y viceversa. AdemÃ¡s de dibujar el mapa, debemos escribir una descripciÃ³n para cada
+                                habitaciÃ³n. Para nuestra aventura concreta, podrÃ­amos usar las siguientes descripciones:
+                            </p>
+                            <ul>
+                                <li>HabitaciÃ³n 1: "Te encuentras en la entrada de la taberna de MelÃªe Island. Desde aquÃ­
+                                    puedes oler los vÃ³mitos de los borrachos que vas a encontrar en su interior."
+                                </li>
+                                <li>HabitaciÃ³n 2: "Las sombras del callejÃ³n en el que te encuentras te sobrecogen. EstÃ¡s
+                                    rodeado de montones de basura."
+                                </li>
+                                <li>HabitaciÃ³n 3: "EstÃ¡s en uno de los dormitorios de la taberna. Varias literas estÃ¡n
+                                    alineadas, permitiendo a muchos piratas dormir juntos en una misma habitaciÃ³n."
+                                </li>
+                                <li>HabitaciÃ³n 4: "El salÃ³n principal de la taberna. Decenas de piratas se encuentran
+                                    aquÃ­ bebiendo, cantando, peleÃ¡ndose, vomitando, y metiendo mano a las doncellas del
+                                    lugar. Si te diriges al norte, este u oeste podrÃ¡s visitar varias de las
+                                    habitaciones del local."
+                                </li>
+                                <li>HabitaciÃ³n 5: "Una gran cantidad de pucheros sucios estÃ¡n amontonados en la cocina.
+                                    Platos a medio comer, jarras medio llenas, y cubiertos sucios les hacen compaÃ±Ã­a."
+                                </li>
+                                <li>HabitaciÃ³n 6: "Tras apartar una cortina accedes a un reservado. Es una zona
+                                    exclusiva de la taberna a donde muy pocos piratas pueden acceder."
+                                </li>
 
-</ul>
-<p>
-Una vez se ha realizado el diseño, es hora de realizar una implementación de todo esto. Debemos crear una estructura de datos que nos permita almacenar la información sobre las habitaciones. Podemos incluir el siguiente código dentro de datos.h:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </ul>
+                            <p>
+                                Una vez se ha realizado el diseÃ±o, es hora de realizar una implementaciÃ³n de todo esto.
+                                Debemos crear una estructura de datos que nos permita almacenar la informaciÃ³n sobre las
+                                habitaciones. Podemos incluir el siguiente cÃ³digo dentro de datos.h:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 typedef struct
 {
     int id;
@@ -182,47 +257,84 @@ typedef struct
             // 3 - Oeste
 } THabitacion;
 </pre>
-    </p></td></tr>
-</table>
-<p>
-La estructura THabitacion es la que nos va a permitir disponer de la información de las habitaciones de una forma ordenada. Cada uno de los campos va a ser utilizado para lo siguiente:
-</p>
-<ul>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                La estructura THabitacion es la que nos va a permitir disponer de la informaciÃ³n de las
+                                habitaciones de una forma ordenada. Cada uno de los campos va a ser utilizado para lo
+                                siguiente:
+                            </p>
+                            <ul>
 
-<li>id: identificador de la habitación. Cada habitación debe estar numerada desde el 1 en adelante, tal como se hizo con el mapa a la hora de diseñar la aventura. Es en este campo donde introduciremos el número de la habitación indicado en el mapa; en nuestro ejemplo particular, el id de la entrada a la taberna sería el 1, el id del callejón valdría 2, etc. En nuestra implementación es inútil, y además ocupa memoria (algo de lo que nuestro Spectrum no anda demasiado sobrado), pero se incluye a efectos ilustrativos.</li>
-<li>descripcion: una cadena de texto que contendrá la descripción de la habitación que será mostrada al jugador durante la aventura. Podemos usar los textos anteriormente indicados, teniendo en cuenta <b>que no podremos utilizar tildes ni eñes (ni tampoco el acento circunflejo en el nombre de la isla de Melêe)</b>.</li>
-<li>direcciones: un array de cuatro elementos, representando cada uno de esos elementos una dirección concreta. En la posición 0 almacenaremos el identificador de la habitación hacia la que avanzaremos si nos desplazamos hacia el norte, en la posición 1 el identificador de la habitación hacia la que avanzaremos si nos desplanzamos hacia el este, en la posición 2 el identificador de la habitación hacia la que avanzaremos si nos desplazamos hacia el sur, y en la posición 3 el identificador de la habitación hacia la que avanzaremos si nos desplazamos hacia el oeste. Si no es posible desde la habitación desplazarse en algnuna de las direcciones especificadas, deberíamos almacenar el valor 0, indicando que no es posible que el jugador se mueva en esa dirección. Por supuesto, si quisieramos hacer una aventura más compleja con más direcciones de movimiento posibles, podríamos aumentar el tamaño de este array.</li>
-</ul>
-<p>
-<b>Introduciendo las habitaciones en nuestro juego</b>
-</p>
-<p>
-Ahora que ya tenemos nuestra estructura de datos que almacenará la información de las habitaciones, es hora de crearlas; ¡vamos a comenzar a programar!
-</p>
-<p>
+                                <li>id: identificador de la habitaciÃ³n. Cada habitaciÃ³n debe estar numerada desde el 1
+                                    en adelante, tal como se hizo con el mapa a la hora de diseÃ±ar la aventura. Es en
+                                    este campo donde introduciremos el nÃºmero de la habitaciÃ³n indicado en el mapa; en
+                                    nuestro ejemplo particular, el id de la entrada a la taberna serÃ­a el 1, el id del
+                                    callejÃ³n valdrÃ­a 2, etc. En nuestra implementaciÃ³n es inÃºtil, y ademÃ¡s ocupa memoria
+                                    (algo de lo que nuestro Spectrum no anda demasiado sobrado), pero se incluye a
+                                    efectos ilustrativos.
+                                </li>
+                                <li>descripcion: una cadena de texto que contendrÃ¡ la descripciÃ³n de la habitaciÃ³n que
+                                    serÃ¡ mostrada al jugador durante la aventura. Podemos usar los textos anteriormente
+                                    indicados, teniendo en cuenta <b>que no podremos utilizar tildes ni eÃ±es (ni tampoco
+                                        el acento circunflejo en el nombre de la isla de MelÃªe)</b>.
+                                </li>
+                                <li>direcciones: un array de cuatro elementos, representando cada uno de esos elementos
+                                    una direcciÃ³n concreta. En la posiciÃ³n 0 almacenaremos el identificador de la
+                                    habitaciÃ³n hacia la que avanzaremos si nos desplazamos hacia el norte, en la
+                                    posiciÃ³n 1 el identificador de la habitaciÃ³n hacia la que avanzaremos si nos
+                                    desplanzamos hacia el este, en la posiciÃ³n 2 el identificador de la habitaciÃ³n hacia
+                                    la que avanzaremos si nos desplazamos hacia el sur, y en la posiciÃ³n 3 el
+                                    identificador de la habitaciÃ³n hacia la que avanzaremos si nos desplazamos hacia el
+                                    oeste. Si no es posible desde la habitaciÃ³n desplazarse en algnuna de las
+                                    direcciones especificadas, deberÃ­amos almacenar el valor 0, indicando que no es
+                                    posible que el jugador se mueva en esa direcciÃ³n. Por supuesto, si quisieramos hacer
+                                    una aventura mÃ¡s compleja con mÃ¡s direcciones de movimiento posibles, podrÃ­amos
+                                    aumentar el tamaÃ±o de este array.
+                                </li>
+                            </ul>
+                            <p>
+                                <b>Introduciendo las habitaciones en nuestro juego</b>
+                            </p>
+                            <p>
+                                Ahora que ya tenemos nuestra estructura de datos que almacenarÃ¡ la informaciÃ³n de las
+                                habitaciones, es hora de crearlas; Â¡vamos a comenzar a programar!
+                            </p>
+                            <p>
 
-Antes de nada, deberemos introducir las sentencias #include adecuadas en aventura.c; concretamente, al comienzo de nuestro archivo deberemos teclear lo siguiente:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                Antes de nada, deberemos introducir las sentencias #include adecuadas en aventura.c;
+                                concretamente, al comienzo de nuestro archivo deberemos teclear lo siguiente:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 #include "datos.h"
 
-#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
+#include <stdio.h>
+#include <string.h>
 </pre>
-    </p></td></tr>
-</table>
-<p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
 
-El primer include (datos.h) nos permite utilizar las estructuras de datos creadas en nuestro archivo datos.h. Se usan comillas porque es un archivo que se encuentra en el mismo directorio que aventura.c. Los siguientes includes nos proporcionan los métodos de entrada y salida y manipulación de cadenas de z88dk, que son los que vamos a utilizar en nuestro programa. Se introducen entre símbolos de mayor y menor para hacer ver al compilador que se deben buscar estos archivos de cabecera en la ubicación especificada por las variables de entorno y no en el mismo directorio que aventura.c.
-</p>
-<p>
-Creamos nuestra primera función main, dentro de aventura.c, de la siguiente manera:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                El primer include (datos.h) nos permite utilizar las estructuras de datos creadas en
+                                nuestro archivo datos.h. Se usan comillas porque es un archivo que se encuentra en el
+                                mismo directorio que aventura.c. Los siguientes includes nos proporcionan los mÃ©todos de
+                                entrada y salida y manipulaciÃ³n de cadenas de z88dk, que son los que vamos a utilizar en
+                                nuestro programa. Se introducen entre sÃ­mbolos de mayor y menor para hacer ver al
+                                compilador que se deben buscar estos archivos de cabecera en la ubicaciÃ³n especificada
+                                por las variables de entorno y no en el mismo directorio que aventura.c.
+                            </p>
+                            <p>
+                                Creamos nuestra primera funciÃ³n main, dentro de aventura.c, de la siguiente manera:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void main(void)
 {
     int habitacion = 0;
@@ -233,18 +345,38 @@ void main(void)
     escribirDescripcion(habitaciones,habitacion);
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Hemos declarado una variable llamada habitaciones que no es mas que un array de estructuras THabitación. Dicho array tiene seis posiciones, porque seis son las habitaciones de las que va a disponer nuestra aventura. La variable habitación hace referencia a la habitación en la que se encuentra actualmente el jugador. Así pues, si habitación vale 0, significará que nos encontraremos en la habitación con índice 0 del array de habitaciones (recordemos que en C, para un array de tamaño N, la primera posición tiene índice 0 y la última N-1). Así pues, al crear esta variable asignándole el valor 0, significa que el jugador inicialmente comenzará en dicha habitación (la entrada a la taberna de los piratas). Durante el transcurso de la partida, el valor de esta variable cambiará para indicar en que habitación se encuentra el jugador. Es importante destacar que todas las variables locales a una función y que vayan a ser utilizadas en el interior de la misma deben ser declaradas en su inicio. No se pueden declarar variables intercaladas con el código de las funciones (como sucede con el C++).
-</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Hemos declarado una variable llamada habitaciones que no es mas que un array de
+                                estructuras THabitaciÃ³n. Dicho array tiene seis posiciones, porque seis son las
+                                habitaciones de las que va a disponer nuestra aventura. La variable habitaciÃ³n hace
+                                referencia a la habitaciÃ³n en la que se encuentra actualmente el jugador. AsÃ­ pues, si
+                                habitaciÃ³n vale 0, significarÃ¡ que nos encontraremos en la habitaciÃ³n con Ã­ndice 0 del
+                                array de habitaciones (recordemos que en C, para un array de tamaÃ±o N, la primera
+                                posiciÃ³n tiene Ã­ndice 0 y la Ãºltima N-1). AsÃ­ pues, al crear esta variable asignÃ¡ndole
+                                el valor 0, significa que el jugador inicialmente comenzarÃ¡ en dicha habitaciÃ³n (la
+                                entrada a la taberna de los piratas). Durante el transcurso de la partida, el valor de
+                                esta variable cambiarÃ¡ para indicar en que habitaciÃ³n se encuentra el jugador. Es
+                                importante destacar que todas las variables locales a una funciÃ³n y que vayan a ser
+                                utilizadas en el interior de la misma deben ser declaradas en su inicio. No se pueden
+                                declarar variables intercaladas con el cÃ³digo de las funciones (como sucede con el C++).
+                            </p>
 
-<p>
-Evidentemente, si intentamos compilar este código, obtendremos un error, porque hay dos funciones que no hemos implementado: inicializarHabitaciones y escribirDescripcion. La primera la vamos a utilizar para rellenar el array habitaciones con los datos correspondientes a las habitaciones de nuestra aventura. La segunda para mostrar el texto de la habitación en la que se encuentra el personaje por pantalla. La implementación de la primera función podría ser la siguiente (debe teclearse este código antes que la función main):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>
+                                Evidentemente, si intentamos compilar este cÃ³digo, obtendremos un error, porque hay dos
+                                funciones que no hemos implementado: inicializarHabitaciones y escribirDescripcion. La
+                                primera la vamos a utilizar para rellenar el array habitaciones con los datos
+                                correspondientes a las habitaciones de nuestra aventura. La segunda para mostrar el
+                                texto de la habitaciÃ³n en la que se encuentra el personaje por pantalla. La
+                                implementaciÃ³n de la primera funciÃ³n podrÃ­a ser la siguiente (debe teclearse este cÃ³digo
+                                antes que la funciÃ³n main):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void inicializarHabitaciones(THabitacion habitaciones[])
 {
     habitaciones[0].id = 1;
@@ -276,7 +408,7 @@ void inicializarHabitaciones(THabitacion habitaciones[])
 
     habitaciones[3].id = 4;
     strcpy(habitaciones[3].descripcion,"El salon principal de la taberna.
-    Decenas de piratas se encuentran aquí bebiendo, cantando, peleandose,
+    Decenas de piratas se encuentran aquÃ­ bebiendo, cantando, peleandose,
     vomitando, y metiendo mano a las doncellas del lugar. Si te diriges
     al norte, este u oeste podras visitar varias de las habitaciones
     del local.");
@@ -288,7 +420,7 @@ void inicializarHabitaciones(THabitacion habitaciones[])
     habitaciones[4].id = 5;
     strcpy(habitaciones[4].descripcion,"Una gran cantidad de pucheros
     sucios estan amontonados en la cocina. Platos a medio comer, jarras
-    medio llenas, y cubiertos sucios les hacen compañia.");
+    medio llenas, y cubiertos sucios les hacen compaÃ±ia.");
     habitaciones[4].direcciones[0] = 0;
     habitaciones[4].direcciones[1] = 4;
     habitaciones[4].direcciones[2] = 0;
@@ -304,18 +436,40 @@ void inicializarHabitaciones(THabitacion habitaciones[])
     habitaciones[5].direcciones[3] = 0;
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Esta función recibe como parámetro el array de habitaciones, que tiene seis posiciones, y para cada una de dichas posiciones inicializa la habitación correspondiente. Observemos por ejemplo como se inicializa la primera habitación, almacenada en la posición 0 del array. Con habitaciones[0].id = 1 indicamos que el identificador de esa primera habitación es 1. Esto realmente no va a ser utilizado en el código, pero para este ejemplo nos puede permitir ver las cosas más claras. Lo siguiente es, mediante el uso del método strcpy proporcionado por la librería de cadenas de z88dk, asociar la habitación con una cadena de texto que contendrá su descripción. Este método strcpy, al igual que en el C del PC, permite copiar en la cadena pasada como primer parámetro la cadena pasada como segundo parámetro, siempre que en la primera cadena haya espacio suficiente para ello. Las siguiente cuatro líneas almacenan a que habitación llegaremos si nos desplazamos en cada una de las cuatro direcciones posibles. Por ejemplo, si nos desplazamos en la dirección 0 (norte) llegaremos a la habitación 4. Si nos desplazamos en la dirección 1 (Este), llegaremos hasta la habitación 2. Para las direcciones 2 y 3 (sur y oeste) almacenamos el valor 0 indicando que no podemos desplazarnos en dicha dirección. El resto de habitaciones se inicializa de igual forma.
-</p>
-<p>
-La siguiente función que debemos implementar para que nuestro código compile es escribirDescripcion, que como decíamos, presenta por pantalla la descripción de la habitación actual (aquella cuyo índice se almacena en la variable habitacion). Necesita dos parámetros: el array conteniendo la información de todas las habitaciones, y el índice de la habitación actual. El código de esta función podría ser el siguiente (como en el caso anterior, debe ser introducido en el código antes que el método main):
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Esta funciÃ³n recibe como parÃ¡metro el array de habitaciones, que tiene seis posiciones,
+                                y para cada una de dichas posiciones inicializa la habitaciÃ³n correspondiente.
+                                Observemos por ejemplo como se inicializa la primera habitaciÃ³n, almacenada en la
+                                posiciÃ³n 0 del array. Con habitaciones[0].id = 1 indicamos que el identificador de esa
+                                primera habitaciÃ³n es 1. Esto realmente no va a ser utilizado en el cÃ³digo, pero para
+                                este ejemplo nos puede permitir ver las cosas mÃ¡s claras. Lo siguiente es, mediante el
+                                uso del mÃ©todo strcpy proporcionado por la librerÃ­a de cadenas de z88dk, asociar la
+                                habitaciÃ³n con una cadena de texto que contendrÃ¡ su descripciÃ³n. Este mÃ©todo strcpy, al
+                                igual que en el C del PC, permite copiar en la cadena pasada como primer parÃ¡metro la
+                                cadena pasada como segundo parÃ¡metro, siempre que en la primera cadena haya espacio
+                                suficiente para ello. Las siguiente cuatro lÃ­neas almacenan a que habitaciÃ³n llegaremos
+                                si nos desplazamos en cada una de las cuatro direcciones posibles. Por ejemplo, si nos
+                                desplazamos en la direcciÃ³n 0 (norte) llegaremos a la habitaciÃ³n 4. Si nos desplazamos
+                                en la direcciÃ³n 1 (Este), llegaremos hasta la habitaciÃ³n 2. Para las direcciones 2 y 3
+                                (sur y oeste) almacenamos el valor 0 indicando que no podemos desplazarnos en dicha
+                                direcciÃ³n. El resto de habitaciones se inicializa de igual forma.
+                            </p>
+                            <p>
+                                La siguiente funciÃ³n que debemos implementar para que nuestro cÃ³digo compile es
+                                escribirDescripcion, que como decÃ­amos, presenta por pantalla la descripciÃ³n de la
+                                habitaciÃ³n actual (aquella cuyo Ã­ndice se almacena en la variable habitacion). Necesita
+                                dos parÃ¡metros: el array conteniendo la informaciÃ³n de todas las habitaciones, y el
+                                Ã­ndice de la habitaciÃ³n actual. El cÃ³digo de esta funciÃ³n podrÃ­a ser el siguiente (como
+                                en el caso anterior, debe ser introducido en el cÃ³digo antes que el mÃ©todo main):
 
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void escribirDescripcion(THabitacion habitaciones, int habitacion)
 {
     printf(habitaciones[habitacion].descripcion);
@@ -332,74 +486,118 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion)
     printf("\n\n");
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>
-La primera línea no hace más que mostrar por pantalla la cadena de texto de la habitación actual que está almacenada en el array habitaciones. Se hace uso de printf, proporcionado por la librería de entrada y salida estándar de z88dk. La función printf se utiliza igual que en la librería estándar de C para PC, incluyendo el escape de carácteres como el \n (que introduce un retorno de carro), o la escritura de variables mediante %c, %d, etc.
-</p>
-<p>
-La siguiente línea introduce dos retornos de carro para hacer el texto más claro, y la siguiente muestra la cadena "Salidas:", pues además de mostrar por pantalla la descripción de la habitación, vamos a indicar en que direcciones se podrá mover el jugador. Para cada posición del array direcciones para la habitación correspondiente, comprobamos si el valor es cero o no. Recordamos que si el valor era cero significaba que el jugador no podía moverse en esa dirección, y en caso contrario, el valor almacenado era el identificador de la habitación hacia la que nos desplazamos moviéndonos en esa dirección. En el caso de que para una dirección concreta el valor del array sea distinto cero, mostraremos la dirección correspondiente.
-</p>
-<p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                La primera lÃ­nea no hace mÃ¡s que mostrar por pantalla la cadena de texto de la
+                                habitaciÃ³n actual que estÃ¡ almacenada en el array habitaciones. Se hace uso de printf,
+                                proporcionado por la librerÃ­a de entrada y salida estÃ¡ndar de z88dk. La funciÃ³n printf
+                                se utiliza igual que en la librerÃ­a estÃ¡ndar de C para PC, incluyendo el escape de
+                                carÃ¡cteres como el \n (que introduce un retorno de carro), o la escritura de variables
+                                mediante %c, %d, etc.
+                            </p>
+                            <p>
+                                La siguiente lÃ­nea introduce dos retornos de carro para hacer el texto mÃ¡s claro, y la
+                                siguiente muestra la cadena "Salidas:", pues ademÃ¡s de mostrar por pantalla la
+                                descripciÃ³n de la habitaciÃ³n, vamos a indicar en que direcciones se podrÃ¡ mover el
+                                jugador. Para cada posiciÃ³n del array direcciones para la habitaciÃ³n correspondiente,
+                                comprobamos si el valor es cero o no. Recordamos que si el valor era cero significaba
+                                que el jugador no podÃ­a moverse en esa direcciÃ³n, y en caso contrario, el valor
+                                almacenado era el identificador de la habitaciÃ³n hacia la que nos desplazamos
+                                moviÃ©ndonos en esa direcciÃ³n. En el caso de que para una direcciÃ³n concreta el valor del
+                                array sea distinto cero, mostraremos la direcciÃ³n correspondiente.
+                            </p>
+                            <p>
 
-Las direcciones son escritas de forma especial. Además de un espacio en blanco al inicio de cada una, para separarlas en el caso de que se muestren varias por pantalla, existen unos carácteres raros al inicio (%c[4m) y al final (%c[24m). Esto es una particularidad de z88dk, y nos permite dar formato al texto. Para indicar que se va a formatear el texto, se introduce el carácter 27 en la cadena (mediante %c), y para el formato en sí mismo, se introduce [Xm, donde X es un código numérico que puede ser:
-</p>
-<p>
-1 - texto en negrita<br>
-2 - texto delgado<br>
-4 - texto subrayado<br>
-7 - texto inverso
-</p>
-<p>
-Si se utiliza 21, 22, 24 y 27 se desactiva el formato correspondiente. Así pues, al escribir una dirección, utilizamos el modo 4 para usar subrayado, y cuando terminamos de escribirla, utilizamos el modo 24 para desactivar el subrayado. Si no hiciéramos esto último, cualquier cosa que escribiéramos a continuación aparecería subrayada. Si usamos [m (sin número entre [ y m), se restaurarán los atributos originales del texto.
-</p>
-<p>
-Si compilamos y ejecutamos, veremos nuestro primer resultado: se mostrará la descripción de la habitación inicial, y se nos mostrarán las direcciones de salida... y ahí acabará el programa, pues no hemos dicho que haga nada más.
-</p>
+                                Las direcciones son escritas de forma especial. AdemÃ¡s de un espacio en blanco al inicio
+                                de cada una, para separarlas en el caso de que se muestren varias por pantalla, existen
+                                unos carÃ¡cteres raros al inicio (%c[4m) y al final (%c[24m). Esto es una particularidad
+                                de z88dk, y nos permite dar formato al texto. Para indicar que se va a formatear el
+                                texto, se introduce el carÃ¡cter 27 en la cadena (mediante %c), y para el formato en sÃ­
+                                mismo, se introduce [Xm, donde X es un cÃ³digo numÃ©rico que puede ser:
+                            </p>
+                            <p>
+                                1 - texto en negrita<br>
+                                2 - texto delgado<br>
+                                4 - texto subrayado<br>
+                                7 - texto inverso
+                            </p>
+                            <p>
+                                Si se utiliza 21, 22, 24 y 27 se desactiva el formato correspondiente. AsÃ­ pues, al
+                                escribir una direcciÃ³n, utilizamos el modo 4 para usar subrayado, y cuando terminamos de
+                                escribirla, utilizamos el modo 24 para desactivar el subrayado. Si no hiciÃ©ramos esto
+                                Ãºltimo, cualquier cosa que escribiÃ©ramos a continuaciÃ³n aparecerÃ­a subrayada. Si usamos
+                                [m (sin nÃºmero entre [ y m), se restaurarÃ¡n los atributos originales del texto.
+                            </p>
+                            <p>
+                                Si compilamos y ejecutamos, veremos nuestro primer resultado: se mostrarÃ¡ la descripciÃ³n
+                                de la habitaciÃ³n inicial, y se nos mostrarÃ¡n las direcciones de salida... y ahÃ­ acabarÃ¡
+                                el programa, pues no hemos dicho que haga nada mÃ¡s.
+                            </p>
 
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk_2.png" width="328" height="290"  alt="Comienza la aventura" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Comienza la aventura</td>
-	</tr>
-</table>
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk_2.png" width="328" height="290" alt="Comienza la aventura"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Comienza la aventura</td>
+                                </tr>
+                            </table>
 
 
-<p>
-<b>El intérprete de comandos</b>
-</p>
-<p>
-Para añadir interactividad, debemos introducir un intérprete de comandos, que ante los mandatos tecleados por el jugador, haga que pase algo en el juego. Este interprete de comandos consistirá en un bucle infinito en el que leeremos cadenas introducidas por el jugador, y según el valor de dichas cadenas se ejecutarán unas intrucciones u otras.
-</p>
-<p>
-Para nuestro intérprete de comandos necesitaremos dos variables (que una vez más deben ser declaradas al inicio de la función main):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>
+                                <b>El intÃ©rprete de comandos</b>
+                            </p>
+                            <p>
+                                Para aÃ±adir interactividad, debemos introducir un intÃ©rprete de comandos, que ante los
+                                mandatos tecleados por el jugador, haga que pase algo en el juego. Este interprete de
+                                comandos consistirÃ¡ en un bucle infinito en el que leeremos cadenas introducidas por el
+                                jugador, y segÃºn el valor de dichas cadenas se ejecutarÃ¡n unas intrucciones u otras.
+                            </p>
+                            <p>
+                                Para nuestro intÃ©rprete de comandos necesitaremos dos variables (que una vez mÃ¡s deben
+                                ser declaradas al inicio de la funciÃ³n main):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 int final = 0;
 char comando[250];
 int i;
 </pre>
 
-    </p></td></tr>
-</table>
-<p>
-La primera es una variable que podrá tomar dos valores, 0 y 1. Cuando valga 1, querrá decir que la aventura habrá terminado y que el intérprete de comandos deberá dejar de ejecutarse. En el array de caracteres comando almacenaremos el comando de texto introducido por el jugador mediante el teclado. La variable i no es más que un contador que utilizaremos más adelante.
-</p>
-<p>
-El intérprete de comandos se ejecutará mientras la variable final valga 0 (lo cual significa que la aventura no ha terminado), pidiendo un comando al usuario. Se comparará la cadena introducida por el usuario con un conjunto de cadenas o comandos que el interprete entenderá. Si la cadena se corresponde con alguno de los comandos entenidos por el programa, se desencadenarán las acciones pertinentes. En caso contrario, se mostrará un mensaje por defecto (del tipo de "No entiendo lo que dices").
-</p>
-<p>
-Un ejemplo sencillo de intérprete de comandos que solo entiende los comandos "m" y "mirar" (ambos equivalentes) que borrarán la pantalla y mostrarán de nuevo al descripción de la habitación que nos encontramos se muestra a continuación, en el siguiente método main que deberá ser utilizado en lugar del ejemplo anterior:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                La primera es una variable que podrÃ¡ tomar dos valores, 0 y 1. Cuando valga 1, querrÃ¡
+                                decir que la aventura habrÃ¡ terminado y que el intÃ©rprete de comandos deberÃ¡ dejar de
+                                ejecutarse. En el array de caracteres comando almacenaremos el comando de texto
+                                introducido por el jugador mediante el teclado. La variable i no es mÃ¡s que un contador
+                                que utilizaremos mÃ¡s adelante.
+                            </p>
+                            <p>
+                                El intÃ©rprete de comandos se ejecutarÃ¡ mientras la variable final valga 0 (lo cual
+                                significa que la aventura no ha terminado), pidiendo un comando al usuario. Se compararÃ¡
+                                la cadena introducida por el usuario con un conjunto de cadenas o comandos que el
+                                interprete entenderÃ¡. Si la cadena se corresponde con alguno de los comandos entenidos
+                                por el programa, se desencadenarÃ¡n las acciones pertinentes. En caso contrario, se
+                                mostrarÃ¡ un mensaje por defecto (del tipo de "No entiendo lo que dices").
+                            </p>
+                            <p>
+                                Un ejemplo sencillo de intÃ©rprete de comandos que solo entiende los comandos "m" y
+                                "mirar" (ambos equivalentes) que borrarÃ¡n la pantalla y mostrarÃ¡n de nuevo al
+                                descripciÃ³n de la habitaciÃ³n que nos encontramos se muestra a continuaciÃ³n, en el
+                                siguiente mÃ©todo main que deberÃ¡ ser utilizado en lugar del ejemplo anterior:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void main(void)
 {
     int habitacion = 0;
@@ -428,32 +626,58 @@ void main(void)
 }
 
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Este intérprete de comandos, que comienza con la sentencia while, se explica a continuación:
-</p>
-<ul>
-<li>La instrucción while (final == 0) hace que el código del intérprete de comandos se repita infinitamente, porque el valor de la variable final no va a cambiar.</li>
-<li>El primer printf indica al usuario que está esperando que introduzca un comando.</li>
-<li>La instrucción gets, al igual que el equivalente de la librería estándar de C del PC, espera a que el usuario introduzca el comando y lo almacena en la cadena comando, creada anteriormente.</li>
-<li>El if comprueba si el comando introducido es exactamente igual a alguno de los dos únicos comandos que entiende nuestra aplicación, m y mirar. Para ello se hace uso de strcmp, porporcionado una vez más por z88dk y una vez más de uso similar a la función homónima de la librería estándar de C de PC.</li>
-<li>Si el comando introducido no se corresponde con ninguno de los que entienda el intérprete, se ejecutará la instrucción tras el else, mostrando por pantalla un mensaje de error para que el jugador sepa que el programa no le ha entenido.</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Este intÃ©rprete de comandos, que comienza con la sentencia while, se explica a
+                                continuaciÃ³n:
+                            </p>
+                            <ul>
+                                <li>La instrucciÃ³n while (final == 0) hace que el cÃ³digo del intÃ©rprete de comandos se
+                                    repita infinitamente, porque el valor de la variable final no va a cambiar.
+                                </li>
+                                <li>El primer printf indica al usuario que estÃ¡ esperando que introduzca un comando.
+                                </li>
+                                <li>La instrucciÃ³n gets, al igual que el equivalente de la librerÃ­a estÃ¡ndar de C del
+                                    PC, espera a que el usuario introduzca el comando y lo almacena en la cadena
+                                    comando, creada anteriormente.
+                                </li>
+                                <li>El if comprueba si el comando introducido es exactamente igual a alguno de los dos
+                                    Ãºnicos comandos que entiende nuestra aplicaciÃ³n, m y mirar. Para ello se hace uso de
+                                    strcmp, porporcionado una vez mÃ¡s por z88dk y una vez mÃ¡s de uso similar a la
+                                    funciÃ³n homÃ³nima de la librerÃ­a estÃ¡ndar de C de PC.
+                                </li>
+                                <li>Si el comando introducido no se corresponde con ninguno de los que entienda el
+                                    intÃ©rprete, se ejecutarÃ¡ la instrucciÃ³n tras el else, mostrando por pantalla un
+                                    mensaje de error para que el jugador sepa que el programa no le ha entenido.
+                                </li>
 
-<li>Si el comando introducido es igual a m o mirar, lo que se hace es borrar la pantalla (escribiendo varios retornos de carro) y se llama a escribirDescripcion para que se muestre la información del a habitación actual. El método strcmp devuelve 0 si las dos cadenas pasadas como parámetro son iguales, y un valor distinto de cero en caso contrario.</li>
-</ul>
-<p>
-Si compilamos el código y lo ejecutamos en el compilador, veremos que por fin ya podremos hacer algo con nuestro juego, aunque muy poco. Ya queda menos para que podamos movernos por nuestro mundo de aventura.
-</p>
-<p>
-<b>Moviéndonos por las habitaciones</b>
-</p>
-<p>
-Por último explicaremos cómo hacer que el jugador pueda desplazarse por el mapeado de nuestra aventura conversacional. Deberemos hacer que nuestro intérprete de comandos entienda los comandos referentes al movimiento. Una forma de hacerlo es mediante el siguiente código:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <li>Si el comando introducido es igual a m o mirar, lo que se hace es borrar la pantalla
+                                    (escribiendo varios retornos de carro) y se llama a escribirDescripcion para que se
+                                    muestre la informaciÃ³n del a habitaciÃ³n actual. El mÃ©todo strcmp devuelve 0 si las
+                                    dos cadenas pasadas como parÃ¡metro son iguales, y un valor distinto de cero en caso
+                                    contrario.
+                                </li>
+                            </ul>
+                            <p>
+                                Si compilamos el cÃ³digo y lo ejecutamos en el compilador, veremos que por fin ya
+                                podremos hacer algo con nuestro juego, aunque muy poco. Ya queda menos para que podamos
+                                movernos por nuestro mundo de aventura.
+                            </p>
+                            <p>
+                                <b>MoviÃ©ndonos por las habitaciones</b>
+                            </p>
+                            <p>
+                                Por Ãºltimo explicaremos cÃ³mo hacer que el jugador pueda desplazarse por el mapeado de
+                                nuestra aventura conversacional. Deberemos hacer que nuestro intÃ©rprete de comandos
+                                entienda los comandos referentes al movimiento. Una forma de hacerlo es mediante el
+                                siguiente cÃ³digo:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 while (final == 0)
 {
@@ -515,116 +739,127 @@ while (final == 0)
     }
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Lo único que se ha hecho ha sido introducir una sentencia if por cada comando que entiende el intérprete (después del else correspondiente al if anterior para evitar comparación con todos los comandos si ya se ha entenido qué es lo que el jugador quiere decir). Si el comando introducido por el jugador se corresponde con una dirección, se comprobará si se puede ir en esa dirección (examinando el valor de la posición adecuada en el array direcciones de la habitación actual), y en caso de que sea posible, se cambiará el valor de la variable habitacion (que marca la habitación en la que se encuentra el jugador actualmente) y se mostrará la descripción de dicha habitación. Si no es posible el movimiento en dicha dirección, se mostrará un mensaje adecuado.
-</p>
-<p>
-Y ya está... si compilamos y ejecutamos el .tap en el emulador, veremos como ya podemos movernos por nuestro mundo conversacional.
-</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Lo Ãºnico que se ha hecho ha sido introducir una sentencia if por cada comando que
+                                entiende el intÃ©rprete (despuÃ©s del else correspondiente al if anterior para evitar
+                                comparaciÃ³n con todos los comandos si ya se ha entenido quÃ© es lo que el jugador quiere
+                                decir). Si el comando introducido por el jugador se corresponde con una direcciÃ³n, se
+                                comprobarÃ¡ si se puede ir en esa direcciÃ³n (examinando el valor de la posiciÃ³n adecuada
+                                en el array direcciones de la habitaciÃ³n actual), y en caso de que sea posible, se
+                                cambiarÃ¡ el valor de la variable habitacion (que marca la habitaciÃ³n en la que se
+                                encuentra el jugador actualmente) y se mostrarÃ¡ la descripciÃ³n de dicha habitaciÃ³n. Si
+                                no es posible el movimiento en dicha direcciÃ³n, se mostrarÃ¡ un mensaje adecuado.
+                            </p>
+                            <p>
+                                Y ya estÃ¡... si compilamos y ejecutamos el .tap en el emulador, veremos como ya podemos
+                                movernos por nuestro mundo conversacional.
+                            </p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk_3.png" width="328" height="290"  alt="Moviéndonos por el mundo que hemos creado" />
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk_3.png" width="328" height="290"
+                                             alt="MoviÃ©ndonos por el mundo que hemos creado"/>
 
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Moviéndonos por el mundo que hemos creado</td>
-	</tr>
-</table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">MoviÃ©ndonos por el mundo que hemos creado</td>
+                                </tr>
+                            </table>
 
-<p>
-<b>¿Y ahora qué?</b>
-</p>
-<p>
+                            <p>
+                                <b>Â¿Y ahora quÃ©?</b>
+                            </p>
+                            <p>
 
-Hemos visto cómo utilizar un poco las funciones de entrada y salida y de cadenas de z88dk. Hemos comprobado que son iguales prácticamente a las del C estándar de los PCs actuales, excepto por la particularidad del formateo de texto visto al escribir las posibles direcciones por las que movernos (y alguna otra particularidad que todavía queda por describir).
-</p>
-<p>
-A partir de ahora, crear la aventura conversacional será tan fácil como añadir nuevos comandos inteligibles por nuestro intérprete de comandos, mediante más sentencias if, y creando las estructuras de datos adecuadas para que eso sea posible. En próximas entregas crearemos objetos y haremos que el jugador pueda interactuar con ellos, al mismo tiempo que veremos algunas opciones más de formateo de texto.
-</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-    <li><a href="src/fuentes.tar.gz" onClick="window.open(this.href); return false;">Archivos fuente del ejemplo propuesto (fuentes.tar.gz)</a></li>
-</ul>
-</div>
-</div>
+                                Hemos visto cÃ³mo utilizar un poco las funciones de entrada y salida y de cadenas de
+                                z88dk. Hemos comprobado que son iguales prÃ¡cticamente a las del C estÃ¡ndar de los PCs
+                                actuales, excepto por la particularidad del formateo de texto visto al escribir las
+                                posibles direcciones por las que movernos (y alguna otra particularidad que todavÃ­a
+                                queda por describir).
+                            </p>
+                            <p>
+                                A partir de ahora, crear la aventura conversacional serÃ¡ tan fÃ¡cil como aÃ±adir nuevos
+                                comandos inteligibles por nuestro intÃ©rprete de comandos, mediante mÃ¡s sentencias if, y
+                                creando las estructuras de datos adecuadas para que eso sea posible. En prÃ³ximas
+                                entregas crearemos objetos y haremos que el jugador pueda interactuar con ellos, al
+                                mismo tiempo que veremos algunas opciones mÃ¡s de formateo de texto.
+                            </p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+                                <ul>
+                                    <li><a href="src/fuentes.tar.gz" onClick="window.open(this.href); return false;">Archivos
+                                        fuente del ejemplo propuesto (fuentes.tar.gz)</a></li>
+                                </ul>
+                            </div>
+                        </div>
 
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>SIEW</td>
+                </tr>
+            </table>
         </td>
     </tr>
     <tr>
-        <td align="right"><br><br>SIEW</td>
+        <td>Â </td>
     </tr>
-</table>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
 
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
 
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
 
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-                    </td>
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
                 </tr>
             </table>
-
-    </body>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

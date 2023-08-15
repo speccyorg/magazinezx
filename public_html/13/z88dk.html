@@ -1,100 +1,195 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="el-aventurero.html">El Aventurero</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="rem.html">REM</option>
-
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 13 - Enero 2006</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-
-</table>
-</a>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>ProgramaciÃ³n Z88DK - Magazine ZX nÃºmero 13 - Enero 2006</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-<div align="justify">
-<p align="center"><font size="5">LA LIBRERIA SPRITE PACK</font></p>
-<p><b>INTRODUCCIÓN</b></p>
-<p><i>En artículos anteriores de la revista hemos visto como utilizar las funciones proporcionadas de base con la librería z88dk para la creación de sprites, aplicándolas para crear la semilla de lo que podría ser nuestro propio juego de coches. Sin embargo, nos encontrábamos con un par de contratiempos que, aunque no se indicaron de forma explícita, los podríamos descubrir a la hora de crear nuestras propias aplicaciones. Por una parte, la complejidad del diseño de los propios sprites; de hecho, nos teníamos que basar en una aplicación (sólo para Linux) para la creación de los mismos. Por otra parte, cambiar los atributos de color y fondo de los sprites, así como transparencias, es un tema no especialmente sencillo que ni siquiera se trató.</i></p>
-<p>Para hacernos la vida más fácil a la hora de programar usando sprites disponemos de la librería <b>Sprite Pack</b>; la página principal del proyecto es <a href="http://www.geocities.com/aralbrec/" onclick="window.open(this.href); return false;">http://www.geocities.com/aralbrec/</a>. Se trata de piezas de código escritas en ensamblador, con una interfaz que puede ser usada desde C para su compilación con las herramientas de z88dk. Esto en cristiano quiere decir que podremos llamar a las funciones de la librería Sprite Pack desde nuestros programas z88dk de forma totalmente transparente, pero teniendo la seguridad de que el código será lo más eficiente posible.</p>
-<p>Sprite Pack es una librería multipropósito, no centrada únicamente en la creación de sprites. Se compone de varios módulos distintos: creación de sprites, rutinas de entrada, intersecciones de rectángulos, tipos abstractos de datos, compresión de datos, API de interrupciones, etc. No solo podemos utilizarla con el Spectrum, sino que en teoría podríamos emplear todo este código en cualquier plataforma Z80, aunque existen dos módulos demasiado específicos que solo dispondremos para <i>Spectrum y Timex</i>, el de creación de sprites y el de lectura de dispositivos de entrada.</p>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="el-aventurero.html">El Aventurero</option>
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="rem.html">REM</option>
 
-<p>Durante los siguientes artículos nos centraremos especialmente en el módulo de sprites, con la idea de ser utilizado en el seno de nuestras aplicaciones z88dk para Spectrum, aunque durante el desarrollo de nuestros ejemplos tendremos que ir usando también algunas pequeñas partes del resto de los módulos. Vamos a dar un pequeño paso atrás con respecto a entregas anteriores, pues vamos a aprender de nuevo a dibujar sprites desde el principio, aunque utilizando Sprite Pack en esta ocasión. Podría parecer que esto es un poco inútil, pero ya veremos más adelante que las ventajas de utilizar esta capa por encima de z88dk no tardarán en llegar.</p>
-<p><b>INSTALACIÓN</b></p>
-<p>Lo primero que debemos hacer es descargar la librería de su página (en el momento de escribir este artículo, la última versión era la 2.2):</p>
-<p><a href="http://www.geocities.com/aralbrec/" onclick="window.open(this.href); return false;">http://www.geocities.com/aralbrec/</a></p>
-<p>Tras obtener el fichero comprimido, lo descomprimimos en cualquier directorio de trabajo. El resultado será la carpeta z88dk, en cuyo interior encontraremos a su vez otro directorio llamado work, en el que en último lugar descubriremos un nuevo directorio llamado splib2, en el que nos deberemos situar para realizar la compilación.</p>
-<p>Al tratarse de una librería para el manejo, entre otras cosas, de sprites de la pantalla, debemos comprobar que el código de la librería se va a compilar para las características peculiares del Spectrum antes de continuar. Lo único que tendremos que hacer será editar el fichero <i>SPconfig.def</i>, que es el fichero de configuración de la compilación, y asegurarnos de que el valor de <b>DISP_SPECTRUM</b> es 1 y el valor del resto de variables DISP_ (<b>DISP_HICOLOUR</b>, <b>DISP_HIRES</b> y <b>DISP_TMXDUAL</b>) es 0.</p>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 13 - Enero 2006</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/"
+                                                                          onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
 
-<p>Sprite Pack incluye un fichero <i>Makefile.bat</i> que creará la librería en una máquina Windows. Solamente sería necesario en este tipo de entorno que se abriera una ventana de MS-DOS, se acudiera al directorio donde está el código fuente, y tras inicializar las variables de entorno que permiten compilar con z88dk, teclear Makefile. En Linux es un poco más complicado, y deberemos modificar ese archivo para que funcione. Para ahorrar trabajo al lector, se incluye un fichero <i>Makefile.sh</i>, equivalente al Makefile.bat para Windows, que puede ser usado en Linux junto a este artículo. No se debe olvidar el proporcionar permiso de ejecución a dicho fichero para que lo podamos utilizar. El fichero <i>sp.lst</i>, que se encuentra en el directorio raíz del código fuente de la librería (junto a makefile.bat) tambien debe ser modificado para Linux; junto a este artículo se adjunta igualmente este archivo para poder ser utilizado en este sistema.</p>
-<p>Sea cual sea el sistema operativo que utilicemos, como resultado obtendremos un nuevo fichero <b>splib2.lib</b>, que deberemos copiar al interior del directorio <i>lib\clibs</i> dentro de nuestro directorio de instalación de z88dk. A su vez, deberemos copiar el fichero <b>spritepack.h</b> en el directorio <i>include</i>, también dentro del directorio de isntalación de z88dk. ¡Ya tenemos la librería lista para ser usada!. Solo será necesario añadir la línea <font color="green">#include "spritepack.h"</font> en cada uno de los archivos .c en los que queramos hacer uso de las funcionalidades de la libreria, y compilarlos añadiendo -lsplib2 como uno de los parámetros de zcc.</p>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
 
-<p><b>NUESTRO PRIMER EJEMPLO</b></p>
-<p>Sprite Pack tiene una forma particular de actualizar la pantalla. Realizar una actualización completa y simultánea de toda ella simultáneamente haría necesario el uso de rutinas en ensamblador demasiado específicas, lo cual chocaría con el objetivo real de la librería, que se pretende que sea multiplataforma. Es por ello que lo que realmente se hace es actualizar únicamente las porciones de la pantalla donde se ha producido algún cambio. Se dirá que aquellas partes de la pantalla que queramos redibujar deberán ser invalidadas. Aquellas partes que no queramos redibujar serán regiones validadas. Luego lo veremos con un ejemplo y lo entenderemos mejor, pero de momento nos debemos hacer a la idea de que nunca podremos hacer juegos con scroll total, ya sea horizontal o vertical, con esta librería. Deberemos centrarnos en juegos de plataformas o juegos limitados donde toda la acción se desarrolla sin scroll.</p>
-<p>Otros conceptos que deberemos tener claros son el de <b>backtile</b> y <b>sprite</b>. Comprender la diferencia entre ambos es necesario para desarrollar nuestras aplicaciones. La pantalla está dividida en un array de tamaño 32x24 de celdas de caracteres (a su vez de tamaño 8x8). Cada una de estas celdas podrá contener sólo un backtile y uno o más sprites. Los backtiles se pueden entender como el "fondo", y en realidad se trata de UDGs coloreados de tamaño 8x8, que son escritos en la pantalla de la misma forma en la que lo son los UDGs en BASIC. Por otra parte, los sprites podrán ocupar cualquier posición de la pantalla, en incrementos de un pixel, y su tamaño podrá ser mayor que 8x8, aunque no tendremos tanta libertad como con z88dk y únicamente podrán tener tamaños múltiplos, tanto en número de filas como de columnas, de 8.</p>
-<p>De momento nos centraremos en los backtiles. La función básica para dibujarlos es <font color="green">sp_PrintAtInv</font>, que además de dibujar el carácter con el color de tinta y papel que deseemos, invalidadá la celda donde haya sido dibujado para que se redibuje al actualizar la pantalla. Existe otra función, <font color="green">sp_PrintAt</font>, que hace exactamente lo mismo, pero sin invalidar la celda donde el backtile es dibujado. Todos los cambios en la pantalla se realizarán de forma simultánea al llamar a la función <font color="green">sp_updateNow</font>.</p>
+                        <div align="justify">
+                            <p align="center"><font size="5">LA LIBRERIA SPRITE PACK</font></p>
+                            <p><b>INTRODUCCIÃ“N</b></p>
+                            <p><i>En artÃ­culos anteriores de la revista hemos visto como utilizar las funciones
+                                proporcionadas de base con la librerÃ­a z88dk para la creaciÃ³n de sprites, aplicÃ¡ndolas
+                                para crear la semilla de lo que podrÃ­a ser nuestro propio juego de coches. Sin embargo,
+                                nos encontrÃ¡bamos con un par de contratiempos que, aunque no se indicaron de forma
+                                explÃ­cita, los podrÃ­amos descubrir a la hora de crear nuestras propias aplicaciones. Por
+                                una parte, la complejidad del diseÃ±o de los propios sprites; de hecho, nos tenÃ­amos que
+                                basar en una aplicaciÃ³n (sÃ³lo para Linux) para la creaciÃ³n de los mismos. Por otra
+                                parte, cambiar los atributos de color y fondo de los sprites, asÃ­ como transparencias,
+                                es un tema no especialmente sencillo que ni siquiera se tratÃ³.</i></p>
+                            <p>Para hacernos la vida mÃ¡s fÃ¡cil a la hora de programar usando sprites disponemos de la
+                                librerÃ­a <b>Sprite Pack</b>; la pÃ¡gina principal del proyecto es <a
+                                        href="http://www.geocities.com/aralbrec/"
+                                        onclick="window.open(this.href); return false;">http://www.geocities.com/aralbrec/</a>.
+                                Se trata de piezas de cÃ³digo escritas en ensamblador, con una interfaz que puede ser
+                                usada desde C para su compilaciÃ³n con las herramientas de z88dk. Esto en cristiano
+                                quiere decir que podremos llamar a las funciones de la librerÃ­a Sprite Pack desde
+                                nuestros programas z88dk de forma totalmente transparente, pero teniendo la seguridad de
+                                que el cÃ³digo serÃ¡ lo mÃ¡s eficiente posible.</p>
+                            <p>Sprite Pack es una librerÃ­a multipropÃ³sito, no centrada Ãºnicamente en la creaciÃ³n de
+                                sprites. Se compone de varios mÃ³dulos distintos: creaciÃ³n de sprites, rutinas de
+                                entrada, intersecciones de rectÃ¡ngulos, tipos abstractos de datos, compresiÃ³n de datos,
+                                API de interrupciones, etc. No solo podemos utilizarla con el Spectrum, sino que en
+                                teorÃ­a podrÃ­amos emplear todo este cÃ³digo en cualquier plataforma Z80, aunque existen
+                                dos mÃ³dulos demasiado especÃ­ficos que solo dispondremos para <i>Spectrum y Timex</i>, el
+                                de creaciÃ³n de sprites y el de lectura de dispositivos de entrada.</p>
 
-<p>Veamos un ejemplo. El siguiente código se encarga de dibujar letras 'x' en posiciones al azar de la pantalla, cambiando el color de la tinta y el papel, también al azar.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Durante los siguientes artÃ­culos nos centraremos especialmente en el mÃ³dulo de sprites,
+                                con la idea de ser utilizado en el seno de nuestras aplicaciones z88dk para Spectrum,
+                                aunque durante el desarrollo de nuestros ejemplos tendremos que ir usando tambiÃ©n
+                                algunas pequeÃ±as partes del resto de los mÃ³dulos. Vamos a dar un pequeÃ±o paso atrÃ¡s con
+                                respecto a entregas anteriores, pues vamos a aprender de nuevo a dibujar sprites desde
+                                el principio, aunque utilizando Sprite Pack en esta ocasiÃ³n. PodrÃ­a parecer que esto es
+                                un poco inÃºtil, pero ya veremos mÃ¡s adelante que las ventajas de utilizar esta capa por
+                                encima de z88dk no tardarÃ¡n en llegar.</p>
+                            <p><b>INSTALACIÃ“N</b></p>
+                            <p>Lo primero que debemos hacer es descargar la librerÃ­a de su pÃ¡gina (en el momento de
+                                escribir este artÃ­culo, la Ãºltima versiÃ³n era la 2.2):</p>
+                            <p><a href="http://www.geocities.com/aralbrec/"
+                                  onclick="window.open(this.href); return false;">http://www.geocities.com/aralbrec/</a>
+                            </p>
+                            <p>Tras obtener el fichero comprimido, lo descomprimimos en cualquier directorio de trabajo.
+                                El resultado serÃ¡ la carpeta z88dk, en cuyo interior encontraremos a su vez otro
+                                directorio llamado work, en el que en Ãºltimo lugar descubriremos un nuevo directorio
+                                llamado splib2, en el que nos deberemos situar para realizar la compilaciÃ³n.</p>
+                            <p>Al tratarse de una librerÃ­a para el manejo, entre otras cosas, de sprites de la pantalla,
+                                debemos comprobar que el cÃ³digo de la librerÃ­a se va a compilar para las caracterÃ­sticas
+                                peculiares del Spectrum antes de continuar. Lo Ãºnico que tendremos que hacer serÃ¡ editar
+                                el fichero <i>SPconfig.def</i>, que es el fichero de configuraciÃ³n de la compilaciÃ³n, y
+                                asegurarnos de que el valor de <b>DISP_SPECTRUM</b> es 1 y el valor del resto de
+                                variables DISP_ (<b>DISP_HICOLOUR</b>, <b>DISP_HIRES</b> y <b>DISP_TMXDUAL</b>) es 0.
+                            </p>
+
+                            <p>Sprite Pack incluye un fichero <i>Makefile.bat</i> que crearÃ¡ la librerÃ­a en una mÃ¡quina
+                                Windows. Solamente serÃ­a necesario en este tipo de entorno que se abriera una ventana de
+                                MS-DOS, se acudiera al directorio donde estÃ¡ el cÃ³digo fuente, y tras inicializar las
+                                variables de entorno que permiten compilar con z88dk, teclear Makefile. En Linux es un
+                                poco mÃ¡s complicado, y deberemos modificar ese archivo para que funcione. Para ahorrar
+                                trabajo al lector, se incluye un fichero <i>Makefile.sh</i>, equivalente al Makefile.bat
+                                para Windows, que puede ser usado en Linux junto a este artÃ­culo. No se debe olvidar el
+                                proporcionar permiso de ejecuciÃ³n a dicho fichero para que lo podamos utilizar. El
+                                fichero <i>sp.lst</i>, que se encuentra en el directorio raÃ­z del cÃ³digo fuente de la
+                                librerÃ­a (junto a makefile.bat) tambien debe ser modificado para Linux; junto a este
+                                artÃ­culo se adjunta igualmente este archivo para poder ser utilizado en este sistema.
+                            </p>
+                            <p>Sea cual sea el sistema operativo que utilicemos, como resultado obtendremos un nuevo
+                                fichero <b>splib2.lib</b>, que deberemos copiar al interior del directorio
+                                <i>lib\clibs</i> dentro de nuestro directorio de instalaciÃ³n de z88dk. A su vez,
+                                deberemos copiar el fichero <b>spritepack.h</b> en el directorio <i>include</i>, tambiÃ©n
+                                dentro del directorio de isntalaciÃ³n de z88dk. Â¡Ya tenemos la librerÃ­a lista para ser
+                                usada!. Solo serÃ¡ necesario aÃ±adir la lÃ­nea <font color="green">#include
+                                    "spritepack.h"</font> en cada uno de los archivos .c en los que queramos hacer uso
+                                de las funcionalidades de la libreria, y compilarlos aÃ±adiendo -lsplib2 como uno de los
+                                parÃ¡metros de zcc.</p>
+
+                            <p><b>NUESTRO PRIMER EJEMPLO</b></p>
+                            <p>Sprite Pack tiene una forma particular de actualizar la pantalla. Realizar una
+                                actualizaciÃ³n completa y simultÃ¡nea de toda ella simultÃ¡neamente harÃ­a necesario el uso
+                                de rutinas en ensamblador demasiado especÃ­ficas, lo cual chocarÃ­a con el objetivo real
+                                de la librerÃ­a, que se pretende que sea multiplataforma. Es por ello que lo que
+                                realmente se hace es actualizar Ãºnicamente las porciones de la pantalla donde se ha
+                                producido algÃºn cambio. Se dirÃ¡ que aquellas partes de la pantalla que queramos
+                                redibujar deberÃ¡n ser invalidadas. Aquellas partes que no queramos redibujar serÃ¡n
+                                regiones validadas. Luego lo veremos con un ejemplo y lo entenderemos mejor, pero de
+                                momento nos debemos hacer a la idea de que nunca podremos hacer juegos con scroll total,
+                                ya sea horizontal o vertical, con esta librerÃ­a. Deberemos centrarnos en juegos de
+                                plataformas o juegos limitados donde toda la acciÃ³n se desarrolla sin scroll.</p>
+                            <p>Otros conceptos que deberemos tener claros son el de <b>backtile</b> y <b>sprite</b>.
+                                Comprender la diferencia entre ambos es necesario para desarrollar nuestras
+                                aplicaciones. La pantalla estÃ¡ dividida en un array de tamaÃ±o 32x24 de celdas de
+                                caracteres (a su vez de tamaÃ±o 8x8). Cada una de estas celdas podrÃ¡ contener sÃ³lo un
+                                backtile y uno o mÃ¡s sprites. Los backtiles se pueden entender como el "fondo", y en
+                                realidad se trata de UDGs coloreados de tamaÃ±o 8x8, que son escritos en la pantalla de
+                                la misma forma en la que lo son los UDGs en BASIC. Por otra parte, los sprites podrÃ¡n
+                                ocupar cualquier posiciÃ³n de la pantalla, en incrementos de un pixel, y su tamaÃ±o podrÃ¡
+                                ser mayor que 8x8, aunque no tendremos tanta libertad como con z88dk y Ãºnicamente podrÃ¡n
+                                tener tamaÃ±os mÃºltiplos, tanto en nÃºmero de filas como de columnas, de 8.</p>
+                            <p>De momento nos centraremos en los backtiles. La funciÃ³n bÃ¡sica para dibujarlos es <font
+                                    color="green">sp_PrintAtInv</font>, que ademÃ¡s de dibujar el carÃ¡cter con el color
+                                de tinta y papel que deseemos, invalidadÃ¡ la celda donde haya sido dibujado para que se
+                                redibuje al actualizar la pantalla. Existe otra funciÃ³n, <font
+                                        color="green">sp_PrintAt</font>, que hace exactamente lo mismo, pero sin
+                                invalidar la celda donde el backtile es dibujado. Todos los cambios en la pantalla se
+                                realizarÃ¡n de forma simultÃ¡nea al llamar a la funciÃ³n <font
+                                        color="green">sp_updateNow</font>.</p>
+
+                            <p>Veamos un ejemplo. El siguiente cÃ³digo se encarga de dibujar letras 'x' en posiciones al
+                                azar de la pantalla, cambiando el color de la tinta y el papel, tambiÃ©n al azar.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 #include &lt;stdlib.h&gt;
 #include &lt;spritepack.h&gt;
@@ -126,35 +221,78 @@ main()
 
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Veamos línea por línea de qué va todo esto. Las dos primeras se corresponden con las sentencias #include necesarias; en este caso la librería estándar y el archivo de cabecera de la librería Sprite Pack.</p>
-<p>La sentencia <font color="green">#pragma</font> deberemos incluirla siempre al principio de nuestros programas escritos para la librería Sprite Pack, antes del método main. Lo que se dice con ella es que se desea comenzar la ejecución del programa con el puntero de la pila del Z80 apuntando a la dirección 61440. Al hacerlo de esta forma, evitaremos que la función <i>sp_initialize</i> destruya cierta información de la memoria.</p>
-<p>Las primeras líneas de código en el interior de main(), entre el primer <font color="green">#asm</font> y el último <font color="green">#endasm</font> tendremos que ponerlas también siempre en nuestros programas que usen Sprite Pack. No es necesario entrar en detalle, pero diremos que este código tiene algo que ver con deshabilitar interrupciones para que ciertas funciones como sp_Invalidate funcionen.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Veamos lÃ­nea por lÃ­nea de quÃ© va todo esto. Las dos primeras se corresponden con las
+                                sentencias #include necesarias; en este caso la librerÃ­a estÃ¡ndar y el archivo de
+                                cabecera de la librerÃ­a Sprite Pack.</p>
+                            <p>La sentencia <font color="green">#pragma</font> deberemos incluirla siempre al principio
+                                de nuestros programas escritos para la librerÃ­a Sprite Pack, antes del mÃ©todo main. Lo
+                                que se dice con ella es que se desea comenzar la ejecuciÃ³n del programa con el puntero
+                                de la pila del Z80 apuntando a la direcciÃ³n 61440. Al hacerlo de esta forma, evitaremos
+                                que la funciÃ³n <i>sp_initialize</i> destruya cierta informaciÃ³n de la memoria.</p>
+                            <p>Las primeras lÃ­neas de cÃ³digo en el interior de main(), entre el primer <font
+                                    color="green">#asm</font> y el Ãºltimo <font color="green">#endasm</font> tendremos
+                                que ponerlas tambiÃ©n siempre en nuestros programas que usen Sprite Pack. No es necesario
+                                entrar en detalle, pero diremos que este cÃ³digo tiene algo que ver con deshabilitar
+                                interrupciones para que ciertas funciones como sp_Invalidate funcionen.</p>
 
-<p>Y por fin comienzan las líneas interesantes. La función sp_Initialize es necesaria para que el módulo de sprites de la librería comience a funcionar. En este caso, los parámetros hacen que la pantalla se inicialice escribiendo espacios en blanco, con color de fondo (paper) blanco y tinta negra (ink).</p>
-<p>A continuación nos introducimos en el bucle principal, que se va a ejecutar de forma ininterrumpida por toda la eternidad (a menos que detengamos la ejecución del programa). La estructura es muy sencilla. Primero se llama a <font color="green">sp_UpdateNow</font> para que se redibujen las celdas de la pantalla donde hubo algún cambio. A continuación se obiene un número al azar entre 1 y 10 (mediante la función <font color="green">rand()</font>), y en función de su valor llamaremos a <font color="green">sp_PrintAtInv</font> con unos parámetros u otros.</p>
-<p>El método <font color="green">sp_PrintAtInv</font> dibuja un backtile en la pantalla e invalida la posición donde dicho backtile ha sido colocado, para que la celda correspondiente sea redibujada tras llamar a <i>sp_UpdateNow</i>. Los dos primeros parámetros indican la posición del backtile (que también los obtenemos al azar), a continuación el color de papel y de tinta (con la misma sintaxis que en el caso de la función <i>sp_Initialize</i>) y por último indicamos el carácter a escribir. Este carácter se corresponde con un UDG, como en BASIC. De momento no hemos asociado ningún UDG a la letra x, por lo que se mostrará en pantalla será la letra x apareciendo en posiciones al azar, teniendo o bien color de tinta rojo y papel cyan o al revés.</p>
+                            <p>Y por fin comienzan las lÃ­neas interesantes. La funciÃ³n sp_Initialize es necesaria para
+                                que el mÃ³dulo de sprites de la librerÃ­a comience a funcionar. En este caso, los
+                                parÃ¡metros hacen que la pantalla se inicialice escribiendo espacios en blanco, con color
+                                de fondo (paper) blanco y tinta negra (ink).</p>
+                            <p>A continuaciÃ³n nos introducimos en el bucle principal, que se va a ejecutar de forma
+                                ininterrumpida por toda la eternidad (a menos que detengamos la ejecuciÃ³n del programa).
+                                La estructura es muy sencilla. Primero se llama a <font
+                                        color="green">sp_UpdateNow</font> para que se redibujen las celdas de la
+                                pantalla donde hubo algÃºn cambio. A continuaciÃ³n se obiene un nÃºmero al azar entre 1 y
+                                10 (mediante la funciÃ³n <font color="green">rand()</font>), y en funciÃ³n de su valor
+                                llamaremos a <font color="green">sp_PrintAtInv</font> con unos parÃ¡metros u otros.</p>
+                            <p>El mÃ©todo <font color="green">sp_PrintAtInv</font> dibuja un backtile en la pantalla e
+                                invalida la posiciÃ³n donde dicho backtile ha sido colocado, para que la celda
+                                correspondiente sea redibujada tras llamar a <i>sp_UpdateNow</i>. Los dos primeros
+                                parÃ¡metros indican la posiciÃ³n del backtile (que tambiÃ©n los obtenemos al azar), a
+                                continuaciÃ³n el color de papel y de tinta (con la misma sintaxis que en el caso de la
+                                funciÃ³n <i>sp_Initialize</i>) y por Ãºltimo indicamos el carÃ¡cter a escribir. Este
+                                carÃ¡cter se corresponde con un UDG, como en BASIC. De momento no hemos asociado ningÃºn
+                                UDG a la letra x, por lo que se mostrarÃ¡ en pantalla serÃ¡ la letra x apareciendo en
+                                posiciones al azar, teniendo o bien color de tinta rojo y papel cyan o al revÃ©s.</p>
 
-<p>La última línea del bucle, <font color="green">sp_Pause</font>, introduce un pequeño retardo. Actúa exactamente igual que el comando PAUSE de BASIC.</p>
+                            <p>La Ãºltima lÃ­nea del bucle, <font color="green">sp_Pause</font>, introduce un pequeÃ±o
+                                retardo. ActÃºa exactamente igual que el comando PAUSE de BASIC.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/z88dk8_1.png" width="640" height="504"  alt="Espectaculares efectos gráficos conseguidos con la librería Sprite Pack" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Espectaculares efectos gráficos conseguidos con la librería Sprite Pack</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                <tr align="right">
+                                    <td><img src="img/z88dk8_1.png" width="640" height="504"
+                                             alt="Espectaculares efectos grÃ¡ficos conseguidos con la librerÃ­a Sprite Pack"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Espectaculares efectos grÃ¡ficos conseguidos con la
+                                        librerÃ­a Sprite Pack
+                                    </td>
 
-	</tr>
-</table>
+                                </tr>
+                            </table>
 
-<p><b>NUESTRO PRIMER EJEMPLO CON UN SPRITE</b></p>
-<p>En esta sección vamos a dibujar un sprite simple sobre un fondo un poco más complejo. Para comprender cómo podemos crear un fondo más complejo, hemos de recordar que los backtiles pueden entenderse como si fueran UDGs de BASIC; sin embargo, hasta ahora solo hemos utilizado caracteres alfanuméricos. ¿De qué forma definimos gráficos para estos backtiles?</p>
-<p>Mediante la función <font color="green">sp_TileArray</font> asociamos un determinado UDG 8x8 a un carácter, de tal forma que al escribir dicho carácter como backtile en la pantalla, aparecerá su UDG correspondiente. Esta función recibe como parámetro el carácter al que queremos asociar el UDG y un array de tipo uchar con la definición del UDG. Ese array contendrá un valor hexadecimal por cada fila del UDG, utilizando la misma notación que vimos en capítulos anteriores para la creación de sprites de tamaño 8x8 con z88dk. Por ejemplo, observemos el siguiente código:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p><b>NUESTRO PRIMER EJEMPLO CON UN SPRITE</b></p>
+                            <p>En esta secciÃ³n vamos a dibujar un sprite simple sobre un fondo un poco mÃ¡s complejo.
+                                Para comprender cÃ³mo podemos crear un fondo mÃ¡s complejo, hemos de recordar que los
+                                backtiles pueden entenderse como si fueran UDGs de BASIC; sin embargo, hasta ahora solo
+                                hemos utilizado caracteres alfanumÃ©ricos. Â¿De quÃ© forma definimos grÃ¡ficos para estos
+                                backtiles?</p>
+                            <p>Mediante la funciÃ³n <font color="green">sp_TileArray</font> asociamos un determinado UDG
+                                8x8 a un carÃ¡cter, de tal forma que al escribir dicho carÃ¡cter como backtile en la
+                                pantalla, aparecerÃ¡ su UDG correspondiente. Esta funciÃ³n recibe como parÃ¡metro el
+                                carÃ¡cter al que queremos asociar el UDG y un array de tipo uchar con la definiciÃ³n del
+                                UDG. Ese array contendrÃ¡ un valor hexadecimal por cada fila del UDG, utilizando la misma
+                                notaciÃ³n que vimos en capÃ­tulos anteriores para la creaciÃ³n de sprites de tamaÃ±o 8x8 con
+                                z88dk. Por ejemplo, observemos el siguiente cÃ³digo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 <font color="green">
 uchar fondo[] = {0x55,0xaa,0x55,0xaa,0x55,0xaa,0x55,0xaa};
@@ -163,13 +301,22 @@ sp_TileArray(' ', fondo);
 sp_Initialize(INK_WHITE | PAPER_BLACK, ' ');
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Con la primera línea creamos un array llamado fondo que contendrá la definición de un UDG de tipo "tablero de ajedrez" (un pixel negro, un pixel blanco, un pixel negro, un pixel blanco, y así sucesivamente). Con la instrucción sp_TileArray asociamos este UDG al carácter de espacio en blanco, de tal forma que cuando en la línea siguiente llamamos a sp_Initialize, el fondo se llenará de copias del UDG asociado a dicho carácter. De esta forma tan sencilla podremos tener fondos más detallados.</p>
-<p>¿Y cómo definimos un sprite? De forma mucho más fácil a la vista en artículos anteriores, en los que se usaba z88dk sin ningún añadido. Nada más simple que una notación como la siguiente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Con la primera lÃ­nea creamos un array llamado fondo que contendrÃ¡ la definiciÃ³n de un UDG
+                                de tipo "tablero de ajedrez" (un pixel negro, un pixel blanco, un pixel negro, un pixel
+                                blanco, y asÃ­ sucesivamente). Con la instrucciÃ³n sp_TileArray asociamos este UDG al
+                                carÃ¡cter de espacio en blanco, de tal forma que cuando en la lÃ­nea siguiente llamamos a
+                                sp_Initialize, el fondo se llenarÃ¡ de copias del UDG asociado a dicho carÃ¡cter. De esta
+                                forma tan sencilla podremos tener fondos mÃ¡s detallados.</p>
+                            <p>Â¿Y cÃ³mo definimos un sprite? De forma mucho mÃ¡s fÃ¡cil a la vista en artÃ­culos anteriores,
+                                en los que se usaba z88dk sin ningÃºn aÃ±adido. Nada mÃ¡s simple que una notaciÃ³n como la
+                                siguiente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 #asm
 
@@ -187,14 +334,25 @@ defb @00111100, @11011011
 
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Como se puede observar, volvemos a hacer uso de código ensamblador empotrado en el interior de nuestro código C, entre las directivas <i>#asm</i> y <i>#endasm</i>. En este caso concreto estamos definiendo un único sprite 8x8, para el cual necesitaremos dos bloques de bits de ese tamaño. El de la izquierda es el dibujo en sí mismo del sprite, que en nuestro caso en una pequeña carita con la boca abierta. El bloque de la derecha indica las transparencias; en aquellas posiciones donde el valor sea 1, el sprite será transparente y se verá lo que haya en el fondo. Evidentemente, es necesario que dichas posiciones tengan un valor 0 en el bloque de la izquierda.</p>
-<p>A este bloque de datos que marcan un sprite de 8x8 le hemos llamado sprite1. Este nombre nos servirá para referenciar este código ensamblador desde el código C. Para ver cómo dibujar el sprite en la pantalla, nada mejor que un pequeño ejemplo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como se puede observar, volvemos a hacer uso de cÃ³digo ensamblador empotrado en el
+                                interior de nuestro cÃ³digo C, entre las directivas <i>#asm</i> y <i>#endasm</i>. En este
+                                caso concreto estamos definiendo un Ãºnico sprite 8x8, para el cual necesitaremos dos
+                                bloques de bits de ese tamaÃ±o. El de la izquierda es el dibujo en sÃ­ mismo del sprite,
+                                que en nuestro caso en una pequeÃ±a carita con la boca abierta. El bloque de la derecha
+                                indica las transparencias; en aquellas posiciones donde el valor sea 1, el sprite serÃ¡
+                                transparente y se verÃ¡ lo que haya en el fondo. Evidentemente, es necesario que dichas
+                                posiciones tengan un valor 0 en el bloque de la izquierda.</p>
+                            <p>A este bloque de datos que marcan un sprite de 8x8 le hemos llamado sprite1. Este nombre
+                                nos servirÃ¡ para referenciar este cÃ³digo ensamblador desde el cÃ³digo C. Para ver cÃ³mo
+                                dibujar el sprite en la pantalla, nada mejor que un pequeÃ±o ejemplo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 <font color="green">
 #include &lt;spritepack.h&gt;
 #pragma output STACKPTR=61440
@@ -264,13 +422,17 @@ defb @00111100, @11011011
 #endasm
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Comentemos línea por línea el programa. La sentencia <font color="green">#pragma</font> ya la conocemos del ejemplo anterior, así que no hace falta que nos detengamos en ella. A continuación se define una estructura de la forma siguiente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Comentemos lÃ­nea por lÃ­nea el programa. La sentencia <font color="green">#pragma</font>
+                                ya la conocemos del ejemplo anterior, asÃ­ que no hace falta que nos detengamos en ella.
+                                A continuaciÃ³n se define una estructura de la forma siguiente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
 
-    <tr><td><p class="codigo">
-<pre>
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 extern struct sp_Rect *sp_ClipStruct;
 #asm
@@ -279,15 +441,26 @@ LIB SPCClipStruct
 #endasm
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Esta estructura tan confusa está sacada de <i>spritepack.h</i> y define un rectángulo que cubre toda la superficie de la pantalla. Existen muchas definiciones como ésta dentro de dicho fichero de cabecera. Para qué sirven lo veremos mucho más adelante, cuando tratemos el tema de las colisiones. De momento deberemos saber que lo necesitamos para poder dibujar el sprite en la pantalla.</p>
-<p>La línea <font color="green">extern uchar sprite1[];</font> crea el array que contendrá la información del sprite. Este array se llena con los datos definidos entre las cláusulas <i>#asm</i> y <i>#endasm</i> al final del programa, después de la etiqueta <i>._sprite1</i>, y contendrá la definición del sprite, de la misma forma en la que en la línea siguiente se crea un array de tipo uchar llamado fondo con la definición de un UDG para asociarlo al backtile de fondo.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Esta estructura tan confusa estÃ¡ sacada de <i>spritepack.h</i> y define un rectÃ¡ngulo que
+                                cubre toda la superficie de la pantalla. Existen muchas definiciones como Ã©sta dentro de
+                                dicho fichero de cabecera. Para quÃ© sirven lo veremos mucho mÃ¡s adelante, cuando
+                                tratemos el tema de las colisiones. De momento deberemos saber que lo necesitamos para
+                                poder dibujar el sprite en la pantalla.</p>
+                            <p>La lÃ­nea <font color="green">extern uchar sprite1[];</font> crea el array que contendrÃ¡
+                                la informaciÃ³n del sprite. Este array se llena con los datos definidos entre las
+                                clÃ¡usulas <i>#asm</i> y <i>#endasm</i> al final del programa, despuÃ©s de la etiqueta <i>._sprite1</i>,
+                                y contendrÃ¡ la definiciÃ³n del sprite, de la misma forma en la que en la lÃ­nea siguiente
+                                se crea un array de tipo uchar llamado fondo con la definiciÃ³n de un UDG para asociarlo
+                                al backtile de fondo.</p>
 
-<p>El siguiente código:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>El siguiente cÃ³digo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 void *my_malloc(uint bytes)
 {
@@ -299,60 +472,127 @@ void *u_malloc = my_malloc;
 void *u_free = sp_FreeBlock;
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>entra dentro de lo que estaremos obligados a insertar en nuestro programa cada vez que queramos añadirle sprites, aunque no entendamos muy bien de qué se trata. Se obtiene a partir del módulo de manejo de memoria de Sprite Pack y sirve para que el programa pueda obtener memoria bajo demanda. Esto es necesario debido a la forma en que la pantalla es actualizada al usar esta librería. Además de las estructuras creadas por el programador, la librería creará otras propias durante la ejecución y la memoria para dichas estructuras se obtendrá por medio de esta función.</p>
-<p>Y por fin comienza el método <b>main</b>. En primer lugar definimos la variable que va a contener el sprite que vamos a mostrar por pantalla. Esta variable es de tipo <b>struct sp_SS</b>, una estructura que contiene diversa infomación sobre un sprite, como su localización y su tamaño. A continuación, entre las directivas #asm y #endasm, el código ensamblador necesario en cada uno de nuestros programas Sprite Pack del que hablamos en la sección anterior.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>entra dentro de lo que estaremos obligados a insertar en nuestro programa cada vez que
+                                queramos aÃ±adirle sprites, aunque no entendamos muy bien de quÃ© se trata. Se obtiene a
+                                partir del mÃ³dulo de manejo de memoria de Sprite Pack y sirve para que el programa pueda
+                                obtener memoria bajo demanda. Esto es necesario debido a la forma en que la pantalla es
+                                actualizada al usar esta librerÃ­a. AdemÃ¡s de las estructuras creadas por el programador,
+                                la librerÃ­a crearÃ¡ otras propias durante la ejecuciÃ³n y la memoria para dichas
+                                estructuras se obtendrÃ¡ por medio de esta funciÃ³n.</p>
+                            <p>Y por fin comienza el mÃ©todo <b>main</b>. En primer lugar definimos la variable que va a
+                                contener el sprite que vamos a mostrar por pantalla. Esta variable es de tipo <b>struct
+                                    sp_SS</b>, una estructura que contiene diversa infomaciÃ³n sobre un sprite, como su
+                                localizaciÃ³n y su tamaÃ±o. A continuaciÃ³n, entre las directivas #asm y #endasm, el cÃ³digo
+                                ensamblador necesario en cada uno de nuestros programas Sprite Pack del que hablamos en
+                                la secciÃ³n anterior.</p>
 
-<p>Y continuamos con las dos líneas siguientes, cuyo funcionamiento ha sido explicado anteriormente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Y continuamos con las dos lÃ­neas siguientes, cuyo funcionamiento ha sido explicado
+                                anteriormente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 p_TileArray(' ', fondo);
 sp_Initialize(INK_WHITE | PAPER_BLACK, ' ');
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>La línea posterior es nueva, y permite definir el color del borde de la pantalla (como la instrucción BORDER de BASIC). A continuación otra línea un tanto complicada, correspondiente a la llamada a la función <font color="green">sp_AddMemory</font>, con la que se reserva memoria para los sprites. En concreto estamos reservando 255 bloques de 14 bytes a partir de la dirección 0xb000 que se sabe que está libre. Para cada sprite deberíamos reservar un par de bloques de 14 bytes, por lo que 255 es algo desproporcionado para nustro ejemplo. Si nos vemos apurados de memoria podemos reservar menos en este paso.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La lÃ­nea posterior es nueva, y permite definir el color del borde de la pantalla (como la
+                                instrucciÃ³n BORDER de BASIC). A continuaciÃ³n otra lÃ­nea un tanto complicada,
+                                correspondiente a la llamada a la funciÃ³n <font color="green">sp_AddMemory</font>, con
+                                la que se reserva memoria para los sprites. En concreto estamos reservando 255 bloques
+                                de 14 bytes a partir de la direcciÃ³n 0xb000 que se sabe que estÃ¡ libre. Para cada sprite
+                                deberÃ­amos reservar un par de bloques de 14 bytes, por lo que 255 es algo
+                                desproporcionado para nustro ejemplo. Si nos vemos apurados de memoria podemos reservar
+                                menos en este paso.</p>
 
-<p>Las líneas que más nos interesan de este ejemplo son las siguientes:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Las lÃ­neas que mÃ¡s nos interesan de este ejemplo son las siguientes:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 bicho = sp_CreateSpr(sp_MASK_SPRITE, 1, sprite1, 1, TRANSPARENT);
 sp_MoveSprAbs(bicho, sp_ClipStruct, 0, 10, 15, 0, 0);
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Con la primera de ellas creamos el sprite en si mismo. El resultado de la llamada se almacenará en la variable de tipo <i>struct sp_SS bicho</i> declarada anteriormente, que usaremos en el resto de métodos con los que queramos manipular dicho sprite. El primer parámetro (para el que nosotros hemos usado MASK, pero que podría ser XOR, OR o LOAD) indica la forma en la que el sprite se dibuja en la pantalla. El tipo <b>MASK</b> es el más lento de dibujar, y utiliza una máscara para determinar que porciones del sprite serán transparentes (tal como se ha visto anteriormente). Los tipos OR y XOR se corresponderían con los ya vistos en artículos anteriores. El siguiente parámetro indica el número de rejillas 8x8 que forman el sprite (se hablará de esto más adelante). A continuación, el nombre del array de tipo uchar que contiene la definición del sprite. En tercer lugar, el plano que ocupará el sprite en pantalla. El valor de este parámetro podrá valer entre 0 y 63. Cuanto mas bajo sea este valor más cerca del usuario se encontrará el sprite, de tal forma que sprites con valores bajos del tercer parámetro serán situados "encima" de sprites con valores altos, tapándolos. El cuarto parámetro tiene que ver con el color, y lo veremos también más adelante. Hemos usado el valor TRANSPARENT para que no influya en el color del fondo.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Con la primera de ellas creamos el sprite en si mismo. El resultado de la llamada se
+                                almacenarÃ¡ en la variable de tipo <i>struct sp_SS bicho</i> declarada anteriormente, que
+                                usaremos en el resto de mÃ©todos con los que queramos manipular dicho sprite. El primer
+                                parÃ¡metro (para el que nosotros hemos usado MASK, pero que podrÃ­a ser XOR, OR o LOAD)
+                                indica la forma en la que el sprite se dibuja en la pantalla. El tipo <b>MASK</b> es el
+                                mÃ¡s lento de dibujar, y utiliza una mÃ¡scara para determinar que porciones del sprite
+                                serÃ¡n transparentes (tal como se ha visto anteriormente). Los tipos OR y XOR se
+                                corresponderÃ­an con los ya vistos en artÃ­culos anteriores. El siguiente parÃ¡metro indica
+                                el nÃºmero de rejillas 8x8 que forman el sprite (se hablarÃ¡ de esto mÃ¡s adelante). A
+                                continuaciÃ³n, el nombre del array de tipo uchar que contiene la definiciÃ³n del sprite.
+                                En tercer lugar, el plano que ocuparÃ¡ el sprite en pantalla. El valor de este parÃ¡metro
+                                podrÃ¡ valer entre 0 y 63. Cuanto mas bajo sea este valor mÃ¡s cerca del usuario se
+                                encontrarÃ¡ el sprite, de tal forma que sprites con valores bajos del tercer parÃ¡metro
+                                serÃ¡n situados "encima" de sprites con valores altos, tapÃ¡ndolos. El cuarto parÃ¡metro
+                                tiene que ver con el color, y lo veremos tambiÃ©n mÃ¡s adelante. Hemos usado el valor
+                                TRANSPARENT para que no influya en el color del fondo.</p>
 
-<p>Situaremos el sprite creado sobre la pantalla mediante el uso de la función <font color="green">sp_MoveSprAbs</font>, que desplaza nuestro personaje a una posición absoluta de la pantalla. Podríamos utilizar <font color="green">sp_MoveSprRel</font>, que acepta el mismo número de parámetros, con la diferencia de mover el sprite a una posición relativa a la actual. Por lo tanto, siempre usaremos sp_MoveSprAbs para colocar al sprite en su posición inicial.</p>
-<p>Como primer parámetro, el sprite a mover. Como segundo parámetro, el rectángulo que hace referencia a toda la pantalla definido anteriormente. El tercer parámetro hace referencia a la animación, y tampoco hablaremos de él en esta ocasión. El cuarto y el quinto, al bloque de la pantalla donde situaremos el sprite. Decíamos anteriormente que la pantalla estaba dividida en bloques de 8x8; pues bien, con estos dos parámetros indicamos la celda donde colocaremos nuestro sprite. Para conseguir una colocación más exacta, podemos usar los dos últimos parámetros, correspondientes al offset. Indican cuantos píxeles mover hacia la derecha y hacia abajo, respectivamente, a partir de la celda cuya posición es la indicada por los dos parámetros anteriores.</p>
-<p>Por último, con <font color="green">sp_UpdateNow()</font> redibujamos las porciones de la pantalla que lo necesiten, y con while(1) dejamos nuestro programa en constante ejecución, hasta el resto de los días, o hasta que lo detengamos. El resultado se puede observar en la siguiente captura de pantalla.</p>
+                            <p>Situaremos el sprite creado sobre la pantalla mediante el uso de la funciÃ³n <font
+                                    color="green">sp_MoveSprAbs</font>, que desplaza nuestro personaje a una posiciÃ³n
+                                absoluta de la pantalla. PodrÃ­amos utilizar <font color="green">sp_MoveSprRel</font>,
+                                que acepta el mismo nÃºmero de parÃ¡metros, con la diferencia de mover el sprite a una
+                                posiciÃ³n relativa a la actual. Por lo tanto, siempre usaremos sp_MoveSprAbs para colocar
+                                al sprite en su posiciÃ³n inicial.</p>
+                            <p>Como primer parÃ¡metro, el sprite a mover. Como segundo parÃ¡metro, el rectÃ¡ngulo que hace
+                                referencia a toda la pantalla definido anteriormente. El tercer parÃ¡metro hace
+                                referencia a la animaciÃ³n, y tampoco hablaremos de Ã©l en esta ocasiÃ³n. El cuarto y el
+                                quinto, al bloque de la pantalla donde situaremos el sprite. DecÃ­amos anteriormente que
+                                la pantalla estaba dividida en bloques de 8x8; pues bien, con estos dos parÃ¡metros
+                                indicamos la celda donde colocaremos nuestro sprite. Para conseguir una colocaciÃ³n mÃ¡s
+                                exacta, podemos usar los dos Ãºltimos parÃ¡metros, correspondientes al offset. Indican
+                                cuantos pÃ­xeles mover hacia la derecha y hacia abajo, respectivamente, a partir de la
+                                celda cuya posiciÃ³n es la indicada por los dos parÃ¡metros anteriores.</p>
+                            <p>Por Ãºltimo, con <font color="green">sp_UpdateNow()</font> redibujamos las porciones de la
+                                pantalla que lo necesiten, y con while(1) dejamos nuestro programa en constante
+                                ejecuciÃ³n, hasta el resto de los dÃ­as, o hasta que lo detengamos. El resultado se puede
+                                observar en la siguiente captura de pantalla.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
+                            <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                <tr align="right">
 
-		<td><img src="img/z88dk8_2.png" width="640" height="504"  alt="Un terrible ser intergaláctico espera ansioso la orden de atacar" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Un terrible ser intergaláctico espera ansioso la orden de atacar</td>
-	</tr>
-</table>
+                                    <td><img src="img/z88dk8_2.png" width="640" height="504"
+                                             alt="Un terrible ser intergalÃ¡ctico espera ansioso la orden de atacar"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Un terrible ser intergalÃ¡ctico espera ansioso la
+                                        orden de atacar
+                                    </td>
+                                </tr>
+                            </table>
 
-<p><b>UN SPRITE GRANDE Y NERVIOSO</b></p>
-<p>En este apartado veremos un pequeño ejemplo que introduce algunos conceptos interesantes, como la creación de sprites de un tamaño superior a 8x8 y el uso del movimiento relativo. Vamos a hacer aparecer una criatura en nuestra pantalla que se mueva de forma nerviosa y aleatoria.</p>
+                            <p><b>UN SPRITE GRANDE Y NERVIOSO</b></p>
+                            <p>En este apartado veremos un pequeÃ±o ejemplo que introduce algunos conceptos interesantes,
+                                como la creaciÃ³n de sprites de un tamaÃ±o superior a 8x8 y el uso del movimiento
+                                relativo. Vamos a hacer aparecer una criatura en nuestra pantalla que se mueva de forma
+                                nerviosa y aleatoria.</p>
 
-<p>Pero comencemos por el principio. ¿Cómo definimos sprites que contengan más de un bloque 8x8? Con Sprite Pack, los sprites grandes se definen por columnas. Podemos definir una columna de un sprite grande, compuesta por uno o más bloques de 8x8, bajo una misma etiqueta de código ensamblador. Un sprite de más de una columna se formará a partir de varias de estas definiciones en ensamblador.</p>
-<p>Por ejemplo, mostramos como quedaría un sprite con un tamaño de dos bloques de alto por dos bloques de ancho listo para ser usado con Sprite Pack:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Pero comencemos por el principio. Â¿CÃ³mo definimos sprites que contengan mÃ¡s de un bloque
+                                8x8? Con Sprite Pack, los sprites grandes se definen por columnas. Podemos definir una
+                                columna de un sprite grande, compuesta por uno o mÃ¡s bloques de 8x8, bajo una misma
+                                etiqueta de cÃ³digo ensamblador. Un sprite de mÃ¡s de una columna se formarÃ¡ a partir de
+                                varias de estas definiciones en ensamblador.</p>
+                            <p>Por ejemplo, mostramos como quedarÃ­a un sprite con un tamaÃ±o de dos bloques de alto por
+                                dos bloques de ancho listo para ser usado con Sprite Pack:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 #asm
 
@@ -397,13 +637,17 @@ defb @00000000, @11111111
 #endasm
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Como se puede observar, definimos dos columnas para el sprite, cada una de ellas formada a su vez por dos sprites de tamaño 8x8, incluyendo su máscara de transparencias. Para utilizar el sprite en el código deberíamos hacer algo similar a esto:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como se puede observar, definimos dos columnas para el sprite, cada una de ellas formada
+                                a su vez por dos sprites de tamaÃ±o 8x8, incluyendo su mÃ¡scara de transparencias. Para
+                                utilizar el sprite en el cÃ³digo deberÃ­amos hacer algo similar a esto:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 extern uchar bicho1[];
 extern uchar bicho2[];
@@ -418,15 +662,37 @@ main()
 }
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Se debe hacer uso, en primer lugar, de <font color="green">sp_CreateSpr</font> para asignar la primera columna del sprite a la variable de tipo <b>struct sp_SS</b>, y en segundo lugar, de <font color="green">sp_AddColSpr</font>, tantas veces como columnas adicionales debamos añadir. En este caso, se ha usado un valor de 2 para el segundo parámetro de <i>sp_CreateSpr</i>, indicando que cada columna del sprite tendrá un tamaño de dos bloques de 8x8. Efectivamente, este segundo parámetro indica el número de bloques que tendrá cada columna de nuestro sprite; por eso en nuestro primer ejemplo le dimos valor 1. Una vez se ha creado el sprite con <i>sp_CreateSpr</i> y se han añadido las columnas correspondientes con <i>sp_AddColSpr</i>, se podrá tratar la estructura sp_SS resultante como un todo, tal como se demuestra en la llamada a <i>sp_MoveSprAbs</i> que sigue a las dos líneas anteriores.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Se debe hacer uso, en primer lugar, de <font color="green">sp_CreateSpr</font> para
+                                asignar la primera columna del sprite a la variable de tipo <b>struct sp_SS</b>, y en
+                                segundo lugar, de <font color="green">sp_AddColSpr</font>, tantas veces como columnas
+                                adicionales debamos aÃ±adir. En este caso, se ha usado un valor de 2 para el segundo
+                                parÃ¡metro de <i>sp_CreateSpr</i>, indicando que cada columna del sprite tendrÃ¡ un tamaÃ±o
+                                de dos bloques de 8x8. Efectivamente, este segundo parÃ¡metro indica el nÃºmero de bloques
+                                que tendrÃ¡ cada columna de nuestro sprite; por eso en nuestro primer ejemplo le dimos
+                                valor 1. Una vez se ha creado el sprite con <i>sp_CreateSpr</i> y se han aÃ±adido las
+                                columnas correspondientes con <i>sp_AddColSpr</i>, se podrÃ¡ tratar la estructura sp_SS
+                                resultante como un todo, tal como se demuestra en la llamada a <i>sp_MoveSprAbs</i> que
+                                sigue a las dos lÃ­neas anteriores.</p>
 
-<p>Es importante destacar que todas las columnas de un mismo sprite deben de ser definidas de forma contigua en la memoria. Esto se traduce en que tenemos que definirlas de forma contigua también en nuestro código.</p>
-<p>Sin embargo, hay algo que hasta ahora no hemos tenido en cuenta, y es debido a que no hemos movido nuestros sprites por la pantalla. Cuando trasladamos sprites usando el pixel y no el bloque como unidad de medida (los dos últimos parámetros de sp_MoveSprAbs y sp_MoveSprRel servían para esto) veremos como los sprites no son correctamente dibujados; solo se redibuja la parte del sprite más a la izquierda que cabe dentro de una misma celdilla de la pantalla. Un truco para evitar esto es crear sprites un poco más anchos y más altos de lo que realmente necesitamos. Para ello, añadimos una nueva columna en blanco, y en cada columna, un nuevo bloque en blanco al final. En el caso concreto de nuestro sprite 2x2 anterior, deberíamos definirlo de esta forma:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Es importante destacar que todas las columnas de un mismo sprite deben de ser definidas
+                                de forma contigua en la memoria. Esto se traduce en que tenemos que definirlas de forma
+                                contigua tambiÃ©n en nuestro cÃ³digo.</p>
+                            <p>Sin embargo, hay algo que hasta ahora no hemos tenido en cuenta, y es debido a que no
+                                hemos movido nuestros sprites por la pantalla. Cuando trasladamos sprites usando el
+                                pixel y no el bloque como unidad de medida (los dos Ãºltimos parÃ¡metros de sp_MoveSprAbs
+                                y sp_MoveSprRel servÃ­an para esto) veremos como los sprites no son correctamente
+                                dibujados; solo se redibuja la parte del sprite mÃ¡s a la izquierda que cabe dentro de
+                                una misma celdilla de la pantalla. Un truco para evitar esto es crear sprites un poco
+                                mÃ¡s anchos y mÃ¡s altos de lo que realmente necesitamos. Para ello, aÃ±adimos una nueva
+                                columna en blanco, y en cada columna, un nuevo bloque en blanco al final. En el caso
+                                concreto de nuestro sprite 2x2 anterior, deberÃ­amos definirlo de esta forma:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 #asm
 
@@ -517,13 +783,18 @@ defb @00000000, @11111111
 #endasm
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Por lo tanto, nuestro sprite 2x2 se convierte en un sprite 3x3 al añadir una nueva columna a la derecha y un nuevo bloque en la parte inferior de cada columna. Nuestro código a la hora de usar el sprite debería ser en este caso algo más parecido a esto:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Por lo tanto, nuestro sprite 2x2 se convierte en un sprite 3x3 al aÃ±adir una nueva
+                                columna a la derecha y un nuevo bloque en la parte inferior de cada columna. Nuestro
+                                cÃ³digo a la hora de usar el sprite deberÃ­a ser en este caso algo mÃ¡s parecido a
+                                esto:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 extern uchar bicho1[];
 extern uchar bicho2[];
@@ -540,14 +811,19 @@ main()
 }
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Como queda patente, indicamos que el tamaño en bloques de cada columna es 3 al llamar a la función <i>sp_CreateSPr</i>, y además se llama dos veces a <i>sp_AddColSpr</i> para añadir la segunda y la tercera columna a nuestro bicho.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Como queda patente, indicamos que el tamaÃ±o en bloques de cada columna es 3 al llamar a
+                                la funciÃ³n <i>sp_CreateSPr</i>, y ademÃ¡s se llama dos veces a <i>sp_AddColSpr</i> para
+                                aÃ±adir la segunda y la tercera columna a nuestro bicho.</p>
 
-<p>A continuación se muestra un ejemplo completo, con nuestro sprite moviéndose al azar por la pantalla, por medio de la función <i>sp_MoveSprRel</i>:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>A continuaciÃ³n se muestra un ejemplo completo, con nuestro sprite moviÃ©ndose al azar por
+                                la pantalla, por medio de la funciÃ³n <i>sp_MoveSprRel</i>:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 <font color="green">
 #include &lt;spritepack.h&gt;
 #include &lt;stdlib.h&gt;
@@ -714,109 +990,124 @@ defb @00000000, @11111111
 
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>Ya deberíamos entender la práctica totalidad de este código, que mueve un sprite al azar por la pantalla, por lo que tan solo haremos dos apuntes:</p>
-<ul>
-	<li>Los movimientos indicados con <i>sp_MoveSprRel</i> son movimientos relativos, por lo que si queremos desplazarnos tan solo un pixel, ya sea a la izquierda o a la derecha, ya sea arriba o abajo (penúltimo y último parámetros respectivamente) usaremos valores +1 y -1.</li>
-	<li>Se ha añadido un bloque vacío antes de definir nuestro sprite, al final del código anterior; esto es así porque debemos asegurarnos de que haya un bloque en blanco encima de cada columna (manías del ensamblador generado por Sprite Pack).</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Ya deberÃ­amos entender la prÃ¡ctica totalidad de este cÃ³digo, que mueve un sprite al azar
+                                por la pantalla, por lo que tan solo haremos dos apuntes:</p>
+                            <ul>
+                                <li>Los movimientos indicados con <i>sp_MoveSprRel</i> son movimientos relativos, por lo
+                                    que si queremos desplazarnos tan solo un pixel, ya sea a la izquierda o a la
+                                    derecha, ya sea arriba o abajo (penÃºltimo y Ãºltimo parÃ¡metros respectivamente)
+                                    usaremos valores +1 y -1.
+                                </li>
+                                <li>Se ha aÃ±adido un bloque vacÃ­o antes de definir nuestro sprite, al final del cÃ³digo
+                                    anterior; esto es asÃ­ porque debemos asegurarnos de que haya un bloque en blanco
+                                    encima de cada columna (manÃ­as del ensamblador generado por Sprite Pack).
+                                </li>
 
-</ul>
+                            </ul>
 
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/z88dk8_3.png" width="640" height="504"  alt="El terrible ser intergaláctico se ha hecho mayor y es más nervioso que antes..." />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">El terrible ser intergaláctico se ha hecho mayor y es más nervioso que antes...</td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                <tr align="right">
+                                    <td><img src="img/z88dk8_3.png" width="640" height="504"
+                                             alt="El terrible ser intergalÃ¡ctico se ha hecho mayor y es mÃ¡s nervioso que antes..."/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">El terrible ser intergalÃ¡ctico se ha hecho mayor y
+                                        es mÃ¡s nervioso que antes...
+                                    </td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p><b>¿Y AHORA QUÉ?</b></p>
-<p>Hemos aprendido las más básicas funcionalidades de Sprite Pack para la creación de sprites. Ya somos capaces de crear nuestros propios sprites (de forma más sencilla a la que se ha realizado en artículos anteriores) y de moverlos, aunque sea de manera aleatoria, por la pantalla (sin necesidad de hacer llamadas de ensamblador para el manejo de interrupciones, como en el ejemplo de los coches visto en el número anterior de MagazineZX). Por lo tanto, ganamos en facilidad de uso.</p>
-<p>Vemos que no es necesario borrar un sprite usando la máscara XOR antes de volver a dibujarlo para simular movimiento, tal como hacíamos con z88dk sin Sprite Pack, y también observamos como somos capaces de añadir transparencias en los sprites de forma muy simple. Volvemos a ganar en facilidad de uso.</p>
-<p>En el siguiente artículo añadiremos colores a nuestros sprites y aprenderemos a moverlos con el teclado. También veremos como borrar de forma efectiva un sprite. Si el espacio lo permite (y si no es así, que no cunda el pánico, pues se verá en números posteriores de la revista) codificaremos un simple juego funcional con todo lo aprendido.</p>
-<b>LINKS</b>
-</p>
-<ul>
-    <li><a href="src/z88dk8_codigo.tar.gz" onClick="window.open(this.href); return false;">Código fuente</a></li>
+                            <p><b>Â¿Y AHORA QUÃ‰?</b></p>
+                            <p>Hemos aprendido las mÃ¡s bÃ¡sicas funcionalidades de Sprite Pack para la creaciÃ³n de
+                                sprites. Ya somos capaces de crear nuestros propios sprites (de forma mÃ¡s sencilla a la
+                                que se ha realizado en artÃ­culos anteriores) y de moverlos, aunque sea de manera
+                                aleatoria, por la pantalla (sin necesidad de hacer llamadas de ensamblador para el
+                                manejo de interrupciones, como en el ejemplo de los coches visto en el nÃºmero anterior
+                                de MagazineZX). Por lo tanto, ganamos en facilidad de uso.</p>
+                            <p>Vemos que no es necesario borrar un sprite usando la mÃ¡scara XOR antes de volver a
+                                dibujarlo para simular movimiento, tal como hacÃ­amos con z88dk sin Sprite Pack, y
+                                tambiÃ©n observamos como somos capaces de aÃ±adir transparencias en los sprites de forma
+                                muy simple. Volvemos a ganar en facilidad de uso.</p>
+                            <p>En el siguiente artÃ­culo aÃ±adiremos colores a nuestros sprites y aprenderemos a moverlos
+                                con el teclado. TambiÃ©n veremos como borrar de forma efectiva un sprite. Si el espacio
+                                lo permite (y si no es asÃ­, que no cunda el pÃ¡nico, pues se verÃ¡ en nÃºmeros posteriores
+                                de la revista) codificaremos un simple juego funcional con todo lo aprendido.</p>
+                            <b>LINKS</b>
+                            </p>
+                            <ul>
+                                <li><a href="src/z88dk8_codigo.tar.gz" onClick="window.open(this.href); return false;">CÃ³digo
+                                    fuente</a></li>
 
-</ul>
-</div>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>SIEW</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="el-aventurero.html">El Aventurero</option>
+
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="rem.html">REM</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
         </td>
     </tr>
     <tr>
-        <td align="right"><br><br>SIEW</td>
-    </tr>
-</table>
-                    </td>
-                </tr>
-
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('el-aventurero.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="el-aventurero.html">El Aventurero</option>
-
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="rem.html">REM</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
                 </tr>
             </table>
-
-    </body>
-
+        </td>
+    </tr>
+</table>
+</body>
 </html>

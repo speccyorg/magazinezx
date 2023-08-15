@@ -1,795 +1,849 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="hardware.html" selected>Hardware</option>
-        <option value="emulacion.html">Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="input.html">INPUT</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 4 - Noviembre 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p align="center"><font size="4">MEJORA DE LA CIRCUITERÍA ESTÉREO DEL +3.</font></p>
-<table bgcolor="#EBEBFF" class="texto">
-
-<tr><td>Queremos expresar nuestro sincero agradecimiento a Cristian Secara, el autor
-original de este montaje, por inspirar la construcción de este montaje y
-la redacción de este artículo.</td></tr>
-</table>
-<p>
-<i>Muchos de los que en algún momento hemos conectado nuestro +3
-a un amplificador nos hemos dado cuenta de la pésima calidad de sonido que
-tiene esta máquina. De hecho, si lo comparamos con la salida de sonido de
-los +2 o del 128k, la diferencia de calidad es notable. El problema reside en
-un error en el diseño de la circuiteria de sonido de los primeros +3.</i>
-</p>
-<p>
-Con este montaje lo que pretendemos es no sólo solucionar este problema,
-sino dotar a nuestro querido Spectrum de una salida de sonido estéreo de una
-calidad muy superior a la de cualquier otro 128k.
-</p>
-<p>
-La solución se basa en implementar una matriz de resistencias y condensadores
-que sustituyan la lógica original.
-</p>
-<p>
-<b>IDENTIFICANDO EL +3</b>
-</p>
-
-<p>
-Bien, como hemos dicho antes, el error se encuentra en la primera
-versión de la placa madre (+3A). Esta tiene una calidad de sonido muy baja,
-la salida es grave y con un sonido muy distorsionado, vamos que
-suena de pena para escucharlo en unos altavoces mínimamente decentes.
-</p>
-<p>
-La segunda versión (+3B) tiene el error corregido y la calidad de la
-salida de sonido será identica a la de cualquier +2 que pase por
-nuestras manos. En este caso también podemos realizar el montaje y así
-conseguir no sólo una mejor calidad de sonido sino un efecto estéreo ACB
-que nuestros oídos agradecerán a la hora de disfrutar de las melodías
-de muchos de nuestros juegos favoritos. Recordemos que ningún modelo
-de Spectrum tuvo nunca una salida estéreo de sonido.
-</p>
-<p>
-La forma de identificar la versión es sencilla y podemos hacerlo
-con sólo abrir la carcasa y fijarnos en la revisión de la placa. Viene
-impresa debajo de las letras de Amstrad.
-</p>
-<ul>
-<li>Spectrum +3A : AMSTRAD Z70830 ISSUE 2 (c)1987</li>
-<li>Spectrum +3B : AMSTRAD Z70835 ISSUE 1 (c)1988</li>
-</ul>
-<p>
-La otra diferencia visible se encuentra en la serigrafía de los componentes
-de la placa. A lo largo de todo este artículo se utilizará la serigrafía
-del +3A. Las únicas diferencias de nombres que encontramos en este artículo
-son las siguientes:
-
-</p>
-<table width="100%" border="0">
-<tr><td align="center">
-<table border="0" cellspacing="0" cellpadding="2" class="texto" >
-	<tr>
-		<td align="center">+3A</td>
-		<td align="center">&nbsp;</td>
-		<td align="center">+3B</td>
-	</tr>
-	<tr><td colspan="3"><hr></td></tr>
-
-	<tr>
-		<td align="center">C38</td>
-		<td align="center"><---></td>
-		<td align="center">C201</td>
-	</tr>
-	<tr>
-		<td align="center">R42</td>
-
-		<td align="center"><---></td>
-		<td align="center">R208</td>
-	</tr>
-	<tr>
-		<td align="center">R43</td>
-		<td align="center"><---></td>
-		<td align="center">R207</td>
-
-	</tr>
-	<tr>
-		<td align="center">R72</td>
-		<td align="center"><---></td>
-		<td align="center">R200</td>
-	</tr>
-</table>
-</td></tr>
-</table>
-
-<p>
-Si realizas esta modificación en un +3B simplemente sustituye los nombres
-utilizados por su correspondiente en la tabla. Su ubicación dentro de
-la placa es muy similar, pero varía bastante para la R200, que se encuentra al
-lado de una de las conexiones de la cinta del teclado. Por lo demás, todas
-las operaciones seran idénticas en las dos revisiones de placa.
-</p>
-<p>
-<b>MATERIALES</b>
-</p>
-<p>
-Realmente es un montaje muy barato y podréis encontrar los componentes en
-cualquier tienda de electrónica.
-</p>
-<p>
-Los componentes necesarios son :
-</p>
-<table border="1" class="texto" align="center" cellspacing="0" cellpadding="4">
-	<tr align="left">
-		<td rowspan="2">Condensadores</td>
-
-		<td>33pF     x 2</td>
-	</tr>
-	<tr>
-		<td>10nF     x 2</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td rowspan="4">Resistencias </td>
-
-		<td>470 ohm  x 2</td>
-	</tr>
-	<tr>
-		<td>100 Kohm x 2</td>
-	</tr>
-	<tr>
-		<td>10  Kohm x 4</td>
-
-	</tr>
-	<tr>
-		<td>1   Kohm x 2</td>
-	</tr>
-	<tr><td colspan="2">&nbsp;</td></tr>
-	<tr>
-		<td colspan="2">cable fino</td>
-	</tr>
-
-</table>
-<p>
-Podemos construir el montaje de una forma sencilla soldando las diferentes
-resistencias y condensadores directamente entre si, o bien ser un poco más "manitas"
-y crear una pequeña placa donde soldemos los componentes, que irá alojada
-dentro del +3.
-</p>
-<p>
-La creación de esa placa madre entra fuera del objeto de este
-artículo, pero cualquiera con un mínimo de paciencia puede fabricarla sin
-complicaciones.
-</p>
-<p>
-Si no tenéis ni idea de cómo hacer una placa, y estáis decididos a hacerla,
-en la red podéis encontrar gran cantidad de información acerca de los
-diferentes métodos para crear un circuito impreso, busca el más sencillo y
-económico. También puedes encargarla en una tienda de electrónica, pero el precio
-sube mucho, y no sé si merece la pena por algo tan pequeño.
-</p>
-<p>
-Las herramientas necesarias :
-<ul>
-<li>destonillador de estrella.</li>
-<li>soldador.</li>
-
-<li>estaño.</li>
-<li>cortacables o tijeras.</li>
-<li>punzón o cutter.</li>
-</ul>
-</p>
-<p>
-<b>EMPEZANDO CON EL TRABAJO</b>
-</p>
-<p>
-Lo primero que debemos hacer es abrir nuestro +3. Quitamos los 5 tornillos de
-la base y los dos del lateral derecho. Una vez desatornillado, abrimos el +3.
-Ábrelo con cuidado por el lado de la disquetera. Si te fijas en el interior
-verás una pareja de cables que van desde la carcasa superior hasta la placa,
-a la que se une por medio de un pequeño conector. Metemos la mano un poco y
-lo desconectamos. Abrimos un poco más y desconectamos las cintas del teclado de
-la parte izquierda de la placa.
-</p>
-<p>
-Bien, ahora tenemos acceso a la parte de los componentes de la placa madre.
-Necesitamos sacar por completo la placa madre para poder acceder al lado de las
-pistas. En primer lugar quitamos los dos tornillos que sujetan la unidad de
-disco, retiramos la conexión de la faja y del cable de alimentación y ya la
-tenemos fuera. Recuerda el sentido en el que estan conectados para evitar problemas.
-Una vez aquí quitamos los 5 tornillos que sujetan la placa. Fijaos bien,
-porque siempre queda alguno que no vemos.
-
-</p>
-<p>
-Debe salir sin ningún esfuerzo, de lo contrario buscad bien porque falta
-quitar algun tornillo.
-</p>
-<p><b>ANULANDO EL CIRCUITO DE SONIDO ORIGINAL</b></p>
-<p>
-Ya tenemos la placa fuera para poder manipularla. En primer lugar debemos cortar
-algunas pistas para anular el antiguo circuito de sonido. Atención ahora, es
-una operación delicada, identificad bien la pista y luego haced el
-corte con el mayor cuidado posible. Tampoco pasa nada irreparable si nos
-equivocamos, sólo que tendremos que volver a unir la pista con un poco de
-estaño y el soldador.
-</p>
-<p>
-La forma más simple de cortar las pistas es con la ayuda de un punzón o de un
-cutter. En las fotos podéis ver la forma en la que yo he cortado las mías para
-haceros una idea. Aseguraos de haber cortado totalmente la pista, para ello es
-de gran utilidad un polímetro, pero no es imprescindible, basta con fijarse
-bien en que el corte ha quitado todo el cobre de ese punto de la pista.
-</p>
-<p>
-A continuacion detallo las pistas que hay que cortar por la parte trasera de la placa:
-</p>
-<ul>
-<li>pista de la patilla 1 del IC11 a la patilla 4 del IC11</li>
-
-<li>pista de la patilla 4 del IC11 a la patilla 5 del IC11</li>
-</ul>
-<p>
-Ambas en la cara de las soldaduras (Figura 1).
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="136">
-	<tr align="right">
-		<td><img src="img/hard_imagen1.jpg" width="136" height="212"  alt="Figura 1. Cortes en el IC11" />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right">Figura 1. Cortes en el IC11</td>
-	</tr>
-</table>
-
-<p>
-El IC11 es el chip de sonido, el AY-3-8912, las patillas 1,4 y 5 corresponden a
-los tres canales de sonido que el integrado puede generar simultáneamente. Con
-esto conseguiremos romper la unión de las salidas de estos tres
-canales, que demuestran lo "mono" que era nuestro spectrum. Sera aquí donde
-posteriormente conectaremos el nuevo circuito de sonido.
-</p>
-Tambien debemos desoldar algunos componentes. Podemos desoldarlos calentando las
-soldaduras de la resistencia o condensador con el soldador mientras tiramos
-de ella (con la mano no, que te abrasas), pero si se resiste o lo veis
-complicado es mucho mejor cortar las patillas de la resistencia con un
-cortacables lo mas cerca posible de la placa, que recalentar en exceso la placa
-madre y estropear la pista. Insisto en lo de no recalentar la placa para evitar
-problemas, ¡cortarlas no supone hacer una chapuza!
-</p>
-<p>
-Quitar el condensador C38 y la resistencia R72.
-</p>
-<table align="center" border="0">
-	<tr>
-
-		<td>
-<table border="0" cellspacing="0" cellpadding="2" width="200">
-	<tr align="right">
-		<td><img src="img/hard_imagen2.jpg" width="200" height="147"  alt="Figura 2. C38" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 2. C38</td>
-	</tr>
-
-</table>
-
-</td>
-		<td>
-<table border="0" cellspacing="0" cellpadding="2" width="200">
-	<tr align="right">
-		<td><img src="img/hard_imagen3.jpg" width="200" height="146"  alt="Figura 3. R72" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 3. R72</td>
-
-	</tr>
-</table>
-
-</td>
-	</tr>
-</table>
-<p>
-Una vez terminado la circuiteria original de sonido el +3 no recibirá ningun tipo
-de señal del AY.
-</p>
-<p><b>CONSTRUCCIÓN DEL NUEVO CIRCUITO DE SONIDO</b></p>
-<p>
-Como ya he comentado, tenemos dos formas de realizar el circuito, fabricando un
-circuito impreso, o soldando las resistencias entre si. Con cualquiera de
-las dos posibilidades obtendremos el mismo objetivo. La razón por la que
-creé un pequeño circuito impreso fue por realizar un montaje más limpio y más seguro,
-una vez colocado en el interior de la maquina, aunque si somos cuidadosos no debemos
-tener ningún problema soldando las resistencias entre si, la elección de
-como construirlo es vuestra.
-</p>
-<p>
-
-A continuación, en la Figura 4 se muestra el diagrama de conexiones de los componentes si
-soldamos las resistencias entre si:
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="600">
-	<tr align="right">
-		<td><img src="img/hard_imagen4.gif" width="600" height="242"  alt="Figura 4. Matriz de Resistencias" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 4. Matriz de Resistencias</td>
-	</tr>
-
-</table>
-
-<p>
-Y éste es el esquema para crear el circuito impreso (Figuras 5, 6 y 7):
-</p>
-<table align="center" border="0">
-	<tr>
-		<td>
-<table border="0" cellspacing="0" cellpadding="2" width="258">
-	<tr align="right">
-		<td><img src="img/hard_imagen5a.gif" width="258" height="260"  alt="Figura 5. Lado de los componentes" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right">Figura 5. Lado de los componentes</td>
-	</tr>
-</table>
-
-</td>
-		<td>
-<table border="0" cellspacing="0" cellpadding="2" width="258">
-	<tr align="right">
-		<td><img src="img/hard_imagen5b.gif" width="258" height="260"  alt="Figura 6. lado de las soldaduras" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 6. lado de las soldaduras</td>
-	</tr>
-</table>
-
-</td>
-	</tr>
-</table>
-<br>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="600">
-	<tr align="right">
-		<td><img src="img/hard_imagen5c.jpg" width="600" height="513"  alt="Figura 7. Colocación dentro del +3" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 7. Colocación dentro del +3</td>
-	</tr>
-</table>
-
-
-<p>
-Las dimensiones de la placa son 4,5 cm de alto por 4,5 cm de ancho.
-</p>
-<p>
-En principio está diseñado para una placa de doble cara, para evitar un par de
-cruces entre pistas, pero si esto os complica podéis hacer la placa en una sola cara
-y realizar las conexiones del lado de los componentes con un par de
-cables. El resultado es el mismo.
-</p>
-<p>
-Una vez construido el nuevo circuito debemos proceder a conectarlo en la
-placa de nuestro +3.
-</p>
-<p><b>ENTRADA DE SONIDO AL NUEVO CIRCUITO</b></p>
-<p>
-Ahora debemos conectar la entrada de sonido de nuestro montaje a la salida de
-sonido del AY que, a estas alturas, no está conectada a nada.
-</p>
-<p>
-Las conexiones son muy simples. Necesitamos 3 señales del integrado y una masa.
-
-</p>
-<p>
-Conectaremos las patillas 1,4 y 5 a las correspondientes entradas de nuestro
-montaje. La mejor solución es soldar directamente en las patillas del chip por
-la cara de los componentes. Utilizaremos la patilla 6 del integrado como
-la toma de masa para nuestro circuito.
-</p>
-<p>
-Estas son las únicas soldaduras que deberemos realizar con un poco más de cuidado.
-</p>
-<p>
-Si has soldado las resistencias entre si, en la Figura 8 tienes una idea de cómo poder
-realizarlo, aunque cualquier forma en la que la matriz quede bien
-fijada y no toque con nada es perfectamente válida.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="600">
-	<tr align="right">
-		<td><img src="img/hard_imagen6.jpg" width="600" height="404"  alt="Figura 8. Conexión matriz de resistencias" />
-</td>
-
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 8. Conexión matriz de resistencias</td>
-	</tr>
-</table>
-
-<p>
-En el caso de tener una placa, la solución por la que he optado ha sido conectarla
-por medio de un cable.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="184">
-	<tr align="right">
-
-		<td><img src="img/hard_imagen7.jpg" width="184" height="152"  alt="Figura 9. Conexión circuito impreso" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 9. Conexión circuito impreso</td>
-	</tr>
-</table>
-
-<p>
-Un consejo sólo para gente sin ninguna experiencia con el soldador:
-pre-estaña de antemano las patillas del integrado calentando el menor tiempo posible
-con el soldador, y haz lo mismo con las patillas de las resistencias o la punta de
-los cables. Luego simplemente júntalos y dale un poco sólo con el soldador, el
-estaño de ambas partes hará la soldadura. Así conseguirás hacer la soldadura
-rápidamente y sin recalentar las piezas (en realidad así es como hay que
-realizar cualquier soldadura).
-</p>
-
-<p>
-En este momento cualquier sonido generado por nuestro +3 a través del AY
-entrará directamente en nuestro montaje, pero aún nos queda por
-introducir el BEEP en nuestro circuito. Para ello conectaremos la entrada
-señalada como beep en el esquema de conexiones con el condensador C37 tal
-y como muestra la Figura 10.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/hard_imagen8.jpg" width="320" height="268"  alt="Figura 10. Condensador C37" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 10. Condensador C37</td>
-
-	</tr>
-</table>
-
-<p><b>SALIDA DE SONIDO</b></p>
-<p>
-Ya tenemos el circuito original anulado y el nuevo circuito recibiendo perfectamente
-la señal de sonido. Sólo nos queda una cosa, sacar el sonido del interior del
-ordenador. Recordemos que las antiguas salidas de sonido del AY ya no
-funcionan porque hemos anulado el circuito.
-</p>
-<p>
-Aquí propongo de nuevo dos soluciones en funcion de la utilización que le
-deis y sobre todo de las ganas de liaros que tengáis.
-</p>
-<ol>
-<li>
-<p>Colocar dos conectores RCA en la carcasa. Es lo más sencillo, pero tienes
-que taladrar la caja del +3 para colocar las RCA. Lo cierto es que no tiene
-ningún misterio colocar esos dos conectores con un acabado perfecto,
-y que estéticamente tampoco es desagradable. En la parte trasera del +3 hay
-hueco para poder colocar las dos salidas. La ventaja es que ésta es la conexión
-estándar de cualquier amplificador estereo, con lo que el cable de conexión es lo
-más común del mundo.</p>
-</li>
-
-<li>
-<p>
-Convertir la antigua salida de sonido del conector RGB/PERITEL en la nueva
-salida estéreo. Aconsejado sobre todo si tienes el +3 conectado a una tele
-estéreo con euroconector. Asi con sólo un cable del RGB/PERITEL al
-euroconector de la tele todo estará conectado.
-</p>
-<p>
-Con éste no tienes que taladrar el Spectrum, pero tenemos que modificar un
-poco más la placa del +3. Lo bonito será que una vez terminado nuestro +3 se
-oirá en estéreo como si hubiese salido así de fabrica....(más de uno lo soñamos
-hace unos cuantos años, ¿o no?)
-</p>
-<p>
-En primer lugar, si os fijáis en el esquema de los pines del RGB veréis que hay
-una señal de salida de audio y una de masa para una salida mono. Necesitamos
-otro pin para dividir la salida en dos canales. Pues resulta que hay una
-señal repetida por lo que podemos realizar la salida sin perder ninguna
-señal original del conector. Son los 12V que se usan para que el
-euroconector indique al televisor que debe recibir la imagen por RGB
-y no por vídeo compuesto.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="420">
-	<tr align="right">
-		<td><img src="img/hard_imagen9.gif" width="420" height="253"  alt="Figura 11. Antiguo RGB/PERITEL" />
-</td>
-
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 11. Antiguo RGB/PERITEL</td>
-	</tr>
-</table>
-
-<br>
-<p>
-Las operaciones que debemos realizar son las siguientes:
-<ul>
-<li>
-<p>Quitar resistencias R42 y R43</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="268">
-	<tr align="right">
-		<td><img src="img/hard_imagen10.jpg" width="268" height="278"  alt="Figura 12. Resistencias R42 y R43" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 12. Resistencias R42 y R43</td>
-	</tr>
-</table>
-
-
-<br>
-</li>
-<li>
-<p>Cortar pista de la patilla 1 del RGB a la patilla 5 del RGB por el lado de las soldaduras.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="202">
-	<tr align="right">
-		<td><img src="img/hard_imagen11.jpg" width="202" height="143"  alt="Figura 13. Corte pistas RGB" />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right">Figura 13. Corte pistas RGB</td>
-	</tr>
-</table>
-
-<br>
-</li>
-<li>
-<p>Cortar la pista que va de la resistencia R44 a la patilla 5 del RGB.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="332">
-	<tr align="right">
-		<td><img src="img/hard_imagen12.jpg" width="332" height="228"  alt="Figura 14. R44 a pin 5 RGB" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 14. R44 a pin 5 RGB</td>
-	</tr>
-</table>
-
-<br>
-</li>
-<li>
-<p>Conectar la patilla de la resistencia R44 de la pista cortada con la patilla 1 del RGB.</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="202">
-	<tr align="right">
-		<td><img src="img/hard_imagen13.jpg" width="202" height="143"  alt="Figura 15. R44 atrás a pin 1 RGB" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 15. R44 atrás a pin 1 RGB</td>
-	</tr>
-</table>
-
-
-<br>
-</li>
-<li>
-<p>Conectar las salidas de sonido del montaje realizado con los pines del RGB/PERITEL:</p>
-<ol>
-<li>Salida Left con pin 3 del RGB/PERITEL.</li>
-<li>Salida Right con pin 5 del RGB/PERITEL.</li>
-</ol>
-<br>
-
-<table border="0" cellspacing="0" cellpadding="2" width="202">
-	<tr align="right">
-
-		<td><img src="img/hard_imagen14.jpg" width="202" height="143"  alt="Figura 16. Conexiones a RGB/PERITEL" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 16. Conexiones a RGB/PERITEL</td>
-	</tr>
-</table>
-
-<br>
-<p>Una vez terminado tendremos el siguiente esquema de pines para el conector RGB/PERITEL:</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="420">
-	<tr align="right">
-		<td><img src="img/hard_imagen15.gif" width="420" height="253"  alt="Figura 17. Nuevo RGB/PERITEL" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 17. Nuevo RGB/PERITEL</td>
-	</tr>
-</table>
-
-
-<p>Si realizamos esta salida y queremos conectar el sonido a un amplificador independiente
-sólo tenemos que añadir al cable del RGB/PERITEL un par de conecores RCA o
-similares para realizar la conexion al amplificador.</p>
-</li>
-</ol>
-<p>
-<b>CONCLUSIONES</b>
-</p>
-<p>
-Cerrad el ordenador, conectadlo a vuestro amplificador y cargad el
-juego de 128K con vuestra musica favorita, subid el volumen y sacad vosotros mismos
-las conclusiones....
-</p>
-<p>
-Ya tenemos nuestro querido +3 preparado para alegranos los oídos como nunca lo
-había hecho antes. No debemos preocuparnos por ningún tipo de problema posterior.
-Todo lo que antes funcionaba, tanto hardware como software, funcionará de la
-misma forma. Yo lo instalé hace casi un año y jamás me ha dado un solo problema.
-</p>
-<p>
-A disfrutar...
-
-</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-	<li>Artículo de Christian Secara sobre el sonido en el Spectrum de 128K: <a href="http://www.secarica.ro/html/plus3_hardware.html#sound" onClick="window.open(this.href); return false;">http://www.secarica.ro/html/plus3_hardware.html#sound</a></li>
-	<li>Plus 3 to television SCART lead: <a href="http://www.pcwking.freeserve.co.uk/helpage42.html" onClick="window.open(this.href); return false;">http://www.pcwking.freeserve.co.uk/helpage42.html</a></li>
-	<li>Conéctate al euroconector: <a href="http://www.speccy.org/sinclairmania/euroconector.html" onClick="window.open(this.href); return false;">http://www.speccy.org/sinclairmania/euroconector.html</a></li>
-
-	<li>Conectores de vídeo: <a href="http://www.gamesx.com/hwb/menu_Connector.html#Video" onClick="window.open(this.href); return false;">http://www.gamesx.com/hwb/menu_Connector.html#Video</a></li>
-</ul>
-</div>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>JORGE DEL LLANO</td>
-	</tr>
-
-</table>                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="hardware.html" selected>Hardware</option>
-        <option value="emulacion.html">Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="input.html">INPUT</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Hardware - Magazine ZX nÃºmero 4 - Noviembre 2003</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-    </body>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="hardware.html" selected>Hardware</option>
+                                <option value="emulacion.html">EmulaciÃ³n</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="input.html">INPUT</option>
 
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 4 - Noviembre 2003</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="4">MEJORA DE LA CIRCUITERÃA ESTÃ‰REO DEL +3.</font></p>
+                            <table bgcolor="#EBEBFF" class="texto">
+
+                                <tr>
+                                    <td>Queremos expresar nuestro sincero agradecimiento a Cristian Secara, el autor
+                                        original de este montaje, por inspirar la construcciÃ³n de este montaje y
+                                        la redacciÃ³n de este artÃ­culo.
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>
+                                <i>Muchos de los que en algÃºn momento hemos conectado nuestro +3
+                                    a un amplificador nos hemos dado cuenta de la pÃ©sima calidad de sonido que
+                                    tiene esta mÃ¡quina. De hecho, si lo comparamos con la salida de sonido de
+                                    los +2 o del 128k, la diferencia de calidad es notable. El problema reside en
+                                    un error en el diseÃ±o de la circuiteria de sonido de los primeros +3.</i>
+                            </p>
+                            <p>
+                                Con este montaje lo que pretendemos es no sÃ³lo solucionar este problema,
+                                sino dotar a nuestro querido Spectrum de una salida de sonido estÃ©reo de una
+                                calidad muy superior a la de cualquier otro 128k.
+                            </p>
+                            <p>
+                                La soluciÃ³n se basa en implementar una matriz de resistencias y condensadores
+                                que sustituyan la lÃ³gica original.
+                            </p>
+                            <p>
+                                <b>IDENTIFICANDO EL +3</b>
+                            </p>
+
+                            <p>
+                                Bien, como hemos dicho antes, el error se encuentra en la primera
+                                versiÃ³n de la placa madre (+3A). Esta tiene una calidad de sonido muy baja,
+                                la salida es grave y con un sonido muy distorsionado, vamos que
+                                suena de pena para escucharlo en unos altavoces mÃ­nimamente decentes.
+                            </p>
+                            <p>
+                                La segunda versiÃ³n (+3B) tiene el error corregido y la calidad de la
+                                salida de sonido serÃ¡ identica a la de cualquier +2 que pase por
+                                nuestras manos. En este caso tambiÃ©n podemos realizar el montaje y asÃ­
+                                conseguir no sÃ³lo una mejor calidad de sonido sino un efecto estÃ©reo ACB
+                                que nuestros oÃ­dos agradecerÃ¡n a la hora de disfrutar de las melodÃ­as
+                                de muchos de nuestros juegos favoritos. Recordemos que ningÃºn modelo
+                                de Spectrum tuvo nunca una salida estÃ©reo de sonido.
+                            </p>
+                            <p>
+                                La forma de identificar la versiÃ³n es sencilla y podemos hacerlo
+                                con sÃ³lo abrir la carcasa y fijarnos en la revisiÃ³n de la placa. Viene
+                                impresa debajo de las letras de Amstrad.
+                            </p>
+                            <ul>
+                                <li>Spectrum +3A : AMSTRAD Z70830 ISSUE 2 (c)1987</li>
+                                <li>Spectrum +3B : AMSTRAD Z70835 ISSUE 1 (c)1988</li>
+                            </ul>
+                            <p>
+                                La otra diferencia visible se encuentra en la serigrafÃ­a de los componentes
+                                de la placa. A lo largo de todo este artÃ­culo se utilizarÃ¡ la serigrafÃ­a
+                                del +3A. Las Ãºnicas diferencias de nombres que encontramos en este artÃ­culo
+                                son las siguientes:
+
+                            </p>
+                            <table width="100%" border="0">
+                                <tr>
+                                    <td align="center">
+                                        <table border="0" cellspacing="0" cellpadding="2" class="texto">
+                                            <tr>
+                                                <td align="center">+3A</td>
+                                                <td align="center">Â </td>
+                                                <td align="center">+3B</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <hr>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td align="center">C38</td>
+                                                <td align="center"><---></td>
+                                                <td align="center">C201</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">R42</td>
+
+                                                <td align="center"><---></td>
+                                                <td align="center">R208</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">R43</td>
+                                                <td align="center"><---></td>
+                                                <td align="center">R207</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td align="center">R72</td>
+                                                <td align="center"><---></td>
+                                                <td align="center">R200</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                Si realizas esta modificaciÃ³n en un +3B simplemente sustituye los nombres
+                                utilizados por su correspondiente en la tabla. Su ubicaciÃ³n dentro de
+                                la placa es muy similar, pero varÃ­a bastante para la R200, que se encuentra al
+                                lado de una de las conexiones de la cinta del teclado. Por lo demÃ¡s, todas
+                                las operaciones seran idÃ©nticas en las dos revisiones de placa.
+                            </p>
+                            <p>
+                                <b>MATERIALES</b>
+                            </p>
+                            <p>
+                                Realmente es un montaje muy barato y podrÃ©is encontrar los componentes en
+                                cualquier tienda de electrÃ³nica.
+                            </p>
+                            <p>
+                                Los componentes necesarios son :
+                            </p>
+                            <table border="1" class="texto" align="center" cellspacing="0" cellpadding="4">
+                                <tr align="left">
+                                    <td rowspan="2">Condensadores</td>
+
+                                    <td>33pF x 2</td>
+                                </tr>
+                                <tr>
+                                    <td>10nF x 2</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Â </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">Resistencias</td>
+
+                                    <td>470 ohm x 2</td>
+                                </tr>
+                                <tr>
+                                    <td>100 Kohm x 2</td>
+                                </tr>
+                                <tr>
+                                    <td>10 Kohm x 4</td>
+
+                                </tr>
+                                <tr>
+                                    <td>1 Kohm x 2</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Â </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">cable fino</td>
+                                </tr>
+
+                            </table>
+                            <p>
+                                Podemos construir el montaje de una forma sencilla soldando las diferentes
+                                resistencias y condensadores directamente entre si, o bien ser un poco mÃ¡s "manitas"
+                                y crear una pequeÃ±a placa donde soldemos los componentes, que irÃ¡ alojada
+                                dentro del +3.
+                            </p>
+                            <p>
+                                La creaciÃ³n de esa placa madre entra fuera del objeto de este
+                                artÃ­culo, pero cualquiera con un mÃ­nimo de paciencia puede fabricarla sin
+                                complicaciones.
+                            </p>
+                            <p>
+                                Si no tenÃ©is ni idea de cÃ³mo hacer una placa, y estÃ¡is decididos a hacerla,
+                                en la red podÃ©is encontrar gran cantidad de informaciÃ³n acerca de los
+                                diferentes mÃ©todos para crear un circuito impreso, busca el mÃ¡s sencillo y
+                                econÃ³mico. TambiÃ©n puedes encargarla en una tienda de electrÃ³nica, pero el precio
+                                sube mucho, y no sÃ© si merece la pena por algo tan pequeÃ±o.
+                            </p>
+                            <p>
+                                Las herramientas necesarias :
+                            <ul>
+                                <li>destonillador de estrella.</li>
+                                <li>soldador.</li>
+
+                                <li>estaÃ±o.</li>
+                                <li>cortacables o tijeras.</li>
+                                <li>punzÃ³n o cutter.</li>
+                            </ul>
+                            </p>
+                            <p>
+                                <b>EMPEZANDO CON EL TRABAJO</b>
+                            </p>
+                            <p>
+                                Lo primero que debemos hacer es abrir nuestro +3. Quitamos los 5 tornillos de
+                                la base y los dos del lateral derecho. Una vez desatornillado, abrimos el +3.
+                                Ãbrelo con cuidado por el lado de la disquetera. Si te fijas en el interior
+                                verÃ¡s una pareja de cables que van desde la carcasa superior hasta la placa,
+                                a la que se une por medio de un pequeÃ±o conector. Metemos la mano un poco y
+                                lo desconectamos. Abrimos un poco mÃ¡s y desconectamos las cintas del teclado de
+                                la parte izquierda de la placa.
+                            </p>
+                            <p>
+                                Bien, ahora tenemos acceso a la parte de los componentes de la placa madre.
+                                Necesitamos sacar por completo la placa madre para poder acceder al lado de las
+                                pistas. En primer lugar quitamos los dos tornillos que sujetan la unidad de
+                                disco, retiramos la conexiÃ³n de la faja y del cable de alimentaciÃ³n y ya la
+                                tenemos fuera. Recuerda el sentido en el que estan conectados para evitar problemas.
+                                Una vez aquÃ­ quitamos los 5 tornillos que sujetan la placa. Fijaos bien,
+                                porque siempre queda alguno que no vemos.
+
+                            </p>
+                            <p>
+                                Debe salir sin ningÃºn esfuerzo, de lo contrario buscad bien porque falta
+                                quitar algun tornillo.
+                            </p>
+                            <p><b>ANULANDO EL CIRCUITO DE SONIDO ORIGINAL</b></p>
+                            <p>
+                                Ya tenemos la placa fuera para poder manipularla. En primer lugar debemos cortar
+                                algunas pistas para anular el antiguo circuito de sonido. AtenciÃ³n ahora, es
+                                una operaciÃ³n delicada, identificad bien la pista y luego haced el
+                                corte con el mayor cuidado posible. Tampoco pasa nada irreparable si nos
+                                equivocamos, sÃ³lo que tendremos que volver a unir la pista con un poco de
+                                estaÃ±o y el soldador.
+                            </p>
+                            <p>
+                                La forma mÃ¡s simple de cortar las pistas es con la ayuda de un punzÃ³n o de un
+                                cutter. En las fotos podÃ©is ver la forma en la que yo he cortado las mÃ­as para
+                                haceros una idea. Aseguraos de haber cortado totalmente la pista, para ello es
+                                de gran utilidad un polÃ­metro, pero no es imprescindible, basta con fijarse
+                                bien en que el corte ha quitado todo el cobre de ese punto de la pista.
+                            </p>
+                            <p>
+                                A continuacion detallo las pistas que hay que cortar por la parte trasera de la placa:
+                            </p>
+                            <ul>
+                                <li>pista de la patilla 1 del IC11 a la patilla 4 del IC11</li>
+
+                                <li>pista de la patilla 4 del IC11 a la patilla 5 del IC11</li>
+                            </ul>
+                            <p>
+                                Ambas en la cara de las soldaduras (Figura 1).
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="136">
+                                <tr align="right">
+                                    <td><img src="img/hard_imagen1.jpg" width="136" height="212"
+                                             alt="Figura 1. Cortes en el IC11"/>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td class="piefoto" align="right">Figura 1. Cortes en el IC11</td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                El IC11 es el chip de sonido, el AY-3-8912, las patillas 1,4 y 5 corresponden a
+                                los tres canales de sonido que el integrado puede generar simultÃ¡neamente. Con
+                                esto conseguiremos romper la uniÃ³n de las salidas de estos tres
+                                canales, que demuestran lo "mono" que era nuestro spectrum. Sera aquÃ­ donde
+                                posteriormente conectaremos el nuevo circuito de sonido.
+                            </p>
+                            Tambien debemos desoldar algunos componentes. Podemos desoldarlos calentando las
+                            soldaduras de la resistencia o condensador con el soldador mientras tiramos
+                            de ella (con la mano no, que te abrasas), pero si se resiste o lo veis
+                            complicado es mucho mejor cortar las patillas de la resistencia con un
+                            cortacables lo mas cerca posible de la placa, que recalentar en exceso la placa
+                            madre y estropear la pista. Insisto en lo de no recalentar la placa para evitar
+                            problemas, Â¡cortarlas no supone hacer una chapuza!
+                            </p>
+                            <p>
+                                Quitar el condensador C38 y la resistencia R72.
+                            </p>
+                            <table align="center" border="0">
+                                <tr>
+
+                                    <td>
+                                        <table border="0" cellspacing="0" cellpadding="2" width="200">
+                                            <tr align="right">
+                                                <td><img src="img/hard_imagen2.jpg" width="200" height="147"
+                                                         alt="Figura 2. C38"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">Figura 2. C38</td>
+                                            </tr>
+
+                                        </table>
+
+                                    </td>
+                                    <td>
+                                        <table border="0" cellspacing="0" cellpadding="2" width="200">
+                                            <tr align="right">
+                                                <td><img src="img/hard_imagen3.jpg" width="200" height="146"
+                                                         alt="Figura 3. R72"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">Figura 3. R72</td>
+
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>
+                                Una vez terminado la circuiteria original de sonido el +3 no recibirÃ¡ ningun tipo
+                                de seÃ±al del AY.
+                            </p>
+                            <p><b>CONSTRUCCIÃ“N DEL NUEVO CIRCUITO DE SONIDO</b></p>
+                            <p>
+                                Como ya he comentado, tenemos dos formas de realizar el circuito, fabricando un
+                                circuito impreso, o soldando las resistencias entre si. Con cualquiera de
+                                las dos posibilidades obtendremos el mismo objetivo. La razÃ³n por la que
+                                creÃ© un pequeÃ±o circuito impreso fue por realizar un montaje mÃ¡s limpio y mÃ¡s seguro,
+                                una vez colocado en el interior de la maquina, aunque si somos cuidadosos no debemos
+                                tener ningÃºn problema soldando las resistencias entre si, la elecciÃ³n de
+                                como construirlo es vuestra.
+                            </p>
+                            <p>
+
+                                A continuaciÃ³n, en la Figura 4 se muestra el diagrama de conexiones de los componentes
+                                si
+                                soldamos las resistencias entre si:
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="600">
+                                <tr align="right">
+                                    <td><img src="img/hard_imagen4.gif" width="600" height="242"
+                                             alt="Figura 4. Matriz de Resistencias"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Figura 4. Matriz de Resistencias</td>
+                                </tr>
+
+                            </table>
+
+                            <p>
+                                Y Ã©ste es el esquema para crear el circuito impreso (Figuras 5, 6 y 7):
+                            </p>
+                            <table align="center" border="0">
+                                <tr>
+                                    <td>
+                                        <table border="0" cellspacing="0" cellpadding="2" width="258">
+                                            <tr align="right">
+                                                <td><img src="img/hard_imagen5a.gif" width="258" height="260"
+                                                         alt="Figura 5. Lado de los componentes"/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="piefoto" align="right">Figura 5. Lado de los componentes</td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                    <td>
+                                        <table border="0" cellspacing="0" cellpadding="2" width="258">
+                                            <tr align="right">
+                                                <td><img src="img/hard_imagen5b.gif" width="258" height="260"
+                                                         alt="Figura 6. lado de las soldaduras"/>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">Figura 6. lado de las soldaduras</td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="600">
+                                <tr align="right">
+                                    <td><img src="img/hard_imagen5c.jpg" width="600" height="513"
+                                             alt="Figura 7. ColocaciÃ³n dentro del +3"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Figura 7. ColocaciÃ³n dentro del +3</td>
+                                </tr>
+                            </table>
+
+
+                            <p>
+                                Las dimensiones de la placa son 4,5 cm de alto por 4,5 cm de ancho.
+                            </p>
+                            <p>
+                                En principio estÃ¡ diseÃ±ado para una placa de doble cara, para evitar un par de
+                                cruces entre pistas, pero si esto os complica podÃ©is hacer la placa en una sola cara
+                                y realizar las conexiones del lado de los componentes con un par de
+                                cables. El resultado es el mismo.
+                            </p>
+                            <p>
+                                Una vez construido el nuevo circuito debemos proceder a conectarlo en la
+                                placa de nuestro +3.
+                            </p>
+                            <p><b>ENTRADA DE SONIDO AL NUEVO CIRCUITO</b></p>
+                            <p>
+                                Ahora debemos conectar la entrada de sonido de nuestro montaje a la salida de
+                                sonido del AY que, a estas alturas, no estÃ¡ conectada a nada.
+                            </p>
+                            <p>
+                                Las conexiones son muy simples. Necesitamos 3 seÃ±ales del integrado y una masa.
+
+                            </p>
+                            <p>
+                                Conectaremos las patillas 1,4 y 5 a las correspondientes entradas de nuestro
+                                montaje. La mejor soluciÃ³n es soldar directamente en las patillas del chip por
+                                la cara de los componentes. Utilizaremos la patilla 6 del integrado como
+                                la toma de masa para nuestro circuito.
+                            </p>
+                            <p>
+                                Estas son las Ãºnicas soldaduras que deberemos realizar con un poco mÃ¡s de cuidado.
+                            </p>
+                            <p>
+                                Si has soldado las resistencias entre si, en la Figura 8 tienes una idea de cÃ³mo poder
+                                realizarlo, aunque cualquier forma en la que la matriz quede bien
+                                fijada y no toque con nada es perfectamente vÃ¡lida.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="600">
+                                <tr align="right">
+                                    <td><img src="img/hard_imagen6.jpg" width="600" height="404"
+                                             alt="Figura 8. ConexiÃ³n matriz de resistencias"/>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Figura 8. ConexiÃ³n matriz de resistencias</td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                En el caso de tener una placa, la soluciÃ³n por la que he optado ha sido conectarla
+                                por medio de un cable.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="184">
+                                <tr align="right">
+
+                                    <td><img src="img/hard_imagen7.jpg" width="184" height="152"
+                                             alt="Figura 9. ConexiÃ³n circuito impreso"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Figura 9. ConexiÃ³n circuito impreso</td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                Un consejo sÃ³lo para gente sin ninguna experiencia con el soldador:
+                                pre-estaÃ±a de antemano las patillas del integrado calentando el menor tiempo posible
+                                con el soldador, y haz lo mismo con las patillas de las resistencias o la punta de
+                                los cables. Luego simplemente jÃºntalos y dale un poco sÃ³lo con el soldador, el
+                                estaÃ±o de ambas partes harÃ¡ la soldadura. AsÃ­ conseguirÃ¡s hacer la soldadura
+                                rÃ¡pidamente y sin recalentar las piezas (en realidad asÃ­ es como hay que
+                                realizar cualquier soldadura).
+                            </p>
+
+                            <p>
+                                En este momento cualquier sonido generado por nuestro +3 a travÃ©s del AY
+                                entrarÃ¡ directamente en nuestro montaje, pero aÃºn nos queda por
+                                introducir el BEEP en nuestro circuito. Para ello conectaremos la entrada
+                                seÃ±alada como beep en el esquema de conexiones con el condensador C37 tal
+                                y como muestra la Figura 10.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/hard_imagen8.jpg" width="320" height="268"
+                                             alt="Figura 10. Condensador C37"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Figura 10. Condensador C37</td>
+
+                                </tr>
+                            </table>
+
+                            <p><b>SALIDA DE SONIDO</b></p>
+                            <p>
+                                Ya tenemos el circuito original anulado y el nuevo circuito recibiendo perfectamente
+                                la seÃ±al de sonido. SÃ³lo nos queda una cosa, sacar el sonido del interior del
+                                ordenador. Recordemos que las antiguas salidas de sonido del AY ya no
+                                funcionan porque hemos anulado el circuito.
+                            </p>
+                            <p>
+                                AquÃ­ propongo de nuevo dos soluciones en funcion de la utilizaciÃ³n que le
+                                deis y sobre todo de las ganas de liaros que tengÃ¡is.
+                            </p>
+                            <ol>
+                                <li>
+                                    <p>Colocar dos conectores RCA en la carcasa. Es lo mÃ¡s sencillo, pero tienes
+                                        que taladrar la caja del +3 para colocar las RCA. Lo cierto es que no tiene
+                                        ningÃºn misterio colocar esos dos conectores con un acabado perfecto,
+                                        y que estÃ©ticamente tampoco es desagradable. En la parte trasera del +3 hay
+                                        hueco para poder colocar las dos salidas. La ventaja es que Ã©sta es la conexiÃ³n
+                                        estÃ¡ndar de cualquier amplificador estereo, con lo que el cable de conexiÃ³n es
+                                        lo
+                                        mÃ¡s comÃºn del mundo.</p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        Convertir la antigua salida de sonido del conector RGB/PERITEL en la nueva
+                                        salida estÃ©reo. Aconsejado sobre todo si tienes el +3 conectado a una tele
+                                        estÃ©reo con euroconector. Asi con sÃ³lo un cable del RGB/PERITEL al
+                                        euroconector de la tele todo estarÃ¡ conectado.
+                                    </p>
+                                    <p>
+                                        Con Ã©ste no tienes que taladrar el Spectrum, pero tenemos que modificar un
+                                        poco mÃ¡s la placa del +3. Lo bonito serÃ¡ que una vez terminado nuestro +3 se
+                                        oirÃ¡ en estÃ©reo como si hubiese salido asÃ­ de fabrica....(mÃ¡s de uno lo soÃ±amos
+                                        hace unos cuantos aÃ±os, Â¿o no?)
+                                    </p>
+                                    <p>
+                                        En primer lugar, si os fijÃ¡is en el esquema de los pines del RGB verÃ©is que hay
+                                        una seÃ±al de salida de audio y una de masa para una salida mono. Necesitamos
+                                        otro pin para dividir la salida en dos canales. Pues resulta que hay una
+                                        seÃ±al repetida por lo que podemos realizar la salida sin perder ninguna
+                                        seÃ±al original del conector. Son los 12V que se usan para que el
+                                        euroconector indique al televisor que debe recibir la imagen por RGB
+                                        y no por vÃ­deo compuesto.
+                                    </p>
+
+                                    <table border="0" cellspacing="0" cellpadding="2" width="420">
+                                        <tr align="right">
+                                            <td><img src="img/hard_imagen9.gif" width="420" height="253"
+                                                     alt="Figura 11. Antiguo RGB/PERITEL"/>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="piefoto" align="right">Figura 11. Antiguo RGB/PERITEL</td>
+                                        </tr>
+                                    </table>
+
+                                    <br>
+                                    <p>
+                                        Las operaciones que debemos realizar son las siguientes:
+                                    <ul>
+                                        <li>
+                                            <p>Quitar resistencias R42 y R43</p>
+
+
+                                            <table border="0" cellspacing="0" cellpadding="2" width="268">
+                                                <tr align="right">
+                                                    <td><img src="img/hard_imagen10.jpg" width="268" height="278"
+                                                             alt="Figura 12. Resistencias R42 y R43"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="piefoto" align="right">Figura 12. Resistencias R42 y
+                                                        R43
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <p>Cortar pista de la patilla 1 del RGB a la patilla 5 del RGB por el lado
+                                                de las soldaduras.</p>
+
+                                            <table border="0" cellspacing="0" cellpadding="2" width="202">
+                                                <tr align="right">
+                                                    <td><img src="img/hard_imagen11.jpg" width="202" height="143"
+                                                             alt="Figura 13. Corte pistas RGB"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="piefoto" align="right">Figura 13. Corte pistas RGB</td>
+                                                </tr>
+                                            </table>
+
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <p>Cortar la pista que va de la resistencia R44 a la patilla 5 del RGB.</p>
+
+                                            <table border="0" cellspacing="0" cellpadding="2" width="332">
+                                                <tr align="right">
+                                                    <td><img src="img/hard_imagen12.jpg" width="332" height="228"
+                                                             alt="Figura 14. R44 a pin 5 RGB"/>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="piefoto" align="right">Figura 14. R44 a pin 5 RGB</td>
+                                                </tr>
+                                            </table>
+
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <p>Conectar la patilla de la resistencia R44 de la pista cortada con la
+                                                patilla 1 del RGB.</p>
+
+
+                                            <table border="0" cellspacing="0" cellpadding="2" width="202">
+                                                <tr align="right">
+                                                    <td><img src="img/hard_imagen13.jpg" width="202" height="143"
+                                                             alt="Figura 15. R44 atrÃ¡s a pin 1 RGB"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="piefoto" align="right">Figura 15. R44 atrÃ¡s a pin 1 RGB
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+
+                                            <br>
+                                        </li>
+                                        <li>
+                                            <p>Conectar las salidas de sonido del montaje realizado con los pines del
+                                                RGB/PERITEL:</p>
+                                            <ol>
+                                                <li>Salida Left con pin 3 del RGB/PERITEL.</li>
+                                                <li>Salida Right con pin 5 del RGB/PERITEL.</li>
+                                            </ol>
+                                            <br>
+
+                                            <table border="0" cellspacing="0" cellpadding="2" width="202">
+                                                <tr align="right">
+
+                                                    <td><img src="img/hard_imagen14.jpg" width="202" height="143"
+                                                             alt="Figura 16. Conexiones a RGB/PERITEL"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="piefoto" align="right">Figura 16. Conexiones a
+                                                        RGB/PERITEL
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <br>
+                                            <p>Una vez terminado tendremos el siguiente esquema de pines para el
+                                                conector RGB/PERITEL:</p>
+
+
+                                            <table border="0" cellspacing="0" cellpadding="2" width="420">
+                                                <tr align="right">
+                                                    <td><img src="img/hard_imagen15.gif" width="420" height="253"
+                                                             alt="Figura 17. Nuevo RGB/PERITEL"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="piefoto" align="right">Figura 17. Nuevo RGB/PERITEL</td>
+                                                </tr>
+                                            </table>
+
+
+                                            <p>Si realizamos esta salida y queremos conectar el sonido a un amplificador
+                                                independiente
+                                                sÃ³lo tenemos que aÃ±adir al cable del RGB/PERITEL un par de conecores RCA
+                                                o
+                                                similares para realizar la conexion al amplificador.</p>
+                                        </li>
+                            </ol>
+                            <p>
+                                <b>CONCLUSIONES</b>
+                            </p>
+                            <p>
+                                Cerrad el ordenador, conectadlo a vuestro amplificador y cargad el
+                                juego de 128K con vuestra musica favorita, subid el volumen y sacad vosotros mismos
+                                las conclusiones....
+                            </p>
+                            <p>
+                                Ya tenemos nuestro querido +3 preparado para alegranos los oÃ­dos como nunca lo
+                                habÃ­a hecho antes. No debemos preocuparnos por ningÃºn tipo de problema posterior.
+                                Todo lo que antes funcionaba, tanto hardware como software, funcionarÃ¡ de la
+                                misma forma. Yo lo instalÃ© hace casi un aÃ±o y jamÃ¡s me ha dado un solo problema.
+                            </p>
+                            <p>
+                                A disfrutar...
+
+                            </p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+                                <ul>
+                                    <li>ArtÃ­culo de Christian Secara sobre el sonido en el Spectrum de 128K: <a
+                                            href="http://www.secarica.ro/html/plus3_hardware.html#sound"
+                                            onClick="window.open(this.href); return false;">http://www.secarica.ro/html/plus3_hardware.html#sound</a>
+                                    </li>
+                                    <li>Plus 3 to television SCART lead: <a
+                                            href="http://www.pcwking.freeserve.co.uk/helpage42.html"
+                                            onClick="window.open(this.href); return false;">http://www.pcwking.freeserve.co.uk/helpage42.html</a>
+                                    </li>
+                                    <li>ConÃ©ctate al euroconector: <a
+                                            href="http://www.speccy.org/sinclairmania/euroconector.html"
+                                            onClick="window.open(this.href); return false;">http://www.speccy.org/sinclairmania/euroconector.html</a>
+                                    </li>
+
+                                    <li>Conectores de vÃ­deo: <a
+                                            href="http://www.gamesx.com/hwb/menu_Connector.html#Video"
+                                            onClick="window.open(this.href); return false;">http://www.gamesx.com/hwb/menu_Connector.html#Video</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>JORGE DEL LLANO</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="hardware.html" selected>Hardware</option>
+                                <option value="emulacion.html">EmulaciÃ³n</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="input.html">INPUT</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('emulacion.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

@@ -1,0 +1,8 @@
+User-agent: *
+Disalloy: /css/
+Disallow: /img/
+Disallow: /pdf/
+Disallow: /portadas/
+
+User-agent: ChatGPT-User
+Disallow: /

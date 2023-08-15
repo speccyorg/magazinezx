@@ -1,104 +1,131 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="input.html">INPUT</option>
-
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 8 - Julio 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-
-</table>
-</a>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>ProgramaciÃ³n Z88DK - Magazine ZX nÃºmero 8 - Julio 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-<div align="justify">
-<p><b>CREANDO UNA AVENTURA CONVERSACIONAL CON Z88DK (II)</b></p>
-<p>
-Seguimos en esta ocasión por donde lo dejamos en la entrega anterior. Recordemos que el objetivo de esta serie de artículos es practicar con las funciones de texto de la librería z88dk, por medio de un ejemplo de programa que, aun siendo posible que se desarrolle con otras herramientas, como BASIC, parsers, etc., es bastante ilustrativo, y además nos permite estar haciendo un juego desde el primer momento.
-</p>
-<p>
-En la entrega anterior habíamos comenzado a escribir las aventuras de Guybrush Threpwood, un aspirante a pirata, que debía dirigirse a un maestro en la taberna de la isla de Melêe e impresionarle con algún truco. Habíamos dado los pasos precisos para que nuestro personaje fuera capaz de desplazarse entre las distintas habitaciones de la taberna, con las funciones de texto del z88dk, que habíamos visto que eran muy parecidas a las del C estándar de PC. También vimos como aplicar unos efectos interesantes al texto (negrita, cursiva, subrayado y texto inverso).
-</p>
-<p>
-En el presente artículo veremos alguna técnica para incorporar objetos a nuestro mundo, incluyendo la posibilidad de interactuar con ellos, y la creación de un inventario. También veremos como aplicar efectos de color al texto (hasta ahora, todo era en un aburrido blanco y negro). Sin más dilación comenzamos.
-</p>
-<p>
-<b>¿Qué necesitamos?</b>
-</p>
-<p>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="input.html">INPUT</option>
 
-Si seguimos la entrega anterior no tenemos que realizar ninguna preparación adicional. Todo el código que vayamos añadiendo se incluirá en los archivos aventura.c y datos.h.
-</p>
-<p>
-<b>Creando los objetos</b>
-</p>
-<p>
-Lo primero de todo es crear la estructura de datos que nos permitirá que los objetos puedan ser manejados durante el juego, igual que se hizo en el caso de las habitaciones. Esta estructura de datos para los objetos contendrá una serie de valores que serán de utilidad, como el nombre del objeto, dónde se encuentra, cuánto pesa, etc.
-</p>
-<p>
-En concreto, podemos añadir el siguiente código a datos.h (da igual si es antes o después de la definición de THabitacion):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 8 - Julio 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+
+                        <div align="justify">
+                            <p><b>CREANDO UNA AVENTURA CONVERSACIONAL CON Z88DK (II)</b></p>
+                            <p>
+                                Seguimos en esta ocasiÃ³n por donde lo dejamos en la entrega anterior. Recordemos que el
+                                objetivo de esta serie de artÃ­culos es practicar con las funciones de texto de la
+                                librerÃ­a z88dk, por medio de un ejemplo de programa que, aun siendo posible que se
+                                desarrolle con otras herramientas, como BASIC, parsers, etc., es bastante ilustrativo, y
+                                ademÃ¡s nos permite estar haciendo un juego desde el primer momento.
+                            </p>
+                            <p>
+                                En la entrega anterior habÃ­amos comenzado a escribir las aventuras de Guybrush
+                                Threpwood, un aspirante a pirata, que debÃ­a dirigirse a un maestro en la taberna de la
+                                isla de MelÃªe e impresionarle con algÃºn truco. HabÃ­amos dado los pasos precisos para que
+                                nuestro personaje fuera capaz de desplazarse entre las distintas habitaciones de la
+                                taberna, con las funciones de texto del z88dk, que habÃ­amos visto que eran muy parecidas
+                                a las del C estÃ¡ndar de PC. TambiÃ©n vimos como aplicar unos efectos interesantes al
+                                texto (negrita, cursiva, subrayado y texto inverso).
+                            </p>
+                            <p>
+                                En el presente artÃ­culo veremos alguna tÃ©cnica para incorporar objetos a nuestro mundo,
+                                incluyendo la posibilidad de interactuar con ellos, y la creaciÃ³n de un inventario.
+                                TambiÃ©n veremos como aplicar efectos de color al texto (hasta ahora, todo era en un
+                                aburrido blanco y negro). Sin mÃ¡s dilaciÃ³n comenzamos.
+                            </p>
+                            <p>
+                                <b>Â¿QuÃ© necesitamos?</b>
+                            </p>
+                            <p>
+
+                                Si seguimos la entrega anterior no tenemos que realizar ninguna preparaciÃ³n adicional.
+                                Todo el cÃ³digo que vayamos aÃ±adiendo se incluirÃ¡ en los archivos aventura.c y datos.h.
+                            </p>
+                            <p>
+                                <b>Creando los objetos</b>
+                            </p>
+                            <p>
+                                Lo primero de todo es crear la estructura de datos que nos permitirÃ¡ que los objetos
+                                puedan ser manejados durante el juego, igual que se hizo en el caso de las habitaciones.
+                                Esta estructura de datos para los objetos contendrÃ¡ una serie de valores que serÃ¡n de
+                                utilidad, como el nombre del objeto, dÃ³nde se encuentra, cuÃ¡nto pesa, etc.
+                            </p>
+                            <p>
+                                En concreto, podemos aÃ±adir el siguiente cÃ³digo a datos.h (da igual si es antes o
+                                despuÃ©s de la definiciÃ³n de THabitacion):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 typedef struct
 {
 	char nombre[35];
@@ -107,49 +134,90 @@ typedef struct
 } TObjeto;
 
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Todos los objetos de nuestro juego serán variables del tipo TObjeto. El primer campo (nombre) contendrá el nombre con el que aparecerá el objeto en la pantalla, como por ejemplo: "una antorcha", "un anillo", "la espada", etc. El campo de localizacion indicará en que posición del mapeado de juego se encuentra el objeto, aunque también puede indicar diferentes estados del objeto (como por ejemplo, que el objeto está en nuetros inventario, que está destruido, que todavía no se ha creado, que lo llevamos puesto, etc.). Por último, el peso, como es evidente, indica cuánto pesa el objeto. Es corriente en las aventuras que el protagonista sólo pueda llevar un número limitado de cosas, y el campo peso permite controlar esto.
-</p>
-<p>
-Hablemos del campo localización. Hemos dicho que ese campo nos va a indicar en qué lugar se encuentra el objeto. Si recordamos, cada habitación de nuestra aventura tenía un identificador, que coincidía con su posición en el array de habitaciones (menos uno). Si queremos que el objeto esté en una de las habitaciones, el campo localización deberá contener el identificador de esa habitación (o la posición en el array de habitaciones). Por ejemplo, supongamos que queremos crear un objeto, una espada, que se encuentre en la habitación número 5 (la cocina). Lo que debemos hacer es almacenar en el campo localización de la variable que represente a la espada el valor 5 (más adelante veremos ejemplos).
-</p>
-<p>
-El campo de localización es un campo dinámico; es decir, puede cambiar de valor durante el transcurso de la aventura. Por ejemplo, si la espada deja de estar en la cocina para pasar a estar en el salón (porque el personaje la haya cogido de la cocina y la haya dejado en el salón), el valor de localización pasará a ser 4.
-</p>
-<p>
-Por lo tanto, el campo localización indica la habitación en la que se encuetra el objeto. Sin embargo, existe una serie de localizaciones especiales, que no se corresponden con habitaciones de nuestra aventura. Uno de estos valores es el -1. Si el campo localización de un objeto vale -1, significa que el objeto está en posesión del jugador (y que por lo tanto, al consultar el inventario o listado de objetos que porta, se le indicará que lo lleva). Aparte podemos inventarnos todas las localizaciones especiales que quisieramos, por ejemplo, la 254 para los objetos que tenemos puestos, la 255 para los que están destruidos, etc. (más adelante hablaremos también de ello).
-</p>
-<p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Todos los objetos de nuestro juego serÃ¡n variables del tipo TObjeto. El primer campo
+                                (nombre) contendrÃ¡ el nombre con el que aparecerÃ¡ el objeto en la pantalla, como por
+                                ejemplo: "una antorcha", "un anillo", "la espada", etc. El campo de localizacion
+                                indicarÃ¡ en que posiciÃ³n del mapeado de juego se encuentra el objeto, aunque tambiÃ©n
+                                puede indicar diferentes estados del objeto (como por ejemplo, que el objeto estÃ¡ en
+                                nuetros inventario, que estÃ¡ destruido, que todavÃ­a no se ha creado, que lo llevamos
+                                puesto, etc.). Por Ãºltimo, el peso, como es evidente, indica cuÃ¡nto pesa el objeto. Es
+                                corriente en las aventuras que el protagonista sÃ³lo pueda llevar un nÃºmero limitado de
+                                cosas, y el campo peso permite controlar esto.
+                            </p>
+                            <p>
+                                Hablemos del campo localizaciÃ³n. Hemos dicho que ese campo nos va a indicar en quÃ© lugar
+                                se encuentra el objeto. Si recordamos, cada habitaciÃ³n de nuestra aventura tenÃ­a un
+                                identificador, que coincidÃ­a con su posiciÃ³n en el array de habitaciones (menos uno). Si
+                                queremos que el objeto estÃ© en una de las habitaciones, el campo localizaciÃ³n deberÃ¡
+                                contener el identificador de esa habitaciÃ³n (o la posiciÃ³n en el array de habitaciones).
+                                Por ejemplo, supongamos que queremos crear un objeto, una espada, que se encuentre en la
+                                habitaciÃ³n nÃºmero 5 (la cocina). Lo que debemos hacer es almacenar en el campo
+                                localizaciÃ³n de la variable que represente a la espada el valor 5 (mÃ¡s adelante veremos
+                                ejemplos).
+                            </p>
+                            <p>
+                                El campo de localizaciÃ³n es un campo dinÃ¡mico; es decir, puede cambiar de valor durante
+                                el transcurso de la aventura. Por ejemplo, si la espada deja de estar en la cocina para
+                                pasar a estar en el salÃ³n (porque el personaje la haya cogido de la cocina y la haya
+                                dejado en el salÃ³n), el valor de localizaciÃ³n pasarÃ¡ a ser 4.
+                            </p>
+                            <p>
+                                Por lo tanto, el campo localizaciÃ³n indica la habitaciÃ³n en la que se encuetra el
+                                objeto. Sin embargo, existe una serie de localizaciones especiales, que no se
+                                corresponden con habitaciones de nuestra aventura. Uno de estos valores es el -1. Si el
+                                campo localizaciÃ³n de un objeto vale -1, significa que el objeto estÃ¡ en posesiÃ³n del
+                                jugador (y que por lo tanto, al consultar el inventario o listado de objetos que porta,
+                                se le indicarÃ¡ que lo lleva). Aparte podemos inventarnos todas las localizaciones
+                                especiales que quisieramos, por ejemplo, la 254 para los objetos que tenemos puestos, la
+                                255 para los que estÃ¡n destruidos, etc. (mÃ¡s adelante hablaremos tambiÃ©n de ello).
+                            </p>
+                            <p>
 
-Antes de seguir programando, hemos de pensar: ¿qué objetos va a tener nuestra aventura? En nuestro caso concreto vamos a tener tres:
-</p>
-<ul>
-<li>Una espada, que encontraremos en la cocina de la taberna.</li>
-<li>Una jarra, que portará el jugador consigo desde el comienzo de la aventura.</li>
-<li>Una antorcha, que podremos recoger en el callejón.</li>
-</ul>
-<p>
-De momento vamos a incluir la espada y la jarra en nuestra aventura. La antorcha es un tipo de objeto más complicado que trataremos más adelante. En el archivo aventura.c, en el método main, justo después de la inicialización de las habitaciones, podemos incluir el siguiente código (el código en rojo es el que se añade):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                Antes de seguir programando, hemos de pensar: Â¿quÃ© objetos va a tener nuestra aventura?
+                                En nuestro caso concreto vamos a tener tres:
+                            </p>
+                            <ul>
+                                <li>Una espada, que encontraremos en la cocina de la taberna.</li>
+                                <li>Una jarra, que portarÃ¡ el jugador consigo desde el comienzo de la aventura.</li>
+                                <li>Una antorcha, que podremos recoger en el callejÃ³n.</li>
+                            </ul>
+                            <p>
+                                De momento vamos a incluir la espada y la jarra en nuestra aventura. La antorcha es un
+                                tipo de objeto mÃ¡s complicado que trataremos mÃ¡s adelante. En el archivo aventura.c, en
+                                el mÃ©todo main, justo despuÃ©s de la inicializaciÃ³n de las habitaciones, podemos incluir
+                                el siguiente cÃ³digo (el cÃ³digo en rojo es el que se aÃ±ade):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 THabitacion habitaciones[6];
 <font color="red">TObjeto objetos[4];</font>
 inicializarHabitaciones(habitaciones);
 <font color="red">inicializarObjetos(objetos);</font>
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Como en el caso de las habitaciones, creamos un array que contendrá todos los objetos de nuestra aventura. En nuestro caso, este array tendrá tamaño 4, para la espada, la jarra, y dos para la antorcha (no os impacientéis, luego entenderéis por qué se usan dos objetos para la antorcha). Evidentemente, si ahora compilamos no va a funcionar, porque falta por crear la función inicializarObjetos que, como en el caso de inicializarHabitaciones, se encarga de rellenar el array de objetos. Nuestra función inicializarObjetos podría tener la siguiente forma (se debe recordar que tiene que estar antes de la función main):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Como en el caso de las habitaciones, creamos un array que contendrÃ¡ todos los objetos de
+                                nuestra aventura. En nuestro caso, este array tendrÃ¡ tamaÃ±o 4, para la espada, la jarra,
+                                y dos para la antorcha (no os impacientÃ©is, luego entenderÃ©is por quÃ© se usan dos
+                                objetos para la antorcha). Evidentemente, si ahora compilamos no va a funcionar, porque
+                                falta por crear la funciÃ³n inicializarObjetos que, como en el caso de
+                                inicializarHabitaciones, se encarga de rellenar el array de objetos. Nuestra funciÃ³n
+                                inicializarObjetos podrÃ­a tener la siguiente forma (se debe recordar que tiene que estar
+                                antes de la funciÃ³n main):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 void inicializarObjetos(TObjeto objetos[])
 {
@@ -162,17 +230,29 @@ void inicializarObjetos(TObjeto objetos[])
 	objetos[1].peso = 3;
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>
-(la antorcha todavía no la hemos creado... sí, somos pesados con la antorcha). El primer objeto es la espada, y al principio de la aventura se encontrará en la habitación cuyo identificador sea el 5 (la cocina); decimos al principio porque, como hemos comentado antes, eso puede cambiar. La espada tiene un peso de 5. El siguiente objeto es la jarra, cuya localización inicial es la -1, que hemos dicho que era la localización especial que usábamos para indicar que el objeto estaba en posesión del protagonista de la aventura.
-</p>
-<p>
-El último paso es que, junto a la descripción de las habitaciones, se nos indiquen los objetos que podemos encontrar en ellas. Eso, evidentemente, es necesario hacerlo en la función escribirDescripcion, y se hará de forma similar a como se escribían las posibles direcciones; lo único es que tendremos que recorrer el array de objetos comprobando cuáles están en la habitación. Por lo tanto, tenemos que pasar como parámetro el array de objetos. La función podría quedar de la siguiente forma (el código en rojo es nuevo):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                (la antorcha todavÃ­a no la hemos creado... sÃ­, somos pesados con la antorcha). El primer
+                                objeto es la espada, y al principio de la aventura se encontrarÃ¡ en la habitaciÃ³n cuyo
+                                identificador sea el 5 (la cocina); decimos al principio porque, como hemos comentado
+                                antes, eso puede cambiar. La espada tiene un peso de 5. El siguiente objeto es la jarra,
+                                cuya localizaciÃ³n inicial es la -1, que hemos dicho que era la localizaciÃ³n especial que
+                                usÃ¡bamos para indicar que el objeto estaba en posesiÃ³n del protagonista de la aventura.
+                            </p>
+                            <p>
+                                El Ãºltimo paso es que, junto a la descripciÃ³n de las habitaciones, se nos indiquen los
+                                objetos que podemos encontrar en ellas. Eso, evidentemente, es necesario hacerlo en la
+                                funciÃ³n escribirDescripcion, y se harÃ¡ de forma similar a como se escribÃ­an las posibles
+                                direcciones; lo Ãºnico es que tendremos que recorrer el array de objetos comprobando
+                                cuÃ¡les estÃ¡n en la habitaciÃ³n. Por lo tanto, tenemos que pasar como parÃ¡metro el array
+                                de objetos. La funciÃ³n podrÃ­a quedar de la siguiente forma (el cÃ³digo en rojo es nuevo):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void escribirDescripcion(THabitacion habitaciones, int habitacion<font color="red">, TObjeto objetos</font>)
 {
 	int hayObjetos = 0;
@@ -205,50 +285,76 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion<font color="re
 	printf("\n\n");
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Como hemos añadido un parámetro de entrada más, en todas las líneas a las que se llame a la función se debe añadir también ese parámetro. Estas líneas (en la función main) quedarían de la siguiente forma:
-</p>
-<p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Como hemos aÃ±adido un parÃ¡metro de entrada mÃ¡s, en todas las lÃ­neas a las que se llame a
+                                la funciÃ³n se debe aÃ±adir tambiÃ©n ese parÃ¡metro. Estas lÃ­neas (en la funciÃ³n main)
+                                quedarÃ­an de la siguiente forma:
+                            </p>
+                            <p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 escribirDescripcion(habitaciones,habitacion,objetos)
 
 </pre>
-    </p></td></tr>
-</table>
-<p>
-El código que hemos añadido recorre el array de objetos comprobando para cada uno si su localización corresponde con el identificador de la habitación actual. En el caso de que sea así escribe su nombre (fíjate en el espacio en blanco antes del %s). La variable hayObjetos nos sirve para determinar si hay algún objeto en la habitación. En un principio vale 0, y si la localización de algún objeto se corresponde con el identificador de la habitación actual, valdrá 1. Solo en el caso de que valga 0 se mostrará el mensaje "nada". Ahora ya podemos compilar y ejecutar la aventura, dirigiéndonos hacia la cocina para comprobar que la espada está allí. No podemos saber nada de la jarra, porque todavía no hemos implementado el inventario, lo haremos en la siguiente sección.
-</p>
-<br>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                El cÃ³digo que hemos aÃ±adido recorre el array de objetos comprobando para cada uno si su
+                                localizaciÃ³n corresponde con el identificador de la habitaciÃ³n actual. En el caso de que
+                                sea asÃ­ escribe su nombre (fÃ­jate en el espacio en blanco antes del %s). La variable
+                                hayObjetos nos sirve para determinar si hay algÃºn objeto en la habitaciÃ³n. En un
+                                principio vale 0, y si la localizaciÃ³n de algÃºn objeto se corresponde con el
+                                identificador de la habitaciÃ³n actual, valdrÃ¡ 1. Solo en el caso de que valga 0 se
+                                mostrarÃ¡ el mensaje "nada". Ahora ya podemos compilar y ejecutar la aventura,
+                                dirigiÃ©ndonos hacia la cocina para comprobar que la espada estÃ¡ allÃ­. No podemos saber
+                                nada de la jarra, porque todavÃ­a no hemos implementado el inventario, lo haremos en la
+                                siguiente secciÃ³n.
+                            </p>
+                            <br>
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk4_1.png" width="328" height="290"  alt="¿Quién se habrá dejado esta espada aquí tirada en la cocina?" />
-</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk4_1.png" width="328" height="290"
+                                             alt="Â¿QuiÃ©n se habrÃ¡ dejado esta espada aquÃ­ tirada en la cocina?"/>
+                                    </td>
 
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">¿Quién se habrá dejado esta espada aquí tirada en la cocina?</td>
-	</tr>
-</table>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Â¿QuiÃ©n se habrÃ¡ dejado esta espada aquÃ­ tirada en
+                                        la cocina?
+                                    </td>
+                                </tr>
+                            </table>
 
-<p>
-<b>Coger y dejar objetos. El inventario</b>
-</p>
-<p>
-A partir de este momento, el secreto para poder realizar acciones con los objetos durante la aventura consiste nada más que en añadir posibles frases a usar por el jugador en el intérprete de comandos. Si recordamos, el intérprete de comandos era la parte del código que leía la cadena de texto introducida por el jugador y comparaba con el vocabulario conocido con el programa. Para incluir los comandos de inventario y coger y dejar objetos debemos añadir código a esta parte.
+                            <p>
+                                <b>Coger y dejar objetos. El inventario</b>
+                            </p>
+                            <p>
+                                A partir de este momento, el secreto para poder realizar acciones con los objetos
+                                durante la aventura consiste nada mÃ¡s que en aÃ±adir posibles frases a usar por el
+                                jugador en el intÃ©rprete de comandos. Si recordamos, el intÃ©rprete de comandos era la
+                                parte del cÃ³digo que leÃ­a la cadena de texto introducida por el jugador y comparaba con
+                                el vocabulario conocido con el programa. Para incluir los comandos de inventario y coger
+                                y dejar objetos debemos aÃ±adir cÃ³digo a esta parte.
 
-</p>
-<p>
-Implementemos primero el inventario. Cuando el jugador teclee "inventario" o "i", se deberán mostrar por pantalla todos los objetos que porta. Podemos añadir el siguiente código al intérprete de comandos, dentro del método main (el código en rojo es el que se ha añadido):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </p>
+                            <p>
+                                Implementemos primero el inventario. Cuando el jugador teclee "inventario" o "i", se
+                                deberÃ¡n mostrar por pantalla todos los objetos que porta. Podemos aÃ±adir el siguiente
+                                cÃ³digo al intÃ©rprete de comandos, dentro del mÃ©todo main (el cÃ³digo en rojo es el que se
+                                ha aÃ±adido):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 		}
 		else
 			printf("\n\nNo puedo ir en esa direccion\n\n");
@@ -274,30 +380,45 @@ Implementemos primero el inventario. Cuando el jugador teclee "inventario" o "i"
 }
 </pre>
 
-    </p></td></tr>
-</table>
-<p>
-La variable hayObjetos se debe definir al comienzo de la función main y cumple el mismo objetivo que en la función describirHabitacion. Lo único que se hace en el caso del inventario es recorrer el array de objetos escribiendo el nombre de aquéllos para los que el valor de localización sea -1, o "nada" en el caso de que no haya ninguno que cumpla esta condición. Si compilamos y ejecutamos, por fin veremos la jarra en nuestro juego al teclear "i" o "inventario".
-</p>
-<br>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                La variable hayObjetos se debe definir al comienzo de la funciÃ³n main y cumple el mismo
+                                objetivo que en la funciÃ³n describirHabitacion. Lo Ãºnico que se hace en el caso del
+                                inventario es recorrer el array de objetos escribiendo el nombre de aquÃ©llos para los
+                                que el valor de localizaciÃ³n sea -1, o "nada" en el caso de que no haya ninguno que
+                                cumpla esta condiciÃ³n. Si compilamos y ejecutamos, por fin veremos la jarra en nuestro
+                                juego al teclear "i" o "inventario".
+                            </p>
+                            <br>
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk4_2.png" width="328" height="290"  alt="Esperemos que esta jarra nos sirva de algo en nuestra aventura" />
-</td>
-	</tr>
-	<tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk4_2.png" width="328" height="290"
+                                             alt="Esperemos que esta jarra nos sirva de algo en nuestra aventura"/>
+                                    </td>
+                                </tr>
+                                <tr>
 
-		<td class="piefoto" align="right">Esperemos que esta jarra nos sirva de algo en nuestra aventura</td>
-	</tr>
-</table>
+                                    <td class="piefoto" align="right">Esperemos que esta jarra nos sirva de algo en
+                                        nuestra aventura
+                                    </td>
+                                </tr>
+                            </table>
 
-<p>
-Para que el jugador pueda coger y dejar objetos, lo único que tenemos que hacer, nuevamente, es añadir los comandos adecuados al intérprete de comandos. La implementación es tan simple como hacer que cuando cojamos un objeto, la localización del mismo pase a ser -1, y que cuando dejemos un objeto, la localización del mismo pase de ser -1 a ser el identificador de la habitación actual. Veamos primero cómo implementar la parte de coger objetos (el código en rojo es código añadido):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>
+                                Para que el jugador pueda coger y dejar objetos, lo Ãºnico que tenemos que hacer,
+                                nuevamente, es aÃ±adir los comandos adecuados al intÃ©rprete de comandos. La
+                                implementaciÃ³n es tan simple como hacer que cuando cojamos un objeto, la localizaciÃ³n
+                                del mismo pase a ser -1, y que cuando dejemos un objeto, la localizaciÃ³n del mismo pase
+                                de ser -1 a ser el identificador de la habitaciÃ³n actual. Veamos primero cÃ³mo
+                                implementar la parte de coger objetos (el cÃ³digo en rojo es cÃ³digo aÃ±adido):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 else if (strcmp(comando,"i") == 0 || strcmp(comando,"inventario") == 0)
 {
 	hayObjetos = 0;
@@ -313,7 +434,7 @@ else if (strcmp(comando,"i") == 0 || strcmp(comando,"inventario") == 0)
 	printf("\n\n");
 }
 <font color="red">else
-// Comandos con más de una palabra
+// Comandos con mÃ¡s de una palabra
 {
 	strcpy(palabra,strtok(comando," "));
 	if (strcmp(comando,"coger") == 0)
@@ -346,41 +467,83 @@ else if (strcmp(comando,"i") == 0 || strcmp(comando,"inventario") == 0)
 
 </font>
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Para que este código funcione, se debe crear una nueva variable (al inicio de la función main):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Para que este cÃ³digo funcione, se debe crear una nueva variable (al inicio de la funciÃ³n
+                                main):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 char palabra[50];
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>
-¿Qué significa todo lo que hemos añadido? En primer lugar, se ha realizado una modificación importante al intérprete de comandos. hasta ahora, solo era capaz de interpretar comandos de una única palabra. Ahora le hemos añadido la posibildad de comprender comandos de más de una palabra. Simplemente, primero comprobamos si el comando introducido por el jugador se corresponde con alguno de los de una palabra. y al final introducimos el código que interpreta más de una. Este código empieza con la instrucción strcpy(palabra,strtok(comando," ")).
-</p>
-<p>
-La función strtok es otra de las que nos ofrece z88dk y su uso es exactamente igual al del estándar en el PC; strtok(cadena1,cadena2) devuelve la primera subcadena de cadena1, estando todas las subcadenas de cadena1 delimitadas por el carácter especificado en cadena2. Así pues, si cadena2 vale " " (espacio en blanco) como en el código anterior, la llamada a esta función devolverá los primeros carácteres de cadena1 hasta llegar al primer espacio en blanco (o el final de la cadena), es decir, la primera palabra. A partir de este momento, si vamos llamando a strtok pasando el valor 0 como cadena1, se nos irán devolviendo subcadenas sucesivas a partir de la cadena inicial. Hay que destacar que esta cadena inicial queda modificada; además, el código anterior, al compilarlo, nos mostrará una serie de warnings, que pueden ser ignorados (el programa funciona correctamente). Como lo que se devuelve es una cadena, es necesario utilizar strcpy para almacenar el valor devuelto en una variable de tipo char[].
-</p>
-<p>
-Si la primera palabra es "coger", entramos en la parte del código que interpreta este comando. Se utiliza de nuevo strtok para almacenar en palabra el resto del comando (pues se indica como delimitador el símbolo de final de cadena \0). Si el comando solo se compone de la palabra coger se mostrará un mensaje de error adecuado. Lo siguiente es inicializar las variables i, que se utilizará como contador para recorrer el array de objetos, y hayObjetos, que en este caso se utilizará para saber si se ha encontrado un objeto con el mismo nombre que el tecleado por el jugador. A continuación, se recorre el array de objetos buscando un objeto cuyo nombre se corresponda con el introducido por el jugador. El principal inconveniente es que el jugador tiene que introducir el nombre completo, incluyendo el artículo, en el caso de que se hubiera puesto. Por ejemplo, si el nombre del objeto es "una espada", el jugador deberá teclear "coger una espada" para poder obtenerla. Se deja como ejercicio al lector arreglar este pequeño fallo.
-</p>
-<p>
-Al recorrer el array no sólo se comprueba si existe algún objeto cuyo nombre se corresponda con el introducido, sino que también el objeto debe encontrarse en la misma habitación que el jugador. Coger el objeto consiste nada más en cambiar el valor del campo localización del objeto a -1.
-</p>
-<p>
-Obsérvese que, tanto si el objeto existe como si no, tanto si el objeto está en la misma habitación como si no, se muestra el mismo mensaje de error ("No puedo hacer eso"). Esto es básico para no darle pistas al jugador sobre los objetos que existen en nuestro juego.
-</p>
-<p>
-El código para dejar objetos es prácticamente igual; la única diferencia es que comprobamos que para dejar un objeto éste se encuentre en el inventario (localizacion = -1) y que dejar un objeto significa cambiar el valor del campo localizacion al del identificador de la habitación actual (el código en rojo es el que se ha añadido):
+                            <p>
+                                Â¿QuÃ© significa todo lo que hemos aÃ±adido? En primer lugar, se ha realizado una
+                                modificaciÃ³n importante al intÃ©rprete de comandos. hasta ahora, solo era capaz de
+                                interpretar comandos de una Ãºnica palabra. Ahora le hemos aÃ±adido la posibildad de
+                                comprender comandos de mÃ¡s de una palabra. Simplemente, primero comprobamos si el
+                                comando introducido por el jugador se corresponde con alguno de los de una palabra. y al
+                                final introducimos el cÃ³digo que interpreta mÃ¡s de una. Este cÃ³digo empieza con la
+                                instrucciÃ³n strcpy(palabra,strtok(comando," ")).
+                            </p>
+                            <p>
+                                La funciÃ³n strtok es otra de las que nos ofrece z88dk y su uso es exactamente igual al
+                                del estÃ¡ndar en el PC; strtok(cadena1,cadena2) devuelve la primera subcadena de cadena1,
+                                estando todas las subcadenas de cadena1 delimitadas por el carÃ¡cter especificado en
+                                cadena2. AsÃ­ pues, si cadena2 vale " " (espacio en blanco) como en el cÃ³digo anterior,
+                                la llamada a esta funciÃ³n devolverÃ¡ los primeros carÃ¡cteres de cadena1 hasta llegar al
+                                primer espacio en blanco (o el final de la cadena), es decir, la primera palabra. A
+                                partir de este momento, si vamos llamando a strtok pasando el valor 0 como cadena1, se
+                                nos irÃ¡n devolviendo subcadenas sucesivas a partir de la cadena inicial. Hay que
+                                destacar que esta cadena inicial queda modificada; ademÃ¡s, el cÃ³digo anterior, al
+                                compilarlo, nos mostrarÃ¡ una serie de warnings, que pueden ser ignorados (el programa
+                                funciona correctamente). Como lo que se devuelve es una cadena, es necesario utilizar
+                                strcpy para almacenar el valor devuelto en una variable de tipo char[].
+                            </p>
+                            <p>
+                                Si la primera palabra es "coger", entramos en la parte del cÃ³digo que interpreta este
+                                comando. Se utiliza de nuevo strtok para almacenar en palabra el resto del comando (pues
+                                se indica como delimitador el sÃ­mbolo de final de cadena \0). Si el comando solo se
+                                compone de la palabra coger se mostrarÃ¡ un mensaje de error adecuado. Lo siguiente es
+                                inicializar las variables i, que se utilizarÃ¡ como contador para recorrer el array de
+                                objetos, y hayObjetos, que en este caso se utilizarÃ¡ para saber si se ha encontrado un
+                                objeto con el mismo nombre que el tecleado por el jugador. A continuaciÃ³n, se recorre el
+                                array de objetos buscando un objeto cuyo nombre se corresponda con el introducido por el
+                                jugador. El principal inconveniente es que el jugador tiene que introducir el nombre
+                                completo, incluyendo el artÃ­culo, en el caso de que se hubiera puesto. Por ejemplo, si
+                                el nombre del objeto es "una espada", el jugador deberÃ¡ teclear "coger una espada" para
+                                poder obtenerla. Se deja como ejercicio al lector arreglar este pequeÃ±o fallo.
+                            </p>
+                            <p>
+                                Al recorrer el array no sÃ³lo se comprueba si existe algÃºn objeto cuyo nombre se
+                                corresponda con el introducido, sino que tambiÃ©n el objeto debe encontrarse en la misma
+                                habitaciÃ³n que el jugador. Coger el objeto consiste nada mÃ¡s en cambiar el valor del
+                                campo localizaciÃ³n del objeto a -1.
+                            </p>
+                            <p>
+                                ObsÃ©rvese que, tanto si el objeto existe como si no, tanto si el objeto estÃ¡ en la misma
+                                habitaciÃ³n como si no, se muestra el mismo mensaje de error ("No puedo hacer eso"). Esto
+                                es bÃ¡sico para no darle pistas al jugador sobre los objetos que existen en nuestro
+                                juego.
+                            </p>
+                            <p>
+                                El cÃ³digo para dejar objetos es prÃ¡cticamente igual; la Ãºnica diferencia es que
+                                comprobamos que para dejar un objeto Ã©ste se encuentre en el inventario (localizacion =
+                                -1) y que dejar un objeto significa cambiar el valor del campo localizacion al del
+                                identificador de la habitaciÃ³n actual (el cÃ³digo en rojo es el que se ha aÃ±adido):
 
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 			if (hayObjetos == 0)
 				printf("\n\nNo puedo hacer eso\n\n");
 		}
@@ -415,57 +578,74 @@ El código para dejar objetos es prácticamente igual; la única diferencia es que 
 char palabra[50];
 
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Un último detalle que nos queda por comentar es el del peso de los objetos. Recordemos que uno de los campos de TObjeto era el peso. Supongamos que el peso máximo que puede llevar un jugador es de 6. Lo que tenemos que añadir para poder controlar el peso en nuestro juego es lo siguiente:
-</p>
-<ul>
-<li>Crear una variable que almacene el peso de los objetos portados por el jugador.</li>
-<li>Controlar que el peso total al coger un objeto no supere el peso máximo que puede llevar un jugador. En caso de no ser así sumar el peso del objeto recogido al peso total.</li>
-<li>Al dejar un objeto, restar su peso al peso total.</li>
-</ul>
-<p>
-Para resolver el primer punto, creamos la variable pesoTransportado, al inicio de la función main:
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Un Ãºltimo detalle que nos queda por comentar es el del peso de los objetos. Recordemos
+                                que uno de los campos de TObjeto era el peso. Supongamos que el peso mÃ¡ximo que puede
+                                llevar un jugador es de 6. Lo que tenemos que aÃ±adir para poder controlar el peso en
+                                nuestro juego es lo siguiente:
+                            </p>
+                            <ul>
+                                <li>Crear una variable que almacene el peso de los objetos portados por el jugador.</li>
+                                <li>Controlar que el peso total al coger un objeto no supere el peso mÃ¡ximo que puede
+                                    llevar un jugador. En caso de no ser asÃ­ sumar el peso del objeto recogido al peso
+                                    total.
+                                </li>
+                                <li>Al dejar un objeto, restar su peso al peso total.</li>
+                            </ul>
+                            <p>
+                                Para resolver el primer punto, creamos la variable pesoTransportado, al inicio de la
+                                funciÃ³n main:
 
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 	int pesoTransportado;
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Y la inicializamos con el peso del objeto que porta el jugador nada más empezar. Esto lo podemos hacer justo después de inicializar los objetos:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Y la inicializamos con el peso del objeto que porta el jugador nada mÃ¡s empezar. Esto lo
+                                podemos hacer justo despuÃ©s de inicializar los objetos:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 inicializarHabitaciones(habitaciones);
 inicializarObjetos(objetos);
 pesoTransportado = objetos[1].peso;
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Para resolver el segundo punto, añadimos el siguiente código a la hora de manejar que el jugador coja objetos (código en rojo):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Para resolver el segundo punto, aÃ±adimos el siguiente cÃ³digo a la hora de manejar que el
+                                jugador coja objetos (cÃ³digo en rojo):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 int pesoTransportado;
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>
-Y para el tercer punto introducimos el siguiente código (la línea en rojo):
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>
+                                Y para el tercer punto introducimos el siguiente cÃ³digo (la lÃ­nea en rojo):
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 if (strcmp(comando,"coger") == 0)
 {
 	strcpy(palabra,strtok(0,"\0"));
@@ -499,18 +679,26 @@ if (strcmp(comando,"coger") == 0)
 	}
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>
-<b>Objetos que cambian de estado</b>
-</p>
-<p>
-Hasta ahora muy pocas características de z88dk nuevas hemos introducido. Aprovechamos este apartado para indicar cómo añadir colores a nuestras aventuras conversacionales gracias a esta librería. Para ello introducimos un nuevo objeto, la antorcha, que es especial, porque vamos a poder encenderla y apagarla. Antes habíamos comentado que este tipo de objetos que se encienden y se apagan tienen que ser creados como dos objetos distintos. En el caso de la antorcha, podemos introducir el siguiente código en la función inicializarObjetos:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                <b>Objetos que cambian de estado</b>
+                            </p>
+                            <p>
+                                Hasta ahora muy pocas caracterÃ­sticas de z88dk nuevas hemos introducido. Aprovechamos
+                                este apartado para indicar cÃ³mo aÃ±adir colores a nuestras aventuras conversacionales
+                                gracias a esta librerÃ­a. Para ello introducimos un nuevo objeto, la antorcha, que es
+                                especial, porque vamos a poder encenderla y apagarla. Antes habÃ­amos comentado que este
+                                tipo de objetos que se encienden y se apagan tienen que ser creados como dos objetos
+                                distintos. En el caso de la antorcha, podemos introducir el siguiente cÃ³digo en la
+                                funciÃ³n inicializarObjetos:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 c[0] = 27;
 c[1] = '\0';
 strcpy(objetos[2].nombre,"una antorcha ");
@@ -529,41 +717,73 @@ strcat(objetos[3].nombre,"[47m");
 objetos[3].localizacion = -2;
 objetos[3].peso = 2;
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Para que funcione tenemos que declarar la variable c al principio de la función como:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Para que funcione tenemos que declarar la variable c al principio de la funciÃ³n como:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 char c[2];
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>
-Se han creado dos objetos. El objeto de índice 2 se corresponde con la antorcha apagada y el objeto de índice 3 con la antorcha encendida. La antorcha apagada en un principio se encuentra en la localización con identificador 2 (el callejón) y tiene peso 2. La antorcha encendida, evidentemente, tiene el mismo peso, y al campo localizacion se le ha asignado un valor -2; vamos a usar el valor -2 en la localización para designar a aquellos objetos que no existen en el juego por alguna razón (por ejemplo, porque se hayan destruido, porque se tengan que contruir, objetos que representan diversos estados de un objeto, como por ejemplo una antorcha encendida apagada o encendida o un baúl abierto o cerrado, etc.). Esto quiere decir que si nos desplazamos a la localización 2, encontraremos la antorcha apagada, pero será imposible encontrar la antorcha encendida en ninguna localización de la aventura, y tampoco en nuestro inventario.
-</p>
-<p>
-Es en el nombre de los objetos donde encontramos la dificultad. Si recordamos en la entrega anterior, cuando escribíamos texto con formato (subrayado, en negrita, etc.), se usaba printf de la siguiente manera:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>
+                                Se han creado dos objetos. El objeto de Ã­ndice 2 se corresponde con la antorcha apagada
+                                y el objeto de Ã­ndice 3 con la antorcha encendida. La antorcha apagada en un principio
+                                se encuentra en la localizaciÃ³n con identificador 2 (el callejÃ³n) y tiene peso 2. La
+                                antorcha encendida, evidentemente, tiene el mismo peso, y al campo localizacion se le ha
+                                asignado un valor -2; vamos a usar el valor -2 en la localizaciÃ³n para designar a
+                                aquellos objetos que no existen en el juego por alguna razÃ³n (por ejemplo, porque se
+                                hayan destruido, porque se tengan que contruir, objetos que representan diversos estados
+                                de un objeto, como por ejemplo una antorcha encendida apagada o encendida o un baÃºl
+                                abierto o cerrado, etc.). Esto quiere decir que si nos desplazamos a la localizaciÃ³n 2,
+                                encontraremos la antorcha apagada, pero serÃ¡ imposible encontrar la antorcha encendida
+                                en ninguna localizaciÃ³n de la aventura, y tampoco en nuestro inventario.
+                            </p>
+                            <p>
+                                Es en el nombre de los objetos donde encontramos la dificultad. Si recordamos en la
+                                entrega anterior, cuando escribÃ­amos texto con formato (subrayado, en negrita, etc.), se
+                                usaba printf de la siguiente manera:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 printf("%c[4mTexto subrayado%c[24m",27,27);
 </pre>
-    </p></td></tr>
-</table>
-<p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
 
-Es decir, escribimos el carácter número 27, el símbolo [, y 4m indicando, por ejemplo, formato subrayado (o 24m, indicando texto sin subrayar). Como el carácter 27 es no imprimible, recurríamos a la facilidad que nos presentaba printf de escribir caracteres mediante %c. Para crear una cadena con color, el procedimiento es el mismo; sin embargo, la función strcpy no permite usar %c, así que lo que hacemos es ir concatenando, mediante el uso de strcat (que funciona igual que en el C del PC). Por ejemplo, en el caso de la antorcha apagada, deseamos que aparezca por pantalla la palabra 'apagada' con color de fondo azul. Copiamos en el nombre del objeto la cadena "una antorcha ", le concatenamos el carácter 27 (utilizando el pequeño truco visto en el código anterior), concatenamos el formato ([44m se corresponde con color de fondo azul), concatenamos la palabra "apagada", volvemos a concatenar el carácter 27 y el formato ([47m hace que el fondo vuelva a ser blanco); por lo tanto, entre ambos formatos especificados, el fondo aparecerá de color azul. Lo mismo se ha realizado con la antorcha encendida, pero usando el color amarillo.
-</p>
-<p>
-Por lo tanto, si en una cadena escribimos el carácter 27, el símbolo [, un código de color xx, y la m, a partir de ese momento, si xx se encuentra entre los valores de la siguiente lista, el texto tendrá el color de fondo correspondiente al texto:
-</p>
-<p>
-<pre>
+                                Es decir, escribimos el carÃ¡cter nÃºmero 27, el sÃ­mbolo [, y 4m indicando, por ejemplo,
+                                formato subrayado (o 24m, indicando texto sin subrayar). Como el carÃ¡cter 27 es no
+                                imprimible, recurrÃ­amos a la facilidad que nos presentaba printf de escribir caracteres
+                                mediante %c. Para crear una cadena con color, el procedimiento es el mismo; sin embargo,
+                                la funciÃ³n strcpy no permite usar %c, asÃ­ que lo que hacemos es ir concatenando,
+                                mediante el uso de strcat (que funciona igual que en el C del PC). Por ejemplo, en el
+                                caso de la antorcha apagada, deseamos que aparezca por pantalla la palabra 'apagada' con
+                                color de fondo azul. Copiamos en el nombre del objeto la cadena "una antorcha ", le
+                                concatenamos el carÃ¡cter 27 (utilizando el pequeÃ±o truco visto en el cÃ³digo anterior),
+                                concatenamos el formato ([44m se corresponde con color de fondo azul), concatenamos la
+                                palabra "apagada", volvemos a concatenar el carÃ¡cter 27 y el formato ([47m hace que el
+                                fondo vuelva a ser blanco); por lo tanto, entre ambos formatos especificados, el fondo
+                                aparecerÃ¡ de color azul. Lo mismo se ha realizado con la antorcha encendida, pero usando
+                                el color amarillo.
+                            </p>
+                            <p>
+                                Por lo tanto, si en una cadena escribimos el carÃ¡cter 27, el sÃ­mbolo [, un cÃ³digo de
+                                color xx, y la m, a partir de ese momento, si xx se encuentra entre los valores de la
+                                siguiente lista, el texto tendrÃ¡ el color de fondo correspondiente al texto:
+                            </p>
+                            <p>
+                            <pre>
 40 - negro
 41 - rojo
 42 - verde
@@ -573,12 +793,13 @@ Por lo tanto, si en una cadena escribimos el carácter 27, el símbolo [, un códig
 46 - cyan
 47 - blanco
 </pre>
-</p>
-<p>
-Para el color del texto propiamente dicho, empleamos la misma táctica, pero utilizando los siguientes códigos de formato:
-</p>
-<p>
-<pre>
+                            </p>
+                            <p>
+                                Para el color del texto propiamente dicho, empleamos la misma tÃ¡ctica, pero utilizando
+                                los siguientes cÃ³digos de formato:
+                            </p>
+                            <p>
+                            <pre>
 30 - negro
 31 - rojo
 32 - verde
@@ -589,16 +810,22 @@ Para el color del texto propiamente dicho, empleamos la misma táctica, pero util
 37 - blanco
 </pre>
 
-</p>
-<p>
-Si compilamos y cargamos el juego en el emulador, veremos que si nada más empezar nos desplazamos hacia el este, la antorcha estará allí, pero no la podremos coger. Esto se debe a que para coger un objeto teníamos que introducir el nombre exacto del mismo, y eso es imposible, porque el nombre exacto de la antorcha apagada es: "una antorcha {27}[44mapagada{27}[47m", que contiene un carácter que no se puede escribir (el 27).
-</p>
-<p>
-Esto lo vamos a tener que solucionar añadiendo dos nuevos comandos al intérprete de comandos, "coger antorcha" y "dejar antorcha". El código se muestra a continuación:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </p>
+                            <p>
+                                Si compilamos y cargamos el juego en el emulador, veremos que si nada mÃ¡s empezar nos
+                                desplazamos hacia el este, la antorcha estarÃ¡ allÃ­, pero no la podremos coger. Esto se
+                                debe a que para coger un objeto tenÃ­amos que introducir el nombre exacto del mismo, y
+                                eso es imposible, porque el nombre exacto de la antorcha apagada es: "una antorcha
+                                {27}[44mapagada{27}[47m", que contiene un carÃ¡cter que no se puede escribir (el 27).
+                            </p>
+                            <p>
+                                Esto lo vamos a tener que solucionar aÃ±adiendo dos nuevos comandos al intÃ©rprete de
+                                comandos, "coger antorcha" y "dejar antorcha". El cÃ³digo se muestra a continuaciÃ³n:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 else if (strcmp(comando,"i") == 0 || strcmp(comando,"inventario") == 0)
 {
 	hayObjetos = 0;
@@ -660,20 +887,31 @@ else if (strcmp(comando,"dejar una antorcha") == 0)
 else
 </font>
 
-// Comandos con más de una palabra
+// Comandos con mÃ¡s de una palabra
 {
 </pre>
-    </p></td></tr>
-</table>
-<p>
-Lo que se ha hecho es aplicar el código general de coger y dejar objetos a la antorcha de tal forma que tan sólo sea necesario escribir "una antorcha" a la hora de coger o dejar el objeto, esté encendida o apagada.
-</p>
-<p>
-Por útlimo introducimos dos comandos más, "encender antorcha" y "apagar antorcha". Para encender la antorcha es necesario que la antorcha apagada (objeto de índice 2) se encuentre en nuestro inventario (el valor de su campo localizacion debe ser -1). Lo que se hará será cambiar su valor de localizacion a -2, para que el objeto desaparezca del juego, y cambiar el de la antorcha encendida (objeto de índice 3) a -1, para que aparezca en nuestro inventario. Para apagar la antorcha se sigue el proceso contrario. Se observa que al cambiar de estado la antorcha lo único que pasa es que un objeto desaparece del juego y otro es introducido. El código se muestra a continuación:
-</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>
+                                Lo que se ha hecho es aplicar el cÃ³digo general de coger y dejar objetos a la antorcha
+                                de tal forma que tan sÃ³lo sea necesario escribir "una antorcha" a la hora de coger o
+                                dejar el objeto, estÃ© encendida o apagada.
+                            </p>
+                            <p>
+                                Por Ãºtlimo introducimos dos comandos mÃ¡s, "encender antorcha" y "apagar antorcha". Para
+                                encender la antorcha es necesario que la antorcha apagada (objeto de Ã­ndice 2) se
+                                encuentre en nuestro inventario (el valor de su campo localizacion debe ser -1). Lo que
+                                se harÃ¡ serÃ¡ cambiar su valor de localizacion a -2, para que el objeto desaparezca del
+                                juego, y cambiar el de la antorcha encendida (objeto de Ã­ndice 3) a -1, para que
+                                aparezca en nuestro inventario. Para apagar la antorcha se sigue el proceso contrario.
+                                Se observa que al cambiar de estado la antorcha lo Ãºnico que pasa es que un objeto
+                                desaparece del juego y otro es introducido. El cÃ³digo se muestra a continuaciÃ³n:
+                            </p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 }
 else if (strcmp(comando,"encender antorcha") == 0)
 {
@@ -698,130 +936,141 @@ else if (strcmp(comando,"apagar antorcha") == 0)
 		printf("\n\nNo puedo hacer eso\n\n");
 }
 else
-// Comandos con más de una palabra
+// Comandos con mÃ¡s de una palabra
 {
 </pre>
 
-    </p></td></tr>
-</table>
-<br>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <br>
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk4_3.png" width="328" height="290"  alt="La antorcha en acción" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">La antorcha en acción</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk4_3.png" width="328" height="290"
+                                             alt="La antorcha en acciÃ³n"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">La antorcha en acciÃ³n</td>
 
-	</tr>
-</table>
+                                </tr>
+                            </table>
 
-<p>
-<b>Resumen</b>
-</p>
-<p>
-¿Qué es lo que hemos visto en esta entrega? Resumimos:
-</p>
-<ul>
-<li>Cómo añadir objetos a nuestro juego, y permitir manejarlos (coger, dejar, inventario, etc.).</li>
-<li>Cómo añadir efectos de color a nuestro juego de texto (lo hemos visto de forma muy limitada, ya practicaremos más en posteriores entregas).</li>
-<li>El uso de strtok y strcat.</li>
+                            <p>
+                                <b>Resumen</b>
+                            </p>
+                            <p>
+                                Â¿QuÃ© es lo que hemos visto en esta entrega? Resumimos:
+                            </p>
+                            <ul>
+                                <li>CÃ³mo aÃ±adir objetos a nuestro juego, y permitir manejarlos (coger, dejar,
+                                    inventario, etc.).
+                                </li>
+                                <li>CÃ³mo aÃ±adir efectos de color a nuestro juego de texto (lo hemos visto de forma muy
+                                    limitada, ya practicaremos mÃ¡s en posteriores entregas).
+                                </li>
+                                <li>El uso de strtok y strcat.</li>
 
-</ul>
-<p>
-Está claro que si queremos permitir que el jugador realice más acciones lo único que tenemos que hacer es introducir nuevos comandos en el intérprete de comandos tal cómo se ha visto hasta ahora.
-</p>
-<p>
-Hemos hablado de objetos normales y objetos que se pueden encender/apagar, pero en una aventura podemos encontrar otro tipo de objetos, como objetos que se pueden llevar puestos (una chaqueta, un sombrero), objetos que pueden contener a otros (un baúl, una petaca), etc. Para crear este tipo de objetos podemos jugar, como en el caso de la antorcha, con valores especiales del campo localizacion y con varios objetos para distintos estados de un mismo objeto (antorcha encendida/apagada, baúl abierto/cerrado, etc.). Se deja como ejercicio al lector implementar este tipo de objetos
-</p>
-<p>
-<b>Una curiosidad - violación de segmento</b>
-</p>
-<p>
-Por último, una curiosidad que el autor de este texto ha podido comprobar mientras realizaba este tutorial; el tema de las violaciones de segmento, con respecto a las cadenas. Por lo que se ha visto hasta ahora, no parece producirse una violación de segmento en ejecución si hay algún problema de memoria con punteros que se nos escape; simplemente se mostrarán caracteres extraños por pantalla... además, ¿cómo sería una violación de segmento en un Spectrum? ¿Similar a un RANDOMIZE USR 0?
-</p>
-<div align="left">
-<p>
-<b>LINKS</b>
+                            </ul>
+                            <p>
+                                EstÃ¡ claro que si queremos permitir que el jugador realice mÃ¡s acciones lo Ãºnico que
+                                tenemos que hacer es introducir nuevos comandos en el intÃ©rprete de comandos tal cÃ³mo se
+                                ha visto hasta ahora.
+                            </p>
+                            <p>
+                                Hemos hablado de objetos normales y objetos que se pueden encender/apagar, pero en una
+                                aventura podemos encontrar otro tipo de objetos, como objetos que se pueden llevar
+                                puestos (una chaqueta, un sombrero), objetos que pueden contener a otros (un baÃºl, una
+                                petaca), etc. Para crear este tipo de objetos podemos jugar, como en el caso de la
+                                antorcha, con valores especiales del campo localizacion y con varios objetos para
+                                distintos estados de un mismo objeto (antorcha encendida/apagada, baÃºl abierto/cerrado,
+                                etc.). Se deja como ejercicio al lector implementar este tipo de objetos
+                            </p>
+                            <p>
+                                <b>Una curiosidad - violaciÃ³n de segmento</b>
+                            </p>
+                            <p>
+                                Por Ãºltimo, una curiosidad que el autor de este texto ha podido comprobar mientras
+                                realizaba este tutorial; el tema de las violaciones de segmento, con respecto a las
+                                cadenas. Por lo que se ha visto hasta ahora, no parece producirse una violaciÃ³n de
+                                segmento en ejecuciÃ³n si hay algÃºn problema de memoria con punteros que se nos escape;
+                                simplemente se mostrarÃ¡n caracteres extraÃ±os por pantalla... ademÃ¡s, Â¿cÃ³mo serÃ­a una
+                                violaciÃ³n de segmento en un Spectrum? Â¿Similar a un RANDOMIZE USR 0?
+                            </p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
 
-</p>
-<ul>
-    <li><a href="src/fuentes.tar.gz" onClick="window.open(this.href); return false;">Archivos fuente del ejemplo propuesto (fuentes.tar.gz)</a></li>
-</ul>
-</div>
+                                </p>
+                                <ul>
+                                    <li><a href="src/fuentes.tar.gz" onClick="window.open(this.href); return false;">Archivos
+                                        fuente del ejemplo propuesto (fuentes.tar.gz)</a></li>
+                                </ul>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>SIEW</td>
+                </tr>
+            </table>
         </td>
     </tr>
     <tr>
-        <td align="right"><br><br>SIEW</td>
+        <td>Â </td>
     </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
 
-</table>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="input.html">INPUT</option>
 
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="input.html">INPUT</option>
-
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
-                </tr>
-
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('ensamblador.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
             </table>
-
-    </body>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

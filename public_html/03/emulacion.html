@@ -1,675 +1,699 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="emulacion.html" selected>Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 3 - Septiembre 2003</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p align="center"><font size="5">Introducción a la Emulación (y II)</font></p>
-<p>
-<i>Ahora que ya sabemos qué es y cómo funciona un emulador
-profundizaremos en los emuladores de Spectrum, en una visión
-global de los diferentes emuladores disponibles y la gran
-variedad de sistemas operativos en que corren.</i>
-
-</p>
-<p>
- Este mes nos centraremos en los distintos emuladores de Spectrum (al
-menos los más conocidos) para las diferentes arquitecturas mayoritarias.
-El objetivo es dar al lector que se introduce en el mundo de la
-emulación no sólo una lista de emuladores, sino también una guía de
-qué emulador puede elegir con respecto a sus necesidades. No todos los
-emuladores soportan los mismos formatos, y muchos de ellos están
-especialmente diseñados para cubrir carencias que otros tienen.
-Un ejemplo de esto sería el emulador Z80, que no es uno de los
-mejores actualmente, pero que sin embargo es de los pocos que nos
-van a permitir emular un Spectrum con mucha fidelidad en máquinas 486
-(suponiendo que decidiéramos destinar uno de estos PCs antiguos a
-máquina-emuladora o sistema para correr juegos abandonware).
-</p>
-<p>
-<b>Los emuladores</b>
-</p>
-<p>
- Lo primero que tenemos que hacer para trabajar con emuladores es
-seleccionar aquel más adecuado a la arquitectura que usamos. Desde PCs
-con Linux hasta ordenadores Amiga, pasando por consolas Playstation,
-tenemos una enorme gama de emuladores disponibles.
-</p>
-<p>
- En la sección de emuladores de World Of Spectrum podremos descargar
-todos ellos. Pero... ¿cómo saber cuál es el emulador más adecuado para
-nosotros? Veamos un rápido comentario de algunos uno de ellos.
-</p>
-
-<p>
-<b>MS-DOS:</b>
-</p>
-<ul>
-<li>
-<p>
-<b>Z80 (Gerton Lunter)</b>: uno de los primeros emuladores de Spectrum.
-Es <i>shareware</i> (hay que pagar y registrarse para obtener la versión
-completa) y tenía en su época características que lo hacían muy
-competitivo, como correr los juegos de Spectrum correctamente en un
-486 a 33 Mhz. Existe una versión Windows llamada WinZ80 que también es
-<i>shareware</i>.
-</p>
-</li>
-<li>
-
-<p>
-<b>X128 (James McKay)</b>: Bajo MS-DOS, este era uno de los emuladores más
-utilizados en los primeros tiempos de la emulación de Spectrum en PC
-junto a Z80 y Spectrum. Soporta Sound Blaster y Adlib y tiene el código
-fuente disponible para la versión 0.5 (de forma que hay port de esa
-versión para Unix). Actualmente se acaba de retomar su desarrollo con
-una "tímida" actualización, aunque lamentablemente X128 sigue muy
-por detrás de otros emuladores que veremos posteriormente.
-</p>
-</li>
-<li>
-<p>
-<b>Warajevo (Zeljko Juric y Samir Ribic)</b>: desarrollado durante la
-guerra de Yugoslavia en Sarajevo, es un emulador muy completo que
-corre sobre MS-DOS. Pertenece a la misma línea temporal que los
-anteriores.
-</p>
-</li>
-<li>
-<p>
-<b>Spectrum (Pedro Gimeno)</b>: uno de los emuladores españoles más
-conocidos, desarrollado por Pedro Gimeno para la revista PCManía.
-Utiliza el formato de ficheros SP (snapshot) y emulaba el modelo de
-Spectrum 48K. Fue uno de los emuladores que más utilicé a título
-personal, de modo que no puedo desde aquí sino agradecerselo a su
-autor. Corre perfectamente en máquinas PC antiguas (como 486 y 386).
-</p>
-</li>
-
-<li>
-<p>
-<b>Spec256 (Íñigo Ayo y David Goti)</b>: La idea de los autores de este
-emulador (ya no tan antiguo como los anteriores) era de dotar de
-mayor colorido a los clásicos del Spectrum. Para ello programaron un
-emulador capaz de mostrar juegos empaquetados de una forma especial,
-en 256 colores. Para poder jugar en 256 colores era necesaria
-una modificación de los juegos (rediseñando y modificando los
-gráficos). Se pasaron a 256 colores una serie de juegos clásicos, pero
-posteriormente el proyecto no pareció avanzar más en este sentido, ya
-que requería trabajo por parte de gente que se dedicara a pasar los
-gráficos de los juegos a una versión de 256 colores. Este trabajo no
-sólo era gráfico, sino que requería encontrar y modificar los
-sprites originales en el juego.
-</p>
-<a name="figura1">
-<table border="0" cellspacing="0" cellpadding="2" width="256">
-	<tr align="right">
-		<td><img src="img/spec256-orig.gif" width="256" height="192"  alt="Versión original para Spectrum" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Versión original para Spectrum</td>
-
-	</tr>
-</table>
-
-</a>
-<a name="figura2">
-<table border="0" cellspacing="0" cellpadding="2" width="256">
-	<tr align="right">
-		<td><img src="img/spec256-256col.gif" width="256" height="192"  alt="Versión a 256 colores para Spec256" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Versión a 256 colores para Spec256</td>
-
-	</tr>
-</table>
-
-</a><br>
-</li>
-<li>
-<p>
-<b>R80 (Raúl Gómez)</b>: Otro emulador Español desarrollado por Raúl Gómez.
-Probablemente uno de los mejores para MS-DOS. Es limpio, tiene un buen
-sistema de menúes, emula casi a la perfección todos los juegos y la
-temporización de las instrucciones, y soporta casi todos los formatos de
-fichero existentes. R80 es un desarrollo de los últimos años, aunque
-parece estar parado por ocupación del autor.
-</p>
-<a name="figura3">
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/r80.gif" width="320" height="200"  alt="" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
-
-</a><br>
-</li>
-<li>
-<p>
-<b>RealSpectrum (RamSoft)</b>: Este emulador es probablemente el más
-usado para MS-DOS en la actualidad (junto a R80). El motivo radica
-en que RamSoft (los desarrolladores de RealSpectrum) dispone de
-información muy detallada sobre la ULA del Spectrum, lo cual le
-ha permitido emularla de una forma casi perfecta. Esto hace que
-muchos juegos y demos que no funcionaban en otros emuladores por
-motivos de temporización y por estar basados en trucos del Z80 no
-emulados, funcionen en RealSpectrum. Debido a esta compleja emulación,
-RealSpectrum requiere bastante potencia de procesador para funcionar
-al 100% (aproxidamente un Pentium 200 MMX o superior), mientras
-que algunos de los emuladores anteriores podían ejecutarse en 386
-y 486 a 33 ó 66 Mhz. Este emulador incorporaba además un sistema
-de grabación de eventos llamado AIR que permitía grabar todo lo
-que sucedía en el juego (como si fuera un vídeo) de forma que otra
-persona puede reproducir este fichero en su RealSpectrum visionando
-la partida completa jugada por el primero. Esto es muy útil para
-mostrar recorridos completos de juegos, trucos, obtención de altas
-puntuaciones, o para la realización de concursos. Actualmente este
-fichero de grabación de eventos (el .AIR) ha sido reemplazado por el
-.RZX, como se vio en el artículo de emulación de Magazine ZX nº 1.
-
-</p>
-</li>
-<li>
-<p>
-<b>Bacteria (Antonio José Villena Godoy)</b>: Un emulador muy curioso,
-escrito completamente en ensamblador y que ocupa apenas unos cuantos
-KiloBytes. Está limitado por su tamaño (en opciones, formatos
-soportados, etc.) pero merece ser nombrado por ser probablemente el
-emulador de Spectrum más pequeño existente.
-</p>
-</li>
-</ul>
-<p>
- Si hemos de elegir un emulador para MS-DOS, la elección deberá basarse
-en el tipo de máquina que poseamos. Para máquinas poco potentes, Z80,
-Spectrum o X128 (siendo el mejor de los tres el primero de ellos,
-seguido de X128, por cantidad de opciones). Para máquinas potentes,
-Realspectrum o r80 (cualquiera de los 2).
-</p>
-<p>
-<b>Windows</b>
-<ul>
-
-<li>
-<p>
-<b>ZX-32 (Vaggelis Kapartzianis)</b>: uno de los primeros emuladores
-para win32 (Windows95 y superior) que apareció. Bastante cómodo y
-sencillo de usar, aunque peca un poco de falta de opciones. Puede
-ser bueno para PCs antiguos (Pentium MMX), pero en cualquier otro
-tipo de procesador conviene utilizar cualquiera de los que veremos
-a continuación.
-</p>
-</li>
-<li>
-<p>
-<b>GLECK (Ignacio Burgueño)</b>: un emulador muy completo escrito por
-nuestro compañero Ignacio Burgueño. Lamentablemente su desarrollo
-está algo parado en el último año.
-</p>
-</li>
-<li>
-<p>
-<b>Es.pectrum (Javier Chocano)</b>: Completísimo emulador de Spectrum
-español, probablemente uno de los más sencillos de usar y configurar.
-Se instala a partir de un fichero ZIP y permite asociar (como la
-mayoría de los otros emuladores de Windows) las extensiones de
-ficheros típicos al emulador, de forma que al hacer doble click sobre
-ellos se abra el emulador con el Snapshot cargado en memoria, o con la
-cinta introducida y en modo de reproducción (aunque esta característica
-también la incorporan algunos de los otros emuladores para Windows).
-</p>
-
-<a name="figura4">
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/espectrum.gif" width="320" height="311"  alt="Es.pectrum (paradójicamente, corriendo en un emulador de Windows bajo Linux)." />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Es.pectrum (paradójicamente, corriendo en un emulador de Windows bajo Linux).</td>
-	</tr>
-</table>
-
-
-</a><br>
-</li>
-<li>
-<p>
-<b>Spectaculator (Jonathan Needle)</b>: Probablemente es el emulador que
-más desarrollo ha sufrido en este año. Incorpora gran cantidad de
-funciones, la emulación es muy fiel y es el precursor del futuro
-formato de fichero de snapshot .SZX como estándar de snapshot entre los
-diferentes emuladores. Funciona en todos los sistemas Windows desde
-W95, y emula todo tipo de dispositivos hardware de Spectrum. Permite,
-como Es.pectrum, grabar ficheros .RZX.
-</p>
-<a name="figura5">
-<table border="0" cellspacing="0" cellpadding="2" width="443">
-	<tr align="right">
-		<td><img src="img/spectaculator.gif" width="443" height="420"  alt="" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
-
-</a><br>
-</li>
-<li>
-<p>
-<b>SPIN (Paul Dunn, Mark Woodmass and Mark Boyd)</b>: en la línea de los
-demás emuladores de Windows: muy completo y con opciones que lo hacen
-especial, como la posibilidad de pasar texto desde el portapapeles al
-Spectrum tal y como si lo hubiéramos tecleado (incluso sabe pasarlo
-a modo 48K con las teclas y tokens adecuados). Tan recomendable como
-Es.pectrum o Spectaculator.
-</p>
-</li>
-<li>
-
-<p>
-<b>RealSpectrum (Windows) (Ramsoft)</b>: Versión Windows (DirectX)
-del emulador RealSpectrum (la versión DOS tenía problemas de sonido
-con ciertas tarjetas y no funcionaba correctamente bajo Windows 2000 y XP).
-</p>
-</li>
-</ul>
-<p>
- Realmente es muy complicado elegir un "mejor emulador" en esta
-plataforma. El consejo del autor es probar todos ellos y quedarnos con
-el que más se adapte a nuestros gustos de usabilidad y necesidades.
-Existen muchos otros no comentados, como Klive, que también cumplen
-sobradamente las funciones de emulación básicas. Probablemente
-Es.pectrum, SPIN y Spectaculator serán del agrado de la mayoría de
-los usuarios, por su sencillez y potencia.
-</p>
-<p>
-<b>UNIX/Linux</b>
-<ul>
-<li>
-<p>
-<b>XZX Pro (Erik Kunze)</b>: Este emulador fue uno de los primeros
-emuladores de Spectrum en plataforma UNIX. Es shareware y requiere de
-registro para poder utilizar todas sus opciones, de modo que no es de
-los más populares. Soporta gran cantidad de formatos y opciones, y la
-emulación es en general buena.
-
-</p>
-</li>
-<li>
-<p>
-<b>Aspectrum (Santiago Romero, Álvaro Alea, Metalbrain)</b>: Este emulador
-de Spectrum creado por el autor de este artículo en estrecha
-colaboración con Alvaro Alea y Metalbrain (amén de la propia ayuda de
-Philip Kendall -FUSE-, Raúl Gómez -r80- e Ignacio Burgueño -Gleck-
-entre otros) es un emulador de Spectrum multiplataforma (Linux y
-DOS/Windows, principalmente) que emula el Spectrum 48K. Soporta los
-diferentes formatos clásicos, emula el sonido, y fue el primero en
-emular la pistola Gunstick mediante el uso del ratón. Pese a sus
-características, no puede competir con los 2 emuladores que veremos
-a continuación.
-</p>
-<a name="figura6">
-<table border="0" cellspacing="0" cellpadding="2" width="321">
-	<tr align="right">
-		<td><img src="img/aspectrum.gif" width="321" height="200"  alt="" />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right"></td>
-	</tr>
-</table>
-
-</a><br>
-</li>
-<li>
-<p>
-<b>Glukalka (Dmitry Sanarin)</b>: este emulador ruso (que emula los modelos
-Pentagon y Scorpion, nacidos en ese país) es bastante completo pese a
-estar todavía en desarrollo. Soporta cintas y discos, permite aplicar
-filtros a la pantalla (para ver la imagen del Spectrum como en una
-TV), y tiene un debugger y un navegador de cintas avanzado.
-</p>
-</li>
-<li>
-<p>
-<b>FUSE (Philip Kendall)</b>: Sin duda el mejor emulador de Spectrum para
-plataformas UNIX, por varios motivos. El primero, estar escrito en
-puro C, siendo totalmente portable entre las diferentes plataformas
-(incluso se puede compilar en MS-DOS/Windows si se cambia el backend
-gráfico, como se ha hecho en PocketClive para PocketPC, que no es más que
-un port de FUSE). En segundo lugar, es libre (al igual que Aspectrum), es
-decir, podemos aportar cualquier modificación ya que disponemos
-del código fuente. Soporta todos los formatos de fichero clásicos
-(TAP,TZX,DSK,Z80...) y todos los modelos de Spectrum existentes
-(incluídos los rusos). Permite grabar y reproducir ficheros RZX, y
-apunta a convertirse en el emulador estándar de Spectrum para UNIX.
-
-</p>
-<a name="figura7">
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/fuse.gif" width="328" height="296"  alt="FUSE, the Free Unix Spectrum Emulator" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">FUSE, the Free Unix Spectrum Emulator</td>
-	</tr>
-
-</table>
-
-</a><br>
-</li>
-</ul>
-<p>
- Sin duda en plataformas UNIX, FUSE y Glukalka se muestran como los
-mejores emuladores, en ese orden.
-</p>
-<p>
-<b>Otras plataformas</b>
-</p>
-<p>
- No sólo de UNIX o Windows viven el hombre, de modo que también
-existen emuladores de Spectrum para las diferentes plataformas
-no mayoritarias (que siguen siendo felizmente usadas por muchos
-usuarios). A saber:
-</p>
-
-<p>
-<b>AMIGA</b>
-</p>
-<ul>
-<li>ZXAM (Toni Pomar)</li>
-<li>ZX-Live (Dmitriy Zhivilov)</li>
-<li>X128 (port por Paul Hill)</li>
-</ul>
-<p>
-<b>MACINTOSH</b>
-</p>
-<ul>
-
-<li>FUSE (Fredrick Meunier, port del emulador de Philip Kendall)</li>
-<li>ZXSP-Mac (Günter Woigk)</li>
-<li>MacSpectacle (Günter Woigk)</li>
-</ul>
-<p>
-<b>PALMOS, TEXAS, PSION y MÓVILES</b>
-</p>
-<ul>
-<li>MIZX, PALMSSEC y ZX-PILOT para PalmOS</li>
-<li>ZX Emul para Psion 3 (Freeman)</li>
-<li>Sinclair Spectrum Emulator para Psion 5 (Palmtop BV)</li>
-
-<li>ZX9200 para Nokia Comunicator 9210 (WildPalm)</li>
-<li>Tezxas (Samir Ribic) para Calculadora TI89 y TI92 plus</li>
-</ul>
-<a name="figura8">
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/zx-pilot.gif" width="320" height="320"  alt="ZX Pilot para PalmOS" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">ZX Pilot para PalmOS</td>
-
-	</tr>
-</table>
-
-</a><br>
-<a name="figura9">
-<table border="0" cellspacing="0" cellpadding="2" width="564">
-	<tr align="right">
-		<td><img src="img/tezxas2.jpg" width="564" height="321"  alt="Un Spectrum en tu calculadora Texas Instruments" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Un Spectrum en tu calculadora Texas Instruments</td>
-
-	</tr>
-</table>
-
-</a><br>
-<p>
-<b>DISPOSITIVOS CON WINDOWS CE</b>
-</p>
-<ul>
-<li>Sinclair Spectrum Emulator (Palmtop BV)
-<li>PocketClive (por Anders Holmberg, port del FUSE de Philip Kendall)
-</ul>
-<p>
-<b>CONSOLAS</b>
-</p>
-
-<li>Speculator (Gabriele Roncolato) para PSX</li>
-<li>Spectrum (Anthony Ball) para PSX</li>
-<li>DreamSpec (Bigboy) para Dreamcast y PS2</li>
-<li>ZXAdvance (The Hive) y FooN (Ben Stragnell) para GBA</li>
-<li>GPSpeccy, Speccyal'K y ZXGP32 para GP32.</li>
-</ul>
-<p>
-<b>OTROS</b>
-</p>
-<ul>
-<li>BeZX (port de ZXZ) y Beccy para BEOS.</li>
-
-<li>ZX Spectrum Emulator (Christian Gandler) para Atari.</li>
-<li>ZExcel: Emulador de Spectrum para el propio Sinclair QL</li>
-</ul>
-<a name="figura10">
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/zexcel-ql.gif" width="640" height="480"  alt="Emulador de Spectrum para Sinclair QL" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Emulador de Spectrum para Sinclair QL</td>
-
-	</tr>
-</table>
-
-</a><br>
-<p>
-<b>Emuladores en Java</b>
-</p>
-<p>
- Hemos dejado para el final los emuladores realizados en Java por la
-relativa importancia que tienen. En principio Java no es la plataforma
-ideal para desarrollar juegos y emuladores por diferentes razones
-técnicas, pero su portabilidad hace que disponer de emuladores en
-Java los ponga al alcance de cualquier tipo de dispositivos capaz
-de correr una máquina virtual de Java: desde móviles hasta PDAs,
-podremos jugar a nuestro Spectrum en cualquier lugar. Incluso algunas
-páginas incorporan un applet Java para jugar vía Web (sin instalar
-un emulador) los juegos de Spectrum que nos podemos descargar. Los
-emuladores existentes en este área son:
-<ul>
-<li>Hob (Nigel Barford)</li>
-<li>Jasper (Adam Davidson y Andrew Pollard)</li>
-
-<li>Spectrum Emulator For Java</li>
-<li>JZ Speccy (Marzio De Biasi)</li>
-<li>ZZ Spectrum (Troels Nørgaard)</li>
-<li>JZX (Razvan Surdulescu)</li>
-</ul>
-<a name="figura11">
-<table border="0" cellspacing="0" cellpadding="2" width="656">
-	<tr align="right">
-		<td><img src="img/jasper.gif" width="656" height="635"  alt="Jasper: emulando el Spectrum en una página Web" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right">Jasper: emulando el Spectrum en una página Web</td>
-	</tr>
-</table>
-
-</a><br>
-</p>
-<p>
-<b>Resumen</b>
-</p>
-<p>
- Como hemos visto, existen gran cantidad de emuladores para una
-extensa selección de arquitecturas que seguramente cubrirán todas
-nuestras necesidades. Por otra parte, la existencia de emuladores
-portables en C y en Java asegura la disponibilidad del código fuente
-de los mismos para llevarlos a otras plataformas (como se ha hecho con
-FUSE de Philip Kendall).
-
-</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-	<li>Descarga todos los emuladores en: <a href="http://www.worldofspectrum.org/emulators.html" onClick="window.open(this.href); return false;">http://www.worldofspectrum.org/emulators.html</a></li>
-	<li>Juega a juegos de Spectrum online con un navegador con Java: <a href="http://www.spectrum.lovely.net/" onClick="window.open(this.href); return false;">http://www.spectrum.lovely.net/</a></li>
-</ul>
-</div>
-
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br>SROMERO (NoP)</td>
-	</tr>
-</table>
-                    </td>
-                </tr>
-
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="hardware.html">Hardware</option>
-
-        <option value="emulacion.html" selected>Emulación</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-                    </td>
+<head>
+    <title>EmulaciÃ³n - Magazine ZX nÃºmero 3 - Septiembre 2003</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-    </body>
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="emulacion.html" selected>EmulaciÃ³n</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 3 - Septiembre 2003</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="5">IntroducciÃ³n a la EmulaciÃ³n (y II)</font></p>
+                            <p>
+                                <i>Ahora que ya sabemos quÃ© es y cÃ³mo funciona un emulador
+                                    profundizaremos en los emuladores de Spectrum, en una visiÃ³n
+                                    global de los diferentes emuladores disponibles y la gran
+                                    variedad de sistemas operativos en que corren.</i>
+
+                            </p>
+                            <p>
+                                Este mes nos centraremos en los distintos emuladores de Spectrum (al
+                                menos los mÃ¡s conocidos) para las diferentes arquitecturas mayoritarias.
+                                El objetivo es dar al lector que se introduce en el mundo de la
+                                emulaciÃ³n no sÃ³lo una lista de emuladores, sino tambiÃ©n una guÃ­a de
+                                quÃ© emulador puede elegir con respecto a sus necesidades. No todos los
+                                emuladores soportan los mismos formatos, y muchos de ellos estÃ¡n
+                                especialmente diseÃ±ados para cubrir carencias que otros tienen.
+                                Un ejemplo de esto serÃ­a el emulador Z80, que no es uno de los
+                                mejores actualmente, pero que sin embargo es de los pocos que nos
+                                van a permitir emular un Spectrum con mucha fidelidad en mÃ¡quinas 486
+                                (suponiendo que decidiÃ©ramos destinar uno de estos PCs antiguos a
+                                mÃ¡quina-emuladora o sistema para correr juegos abandonware).
+                            </p>
+                            <p>
+                                <b>Los emuladores</b>
+                            </p>
+                            <p>
+                                Lo primero que tenemos que hacer para trabajar con emuladores es
+                                seleccionar aquel mÃ¡s adecuado a la arquitectura que usamos. Desde PCs
+                                con Linux hasta ordenadores Amiga, pasando por consolas Playstation,
+                                tenemos una enorme gama de emuladores disponibles.
+                            </p>
+                            <p>
+                                En la secciÃ³n de emuladores de World Of Spectrum podremos descargar
+                                todos ellos. Pero... Â¿cÃ³mo saber cuÃ¡l es el emulador mÃ¡s adecuado para
+                                nosotros? Veamos un rÃ¡pido comentario de algunos uno de ellos.
+                            </p>
+
+                            <p>
+                                <b>MS-DOS:</b>
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <b>Z80 (Gerton Lunter)</b>: uno de los primeros emuladores de Spectrum.
+                                        Es <i>shareware</i> (hay que pagar y registrarse para obtener la versiÃ³n
+                                        completa) y tenÃ­a en su Ã©poca caracterÃ­sticas que lo hacÃ­an muy
+                                        competitivo, como correr los juegos de Spectrum correctamente en un
+                                        486 a 33 Mhz. Existe una versiÃ³n Windows llamada WinZ80 que tambiÃ©n es
+                                        <i>shareware</i>.
+                                    </p>
+                                </li>
+                                <li>
+
+                                    <p>
+                                        <b>X128 (James McKay)</b>: Bajo MS-DOS, este era uno de los emuladores mÃ¡s
+                                        utilizados en los primeros tiempos de la emulaciÃ³n de Spectrum en PC
+                                        junto a Z80 y Spectrum. Soporta Sound Blaster y Adlib y tiene el cÃ³digo
+                                        fuente disponible para la versiÃ³n 0.5 (de forma que hay port de esa
+                                        versiÃ³n para Unix). Actualmente se acaba de retomar su desarrollo con
+                                        una "tÃ­mida" actualizaciÃ³n, aunque lamentablemente X128 sigue muy
+                                        por detrÃ¡s de otros emuladores que veremos posteriormente.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Warajevo (Zeljko Juric y Samir Ribic)</b>: desarrollado durante la
+                                        guerra de Yugoslavia en Sarajevo, es un emulador muy completo que
+                                        corre sobre MS-DOS. Pertenece a la misma lÃ­nea temporal que los
+                                        anteriores.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Spectrum (Pedro Gimeno)</b>: uno de los emuladores espaÃ±oles mÃ¡s
+                                        conocidos, desarrollado por Pedro Gimeno para la revista PCManÃ­a.
+                                        Utiliza el formato de ficheros SP (snapshot) y emulaba el modelo de
+                                        Spectrum 48K. Fue uno de los emuladores que mÃ¡s utilicÃ© a tÃ­tulo
+                                        personal, de modo que no puedo desde aquÃ­ sino agradecerselo a su
+                                        autor. Corre perfectamente en mÃ¡quinas PC antiguas (como 486 y 386).
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <p>
+                                        <b>Spec256 (ÃÃ±igo Ayo y David Goti)</b>: La idea de los autores de este
+                                        emulador (ya no tan antiguo como los anteriores) era de dotar de
+                                        mayor colorido a los clÃ¡sicos del Spectrum. Para ello programaron un
+                                        emulador capaz de mostrar juegos empaquetados de una forma especial,
+                                        en 256 colores. Para poder jugar en 256 colores era necesaria
+                                        una modificaciÃ³n de los juegos (rediseÃ±ando y modificando los
+                                        grÃ¡ficos). Se pasaron a 256 colores una serie de juegos clÃ¡sicos, pero
+                                        posteriormente el proyecto no pareciÃ³ avanzar mÃ¡s en este sentido, ya
+                                        que requerÃ­a trabajo por parte de gente que se dedicara a pasar los
+                                        grÃ¡ficos de los juegos a una versiÃ³n de 256 colores. Este trabajo no
+                                        sÃ³lo era grÃ¡fico, sino que requerÃ­a encontrar y modificar los
+                                        sprites originales en el juego.
+                                    </p>
+                                    <a name="figura1">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="256">
+                                            <tr align="right">
+                                                <td><img src="img/spec256-orig.gif" width="256" height="192"
+                                                         alt="VersiÃ³n original para Spectrum"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">VersiÃ³n original para Spectrum</td>
+
+                                            </tr>
+                                        </table>
+
+                                    </a>
+                                    <a name="figura2">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="256">
+                                            <tr align="right">
+                                                <td><img src="img/spec256-256col.gif" width="256" height="192"
+                                                         alt="VersiÃ³n a 256 colores para Spec256"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">VersiÃ³n a 256 colores para Spec256
+                                                </td>
+
+                                            </tr>
+                                        </table>
+
+                                    </a><br>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>R80 (RaÃºl GÃ³mez)</b>: Otro emulador EspaÃ±ol desarrollado por RaÃºl GÃ³mez.
+                                        Probablemente uno de los mejores para MS-DOS. Es limpio, tiene un buen
+                                        sistema de menÃºes, emula casi a la perfecciÃ³n todos los juegos y la
+                                        temporizaciÃ³n de las instrucciones, y soporta casi todos los formatos de
+                                        fichero existentes. R80 es un desarrollo de los Ãºltimos aÃ±os, aunque
+                                        parece estar parado por ocupaciÃ³n del autor.
+                                    </p>
+                                    <a name="figura3">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                            <tr align="right">
+                                                <td><img src="img/r80.gif" width="320" height="200" alt=""/>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right"></td>
+                                            </tr>
+                                        </table>
+
+                                    </a><br>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>RealSpectrum (RamSoft)</b>: Este emulador es probablemente el mÃ¡s
+                                        usado para MS-DOS en la actualidad (junto a R80). El motivo radica
+                                        en que RamSoft (los desarrolladores de RealSpectrum) dispone de
+                                        informaciÃ³n muy detallada sobre la ULA del Spectrum, lo cual le
+                                        ha permitido emularla de una forma casi perfecta. Esto hace que
+                                        muchos juegos y demos que no funcionaban en otros emuladores por
+                                        motivos de temporizaciÃ³n y por estar basados en trucos del Z80 no
+                                        emulados, funcionen en RealSpectrum. Debido a esta compleja emulaciÃ³n,
+                                        RealSpectrum requiere bastante potencia de procesador para funcionar
+                                        al 100% (aproxidamente un Pentium 200 MMX o superior), mientras
+                                        que algunos de los emuladores anteriores podÃ­an ejecutarse en 386
+                                        y 486 a 33 Ã³ 66 Mhz. Este emulador incorporaba ademÃ¡s un sistema
+                                        de grabaciÃ³n de eventos llamado AIR que permitÃ­a grabar todo lo
+                                        que sucedÃ­a en el juego (como si fuera un vÃ­deo) de forma que otra
+                                        persona puede reproducir este fichero en su RealSpectrum visionando
+                                        la partida completa jugada por el primero. Esto es muy Ãºtil para
+                                        mostrar recorridos completos de juegos, trucos, obtenciÃ³n de altas
+                                        puntuaciones, o para la realizaciÃ³n de concursos. Actualmente este
+                                        fichero de grabaciÃ³n de eventos (el .AIR) ha sido reemplazado por el
+                                        .RZX, como se vio en el artÃ­culo de emulaciÃ³n de Magazine ZX nÂº 1.
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Bacteria (Antonio JosÃ© Villena Godoy)</b>: Un emulador muy curioso,
+                                        escrito completamente en ensamblador y que ocupa apenas unos cuantos
+                                        KiloBytes. EstÃ¡ limitado por su tamaÃ±o (en opciones, formatos
+                                        soportados, etc.) pero merece ser nombrado por ser probablemente el
+                                        emulador de Spectrum mÃ¡s pequeÃ±o existente.
+                                    </p>
+                                </li>
+                            </ul>
+                            <p>
+                                Si hemos de elegir un emulador para MS-DOS, la elecciÃ³n deberÃ¡ basarse
+                                en el tipo de mÃ¡quina que poseamos. Para mÃ¡quinas poco potentes, Z80,
+                                Spectrum o X128 (siendo el mejor de los tres el primero de ellos,
+                                seguido de X128, por cantidad de opciones). Para mÃ¡quinas potentes,
+                                Realspectrum o r80 (cualquiera de los 2).
+                            </p>
+                            <p>
+                                <b>Windows</b>
+                            <ul>
+
+                                <li>
+                                    <p>
+                                        <b>ZX-32 (Vaggelis Kapartzianis)</b>: uno de los primeros emuladores
+                                        para win32 (Windows95 y superior) que apareciÃ³. Bastante cÃ³modo y
+                                        sencillo de usar, aunque peca un poco de falta de opciones. Puede
+                                        ser bueno para PCs antiguos (Pentium MMX), pero en cualquier otro
+                                        tipo de procesador conviene utilizar cualquiera de los que veremos
+                                        a continuaciÃ³n.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>GLECK (Ignacio BurgueÃ±o)</b>: un emulador muy completo escrito por
+                                        nuestro compaÃ±ero Ignacio BurgueÃ±o. Lamentablemente su desarrollo
+                                        estÃ¡ algo parado en el Ãºltimo aÃ±o.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Es.pectrum (Javier Chocano)</b>: CompletÃ­simo emulador de Spectrum
+                                        espaÃ±ol, probablemente uno de los mÃ¡s sencillos de usar y configurar.
+                                        Se instala a partir de un fichero ZIP y permite asociar (como la
+                                        mayorÃ­a de los otros emuladores de Windows) las extensiones de
+                                        ficheros tÃ­picos al emulador, de forma que al hacer doble click sobre
+                                        ellos se abra el emulador con el Snapshot cargado en memoria, o con la
+                                        cinta introducida y en modo de reproducciÃ³n (aunque esta caracterÃ­stica
+                                        tambiÃ©n la incorporan algunos de los otros emuladores para Windows).
+                                    </p>
+
+                                    <a name="figura4">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                            <tr align="right">
+                                                <td><img src="img/espectrum.gif" width="320" height="311"
+                                                         alt="Es.pectrum (paradÃ³jicamente, corriendo en un emulador de Windows bajo Linux)."/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">Es.pectrum (paradÃ³jicamente, corriendo
+                                                    en un emulador de Windows bajo Linux).
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                    </a><br>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Spectaculator (Jonathan Needle)</b>: Probablemente es el emulador que
+                                        mÃ¡s desarrollo ha sufrido en este aÃ±o. Incorpora gran cantidad de
+                                        funciones, la emulaciÃ³n es muy fiel y es el precursor del futuro
+                                        formato de fichero de snapshot .SZX como estÃ¡ndar de snapshot entre los
+                                        diferentes emuladores. Funciona en todos los sistemas Windows desde
+                                        W95, y emula todo tipo de dispositivos hardware de Spectrum. Permite,
+                                        como Es.pectrum, grabar ficheros .RZX.
+                                    </p>
+                                    <a name="figura5">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="443">
+                                            <tr align="right">
+                                                <td><img src="img/spectaculator.gif" width="443" height="420" alt=""/>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="piefoto" align="right"></td>
+                                            </tr>
+                                        </table>
+
+                                    </a><br>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>SPIN (Paul Dunn, Mark Woodmass and Mark Boyd)</b>: en la lÃ­nea de los
+                                        demÃ¡s emuladores de Windows: muy completo y con opciones que lo hacen
+                                        especial, como la posibilidad de pasar texto desde el portapapeles al
+                                        Spectrum tal y como si lo hubiÃ©ramos tecleado (incluso sabe pasarlo
+                                        a modo 48K con las teclas y tokens adecuados). Tan recomendable como
+                                        Es.pectrum o Spectaculator.
+                                    </p>
+                                </li>
+                                <li>
+
+                                    <p>
+                                        <b>RealSpectrum (Windows) (Ramsoft)</b>: VersiÃ³n Windows (DirectX)
+                                        del emulador RealSpectrum (la versiÃ³n DOS tenÃ­a problemas de sonido
+                                        con ciertas tarjetas y no funcionaba correctamente bajo Windows 2000 y XP).
+                                    </p>
+                                </li>
+                            </ul>
+                            <p>
+                                Realmente es muy complicado elegir un "mejor emulador" en esta
+                                plataforma. El consejo del autor es probar todos ellos y quedarnos con
+                                el que mÃ¡s se adapte a nuestros gustos de usabilidad y necesidades.
+                                Existen muchos otros no comentados, como Klive, que tambiÃ©n cumplen
+                                sobradamente las funciones de emulaciÃ³n bÃ¡sicas. Probablemente
+                                Es.pectrum, SPIN y Spectaculator serÃ¡n del agrado de la mayorÃ­a de
+                                los usuarios, por su sencillez y potencia.
+                            </p>
+                            <p>
+                                <b>UNIX/Linux</b>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <b>XZX Pro (Erik Kunze)</b>: Este emulador fue uno de los primeros
+                                        emuladores de Spectrum en plataforma UNIX. Es shareware y requiere de
+                                        registro para poder utilizar todas sus opciones, de modo que no es de
+                                        los mÃ¡s populares. Soporta gran cantidad de formatos y opciones, y la
+                                        emulaciÃ³n es en general buena.
+
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Aspectrum (Santiago Romero, Ãlvaro Alea, Metalbrain)</b>: Este emulador
+                                        de Spectrum creado por el autor de este artÃ­culo en estrecha
+                                        colaboraciÃ³n con Alvaro Alea y Metalbrain (amÃ©n de la propia ayuda de
+                                        Philip Kendall -FUSE-, RaÃºl GÃ³mez -r80- e Ignacio BurgueÃ±o -Gleck-
+                                        entre otros) es un emulador de Spectrum multiplataforma (Linux y
+                                        DOS/Windows, principalmente) que emula el Spectrum 48K. Soporta los
+                                        diferentes formatos clÃ¡sicos, emula el sonido, y fue el primero en
+                                        emular la pistola Gunstick mediante el uso del ratÃ³n. Pese a sus
+                                        caracterÃ­sticas, no puede competir con los 2 emuladores que veremos
+                                        a continuaciÃ³n.
+                                    </p>
+                                    <a name="figura6">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="321">
+                                            <tr align="right">
+                                                <td><img src="img/aspectrum.gif" width="321" height="200" alt=""/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="piefoto" align="right"></td>
+                                            </tr>
+                                        </table>
+
+                                    </a><br>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Glukalka (Dmitry Sanarin)</b>: este emulador ruso (que emula los modelos
+                                        Pentagon y Scorpion, nacidos en ese paÃ­s) es bastante completo pese a
+                                        estar todavÃ­a en desarrollo. Soporta cintas y discos, permite aplicar
+                                        filtros a la pantalla (para ver la imagen del Spectrum como en una
+                                        TV), y tiene un debugger y un navegador de cintas avanzado.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>FUSE (Philip Kendall)</b>: Sin duda el mejor emulador de Spectrum para
+                                        plataformas UNIX, por varios motivos. El primero, estar escrito en
+                                        puro C, siendo totalmente portable entre las diferentes plataformas
+                                        (incluso se puede compilar en MS-DOS/Windows si se cambia el backend
+                                        grÃ¡fico, como se ha hecho en PocketClive para PocketPC, que no es mÃ¡s que
+                                        un port de FUSE). En segundo lugar, es libre (al igual que Aspectrum), es
+                                        decir, podemos aportar cualquier modificaciÃ³n ya que disponemos
+                                        del cÃ³digo fuente. Soporta todos los formatos de fichero clÃ¡sicos
+                                        (TAP,TZX,DSK,Z80...) y todos los modelos de Spectrum existentes
+                                        (incluÃ­dos los rusos). Permite grabar y reproducir ficheros RZX, y
+                                        apunta a convertirse en el emulador estÃ¡ndar de Spectrum para UNIX.
+
+                                    </p>
+                                    <a name="figura7">
+                                        <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                            <tr align="right">
+                                                <td><img src="img/fuse.gif" width="328" height="296"
+                                                         alt="FUSE, the Free Unix Spectrum Emulator"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="piefoto" align="right">FUSE, the Free Unix Spectrum
+                                                    Emulator
+                                                </td>
+                                            </tr>
+
+                                        </table>
+
+                                    </a><br>
+                                </li>
+                            </ul>
+                            <p>
+                                Sin duda en plataformas UNIX, FUSE y Glukalka se muestran como los
+                                mejores emuladores, en ese orden.
+                            </p>
+                            <p>
+                                <b>Otras plataformas</b>
+                            </p>
+                            <p>
+                                No sÃ³lo de UNIX o Windows viven el hombre, de modo que tambiÃ©n
+                                existen emuladores de Spectrum para las diferentes plataformas
+                                no mayoritarias (que siguen siendo felizmente usadas por muchos
+                                usuarios). A saber:
+                            </p>
+
+                            <p>
+                                <b>AMIGA</b>
+                            </p>
+                            <ul>
+                                <li>ZXAM (Toni Pomar)</li>
+                                <li>ZX-Live (Dmitriy Zhivilov)</li>
+                                <li>X128 (port por Paul Hill)</li>
+                            </ul>
+                            <p>
+                                <b>MACINTOSH</b>
+                            </p>
+                            <ul>
+
+                                <li>FUSE (Fredrick Meunier, port del emulador de Philip Kendall)</li>
+                                <li>ZXSP-Mac (GÃ¼nter Woigk)</li>
+                                <li>MacSpectacle (GÃ¼nter Woigk)</li>
+                            </ul>
+                            <p>
+                                <b>PALMOS, TEXAS, PSION y MÃ“VILES</b>
+                            </p>
+                            <ul>
+                                <li>MIZX, PALMSSEC y ZX-PILOT para PalmOS</li>
+                                <li>ZX Emul para Psion 3 (Freeman)</li>
+                                <li>Sinclair Spectrum Emulator para Psion 5 (Palmtop BV)</li>
+
+                                <li>ZX9200 para Nokia Comunicator 9210 (WildPalm)</li>
+                                <li>Tezxas (Samir Ribic) para Calculadora TI89 y TI92 plus</li>
+                            </ul>
+                            <a name="figura8">
+                                <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                    <tr align="right">
+                                        <td><img src="img/zx-pilot.gif" width="320" height="320"
+                                                 alt="ZX Pilot para PalmOS"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">ZX Pilot para PalmOS</td>
+
+                                    </tr>
+                                </table>
+
+                            </a><br>
+                            <a name="figura9">
+                                <table border="0" cellspacing="0" cellpadding="2" width="564">
+                                    <tr align="right">
+                                        <td><img src="img/tezxas2.jpg" width="564" height="321"
+                                                 alt="Un Spectrum en tu calculadora Texas Instruments"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Un Spectrum en tu calculadora Texas
+                                            Instruments
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+                            </a><br>
+                            <p>
+                                <b>DISPOSITIVOS CON WINDOWS CE</b>
+                            </p>
+                            <ul>
+                                <li>Sinclair Spectrum Emulator (Palmtop BV)
+                                <li>PocketClive (por Anders Holmberg, port del FUSE de Philip Kendall)
+                            </ul>
+                            <p>
+                                <b>CONSOLAS</b>
+                            </p>
+
+                            <li>Speculator (Gabriele Roncolato) para PSX</li>
+                            <li>Spectrum (Anthony Ball) para PSX</li>
+                            <li>DreamSpec (Bigboy) para Dreamcast y PS2</li>
+                            <li>ZXAdvance (The Hive) y FooN (Ben Stragnell) para GBA</li>
+                            <li>GPSpeccy, Speccyal'K y ZXGP32 para GP32.</li>
+                            </ul>
+                            <p>
+                                <b>OTROS</b>
+                            </p>
+                            <ul>
+                                <li>BeZX (port de ZXZ) y Beccy para BEOS.</li>
+
+                                <li>ZX Spectrum Emulator (Christian Gandler) para Atari.</li>
+                                <li>ZExcel: Emulador de Spectrum para el propio Sinclair QL</li>
+                            </ul>
+                            <a name="figura10">
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/zexcel-ql.gif" width="640" height="480"
+                                                 alt="Emulador de Spectrum para Sinclair QL"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Emulador de Spectrum para Sinclair QL</td>
+
+                                    </tr>
+                                </table>
+
+                            </a><br>
+                            <p>
+                                <b>Emuladores en Java</b>
+                            </p>
+                            <p>
+                                Hemos dejado para el final los emuladores realizados en Java por la
+                                relativa importancia que tienen. En principio Java no es la plataforma
+                                ideal para desarrollar juegos y emuladores por diferentes razones
+                                tÃ©cnicas, pero su portabilidad hace que disponer de emuladores en
+                                Java los ponga al alcance de cualquier tipo de dispositivos capaz
+                                de correr una mÃ¡quina virtual de Java: desde mÃ³viles hasta PDAs,
+                                podremos jugar a nuestro Spectrum en cualquier lugar. Incluso algunas
+                                pÃ¡ginas incorporan un applet Java para jugar vÃ­a Web (sin instalar
+                                un emulador) los juegos de Spectrum que nos podemos descargar. Los
+                                emuladores existentes en este Ã¡rea son:
+                            <ul>
+                                <li>Hob (Nigel Barford)</li>
+                                <li>Jasper (Adam Davidson y Andrew Pollard)</li>
+
+                                <li>Spectrum Emulator For Java</li>
+                                <li>JZ Speccy (Marzio De Biasi)</li>
+                                <li>ZZ Spectrum (Troels NÃ¸rgaard)</li>
+                                <li>JZX (Razvan Surdulescu)</li>
+                            </ul>
+                            <a name="figura11">
+                                <table border="0" cellspacing="0" cellpadding="2" width="656">
+                                    <tr align="right">
+                                        <td><img src="img/jasper.gif" width="656" height="635"
+                                                 alt="Jasper: emulando el Spectrum en una pÃ¡gina Web"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="piefoto" align="right">Jasper: emulando el Spectrum en una pÃ¡gina
+                                            Web
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a><br>
+                            </p>
+                            <p>
+                                <b>Resumen</b>
+                            </p>
+                            <p>
+                                Como hemos visto, existen gran cantidad de emuladores para una
+                                extensa selecciÃ³n de arquitecturas que seguramente cubrirÃ¡n todas
+                                nuestras necesidades. Por otra parte, la existencia de emuladores
+                                portables en C y en Java asegura la disponibilidad del cÃ³digo fuente
+                                de los mismos para llevarlos a otras plataformas (como se ha hecho con
+                                FUSE de Philip Kendall).
+
+                            </p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+                                <ul>
+                                    <li>Descarga todos los emuladores en: <a
+                                            href="http://www.worldofspectrum.org/emulators.html"
+                                            onClick="window.open(this.href); return false;">http://www.worldofspectrum.org/emulators.html</a>
+                                    </li>
+                                    <li>Juega a juegos de Spectrum online con un navegador con Java: <a
+                                            href="http://www.spectrum.lovely.net/"
+                                            onClick="window.open(this.href); return false;">http://www.spectrum.lovely.net/</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br>SROMERO (NoP)</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="hardware.html">Hardware</option>
+
+                                <option value="emulacion.html" selected>EmulaciÃ³n</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="la-historia-del-spectrum.html">La historia del Spectrum</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

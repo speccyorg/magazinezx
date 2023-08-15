@@ -1,256 +1,308 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<head>
+    <title>Hardware - Magazine ZX nÃºmero 15 - Marzo 2007</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
+                                <option value="hardware.html" selected>Hardware</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 15 - Marzo 2007</td>
 
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
 
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
                 <tr>
                     <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
+                        <div align="justify">
+                            <p align="center"><font size="4">SALIDA DE VÃDEO COMPUESTO EN UN SPECTRUM 48K</font></p>
+                            <p>Como todos sabÃ©is, la calidad de la seÃ±al de vÃ­deo RF que ofrecÃ­an los primeros Spectrum
+                                (lÃ©ase 16k y 48k) no estaba muy allÃ¡. Buceando por Internet encuentras pÃ¡ginas de gente
+                                maravillosa que intenta incorporar a aquellas mÃ¡quinas toda clase de "aparatos" o Ãºtiles
+                                que los mejore de alguna forma.</p>
+                            <p>Hoy os presentamos una de estas mejoras reseÃ±adas en la pÃ¡gina de los amigos de OCTOCOM y
+                                que pertenece a un monstruo de la electrÃ³nica, Sami Vehmaa. La aplicaciÃ³n se refiere a
+                                modificar la seÃ±al RF de un Spectrum e incorporarle seÃ±al RCA con lo que mejoraremos
+                                ostensiblemente la seÃ±al y podremos utilizar nuestro Spectrum en cualquiera de las
+                                televisiones actuales.</p>
+                            <p>Aclaremos, no obstante, que la prÃ¡ctica la vamos a realizar sobre un equipo que posee un
+                                teclado dk'tronics, objeto de este artÃ­culo. La diferencia entre este montaje y lo que
+                                realizÃ³ Sami Vehmaa estriba en que lo que hemos hecho ha sido proporcionar la nueva
+                                seÃ±al sin desmontar la antigua. Vamos a ello.</p>
+                            <p><b>Material necesario:</b></p>
+                            <ul>
 
+                                <li>Soldador y estaÃ±o.</li>
+                                <li>Pelacables (opcional).</li>
+                                <li>Transistor.</li>
+                                <li>Condensador.</li>
+                                <li>Resistencia (75ohm a 82ohm).</li>
+                                <li>Conector hembra RCA.</li>
+
+                                <li>Pletina de metal, arandelas y tornillo.</li>
+                            </ul>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                <tr align="right">
+                                    <td><img src="img/hard01.jpg" width="400" height="300"
+                                             alt="Imagen 1. Algunos componentes"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Imagen 1. Algunos componentes</td>
+
+                                </tr>
+                            </table>
+
+                            <p>La acotaciÃ³n que hacemos sobre la resistencia es debida a que en la pÃ¡gina de Sami indica
+                                la necesidad de una resistencia de 75 Ohm, aconsejada igualmente por JosÃ© Leandro
+                                NovellÃ³n, al que se le comentÃ³ la realizaciÃ³n de la prÃ¡ctica. En cambio, los amigos de
+                                Octocom se deciden por una de 82 Ohm. Nosotros para no ser menos, hemos tirado por el
+                                camino de en medio y hemos utilizado lo que tenÃ­amos mÃ¡s a mano, soldando dos
+                                resistencias que dan un total de 78 Ohm.</p>
+                            <p><b>La prÃ¡ctica</b></p>
+                            <p>Tal y como indican los amigos de Octocom en su pÃ¡gina deberemos reconocer primeramente la
+                                ubicaciÃ³n del modulador y los datos que nos ofrece; para ello exponemos aquÃ­ dos
+                                instantÃ¡neas sacadas de su web. Una es el esquema del montaje y la otra los puntos donde
+                                van a realizar la modificaciÃ³n, una vez retirado el modulador.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                <tr align="right">
+                                    <td><img src="img/hard02.jpg" width="400" height="250"
+                                             alt="Imagen 2. Vaciado del modulador"/>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Imagen 2. Vaciado del modulador</td>
+                                </tr>
+                            </table>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="271">
+                                <tr align="right">
+                                    <td><img src="img/hard03.gif" width="271" height="198"
+                                             alt="Imagen 3. Esquema de la prÃ¡ctica"/>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Imagen 3. Esquema de la prÃ¡ctica</td>
+                                </tr>
+                            </table>
+
+                            <p>Tomaremos buena nota de los cuatro puntos a tener en cuenta pero no quitaremos nada,
+                                aprovechando la ventaja de estar trabajando en un espacio mÃ¡s amplio que el que
+                                proporciona el teclado del 48k.</p>
+                            <p>Si seguimos el esquema veremos que la resistencia debe soldarse a masa, la cual
+                                encontraremos fÃ¡cilmente en la misma caja del modulador (punto 2, esquema en interior
+                                caja). O si por el contrario se nos resiste o no necesitamos abrir el modulador, como es
+                                nuestro caso, buscaremos en una de las pistas prÃ³ximas a Ã©ste, comprobÃ¡ndola
+                                previamente. El otro extremo lo soldaremos al condensador.</p>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                <tr align="right">
+                                    <td><img src="img/hard04.jpg" width="400" height="300"
+                                             alt="Imagen 4. Prueba de funcionamiento"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Imagen 4. Prueba de funcionamiento</td>
+                                </tr>
+                            </table>
+
+
+                            <p>El transistor BC547 presenta tres extremos: base,emisor y colector.</p>
+                            <p>Por ello, lo primero que haremos serÃ¡ diferenciar estas tres vÃ­as del transistor.</p>
+                            <p>El transistor se alimenta por el colector de ahÃ­ la conexiÃ³n a +5V que se indica en el
+                                esquema, y necesita de la resistencia para su correcto funcionamiento. La seÃ±al entra al
+                                transistor por la base y sale amplificada por el emisor hasta el condensador; el cual
+                                sÃ§olo permite pasar la corriente alterna, o sea, la seÃ±al.</p>
+                            <p>Una vez soldada la resistencia en el emisor del transistor y al condensador, la otra pata
+                                de este llevarÃ¡ finalmente la seÃ±al de vÃ­deo compuesto tan preciada. Antes de soldarla
+                                al conector RCA, hemos optado por probarla y que mejor forma que desoldando la seÃ±al RF
+                                y soldando la nueva, (imagen 4).</p>
+                            <p>A continuaciÃ³n nos aprovecharemos de las caracterÃ­sticas del teclado dk'tronics para
+                                colocar un conector hembra RCA en la salida inmediata superior a la que sale del
+                                modulador. (imagen 6)</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                <tr align="right">
+                                    <td><img src="img/hard05.jpg" width="400" height="300"
+                                             alt="Imagen 5. ColocaciÃ³n del nuevo conector RCA"/>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Imagen 5. ColocaciÃ³n del nuevo conector RCA</td>
+                                </tr>
+                            </table>
+
+                            <p>La seÃ±al la soldaremos a un conector hembra RCA. La masa de este conector, (tal y como se
+                                ve en la imagen 5) hemos optado por soldarla en una de las pistas del exterior de la
+                                placa.</p>
+                            <p>Finalmente la colocaciÃ³n del conector hembra RCA lo hemos resuelto sujetando una pletina
+                                a la tapa inferior del teclado dk'tronics haciÃ©ndole un agujero y sujetÃ¡ndola con un
+                                tornillo.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="400">
+
+                                <tr align="right">
+                                    <td><img src="img/hard06.jpg" width="400" height="300"
+                                             alt="Imagen 6. VisiÃ³n exterior"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Imagen 6. VisiÃ³n exterior</td>
+                                </tr>
+                            </table>
+
+                            <p>Observamos en la imagen anterior ambas salidas de vÃ­deo RF y RCA, sin sustituir nada. Eso
+                                sÃ­, si pretendemos incorporar el Interface 1 al teclado, deberÃ­amos perder una de ellas,
+                                obviamente la RF, pero simplemente quitarÃ­amos el nuevo conector y dejarÃ­amos la
+                                prÃ¡ctica tal cual se ve en la imagen 4.</p>
+
+                            <p>Ahora sÃ³lo queda enchufar el Spectrum a una de nuestras modernas televisiones y disfrutar
+                                del Uchi-mata.</p>
+                            <p><b>CrÃ©ditos</b></p>
+                            <ul>
+                                <li>Desarrollo de la prÃ¡ctica: JosÃ© Antonio PÃ©rez Grau - aka 'buyer'</li>
+                                <li>ArtÃ­culo: JosÃ© J. RÃ³denas - aka 'sejuan'</li>
+                            </ul>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+
+                                <ul>
+                                    <li><a href="http://www.octocom.es/"
+                                           onClick="window.open(this.href); return false;">PÃ¡gina de Octocom</a></li>
+                                    <li><a href="http://user.tninet.se/~vjz762w/"
+                                           onClick="window.open(this.href); return false;">PÃ¡gina de Sami Vehmaa</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html" selected>Hardware</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 15 - Marzo 2007</td>
-
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
+                    <td align="right"><br><br>J.J.RÃ“DENAS</td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
 
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p align="center"><font size="4">SALIDA DE VÍDEO COMPUESTO EN UN SPECTRUM 48K</font></p>
-<p>Como todos sabéis, la calidad de la señal de vídeo RF que ofrecían los primeros Spectrum (léase 16k y 48k) no estaba muy allá. Buceando por Internet encuentras páginas de gente maravillosa que intenta incorporar a aquellas máquinas toda clase de "aparatos" o útiles que los mejore de alguna forma.</p>
-<p>Hoy os presentamos una de estas mejoras reseñadas en la página de los amigos de OCTOCOM y que pertenece a un monstruo de la electrónica, Sami Vehmaa. La aplicación se refiere a modificar la señal RF de un Spectrum e incorporarle señal RCA con lo que mejoraremos ostensiblemente la señal y podremos utilizar nuestro Spectrum en cualquiera de las televisiones actuales.</p>
-<p>Aclaremos, no obstante, que la práctica la vamos a realizar sobre un equipo que posee un teclado dk'tronics, objeto de este artículo. La diferencia entre este montaje y lo que realizó Sami Vehmaa estriba en que lo que hemos hecho ha sido proporcionar la nueva señal sin desmontar la antigua. Vamos a ello.</p>
-<p><b>Material necesario:</b></p>
-<ul>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-	<li>Soldador y estaño.</li>
-	<li>Pelacables (opcional).</li>
-	<li>Transistor.</li>
-	<li>Condensador.</li>
-	<li>Resistencia (75ohm a 82ohm).</li>
-	<li>Conector hembra RCA.</li>
+                                <option value="hardware.html" selected>Hardware</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
 
-	<li>Pletina de metal, arandelas y tornillo.</li>
-</ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
 
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard01.jpg" width="400" height="300"  alt="Imagen 1. Algunos componentes" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 1. Algunos componentes</td>
-
-	</tr>
-</table>
-
-<p>La acotación  que hacemos sobre la resistencia es debida a que en la página de Sami indica la necesidad de una resistencia de 75 Ohm, aconsejada igualmente por José Leandro Novellón, al que se le comentó la realización de la práctica. En cambio, los amigos de Octocom se deciden por una de 82 Ohm. Nosotros para no ser menos, hemos tirado por el camino de en medio y hemos utilizado lo que teníamos más a mano, soldando dos resistencias que dan un total de 78 Ohm.</p>
-<p><b>La práctica</b></p>
-<p>Tal y como indican los amigos de Octocom en su página deberemos reconocer primeramente la ubicación del modulador y los datos que nos ofrece; para ello exponemos aquí dos instantáneas sacadas de su web. Una es el esquema del montaje y la otra los puntos donde van a realizar la modificación, una vez retirado el modulador.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard02.jpg" width="400" height="250"  alt="Imagen 2. Vaciado del modulador" />
-</td>
-
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 2. Vaciado del modulador</td>
-	</tr>
-</table>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="271">
-	<tr align="right">
-		<td><img src="img/hard03.gif" width="271" height="198"  alt="Imagen 3. Esquema de la práctica" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 3. Esquema de la práctica</td>
-	</tr>
-</table>
-
-<p>Tomaremos buena nota de los cuatro puntos a tener en cuenta pero no quitaremos nada, aprovechando la ventaja de estar trabajando en un espacio más amplio que el que proporciona el teclado del 48k.</p>
-<p>Si seguimos el esquema veremos que la resistencia debe soldarse a masa, la cual encontraremos fácilmente en la misma caja del modulador (punto 2, esquema en interior caja). O si por el contrario se nos resiste o no necesitamos abrir el modulador, como es nuestro caso, buscaremos en una de las pistas próximas a éste, comprobándola previamente. El otro extremo lo soldaremos al condensador.</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard04.jpg" width="400" height="300"  alt="Imagen 4. Prueba de funcionamiento" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 4. Prueba de funcionamiento</td>
-	</tr>
-</table>
-
-
-<p>El transistor BC547 presenta tres extremos: base,emisor y colector.</p>
-<p>Por ello, lo primero que haremos será diferenciar estas tres vías del transistor.</p>
-<p>El transistor se alimenta por el colector de ahí la conexión a +5V que se indica en el esquema, y necesita de la resistencia para su correcto funcionamiento. La señal entra al transistor por la base y sale amplificada por el emisor hasta el condensador; el cual sçolo permite pasar la corriente alterna, o sea, la señal.</p>
-<p>Una vez soldada la resistencia en el emisor del transistor y al condensador, la otra pata de este llevará finalmente la señal de vídeo compuesto tan preciada. Antes de soldarla al conector RCA, hemos optado por probarla y que mejor forma que desoldando la señal RF y soldando la nueva, (imagen 4).</p>
-<p>A continuación nos aprovecharemos de las características del teclado dk'tronics para colocar un conector hembra RCA en la salida inmediata superior a la que sale del modulador. (imagen 6)</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard05.jpg" width="400" height="300"  alt="Imagen 5. Colocación del nuevo conector RCA" />
-</td>
-
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 5. Colocación del nuevo conector RCA</td>
-	</tr>
-</table>
-
-<p>La señal la soldaremos a un conector hembra RCA. La masa de este conector, (tal y como se ve en la imagen 5) hemos optado por soldarla en una de las pistas del exterior de la placa.</p>
-<p>Finalmente la colocación del conector hembra RCA lo hemos resuelto sujetando una pletina a la tapa inferior del teclado dk'tronics haciéndole un agujero y sujetándola con un tornillo.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-
-	<tr align="right">
-		<td><img src="img/hard06.jpg" width="400" height="300"  alt="Imagen 6. Visión exterior" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 6. Visión exterior</td>
-	</tr>
-</table>
-
-<p>Observamos en la imagen anterior ambas salidas de vídeo RF y RCA, sin sustituir nada. Eso sí, si pretendemos incorporar el Interface 1 al teclado, deberíamos perder una de ellas, obviamente la RF, pero simplemente quitaríamos el nuevo conector y dejaríamos la práctica tal cual se ve en la imagen 4.</p>
-
-<p>Ahora sólo queda enchufar el Spectrum a una de nuestras modernas televisiones y disfrutar del Uchi-mata.</p>
-<p><b>Créditos</b></p>
-<ul>
-	<li>Desarrollo de la práctica: José Antonio Pérez Grau - aka 'buyer'</li>
-	<li>Artículo: José J. Ródenas - aka 'sejuan'</li>
-</ul>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-
-<ul>
-	<li><a href="http://www.octocom.es/" onClick="window.open(this.href); return false;">Página de Octocom</a></li>
-	<li><a href="http://user.tninet.se/~vjz762w/" onClick="window.open(this.href); return false;">Página de Sami Vehmaa</a></li>
-</ul>
-</div>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>J.J.RÓDENAS</td>
-
-	</tr>
-</table>                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html" selected>Hardware</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('rem.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-
-                    </td>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
                 </tr>
             </table>
 
-    </body>
+
+
+        </td>
+    </tr>
+</table>
+</body>
 </html>

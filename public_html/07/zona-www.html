@@ -1,270 +1,393 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html" selected>Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="opinion.html">Opinión</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 7 - Mayo 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p>
-<i>Hay páginas que han estado con nosotros desde hace mucho tiempo, no solo porque ofrezcan contenidos en un principio interesantes sino porque incluso fomentan la participación de los aficionados al mundillo. Una de ellas es la conocida "El Spectrum Hoy", de Digiexp, hogar de las ultracargas, las competiciones de partidas grabadas, y las historias de Tony Brazil y Wally Week.</i>
-
-</p>
-<p>
-Todavía se puede recordar como hace bastante tiempo, un entonces novatillo en el mundo de las news, con alias Digiexp, decidió crear una pequeña web donde explicar cómo conseguía que los juegos tardaran casi nada en cargar en un Spectrum real. Más tarde vinieron las competiciones de partidas grabadas con el emulador RealSpectrum, con un nivel de participación moderado pero sin duda muy entretenidas (el autor de este texto no puede evitar emitir un alarido de rabia al pensar con qué maestría le <i>robaron</i> el primer puesto en la competición de Abu Simbel). Tiempo después Tony Brazil empezó a darnos sus opiniones desde la web y, desde ese momento, cada vez más y más secciones se iban añadiendo.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/www1.jpg" width="320" height="254"  alt="Página principal de El Spectrum Hoy" />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right">Página principal de El Spectrum Hoy</td>
-	</tr>
-</table>
-
-<p>
-En esta ocasión vamos a analizar esta conocida página... ¿qué nos ofrece? ¿Cuáles son sus puntos fuertes y sus puntos débiles? Veámoslo en detalle.
-</p>
-<p>
-<b>DISEÑO</b>
-</p>
-<p>
-Es una lástima empezar por este apartado, porque sin duda el diseño es lo que más flaquea en la página de 'El Spectrum Hoy'. La web sigue el conocido esquema de un frame izquierdo más estrecho para poder acceder a las distintas secciones de la página, y un frame, mucho más ancho, a la derecha, para mostrarnos el contenido en sí mismo. Por lo tanto, al pulsar sobre cada una de las secciones a la izquierda, en la parte derecha veremos qué nos ofrece. En la sección de partidas grabadas, además, se genera un frame superior para acceder a cada una de las distintas subsecciones... pero aquí es donde encontramos el primer fallo grave de diseño (al menos en el navegador Konqueror, que es el que utiliza el autor de este texto): al pulsar sobre una de las subsecciones superiores, veremos como en el frame central, en el que se suele mostrar el contenido, se vuelve a crear un frame superior. Si volvemos a pulsar sobre una subsección del nuevo frame superior, se volverá a crear un nuevo frame superior en el frame central, y así hasta que queramos. Sin duda es algo que se debería subsanar para que las personas que visiten la página no se lleven una mala impresión.
-</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/www2.jpg" width="320" height="254"  alt="Fallo grave de diseño en los frames en la sección de Partidas Grabadas" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Fallo grave de diseño en los frames en la sección de Partidas Grabadas</td>
-	</tr>
-</table>
-
-
-<p>
-Los colores de la web tampoco son demasiado atractivos. No es incómodo ver un fondo negro con letras blancas, pero cuando la fuente empieza a cambiar de color sin ton ni son, el resultado es bastante extraño. Esto se hace patente en secciones como la de ultracargas, donde las combinaciones de colores, en opinión del autor, no son precisamente atractivas visualmente. Los parrafos también quedan muy separados en varias ocasiones, dando sensación de vacío; y se combinan párrafos centrados con párrafos no centrados, dando sensación de desorden... en definitiva, toda la cuestión de aspecto visual en lo referente a colores y párrafos debería ser retocada (en opinión del autor).
-</p>
-<p>
-Por último, decir que en la sección de Grandes Desconocidos, es un poco incómodo que aparezcan todos en la misma página, porque tienes que esperar a que carguen todas las imágenes para poder disfrutarlas. Aprovechando pues que ya existen enlaces al principio de esa sección para cada uno de los juegos mostrados, sería interesante que cada uno de dichos enlaces, en lugar de trasladarnos a otra localización de la misma página, nos guiaran a páginas distintas (como se hace por ejemplo en la subsección de Partidas Acabadas dentro de la sección de Partidas Grabadas).
-</p>
-<p>
-Por lo tanto, nos encontramos ante una web con un diseño un tanto estrambótico, pero... ¿y los contenidos? ¿Son tan irregulares?
-</p>
-<p>
-<b>CONTENIDO</b>
-</p>
-<p>
-En la página principal siempre ha habido sitio para hablar de las ultracargas, dejándonos claro que El Spectrum Hoy es la residencia oficial de este novedoso método de carga. Además, se suelen poner allí las novedades más impactantes de la web (en el momento de escribir esto, sin duda alguna, la entrevista a Bo Jangeborg, creador de Artist y Fairlight). Sólo por estas dos cosas, ya vale la pena echarle un vistazo a la web. En la sección de Noticias ya podremos consultar de forma más detallada las novedades, así como la sección donde podremos encontrarlas.
-</p>
-
-<p>
-La sección de Manuales contiene información bastante interesante; documentos que explican cómo realizar las ultracargas (luego hablaremos de ellas), cómo grabar partidas en algunos emuladores (imprescindible para los novatos que quieran participar en competiciones), algo sobre el Spectrum en la Dreamcast, o como conectar una fuente de sonido externa al Spectrum. No son cortos precisamente, y son bastante curiosos, sin duda interesantes, aunque se centra demasiado en las herramientas para Windows.
-</p>
-<p>
-La sección del Speccy Tour tiene su razón de ser en que durante la última edición de esta conocida competición de partidas grabadas, la página de El Spectrum Hoy fue 'sede oficial'. Muestra un histórico de las partidas del 2002 y del 2003... ¿seguirá en años posteriores? ¿Recuperará las partidas de años anteriores?
-</p>
-<p>
-La sección de Ultracargas fue la que originó esta página. El método de la ultracarga fue desarrollado por Digiexp para permitir que los juegos tardaran mucho menos tiempo en cargar, ya fuera desde cinta, o desde una fuente digital como el CD. Podemos acceder a una inmensa cantidad de ultracargas, de tal forma que solo tendremos que esperar uno o dos minutos, e incluso a veces menos, para poder jugar a los juegos. En la sección de manuales todo esto se explica en detalle, y es altamente recomendable.
-</p>
-<p>
-La siguiente sección es una de las más conocidas en esta web, la de Partidas Grabadas. Puedes grabar tus partidas con un emulador y enviarlas para cada una de los apartados de esta sección. Por ejemplo, en Partidas Acabadas podemos ver cómo la gente termina un juego, desde que comienza la partida hasta que se nos muestra el mensaje final de felicitación. En Partidas de Competición el objetivo no es mostrar cómo se supera un juego, sino que en enviar partidas con la máxima puntuación posible para ver si otros te superan. En Partidas Alternativas tenemos partidas curiosas o extrañas que no tienen cabida en los dos apartados anteriores. Por útlimo, tenemos el apartado de competición. Cada cierto tiempo Digiexp proponía un juego para competir sobre él y la gente iba enviando sus partidas hasta un tiempo límite, hasta conseguir un ganador. Hablamos en pasado porque la última competición, la de Nebulus, fue hace bastante tiempo, y la verdad es que el resto de apartados de la sección de Partidas Grabadas parecen bastante muertos. Es una verdadera lástima que la sección más divertida de la web no tenga una continuidad aparente. Es una sección que, como decimos, parece un poco muerta.
-</p>
-<p>
-La siguiente sección también es de las conocidas de la página, la de Un Aficionado y su Spectrum, donde Tony Brazil, habitual de las news de Spectrum en español, de forma incansable y regular nos va contando sus opiniones, recuerdos, hasta llegar en la actualidad a un total de 38 textos. Dichos textos nos recuerdan directamente a sus posts en las news de Spectrum, son muy parecidos. Una sección, sin duda, para fans. Se agradecerían a veces comentarios más profundos y concretos. Por ejemplo, en el texto sobre Uchi Mata, Tony habla de juegos malos. Sobre el L.A. Swat nos dice: "Juas, este juego es que es malo y tonto a la vez. Carece de todo tipo de interés"; ¿por qué, Tony? No todo el mundo tiene por qué conocer el juego, o no todo el mundo tiene por qué tener la misma opinión, y esas cosas siempre es bueno razonarlas.
-</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-
-	<tr align="right">
-		<td><img src="img/www3.jpg" width="320" height="254"  alt="¿Qué nos contará hoy Tony Brazil?" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">¿Qué nos contará hoy Tony Brazil?</td>
-	</tr>
-</table>
-
-<p>
-
-La siguiente sección se llama Grandes Desconocidos y, según se comenta en la web, está destinada a mostrarnos juegos que en su momento pasaron desapercibidos, pero que son lo suficientemente buenos como para que sean más extendidos. Sin embargo, aproximadamente la mitad de los juegos mostrados son posteriores al año 90, e incluso posteriores al año 93, por lo que no es de extrañar que en su momento pasaran desapercibidos, porque en esa época el Spectrum estaba muerto comercialmente y nuestra fiebre de recuperación del mito Spectrumnero todavía no había aparecido (e Internet no era lo suficientemente popular como para que pudiéramos conocer la existencia de estos juegos desconocidos). Se salva un poco por el hecho de que el resto ya sí que se encuadran dentro de lo que sería la época comercial de nuestra máquina, mereciéndose por lo tanto el calificativo de 'desconocidos en su época' (aunque algunos de ellos no pasarán tan desapercibidos, como el Scuba Dive, el Moi Reversi, o el Barmy's Burguer).
-</p>
-<p>
-La sección de Leyendas es parecida a la de Un Aficionado y Su Spectrum, solo que en este caso cualquier persona puede colaborar con sus textos y no solo Tony Brazil. Aunque, sin embargo, la inmensa mayoría de los textos son escritos por Wally Week, uno de los colaboradores de la web. Eso sí, cualquiera puede participar. La última entrada es la más importante, la entrevista a Bo Jangeborg que se comentaba anteriormente, de recomendada lectura.
-</p>
-<p>
-Las dos secciones siguientes están un poco muertas. Son las del curso de Basic y la del curso de Z80. De hecho, en el curso de Z80 solo se incluyó un capítulo hace muchísimo tiempo y nunca más ha vuelto a ser actualizada. Son unas secciones que fueron anunciadas a bombo y platillo, pero que nos han decepcionado un poco, porque no han sido capaces de ofrecernos contenido de forma regular, o incluso en una de ellas, contenido en absoluto desde que fue creada.
-</p>
-<p>
-Los siguientes enlaces del frame izquierdo nos envían a la página de Speccy.org, a la sección de enlaces de El Spectrum Hoy, y a una página que nos cuenta por qué Digiexp decidió empezar con este trabajo.
-</p>
-<p>
-<b>CONCLUSIONES</b>
-</p>
-<p>
-A la hora de puntuar esta página, se ha decidido separar en dos apartados (al contrario que en comentarios anteriores): diseño y contenido. Esto es así porque el diseño es bastante mejorable y muy poco atractivo y podría incidir muy negativamente en una puntuación global. Con respecto al contenido, se salva un poco, pero algunas secciones muertas hacen también que la nota sea baja.
-
-</p>
-<p>
-Lo que más llama la atención (en un sentido positivo) de esta página es la sección de ultracargas y la de partidas grabadas. Lo que menos agrada desde un principio, y que puede hacer que mucha gente se eche para atrás a la hora de visitar la página, es el aspecto visual, que debería ser completamente retocado.
-</p>
-<p>
-Sería conveniente una revisión de los contenidos para eliminar alguna sección, como la del curso de Z80, que no ofrece apenas contenidos y no se ha actualizado nunca, y reorganizar otras, como la de Grandes Desconocidos, para distinguir grandes desconocidos durante la época del Spectrum, y nuevas creaciones después de la época comercial de nuestra máquina. Los textos de Tony podría ser un poquito más rigurosos, sin necesidad de abandonar la subjetividad, pues a fin de cuentas es una sección de opinión.
-</p>
-<p>
-Una página muy conocida que, tras un pequeño empujoncito, podría convertirse quizás en una de las mejores.
-</p>
-<p>
-<b>PUNTUACION</b>: 3,5 (DISEÑO) - 6 (CONTENIDO)
-</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-
-</p>
-<ul>
-	<li>El Spectrum Hoy : <a href="http://www.speccy.org/spectrumhoy/"  onClick="window.open(this.href); return false;">http://www.speccy.org/spectrumhoy/</a> o bien <a href="http://www.jaivan.net" onClick="window.open(this.href); return false;">http://www.jaivan.net</a></li>
-</ul>
-</div>
-</div>
-		</td>
-	</tr>
-	<tr>
-
-		<td align="right"><br>SIEW</td>
-	</tr>
-</table>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="hardware.html">Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html" selected>Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-
-        <option value="input.html">INPUT</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
-
+<head>
+    <title>Zona WWW - Magazine ZX nÃºmero 7 - Mayo 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-    </body>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html" selected>Zona WWW</option>
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 7 - Mayo 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p>
+                                <i>Hay pÃ¡ginas que han estado con nosotros desde hace mucho tiempo, no solo porque
+                                    ofrezcan contenidos en un principio interesantes sino porque incluso fomentan la
+                                    participaciÃ³n de los aficionados al mundillo. Una de ellas es la conocida "El
+                                    Spectrum Hoy", de Digiexp, hogar de las ultracargas, las competiciones de partidas
+                                    grabadas, y las historias de Tony Brazil y Wally Week.</i>
+
+                            </p>
+                            <p>
+                                TodavÃ­a se puede recordar como hace bastante tiempo, un entonces novatillo en el mundo
+                                de las news, con alias Digiexp, decidiÃ³ crear una pequeÃ±a web donde explicar cÃ³mo
+                                conseguÃ­a que los juegos tardaran casi nada en cargar en un Spectrum real. MÃ¡s tarde
+                                vinieron las competiciones de partidas grabadas con el emulador RealSpectrum, con un
+                                nivel de participaciÃ³n moderado pero sin duda muy entretenidas (el autor de este texto
+                                no puede evitar emitir un alarido de rabia al pensar con quÃ© maestrÃ­a le <i>robaron</i>
+                                el primer puesto en la competiciÃ³n de Abu Simbel). Tiempo despuÃ©s Tony Brazil empezÃ³ a
+                                darnos sus opiniones desde la web y, desde ese momento, cada vez mÃ¡s y mÃ¡s secciones se
+                                iban aÃ±adiendo.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/www1.jpg" width="320" height="254"
+                                             alt="PÃ¡gina principal de El Spectrum Hoy"/>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td class="piefoto" align="right">PÃ¡gina principal de El Spectrum Hoy</td>
+                                </tr>
+                            </table>
+
+                            <p>
+                                En esta ocasiÃ³n vamos a analizar esta conocida pÃ¡gina... Â¿quÃ© nos ofrece? Â¿CuÃ¡les son
+                                sus puntos fuertes y sus puntos dÃ©biles? VeÃ¡moslo en detalle.
+                            </p>
+                            <p>
+                                <b>DISEÃ‘O</b>
+                            </p>
+                            <p>
+                                Es una lÃ¡stima empezar por este apartado, porque sin duda el diseÃ±o es lo que mÃ¡s
+                                flaquea en la pÃ¡gina de 'El Spectrum Hoy'. La web sigue el conocido esquema de un frame
+                                izquierdo mÃ¡s estrecho para poder acceder a las distintas secciones de la pÃ¡gina, y un
+                                frame, mucho mÃ¡s ancho, a la derecha, para mostrarnos el contenido en sÃ­ mismo. Por lo
+                                tanto, al pulsar sobre cada una de las secciones a la izquierda, en la parte derecha
+                                veremos quÃ© nos ofrece. En la secciÃ³n de partidas grabadas, ademÃ¡s, se genera un frame
+                                superior para acceder a cada una de las distintas subsecciones... pero aquÃ­ es donde
+                                encontramos el primer fallo grave de diseÃ±o (al menos en el navegador Konqueror, que es
+                                el que utiliza el autor de este texto): al pulsar sobre una de las subsecciones
+                                superiores, veremos como en el frame central, en el que se suele mostrar el contenido,
+                                se vuelve a crear un frame superior. Si volvemos a pulsar sobre una subsecciÃ³n del nuevo
+                                frame superior, se volverÃ¡ a crear un nuevo frame superior en el frame central, y asÃ­
+                                hasta que queramos. Sin duda es algo que se deberÃ­a subsanar para que las personas que
+                                visiten la pÃ¡gina no se lleven una mala impresiÃ³n.
+                            </p>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                <tr align="right">
+                                    <td><img src="img/www2.jpg" width="320" height="254"
+                                             alt="Fallo grave de diseÃ±o en los frames en la secciÃ³n de Partidas Grabadas"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Fallo grave de diseÃ±o en los frames en la secciÃ³n
+                                        de Partidas Grabadas
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            <p>
+                                Los colores de la web tampoco son demasiado atractivos. No es incÃ³modo ver un fondo
+                                negro con letras blancas, pero cuando la fuente empieza a cambiar de color sin ton ni
+                                son, el resultado es bastante extraÃ±o. Esto se hace patente en secciones como la de
+                                ultracargas, donde las combinaciones de colores, en opiniÃ³n del autor, no son
+                                precisamente atractivas visualmente. Los parrafos tambiÃ©n quedan muy separados en varias
+                                ocasiones, dando sensaciÃ³n de vacÃ­o; y se combinan pÃ¡rrafos centrados con pÃ¡rrafos no
+                                centrados, dando sensaciÃ³n de desorden... en definitiva, toda la cuestiÃ³n de aspecto
+                                visual en lo referente a colores y pÃ¡rrafos deberÃ­a ser retocada (en opiniÃ³n del autor).
+                            </p>
+                            <p>
+                                Por Ãºltimo, decir que en la secciÃ³n de Grandes Desconocidos, es un poco incÃ³modo que
+                                aparezcan todos en la misma pÃ¡gina, porque tienes que esperar a que carguen todas las
+                                imÃ¡genes para poder disfrutarlas. Aprovechando pues que ya existen enlaces al principio
+                                de esa secciÃ³n para cada uno de los juegos mostrados, serÃ­a interesante que cada uno de
+                                dichos enlaces, en lugar de trasladarnos a otra localizaciÃ³n de la misma pÃ¡gina, nos
+                                guiaran a pÃ¡ginas distintas (como se hace por ejemplo en la subsecciÃ³n de Partidas
+                                Acabadas dentro de la secciÃ³n de Partidas Grabadas).
+                            </p>
+                            <p>
+                                Por lo tanto, nos encontramos ante una web con un diseÃ±o un tanto estrambÃ³tico, pero...
+                                Â¿y los contenidos? Â¿Son tan irregulares?
+                            </p>
+                            <p>
+                                <b>CONTENIDO</b>
+                            </p>
+                            <p>
+                                En la pÃ¡gina principal siempre ha habido sitio para hablar de las ultracargas,
+                                dejÃ¡ndonos claro que El Spectrum Hoy es la residencia oficial de este novedoso mÃ©todo de
+                                carga. AdemÃ¡s, se suelen poner allÃ­ las novedades mÃ¡s impactantes de la web (en el
+                                momento de escribir esto, sin duda alguna, la entrevista a Bo Jangeborg, creador de
+                                Artist y Fairlight). SÃ³lo por estas dos cosas, ya vale la pena echarle un vistazo a la
+                                web. En la secciÃ³n de Noticias ya podremos consultar de forma mÃ¡s detallada las
+                                novedades, asÃ­ como la secciÃ³n donde podremos encontrarlas.
+                            </p>
+
+                            <p>
+                                La secciÃ³n de Manuales contiene informaciÃ³n bastante interesante; documentos que
+                                explican cÃ³mo realizar las ultracargas (luego hablaremos de ellas), cÃ³mo grabar partidas
+                                en algunos emuladores (imprescindible para los novatos que quieran participar en
+                                competiciones), algo sobre el Spectrum en la Dreamcast, o como conectar una fuente de
+                                sonido externa al Spectrum. No son cortos precisamente, y son bastante curiosos, sin
+                                duda interesantes, aunque se centra demasiado en las herramientas para Windows.
+                            </p>
+                            <p>
+                                La secciÃ³n del Speccy Tour tiene su razÃ³n de ser en que durante la Ãºltima ediciÃ³n de
+                                esta conocida competiciÃ³n de partidas grabadas, la pÃ¡gina de El Spectrum Hoy fue 'sede
+                                oficial'. Muestra un histÃ³rico de las partidas del 2002 y del 2003... Â¿seguirÃ¡ en aÃ±os
+                                posteriores? Â¿RecuperarÃ¡ las partidas de aÃ±os anteriores?
+                            </p>
+                            <p>
+                                La secciÃ³n de Ultracargas fue la que originÃ³ esta pÃ¡gina. El mÃ©todo de la ultracarga fue
+                                desarrollado por Digiexp para permitir que los juegos tardaran mucho menos tiempo en
+                                cargar, ya fuera desde cinta, o desde una fuente digital como el CD. Podemos acceder a
+                                una inmensa cantidad de ultracargas, de tal forma que solo tendremos que esperar uno o
+                                dos minutos, e incluso a veces menos, para poder jugar a los juegos. En la secciÃ³n de
+                                manuales todo esto se explica en detalle, y es altamente recomendable.
+                            </p>
+                            <p>
+                                La siguiente secciÃ³n es una de las mÃ¡s conocidas en esta web, la de Partidas Grabadas.
+                                Puedes grabar tus partidas con un emulador y enviarlas para cada una de los apartados de
+                                esta secciÃ³n. Por ejemplo, en Partidas Acabadas podemos ver cÃ³mo la gente termina un
+                                juego, desde que comienza la partida hasta que se nos muestra el mensaje final de
+                                felicitaciÃ³n. En Partidas de CompeticiÃ³n el objetivo no es mostrar cÃ³mo se supera un
+                                juego, sino que en enviar partidas con la mÃ¡xima puntuaciÃ³n posible para ver si otros te
+                                superan. En Partidas Alternativas tenemos partidas curiosas o extraÃ±as que no tienen
+                                cabida en los dos apartados anteriores. Por Ãºtlimo, tenemos el apartado de competiciÃ³n.
+                                Cada cierto tiempo Digiexp proponÃ­a un juego para competir sobre Ã©l y la gente iba
+                                enviando sus partidas hasta un tiempo lÃ­mite, hasta conseguir un ganador. Hablamos en
+                                pasado porque la Ãºltima competiciÃ³n, la de Nebulus, fue hace bastante tiempo, y la
+                                verdad es que el resto de apartados de la secciÃ³n de Partidas Grabadas parecen bastante
+                                muertos. Es una verdadera lÃ¡stima que la secciÃ³n mÃ¡s divertida de la web no tenga una
+                                continuidad aparente. Es una secciÃ³n que, como decimos, parece un poco muerta.
+                            </p>
+                            <p>
+                                La siguiente secciÃ³n tambiÃ©n es de las conocidas de la pÃ¡gina, la de Un Aficionado y su
+                                Spectrum, donde Tony Brazil, habitual de las news de Spectrum en espaÃ±ol, de forma
+                                incansable y regular nos va contando sus opiniones, recuerdos, hasta llegar en la
+                                actualidad a un total de 38 textos. Dichos textos nos recuerdan directamente a sus posts
+                                en las news de Spectrum, son muy parecidos. Una secciÃ³n, sin duda, para fans. Se
+                                agradecerÃ­an a veces comentarios mÃ¡s profundos y concretos. Por ejemplo, en el texto
+                                sobre Uchi Mata, Tony habla de juegos malos. Sobre el L.A. Swat nos dice: "Juas, este
+                                juego es que es malo y tonto a la vez. Carece de todo tipo de interÃ©s"; Â¿por quÃ©, Tony?
+                                No todo el mundo tiene por quÃ© conocer el juego, o no todo el mundo tiene por quÃ© tener
+                                la misma opiniÃ³n, y esas cosas siempre es bueno razonarlas.
+                            </p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+
+                                <tr align="right">
+                                    <td><img src="img/www3.jpg" width="320" height="254"
+                                             alt="Â¿QuÃ© nos contarÃ¡ hoy Tony Brazil?"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Â¿QuÃ© nos contarÃ¡ hoy Tony Brazil?</td>
+                                </tr>
+                            </table>
+
+                            <p>
+
+                                La siguiente secciÃ³n se llama Grandes Desconocidos y, segÃºn se comenta en la web, estÃ¡
+                                destinada a mostrarnos juegos que en su momento pasaron desapercibidos, pero que son lo
+                                suficientemente buenos como para que sean mÃ¡s extendidos. Sin embargo, aproximadamente
+                                la mitad de los juegos mostrados son posteriores al aÃ±o 90, e incluso posteriores al aÃ±o
+                                93, por lo que no es de extraÃ±ar que en su momento pasaran desapercibidos, porque en esa
+                                Ã©poca el Spectrum estaba muerto comercialmente y nuestra fiebre de recuperaciÃ³n del mito
+                                Spectrumnero todavÃ­a no habÃ­a aparecido (e Internet no era lo suficientemente popular
+                                como para que pudiÃ©ramos conocer la existencia de estos juegos desconocidos). Se salva
+                                un poco por el hecho de que el resto ya sÃ­ que se encuadran dentro de lo que serÃ­a la
+                                Ã©poca comercial de nuestra mÃ¡quina, mereciÃ©ndose por lo tanto el calificativo de
+                                'desconocidos en su Ã©poca' (aunque algunos de ellos no pasarÃ¡n tan desapercibidos, como
+                                el Scuba Dive, el Moi Reversi, o el Barmy's Burguer).
+                            </p>
+                            <p>
+                                La secciÃ³n de Leyendas es parecida a la de Un Aficionado y Su Spectrum, solo que en este
+                                caso cualquier persona puede colaborar con sus textos y no solo Tony Brazil. Aunque, sin
+                                embargo, la inmensa mayorÃ­a de los textos son escritos por Wally Week, uno de los
+                                colaboradores de la web. Eso sÃ­, cualquiera puede participar. La Ãºltima entrada es la
+                                mÃ¡s importante, la entrevista a Bo Jangeborg que se comentaba anteriormente, de
+                                recomendada lectura.
+                            </p>
+                            <p>
+                                Las dos secciones siguientes estÃ¡n un poco muertas. Son las del curso de Basic y la del
+                                curso de Z80. De hecho, en el curso de Z80 solo se incluyÃ³ un capÃ­tulo hace muchÃ­simo
+                                tiempo y nunca mÃ¡s ha vuelto a ser actualizada. Son unas secciones que fueron anunciadas
+                                a bombo y platillo, pero que nos han decepcionado un poco, porque no han sido capaces de
+                                ofrecernos contenido de forma regular, o incluso en una de ellas, contenido en absoluto
+                                desde que fue creada.
+                            </p>
+                            <p>
+                                Los siguientes enlaces del frame izquierdo nos envÃ­an a la pÃ¡gina de Speccy.org, a la
+                                secciÃ³n de enlaces de El Spectrum Hoy, y a una pÃ¡gina que nos cuenta por quÃ© Digiexp
+                                decidiÃ³ empezar con este trabajo.
+                            </p>
+                            <p>
+                                <b>CONCLUSIONES</b>
+                            </p>
+                            <p>
+                                A la hora de puntuar esta pÃ¡gina, se ha decidido separar en dos apartados (al contrario
+                                que en comentarios anteriores): diseÃ±o y contenido. Esto es asÃ­ porque el diseÃ±o es
+                                bastante mejorable y muy poco atractivo y podrÃ­a incidir muy negativamente en una
+                                puntuaciÃ³n global. Con respecto al contenido, se salva un poco, pero algunas secciones
+                                muertas hacen tambiÃ©n que la nota sea baja.
+
+                            </p>
+                            <p>
+                                Lo que mÃ¡s llama la atenciÃ³n (en un sentido positivo) de esta pÃ¡gina es la secciÃ³n de
+                                ultracargas y la de partidas grabadas. Lo que menos agrada desde un principio, y que
+                                puede hacer que mucha gente se eche para atrÃ¡s a la hora de visitar la pÃ¡gina, es el
+                                aspecto visual, que deberÃ­a ser completamente retocado.
+                            </p>
+                            <p>
+                                SerÃ­a conveniente una revisiÃ³n de los contenidos para eliminar alguna secciÃ³n, como la
+                                del curso de Z80, que no ofrece apenas contenidos y no se ha actualizado nunca, y
+                                reorganizar otras, como la de Grandes Desconocidos, para distinguir grandes desconocidos
+                                durante la Ã©poca del Spectrum, y nuevas creaciones despuÃ©s de la Ã©poca comercial de
+                                nuestra mÃ¡quina. Los textos de Tony podrÃ­a ser un poquito mÃ¡s rigurosos, sin necesidad
+                                de abandonar la subjetividad, pues a fin de cuentas es una secciÃ³n de opiniÃ³n.
+                            </p>
+                            <p>
+                                Una pÃ¡gina muy conocida que, tras un pequeÃ±o empujoncito, podrÃ­a convertirse quizÃ¡s en
+                                una de las mejores.
+                            </p>
+                            <p>
+                                <b>PUNTUACION</b>: 3,5 (DISEÃ‘O) - 6 (CONTENIDO)
+                            </p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+
+                                </p>
+                                <ul>
+                                    <li>El Spectrum Hoy : <a href="http://www.speccy.org/spectrumhoy/"
+                                                             onClick="window.open(this.href); return false;">http://www.speccy.org/spectrumhoy/</a>
+                                        o bien <a href="http://www.jaivan.net"
+                                                  onClick="window.open(this.href); return false;">http://www.jaivan.net</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td align="right"><br>SIEW</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+                                <option value="hardware.html">Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html" selected>Zona WWW</option>
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+
+                                <option value="input.html">INPUT</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

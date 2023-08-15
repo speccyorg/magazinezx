@@ -1,328 +1,388 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html" selected>Hardware</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
-
-    </select>
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 6 - Marzo 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p align="center"><font size="4">CAMBIA LA GOMA A TU DISQUETERA DE 3".</font></p>
-<p>
-
-<i>En esta entrega vamos a hacer frente a una de las averías más comunes de las disqueteras de 3" que incorporan el Spectrum +3 y otros ordenadores como el Amstrad CPC 6128, que no es otra que la rotura o pérdida de eficacia de la goma que transmite el movimiento rotatorio del motor de la disquetera al disco que hemos introducido.</i>
-</p>
-<p>
-Esta reparación es muy sencilla, tan solo es necesario poner un poco de cuidado, como siempre que trabajamos sobre el hardware de nuestro ordenador, para tener a punto la disquetera en 10 minutos.
-</p>
-<p>
-Para efectuarla necesitaremos el siguiente material (ver <a href="#imagen1">Imagen 1</a>):
-</p>
-<ul>
-<li>Goma nueva para la disquetera. Las medidas de la goma son 72mm x 3mm x 0.5mm, aunque seguramente una goma con medidas ligeramente distintas valdrá.</li>
-<li>Un destornillador de estrella (para abrir el +3 y extraer la disquetera).</li>
-<li>Recomendamos el uso de unos alicates planos o pinzas para extraer con cuidado pero firmemente los conectores internos que lleva la disquetera.</li>
-
-</ul>
-<a name="imagen1">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard1.jpg" width="400" height="300"  alt="Imagen 1. Material necesario" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 1. Material necesario</td>
-	</tr>
-
-</table>
-
-</a>
-<p>
-Lo primero que tenemos que hacer es abrir el Spectrum +3. Quitamos los dos tornillos del lateral derecho (el lateral de la disquetera) y los seis de la parte inferior con un destornillador de estrella. Hecho esto procedemos a levantar el teclado con sumo cuidado, veremos que nos lo impide el cable que alimenta el led rojo (situado en posición central) y las dos cintas del teclado (en el lateral izquierdo). Desprendemos el conector del led situado en la placa (<a href="#imagen2">Imagen 2</a>) y las dos cintas del teclado (<a href="#imagen3">Imagen 3</a>), esto con sumo cuidado. No hace falta explicar cuál es uno de los puntos más débiles del Spectrum. De esta manera podremos acceder tranquilamente a la zona de la disquetera para desmontarla.
-</p>
-<a name="imagen2">
-<table border="0" cellspacing="0" cellpadding="2" width="300">
-	<tr align="right">
-		<td><img src="img/hard2.jpg" width="300" height="400"  alt="Imagen 2. Conexión del led indicador de encendido" />
-</td>
-
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 2. Conexión del led indicador de encendido</td>
-	</tr>
-</table>
-
-</a>
-<a name="imagen3">
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-	<tr align="right">
-		<td><img src="img/hard3.jpg" width="320" height="240"  alt="Imagen 3. Conexiones de la membrana a la placa base" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 3. Conexiones de la membrana a la placa base</td>
-	</tr>
-</table>
-
-</a>
-<p>
-Para extraer la disquetera del chasis del ordenador, debemos desatornillar los dos tornillos que la sujetan (<a href="#imagen4">Imagen 4</a>), así como las tomas de datos y alimentación (<a href="#imagen5">Imagen 5</a>), que se encuentran en la parte posterior de la misma.
-
-</p>
-<a name="imagen4">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard4.jpg" width="400" height="300"  alt="Imagen 4. Tornillos de sujección de la disquetera" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 4. Tornillos de sujección de la disquetera</td>
-	</tr>
-
-</table>
-
-</a>
-<a name="imagen5">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard5.jpg" width="400" height="300"  alt="Imagen 5. Conectores de datos y alimentación eléctrica" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 5. Conectores de datos y alimentación eléctrica</td>
-
-	</tr>
-</table>
-
-</a>
-<p>
-Ya tenemos la disquetera extraida para poder trabajar cómodamente (<a href="#imagen6">Imagen 6</a>). Lo primero que haremos será introducir un disquete. Así conseguiremos que al mover la disquetera no se pierda una pequeña punta que se encuentra en su interior y que detecta si el disco está o no protegido contra escritura, y que es muy fácil de perder. Una vez asegurados contra este posible contratiempo, en la parte posterior hay una placa que debemos desatornillar (puntos 1, 2 y 3 - <a href="#imagen7">Imagen 7</a>) para poder acceder a la zona donde se encuentra la goma que queremos sustituir.
-</p>
-<a name="imagen6">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard6.jpg" width="400" height="300"  alt="Imagen 6. La disquetera de 3"" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 6. La disquetera de 3"</td>
-	</tr>
-</table>
-
-</a>
-<a name="imagen7">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-
-		<td><img src="img/hard7.jpg" width="400" height="300"  alt="Imagen 7. Placa de la disquetera. Tornillos 1, 2 y 3" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 7. Placa de la disquetera. Tornillos 1, 2 y 3</td>
-	</tr>
-</table>
-
-</a>
-<p>
-Ya estamos a un paso de acceder a la goma. Pero antes, para separar la placa y poder sustituirla, debemos quitar dos conectores que se encuentran en los laterales de la disquetera (<a href="#imagen8">Imagen 8</a> e <a href="#imagen9">Imagen 9</a>). Para hacerlo recomendamos el uso de los alicates planos, para así poder tirar firmemente pero con cuidado del conector y no romper las soldaduras ni forzar los cables.
-
-</p>
-<a name="imagen8">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard8.jpg" width="400" height="300"  alt="Imagen 8. Conector en un lateral" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 8. Conector en un lateral</td>
-	</tr>
-
-</table>
-
-</a>
-<a name="imagen9">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard9.jpg" width="400" height="300"  alt="Imagen 9. Conector en el otro lateral" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 9. Conector en el otro lateral</td>
-
-	</tr>
-</table>
-
-</a>
-<p>
-Ya podemos quitar la goma estropeada (si existiese) y sustituirla por la nueva. Por si la disquetera no tuviera goma (<a href="#imagen10">Imagen 10</a>), o estuviera fuera de su sitio o completamente cuarteada, debe ir colocada entre el disco negro grande y el cilindro metálico, tal y como se aprecia en la <a href="#imagen11">Imagen 11</a>.
-</p>
-<a name="imagen10">
-<table border="0" cellspacing="0" cellpadding="2" width="400">
-	<tr align="right">
-		<td><img src="img/hard10.jpg" width="400" height="300"  alt="Imagen 10. Zona interior de la disquetera" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 10. Zona interior de la disquetera</td>
-	</tr>
-</table>
-
-</a>
-<a name="imagen11">
-<table border="0" cellspacing="0" cellpadding="2" width="300">
-	<tr align="right">
-
-		<td><img src="img/hard11.jpg" width="300" height="400"  alt="Imagen 11. Disquetera con la goma reemplazada" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Imagen 11. Disquetera con la goma reemplazada</td>
-	</tr>
-</table>
-
-</a>
-<p>
-Por último, sólo nos queda montar todo de nuevo con cuidado, no olvidando enchufar ninguno de los conectores, y cerrar el ordenador, para disfrutar de nuevo de nuestra flamante disquetera de 3".
-
-</p>
-<p>
-NOTA: Amstrad puso en el mercado variaciones sobre el modelo de disquetera que se ve en las imágenes, pero los pasos que se han de seguir para abrirla y sustituir la goma son los mismos, pudiendo variar la ubicación de algún conector o tornillo.
-</p>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>FALVAREZ</td>
-	</tr>
-</table>                    </td>
-
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="hardware.html" selected>Hardware</option>
-
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-    </form>
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Hardware - Magazine ZX nÃºmero 6 - Marzo 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-    </body>
+                                <option value="hardware.html" selected>Hardware</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
 
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 6 - Marzo 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p align="center"><font size="4">CAMBIA LA GOMA A TU DISQUETERA DE 3".</font></p>
+                            <p>
+
+                                <i>En esta entrega vamos a hacer frente a una de las averÃ­as mÃ¡s comunes de las
+                                    disqueteras de 3" que incorporan el Spectrum +3 y otros ordenadores como el Amstrad
+                                    CPC 6128, que no es otra que la rotura o pÃ©rdida de eficacia de la goma que
+                                    transmite el movimiento rotatorio del motor de la disquetera al disco que hemos
+                                    introducido.</i>
+                            </p>
+                            <p>
+                                Esta reparaciÃ³n es muy sencilla, tan solo es necesario poner un poco de cuidado, como
+                                siempre que trabajamos sobre el hardware de nuestro ordenador, para tener a punto la
+                                disquetera en 10 minutos.
+                            </p>
+                            <p>
+                                Para efectuarla necesitaremos el siguiente material (ver <a href="#imagen1">Imagen 1</a>):
+                            </p>
+                            <ul>
+                                <li>Goma nueva para la disquetera. Las medidas de la goma son 72mm x 3mm x 0.5mm, aunque
+                                    seguramente una goma con medidas ligeramente distintas valdrÃ¡.
+                                </li>
+                                <li>Un destornillador de estrella (para abrir el +3 y extraer la disquetera).</li>
+                                <li>Recomendamos el uso de unos alicates planos o pinzas para extraer con cuidado pero
+                                    firmemente los conectores internos que lleva la disquetera.
+                                </li>
+
+                            </ul>
+                            <a name="imagen1">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/hard1.jpg" width="400" height="300"
+                                                 alt="Imagen 1. Material necesario"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 1. Material necesario</td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <p>
+                                Lo primero que tenemos que hacer es abrir el Spectrum +3. Quitamos los dos tornillos del
+                                lateral derecho (el lateral de la disquetera) y los seis de la parte inferior con un
+                                destornillador de estrella. Hecho esto procedemos a levantar el teclado con sumo
+                                cuidado, veremos que nos lo impide el cable que alimenta el led rojo (situado en
+                                posiciÃ³n central) y las dos cintas del teclado (en el lateral izquierdo). Desprendemos
+                                el conector del led situado en la placa (<a href="#imagen2">Imagen 2</a>) y las dos
+                                cintas del teclado (<a href="#imagen3">Imagen 3</a>), esto con sumo cuidado. No hace
+                                falta explicar cuÃ¡l es uno de los puntos mÃ¡s dÃ©biles del Spectrum. De esta manera
+                                podremos acceder tranquilamente a la zona de la disquetera para desmontarla.
+                            </p>
+                            <a name="imagen2">
+                                <table border="0" cellspacing="0" cellpadding="2" width="300">
+                                    <tr align="right">
+                                        <td><img src="img/hard2.jpg" width="300" height="400"
+                                                 alt="Imagen 2. ConexiÃ³n del led indicador de encendido"/>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 2. ConexiÃ³n del led indicador de
+                                            encendido
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <a name="imagen3">
+                                <table border="0" cellspacing="0" cellpadding="2" width="320">
+                                    <tr align="right">
+                                        <td><img src="img/hard3.jpg" width="320" height="240"
+                                                 alt="Imagen 3. Conexiones de la membrana a la placa base"/>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 3. Conexiones de la membrana a la placa
+                                            base
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Para extraer la disquetera del chasis del ordenador, debemos desatornillar los dos
+                                tornillos que la sujetan (<a href="#imagen4">Imagen 4</a>), asÃ­ como las tomas de datos
+                                y alimentaciÃ³n (<a href="#imagen5">Imagen 5</a>), que se encuentran en la parte
+                                posterior de la misma.
+
+                            </p>
+                            <a name="imagen4">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/hard4.jpg" width="400" height="300"
+                                                 alt="Imagen 4. Tornillos de sujecciÃ³n de la disquetera"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 4. Tornillos de sujecciÃ³n de la
+                                            disquetera
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <a name="imagen5">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/hard5.jpg" width="400" height="300"
+                                                 alt="Imagen 5. Conectores de datos y alimentaciÃ³n elÃ©ctrica"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 5. Conectores de datos y alimentaciÃ³n
+                                            elÃ©ctrica
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Ya tenemos la disquetera extraida para poder trabajar cÃ³modamente (<a href="#imagen6">Imagen
+                                6</a>). Lo primero que haremos serÃ¡ introducir un disquete. AsÃ­ conseguiremos que al
+                                mover la disquetera no se pierda una pequeÃ±a punta que se encuentra en su interior y que
+                                detecta si el disco estÃ¡ o no protegido contra escritura, y que es muy fÃ¡cil de perder.
+                                Una vez asegurados contra este posible contratiempo, en la parte posterior hay una placa
+                                que debemos desatornillar (puntos 1, 2 y 3 - <a href="#imagen7">Imagen 7</a>) para poder
+                                acceder a la zona donde se encuentra la goma que queremos sustituir.
+                            </p>
+                            <a name="imagen6">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/hard6.jpg" width="400" height="300"
+                                                 alt="Imagen 6. La disquetera de 3"" />
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 6. La disquetera de 3"</td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <a name="imagen7">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+
+                                        <td><img src="img/hard7.jpg" width="400" height="300"
+                                                 alt="Imagen 7. Placa de la disquetera. Tornillos 1, 2 y 3"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 7. Placa de la disquetera. Tornillos 1,
+                                            2 y 3
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Ya estamos a un paso de acceder a la goma. Pero antes, para separar la placa y poder
+                                sustituirla, debemos quitar dos conectores que se encuentran en los laterales de la
+                                disquetera (<a href="#imagen8">Imagen 8</a> e <a href="#imagen9">Imagen 9</a>). Para
+                                hacerlo recomendamos el uso de los alicates planos, para asÃ­ poder tirar firmemente pero
+                                con cuidado del conector y no romper las soldaduras ni forzar los cables.
+
+                            </p>
+                            <a name="imagen8">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/hard8.jpg" width="400" height="300"
+                                                 alt="Imagen 8. Conector en un lateral"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 8. Conector en un lateral</td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <a name="imagen9">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/hard9.jpg" width="400" height="300"
+                                                 alt="Imagen 9. Conector en el otro lateral"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 9. Conector en el otro lateral</td>
+
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Ya podemos quitar la goma estropeada (si existiese) y sustituirla por la nueva. Por si
+                                la disquetera no tuviera goma (<a href="#imagen10">Imagen 10</a>), o estuviera fuera de
+                                su sitio o completamente cuarteada, debe ir colocada entre el disco negro grande y el
+                                cilindro metÃ¡lico, tal y como se aprecia en la <a href="#imagen11">Imagen 11</a>.
+                            </p>
+                            <a name="imagen10">
+                                <table border="0" cellspacing="0" cellpadding="2" width="400">
+                                    <tr align="right">
+                                        <td><img src="img/hard10.jpg" width="400" height="300"
+                                                 alt="Imagen 10. Zona interior de la disquetera"/>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 10. Zona interior de la disquetera</td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <a name="imagen11">
+                                <table border="0" cellspacing="0" cellpadding="2" width="300">
+                                    <tr align="right">
+
+                                        <td><img src="img/hard11.jpg" width="300" height="400"
+                                                 alt="Imagen 11. Disquetera con la goma reemplazada"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Imagen 11. Disquetera con la goma
+                                            reemplazada
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Por Ãºltimo, sÃ³lo nos queda montar todo de nuevo con cuidado, no olvidando enchufar
+                                ninguno de los conectores, y cerrar el ordenador, para disfrutar de nuevo de nuestra
+                                flamante disquetera de 3".
+
+                            </p>
+                            <p>
+                                NOTA: Amstrad puso en el mercado variaciones sobre el modelo de disquetera que se ve en
+                                las imÃ¡genes, pero los pasos que se han de seguir para abrirla y sustituir la goma son
+                                los mismos, pudiendo variar la ubicaciÃ³n de algÃºn conector o tornillo.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>FALVAREZ</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+                                <option value="hardware.html" selected>Hardware</option>
+
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

@@ -10,234 +10,234 @@
                    =======================================
 
 
-  A continuaciÛn se exponen unas sencillas normas de utilizaciÛn del correo
-  y las news en Internet (y USENET por extensiÛn) para un aprovechamiento
-  mayor de las ventajas de este fant·stico medio de comunicaciÛn. Estas
-  normas est·n extraÌdas de las normas de USENET y de otras aprobadas por
-  el sentido com˙n de la mayorÌa de usuarios de Internet (nettiqueta).
+  A continuaci√≥n se exponen unas sencillas normas de utilizaci√≥n del correo
+  y las news en Internet (y USENET por extensi√≥n) para un aprovechamiento
+  mayor de las ventajas de este fant√°stico medio de comunicaci√≥n. Estas
+  normas est√°n extra√≠das de las normas de USENET y de otras aprobadas por
+  el sentido com√∫n de la mayor√≠a de usuarios de Internet (nettiqueta).
 
 
  1.- NO enviar _nunca_ mensajes en HTML - usar texto llano.
-     Los mensajes en HTML ocupan aprox. 10 veces m·s que los mensajes en
+     Los mensajes en HTML ocupan aprox. 10 veces m√°s que los mensajes en
      texto llano. Esto implica que si recibimos una media de 100 mensajes,
      en lugar de tener que recoger unos 200 KBytes de datos, tendremos que
-     recoger sobre 1 MEGABYTE, para finalmente leer LO MISMO. Ademas no
+     recoger sobre 1 MEGABYTE, para finalmente leer LO MISMO. Adem√°s no
      todo el mundo tiene clientes de correo que soporten HTML.
 
      Puedes desactivar el HTML en las opciones de tu cliente de correo/news
-     en algo asÌ como "Usar editor de texto llano" y "Convertir mensaje a
-     texto llano". Si te pregunta quÈ codificaciÛn usar, marca ISO-8859-1.
+     en algo as√≠ como "Usar editor de texto llano" y "Convertir mensaje a
+     texto llano". Si te pregunta qu√© codificaci√≥n usar, marca ISO-8859-1.
 
 
- 2.- Activar la opciÛn de quoteado de mensajes (consiste en que salga el
-     simbolo o caracter > al principio de las lineas de la persona a la
+ 2.- Activar la opci√≥n de quoteado de mensajes (consiste en que salga el
+     simbolo o caracter > al principio de las l√≠neas de la persona a la
      que respondes, para que otros puedan distinguir tu texto del de otras
      personas, porque si no el mensaje es COMPLETAMENTE ILEGIBLE).
-     Dejar lÌneas separadoras:
+     Dejar l√≠neas separadoras:
 
-     Por ejemplo (esto SI es legible):
+     Por ejemplo (esto S√ç es legible):
 
-           Juanito escribio el 12/12/00:
+           Juanito escribi√≥ el 12/12/00:
            > Me recuerdas?
-           Si
+           S√≠
 
            > Espero que te llegara el paquete...
            Pues no...
 
     No es lo mismo que (es dificil distinguir el texto propio del otro):
 
-           Juanito escribio el 12/12/00:
+           Juanito escribi√≥ el 12/12/00:
            Me recuerdas?
-           Si
+           S√≠
            Espero que te llegara el paquete...
            Pues no...
 
 
  3.- Responder a los mensajes debajo del texto de la persona a la que
-     respondes, concretamente debajo de cada p·rrafo al que se desee
+     respondes, concretamente debajo de cada p√°rrafo al que se desee
      responder (nada de eso de dejar todo el mensaje del otro abajo y
      contestar arriba, ni al reves):
 
      Correcto:
 
-           Juanito escribio el 12/12/00:
-           
+           Juanito escribi√≥ el 12/12/00:
+
            > Me recuerdas?
-           Si
+           S√≠
 
            > Espero que te llegara el paquete...
            Pues no...
 
      Incorrecto (error conocido como Top-posting):
 
-           Juanito escribio el 12/12/00:
-           
-           Si.
-           Pues no me llego el paquete...
-           
+           Juanito escribi√≥ el 12/12/00:
+
+           S√≠.
+           Pues no me lleg√≥ el paquete...
+
            > Me recuerdas?
            > Espero que te llegara el paquete...
 
 
  4.- Recortar el texto del mensaje al que respondes: no dejar todo el
-     texto de la otra persona, dejar sÛlo aquello que sirva para entender
-     la respuesta. Tampoco quitarlo todo, porque si el que lo enviÛ
-     originalmente no recuerda de lo que escribiÛ, no entender· nada de
+     texto de la otra persona, dejar s√≥lo aquello que sirva para entender
+     la respuesta. Tampoco quitarlo todo, porque si el que lo envi√≥
+     originalmente no recuerda de lo que escribi√≥, no entender√° nada de
      la respuesta.
 
-     Incorrecto: (si no recuerdan el mensaje, no saben de que hablas)
+     Incorrecto: (si no recuerdan el mensaje, no saben de qu√© hablas)
 
-           Juanito escribio el 12/12/00:
+           Juanito escribi√≥ el 12/12/00:
 
-           Si, y no me llegÛ.
+           S√≠, y no me lleg√≥.
 
      A veces se puede sustituir un gran bloque de texto de la otra
      persona con algo como [tema] para ahorrar espacio. Ejemplo:
 
-           Juanito escribio el 12/12/00:
+           Juanito escribi√≥ el 12/12/00:
 
            >[hablando sobre el paquete de correo]
 
-           Pues si, me llegÛ sin problemas y...
+           Pues s√≠, me lleg√≥ sin problemas y...
 
 
- 5.- No escribir lÌneas de m·s de 80 caracteres. Si no, los mensajes
-     apareceran como una sola lÌnea muy larga y no ser·n legibles. Aunque
-     t˙ en pantalla veas como el cursor pasa autom·ticamente a la siguiente
-     lÌnea, la manera correcta es pulsar la tecla ENTER, no dejar que lo
+ 5.- No escribir l√≠neas de m√°s de 80 caracteres. Si no, los mensajes
+     apareceran como una sola l√≠nea muy larga y no ser√°n legibles. Aunque
+     t√∫ en pantalla veas como el cursor pasa autom√°ticamente a la siguiente
+     l√≠nea, la manera correcta es pulsar la tecla ENTER, no dejar que lo
      haga el cliente de correo que utilizamos. Es un engorro leer mensajes
-     con lÌneas de 600 caracteres, teniendo que moverse todo el rato hacia
-     la derecha (ademas de ser ilegible).
+     con l√≠neas de 600 caracteres, teniendo que moverse todo el rato hacia
+     la derecha (adem√°s de ser ilegible).
 
-     Ademas, se suele bajar este lÌmite a 72 caracteres para que al ir
-     respondiendose el mensaje (y aÒadiendose caracteres > a cada lÌnea)
-     no pasen de 80 en la mayorÌa de los casos. AsÌ pues, se deber·
-     activar el recorte de lÌnea en aquellos editores de correo que lo
+     Adem√°s, se suele bajar este l√≠mite a 72 caracteres para que al ir
+     respondiendose el mensaje (y a√±adiendose caracteres > a cada l√≠nea)
+     no pasen de 80 en la mayor√≠a de los casos. As√≠ pues, se deber√°
+     activar el recorte de l√≠nea en aquellos editores de correo que lo
      soporten, a 72 caracteres.
 
 
  6.- No incluir adjuntos cuando no sea necesario. En las NEWS NUNCA,
-     pues est· prohibido, y molestaremos a los que descargan las news
+     pues est√° prohibido, y molestaremos a los que descargan las news
      completas para leerlas desconectados (con adjuntos me refiero a
      BINARIOS, tanto adjuntados como uuencodeados). TAMPOCO tarjetas
      de presentacion vcard y similares.
 
 
- 7.- Sobre el lenguaje, las reglas m·s habituales son:
+ 7.- Sobre el lenguaje, las reglas m√°s habituales son:
 
-     - No escribir en may˙sculas (equivale a GRITAR!).
-     - No escribir con faltas de ortografÌa (siempre que se pueda).
+     - No escribir en may√∫sculas (equivale a GRITAR!).
+     - No escribir con faltas de ortograf√≠a (siempre que se pueda).
      - No escribir como los lamers "Ke kool k SoY PorKe EsKriBo Asi".
      - No insultar.
-     - Hacer buen uso de los smilies tras cada frase que pueda ser mal
-       interpretada para que se entienda el significado de la misma (ten
-       en cuenta que esto es texto escrito y no le ves la cara al que lo
-       dice). Los smilies son sÌmbolos como:
+     - Hacer buen uso de los smilies tras cada frase que pueda ser
+       malinterpretada para que se entienda el significado de la misma
+       (ten en cuenta que esto es texto escrito y no le ves la cara al
+       que lo dice). Los smilies son s√≠mbolos como:
 
-                  :-)       alegrÌa
+                  :-)       alegr√≠a
                   ;-)       complicidad
                   :-(       tristeza
                   X'DDD     risa (tambien :-D)
 
          Por ejemplo, no es lo mismo el ejemplo a) que el b):
 
-           a).- Pero ser·s mamonazo!!!
+           a).- Pero ser√°s mamonazo!!!
 
-           b).- Pero ser·s mamonazo!!! XDDD ;-)
+           b).- Pero ser√°s mamonazo!!! XDDD ;-)
 
 
  8.- En las NEWS...
 
-     - Elegir un ASUNTO (Subject:) adecuado. Esta lÌnea debe especificar
-       claramente de quÈ va a tratar del mensaje, para que la gente se
-       sienta interesada por Èl y lo lea y responda.
+     - Elegir un ASUNTO (Subject:) adecuado. Esta l√≠nea debe especificar
+       claramente de qu√© va a tratar del mensaje, para que la gente se
+       sienta interesada por √©l y lo lea y responda.
 
         Incorrecto:   Subject: socorro esto no va.
-        Correcto  :   Subject: Problema con fuente de alimentaciÛn del 48K
+        Correcto  :   Subject: Problema con fuente de alimentaci√≥n del 48K
 
      - Redactar correctamente los mensajes, utilizando los signos de
-       puntuaciÛn apropiados y separando con lÌneas en blanco los p·rrafos
+       puntuaci√≥n apropiados y separando con l√≠neas en blanco los p√°rrafos
        del texto.
 
      - No contestar a los flamewars (a los mensajes de provocacion que
-       generan tr·fico y tr·fico, y m·s tr·fico, de mensajes) ni al SPAM.
+       generan tr√°fico y tr√°fico, y m√°s tr√°fico, de mensajes) ni al SPAM.
 
-     - No utilizar firmas de m·s de 4-6 lÌneas.
+     - No utilizar firmas de m√°s de 4-6 l√≠neas.
 
      - Si preguntamos en las news, deberemos leer la respuesta en las
        news, nada de "Por favor contestadme a xxxxx@xxxx.xx". Si usamos
-       un foro p˙blico para beneficiarnos de la gente que allÌ hay,
-       la respuesta debe ir tambiÈn allÌ para que los dem·s tambiÈn
-       obtengan beneficios. Caso aparte serÌa que no se tuviera acceso
+       un foro p√∫blico para beneficiarnos de la gente que all√≠ hay,
+       la respuesta debe ir tambi√©n all√≠ para que los dem√°s tambi√©n
+       obtengan beneficios. Caso aparte ser√≠a que no se tuviera acceso
        a las news (pero no debe ser la excusa).
 
      - No hacer preguntas fuera de la tematica del grupo, como preguntar
        cosas de Amstrad en el grupo de Spectrum, o similar. No hacerlo ni
        siquiera con excusas del tipo de "no conozco otro grupo y como
-       aquÌ sois muchos...".
+       aqu√≠ sois muchos...".
 
-     - NUNCA JAMAS hagas propaganda ni anuncios de algo que vendas. Evita
-       las est˙pidas cadenas de mensajes y los falsos mensajes del tipo
-       "Si envias 1 dolar aquÌ salvar·s a 6.000.000.000 de personas!", o
+     - NUNCA JAMA√ÅS hagas propaganda ni anuncios de algo que vendas. Evita
+       las est√∫pidas cadenas de mensajes y los falsos mensajes del tipo
+       "Si envias 1 d√≥lar aqu√≠ salvar√°s a 6.000.000.000 de personas!", o
        "Gana dinero navegando". Esto se considera SPAM y sus
        consecuencias van desde *denuncias* hasta quejas al ISP del
        infractor para que le cierren la cuenta de Internet. Las ventas
        de productos de Spectrum se suelen aceptar en el grupo.
-       
+
      - No contestar si tu mensaje no aporta nada, del estilo de:
 
                >Tengo un problema con ...
-               
+
                Pues te fastidias.
 
-               o Bien:
+               o bien:
 
-               > A mi me gusta ese juego.
+               > A m√≠ me gusta ese juego.
 
-               SÌ, a mi tambiÈn.
+               S√≠, a m√≠ tambi√©n.
 
                (puede parecer un mensaje muy inocente, pero 20 mensajes
-               iguales el mismo dÌa diciendo vanalidades no aportan
+               iguales el mismo d√≠a diciendo banalidades no aportan
                nada y llenan el grupo de ruido).
-               
 
-     - Enviar los mensajes personales por privado. Si los envÌas a la
+
+     - Enviar los mensajes personales por privado. Si los env√≠as a la
        lista, revisa el mensaje y piensa si puede ser malinterpretado
        (sopesa el lenguaje utilizado).
 
      - Valora cualquier tipo de respuesta positivamente. Incluso aquellas
-       que no aportan nada nuevo. NO te quejes de que sÛlo te han ayudado
-       X personas o que te han dado enlaces a p·ginas en lugar de ayudar.
-       Si alguien ha escrito esa p·gina es para ayudar, y no para estar
+       que no aportan nada nuevo. NO te quejes de que s√≥lo te han ayudado
+       X personas o que te han dado enlaces a p√°ginas en lugar de ayudar.
+       Si alguien ha escrito esa p√°gina es para ayudar, y no para estar
        toda la vida repitiendo lo mismo cada vez que lo pregunta alguien.
        A la hora de agradecer las cosas, basta con un solo mensaje que
        aglutine las gracias a todos los implicados. Si encontraste una
-       soluciÛn tu mismo, contesta a tu mensaje en las news explic·ndolo
-       (y como lo solucionaste, brevemente). De este modo otros se podr·n
-       beneficiar de lo que has descubierto y ya no har· falta que nadie
-       se pongan a responder tu mensaje.
+       soluci√≥n tu mismo, contesta a tu mensaje en las news explic√°ndolo
+       (y c√≥mo lo solucionaste, brevemente). De este modo, otros se podr√°n
+       beneficiar de lo que has descubierto y ya no har√° falta que nadie
+       se ponga a responder tu mensaje.
 
-     - En el primer mensaje que se envÌa a las news, lo habitual es 
-       hacer una sencilla presentaciÛn de nosotros. TambiÈn se suele
-       preguntar la direcciÛn de las normas del grupo y de la FAQ de
+     - En el primer mensaje que se env√≠a a las news, lo habitual es
+       hacer una sencilla presentaci√≥n de nosotros. Tambi√©n se suele
+       preguntar la direcci√≥n de las normas del grupo y de las FAQ de
        preguntas habituales del mismo, con el fin de leerlas para ver
        si nuestras dudas se encuentran detalladas en ellas, y no tener
-       que preguntar preguntas tÌpicas ya contestadas.
+       que preguntar preguntas t√≠picas ya contestadas.
 
-       Recuerda que el objetivo de las GuÌas y FAQs de los grupos es que
-       encuentres las respuestas a las preguntas m·s habituales sin tener
-       que preguntar en el grupo: resulta un engorro est·r respondiendo
+       Recuerda que el objetivo de las Gu√≠as y FAQs de los grupos es que
+       encuentres las respuestas a las preguntas m√°s habituales sin tener
+       que preguntar en el grupo: resulta un engorro est√°r respondiendo
        siempre la misma duda, y el engorro se traduce en molestia cuando
-       la duda ya est· contestada en las FAQ.
+       la duda ya est√° contestada en las FAQ.
 
 
-  SÌ, supongo que la mayorÌa de las normas te han parecido obvias y de un
-  aplastante sentido com˙n, pero a˙n asÌ hay gente que no las cumple. Ante
-  estos casos lo m·s sencillo es enviar un mensaje _privado_ a dicha
-  persona envi·ndole un enlace a estas reglas (y a las FAQs y normas del
-  grupo en cuestion). Si la direcciÛn de email de esta persona no es
-  correcta, envÌa en enlace (no el fichero!) al grupo de news. Si la
-  persona sigue sin hacer caso de las normas, la soluciÛn ser· meterla en
+  S√≠, supongo que la mayor√≠a de las normas te han parecido obvias y de un
+  aplastante sentido com√∫n, pero aun as√≠ hay gente que no las cumple. Ante
+  estos casos lo m√°s sencillo es enviar un mensaje _privado_ a dicha
+  persona envi√°ndole un enlace a estas reglas (y a las FAQs y normas del
+  grupo en cuestion). Si la direcci√≥n de email de esta persona no es
+  correcta, env√≠a en enlace (no el fichero!) al grupo de news. Si la
+  persona sigue sin hacer caso de las normas, la soluci√≥n ser√° meterla en
   nuestros filtros y dejar de leer sus mensajes para siempre, o hasta que
   se atenga a las normas de Nettiqueta.
 

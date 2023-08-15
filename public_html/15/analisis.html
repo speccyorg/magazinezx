@@ -1,651 +1,798 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
+<head>
+    <title>AnÃ¡lisis - Magazine ZX nÃºmero 15 - Marzo 2007</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
                 </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html" selected>AnÃ¡lisis</option>
+
+                                <option value="hardware.html">Hardware</option>
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 15 - Marzo 2007</td>
+
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
                 <tr>
                     <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html" selected>Análisis</option>
-
-        <option value="hardware.html">Hardware</option>
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 15 - Marzo 2007</td>
-
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p>En este número, Santiago Romero analiza : <a href="#superoffroad">Super Off Road</a>, mientras que Javier Vispe hace lo propio con <a href="#catwalk">Catwalk</a>.</p>
-<p><a name="superoffroad"><strong>SUPER OFF ROAD</strong></a></p>
-<table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
-	<tr valign="center">
-
-		<td rowspan="9" bgcolor="#EEEEEE"><img src="img/caratula_superoffroad.jpg" width="164" height="200" alt="Portada Ivan 'Ironman' Stewart's Super Off Road Racer" /></td>
-		<td bgcolor="#66AEEF">Título</td>
-		<td bgcolor="#FFFFFF">Ivan 'Ironman' Stewart's Super Off Road Racer</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Género</td>
-		<td bgcolor="#FFFFFF">Arcade</td>
-
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Año</td>
-		<td bgcolor="#FFFFFF">1990</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Máquina</td>
-
-		<td bgcolor="#FFFFFF">48K/128K</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Jugadores</td>
-		<td bgcolor="#FFFFFF">1 ó 2 jugadores</td>
-	</tr>
-	<tr>
-
-		<td bgcolor="#66AEEF">Compañía</td>
-		<td bgcolor="#FFFFFF">Virgin Games LTD</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Autor</td>
-		<td bgcolor="#FFFFFF">Graftgold Ltd (Steve Turner, John Cumming, Jason Page)</td>
-	</tr>
-
-
-	<tr>
-		<td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
-	</tr>
-	<tr>
-		<td colspan="2" bgcolor="#FFFFFF">
-			<ul>
-<li><a href="http://www.ysrnry.co.uk/articles/superoffroadracer.htm">Your Sinclair</a></li>
-<li><a href="http://www.crashonline.org.uk/82/ironman.htm">Crash</a></li>
-
-<li>Microhobby <a href="http://www.worldofspectrum.org/showmag.cgi?mag=MicroHobby/Issue207/Pages/MicroHobby20700038.jpg">1</a> y <a href="http://www.worldofspectrum.org/showmag.cgi?mag=MicroHobby/Issue207/Pages/MicroHobby20700039.jpg">2</a></li>
-
-			</ul>
-		</td>
-	</tr>
-</table>
-<p>"Ivan 'Ironman' Stewart's Super Off Road Racer" es la versión Spectrum del clásico juego de los arcades donde 4 jugadores (ya sean humanos o controlados por la CPU) compiten en una carrera de circuito cerrado con coches 4x4. Tras este largo título se esconde un rápido y adictivo juego de coches patrocinado por Ivan Stewart, famoso campeón americano de carreras off-road.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="320">
-
-	<tr align="right">
-		<td><img src="img/soffroad_loading.png" width="320" height="240"  alt="Pantalla de carga de Super Off Road" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Pantalla de carga de Super Off Road</td>
-	</tr>
-</table>
-
-<p>Super Off Road consta de 8 circuitos diferentes que podemos recorrer en los 2 sentidos, lo que hace un total de 16 circuitos por temporada. El objetivo del juego es dar 4 vueltas completas compitiendo contra otros 3 coches, tratando de quedar primero, ya que de nuestra posición final en la carrera dependerá el dinero que ganemos y el que perdamos una "vida" (de nuestras 3 iniciales) o no.</p>
-
-<p>A diferencia de otros títulos como Super Sprint, aquí no competiremos en pistas de asfalto liso, sino que nos encontraremos en circuitos en mal estado, con hoyos, charcos, montones de tierra y rampas, que modificarán nuestra trayectoria obligándonos a realizar continuas correcciones a izquierda y derecha, saltos y adelantamientos con el objetivo de no quedarnos atascados en alguna esquina, agujero o accidente del terreno.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="272">
-	<tr align="right">
-		<td><img src="img/pantalla1.png" width="272" height="206"  alt="El primer circuito de Super Off Road" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">El primer circuito de Super Off Road</td>
-	</tr>
-
-</table>
-
-<p>Cabe destacar que los choques con otros coches tienen más utilidad de la que parece: ralentizan a los coches rivales, aceleran los nuestros, nos permiten sacar a enemigos de la pista, etc. No es una mera cuestión de correr más que los rivales, también podemos tomar ventaja de los accidentes del terreno (como usar un turbo antes de tomar la rampa para saltar el río, por ejemplo) y del "combate coche a coche".</p>
-<p>Los controles son los típicos de esta clase de títulos: acelerar, frenar, girar a izquierda y girar a derecha (relativos a la dirección en que miramos). Además, disponemos de un botón de disparo que hará que nuestro coche gaste un NITRO o TURBO (de la reserva que dispongamos), impulsándolo a más velocidad de la normal durante un tiempo limitado. Estos controles pueden ser Joystick Kempston o Sinclair, los cursores, o las teclas "A Z N M ESPACIO" o "K M Z X ESPACIO".</p>
-<p>Contamos con una cantidad de dinero inicial que nos permitirá la compra de más nitros así como mejoras en nuestro vehículo: mejoras en la aceleración (tiempo de respuesta), las ruedas (giro del vehículo), el motor (alterando la velocidad máxima de nuestro coche) y la suspensión (para el agarre y los saltos) podrán ser adquiridas a cambio de dinero.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="272">
-	<tr align="right">
-		<td><img src="img/tunning.png" width="272" height="208"  alt="Opciones de mejora de los vehículos" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right">Opciones de mejora de los vehículos</td>
-	</tr>
-</table>
-
-<p>¿Y cómo obtendremos ese dinero? De múltiples formas: aunque empezamos con una pequeña cantidad inicial de dinero, podremos obtener ingresos adicionales según nuestra posición al finalizar las 4 vueltas de cada carrera: 100.000, 90.000 y 80.000 US$ para el primero, segundo y tercer clasificado respectivamente, quedando el último sin recompensa. Tendremos que quedar primeros en cada circuito para no perder ninguna de nuestras vidas.</p>
-<p>Y es muy importante el no perder vidas porque, si lo consideramos conveniente, podemos cambiarlas por 200.000 US$ (cada una) en la pantalla de mejoras. Para hacerlo, basta con comprar cualquier cosa cuando tengamos nuestro contador a 0 US$. El juego nos canjeará una vida por 200.000 US$ y comprará lo que le hemos pedido.</p>
-<p>La otra forma de conseguir dinero (y nitros) es en la pista: durante el desarrollo de la carrera aparecerán nitros y bolsas de dinero que nos irán dando turbos y dinero adicional. Además, cada vez que se recoja uno de estos elementos, el siguiente que aparezca será mayor (los 10.000 US$ de la primera bolsa de dinero se convierte en 20.000 US$ en la segunda, 30.000 US$ en la tercera, etc).</p>
-<p>El objetivo del juego es alcanzar el final de la temporada (16 carreras en los 2 sentidos de 8 circuitos) con la mayor cantidad de dinero ganado.</p>
-
-<p>A continación justificaremos las notas que hemos otorgado al juego en Originalidad, Gráficos, Sonido, Jugabilidad, Adicción y Dificultad.</p>
-<p>El mayor elemento de originalidad del juego es el hecho de ser uno de los primeros títulos de la historia donde se puede modificar el rendimiento del coche con añadidos y mejoras en motor, ruedas, etc. Aunque existen bastantes títulos similares de calidad, como el clásico Super Sprint, las mejoras, los terrenos con saltos, charcos, obstáculos y los nitros dotan de una personalidad especial a este juego. De hecho, es muy probable que sea uno de los títulos de este género más recordados, al haber sido portado a gran cantidad de plataformas.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="272">
-	<tr align="right">
-		<td><img src="img/pantalla2.png" width="272" height="208"  alt="Charcos, saltos y montones de tierra" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Charcos, saltos y montones de tierra</td>
-
-	</tr>
-</table>
-
-<p>Gráficamente el juego está a un buen nivel, excepto por el colorido de los vehículos. Las limitaciones técnicas de representación de color del Spectrum impiden que, como en otras plataformas, cada coche sea de un color diferente. Como en gran cantidad de títulos de Spectrum, los sprites de los coches son "transparentes" y toman el color del fondo, que suele ser "amarillo tierra" o el azul del cruce de algún charco ocasional. Esto es en ocasiones un gran problema, porque cuesta distinguir nuestro coche del de nuestros rivales, haciendo que se resienta la jugabilidad.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/vs_arcade.png" width="640" height="200"  alt="Comparación Spectrum vs Arcade: colorido de los 4x4" />
-</td>
-	</tr>
-	<tr>
-
-		<td class="piefoto" align="right">Comparación Spectrum vs Arcade: colorido de los 4x4</td>
-	</tr>
-</table>
-
-<p>Más de una vez os encontraréis intentando averiguar cuál de los 4 coches sois vosotros, especialmente tras encontronazos o choques. Teóricamente, una pequeña banderita sobre el coche nos distingue de los rivales, pero no es fácil verla, y mucho menos en movimiento. Lo normal es seguir a nuestro coche con la vista, lo cual es factible hasta que empiezan los atascos, saltos, o choques. En ocasiones incluso estaréis creyendo controlar un coche que está conduciendo a la perfección cuando, en realidad, estaréis atascados en una esquina dando vueltas. Esa sensación de descontrol mengua con el tiempo, pero puede ser algo frustrante al principio.</p>
-<p>El control en sí es bueno y suave, los coches responden a la perfección y los saltos, turbos y coches transcurren de una manera fluida (también es cierto que el no tener scroll de pantalla ayuda a ello). En ocasiones resulta demasiado sencillo quedarse atascado en una esquina o ser desplazado por otro coche, pero eso es parte de la dificultad del juego, y lo hace bastante adictivo, especialmente a 2 jugadores (aunque no se haya podido llegar a los 3 y 4 jugadores de las versiones arcade/consolas y NES).</p>
-<p>El nivel sonoro es aceptable; una buena música en el menú da paso a simples efectos sonoros durante el juego, que cumplen su función: turbos, recogida de objetos y choques son los que oiremos más habitualmente.</p>
-<p>La mejor baza del juego es, sin duda, su jugabilidad y adicción: un juego con un planteamiento sencillo, competición con otros vehículos, mejoras en los coches, variedad de circuitos, lucha por los objetos en el terreno de juego y esa sensación de intentar superar ese circuito en el que siempre perdemos.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="272">
-
-	<tr align="right">
-		<td><img src="img/salida.png" width="272" height="208"  alt="A punto de realizar la salida en el 3er circuito" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">A punto de realizar la salida en el 3er circuito</td>
-	</tr>
-</table>
-
-<p>No obstante, es un juego a corto o medio plazo, ya que no invita a jugarlo en monojugador durante una larga temporada. Aun así, a largo plazo los 8 circuitos en sus dos sentidos son interesantes y lo suficientemente diferentes para disfrutar este título en el modo de 2 jugadores.</p>
-
-<table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
-	<tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
-		<td colspan="14">Valoraciones</td>
-	</tr>
-	<tr>
-		<td>Originalidad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Gr&aacute;ficos: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Sonido: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-		<td>&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Jugabilidad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[8]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<td>Adicci&oacute;n: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[9]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<td>Dificultad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[8]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FF0000" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-
-</table>
-<br>
-<p><b>LINKS</b></p>
-<ul>
-	<li>Mapa de circuitos:<br /> <a href="ftp://ftp.worldofspectrum.org/pub/sinclair/games-maps/i/IvanIronmanStewartsSuperOffRoadRacer.png" onClick="window.open(this.href); return false">ftp://ftp.worldofspectrum.org/pub/sinclair/games-maps/i/IvanIronmanStewartsSuperOffRoadRacer.png</a></li>
-	<li>Referencia en la WikiPedia: <a href="http://en.wikipedia.org/wiki/Super_Off_Road" onClick="window.open(this.href); return false">http://en.wikipedia.org/wiki/Super_Off_Road</a></li>
-	<li>Biografia de Ivan Stewart: <a href="http://www.protruck.com/ivan.html" onClick="window.open(this.href); return false">http://www.protruck.com/ivan.html</a></li>
-
-</ul>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>SROMERO</td>
-	</tr>
-	<tr>
-		<td>
-
-<div align="justify">
-<p><a name="catwalk"><strong>CATWALK</strong></a></p>
-<table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
-	<tr valign="center">
-		<td rowspan="9" bgcolor="#EEEEEE"><img src="img/caratula_catwalk.jpg" width="191" height="298" alt="Portada Catwalk (El Gato)" /></td>
-		<td bgcolor="#66AEEF">Título</td>
-		<td bgcolor="#FFFFFF">Catwalk (El Gato)</td>
-	</tr>
-	<tr>
-
-		<td bgcolor="#66AEEF">Género</td>
-		<td bgcolor="#FFFFFF">Plataformas</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Año</td>
-		<td bgcolor="#FFFFFF">1984</td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#66AEEF">Máquina</td>
-		<td bgcolor="#FFFFFF">48K</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Jugadores</td>
-		<td bgcolor="#FFFFFF">1 jugador</td>
-
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Compañía</td>
-		<td bgcolor="#FFFFFF">Power software</td>
-	</tr>
-	<tr>
-		<td bgcolor="#66AEEF">Autor</td>
-
-		<td bgcolor="#FFFFFF">Paul Barsby</td>
-	</tr>
-
-	<tr>
-		<td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
-	</tr>
-	<tr>
-		<td colspan="2" bgcolor="#FFFFFF">
-			<ul>
-
-<li><a href="http://www.worldofspectrum.org/showmag.cgi?mag=Crash/Issue11/Pages/Crash1100152.jpg">Crash</a></li>
-
-			</ul>
-		</td>
-	</tr>
-</table>
-<p>Conocí este juego por medio de una cinta Load 'n' Run, de esas que incluían copias piratas de juegos modificados. Sin embargo, a nosotros eso nos importaba bien poco. En un mismo soporte tenías una docena o más de juegos que te prometían horas de diversión. No siempre era así, puesto que lo de menos era cuidar la calidad de la recopilación. Sin embargo, en el caso que nos ocupa, sí puedo decir que me he pasado horas muertas delante del televisor.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="256">
-	<tr align="right">
-		<td><img src="img/loadscreen.png" width="256" height="192"  alt="Pantalla de carga" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Pantalla de carga</td>
-	</tr>
-</table>
-
-<p>"El gato" realmente es un juego inglés que lleva por nombre "Catwalk". Nuestro objetivo es acompañar a Snooky en sus correrías nocturnas, alimentándose de ratones, pájaros y por supuesto, comida para gatos. La presentación nos muestra como salimos de nuestro hogar dispuestos a cazar en los nueve escenarios donde discurre nuestra aventura. Snooky es un gato algo especial, puesto que cuenta con 9 vidas para conseguir su objetivo. La estructura del juego es similar a Manic miner, con fases de plataformas donde debemos recoger la comida, y que superaremos tras obtener todos los objetivos. Sin embargo, en alguna de ellas podremos movernos en unas 3 dimensiones algo "sui generis".</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="256">
-	<tr align="right">
-
-		<td><img src="img/intro.png" width="256" height="192"  alt="Introducción" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Introducción</td>
-	</tr>
-</table>
-
-<p>Los escenarios empiezan en un típico barrio inglés, pero conforme se avanza, cada vez son más surrealistas, e incluso podemos llegar a entrar dentro de una base de lanzamiento de cohetes o un extraño salón arcade. Bendita imaginación inocente de los ochenta, que tanto se echa de menos hoy en día en medio del hiperrealismo extremo...</p>
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="256">
-	<tr align="right">
-		<td><img src="img/fase_1.png" width="256" height="192"  alt="Primera fase" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Primera fase</td>
-	</tr>
-</table>
-
-
-<p>Gráficamente el juego cumple bien. Es 1984 y todavía no han llegado las florituras. Se utiliza bastante color en algunos escenarios, y curiosamente, en otros se opta por la bicromía absoluta. Los personajes siempre visten de riguroso luto, en un intento por evitar la moda del "colour clash". Sin embargo, no se libran de ciertos parpadeos producto de una programación poco cuidada. Las animaciones de los sprites son simpáticas, y en el caso del gato, a pesar de no contar en aquellos tiempos con técnicas de "motion capture" se acerca bastante a la realidad. ¡Qué elegante en sus andares!</p>
-<p>Snooky puede saltar y moverse en dos o cuatro sentidos dependiendo de la fase. Con el salto en ocasiones hay que tener cuidado para no acabar cayendo por los numerosos huecos que se encuentran en pantalla. Significará una muerte segura, por mucho que los gatos siempre caigan de pie. Aquí la muerte del animal no nos producirá pena, sino cierto odio al programador. Cuando pierdes una vida, Snooky sube al cielo, lo que implica tener que esperar unos cuantos segundos hasta que el puñetero gato se va hacia arriba del todo. Esta molestia es un pequeño contratiempo en nuestras ansias por seguir pasando pantallas. Podría haberlo programado un ateo...</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="256">
-	<tr align="right">
-		<td><img src="img/fase_2.png" width="256" height="192"  alt="Segunda fase" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Segunda fase</td>
-
-	</tr>
-</table>
-
-<p>La música en el juego se compone de dos melodías del altavoz del Spectrum, en el menú de inicio, y cuando pasamos de pantalla con éxito. En cuanto a los efectos, son simples pitidos para indicar la captura de alimento, saltos o una escala descendente cuando Snooky nos somete al martirio de su ascensión a los cielos. En resumen, sonidos electrónicos de bajo coste.</p>
-<p>La dificultad en las primeras pantallas no es muy grande, empezando a ponerse fea la cosa a partir de la factoría. Todo dependerá de nuestra pericia y paciencia para ir planeando nuestra acción. El punto fuerte del juego es la adicción que supone el reto de ir pasando pantallas. Son pocas, pero quizás por eso, nos planteamos que es asequible el acabar el juego en una tarde sin sufrir. La recompensa de pasar un nivel que se nos ha atravesado, no tiene precio.</p>
-
-<table border="0" cellspacing="0" cellpadding="2" width="256">
-	<tr align="right">
-		<td><img src="img/fase_3.png" width="256" height="192"  alt="Tercera fase" />
-</td>
-	</tr>
-
-	<tr>
-		<td class="piefoto" align="right">Tercera fase</td>
-	</tr>
-</table>
-
-<p>El juego nos permite elegir tres idiomas al principio: inglés, alemán y francés. Parece que la moda de obviar el castellano en los vídeojuegos no es cosa de las videoconsolas. En cuanto a los controles, podemos usar joystick kempston o redefinir teclas.</p>
-<p>Catwalk es un juego más que se perdió en la noche de los tiempos, entre decenas de aspirantes a robar parte de la fama conseguida por el minero Willy. Nadie se acuerda de Snooky, pero bien merece la pena darle una oportunidad para pasar unos minutos entretenidos. Un concepto de juego simple y efectivo que además nos permite ver, que, además de los perros, los gatos también van al cielo. Aunque tengamos que matarlos nueve veces.</p>
-<table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
-	<tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
-
-		<td colspan="14">Valoraciones</td>
-	</tr>
-	<tr>
-		<td>Originalidad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[6]</td>
-		<td>&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Gr&aacute;ficos: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[5]</td>
-		<td>&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-	<tr>
-		<td>Sonido: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[4]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#000000" width="10">&nbsp;</td>
-
-		<td bgcolor="#000000" width="10">&nbsp;</td>
-		<td bgcolor="#000000" width="10">&nbsp;</td>
-		<td bgcolor="#000000" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-
-	</tr>
-	<tr>
-		<td>Jugabilidad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-
-	<tr>
-		<td>Adicci&oacute;n: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-
-	<tr>
-		<td>Dificultad: </td>
-		<td>&nbsp;</td>
-		<td bgcolor="#FFFFFF">[7]</td>
-		<td>&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#00FF00" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-		<td bgcolor="#FFFFFF" width="10">&nbsp;</td>
-	</tr>
-</table>
-
-<br>
-<p>Descárgalo de <a href="http://www.worldofspectrum.org/infoseekid.cgi?id=0000848" onclick="window.open(this.href); return false;">WOS</a>.
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>JAVIER VISPE</td>
-	</tr>
-</table>
-
-                    </td>
-
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior" value="<" />
-
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html" selected>Análisis</option>
-        <option value="hardware.html">Hardware</option>
-
-        <option value="rem.html">REM</option>
-        <option value="ensamblador.html">Programación Ensamblador</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
+                        <div align="justify">
+                            <p>En este nÃºmero, Santiago Romero analiza : <a href="#superoffroad">Super Off Road</a>,
+                                mientras que Javier Vispe hace lo propio con <a href="#catwalk">Catwalk</a>.</p>
+                            <p><a name="superoffroad"><strong>SUPER OFF ROAD</strong></a></p>
+                            <table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
+                                <tr valign="center">
+
+                                    <td rowspan="9" bgcolor="#EEEEEE"><img src="img/caratula_superoffroad.jpg"
+                                                                           width="164" height="200"
+                                                                           alt="Portada Ivan 'Ironman' Stewart's Super Off Road Racer"/>
+                                    </td>
+                                    <td bgcolor="#66AEEF">TÃ­tulo</td>
+                                    <td bgcolor="#FFFFFF">Ivan 'Ironman' Stewart's Super Off Road Racer</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">GÃ©nero</td>
+                                    <td bgcolor="#FFFFFF">Arcade</td>
+
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">AÃ±o</td>
+                                    <td bgcolor="#FFFFFF">1990</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">MÃ¡quina</td>
+
+                                    <td bgcolor="#FFFFFF">48K/128K</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Jugadores</td>
+                                    <td bgcolor="#FFFFFF">1 Ã³ 2 jugadores</td>
+                                </tr>
+                                <tr>
+
+                                    <td bgcolor="#66AEEF">CompaÃ±Ã­a</td>
+                                    <td bgcolor="#FFFFFF">Virgin Games LTD</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Autor</td>
+                                    <td bgcolor="#FFFFFF">Graftgold Ltd (Steve Turner, John Cumming, Jason Page)</td>
+                                </tr>
+
+
+                                <tr>
+                                    <td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" bgcolor="#FFFFFF">
+                                        <ul>
+                                            <li><a href="http://www.ysrnry.co.uk/articles/superoffroadracer.htm">Your
+                                                Sinclair</a></li>
+                                            <li><a href="http://www.crashonline.org.uk/82/ironman.htm">Crash</a></li>
+
+                                            <li>Microhobby <a
+                                                    href="http://www.worldofspectrum.org/showmag.cgi?mag=MicroHobby/Issue207/Pages/MicroHobby20700038.jpg">1</a>
+                                                y
+                                                <a href="http://www.worldofspectrum.org/showmag.cgi?mag=MicroHobby/Issue207/Pages/MicroHobby20700039.jpg">2</a>
+                                            </li>
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>"Ivan 'Ironman' Stewart's Super Off Road Racer" es la versiÃ³n Spectrum del clÃ¡sico juego
+                                de los arcades donde 4 jugadores (ya sean humanos o controlados por la CPU) compiten en
+                                una carrera de circuito cerrado con coches 4x4. Tras este largo tÃ­tulo se esconde un
+                                rÃ¡pido y adictivo juego de coches patrocinado por Ivan Stewart, famoso campeÃ³n americano
+                                de carreras off-road.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="320">
+
+                                <tr align="right">
+                                    <td><img src="img/soffroad_loading.png" width="320" height="240"
+                                             alt="Pantalla de carga de Super Off Road"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Pantalla de carga de Super Off Road</td>
+                                </tr>
+                            </table>
+
+                            <p>Super Off Road consta de 8 circuitos diferentes que podemos recorrer en los 2 sentidos,
+                                lo que hace un total de 16 circuitos por temporada. El objetivo del juego es dar 4
+                                vueltas completas compitiendo contra otros 3 coches, tratando de quedar primero, ya que
+                                de nuestra posiciÃ³n final en la carrera dependerÃ¡ el dinero que ganemos y el que
+                                perdamos una "vida" (de nuestras 3 iniciales) o no.</p>
+
+                            <p>A diferencia de otros tÃ­tulos como Super Sprint, aquÃ­ no competiremos en pistas de
+                                asfalto liso, sino que nos encontraremos en circuitos en mal estado, con hoyos, charcos,
+                                montones de tierra y rampas, que modificarÃ¡n nuestra trayectoria obligÃ¡ndonos a realizar
+                                continuas correcciones a izquierda y derecha, saltos y adelantamientos con el objetivo
+                                de no quedarnos atascados en alguna esquina, agujero o accidente del terreno.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="272">
+                                <tr align="right">
+                                    <td><img src="img/pantalla1.png" width="272" height="206"
+                                             alt="El primer circuito de Super Off Road"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">El primer circuito de Super Off Road</td>
+                                </tr>
+
+                            </table>
+
+                            <p>Cabe destacar que los choques con otros coches tienen mÃ¡s utilidad de la que parece:
+                                ralentizan a los coches rivales, aceleran los nuestros, nos permiten sacar a enemigos de
+                                la pista, etc. No es una mera cuestiÃ³n de correr mÃ¡s que los rivales, tambiÃ©n podemos
+                                tomar ventaja de los accidentes del terreno (como usar un turbo antes de tomar la rampa
+                                para saltar el rÃ­o, por ejemplo) y del "combate coche a coche".</p>
+                            <p>Los controles son los tÃ­picos de esta clase de tÃ­tulos: acelerar, frenar, girar a
+                                izquierda y girar a derecha (relativos a la direcciÃ³n en que miramos). AdemÃ¡s,
+                                disponemos de un botÃ³n de disparo que harÃ¡ que nuestro coche gaste un NITRO o TURBO (de
+                                la reserva que dispongamos), impulsÃ¡ndolo a mÃ¡s velocidad de la normal durante un tiempo
+                                limitado. Estos controles pueden ser Joystick Kempston o Sinclair, los cursores, o las
+                                teclas "A Z N M ESPACIO" o "K M Z X ESPACIO".</p>
+                            <p>Contamos con una cantidad de dinero inicial que nos permitirÃ¡ la compra de mÃ¡s nitros asÃ­
+                                como mejoras en nuestro vehÃ­culo: mejoras en la aceleraciÃ³n (tiempo de respuesta), las
+                                ruedas (giro del vehÃ­culo), el motor (alterando la velocidad mÃ¡xima de nuestro coche) y
+                                la suspensiÃ³n (para el agarre y los saltos) podrÃ¡n ser adquiridas a cambio de
+                                dinero.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="272">
+                                <tr align="right">
+                                    <td><img src="img/tunning.png" width="272" height="208"
+                                             alt="Opciones de mejora de los vehÃ­culos"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="piefoto" align="right">Opciones de mejora de los vehÃ­culos</td>
+                                </tr>
+                            </table>
+
+                            <p>Â¿Y cÃ³mo obtendremos ese dinero? De mÃºltiples formas: aunque empezamos con una pequeÃ±a
+                                cantidad inicial de dinero, podremos obtener ingresos adicionales segÃºn nuestra posiciÃ³n
+                                al finalizar las 4 vueltas de cada carrera: 100.000, 90.000 y 80.000 US$ para el
+                                primero, segundo y tercer clasificado respectivamente, quedando el Ãºltimo sin
+                                recompensa. Tendremos que quedar primeros en cada circuito para no perder ninguna de
+                                nuestras vidas.</p>
+                            <p>Y es muy importante el no perder vidas porque, si lo consideramos conveniente, podemos
+                                cambiarlas por 200.000 US$ (cada una) en la pantalla de mejoras. Para hacerlo, basta con
+                                comprar cualquier cosa cuando tengamos nuestro contador a 0 US$. El juego nos canjearÃ¡
+                                una vida por 200.000 US$ y comprarÃ¡ lo que le hemos pedido.</p>
+                            <p>La otra forma de conseguir dinero (y nitros) es en la pista: durante el desarrollo de la
+                                carrera aparecerÃ¡n nitros y bolsas de dinero que nos irÃ¡n dando turbos y dinero
+                                adicional. AdemÃ¡s, cada vez que se recoja uno de estos elementos, el siguiente que
+                                aparezca serÃ¡ mayor (los 10.000 US$ de la primera bolsa de dinero se convierte en 20.000
+                                US$ en la segunda, 30.000 US$ en la tercera, etc).</p>
+                            <p>El objetivo del juego es alcanzar el final de la temporada (16 carreras en los 2 sentidos
+                                de 8 circuitos) con la mayor cantidad de dinero ganado.</p>
+
+                            <p>A continaciÃ³n justificaremos las notas que hemos otorgado al juego en Originalidad,
+                                GrÃ¡ficos, Sonido, Jugabilidad, AdicciÃ³n y Dificultad.</p>
+                            <p>El mayor elemento de originalidad del juego es el hecho de ser uno de los primeros
+                                tÃ­tulos de la historia donde se puede modificar el rendimiento del coche con aÃ±adidos y
+                                mejoras en motor, ruedas, etc. Aunque existen bastantes tÃ­tulos similares de calidad,
+                                como el clÃ¡sico Super Sprint, las mejoras, los terrenos con saltos, charcos, obstÃ¡culos
+                                y los nitros dotan de una personalidad especial a este juego. De hecho, es muy probable
+                                que sea uno de los tÃ­tulos de este gÃ©nero mÃ¡s recordados, al haber sido portado a gran
+                                cantidad de plataformas.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="272">
+                                <tr align="right">
+                                    <td><img src="img/pantalla2.png" width="272" height="208"
+                                             alt="Charcos, saltos y montones de tierra"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Charcos, saltos y montones de tierra</td>
+
+                                </tr>
+                            </table>
+
+                            <p>GrÃ¡ficamente el juego estÃ¡ a un buen nivel, excepto por el colorido de los vehÃ­culos. Las
+                                limitaciones tÃ©cnicas de representaciÃ³n de color del Spectrum impiden que, como en otras
+                                plataformas, cada coche sea de un color diferente. Como en gran cantidad de tÃ­tulos de
+                                Spectrum, los sprites de los coches son "transparentes" y toman el color del fondo, que
+                                suele ser "amarillo tierra" o el azul del cruce de algÃºn charco ocasional. Esto es en
+                                ocasiones un gran problema, porque cuesta distinguir nuestro coche del de nuestros
+                                rivales, haciendo que se resienta la jugabilidad.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                <tr align="right">
+                                    <td><img src="img/vs_arcade.png" width="640" height="200"
+                                             alt="ComparaciÃ³n Spectrum vs Arcade: colorido de los 4x4"/>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td class="piefoto" align="right">ComparaciÃ³n Spectrum vs Arcade: colorido de los
+                                        4x4
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>MÃ¡s de una vez os encontrarÃ©is intentando averiguar cuÃ¡l de los 4 coches sois vosotros,
+                                especialmente tras encontronazos o choques. TeÃ³ricamente, una pequeÃ±a banderita sobre el
+                                coche nos distingue de los rivales, pero no es fÃ¡cil verla, y mucho menos en movimiento.
+                                Lo normal es seguir a nuestro coche con la vista, lo cual es factible hasta que empiezan
+                                los atascos, saltos, o choques. En ocasiones incluso estarÃ©is creyendo controlar un
+                                coche que estÃ¡ conduciendo a la perfecciÃ³n cuando, en realidad, estarÃ©is atascados en
+                                una esquina dando vueltas. Esa sensaciÃ³n de descontrol mengua con el tiempo, pero puede
+                                ser algo frustrante al principio.</p>
+                            <p>El control en sÃ­ es bueno y suave, los coches responden a la perfecciÃ³n y los saltos,
+                                turbos y coches transcurren de una manera fluida (tambiÃ©n es cierto que el no tener
+                                scroll de pantalla ayuda a ello). En ocasiones resulta demasiado sencillo quedarse
+                                atascado en una esquina o ser desplazado por otro coche, pero eso es parte de la
+                                dificultad del juego, y lo hace bastante adictivo, especialmente a 2 jugadores (aunque
+                                no se haya podido llegar a los 3 y 4 jugadores de las versiones arcade/consolas y
+                                NES).</p>
+                            <p>El nivel sonoro es aceptable; una buena mÃºsica en el menÃº da paso a simples efectos
+                                sonoros durante el juego, que cumplen su funciÃ³n: turbos, recogida de objetos y choques
+                                son los que oiremos mÃ¡s habitualmente.</p>
+                            <p>La mejor baza del juego es, sin duda, su jugabilidad y adicciÃ³n: un juego con un
+                                planteamiento sencillo, competiciÃ³n con otros vehÃ­culos, mejoras en los coches, variedad
+                                de circuitos, lucha por los objetos en el terreno de juego y esa sensaciÃ³n de intentar
+                                superar ese circuito en el que siempre perdemos.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="272">
+
+                                <tr align="right">
+                                    <td><img src="img/salida.png" width="272" height="208"
+                                             alt="A punto de realizar la salida en el 3er circuito"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">A punto de realizar la salida en el 3er circuito
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>No obstante, es un juego a corto o medio plazo, ya que no invita a jugarlo en monojugador
+                                durante una larga temporada. Aun asÃ­, a largo plazo los 8 circuitos en sus dos sentidos
+                                son interesantes y lo suficientemente diferentes para disfrutar este tÃ­tulo en el modo
+                                de 2 jugadores.</p>
+
+                            <table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
+                                <tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
+                                    <td colspan="14">Valoraciones</td>
+                                </tr>
+                                <tr>
+                                    <td>Originalidad:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+
+                                    <td>Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+                                <tr>
+                                    <td>GrÃ¡ficos:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+
+                                    <td>Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+                                <tr>
+                                    <td>Sonido:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+                                    <td>Â </td>
+
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+                                <tr>
+                                    <td>Jugabilidad:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[8]</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                </tr>
+                                <tr>
+                                    <td>AdicciÃ³n:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[9]</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dificultad:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[8]</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FF0000" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+
+                            </table>
+                            <br>
+                            <p><b>LINKS</b></p>
+                            <ul>
+                                <li>Mapa de circuitos:<br/> <a
+                                        href="ftp://ftp.worldofspectrum.org/pub/sinclair/games-maps/i/IvanIronmanStewartsSuperOffRoadRacer.png"
+                                        onClick="window.open(this.href); return false">ftp://ftp.worldofspectrum.org/pub/sinclair/games-maps/i/IvanIronmanStewartsSuperOffRoadRacer.png</a>
+                                </li>
+                                <li>Referencia en la WikiPedia: <a href="http://en.wikipedia.org/wiki/Super_Off_Road"
+                                                                   onClick="window.open(this.href); return false">http://en.wikipedia.org/wiki/Super_Off_Road</a>
+                                </li>
+                                <li>Biografia de Ivan Stewart: <a href="http://www.protruck.com/ivan.html"
+                                                                  onClick="window.open(this.href); return false">http://www.protruck.com/ivan.html</a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-
+                    <td align="right"><br><br>SROMERO</td>
+                </tr>
+                <tr>
                     <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
 
+                        <div align="justify">
+                            <p><a name="catwalk"><strong>CATWALK</strong></a></p>
+                            <table border="0" cellspacing="3" cellpadding="3" class="texto" bgcolor="#EEEEEE">
+                                <tr valign="center">
+                                    <td rowspan="9" bgcolor="#EEEEEE"><img src="img/caratula_catwalk.jpg" width="191"
+                                                                           height="298"
+                                                                           alt="Portada Catwalk (El Gato)"/></td>
+                                    <td bgcolor="#66AEEF">TÃ­tulo</td>
+                                    <td bgcolor="#FFFFFF">Catwalk (El Gato)</td>
+                                </tr>
+                                <tr>
+
+                                    <td bgcolor="#66AEEF">GÃ©nero</td>
+                                    <td bgcolor="#FFFFFF">Plataformas</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">AÃ±o</td>
+                                    <td bgcolor="#FFFFFF">1984</td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#66AEEF">MÃ¡quina</td>
+                                    <td bgcolor="#FFFFFF">48K</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Jugadores</td>
+                                    <td bgcolor="#FFFFFF">1 jugador</td>
+
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">CompaÃ±Ã­a</td>
+                                    <td bgcolor="#FFFFFF">Power software</td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#66AEEF">Autor</td>
+
+                                    <td bgcolor="#FFFFFF">Paul Barsby</td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2" bgcolor="#66AEEF">Otros comentarios</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" bgcolor="#FFFFFF">
+                                        <ul>
+
+                                            <li>
+                                                <a href="http://www.worldofspectrum.org/showmag.cgi?mag=Crash/Issue11/Pages/Crash1100152.jpg">Crash</a>
+                                            </li>
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p>ConocÃ­ este juego por medio de una cinta Load 'n' Run, de esas que incluÃ­an copias
+                                piratas de juegos modificados. Sin embargo, a nosotros eso nos importaba bien poco. En
+                                un mismo soporte tenÃ­as una docena o mÃ¡s de juegos que te prometÃ­an horas de diversiÃ³n.
+                                No siempre era asÃ­, puesto que lo de menos era cuidar la calidad de la recopilaciÃ³n. Sin
+                                embargo, en el caso que nos ocupa, sÃ­ puedo decir que me he pasado horas muertas delante
+                                del televisor.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="256">
+                                <tr align="right">
+                                    <td><img src="img/loadscreen.png" width="256" height="192" alt="Pantalla de carga"/>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Pantalla de carga</td>
+                                </tr>
+                            </table>
+
+                            <p>"El gato" realmente es un juego inglÃ©s que lleva por nombre "Catwalk". Nuestro objetivo
+                                es acompaÃ±ar a Snooky en sus correrÃ­as nocturnas, alimentÃ¡ndose de ratones, pÃ¡jaros y
+                                por supuesto, comida para gatos. La presentaciÃ³n nos muestra como salimos de nuestro
+                                hogar dispuestos a cazar en los nueve escenarios donde discurre nuestra aventura. Snooky
+                                es un gato algo especial, puesto que cuenta con 9 vidas para conseguir su objetivo. La
+                                estructura del juego es similar a Manic miner, con fases de plataformas donde debemos
+                                recoger la comida, y que superaremos tras obtener todos los objetivos. Sin embargo, en
+                                alguna de ellas podremos movernos en unas 3 dimensiones algo "sui generis".</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="256">
+                                <tr align="right">
+
+                                    <td><img src="img/intro.png" width="256" height="192" alt="IntroducciÃ³n"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">IntroducciÃ³n</td>
+                                </tr>
+                            </table>
+
+                            <p>Los escenarios empiezan en un tÃ­pico barrio inglÃ©s, pero conforme se avanza, cada vez son
+                                mÃ¡s surrealistas, e incluso podemos llegar a entrar dentro de una base de lanzamiento de
+                                cohetes o un extraÃ±o salÃ³n arcade. Bendita imaginaciÃ³n inocente de los ochenta, que
+                                tanto se echa de menos hoy en dÃ­a en medio del hiperrealismo extremo...</p>
+
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="256">
+                                <tr align="right">
+                                    <td><img src="img/fase_1.png" width="256" height="192" alt="Primera fase"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Primera fase</td>
+                                </tr>
+                            </table>
+
+
+                            <p>GrÃ¡ficamente el juego cumple bien. Es 1984 y todavÃ­a no han llegado las florituras. Se
+                                utiliza bastante color en algunos escenarios, y curiosamente, en otros se opta por la
+                                bicromÃ­a absoluta. Los personajes siempre visten de riguroso luto, en un intento por
+                                evitar la moda del "colour clash". Sin embargo, no se libran de ciertos parpadeos
+                                producto de una programaciÃ³n poco cuidada. Las animaciones de los sprites son
+                                simpÃ¡ticas, y en el caso del gato, a pesar de no contar en aquellos tiempos con tÃ©cnicas
+                                de "motion capture" se acerca bastante a la realidad. Â¡QuÃ© elegante en sus andares!</p>
+                            <p>Snooky puede saltar y moverse en dos o cuatro sentidos dependiendo de la fase. Con el
+                                salto en ocasiones hay que tener cuidado para no acabar cayendo por los numerosos huecos
+                                que se encuentran en pantalla. SignificarÃ¡ una muerte segura, por mucho que los gatos
+                                siempre caigan de pie. AquÃ­ la muerte del animal no nos producirÃ¡ pena, sino cierto odio
+                                al programador. Cuando pierdes una vida, Snooky sube al cielo, lo que implica tener que
+                                esperar unos cuantos segundos hasta que el puÃ±etero gato se va hacia arriba del todo.
+                                Esta molestia es un pequeÃ±o contratiempo en nuestras ansias por seguir pasando
+                                pantallas. PodrÃ­a haberlo programado un ateo...</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="256">
+                                <tr align="right">
+                                    <td><img src="img/fase_2.png" width="256" height="192" alt="Segunda fase"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">Segunda fase</td>
+
+                                </tr>
+                            </table>
+
+                            <p>La mÃºsica en el juego se compone de dos melodÃ­as del altavoz del Spectrum, en el menÃº de
+                                inicio, y cuando pasamos de pantalla con Ã©xito. En cuanto a los efectos, son simples
+                                pitidos para indicar la captura de alimento, saltos o una escala descendente cuando
+                                Snooky nos somete al martirio de su ascensiÃ³n a los cielos. En resumen, sonidos
+                                electrÃ³nicos de bajo coste.</p>
+                            <p>La dificultad en las primeras pantallas no es muy grande, empezando a ponerse fea la cosa
+                                a partir de la factorÃ­a. Todo dependerÃ¡ de nuestra pericia y paciencia para ir planeando
+                                nuestra acciÃ³n. El punto fuerte del juego es la adicciÃ³n que supone el reto de ir
+                                pasando pantallas. Son pocas, pero quizÃ¡s por eso, nos planteamos que es asequible el
+                                acabar el juego en una tarde sin sufrir. La recompensa de pasar un nivel que se nos ha
+                                atravesado, no tiene precio.</p>
+
+                            <table border="0" cellspacing="0" cellpadding="2" width="256">
+                                <tr align="right">
+                                    <td><img src="img/fase_3.png" width="256" height="192" alt="Tercera fase"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="piefoto" align="right">Tercera fase</td>
+                                </tr>
+                            </table>
+
+                            <p>El juego nos permite elegir tres idiomas al principio: inglÃ©s, alemÃ¡n y francÃ©s. Parece
+                                que la moda de obviar el castellano en los vÃ­deojuegos no es cosa de las videoconsolas.
+                                En cuanto a los controles, podemos usar joystick kempston o redefinir teclas.</p>
+                            <p>Catwalk es un juego mÃ¡s que se perdiÃ³ en la noche de los tiempos, entre decenas de
+                                aspirantes a robar parte de la fama conseguida por el minero Willy. Nadie se acuerda de
+                                Snooky, pero bien merece la pena darle una oportunidad para pasar unos minutos
+                                entretenidos. Un concepto de juego simple y efectivo que ademÃ¡s nos permite ver, que,
+                                ademÃ¡s de los perros, los gatos tambiÃ©n van al cielo. Aunque tengamos que matarlos nueve
+                                veces.</p>
+                            <table border="0" cellspacing="1" cellpadding="0" class="texto" bgcolor="#EEEEEE">
+                                <tr bgcolor="#FFFFFF" valign="center" align="center" height="20">
+
+                                    <td colspan="14">Valoraciones</td>
+                                </tr>
+                                <tr>
+                                    <td>Originalidad:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[6]</td>
+                                    <td>Â </td>
+
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+                                <tr>
+                                    <td>GrÃ¡ficos:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[5]</td>
+                                    <td>Â </td>
+
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+                                <tr>
+                                    <td>Sonido:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[4]</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#000000" width="10">Â </td>
+
+                                    <td bgcolor="#000000" width="10">Â </td>
+                                    <td bgcolor="#000000" width="10">Â </td>
+                                    <td bgcolor="#000000" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Jugabilidad:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+
+                                <tr>
+                                    <td>AdicciÃ³n:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Dificultad:</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#FFFFFF">[7]</td>
+                                    <td>Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#00FF00" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                    <td bgcolor="#FFFFFF" width="10">Â </td>
+                                </tr>
+                            </table>
+
+                            <br>
+                            <p>DescÃ¡rgalo de <a href="http://www.worldofspectrum.org/infoseekid.cgi?id=0000848"
+                                                onclick="window.open(this.href); return false;">WOS</a>.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>JAVIER VISPE</td>
                 </tr>
             </table>
 
-    </body>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('panorama.html');" name="anterior"
+                                   value="<"/>
+
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html" selected>AnÃ¡lisis</option>
+                                <option value="hardware.html">Hardware</option>
+
+                                <option value="rem.html">REM</option>
+                                <option value="ensamblador.html">ProgramaciÃ³n Ensamblador</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('hardware.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

@@ -1,86 +1,113 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 9 - Septiembre 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>ProgramaciÃ³n Z88DK - Magazine ZX nÃºmero 9 - Septiembre 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p><b>CREANDO UNA AVENTURA CONVERSACIONAL CON Z88DK (y III)</b></p>
-<p>Terminamos en esta entrega con la explicación de las herramientas de texto de la librería z88dk aplicadas a un juego en concreto, nuestra aventura conversacional del pirata Guybrush Threpwood. Desde luego, con todo lo explicado no se pretende que el resultado final sea una aventura conversacional completa, eso conllevaría un trabajo adicional por parte del lector de la serie, sino que se sienten las bases para aprender a manejar estas herramientas de texto mediante un ejemplo práctico.</p>
-<p>A partir de la siguiente entrega dejaremos atrás la parte de la librería referente al texto y pasaremos a los gráficos.</p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-<p><b>¿QUÉ NECESITAMOS?</b></p>
-<p>Lo mismo que se ha venido utilizando hasta el momento: el archivo aventura.c con el código fuente de nuestro juego, el archivo datos.h con las estructuras de datos que vamos a utilizar y el archivo Makefile, en el caso de que lo estemos utilizando.</p>
-<p><b>CREANDO UN PIRATA QUE SE MUEVE POR LA TABERNA</b></p>
-<p>Una parte muy importante de las aventuras suelen ser los PSI o <i>Personajes Pseudo Inteligentes</i> (tal como son llamados en el PAWS o en las aventuras de AD, por ejemplo). Básicamente, un PSI se limitará a deambular por alguna parte del mapeado de la aventura (aunque también podría estar fijo en una localización) y a responder a ciertas acciones que hagamos, e incluso podría hablar con nosotros.</p>
-<p>Lo que pretendemos en esta entrega es la creación de un pirata que se mueva por la taberna (y sólo por la taberna, no saldrá fuera de ella ni irá al callejón), con el que podremos hablar, darle la jarra para que se emborrache, e incluso pelear con la espada.</p>
-<p>La única información que tenemos que almacenar para que nuestro pirata cumpla con nuestros objetivos es la habitación en la que se encuentra en ese momento y si ha bebido de la jarra (y, por lo tanto, está borracho). Esto lo haremos mediante el uso de dos variables declaradas al inicio del método main (las líneas en rojo, como en anteriores ocasiones, nos indican cambios respecto al código de anteriores entregas):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
 
-<pre>
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 9 - Septiembre 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p><b>CREANDO UNA AVENTURA CONVERSACIONAL CON Z88DK (y III)</b></p>
+                            <p>Terminamos en esta entrega con la explicaciÃ³n de las herramientas de texto de la librerÃ­a
+                                z88dk aplicadas a un juego en concreto, nuestra aventura conversacional del pirata
+                                Guybrush Threpwood. Desde luego, con todo lo explicado no se pretende que el resultado
+                                final sea una aventura conversacional completa, eso conllevarÃ­a un trabajo adicional por
+                                parte del lector de la serie, sino que se sienten las bases para aprender a manejar
+                                estas herramientas de texto mediante un ejemplo prÃ¡ctico.</p>
+                            <p>A partir de la siguiente entrega dejaremos atrÃ¡s la parte de la librerÃ­a referente al
+                                texto y pasaremos a los grÃ¡ficos.</p>
+
+                            <p><b>Â¿QUÃ‰ NECESITAMOS?</b></p>
+                            <p>Lo mismo que se ha venido utilizando hasta el momento: el archivo aventura.c con el
+                                cÃ³digo fuente de nuestro juego, el archivo datos.h con las estructuras de datos que
+                                vamos a utilizar y el archivo Makefile, en el caso de que lo estemos utilizando.</p>
+                            <p><b>CREANDO UN PIRATA QUE SE MUEVE POR LA TABERNA</b></p>
+                            <p>Una parte muy importante de las aventuras suelen ser los PSI o <i>Personajes Pseudo
+                                Inteligentes</i> (tal como son llamados en el PAWS o en las aventuras de AD, por
+                                ejemplo). BÃ¡sicamente, un PSI se limitarÃ¡ a deambular por alguna parte del mapeado de la
+                                aventura (aunque tambiÃ©n podrÃ­a estar fijo en una localizaciÃ³n) y a responder a ciertas
+                                acciones que hagamos, e incluso podrÃ­a hablar con nosotros.</p>
+                            <p>Lo que pretendemos en esta entrega es la creaciÃ³n de un pirata que se mueva por la
+                                taberna (y sÃ³lo por la taberna, no saldrÃ¡ fuera de ella ni irÃ¡ al callejÃ³n), con el que
+                                podremos hablar, darle la jarra para que se emborrache, e incluso pelear con la
+                                espada.</p>
+                            <p>La Ãºnica informaciÃ³n que tenemos que almacenar para que nuestro pirata cumpla con
+                                nuestros objetivos es la habitaciÃ³n en la que se encuentra en ese momento y si ha bebido
+                                de la jarra (y, por lo tanto, estÃ¡ borracho). Esto lo haremos mediante el uso de dos
+                                variables declaradas al inicio del mÃ©todo main (las lÃ­neas en rojo, como en anteriores
+                                ocasiones, nos indican cambios respecto al cÃ³digo de anteriores entregas):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+
+                                        <pre>
 	void main(void)
 	{
         int habitacion = 0;
@@ -93,13 +120,25 @@ function RecargarCabecera(url)
 		<font color="red">int localizacionPirata = 5;
 		short int borrachoPirata = 0;</font>
 </pre>
-    </p></td></tr>
-</table>
-<p>La variable localizacionPirata nos va a indicar en qué habitación se encuentra el pirata en cada momento. Hemos hecho que su localización inicial sea la que se encuentra en la posición 5 del array de habitaciones (el reservado de la taberna). Este valor podrá cambiar aleatoriamente a lo largo de la aventura. Tras cada comando del jugador, se determinará al azar si el pirata cambia o no de habitación y hacia cuál. La variable borrachoPirata indica si el pirata está borracho porque le hemos dado la jarra. Solo le asignaremos el valor 0 si no lo está o el valor 1 si lo está; es por ello que empleamos un tipo short int, pues no vamos a necesitar reservar más memoria.</p>
-<p>Lo siguiente que vamos a escribir es la parte del código que determina aleatoriamente si el pirata se va a mover o no y hacia donde. Todo esto lo introducimos dentro de una función de tal forma que luego podremos ponerlo en la parte que queramos. La función, que debe ser definida antes de main, tendría la siguiente forma:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>La variable localizacionPirata nos va a indicar en quÃ© habitaciÃ³n se encuentra el pirata
+                                en cada momento. Hemos hecho que su localizaciÃ³n inicial sea la que se encuentra en la
+                                posiciÃ³n 5 del array de habitaciones (el reservado de la taberna). Este valor podrÃ¡
+                                cambiar aleatoriamente a lo largo de la aventura. Tras cada comando del jugador, se
+                                determinarÃ¡ al azar si el pirata cambia o no de habitaciÃ³n y hacia cuÃ¡l. La variable
+                                borrachoPirata indica si el pirata estÃ¡ borracho porque le hemos dado la jarra. Solo le
+                                asignaremos el valor 0 si no lo estÃ¡ o el valor 1 si lo estÃ¡; es por ello que empleamos
+                                un tipo short int, pues no vamos a necesitar reservar mÃ¡s memoria.</p>
+                            <p>Lo siguiente que vamos a escribir es la parte del cÃ³digo que determina aleatoriamente si
+                                el pirata se va a mover o no y hacia donde. Todo esto lo introducimos dentro de una
+                                funciÃ³n de tal forma que luego podremos ponerlo en la parte que queramos. La funciÃ³n,
+                                que debe ser definida antes de main, tendrÃ­a la siguiente forma:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 int movimientoPirata(int localizacionPirata, THabitacion habitaciones[],
   int habitacion)
@@ -130,35 +169,76 @@ int movimientoPirata(int localizacionPirata, THabitacion habitaciones[],
   return localizacionPirata;
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>En un momento explicaremos qué hace todo este código, pero antes, un apunte. Ya que vamos a utilizar la función <i>rand()</i>, hemos de tener en cuenta que esta función se encuentra definida en el interior del archivo de cabecera stdlib.h, que no hemos incluido hasta el momento. Por ello, deberemos añadir la siguiente línea al inicio del archivo, junto al resto de las cláusulas #include:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
-#include &lt;stdlib.h&gt;
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>En un momento explicaremos quÃ© hace todo este cÃ³digo, pero antes, un apunte. Ya que vamos
+                                a utilizar la funciÃ³n <i>rand()</i>, hemos de tener en cuenta que esta funciÃ³n se
+                                encuentra definida en el interior del archivo de cabecera stdlib.h, que no hemos
+                                incluido hasta el momento. Por ello, deberemos aÃ±adir la siguiente lÃ­nea al inicio del
+                                archivo, junto al resto de las clÃ¡usulas #include:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
+#include <stdlib.h>
 </pre>
 
-    </p></td></tr>
-</table>
-<p>Una vez aclarado esto, continuamos. La función recibe como parámetro la localización actual del pirata, el array de habitaciones, y la habitación actual en la que se encuentra el jugador. Recordemos que tanto el primer como el tercer parámetro indican posición dentro del array de habitaciones. La función devolverá un entero que será la nueva localización del pirata (tanto si se ha movido como si no).</p>
-<p>Lo primero que se hace en la función es declarar dos variables, probabilidadMovimiento, que almacenará en qué dirección intenta moverse el pirata, y localizacionAnterior, que contiene la localizacion del pirata tal como se encuenta al iniciar la función, para guardar el valor anterior en el caso de que éste cambie.</p>
-<p>La siguiente línea es la que determina al azar en qué dirección intentará moverse el pirata. Hemos de tener en cuenta que hemos decidido que el pirata sólo se podría mover por el interior de la taberna y, por supuesto, sólo podrá moverse en direcciones correctas, pero esto lo veremos más adelante. Para obtener números aleatorios, se hace uso de la función rand(). Esta función se llama sin parámetros y devuelve un entero aleatorio entre 0 y RAND_MAX, que tiene un valor de 32767 (según está definido en stdlib.h). Sin embargo, a nosotros nos interesa obtener un valor entre 0 y 3 (los posibles índices del array de direcciones dentro de la estructura THabitacion). Es por ello que recurrimos al truco que se muestra en el código.</p>
-<p>Si en Linux ejecutamos <i>man rand</i>, veremos que allí se nos explica una técnica para poder calcular números aleatorios en un rango determinado (de 1 a 100, por ejemplo). Sin embargo, no podemos hacer uso de esta forma con z88dk, pues no se admiten los números de coma flotante. Tampoco podríamos multiplicar rand() por cuatro y después dividir, porque podríamos desbordar la capacidad del entero; es por ello que calculamos el entero entre 0 y 3 de la forma tan rebuscada que se muestra en el código. Si quisieramos que fuera de 1 a 4 sería igual, pero sumando 1 al total. Deberemos recordar esto siempre que queramos calcular un número aleatorio en un rango determinado (por ejemplo, una tirada de dado).</p>
-<p>En la siguiente línea, correspondiente al if, es donde controlamos que el pirata se mueva si y solo si el momvimiento es correcto.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Una vez aclarado esto, continuamos. La funciÃ³n recibe como parÃ¡metro la localizaciÃ³n
+                                actual del pirata, el array de habitaciones, y la habitaciÃ³n actual en la que se
+                                encuentra el jugador. Recordemos que tanto el primer como el tercer parÃ¡metro indican
+                                posiciÃ³n dentro del array de habitaciones. La funciÃ³n devolverÃ¡ un entero que serÃ¡ la
+                                nueva localizaciÃ³n del pirata (tanto si se ha movido como si no).</p>
+                            <p>Lo primero que se hace en la funciÃ³n es declarar dos variables, probabilidadMovimiento,
+                                que almacenarÃ¡ en quÃ© direcciÃ³n intenta moverse el pirata, y localizacionAnterior, que
+                                contiene la localizacion del pirata tal como se encuenta al iniciar la funciÃ³n, para
+                                guardar el valor anterior en el caso de que Ã©ste cambie.</p>
+                            <p>La siguiente lÃ­nea es la que determina al azar en quÃ© direcciÃ³n intentarÃ¡ moverse el
+                                pirata. Hemos de tener en cuenta que hemos decidido que el pirata sÃ³lo se podrÃ­a mover
+                                por el interior de la taberna y, por supuesto, sÃ³lo podrÃ¡ moverse en direcciones
+                                correctas, pero esto lo veremos mÃ¡s adelante. Para obtener nÃºmeros aleatorios, se hace
+                                uso de la funciÃ³n rand(). Esta funciÃ³n se llama sin parÃ¡metros y devuelve un entero
+                                aleatorio entre 0 y RAND_MAX, que tiene un valor de 32767 (segÃºn estÃ¡ definido en
+                                stdlib.h). Sin embargo, a nosotros nos interesa obtener un valor entre 0 y 3 (los
+                                posibles Ã­ndices del array de direcciones dentro de la estructura THabitacion). Es por
+                                ello que recurrimos al truco que se muestra en el cÃ³digo.</p>
+                            <p>Si en Linux ejecutamos <i>man rand</i>, veremos que allÃ­ se nos explica una tÃ©cnica para
+                                poder calcular nÃºmeros aleatorios en un rango determinado (de 1 a 100, por ejemplo). Sin
+                                embargo, no podemos hacer uso de esta forma con z88dk, pues no se admiten los nÃºmeros de
+                                coma flotante. Tampoco podrÃ­amos multiplicar rand() por cuatro y despuÃ©s dividir, porque
+                                podrÃ­amos desbordar la capacidad del entero; es por ello que calculamos el entero entre
+                                0 y 3 de la forma tan rebuscada que se muestra en el cÃ³digo. Si quisieramos que fuera de
+                                1 a 4 serÃ­a igual, pero sumando 1 al total. Deberemos recordar esto siempre que queramos
+                                calcular un nÃºmero aleatorio en un rango determinado (por ejemplo, una tirada de dado).
+                            </p>
+                            <p>En la siguiente lÃ­nea, correspondiente al if, es donde controlamos que el pirata se mueva
+                                si y solo si el momvimiento es correcto.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
   if (habitaciones[localizacionPirata].direcciones[probabilidadMovimiento] > 2)
 </pre>
-    </p></td></tr>
-</table>
-<p>Dentro de la habitación correspondiente en el array de habitaciones cuyo índice se corresponde con la localización del pirata, comprobamos el valor de habitación a la que se movería el pirata según la dirección calculada al azar y almacenada en probabilidadMovimiento. Sólo realizaremos las siguientes acciones (que se explicarán a continuación) si este valor es mayor de 2. ¿Por qué esto es así? Porque si valiera 0, sería un movimento incorrecto (no hay habitación en esa dirección), y los valores 1 y 2 se corresponden con las habitaciones del juego situadas fuera de la taberna, por donde habíamos acordado anteriormente que el pirata no se podría mover.</p>
-<p>Si esta condición se cumple, se ejecutará el siguiente trozo de código:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Dentro de la habitaciÃ³n correspondiente en el array de habitaciones cuyo Ã­ndice se
+                                corresponde con la localizaciÃ³n del pirata, comprobamos el valor de habitaciÃ³n a la que
+                                se moverÃ­a el pirata segÃºn la direcciÃ³n calculada al azar y almacenada en
+                                probabilidadMovimiento. SÃ³lo realizaremos las siguientes acciones (que se explicarÃ¡n a
+                                continuaciÃ³n) si este valor es mayor de 2. Â¿Por quÃ© esto es asÃ­? Porque si valiera 0,
+                                serÃ­a un movimento incorrecto (no hay habitaciÃ³n en esa direcciÃ³n), y los valores 1 y 2
+                                se corresponden con las habitaciones del juego situadas fuera de la taberna, por donde
+                                habÃ­amos acordado anteriormente que el pirata no se podrÃ­a mover.</p>
+                            <p>Si esta condiciÃ³n se cumple, se ejecutarÃ¡ el siguiente trozo de cÃ³digo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
   localizacionPirata =
     habitaciones[localizacionPirata].direcciones[probabilidadMovimiento]-1;
   if (localizacionAnterior != localizacionPirata)
@@ -175,14 +255,32 @@ int movimientoPirata(int localizacionPirata, THabitacion habitaciones[],
     }
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Primero hacemos que la nueva localización del pirata sea a la que se movería según la dirección calculada al azar (restamos uno, porque el array direcciones almacena identificadores de habitación, no índices dentro del array de habitaciones). Lo siguiente es informar al jugador de que el pirata ha entrado o ha salido de la habitación en la que actualmente se encuentra. Como el pirata se ha movido, si la habitación actual del pirata es la misma que la del jugador, eso quiere decir que el pirata ha entrado en la misma habitación en la que estaba el jugador, por lo que mostramos el mensaje adecuado. Por otra parte, como el pirata se ha movido, si la localización anterior del pirata era igual a la habitación en la que se encuentra el jugador, eso quiere decir que el pirata ha salido de esa habitación, por lo que mostramos un mensaje indicando hacia donde ha salido, según el valor aleatorio de probabilidadMovimiento.</p>
-<p>Lo último que hace la función es devolver el valor de localizacionPirata, tanto si ha cambiado como si no.</p>
-<p>Si ahora probáramos nuestra aventura, todavía no pasaría nada, porque no hemos incluido esta función en ningún lugar del código de main. Parece claro que si queremos determinar si el pirata se mueve después de cada movimiento del jugador, deberíamos llamar a esta función dentro del intérprete de órdenes, pero... ¿dónde?. Un buen lugar sería justo al comienzo de dicho intérprete de órdenes (el código en rojo es código nuevo):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Primero hacemos que la nueva localizaciÃ³n del pirata sea a la que se moverÃ­a segÃºn la
+                                direcciÃ³n calculada al azar (restamos uno, porque el array direcciones almacena
+                                identificadores de habitaciÃ³n, no Ã­ndices dentro del array de habitaciones). Lo
+                                siguiente es informar al jugador de que el pirata ha entrado o ha salido de la
+                                habitaciÃ³n en la que actualmente se encuentra. Como el pirata se ha movido, si la
+                                habitaciÃ³n actual del pirata es la misma que la del jugador, eso quiere decir que el
+                                pirata ha entrado en la misma habitaciÃ³n en la que estaba el jugador, por lo que
+                                mostramos el mensaje adecuado. Por otra parte, como el pirata se ha movido, si la
+                                localizaciÃ³n anterior del pirata era igual a la habitaciÃ³n en la que se encuentra el
+                                jugador, eso quiere decir que el pirata ha salido de esa habitaciÃ³n, por lo que
+                                mostramos un mensaje indicando hacia donde ha salido, segÃºn el valor aleatorio de
+                                probabilidadMovimiento.</p>
+                            <p>Lo Ãºltimo que hace la funciÃ³n es devolver el valor de localizacionPirata, tanto si ha
+                                cambiado como si no.</p>
+                            <p>Si ahora probÃ¡ramos nuestra aventura, todavÃ­a no pasarÃ­a nada, porque no hemos incluido
+                                esta funciÃ³n en ningÃºn lugar del cÃ³digo de main. Parece claro que si queremos determinar
+                                si el pirata se mueve despuÃ©s de cada movimiento del jugador, deberÃ­amos llamar a esta
+                                funciÃ³n dentro del intÃ©rprete de Ã³rdenes, pero... Â¿dÃ³nde?. Un buen lugar serÃ­a justo al
+                                comienzo de dicho intÃ©rprete de Ã³rdenes (el cÃ³digo en rojo es cÃ³digo nuevo):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 escribirDescripcion(habitaciones,habitacion,objetos);
 while (final == 0)
 {
@@ -192,13 +290,22 @@ while (final == 0)
   printf("Que hago ahora? - ");
   gets comando;
 </pre>
-    </p></td></tr>
-</table>
-<p>Evidentemente, el valor devuelto por movimientoPirata deberá ser almacenado en la variable localizacionPirata para que los cambios tengan lugar. Si ahora jugamos nuestra aventura podremos ver como a veces se nos informará de las entradas o salidas del pirata, pero no sabremos nunca a ciencia cierta donde se encuentra... falta un detalle... que se nos indique que el pirata se encuentra en la misma habitación que nosotros en el caso de que esto sea así, aunque no se mueva.</p>
-<p>Por lo tanto, al final de la función escribirDescripción, que mostraba por pantalla la descripción de la habitación en la que nos encontrábamos, debemos añadir las líneas en rojo:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Evidentemente, el valor devuelto por movimientoPirata deberÃ¡ ser almacenado en la
+                                variable localizacionPirata para que los cambios tengan lugar. Si ahora jugamos nuestra
+                                aventura podremos ver como a veces se nos informarÃ¡ de las entradas o salidas del
+                                pirata, pero no sabremos nunca a ciencia cierta donde se encuentra... falta un
+                                detalle... que se nos indique que el pirata se encuentra en la misma habitaciÃ³n que
+                                nosotros en el caso de que esto sea asÃ­, aunque no se mueva.</p>
+                            <p>Por lo tanto, al final de la funciÃ³n escribirDescripciÃ³n, que mostraba por pantalla la
+                                descripciÃ³n de la habitaciÃ³n en la que nos encontrÃ¡bamos, debemos aÃ±adir las lÃ­neas en
+                                rojo:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 if (hayObjetos == 0)
   printf(" nada");
 printf("\n\n");
@@ -206,46 +313,91 @@ printf("\n\n");
   printf("El pirata esta aqui.\n\n");</font>
 
 </pre>
-    </p></td></tr>
-</table>
-<p>Simplemente comprobamos si la localización actual del pirata se corresponde con la habitación en la que se encuentra actualmente el jugador, y en caso de que sea así, se muestra un mensaje por pantalla. Introducir este cambio implica pasar un nuevo parámetro a la función escribirDescripción:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Simplemente comprobamos si la localizaciÃ³n actual del pirata se corresponde con la
+                                habitaciÃ³n en la que se encuentra actualmente el jugador, y en caso de que sea asÃ­, se
+                                muestra un mensaje por pantalla. Introducir este cambio implica pasar un nuevo parÃ¡metro
+                                a la funciÃ³n escribirDescripciÃ³n:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 void escribirDescripcion(THabitacion habitaciones, int habitacion,
   TObjeto objetos<font color="red">, int localizacionPirata</font>)
 </pre>
-    </p></td></tr>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
 
-<p>Y por supuesto, añadir este nuevo parámetro a todas las llamadas a la función que se hagan dentro de main(). Si jugamos ya tendremos un pirata autista moviéndose por nuestro mundo, incapaz de comunicarse con nosotros y que no reacciona ante ninguna de nuestras acciones. Las siguientes dos secciones tratarán de cambiar esto.</p>
+                            <p>Y por supuesto, aÃ±adir este nuevo parÃ¡metro a todas las llamadas a la funciÃ³n que se
+                                hagan dentro de main(). Si jugamos ya tendremos un pirata autista moviÃ©ndose por nuestro
+                                mundo, incapaz de comunicarse con nosotros y que no reacciona ante ninguna de nuestras
+                                acciones. Las siguientes dos secciones tratarÃ¡n de cambiar esto.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk5_1.png" width="328" height="290"  alt="El pirata es muy juguetón y no para de moverse..." />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">El pirata es muy juguetón y no para de moverse...</td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk5_1.png" width="328" height="290"
+                                             alt="El pirata es muy juguetÃ³n y no para de moverse..."/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">El pirata es muy juguetÃ³n y no para de
+                                        moverse...
+                                    </td>
+                                </tr>
 
-</table>
+                            </table>
 
-<p><b>INTERACTUANDO CON EL PIRATA</b></p>
-<p>Dar la capacidad al jugador de hablar con los PSI es algo complicado, pues sería necesario implementar un analizador sintáctico que permitiera al juego interpretar las palabras del jugador. Sería como un intérprete de comandos dentro del intérprete de comandos, pero algo más complicado. Esto, desde luego, queda fuera del objetivo de este artículo. Sin embargo, puede ser interesante indicar el comienzo del camino a seguir para que sea el propio lector el que pueda añadir esta funcionalidad de forma elaborada a su aventura, y a la vez hacer un par de anotaciones sobre características de las cadenas en z88dk.</p>
-<p>Vamos a hacer que el jugador le pueda decir cosas al pirata, pero que éste sólo entienda la palabra "ayuda". Si el jugador dice "ayuda" al pirata, éste le dirá qué es lo que tiene que hacer para terminar el juego (vencerle con la espada). Si el jugador dice cualquier otra cosa, el pirata no le entenderá. Como en la mayoría de las aventuras, el jugador deberá teclear algo similar a lo siguiente para poder decirle algo a un PSI:</p>
-<p>
-<pre>
+                            <p><b>INTERACTUANDO CON EL PIRATA</b></p>
+                            <p>Dar la capacidad al jugador de hablar con los PSI es algo complicado, pues serÃ­a
+                                necesario implementar un analizador sintÃ¡ctico que permitiera al juego interpretar las
+                                palabras del jugador. SerÃ­a como un intÃ©rprete de comandos dentro del intÃ©rprete de
+                                comandos, pero algo mÃ¡s complicado. Esto, desde luego, queda fuera del objetivo de este
+                                artÃ­culo. Sin embargo, puede ser interesante indicar el comienzo del camino a seguir
+                                para que sea el propio lector el que pueda aÃ±adir esta funcionalidad de forma elaborada
+                                a su aventura, y a la vez hacer un par de anotaciones sobre caracterÃ­sticas de las
+                                cadenas en z88dk.</p>
+                            <p>Vamos a hacer que el jugador le pueda decir cosas al pirata, pero que Ã©ste sÃ³lo entienda
+                                la palabra "ayuda". Si el jugador dice "ayuda" al pirata, Ã©ste le dirÃ¡ quÃ© es lo que
+                                tiene que hacer para terminar el juego (vencerle con la espada). Si el jugador dice
+                                cualquier otra cosa, el pirata no le entenderÃ¡. Como en la mayorÃ­a de las aventuras, el
+                                jugador deberÃ¡ teclear algo similar a lo siguiente para poder decirle algo a un PSI:</p>
+                            <p>
+                            <pre>
 	decir "frase"
 </pre>
-</p>
-<p>Como sólo hay un PSI en nuestra aventura vamos a obviar el 'decir a', de forma que todo será más sencillo. De todas formas, si nos fijamos, lo que dice el jugador se encuentra entre comillas. Cuando tengamos que analizar el comando introducido por el jugador en el intérprete de comandos, tendremos que hacer uso de cadenas que almacenan comillas en su interior... ¿cómo podemos hacer esto sin que nos dé un error?. Si nosotros tecleamos en un programa <i>printf(""hola"");</i> esperando que la salida sea <i>"hola"</i>, nos llevaremos un chasco porque no funcionará. Deberemos hacer uso de las <i>secuencias de escape</i>.</p>
+                            </p>
+                            <p>Como sÃ³lo hay un PSI en nuestra aventura vamos a obviar el 'decir a', de forma que todo
+                                serÃ¡ mÃ¡s sencillo. De todas formas, si nos fijamos, lo que dice el jugador se encuentra
+                                entre comillas. Cuando tengamos que analizar el comando introducido por el jugador en el
+                                intÃ©rprete de comandos, tendremos que hacer uso de cadenas que almacenan comillas en su
+                                interior... Â¿cÃ³mo podemos hacer esto sin que nos dÃ© un error?. Si nosotros tecleamos en
+                                un programa <i>printf(""hola"");</i> esperando que la salida sea <i>"hola"</i>, nos
+                                llevaremos un chasco porque no funcionarÃ¡. Deberemos hacer uso de las <i>secuencias de
+                                    escape</i>.</p>
 
-<p>En realidad, en entregas anteriores ya hemos hecho uso de algunas secuencias de escape (por ejemplo, \n ó \0). Una secuencia de escape es un símbolo de barra invertida \ seguido de un carácter. Su misión es introducir un carácter especial dentro de una cadena. Por ejemplo, la secuencia de escape \n introduce un salto de línea en la cadena, la secuencia de escape \a (en C estándar) hace sonar un pitido, etc. Si queremos introducir unas comillas dentro de una cadena para que formen parte de esa cadena (y no se interpreten como delimitador de la misma), deberemos hacer uso de la secuencia de escape \". De esta forma, si quisiéramos escribir <i>"hola"</i> por pantalla, la instrucción que debemos incluir en nuestro programa podría ser <i>printf("\"hola\"")</i>. El primer y último carácter de comillas son los delimitadores de la cadena, mientras que los símbolos de comillas precedidos por \ se escribirán por pantalla.</p>
-<p>Dicho esto ya podemos introducir en nuestro intérprete de comandos las sentencias adecuadas para que el jugador pueda dialogar (de forma limitada) con el pirata. Introducimos el siguiente código justo después del comando "apagar antorcha" y justo antes de los comandos de más de una palabra (el código en rojo es el que se introduce):</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>En realidad, en entregas anteriores ya hemos hecho uso de algunas secuencias de escape
+                                (por ejemplo, \n Ã³ \0). Una secuencia de escape es un sÃ­mbolo de barra invertida \
+                                seguido de un carÃ¡cter. Su misiÃ³n es introducir un carÃ¡cter especial dentro de una
+                                cadena. Por ejemplo, la secuencia de escape \n introduce un salto de lÃ­nea en la cadena,
+                                la secuencia de escape \a (en C estÃ¡ndar) hace sonar un pitido, etc. Si queremos
+                                introducir unas comillas dentro de una cadena para que formen parte de esa cadena (y no
+                                se interpreten como delimitador de la misma), deberemos hacer uso de la secuencia de
+                                escape \". De esta forma, si quisiÃ©ramos escribir <i>"hola"</i> por pantalla, la
+                                instrucciÃ³n que debemos incluir en nuestro programa podrÃ­a ser <i>printf("\"hola\"")</i>.
+                                El primer y Ãºltimo carÃ¡cter de comillas son los delimitadores de la cadena, mientras que
+                                los sÃ­mbolos de comillas precedidos por \ se escribirÃ¡n por pantalla.</p>
+                            <p>Dicho esto ya podemos introducir en nuestro intÃ©rprete de comandos las sentencias
+                                adecuadas para que el jugador pueda dialogar (de forma limitada) con el pirata.
+                                Introducimos el siguiente cÃ³digo justo despuÃ©s del comando "apagar antorcha" y justo
+                                antes de los comandos de mÃ¡s de una palabra (el cÃ³digo en rojo es el que se
+                                introduce):</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
  }
 <font color="red"> else if (localizacionPirata == habitacion)
  // comandos del pirata
@@ -268,34 +420,62 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion,
  }</font>
 
  else
- // Comandos con más de una palabra
+ // Comandos con mÃ¡s de una palabra
  {
 </pre>
-    </p></td></tr>
-</table>
-<p>Para entrar en esta parte del código e interpretar los comandos introducidos por el jugador relacionados con el pirata, deberemos comprobar que el pirata y el jugador se encuentran en la misma habitación. En caso de que no sea así, no se entrará en esta parte del código y se mostrará el típico mensaje de error cuando se introduce un comando incorrecto. De esta forma, si el jugador introdujera alguno de los comandos relacionados con el pirata sin haber descubierto previamente su existencia, no se le dará ninguna pista sobre ello.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Para entrar en esta parte del cÃ³digo e interpretar los comandos introducidos por el
+                                jugador relacionados con el pirata, deberemos comprobar que el pirata y el jugador se
+                                encuentran en la misma habitaciÃ³n. En caso de que no sea asÃ­, no se entrarÃ¡ en esta
+                                parte del cÃ³digo y se mostrarÃ¡ el tÃ­pico mensaje de error cuando se introduce un comando
+                                incorrecto. De esta forma, si el jugador introdujera alguno de los comandos relacionados
+                                con el pirata sin haber descubierto previamente su existencia, no se le darÃ¡ ninguna
+                                pista sobre ello.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk5_2.png" width="328" height="290"  alt="El pirata parece un poco tonto, pero sabe más de lo que dice..." />
-</td>
-	</tr>
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk5_2.png" width="328" height="290"
+                                             alt="El pirata parece un poco tonto, pero sabe mÃ¡s de lo que dice..."/>
+                                    </td>
+                                </tr>
 
-	<tr>
-		<td class="piefoto" align="right">El pirata parece un poco tonto, pero sabe más de lo que dice...</td>
-	</tr>
-</table>
+                                <tr>
+                                    <td class="piefoto" align="right">El pirata parece un poco tonto, pero sabe mÃ¡s de
+                                        lo que dice...
+                                    </td>
+                                </tr>
+                            </table>
 
-<p>Haciendo uso de <i>strtok</i> (cuya explicación se realizó en la entrega anterior), comprobamos si la primera palabra del comando del jugador es <i>decir</i>. En caso de que sea así, tratamos de analizar qué es lo que ha dicho el jugador. Usando <i>strtok</i> de nuevo extraemos el resto del comando introducido del jugador, y lo comparamos con la cadena "ayuda" (haciendo uso de la secuencia de escape \" para poder introducir comillas dentro de la cadena). En caso de que el jugador haya dicho exactamente eso, el pirata le dará la pista que necesita. En caso contrario, el pirata ignorará al jugador.</p>
+                            <p>Haciendo uso de <i>strtok</i> (cuya explicaciÃ³n se realizÃ³ en la entrega anterior),
+                                comprobamos si la primera palabra del comando del jugador es <i>decir</i>. En caso de
+                                que sea asÃ­, tratamos de analizar quÃ© es lo que ha dicho el jugador. Usando
+                                <i>strtok</i> de nuevo extraemos el resto del comando introducido del jugador, y lo
+                                comparamos con la cadena "ayuda" (haciendo uso de la secuencia de escape \" para poder
+                                introducir comillas dentro de la cadena). En caso de que el jugador haya dicho
+                                exactamente eso, el pirata le darÃ¡ la pista que necesita. En caso contrario, el pirata
+                                ignorarÃ¡ al jugador.</p>
 
-<p>Como se puede comprobar, el pirata no es un hombre de muchas palabras. De todas formas, con esto quedan sentadas las bases para una posible ampliación de su vocabulario (lo cual se deja como ejercicio al lector).</p>
-<p><b>FINALIZANDO NUESTRA AVENTURA</b></p>
-<p>Por último vamos a permitir que Guybrush llegue a ser pirata. Para ello, vamos a introducir las modificaciones necesarias en el intérprete de comandos para que se pueda finalizar la aventura. </p>
-<p>Como le dice el pirata a Guybrush si éste le pide ayuda, para poder llegar a ser un pirata de verdad deberá vencerle con la espada. Pero no es tan fácil, pues el pirata es un hábil espadachín que sólo podrá ser vencido si está ebrio. Por lo tanto, para finalizar la aventura, Guybrush deberá darle al pirata la jarra de grog que lleva desde el inicio de la aventura para que éste se emborrache, y luchar o pelear con la espada.</p>
-<p>El código que debemos introducir en el intérprete de comandos, y dentro de la parte correspondiente a los comandos relacionados con el pirata, es el siguiente:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Como se puede comprobar, el pirata no es un hombre de muchas palabras. De todas formas,
+                                con esto quedan sentadas las bases para una posible ampliaciÃ³n de su vocabulario (lo
+                                cual se deja como ejercicio al lector).</p>
+                            <p><b>FINALIZANDO NUESTRA AVENTURA</b></p>
+                            <p>Por Ãºltimo vamos a permitir que Guybrush llegue a ser pirata. Para ello, vamos a
+                                introducir las modificaciones necesarias en el intÃ©rprete de comandos para que se pueda
+                                finalizar la aventura. </p>
+                            <p>Como le dice el pirata a Guybrush si Ã©ste le pide ayuda, para poder llegar a ser un
+                                pirata de verdad deberÃ¡ vencerle con la espada. Pero no es tan fÃ¡cil, pues el pirata es
+                                un hÃ¡bil espadachÃ­n que sÃ³lo podrÃ¡ ser vencido si estÃ¡ ebrio. Por lo tanto, para
+                                finalizar la aventura, Guybrush deberÃ¡ darle al pirata la jarra de grog que lleva desde
+                                el inicio de la aventura para que Ã©ste se emborrache, y luchar o pelear con la
+                                espada.</p>
+                            <p>El cÃ³digo que debemos introducir en el intÃ©rprete de comandos, y dentro de la parte
+                                correspondiente a los comandos relacionados con el pirata, es el siguiente:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 else if (localizacionPirata == habitacion)
 // comandos del pirata
 {
@@ -347,14 +527,19 @@ else if (localizacionPirata == habitacion)
       {
         strcpy(palabra,strtok(0,"\0"));
 </pre>
-    </p></td></tr>
-</table>
-<p>Se ha añadido código para interpretar dos comandos: <i>dar jarra a pirata</i> y <i>luchar con pirata</i> (o <i>pelear con pirata</i> (Siempre sería deseable que el jugador pudiera utilizar sinónimos para las acciones que deba realizar). Vamos a analizar cada una de estas partes por separado.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Se ha aÃ±adido cÃ³digo para interpretar dos comandos: <i>dar jarra a pirata</i> y <i>luchar
+                                con pirata</i> (o <i>pelear con pirata</i> (Siempre serÃ­a deseable que el jugador
+                                pudiera utilizar sinÃ³nimos para las acciones que deba realizar). Vamos a analizar cada
+                                una de estas partes por separado.</p>
 
-<p>Con respecto al código para dar la jarra al pirata:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Con respecto al cÃ³digo para dar la jarra al pirata:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 if (!strcmp(comando,"dar jarra a pirata"))
 {
   if (objetos[1].localizacion == -1)
@@ -370,14 +555,27 @@ if (!strcmp(comando,"dar jarra a pirata"))
   }
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>Comenzamos por comprobar si el jugador tiene la jarra en el inventario (que el objeto 1, la jarra, tiene -1 como valor de localización, lo cual quiere decir que está en el inventario del jugador). En el caso de que sea así, mostramos tres mensajes de texto con printf informando al jugador de la nueva situación ebria del pirata. Entre mensaje y mensaje, para añadir mayor dramatismo, se hace uso de la función sleep (que forma parte de stdlib.h). El parámetro de sleep indica el número de segundos que se detendrá la aplicación. Lo siguiente es darle el valor de 1 a la variable borrachoPirata, almacenando el estado de embriaguez del mismo. Por último, hacemos que la localización de la jarra sea -2 (con lo cual no está en el inventario del jugador, y tampoco en ninguna de las habitaciones: es imposible que el jugador vuelva a encontrase con la jarra) y le restamos su peso al peso transportado por el jugador. La jarra está 'destruida' y no podrá volver a utilizarse en la aventura.</p>
-<p>Y con respecto al código de la espada:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Comenzamos por comprobar si el jugador tiene la jarra en el inventario (que el objeto 1,
+                                la jarra, tiene -1 como valor de localizaciÃ³n, lo cual quiere decir que estÃ¡ en el
+                                inventario del jugador). En el caso de que sea asÃ­, mostramos tres mensajes de texto con
+                                printf informando al jugador de la nueva situaciÃ³n ebria del pirata. Entre mensaje y
+                                mensaje, para aÃ±adir mayor dramatismo, se hace uso de la funciÃ³n sleep (que forma parte
+                                de stdlib.h). El parÃ¡metro de sleep indica el nÃºmero de segundos que se detendrÃ¡ la
+                                aplicaciÃ³n. Lo siguiente es darle el valor de 1 a la variable borrachoPirata,
+                                almacenando el estado de embriaguez del mismo. Por Ãºltimo, hacemos que la localizaciÃ³n
+                                de la jarra sea -2 (con lo cual no estÃ¡ en el inventario del jugador, y tampoco en
+                                ninguna de las habitaciones: es imposible que el jugador vuelva a encontrase con la
+                                jarra) y le restamos su peso al peso transportado por el jugador. La jarra estÃ¡
+                                'destruida' y no podrÃ¡ volver a utilizarse en la aventura.</p>
+                            <p>Y con respecto al cÃ³digo de la espada:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 else if (!strcmp(comando,"luchar con pirata") || !strcmp(comando,"pelear con pirata"))
 {
   if (objetos[0].localizacion == -1)
@@ -404,106 +602,124 @@ else if (!strcmp(comando,"luchar con pirata") || !strcmp(comando,"pelear con pir
   }
 }
 </pre>
-    </p></td></tr>
-</table>
-<p>Primero comprobamos si la espada está en el inventario del jugador (si el valor de localización del objeto 0, correspondiente a la espada, es -1). En el caso de que sea así, se comprueba si el pirata está borracho, según el valor de la variable borrachoPirata. Si vale 0, el pirata no está borracho, por lo que mostramos simplemente un mensaje de texto indicando que al estar sobrio el pirata vence al jugador sin dificultades.</p>
-<p>En el caso contrario, la variable valdrá 1 y el pirata estará borracho. Le damos a la variable final el valor 1, indicando que el juego ha terminado. Si recordamos el código, veremos que al principio del intérprete de comandos había una sentencia while que hacía ejecutarse este intérprete hasta que el valor de la variable final cambiara. Pues bien, por fin podremos terminar la avenura. Lo siguiente es mostrar unos cuantos mensajes con printf, enfatizando con sleep, relatando la tremenda lucha con el pirata. Para el último mensaje, el de felicitación, se deja una espera más larga, para añadir algo de tensión escénica.</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Primero comprobamos si la espada estÃ¡ en el inventario del jugador (si el valor de
+                                localizaciÃ³n del objeto 0, correspondiente a la espada, es -1). En el caso de que sea
+                                asÃ­, se comprueba si el pirata estÃ¡ borracho, segÃºn el valor de la variable
+                                borrachoPirata. Si vale 0, el pirata no estÃ¡ borracho, por lo que mostramos simplemente
+                                un mensaje de texto indicando que al estar sobrio el pirata vence al jugador sin
+                                dificultades.</p>
+                            <p>En el caso contrario, la variable valdrÃ¡ 1 y el pirata estarÃ¡ borracho. Le damos a la
+                                variable final el valor 1, indicando que el juego ha terminado. Si recordamos el cÃ³digo,
+                                veremos que al principio del intÃ©rprete de comandos habÃ­a una sentencia while que hacÃ­a
+                                ejecutarse este intÃ©rprete hasta que el valor de la variable final cambiara. Pues bien,
+                                por fin podremos terminar la avenura. Lo siguiente es mostrar unos cuantos mensajes con
+                                printf, enfatizando con sleep, relatando la tremenda lucha con el pirata. Para el Ãºltimo
+                                mensaje, el de felicitaciÃ³n, se deja una espera mÃ¡s larga, para aÃ±adir algo de tensiÃ³n
+                                escÃ©nica.</p>
 
-<table border="0" cellspacing="0" cellpadding="2" width="328">
-	<tr align="right">
-		<td><img src="img/z88dk5_3.png" width="328" height="290"  alt="No había presupuesto para un final más espectacular" />
-</td>
+                            <table border="0" cellspacing="0" cellpadding="2" width="328">
+                                <tr align="right">
+                                    <td><img src="img/z88dk5_3.png" width="328" height="290"
+                                             alt="No habÃ­a presupuesto para un final mÃ¡s espectacular"/>
+                                    </td>
 
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">No había presupuesto para un final más espectacular</td>
-	</tr>
-</table>
+                                </tr>
+                                <tr>
+                                    <td class="piefoto" align="right">No habÃ­a presupuesto para un final mÃ¡s
+                                        espectacular
+                                    </td>
+                                </tr>
+                            </table>
 
-<p>¡Y ya está! Tenemos una aventura simple pero completa, que puede ser terminada por un jugador avispado.</p>
-<p><b>RESUMEN</b></p>
-<p>Durante estos tres artículos hemos desarrollado una sencilla aventura conversacional, con el objetivo de mostrar las características de las herramientas de texto de z88dk. Los resultados son poco espectaculares, pero hemos conseguido meter la cabeza y perder el miedo.</p>
+                            <p>Â¡Y ya estÃ¡! Tenemos una aventura simple pero completa, que puede ser terminada por un
+                                jugador avispado.</p>
+                            <p><b>RESUMEN</b></p>
+                            <p>Durante estos tres artÃ­culos hemos desarrollado una sencilla aventura conversacional, con
+                                el objetivo de mostrar las caracterÃ­sticas de las herramientas de texto de z88dk. Los
+                                resultados son poco espectaculares, pero hemos conseguido meter la cabeza y perder el
+                                miedo.</p>
 
-<p>Lo que se habrá podido comprobar es que estas herramientas de texto son lentas. Esto quiere decir que solo se podrían utilizar con aplicaciones o juegos exclusivamente basados en texto. Para otro tipo de juegos, deberemos emplear otras técnicas, que iremos viendo conforme se presenten más entregas de z88dk.</p>
-<p>¿Y a partir de ahora qué? Empezaremos a trabajar con conceptos gráficos y crear juegos más 'bonitos' visualmente. Veremos de qué capacidades hace gala z88dk para poder programar juegos de Spectrum en C. Pero todo esto, a partir del siguiente número...</p>
-<div align="left">
-<p>
-<b>LINKS</b>
-</p>
-<ul>
-    <li><a href="src/fuentes.zip" onClick="window.open(this.href); return false;">Archivos fuente del ejemplo propuesto (fuentes.zip)</a></li>
-</ul>
-</div>
-        </td>
-
-    </tr>
-    <tr>
-        <td align="right"><br><br>SIEW</td>
-    </tr>
-</table>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html" selected>Programación Z88DK</option>
-
-        <option value="input.html">INPUT</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
+                            <p>Lo que se habrÃ¡ podido comprobar es que estas herramientas de texto son lentas. Esto
+                                quiere decir que solo se podrÃ­an utilizar con aplicaciones o juegos exclusivamente
+                                basados en texto. Para otro tipo de juegos, deberemos emplear otras tÃ©cnicas, que iremos
+                                viendo conforme se presenten mÃ¡s entregas de z88dk.</p>
+                            <p>Â¿Y a partir de ahora quÃ©? Empezaremos a trabajar con conceptos grÃ¡ficos y crear juegos
+                                mÃ¡s 'bonitos' visualmente. Veremos de quÃ© capacidades hace gala z88dk para poder
+                                programar juegos de Spectrum en C. Pero todo esto, a partir del siguiente nÃºmero...</p>
+                            <div align="left">
+                                <p>
+                                    <b>LINKS</b>
+                                </p>
+                                <ul>
+                                    <li><a href="src/fuentes.zip" onClick="window.open(this.href); return false;">Archivos
+                                        fuente del ejemplo propuesto (fuentes.zip)</a></li>
+                                </ul>
+                            </div>
                     </td>
                 </tr>
                 <tr>
-
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
-
+                    <td align="right"><br><br>SIEW</td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
 
-    </body>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html" selected>ProgramaciÃ³n Z88DK</option>
+
+                                <option value="input.html">INPUT</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('input.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

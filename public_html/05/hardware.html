@@ -1,735 +1,778 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html" selected>Hardware</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
-</td>
-
-            <td align="center" class="texto">Número 5 - Enero 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
-	<tr>
-		<td>
-<div align="justify">
-<p>
-Este artículo viene a recoger el testigo que lanzamos en el número inaugural
-de Magazine ZX, al presentar una forma sencilla de conectar una disquetera
-de 3,5 pulgadas a nuestro Spectrum +3, de modo que pudiéramos trabajar
-cómodamente con disquetes de dicho tamaño, muy comunes (todo lo contrario
-que los originales de 3 pulgadas). En esta ocasión, se muestra una manera muy
-elegante y profesional, de la mano de BERNARDO IBORRA, de sustituir
-la disquetera interna de 3 pulgadas por una de 3,5.
-</p>
-<p align="center"><font size="4">CONSTRUCCIÓN DE UN SPECTRUM + 3,5.</font></p>
-<p>
-<i>El tiempo pasa y nuestros queridos Spectrums se hacen viejos y en ocasiones
-dejan de funcionar total o parcialmente. Hace muchos años que los fabricantes dejaron
-de producir piezas de recambio y a veces resulta muy complicado encontrarlas. Otras
-veces, lo que queremos es dotar al Spectrum de nuevas prestaciones sobre todo en
-comunicaciones y almacenamiento de datos. Aquí veremos cómo sustituir la
-disquetera de 3 pulgadas interna del Spectrum +3 por otra de 3,5 pulgadas típica
-del más moderno ordenador de hoy en día.</i>
-
-</p>
-<p>
-A la hora de realizar el montaje diferenciaremos las siguientes partes:
-</p>
-<ul>
-<li>Adquisición y preparación de la disquetera de 3,5 pulgadas.</li>
-<li>Colocación y sujeción de la disquetera en el interior del Spectrum +3.</li>
-<li>Alimentación.</li>
-<li>Conexión de datos.</li>
-</ul>
-<p>
-<b>ADQUISICIÓN Y PREPARACIÓN DE LA DISQUETERA DE 3,5 PULGADAS</b>
-
-</p>
-<p>
-Lo ideal para este montaje sería utilizar una disquetera de doble
-densidad (720 Kbytes) capaz de suministrar la señal READY que necesita la
-controladora del +3. Dado lo complicado que es hoy en día encontrar una unidad de estas
-características, se explicará todo el proceso para una disquetera de alta
-densidad (1.44 MBytes), que podemos encontrar fácilmente en cualquier tienda de
-componentes informáticos y a un precio muy asequible.
-</p>
-<p>
-La disquetera elegida la podemos ver en la <a href="#figura1">Figura 1</a>.
-Se ha elegido una con la parte frontal de color negro a juego con el
-Spectrum. En esta disquetera se pueden usar tanto discos de alta densidad (HD) -
-reconocibles por el orificio situado en la parte inferior derecha - como discos
-de doble densidad (DD) - los que no tienen dicho agujero.
-</p>
-<a name="figura1">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/fdd35a.jpg" width="640" height="458"  alt="Figura 1. Disquetera de 3,5 pulgadas" />
-</td>
-
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 1. Disquetera de 3,5 pulgadas</td>
-	</tr>
-</table>
-
-</a>
-<p>
-También sería ideal utilizar discos DD ya que la controladora de nuestro
-+3 no puede trabajar sin más con discos HD. Pero dado que los discos HD son mucho
-más baratos y fáciles de conseguir, podemos "engañar" a la disquetera tapándole
-el orificio con cinta adhesiva y así que se "crea" que son discos DD. La
-pega es que perdemos la mitad del espacio pero, aun así, tenemos el doble de espacio
-que con un disco de 3".
-</p>
-<p>
-Dado que es muy laborioso poner cinta adhesiva a todos los discos, se ha optado por
-alterar la disquetera para que esto no sea necesario. En la <a href="#figura2">Figura 2</a>
-
-aparece señalado el lugar donde hay un pequeño pulsador que detecta si el disco
-introducido tiene o no orificio. Con un poco de pegamento podemos hacer que este
-pulsador permanezca siempre presionado de forma que todos los discos HD los tome
-como discos DD sin necesidad de cinta adhesiva.
-</p>
-<a name="figura2">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/fdd35b.jpg" width="640" height="391"  alt="Figura 2. Disquetera de 3,5 pulgadas" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 2. Disquetera de 3,5 pulgadas</td>
-
-	</tr>
-</table>
-
-</a>
-<p><b>COLOCACIÓN Y SUJECIÓN DE LA DISQUETERA</b></p>
-<p>
-Aunque parezca increíble, es posible colocar y sujetar la disquetera de 3,5 pulgadas
-en el interior de nuestro Spectrum +3 sin demasiado esfuerzo. Basta con eliminar
-aquellas partes de plástico que nos estorben. Incluso utilizaremos los mismos tornillos
-que sujetan la disquetera original del +3.
-</p>
-<p>
-Empecemos abriendo el +3, desconectando el led, el teclado y retirando la disquetera
-y la placa con cuidado. La carcasa está formada por dos piezas de plástico negro que
-distinguiremos como la superior y la inferior. Tendremos que manipular ambas partes
-para hacer espacio a la nueva disquetera.
-</p>
-<p>
-La parte inferior es la más sencilla. En la <a href="#figura3">Figura 3</a> a la
-izquierda tenemos la carcasa original y señalados los 4 puntos en los que hay que
-"intervenir". Los dos de la izquierda (donde se atornillaba la disquetera original)
-hay que cortarlos en horizontal a ras de la parte superior de la placa. Por suerte,
-el agujero con rosca llega hasta la base y podremos atornillar la nueva disquetera.
-Los dos puntos de la derecha hay que cortarlos en vertical para eliminar un milímetro
-de plástico de la parte izquierda. En la <a href="#figura3">Figura 3</a> a la
-derecha se puede observar la carcasa después de la operación.
-
-</p>
-<a name="figura3">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/boxdown.jpg" width="640" height="330"  alt="Figura 3. Parte inferior de la carcasa antes (izquierda) y después (derecha)" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 3. Parte inferior de la carcasa antes (izquierda) y después (derecha)</td>
-	</tr>
-
-</table>
-
-</a>
-<p>
-Los cortes en la parte superior son casi tan sencillos como en la parte inferior.
-Lo que lo complica es que los cortes son más largos y, por tanto, más difíciles de
-hacer rectos. Aparte de esto, todo es muy sencillo. Mirando la boca de la disquetera
-de frente, los cortes que debemos realizar son: eliminar unos 6 milímetros de
-la parte izquierda y uno de la derecha. En la <a href="#figura4">Figura 4</a>, a
-la izquierda está la carcasa antes de hacer los cortes y a la derecha, después. Observad
-que en el interior del lado izquierdo está el tubo de rosca de uno de los tornillos de
-la base y que hay que refinarlo para dejar espacio a la disquetera
-(<a href="#figura4">Figura 4</a> a la derecha del todo y señalado por una flecha).
-</p>
-<a name="figura4">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/boxup.jpg" width="640" height="174"  alt="Figura 4. Parte superior de la carcasa antes (izquierda) y después (derecha)" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 4. Parte superior de la carcasa antes (izquierda) y después (derecha)</td>
-	</tr>
-</table>
-
-</a>
-<p>
-Para que todo quede más claro, en la <a href="#figura5">Figura 5</a> se muestra de nuevo
-la carcasa original mirando de frente la boca de la disquetera y pintadas de rojo
-aquellas partes que se deben eliminar.
-
-</p>
-<a name="figura5">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/tocut.jpg" width="640" height="207"  alt="Figura 5. Partes que se deben eliminar" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 5. Partes que se deben eliminar</td>
-	</tr>
-
-</table>
-
-</a>
-<p>
-Como curiosidad os pongo en la <a href="#figura6">Figura 6</a> las herramientas
-que se han utilizado para estos cortes. Una sierra de chapa que todos hemos
-usado para realizar manualidades varias en nuestros tiempos de colegiales para los
-cortes largos y un cutter para refinar. Como veis, nada especial. Sólo herramientas
-caseras.
-</p>
-<a name="figura6">
-
-<table border="0" cellspacing="0" cellpadding="2" width="480">
-	<tr align="right">
-		<td><img src="img/tools.jpg" width="480" height="445"  alt="Figura 6. Herramientas necesarias" />
-</td>
-
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 6. Herramientas necesarias</td>
-	</tr>
-</table>
-
-</a>
-<p>
-Una vez preparada la carcasa llega el momento de colocar la disquetera. Para
-ello se ha empleado la pieza metálica que aparece en la <a href="#figura7">Figura 7</a>.
-La que aparece en la foto pertenece a un Amstrad CPC. Esta pieza es la que sujeta la
-disquetera de 3 pulgadas a la carcasa en el interior del CPC. La equivalente
-del +3 es más corta, pero también puede servir. La razón por la que se ha hecho uso de
-la pieza del CPC en lugar de la del +3 es sencillamente porque el +3 que se ha
-emplado para el montaje llevaba esa pieza en lugar de la típica del +3.
-</p>
-
-<a name="figura7">
-
-<table border="0" cellspacing="0" cellpadding="2" width="200">
-	<tr align="right">
-		<td><img src="img/lmetal.jpg" width="200" height="87"  alt="Figura 7. Pieza de sujeción de la disquetera" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 7. Pieza de sujeción de la disquetera</td>
-	</tr>
-
-</table>
-
-</a>
-<p>
-No obstante, se van a explicar ambos casos. Si la pieza la obtenéis de un CPC hay
-que hacerle lo siguiente: tal cual estaba situada originalmente la giráis 180 grados
-respecto a su eje longitudinal. De esta forma los orificios que quedan en el lado
-vertical los usaremos para atornillar la disquetera. Tal como la vemos en la foto,
-hay que cortarle del lado izquierdo aproximadamente un centímetro para que no
-tape el orificio de uno de los tornillos que sujetan las dos partes de la carcasa y
-hacerle en el lado horizontal dos agujeros que coincidan con los tubos de rosca
-que hemos cortado anteriormente.
-</p>
-<p>
-Si la pieza es la original de un +3, hay que hacer más o menos lo mismo. La
-giramos 180 grados. No cortamos nada. Los orificios del lado horizontal los aprovechamos
-para sujetar la pieza a la carcasa y en el lado vertical practicamos dos orificios para
-sujetar la disquetera.
-</p>
-<p>
-Esta vez ha habido que pedir ayuda externa para poder hacer los agujeros en el metal.
-Al carecer de taladradora apropiada, hubo que acudir a casa de un vecino (que tiene un
-taller de motos) y asunto arreglado. Seguro que todos conocéis un taller de confianza
-donde os puedan hacer el favor. En el peor caso podemos recurrir a una de esas
-grandes superficies de material de bricolaje.
-</p>
-<p>
-Bueno, una vez preparada la pieza procedemos a ensamblarlo todo. En la
-<a href="#figura8">Figura 8</a> vemos distintas imágenes que muestran el ensamblado.
-Primero atornillamos la placa a la carcasa. Luego colocamos la lámina de plástico para
-evitar que la disquetera y la pieza de sujeción hagan contactos indeseados sobre
-las pistas de la placa. A continuación atornillamos la pieza de sujeción a
-la carcasa. También atornillamos el cablecillo que conectará a la disquetera con masa.
-El primer extremo del cablecillo debemos ponerlo entre la placa y la lámina de
-plástico y el tornillo encima del plástico. Finalmente atornillamos la disquetera a
-la pieza de sujeción. En uno de los tornillos colocamos el otro extremo del cablecillo
-y ya tenemos la disquetera montada.
-
-</p>
-<a name="figura8">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/board.jpg" width="640" height="519"  alt="Figura 8. Ensamblado de la disquetera en el interior del Spectrum +3" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 8. Ensamblado de la disquetera en el interior del Spectrum +3</td>
-	</tr>
-
-</table>
-
-</a>
-<p><b>ALIMENTACIÓN</b></p>
-<p>
-Ésta es la parte más sencilla de todo el montaje. Lo único que hay que hacer es
-coger el cable de alimentación de la disquetera de 3" e intercambiar los
-cables rojo y naranja. Cada uno de los cables está sujeto al conector mediante una lengüeta
-de plástico. Si la levantamos ligeramente el cable queda libre y podremos extraerlo para
-colocarlo en su nueva posición. En la <a href="#figura9">Figura 9</a> puede verse el
-conector con los cables rojo y naranja intercambiados.
-</p>
-<a name="figura9">
-
-<table border="0" cellspacing="0" cellpadding="2" width="550">
-	<tr align="right">
-		<td><img src="img/power.jpg" width="550" height="569"  alt="Figura 9. Alimentación de la disquetera" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 9. Alimentación de la disquetera</td>
-	</tr>
-</table>
-
-</a>
-<p><b>CONEXIÓN DE DATOS</b></p>
-<p>
-Llegamos a la parte más compleja del montaje. Aquí podemos aplicar decenas
-de soluciones diferentes y todas ellas válidas en mayor o menor medida. En nuestro
-caso nos vamos a limitar a describir una de ellas, creemos que una de las más adecuadas.
-
-</p>
-<p>
-Bien, empecemos con un poco de teoría. En la <a href="#figura10">Figura 10</a> se
-muestra el convenio de numeración que vamos a seguir para indicar las conexiones.
-Arriba está la parte trasera de una disquetera de 3 pulgadas y abajo la de una de
-3,5 pulgadas. En esta numeración, todos los pines impares se corresponden con masa
-y en ambas disqueteras se sitúan en la fila inferior del conector. En la fila superior
-están las líneas de datos (en cuya funcionalidad no se va a profundizar ya que
-excede el propósito de este artículo). En la <a href="#figura11">Figura 11</a>
-se indica la correspondencia entre las señales de ambas disqueteras y los pines.
-</p>
-<p>
-<a name="figura10">
-
-<table border="0" cellspacing="0" cellpadding="2" width="451">
-	<tr align="right">
-		<td><img src="img/pinconv.jpg" width="451" height="271"  alt="Figura 10. Numeración de los pines" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 10. Numeración de los pines</td>
-	</tr>
-</table>
-
-</a>
-</p>
-<p>
-<a name="figura11">
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="437">
-	<tr align="right">
-		<td><img src="img/pindesc.gif" width="437" height="321"  alt="Figura 11. Correspondencia de señales" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 11. Correspondencia de señales</td>
-	</tr>
-</table>
-
-
-</a>
-</p>
-<p>
-Todas las señales del conector de la disquetera de 3 pulgadas existen
-en el conector de la de 3,5 pulgadas a excepción de la señal Ready. Esta señal
-es generada por la disquetera de 3 pulgadas para indicar a la controladora que se
-encuentra lista para recibir órdenes de lectura o escritura de datos, es decir,
-que tiene un disco válido en su interior y que puede utilizarlo. Las disqueteras
-modernas de 3,5 pulgadas no generan esta señal, por lo que debemos proporcionarla
-nosotros.
-</p>
-<p>
-La forma más fácil y rápida es conectar este pin a masa. Haciendo esto, ya
-es suficiente para poder utilizar la nueva disquetera con nuestro +3, pero hay algunos
-inconvenientes:
-</p>
-<ol>
-<li>Al arrancar el +3, nos dirá que están disponibles las unidades A y B aunque
-físicamente la unidad B no esté conectada. Esto que a primera vista no parece importante,
-en realidad sí lo es. El +3, al creer que tiene una segunda unidad de disco, en comandos
-BASIC como: <span class="codigo">COPY "A:*.*" TO "B:*.*"</span>, en lugar de pedir al
-usuario que introduzca el disco para B y que pulse una tecla, intentará acceder
-a la unidad externa que no existe. En general, cualquier comando que haga referencia a
-la unidad B bloqueará el +3.</li>
-<li>Con la señal Ready conectada a masa es imposible utilizar la opción Cargador del
-menú para cargar programas de cinta. La explicación es sencilla: como estamos
-engañando a la controladora para hacerle creer que la disquetera está preparada
-para ejecutar comandos, aunque no haya disco se mandan las órdenes a la disquetera
-y se espera a que finalicen, cosa que nunca ocurre. Sí, es evidente, si se pone en
-la unidad un disco que no sea de auto-arranque, después de las comprobaciones
-oportunas el +3 empezará a escuchar la entrada de cinta. ¿Pero tiene mucha lógica
-estar obligado a poner un disco en la disquetera si lo que se quiere es cargar
-de cinta?</li>
-<li>Otro inconveniente aparece en aquellas aplicaciones en las que no se sigue adelante
-hasta que se detecta la extracción del disco. Esto ocurre en copiadores de discos
-o en el test de la ROM del +3.
-</li>
-
-</ol>
-<p>
-Otra alternativa es utilizar la señal "Drive Select 1" como señal Ready. Con esto
-se consigue solucionar el punto 1, pero no el resto. Otro inconveniente es que
-cuando se intenta acceder a la unidad externa, ésta entra en conflicto con la interna.
-Todas las señales son las mismas para la unidad interna y para la externa a
-excepción de "Drive Select 1" la cual tiene valores opuestos, por tanto, al
-acceder a la unidad externa, está activa la señal Ready (la pone a nivel bajo)
-mientras que en la interna, a causa de la conexión realizada, se intenta poner la
-señal Ready a nivel alto, con lo que se corre el riesgo de estropear las
-disqueteras.
-</p>
-<p>
-Al final hemos optado por utilizar un interruptor de tres posiciones. En uso normal
-sin disquetera externa, pondremos el interruptor en la posición uno (Drive Select 1 como
-Ready). Si vamos a utilizar una disquetera externa de 3,5 pulgadas, pondremos
-el interruptor en la posición 3 (Ready conectado a masa). Y si se va a utilizar una
-disquetera externa de 3 pulgadas o deseamos que se detecte la no presencia de un
-disco, situaremos el interruptor en la posición 2 (Ready no conectado a nada).
-</p>
-<p>
-Por último, antes de pasar al montaje físico, sólo mencionar que se utilizará otro
-interruptor adicional de dos posiciones para indicar la cara del disco a la que
-se va a acceder. Para utilizar la cara B hay que poner la señal "Head Select" a
-nivel bajo.
-</p>
-<p>
-En la realización práctica, el primer problema con el que nos topamos es
-encontrar el lugar idóneo para colocar los dos interruptores. En este montaje
-se propone situarlos en el hueco que queda encima de la boca de la disquetera. A
-la derecha el que permite seleccionar la cara del disco y a la izquierda el que
-genera la señal Ready. En la <a href="#figura12">Figura 12</a> se pueden ver los
-interruptores montados.
-</p>
-<a name="figura12">
-
-
-<table border="0" cellspacing="0" cellpadding="2" width="581">
-	<tr align="right">
-		<td><img src="img/switchs.jpg" width="581" height="293"  alt="Figura 12. Montaje de los interruptores" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 12. Montaje de los interruptores</td>
-	</tr>
-</table>
-
-
-</a>
-<p>
-Lo primero es conseguir plástico negro similar al de la carcasa del +3 para
-tapar el agujero que queda por encima de la disquetera de 3,5 pulgadas. En las tiendas
-de componentes electrónicos venden unas cajas negras de plástico de donde
-se puede cortar. Una vez se tiene cortado a la medida se le practican dos orificios
-rectangulares lo suficientemente grandes para que las palancas de ambos interruptores
-puedan moverse con libertad. La carcasa, la pieza de plástico y los interruptores
-se han unido entre sí con pegamento. El resultado es bastante bueno.
-</p>
-<p>
-A los interruptores hay que hacerles llegar 4 señales del cable de datos
-de la disquetera ("Head Select", "Drive Select 1", "Ready" y Masa). Al igual que
-se hace con el led de encendido, se ha utilizado un conector de cuatro pines para poder
-separar las dos partes de la carcasa.
-</p>
-<p>
-Las conexiones eléctricas son, de izquierda a derecha: "Drive Select 1", "Ready" y
-Masa para el interruptor de la izquierda y Nada, "Head Select" y Masa para el interruptor
-de la derecha.
-</p>
-<p>
-Ya sólo nos queda conectar el cable de datos a la disquetera. Tenemos un
-conector IDC hembra de 26 pines que de alguna forma hay que convertir en un conector
-IDC hembra de 34 pines y, además, dejar espacio para los 4 hilos que han de llegar hasta
-los interruptores.
-</p>
-<p>
-La opción más rápida y barata es sustituir el conector de 26 por uno de 34. Esta
-opción se descartó porque la idea es conservar las piezas originales del Spectrum en
-la medida de lo posible. Sobre todo aquellas difíciles de sustituir.
-</p>
-
-<p>
-Otra opción, la que se quiso aplicar en un principio, es montar un cable que, a un extremo,
-tenga un conector hembra de 34 pines (Disquetera de 3,5 pulgadas) y al otro extremo un
-conector macho de 26 (Cable de la placa). Pero tras buscar por distintas tiendas,
-no hubo forma de localizar ningún conector IDC macho que no fuese para soldadura en placa.
-</p>
-<p>
-Tras pensarlo mucho se decidió hacer lo siguiente: Comprar un conector IDC macho de 26
-pines y otro de 34. Soldar los pines del conector de 26 directamente a sus correspondientes
-del 34 tal como se explicará a continuación. Y luego, con un cable de disquetera de
-PC, conectar la disquetera.
-</p>
-<p>
-Soldar el conector de 26 pines directamente al de 34 es muchísimo más fácil
-de lo que parece. En la <a href="#figura13"Figura 13</a> se detallan los distintos pasos.
-Lo primero es eliminar los pines del conector de 34 que nos molestan. No los que
-no vamos a soldar, sino aquellos con los que podemos tropezar. Los pines son el
-34 y el 10. Ahora el pin 8 lo doblamos un poco hacia donde estaba el 10. Y, finalmente,
-el pin 2 del conector de 26 lo doblamos un poco en dirección opuesta al pin 4. Ver
-<a href="#figura13">Figura 13B</a>.
-</p>
-<a name="figura13">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-
-		<td><img src="img/idcsold.jpg" width="640" height="240"  alt="Figura 13. Conectores IDC" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 13. Conectores IDC</td>
-	</tr>
-</table>
-
-</a>
-<p>
-Una vez hecho esto, ya se puede proceder a soldar. Para ello, la mejor
-forma es poner ambos conectores en posición vertical tal como aparece en la
-
-<a href="#figura13">Figura 13C</a>. El conector de 26 pines puesto a la izquierda con
-los pines 25 y 26 en la parte inferior. El conector de 34 pines puesto a la derecha
-y con los pines 33 y 34 en la parte inferior. Ahora hay que hacer coincidir
-los pines de ambos conectores según la tabla de la <a href="#figura11">Figura 11</a>.
-Fijaos que el pin 2 del IDC26 está doblado hacia arriba y coincide con
-el pin 8 del IDC34, que está doblado hacia abajo.
-</p>
-<p>
-La soldadura más crítica es la primera: pin 4 del IDC26 con pin 12 del IDC34.
-Al decir crítica se trata de que es posible que al acercar el soldador y el estaño
-movamos un poco alguno de los dos conectores separando los pines y, por tanto,
-dificultando el resto de soldaduras. Hay que ir con cuidado y reintentarlo si es
-necesario. Repetimos, no es nada difícil, sobre todo si ya habéis soldado otras cosas.
-</p>
-<p>
-La segunda soldadura que se recomienda hacer es pin 24 del IDC26 con pin 32
-del IDC34. En la <a href="#figura13">Figura 13D</a> podéis ver los dos conectores unidos
-con estas dos soldaduras. Una vez hechas estas dos, veréis que ambos conectores
-ya están sujetos y que podemos ponerlos en otra posición que nos resulte más cómoda.
-Si las dos primeras se hacen bien, el resto será como jugar a La Abadia
-Del Crimen con Obsequivm infinito y un mapa completo.
-</p>
-<p>
-Tras soldar el resto de pines pares hay que unir todos los impares entre sí.
-Una buena manera de hacerlo es coger un trozo de hilo de cobre e ir soldándolos de
-uno en uno. Primero en un conector y luego el otro. Finalmente, hay que soldar
-los 4 hilos que irán hasta los dos interruptores. En la <a href="#figura14">Figura 14</a>
-
-se puede ver el resultado. Las soldaduras de los conectores IDC se han cubierto con
-cinta aislante.
-</p>
-<a name="figura14">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/conector.jpg" width="640" height="258"  alt="Figura 14. Conexión de datos" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 14. Conexión de datos</td>
-
-	</tr>
-</table>
-
-</a>
-<p>
-En la <a href="#figura15">Figura 15</a> se puede ver la disquetera de 3,5 pulgadas
-montada en el interior del Spectrum y con todas las conexiones. El cable que llega
-a la disquetera es el mismo que el usado en cualquier PC, si bien, hemos construido uno
-más corto para facilitar su montaje dentro del Spectrum.
-</p>
-<a name="figura15">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/board2.jpg" width="640" height="622"  alt="Figura 15. Disquetera 3.5 pulgadas con todas las conexiones" />
-
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 15. Disquetera 3.5 pulgadas con todas las conexiones</td>
-	</tr>
-</table>
-
-</a>
-<p>
-Bien, el montaje ya está finalizado. Sólo falta cerrar el Spectrum sin olvidarse de
-conectar el cable del led y el nuevo cable de control de la disquetera. Una vez
-cerrado se obtiene el flamante Spectrum + 3,5 que aparece en la <a href="#figura16">Figura 16</a>.
-
-</p>
-<a name="figura16">
-
-<table border="0" cellspacing="0" cellpadding="2" width="640">
-	<tr align="right">
-		<td><img src="img/p35.jpg" width="640" height="213"  alt="Figura 16. Spectrum + 3,5" />
-</td>
-	</tr>
-	<tr>
-		<td class="piefoto" align="right">Figura 16. Spectrum + 3,5</td>
-	</tr>
-
-</table>
-
-</a>
-<p><b>CONCLUSIONES</b></p>
-<p>
-Como ocurre siempre en el mundo de la informática, el hardware más avanzado
-no sirve de nada sin un software apropiado que le saque su debido rendimiento.
-Pues bien, este montaje no es ninguna excepción. Con lo expuesto hasta aquí,
-ya se pueden utilizar discos de 3,5 pulgadas con el +3. Se pueden formatear,
-leer y escribir desde BASIC pero con la capacidad estándar de 180K por cara.
-Afortunadamente existen las cpdtools con las cuales, y con la ayuda de un PC,
-se pueden formatear los discos a una capacidad de 720K por disco utilizables sin
-necesidad de cambiar de cara.
-</p>
-</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right"><br><br>BERNARDO IBORRA</td>
-
-	</tr>
-</table>                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="hardware.html" selected>Hardware</option>
-        <option value="zona-www.html">Zona WWW</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="input.html">INPUT</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente" value=">" />
-</td>
-
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-
-</table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
+<head>
+    <title>Hardware - Magazine ZX nÃºmero 5 - Enero 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
+    <tr>
+        <td>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-    </body>
+                                <option value="hardware.html" selected>Hardware</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+
+                        <td align="center" class="texto">NÃºmero 5 - Enero 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p>
+                                Este artÃ­culo viene a recoger el testigo que lanzamos en el nÃºmero inaugural
+                                de Magazine ZX, al presentar una forma sencilla de conectar una disquetera
+                                de 3,5 pulgadas a nuestro Spectrum +3, de modo que pudiÃ©ramos trabajar
+                                cÃ³modamente con disquetes de dicho tamaÃ±o, muy comunes (todo lo contrario
+                                que los originales de 3 pulgadas). En esta ocasiÃ³n, se muestra una manera muy
+                                elegante y profesional, de la mano de BERNARDO IBORRA, de sustituir
+                                la disquetera interna de 3 pulgadas por una de 3,5.
+                            </p>
+                            <p align="center"><font size="4">CONSTRUCCIÃ“N DE UN SPECTRUM + 3,5.</font></p>
+                            <p>
+                                <i>El tiempo pasa y nuestros queridos Spectrums se hacen viejos y en ocasiones
+                                    dejan de funcionar total o parcialmente. Hace muchos aÃ±os que los fabricantes
+                                    dejaron
+                                    de producir piezas de recambio y a veces resulta muy complicado encontrarlas. Otras
+                                    veces, lo que queremos es dotar al Spectrum de nuevas prestaciones sobre todo en
+                                    comunicaciones y almacenamiento de datos. AquÃ­ veremos cÃ³mo sustituir la
+                                    disquetera de 3 pulgadas interna del Spectrum +3 por otra de 3,5 pulgadas tÃ­pica
+                                    del mÃ¡s moderno ordenador de hoy en dÃ­a.</i>
+
+                            </p>
+                            <p>
+                                A la hora de realizar el montaje diferenciaremos las siguientes partes:
+                            </p>
+                            <ul>
+                                <li>AdquisiciÃ³n y preparaciÃ³n de la disquetera de 3,5 pulgadas.</li>
+                                <li>ColocaciÃ³n y sujeciÃ³n de la disquetera en el interior del Spectrum +3.</li>
+                                <li>AlimentaciÃ³n.</li>
+                                <li>ConexiÃ³n de datos.</li>
+                            </ul>
+                            <p>
+                                <b>ADQUISICIÃ“N Y PREPARACIÃ“N DE LA DISQUETERA DE 3,5 PULGADAS</b>
+
+                            </p>
+                            <p>
+                                Lo ideal para este montaje serÃ­a utilizar una disquetera de doble
+                                densidad (720 Kbytes) capaz de suministrar la seÃ±al READY que necesita la
+                                controladora del +3. Dado lo complicado que es hoy en dÃ­a encontrar una unidad de estas
+                                caracterÃ­sticas, se explicarÃ¡ todo el proceso para una disquetera de alta
+                                densidad (1.44 MBytes), que podemos encontrar fÃ¡cilmente en cualquier tienda de
+                                componentes informÃ¡ticos y a un precio muy asequible.
+                            </p>
+                            <p>
+                                La disquetera elegida la podemos ver en la <a href="#figura1">Figura 1</a>.
+                                Se ha elegido una con la parte frontal de color negro a juego con el
+                                Spectrum. En esta disquetera se pueden usar tanto discos de alta densidad (HD) -
+                                reconocibles por el orificio situado en la parte inferior derecha - como discos
+                                de doble densidad (DD) - los que no tienen dicho agujero.
+                            </p>
+                            <a name="figura1">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/fdd35a.jpg" width="640" height="458"
+                                                 alt="Figura 1. Disquetera de 3,5 pulgadas"/>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 1. Disquetera de 3,5 pulgadas</td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                TambiÃ©n serÃ­a ideal utilizar discos DD ya que la controladora de nuestro
+                                +3 no puede trabajar sin mÃ¡s con discos HD. Pero dado que los discos HD son mucho
+                                mÃ¡s baratos y fÃ¡ciles de conseguir, podemos "engaÃ±ar" a la disquetera tapÃ¡ndole
+                                el orificio con cinta adhesiva y asÃ­ que se "crea" que son discos DD. La
+                                pega es que perdemos la mitad del espacio pero, aun asÃ­, tenemos el doble de espacio
+                                que con un disco de 3".
+                            </p>
+                            <p>
+                                Dado que es muy laborioso poner cinta adhesiva a todos los discos, se ha optado por
+                                alterar la disquetera para que esto no sea necesario. En la <a href="#figura2">Figura
+                                2</a>
+
+                                aparece seÃ±alado el lugar donde hay un pequeÃ±o pulsador que detecta si el disco
+                                introducido tiene o no orificio. Con un poco de pegamento podemos hacer que este
+                                pulsador permanezca siempre presionado de forma que todos los discos HD los tome
+                                como discos DD sin necesidad de cinta adhesiva.
+                            </p>
+                            <a name="figura2">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/fdd35b.jpg" width="640" height="391"
+                                                 alt="Figura 2. Disquetera de 3,5 pulgadas"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 2. Disquetera de 3,5 pulgadas</td>
+
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p><b>COLOCACIÃ“N Y SUJECIÃ“N DE LA DISQUETERA</b></p>
+                            <p>
+                                Aunque parezca increÃ­ble, es posible colocar y sujetar la disquetera de 3,5 pulgadas
+                                en el interior de nuestro Spectrum +3 sin demasiado esfuerzo. Basta con eliminar
+                                aquellas partes de plÃ¡stico que nos estorben. Incluso utilizaremos los mismos tornillos
+                                que sujetan la disquetera original del +3.
+                            </p>
+                            <p>
+                                Empecemos abriendo el +3, desconectando el led, el teclado y retirando la disquetera
+                                y la placa con cuidado. La carcasa estÃ¡ formada por dos piezas de plÃ¡stico negro que
+                                distinguiremos como la superior y la inferior. Tendremos que manipular ambas partes
+                                para hacer espacio a la nueva disquetera.
+                            </p>
+                            <p>
+                                La parte inferior es la mÃ¡s sencilla. En la <a href="#figura3">Figura 3</a> a la
+                                izquierda tenemos la carcasa original y seÃ±alados los 4 puntos en los que hay que
+                                "intervenir". Los dos de la izquierda (donde se atornillaba la disquetera original)
+                                hay que cortarlos en horizontal a ras de la parte superior de la placa. Por suerte,
+                                el agujero con rosca llega hasta la base y podremos atornillar la nueva disquetera.
+                                Los dos puntos de la derecha hay que cortarlos en vertical para eliminar un milÃ­metro
+                                de plÃ¡stico de la parte izquierda. En la <a href="#figura3">Figura 3</a> a la
+                                derecha se puede observar la carcasa despuÃ©s de la operaciÃ³n.
+
+                            </p>
+                            <a name="figura3">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/boxdown.jpg" width="640" height="330"
+                                                 alt="Figura 3. Parte inferior de la carcasa antes (izquierda) y despuÃ©s (derecha)"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 3. Parte inferior de la carcasa antes
+                                            (izquierda) y despuÃ©s (derecha)
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <p>
+                                Los cortes en la parte superior son casi tan sencillos como en la parte inferior.
+                                Lo que lo complica es que los cortes son mÃ¡s largos y, por tanto, mÃ¡s difÃ­ciles de
+                                hacer rectos. Aparte de esto, todo es muy sencillo. Mirando la boca de la disquetera
+                                de frente, los cortes que debemos realizar son: eliminar unos 6 milÃ­metros de
+                                la parte izquierda y uno de la derecha. En la <a href="#figura4">Figura 4</a>, a
+                                la izquierda estÃ¡ la carcasa antes de hacer los cortes y a la derecha, despuÃ©s. Observad
+                                que en el interior del lado izquierdo estÃ¡ el tubo de rosca de uno de los tornillos de
+                                la base y que hay que refinarlo para dejar espacio a la disquetera
+                                (<a href="#figura4">Figura 4</a> a la derecha del todo y seÃ±alado por una flecha).
+                            </p>
+                            <a name="figura4">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/boxup.jpg" width="640" height="174"
+                                                 alt="Figura 4. Parte superior de la carcasa antes (izquierda) y despuÃ©s (derecha)"/>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 4. Parte superior de la carcasa antes
+                                            (izquierda) y despuÃ©s (derecha)
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Para que todo quede mÃ¡s claro, en la <a href="#figura5">Figura 5</a> se muestra de nuevo
+                                la carcasa original mirando de frente la boca de la disquetera y pintadas de rojo
+                                aquellas partes que se deben eliminar.
+
+                            </p>
+                            <a name="figura5">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/tocut.jpg" width="640" height="207"
+                                                 alt="Figura 5. Partes que se deben eliminar"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 5. Partes que se deben eliminar</td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <p>
+                                Como curiosidad os pongo en la <a href="#figura6">Figura 6</a> las herramientas
+                                que se han utilizado para estos cortes. Una sierra de chapa que todos hemos
+                                usado para realizar manualidades varias en nuestros tiempos de colegiales para los
+                                cortes largos y un cutter para refinar. Como veis, nada especial. SÃ³lo herramientas
+                                caseras.
+                            </p>
+                            <a name="figura6">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="480">
+                                    <tr align="right">
+                                        <td><img src="img/tools.jpg" width="480" height="445"
+                                                 alt="Figura 6. Herramientas necesarias"/>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 6. Herramientas necesarias</td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Una vez preparada la carcasa llega el momento de colocar la disquetera. Para
+                                ello se ha empleado la pieza metÃ¡lica que aparece en la <a href="#figura7">Figura 7</a>.
+                                La que aparece en la foto pertenece a un Amstrad CPC. Esta pieza es la que sujeta la
+                                disquetera de 3 pulgadas a la carcasa en el interior del CPC. La equivalente
+                                del +3 es mÃ¡s corta, pero tambiÃ©n puede servir. La razÃ³n por la que se ha hecho uso de
+                                la pieza del CPC en lugar de la del +3 es sencillamente porque el +3 que se ha
+                                emplado para el montaje llevaba esa pieza en lugar de la tÃ­pica del +3.
+                            </p>
+
+                            <a name="figura7">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="200">
+                                    <tr align="right">
+                                        <td><img src="img/lmetal.jpg" width="200" height="87"
+                                                 alt="Figura 7. Pieza de sujeciÃ³n de la disquetera"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 7. Pieza de sujeciÃ³n de la disquetera
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <p>
+                                No obstante, se van a explicar ambos casos. Si la pieza la obtenÃ©is de un CPC hay
+                                que hacerle lo siguiente: tal cual estaba situada originalmente la girÃ¡is 180 grados
+                                respecto a su eje longitudinal. De esta forma los orificios que quedan en el lado
+                                vertical los usaremos para atornillar la disquetera. Tal como la vemos en la foto,
+                                hay que cortarle del lado izquierdo aproximadamente un centÃ­metro para que no
+                                tape el orificio de uno de los tornillos que sujetan las dos partes de la carcasa y
+                                hacerle en el lado horizontal dos agujeros que coincidan con los tubos de rosca
+                                que hemos cortado anteriormente.
+                            </p>
+                            <p>
+                                Si la pieza es la original de un +3, hay que hacer mÃ¡s o menos lo mismo. La
+                                giramos 180 grados. No cortamos nada. Los orificios del lado horizontal los aprovechamos
+                                para sujetar la pieza a la carcasa y en el lado vertical practicamos dos orificios para
+                                sujetar la disquetera.
+                            </p>
+                            <p>
+                                Esta vez ha habido que pedir ayuda externa para poder hacer los agujeros en el metal.
+                                Al carecer de taladradora apropiada, hubo que acudir a casa de un vecino (que tiene un
+                                taller de motos) y asunto arreglado. Seguro que todos conocÃ©is un taller de confianza
+                                donde os puedan hacer el favor. En el peor caso podemos recurrir a una de esas
+                                grandes superficies de material de bricolaje.
+                            </p>
+                            <p>
+                                Bueno, una vez preparada la pieza procedemos a ensamblarlo todo. En la
+                                <a href="#figura8">Figura 8</a> vemos distintas imÃ¡genes que muestran el ensamblado.
+                                Primero atornillamos la placa a la carcasa. Luego colocamos la lÃ¡mina de plÃ¡stico para
+                                evitar que la disquetera y la pieza de sujeciÃ³n hagan contactos indeseados sobre
+                                las pistas de la placa. A continuaciÃ³n atornillamos la pieza de sujeciÃ³n a
+                                la carcasa. TambiÃ©n atornillamos el cablecillo que conectarÃ¡ a la disquetera con masa.
+                                El primer extremo del cablecillo debemos ponerlo entre la placa y la lÃ¡mina de
+                                plÃ¡stico y el tornillo encima del plÃ¡stico. Finalmente atornillamos la disquetera a
+                                la pieza de sujeciÃ³n. En uno de los tornillos colocamos el otro extremo del cablecillo
+                                y ya tenemos la disquetera montada.
+
+                            </p>
+                            <a name="figura8">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/board.jpg" width="640" height="519"
+                                                 alt="Figura 8. Ensamblado de la disquetera en el interior del Spectrum +3"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 8. Ensamblado de la disquetera en el
+                                            interior del Spectrum +3
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <p><b>ALIMENTACIÃ“N</b></p>
+                            <p>
+                                Ã‰sta es la parte mÃ¡s sencilla de todo el montaje. Lo Ãºnico que hay que hacer es
+                                coger el cable de alimentaciÃ³n de la disquetera de 3" e intercambiar los
+                                cables rojo y naranja. Cada uno de los cables estÃ¡ sujeto al conector mediante una
+                                lengÃ¼eta
+                                de plÃ¡stico. Si la levantamos ligeramente el cable queda libre y podremos extraerlo para
+                                colocarlo en su nueva posiciÃ³n. En la <a href="#figura9">Figura 9</a> puede verse el
+                                conector con los cables rojo y naranja intercambiados.
+                            </p>
+                            <a name="figura9">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="550">
+                                    <tr align="right">
+                                        <td><img src="img/power.jpg" width="550" height="569"
+                                                 alt="Figura 9. AlimentaciÃ³n de la disquetera"/>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 9. AlimentaciÃ³n de la disquetera</td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p><b>CONEXIÃ“N DE DATOS</b></p>
+                            <p>
+                                Llegamos a la parte mÃ¡s compleja del montaje. AquÃ­ podemos aplicar decenas
+                                de soluciones diferentes y todas ellas vÃ¡lidas en mayor o menor medida. En nuestro
+                                caso nos vamos a limitar a describir una de ellas, creemos que una de las mÃ¡s adecuadas.
+
+                            </p>
+                            <p>
+                                Bien, empecemos con un poco de teorÃ­a. En la <a href="#figura10">Figura 10</a> se
+                                muestra el convenio de numeraciÃ³n que vamos a seguir para indicar las conexiones.
+                                Arriba estÃ¡ la parte trasera de una disquetera de 3 pulgadas y abajo la de una de
+                                3,5 pulgadas. En esta numeraciÃ³n, todos los pines impares se corresponden con masa
+                                y en ambas disqueteras se sitÃºan en la fila inferior del conector. En la fila superior
+                                estÃ¡n las lÃ­neas de datos (en cuya funcionalidad no se va a profundizar ya que
+                                excede el propÃ³sito de este artÃ­culo). En la <a href="#figura11">Figura 11</a>
+                                se indica la correspondencia entre las seÃ±ales de ambas disqueteras y los pines.
+                            </p>
+                            <p>
+                                <a name="figura10">
+
+                                    <table border="0" cellspacing="0" cellpadding="2" width="451">
+                                        <tr align="right">
+                                            <td><img src="img/pinconv.jpg" width="451" height="271"
+                                                     alt="Figura 10. NumeraciÃ³n de los pines"/>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="piefoto" align="right">Figura 10. NumeraciÃ³n de los pines</td>
+                                        </tr>
+                                    </table>
+
+                                </a>
+                            </p>
+                            <p>
+                                <a name="figura11">
+
+
+                                    <table border="0" cellspacing="0" cellpadding="2" width="437">
+                                        <tr align="right">
+                                            <td><img src="img/pindesc.gif" width="437" height="321"
+                                                     alt="Figura 11. Correspondencia de seÃ±ales"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="piefoto" align="right">Figura 11. Correspondencia de seÃ±ales</td>
+                                        </tr>
+                                    </table>
+
+
+                                </a>
+                            </p>
+                            <p>
+                                Todas las seÃ±ales del conector de la disquetera de 3 pulgadas existen
+                                en el conector de la de 3,5 pulgadas a excepciÃ³n de la seÃ±al Ready. Esta seÃ±al
+                                es generada por la disquetera de 3 pulgadas para indicar a la controladora que se
+                                encuentra lista para recibir Ã³rdenes de lectura o escritura de datos, es decir,
+                                que tiene un disco vÃ¡lido en su interior y que puede utilizarlo. Las disqueteras
+                                modernas de 3,5 pulgadas no generan esta seÃ±al, por lo que debemos proporcionarla
+                                nosotros.
+                            </p>
+                            <p>
+                                La forma mÃ¡s fÃ¡cil y rÃ¡pida es conectar este pin a masa. Haciendo esto, ya
+                                es suficiente para poder utilizar la nueva disquetera con nuestro +3, pero hay algunos
+                                inconvenientes:
+                            </p>
+                            <ol>
+                                <li>Al arrancar el +3, nos dirÃ¡ que estÃ¡n disponibles las unidades A y B aunque
+                                    fÃ­sicamente la unidad B no estÃ© conectada. Esto que a primera vista no parece
+                                    importante,
+                                    en realidad sÃ­ lo es. El +3, al creer que tiene una segunda unidad de disco, en
+                                    comandos
+                                    BASIC como: <span class="codigo">COPY "A:*.*" TO "B:*.*"</span>, en lugar de pedir
+                                    al
+                                    usuario que introduzca el disco para B y que pulse una tecla, intentarÃ¡ acceder
+                                    a la unidad externa que no existe. En general, cualquier comando que haga referencia
+                                    a
+                                    la unidad B bloquearÃ¡ el +3.
+                                </li>
+                                <li>Con la seÃ±al Ready conectada a masa es imposible utilizar la opciÃ³n Cargador del
+                                    menÃº para cargar programas de cinta. La explicaciÃ³n es sencilla: como estamos
+                                    engaÃ±ando a la controladora para hacerle creer que la disquetera estÃ¡ preparada
+                                    para ejecutar comandos, aunque no haya disco se mandan las Ã³rdenes a la disquetera
+                                    y se espera a que finalicen, cosa que nunca ocurre. SÃ­, es evidente, si se pone en
+                                    la unidad un disco que no sea de auto-arranque, despuÃ©s de las comprobaciones
+                                    oportunas el +3 empezarÃ¡ a escuchar la entrada de cinta. Â¿Pero tiene mucha lÃ³gica
+                                    estar obligado a poner un disco en la disquetera si lo que se quiere es cargar
+                                    de cinta?
+                                </li>
+                                <li>Otro inconveniente aparece en aquellas aplicaciones en las que no se sigue adelante
+                                    hasta que se detecta la extracciÃ³n del disco. Esto ocurre en copiadores de discos
+                                    o en el test de la ROM del +3.
+                                </li>
+
+                            </ol>
+                            <p>
+                                Otra alternativa es utilizar la seÃ±al "Drive Select 1" como seÃ±al Ready. Con esto
+                                se consigue solucionar el punto 1, pero no el resto. Otro inconveniente es que
+                                cuando se intenta acceder a la unidad externa, Ã©sta entra en conflicto con la interna.
+                                Todas las seÃ±ales son las mismas para la unidad interna y para la externa a
+                                excepciÃ³n de "Drive Select 1" la cual tiene valores opuestos, por tanto, al
+                                acceder a la unidad externa, estÃ¡ activa la seÃ±al Ready (la pone a nivel bajo)
+                                mientras que en la interna, a causa de la conexiÃ³n realizada, se intenta poner la
+                                seÃ±al Ready a nivel alto, con lo que se corre el riesgo de estropear las
+                                disqueteras.
+                            </p>
+                            <p>
+                                Al final hemos optado por utilizar un interruptor de tres posiciones. En uso normal
+                                sin disquetera externa, pondremos el interruptor en la posiciÃ³n uno (Drive Select 1 como
+                                Ready). Si vamos a utilizar una disquetera externa de 3,5 pulgadas, pondremos
+                                el interruptor en la posiciÃ³n 3 (Ready conectado a masa). Y si se va a utilizar una
+                                disquetera externa de 3 pulgadas o deseamos que se detecte la no presencia de un
+                                disco, situaremos el interruptor en la posiciÃ³n 2 (Ready no conectado a nada).
+                            </p>
+                            <p>
+                                Por Ãºltimo, antes de pasar al montaje fÃ­sico, sÃ³lo mencionar que se utilizarÃ¡ otro
+                                interruptor adicional de dos posiciones para indicar la cara del disco a la que
+                                se va a acceder. Para utilizar la cara B hay que poner la seÃ±al "Head Select" a
+                                nivel bajo.
+                            </p>
+                            <p>
+                                En la realizaciÃ³n prÃ¡ctica, el primer problema con el que nos topamos es
+                                encontrar el lugar idÃ³neo para colocar los dos interruptores. En este montaje
+                                se propone situarlos en el hueco que queda encima de la boca de la disquetera. A
+                                la derecha el que permite seleccionar la cara del disco y a la izquierda el que
+                                genera la seÃ±al Ready. En la <a href="#figura12">Figura 12</a> se pueden ver los
+                                interruptores montados.
+                            </p>
+                            <a name="figura12">
+
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="581">
+                                    <tr align="right">
+                                        <td><img src="img/switchs.jpg" width="581" height="293"
+                                                 alt="Figura 12. Montaje de los interruptores"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 12. Montaje de los interruptores</td>
+                                    </tr>
+                                </table>
+
+
+                            </a>
+                            <p>
+                                Lo primero es conseguir plÃ¡stico negro similar al de la carcasa del +3 para
+                                tapar el agujero que queda por encima de la disquetera de 3,5 pulgadas. En las tiendas
+                                de componentes electrÃ³nicos venden unas cajas negras de plÃ¡stico de donde
+                                se puede cortar. Una vez se tiene cortado a la medida se le practican dos orificios
+                                rectangulares lo suficientemente grandes para que las palancas de ambos interruptores
+                                puedan moverse con libertad. La carcasa, la pieza de plÃ¡stico y los interruptores
+                                se han unido entre sÃ­ con pegamento. El resultado es bastante bueno.
+                            </p>
+                            <p>
+                                A los interruptores hay que hacerles llegar 4 seÃ±ales del cable de datos
+                                de la disquetera ("Head Select", "Drive Select 1", "Ready" y Masa). Al igual que
+                                se hace con el led de encendido, se ha utilizado un conector de cuatro pines para poder
+                                separar las dos partes de la carcasa.
+                            </p>
+                            <p>
+                                Las conexiones elÃ©ctricas son, de izquierda a derecha: "Drive Select 1", "Ready" y
+                                Masa para el interruptor de la izquierda y Nada, "Head Select" y Masa para el
+                                interruptor
+                                de la derecha.
+                            </p>
+                            <p>
+                                Ya sÃ³lo nos queda conectar el cable de datos a la disquetera. Tenemos un
+                                conector IDC hembra de 26 pines que de alguna forma hay que convertir en un conector
+                                IDC hembra de 34 pines y, ademÃ¡s, dejar espacio para los 4 hilos que han de llegar hasta
+                                los interruptores.
+                            </p>
+                            <p>
+                                La opciÃ³n mÃ¡s rÃ¡pida y barata es sustituir el conector de 26 por uno de 34. Esta
+                                opciÃ³n se descartÃ³ porque la idea es conservar las piezas originales del Spectrum en
+                                la medida de lo posible. Sobre todo aquellas difÃ­ciles de sustituir.
+                            </p>
+
+                            <p>
+                                Otra opciÃ³n, la que se quiso aplicar en un principio, es montar un cable que, a un
+                                extremo,
+                                tenga un conector hembra de 34 pines (Disquetera de 3,5 pulgadas) y al otro extremo un
+                                conector macho de 26 (Cable de la placa). Pero tras buscar por distintas tiendas,
+                                no hubo forma de localizar ningÃºn conector IDC macho que no fuese para soldadura en
+                                placa.
+                            </p>
+                            <p>
+                                Tras pensarlo mucho se decidiÃ³ hacer lo siguiente: Comprar un conector IDC macho de 26
+                                pines y otro de 34. Soldar los pines del conector de 26 directamente a sus
+                                correspondientes
+                                del 34 tal como se explicarÃ¡ a continuaciÃ³n. Y luego, con un cable de disquetera de
+                                PC, conectar la disquetera.
+                            </p>
+                            <p>
+                                Soldar el conector de 26 pines directamente al de 34 es muchÃ­simo mÃ¡s fÃ¡cil
+                                de lo que parece. En la <a href="#figura13" Figura 13</a> se detallan los distintos
+                                pasos.
+                                Lo primero es eliminar los pines del conector de 34 que nos molestan. No los que
+                                no vamos a soldar, sino aquellos con los que podemos tropezar. Los pines son el
+                                34 y el 10. Ahora el pin 8 lo doblamos un poco hacia donde estaba el 10. Y, finalmente,
+                                el pin 2 del conector de 26 lo doblamos un poco en direcciÃ³n opuesta al pin 4. Ver
+                                <a href="#figura13">Figura 13B</a>.
+                            </p>
+                            <a name="figura13">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+
+                                        <td><img src="img/idcsold.jpg" width="640" height="240"
+                                                 alt="Figura 13. Conectores IDC"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 13. Conectores IDC</td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Una vez hecho esto, ya se puede proceder a soldar. Para ello, la mejor
+                                forma es poner ambos conectores en posiciÃ³n vertical tal como aparece en la
+
+                                <a href="#figura13">Figura 13C</a>. El conector de 26 pines puesto a la izquierda con
+                                los pines 25 y 26 en la parte inferior. El conector de 34 pines puesto a la derecha
+                                y con los pines 33 y 34 en la parte inferior. Ahora hay que hacer coincidir
+                                los pines de ambos conectores segÃºn la tabla de la <a href="#figura11">Figura 11</a>.
+                                Fijaos que el pin 2 del IDC26 estÃ¡ doblado hacia arriba y coincide con
+                                el pin 8 del IDC34, que estÃ¡ doblado hacia abajo.
+                            </p>
+                            <p>
+                                La soldadura mÃ¡s crÃ­tica es la primera: pin 4 del IDC26 con pin 12 del IDC34.
+                                Al decir crÃ­tica se trata de que es posible que al acercar el soldador y el estaÃ±o
+                                movamos un poco alguno de los dos conectores separando los pines y, por tanto,
+                                dificultando el resto de soldaduras. Hay que ir con cuidado y reintentarlo si es
+                                necesario. Repetimos, no es nada difÃ­cil, sobre todo si ya habÃ©is soldado otras cosas.
+                            </p>
+                            <p>
+                                La segunda soldadura que se recomienda hacer es pin 24 del IDC26 con pin 32
+                                del IDC34. En la <a href="#figura13">Figura 13D</a> podÃ©is ver los dos conectores unidos
+                                con estas dos soldaduras. Una vez hechas estas dos, verÃ©is que ambos conectores
+                                ya estÃ¡n sujetos y que podemos ponerlos en otra posiciÃ³n que nos resulte mÃ¡s cÃ³moda.
+                                Si las dos primeras se hacen bien, el resto serÃ¡ como jugar a La Abadia
+                                Del Crimen con Obsequivm infinito y un mapa completo.
+                            </p>
+                            <p>
+                                Tras soldar el resto de pines pares hay que unir todos los impares entre sÃ­.
+                                Una buena manera de hacerlo es coger un trozo de hilo de cobre e ir soldÃ¡ndolos de
+                                uno en uno. Primero en un conector y luego el otro. Finalmente, hay que soldar
+                                los 4 hilos que irÃ¡n hasta los dos interruptores. En la <a href="#figura14">Figura
+                                14</a>
+
+                                se puede ver el resultado. Las soldaduras de los conectores IDC se han cubierto con
+                                cinta aislante.
+                            </p>
+                            <a name="figura14">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/conector.jpg" width="640" height="258"
+                                                 alt="Figura 14. ConexiÃ³n de datos"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 14. ConexiÃ³n de datos</td>
+
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                En la <a href="#figura15">Figura 15</a> se puede ver la disquetera de 3,5 pulgadas
+                                montada en el interior del Spectrum y con todas las conexiones. El cable que llega
+                                a la disquetera es el mismo que el usado en cualquier PC, si bien, hemos construido uno
+                                mÃ¡s corto para facilitar su montaje dentro del Spectrum.
+                            </p>
+                            <a name="figura15">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/board2.jpg" width="640" height="622"
+                                                 alt="Figura 15. Disquetera 3.5 pulgadas con todas las conexiones"/>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 15. Disquetera 3.5 pulgadas con todas
+                                            las conexiones
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </a>
+                            <p>
+                                Bien, el montaje ya estÃ¡ finalizado. SÃ³lo falta cerrar el Spectrum sin olvidarse de
+                                conectar el cable del led y el nuevo cable de control de la disquetera. Una vez
+                                cerrado se obtiene el flamante Spectrum + 3,5 que aparece en la <a href="#figura16">Figura
+                                16</a>.
+
+                            </p>
+                            <a name="figura16">
+
+                                <table border="0" cellspacing="0" cellpadding="2" width="640">
+                                    <tr align="right">
+                                        <td><img src="img/p35.jpg" width="640" height="213"
+                                                 alt="Figura 16. Spectrum + 3,5"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="piefoto" align="right">Figura 16. Spectrum + 3,5</td>
+                                    </tr>
+
+                                </table>
+
+                            </a>
+                            <p><b>CONCLUSIONES</b></p>
+                            <p>
+                                Como ocurre siempre en el mundo de la informÃ¡tica, el hardware mÃ¡s avanzado
+                                no sirve de nada sin un software apropiado que le saque su debido rendimiento.
+                                Pues bien, este montaje no es ninguna excepciÃ³n. Con lo expuesto hasta aquÃ­,
+                                ya se pueden utilizar discos de 3,5 pulgadas con el +3. Se pueden formatear,
+                                leer y escribir desde BASIC pero con la capacidad estÃ¡ndar de 180K por cara.
+                                Afortunadamente existen las cpdtools con las cuales, y con la ayuda de un PC,
+                                se pueden formatear los discos a una capacidad de 720K por disco utilizables sin
+                                necesidad de cambiar de cara.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><br><br>BERNARDO IBORRA</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('analisis.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+
+                                <option value="hardware.html" selected>Hardware</option>
+                                <option value="zona-www.html">Zona WWW</option>
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+                                <option value="input.html">INPUT</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('zona-www.html');" name="siguiente"
+                                   value=">"/>
+                        </td>
+
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>

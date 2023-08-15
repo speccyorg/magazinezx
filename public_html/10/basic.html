@@ -1,105 +1,142 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Magazine ZX</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
-        <link rel="stylesheet" href="../css/magazine.css" type="text/css">
-    </head>
-    <body><!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W5DD5R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-W5DD5R');</script> <!-- End Google Tag Manager -->
-
-
-            <table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
-                <tr>
-                    <td>
-<a name="arriba"></a>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
-	<tr align="center" valign="center">
-		<td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" /></a></td>
-	</tr>
-</table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>
-<script language="JavaScript">
-function RecargarCabecera(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr><td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html" selected>Programación BASIC</option>
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-
-    <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
-</td>
-            <td align="center" class="texto">Número 10 - Noviembre 2004</td>
-            <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX" onClick="window.open(this.href); return false;"><img src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0" alt="ZX Certified webmaster"></a>&nbsp;<a href="http://www.speccy.org/" onClick="window.open(this.href); return false;"><img src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a></td>
-        </tr>
-    </form>
-</table>
-</a>
-                    </td>
-                </tr>
-
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-                    <td>
-<table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+<head>
+    <title>ProgramaciÃ³n BASIC - Magazine ZX nÃºmero 10 - Noviembre 2004</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload stylesheet" as="style" href="../css/magazine.css" type="text/css">
+</head>
+<body>
+<table bgcolor="#F9F9FF" border="0" cellspacing="0" cellpadding="0" width="720">
     <tr>
         <td>
-<div align="justify">
-<p><i>Aprovechando la reciente convocatoria del concurso de BASIC 2004 de la mano de Radastan, vamos a retomar el curso que dejamos en suspenso hace más de un año. En esta entrega, aprovecharemos la disección de uno de los programas presentados en la edición del concurso del año pasado para ver cómo dibujar gráficos en movimiento y cómo efectuar la lectura del teclado para transmitir las órdenes del jugador.</i></p>
-<p><b>El juego</b></p>
-<p>El juego no es más que una versión más del clásico Snake, últimamente muy de moda gracias a su inclusión en los teléfonos móviles. Es un juego muy sencillo que nos va a servir para comprender la estructura general de cualquier juego y tocar temas como lectura del teclado, impresión de gráficos en movimiento y detección de choques.</p>
+            <a name="arriba"></a>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE">
+                <tr align="center" valign="center">
+                    <td><a href="/"><img src="../img/logo_grande.gif" width="174" height="87" border="0" alt="Logo MagazineZX"/></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <script type="text/javascript">
+              function RecargarCabecera(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/"><b>ÃNDICE
+                            DE REVISTAS</b></a> <
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
 
-<p>El juego está planteado en modo texto, tal y como disponían las normas del concurso, y sólo se usan un par de GDUs, para representar la cabeza de la serpiente y las frutas.</p>
-<p>Vamos a dejar aparte todo el tema de presentación, opciones, redefinición de teclas y demás aderezos y nos vamos a centrar en lo que es el núcleo del programa, que seguirá este esquema. Al final del artículo podréis encontrar el código fuente completo.</p>
-<pre>
-REPETIR MIENTRAS la serpiente esté viva
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html" selected>ProgramaciÃ³n BASIC</option>
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+
+                            <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="center" class="texto">NÃºmero 10 - Noviembre 2004</td>
+                        <td align="right"><a href="http://www.worldofspectrum.org/viewcert.cgi?candidate=Magazine+ZX"
+                                             onClick="window.open(this.href); return false;"><img
+                                src="https://www.worldofspectrum.org/pics/zxcert.png" width="87" height="30" border="0"
+                                alt="ZX Certified webmaster"></a>Â <a href="http://www.speccy.org/"
+                                                                     onClick="window.open(this.href); return false;"><img
+                                src="../img/logo_speccyorg.gif" border="0" width="121" height="30" alt="speccy.org"></a>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+            </a>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellspacing="0" cellpadding="8" width="720" class="texto">
+                <tr>
+                    <td>
+                        <div align="justify">
+                            <p><i>Aprovechando la reciente convocatoria del concurso de BASIC 2004 de la mano de
+                                Radastan, vamos a retomar el curso que dejamos en suspenso hace mÃ¡s de un aÃ±o. En esta
+                                entrega, aprovecharemos la disecciÃ³n de uno de los programas presentados en la ediciÃ³n
+                                del concurso del aÃ±o pasado para ver cÃ³mo dibujar grÃ¡ficos en movimiento y cÃ³mo efectuar
+                                la lectura del teclado para transmitir las Ã³rdenes del jugador.</i></p>
+                            <p><b>El juego</b></p>
+                            <p>El juego no es mÃ¡s que una versiÃ³n mÃ¡s del clÃ¡sico Snake, Ãºltimamente muy de moda gracias
+                                a su inclusiÃ³n en los telÃ©fonos mÃ³viles. Es un juego muy sencillo que nos va a servir
+                                para comprender la estructura general de cualquier juego y tocar temas como lectura del
+                                teclado, impresiÃ³n de grÃ¡ficos en movimiento y detecciÃ³n de choques.</p>
+
+                            <p>El juego estÃ¡ planteado en modo texto, tal y como disponÃ­an las normas del concurso, y
+                                sÃ³lo se usan un par de GDUs, para representar la cabeza de la serpiente y las
+                                frutas.</p>
+                            <p>Vamos a dejar aparte todo el tema de presentaciÃ³n, opciones, redefiniciÃ³n de teclas y
+                                demÃ¡s aderezos y nos vamos a centrar en lo que es el nÃºcleo del programa, que seguirÃ¡
+                                este esquema. Al final del artÃ­culo podrÃ©is encontrar el cÃ³digo fuente completo.</p>
+                            <pre>
+REPETIR MIENTRAS la serpiente estÃ© viva
     Mover serpiente
-    Si hay colisión:
-        - colisión con fruta :
+    Si hay colisiÃ³n:
+        - colisiÃ³n con fruta :
             * La serpiente crece
             * Dibujamos una nueva fruta
-        - colisión con pared :
+        - colisiÃ³n con pared :
             * La serpiente muere
-        - colisión con ella misma :
+        - colisiÃ³n con ella misma :
             * La serpiente muere
     Leer teclado
 </pre>
-<p>El teclado se puede leer antes o después de mover la serpiente, la verdad es que no notaremos diferencia debido a la velocidad a la que se ejecuta el programa (sí, incluso en BASIC). Lo único diferente que notaremos será que el primer movimiento de la serpiente siempre será hacia la derecha desde su posición inicial, ya que lo habremos definido así en las condiciones iniciales.</p>
-<p><b>Pintando la serpiente</b></p>
-<p>La serpiente tiene una cabeza (un carácter) y una cola (compuesta por varios caracteres). La cola de la serpiente siempre va siguiendo el movimiento de la cabeza.</p>
-<p>Una primera aproximación que se nos podría ocurrir sería calcular hacia dónde se mueve la cabeza y, a continuación, redibujar toda la serpiente. Esa solución es inaceptable por la cantidad de proceso que requeriría, y más hablando de un lenguaje interpretado, como BASIC, corriendo sobre un microprocesador a algo más de 3MHz. Debemos plantear la solución de otra manera.</p>
-<p>Si nos fijamos bien, veremos que sólo necesitamos mover la cabeza y el último elemento de la cola. Esto es así debido a que todos los componentes de la cola son iguales gráficamente hablando. Por tanto, deberemos hacer lo siguiente:</p>
+                            <p>El teclado se puede leer antes o despuÃ©s de mover la serpiente, la verdad es que no
+                                notaremos diferencia debido a la velocidad a la que se ejecuta el programa (sÃ­, incluso
+                                en BASIC). Lo Ãºnico diferente que notaremos serÃ¡ que el primer movimiento de la
+                                serpiente siempre serÃ¡ hacia la derecha desde su posiciÃ³n inicial, ya que lo habremos
+                                definido asÃ­ en las condiciones iniciales.</p>
+                            <p><b>Pintando la serpiente</b></p>
+                            <p>La serpiente tiene una cabeza (un carÃ¡cter) y una cola (compuesta por varios caracteres).
+                                La cola de la serpiente siempre va siguiendo el movimiento de la cabeza.</p>
+                            <p>Una primera aproximaciÃ³n que se nos podrÃ­a ocurrir serÃ­a calcular hacia dÃ³nde se mueve la
+                                cabeza y, a continuaciÃ³n, redibujar toda la serpiente. Esa soluciÃ³n es inaceptable por
+                                la cantidad de proceso que requerirÃ­a, y mÃ¡s hablando de un lenguaje interpretado, como
+                                BASIC, corriendo sobre un microprocesador a algo mÃ¡s de 3MHz. Debemos plantear la
+                                soluciÃ³n de otra manera.</p>
+                            <p>Si nos fijamos bien, veremos que sÃ³lo necesitamos mover la cabeza y el Ãºltimo elemento de
+                                la cola. Esto es asÃ­ debido a que todos los componentes de la cola son iguales
+                                grÃ¡ficamente hablando. Por tanto, deberemos hacer lo siguiente:</p>
 
-<pre>
-    Dibujar la nueva cabeza en la posición correspondiente
+                            <pre>
+    Dibujar la nueva cabeza en la posiciÃ³n correspondiente
     Sustituir la antigua cabeza por un elemento de la cola
-    Borrar el último elemento de la cola
+    Borrar el Ãºltimo elemento de la cola
 </pre>
-<p>Para conseguir modelizar este comportamiento de manera sencilla vamos a usar unas cuantas variables auxiliares. Por un lado necesitamos conocer dónde está la cabeza y dónde el último elemento de la cola de la serpiente. Por otro lado, para evitarnos tener que andar recalculando cada vez, almacenaremos para cada elemento de la serpiente, dónde está el elemento que la precede (de esta forma, al borrar el último elemento de la cola sabremos quién pasa a ocupar ese último lugar). Este dato lo almacenaremos en las matrices x e y.</p>
-<p>Las orientaciones las hemos codificado de la siguiente manera (a estas alturas ya os habréis dado cuenta de que lo que se le da bien al Spectrum, como cualquier ordenador, es trabajar con números):</p>
-<pre>
+                            <p>Para conseguir modelizar este comportamiento de manera sencilla vamos a usar unas cuantas
+                                variables auxiliares. Por un lado necesitamos conocer dÃ³nde estÃ¡ la cabeza y dÃ³nde el
+                                Ãºltimo elemento de la cola de la serpiente. Por otro lado, para evitarnos tener que
+                                andar recalculando cada vez, almacenaremos para cada elemento de la serpiente, dÃ³nde
+                                estÃ¡ el elemento que la precede (de esta forma, al borrar el Ãºltimo elemento de la cola
+                                sabremos quiÃ©n pasa a ocupar ese Ãºltimo lugar). Este dato lo almacenaremos en las
+                                matrices x e y.</p>
+                            <p>Las orientaciones las hemos codificado de la siguiente manera (a estas alturas ya os
+                                habrÃ©is dado cuenta de que lo que se le da bien al Spectrum, como cualquier ordenador,
+                                es trabajar con nÃºmeros):</p>
+                            <pre>
 eje horizontal (matriz x):
 
     1 - derecha
@@ -110,21 +147,28 @@ eje vertical (matriz y):
     1 - abajo
    -1 - arriba
 </pre>
-<p>Estos valores no los hemos determinado así al azar, sino debido a que el origen de coordenadas de la pantalla del Spectrum en modo texto, el punto (0,0) se encuentra en la esquina superior izquierda de la pantalla.</p>
-<p>Además, usamos un par de variables, orientacionx y orientaciony, que son las que modificaremos al leer el teclado, y que indican hacia qué dirección debe moverse la cabeza de la serpiente en la siguiente iteración.</p>
-<p>Por último, en la matriz p almacenaremos una representación abstracta de lo que vemos en pantalla, de manera que el tratamiento de colisiones sea muy sencillo. Para ello, en cada posición almacenaremos uno de los siguientes valores:</p>
+                            <p>Estos valores no los hemos determinado asÃ­ al azar, sino debido a que el origen de
+                                coordenadas de la pantalla del Spectrum en modo texto, el punto (0,0) se encuentra en la
+                                esquina superior izquierda de la pantalla.</p>
+                            <p>AdemÃ¡s, usamos un par de variables, orientacionx y orientaciony, que son las que
+                                modificaremos al leer el teclado, y que indican hacia quÃ© direcciÃ³n debe moverse la
+                                cabeza de la serpiente en la siguiente iteraciÃ³n.</p>
+                            <p>Por Ãºltimo, en la matriz p almacenaremos una representaciÃ³n abstracta de lo que vemos en
+                                pantalla, de manera que el tratamiento de colisiones sea muy sencillo. Para ello, en
+                                cada posiciÃ³n almacenaremos uno de los siguientes valores:</p>
 
-<pre>
-    0 - posición vacía
+                            <pre>
+    0 - posiciÃ³n vacÃ­a
     1 - fruta
     2 - cabeza
     3 - elemento de la cola
     4 - pared
 </pre>
-<p>Éste es el código de definición de variables:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <p>Ã‰ste es el cÃ³digo de definiciÃ³n de variables:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 100  REM Definicion de variables
 110  LET cabezax = 11 : REM coordenada x de la cabeza
 120  LET cabezay = 5 : REM coordenada y de la cabeza
@@ -136,14 +180,17 @@ eje vertical (matriz y):
 180  DIM x(23,34) : REM Orientacionesx
 190  DIM y(23,34) : REM Orientacionesy
 </pre>
-    </p></td></tr>
-</table>
-</p>
-<p>Partimos de que la serpiente ya está pintada. Así que, para empezar, cambiaremos la antigua cabeza por un elemento de cola:</p>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            </p>
+                            <p>Partimos de que la serpiente ya estÃ¡ pintada. AsÃ­ que, para empezar, cambiaremos la
+                                antigua cabeza por un elemento de cola:</p>
 
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 3000 REM Movemos la serpiente
 3005 INK 0
 3010 REM Cambiamos la orientacion
@@ -155,24 +202,36 @@ eje vertical (matriz y):
 3040 LET cabezax = cabezax + orientacionx
 3045 LET cabezay = cabezay + orientaciony
 </pre>
-    </p></td></tr>
-</table>
-<p>A continuación habría que pintar la cabeza en su nueva posición pero, ¿qué pasa si esa posición ya está ocupada? Antes de proseguir pintando, debemos ver qué hay donde vamos a dibujar.</p>
-<p><b>Detección de colisiones</b></p>
-<p>Al mover la cabeza de la serpiente a su nueva posición, pueden ocurrir 3 cosas:</p>
-<ul>
-<li>Que la posición de destino esté vacía.</li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>A continuaciÃ³n habrÃ­a que pintar la cabeza en su nueva posiciÃ³n pero, Â¿quÃ© pasa si esa
+                                posiciÃ³n ya estÃ¡ ocupada? Antes de proseguir pintando, debemos ver quÃ© hay donde vamos a
+                                dibujar.</p>
+                            <p><b>DetecciÃ³n de colisiones</b></p>
+                            <p>Al mover la cabeza de la serpiente a su nueva posiciÃ³n, pueden ocurrir 3 cosas:</p>
+                            <ul>
+                                <li>Que la posiciÃ³n de destino estÃ© vacÃ­a.</li>
 
-<li>Que la posición de destino esté ocupada por una fruta.</li>
-<li>Que la posición de destino esté ocupada por la pared o la cola de la serpiente.</li>
-</ul>
-<p>En el primero de los casos no haremos nada, simplemente proseguiremos con el redibujado de la serpiente.</p>
-<p>En el segundo caso, la cola de la serpiente crecerá. Para simular este efecto, basta con no borrar el último elemento de la cola (por eso hemos decidido retrasar el borrado hasta después de la detección de colisiones.</p>
-<p>En el último caso, se acaba la partida.</p>
-<p>Aquí está el fragmento de código encargado de la detección de colisiones. Basta con consultar nuestra representación matricial de lo que hay en pantalla. Si en la nueva posición hallamos un 1 en la matriz, se trata de una fruta, con lo que sumamos la puntuación y generamos una nueva fruta. Si hallamos un valor mayor que uno (cola o pared), significará el final de la partida (el código lo hemos colocado a partir de la línea 9900).</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                <li>Que la posiciÃ³n de destino estÃ© ocupada por una fruta.</li>
+                                <li>Que la posiciÃ³n de destino estÃ© ocupada por la pared o la cola de la serpiente.</li>
+                            </ul>
+                            <p>En el primero de los casos no haremos nada, simplemente proseguiremos con el redibujado
+                                de la serpiente.</p>
+                            <p>En el segundo caso, la cola de la serpiente crecerÃ¡. Para simular este efecto, basta con
+                                no borrar el Ãºltimo elemento de la cola (por eso hemos decidido retrasar el borrado
+                                hasta despuÃ©s de la detecciÃ³n de colisiones.</p>
+                            <p>En el Ãºltimo caso, se acaba la partida.</p>
+                            <p>AquÃ­ estÃ¡ el fragmento de cÃ³digo encargado de la detecciÃ³n de colisiones. Basta con
+                                consultar nuestra representaciÃ³n matricial de lo que hay en pantalla. Si en la nueva
+                                posiciÃ³n hallamos un 1 en la matriz, se trata de una fruta, con lo que sumamos la
+                                puntuaciÃ³n y generamos una nueva fruta. Si hallamos un valor mayor que uno (cola o
+                                pared), significarÃ¡ el final de la partida (el cÃ³digo lo hemos colocado a partir de la
+                                lÃ­nea 9900).</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 
 3040 LET cabezax = cabezax + orientacionx
 3045 LET cabezay = cabezay + orientaciony
@@ -181,13 +240,19 @@ eje vertical (matriz y):
      THEN LET puntos = puntos + 10 : PRINT AT 21,10 ;
      PAPER 1 ; INK 7 ; puntos : LET comido = 1 : GO SUB 8000
 </pre>
-    </p></td></tr>
-</table>
-<p>Sumamos la puntuación correspondiente, actualizamos el marcador y anotamos en la variable comido que hemos ingerido una fruta. Esto es importante a la hora de decidir si borramos la última posición de la cola o la serpiente debe crecer.</p>
-<p>Y en la línea 8000 hemos colocado la subrutina que se encarga de generar una nueva fruta. En la línea 8030 nos estamos asegurando de que colocaremos la fruta en un lugar vacío.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Sumamos la puntuaciÃ³n correspondiente, actualizamos el marcador y anotamos en la variable
+                                comido que hemos ingerido una fruta. Esto es importante a la hora de decidir si borramos
+                                la Ãºltima posiciÃ³n de la cola o la serpiente debe crecer.</p>
+                            <p>Y en la lÃ­nea 8000 hemos colocado la subrutina que se encarga de generar una nueva fruta.
+                                En la lÃ­nea 8030 nos estamos asegurando de que colocaremos la fruta en un lugar
+                                vacÃ­o.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 8000 REM Generacion de frutas
 8010 LET frutax = INT(RND*30)+1
 8020 LET frutay = INT(RND*20)+1
@@ -197,24 +262,31 @@ eje vertical (matriz y):
 8060 LET p(frutay+2,frutax+2) = 1
 8070 RETURN
 </pre>
-    </p></td></tr>
+                                        </p></td>
+                                </tr>
 
-</table>
-<p>Bien, recordemos que dejamos la serpiente a medio pintar. Debemos pintar la cabeza en su nueva ubicación, ahora que sabemos que no ha ocurrido nada grave.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </table>
+                            <p>Bien, recordemos que dejamos la serpiente a medio pintar. Debemos pintar la cabeza en su
+                                nueva ubicaciÃ³n, ahora que sabemos que no ha ocurrido nada grave.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 3055 REM Pintamos la nueva cabeza
 3060 PRINT AT cabezay,cabezax ; "{S}"
 3065 LET p(cabezay+2,cabezax+2) = 2
 </pre>
-    </p></td></tr>
-</table>
-<p>Por último, para acabar con el movimiento de la serpiente, si no ha habido ninguna colisión, recordemos que debemos borrar el último elemento de la cola. Esto lo hace la siguiente porción de código y la subrutina a la que invoca:</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p>Por Ãºltimo, para acabar con el movimiento de la serpiente, si no ha habido ninguna
+                                colisiÃ³n, recordemos que debemos borrar el Ãºltimo elemento de la cola. Esto lo hace la
+                                siguiente porciÃ³n de cÃ³digo y la subrutina a la que invoca:</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
 
-<pre>
+                                        <pre>
 3070 IF comido = 0 THEN GO SUB 8100
 3080 LET comido = 0
 
@@ -231,14 +303,24 @@ eje vertical (matriz y):
 8180 LET colay = nuevacolay
 8190 RETURN
 </pre>
-    </p></td></tr>
-</table>
-<p><b>Lectura del teclado</b></p>
-<p>La lectura del teclado la haremos mediante el uso de la sentencia INKEY$. INKEY$ devuelve el valor del carácter producido por la tecla presionada en ese momento. Es importante tener en cuenta que si, en el momento de ejecutarse la sentencia no se está pulsando ninguna tecla, INKEY$ devolverá la cadena vacía ("") como resultado. Por lo tanto, normalmente INKEY$ se incluye dentro de un bucle que espera a la pulsación de una tecla. En nuestro caso, en ese bucle moveremos la serpiente, que sigue moviéndose en una dirección aunque no pulsemos ninguna tecla.</p>
-<p>Por tanto, lo único que haremos al detectar la pulsación de una tecla será actualizar la orientación de la serpiente, para que se gire, si procede, en la siguiente iteración del bucle.</p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><b>Lectura del teclado</b></p>
+                            <p>La lectura del teclado la haremos mediante el uso de la sentencia INKEY$. INKEY$ devuelve
+                                el valor del carÃ¡cter producido por la tecla presionada en ese momento. Es importante
+                                tener en cuenta que si, en el momento de ejecutarse la sentencia no se estÃ¡ pulsando
+                                ninguna tecla, INKEY$ devolverÃ¡ la cadena vacÃ­a ("") como resultado. Por lo tanto,
+                                normalmente INKEY$ se incluye dentro de un bucle que espera a la pulsaciÃ³n de una tecla.
+                                En nuestro caso, en ese bucle moveremos la serpiente, que sigue moviÃ©ndose en una
+                                direcciÃ³n aunque no pulsemos ninguna tecla.</p>
+                            <p>Por tanto, lo Ãºnico que haremos al detectar la pulsaciÃ³n de una tecla serÃ¡ actualizar la
+                                orientaciÃ³n de la serpiente, para que se gire, si procede, en la siguiente iteraciÃ³n del
+                                bucle.</p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 3210 LET a$ = INKEY$
 3220 IF orientacionx < 1 AND (a$ = "O" OR a$ = "o")
      THEN LET orientacionx = -1 : LET orientaciony = 0
@@ -250,22 +332,36 @@ eje vertical (matriz y):
      THEN LET orientacionx = 0 : LET orientaciony = 1
 
 </pre>
-    </p></td></tr>
-</table>
-<p><b>Resumiendo</b></p>
-<p>En este artículo hemos puesto en vuestras manos la base de funcionamiento de cualquier videojuego. Evidentemente, el esquema del ZXSnake se puede complicar muchísimo más. Hemos aprendido a pintar (pintar con el mínimo esfuerzo para obtener el mejor resultado), a detectar colisiones entre objetos (es decir, que los objetos interactúen), y a leer el teclado para que el usuario pueda introducir órdenes al juego.</p>
-<p>Quizás la idea principal que se puede sacar es que resulta de gran utilidad mantener una representación abstracta de lo que estamos dibujando en pantalla a la hora de gestionar todos los elementos que componen el juego, esto es, separar la lógica del juego de su representación en pantalla. También que el proceso de dibujado suele ser el más costoso en términos de potencia de proceso, así que cuanto menos dibujemos, el juego se ejecutará de forma más fluida.</p>
-<p>Por último, sentíos libres de destripar a fondo el código y jugar con él. No hay una única forma de hacer las cosas, y seguro que encontráis soluciones mejores a las aquí expuestas a la hora de programar un ZXSnake.</p>
-<b>LINKS</b>
-</p>
-<ul>
-    <li><a href="src/zxsnake.zip" onClick="window.open(this.href); return false;">Archivos fuente del ejemplo propuesto (zxsnake.zip)</a></li>
+                                        </p></td>
+                                </tr>
+                            </table>
+                            <p><b>Resumiendo</b></p>
+                            <p>En este artÃ­culo hemos puesto en vuestras manos la base de funcionamiento de cualquier
+                                videojuego. Evidentemente, el esquema del ZXSnake se puede complicar muchÃ­simo mÃ¡s.
+                                Hemos aprendido a pintar (pintar con el mÃ­nimo esfuerzo para obtener el mejor
+                                resultado), a detectar colisiones entre objetos (es decir, que los objetos interactÃºen),
+                                y a leer el teclado para que el usuario pueda introducir Ã³rdenes al juego.</p>
+                            <p>QuizÃ¡s la idea principal que se puede sacar es que resulta de gran utilidad mantener una
+                                representaciÃ³n abstracta de lo que estamos dibujando en pantalla a la hora de gestionar
+                                todos los elementos que componen el juego, esto es, separar la lÃ³gica del juego de su
+                                representaciÃ³n en pantalla. TambiÃ©n que el proceso de dibujado suele ser el mÃ¡s costoso
+                                en tÃ©rminos de potencia de proceso, asÃ­ que cuanto menos dibujemos, el juego se
+                                ejecutarÃ¡ de forma mÃ¡s fluida.</p>
+                            <p>Por Ãºltimo, sentÃ­os libres de destripar a fondo el cÃ³digo y jugar con Ã©l. No hay una
+                                Ãºnica forma de hacer las cosas, y seguro que encontrÃ¡is soluciones mejores a las aquÃ­
+                                expuestas a la hora de programar un ZXSnake.</p>
+                            <b>LINKS</b>
+                            </p>
+                            <ul>
+                                <li><a href="src/zxsnake.zip" onClick="window.open(this.href); return false;">Archivos
+                                    fuente del ejemplo propuesto (zxsnake.zip)</a></li>
 
-</ul>
-<p><b>Listado completo del programa</b></p>
-<table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
-    <tr><td><p class="codigo">
-<pre>
+                            </ul>
+                            <p><b>Listado completo del programa</b></p>
+                            <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
+                                <tr>
+                                    <td><p class="codigo">
+                                        <pre>
 1  REM ********************************************************************
 2  REM ZXSnake by Federico J. Alvarez Valero (05-02-2003)
 10 REM This program is free software; you can redistribute it and/or modify
@@ -412,79 +508,72 @@ eje vertical (matriz y):
 9950 IF i$ <> "" THEN GO TO 100
 9960 GO TO 9940
 </pre>
-    </p></td></tr>
-</table>
-</div>
-        </td>
-
-    </tr>
-    <tr>
-        <td align="right"><br><br>FALVAREZ</td>
-    </tr>
-</table>
-                    </td>
-                </tr>
-                <tr><td>&nbsp;</td></tr>
-                <tr>
-
-                    <td>
-<script language="JavaScript">
-function RecargarPie(url)
-{
-    document.location=url;
-}
-</script>
-<table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
-    <form name="selector_secciones">
-        <tr>
-<td align="left">
-    <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior" value="<" />
-    <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
-        <option value="index.html">Portada</option>
-
-        <option value="editorial.html">Índice - Editorial</option>
-        <option value="panorama.html">Panorama</option>
-        <option value="analisis.html">Análisis</option>
-        <option value="zona-pc.html">Zona PC</option>
-        <option value="al-descubierto.html">Al Descubierto</option>
-        <option value="basic.html" selected>Programación BASIC</option>
-
-        <option value="z88dk.html">Programación Z88DK</option>
-        <option value="opinion.html">Opinión</option>
-    </select>
-    <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">" />
-</td>
-            <td align="right" class="texto">
-                <a href="#arriba">Volver arriba</a>
-            </td>
-
-        </tr>
-        <tr><td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="/lista-revistas.html"><b>ÍNDICE DE REVISTAS</b></a> <</td></tr>
-    </form>
-</table>
+                                        </p></td>
+                                </tr>
+                            </table>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-
-                    <td>
-<table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
-	<tr align="center" valign="center">
-		<td>2003-2009 Magazine ZX</td>
-	</tr>
-</table>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-8018503-4");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-                    </td>
-
+                    <td align="right"><br><br>FALVAREZ</td>
                 </tr>
             </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Â </td>
+    </tr>
+    <tr>
 
-    </body>
+        <td>
+            <script type="text/javascript">
+              function RecargarPie(url) {
+                document.location = url;
+              }
+            </script>
+            <table border="0" cellspacing="0" cellpadding="6" width="720" class="texto" bgcolor="#DDDDDD">
+                <form name="selector_secciones">
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="RecargarCabecera('al-descubierto.html');" name="anterior"
+                                   value="<"/>
+                            <select onChange="RecargarCabecera(this.options[this.selectedIndex].value);">
+                                <option value="index.html">Portada</option>
+
+                                <option value="editorial.html">Ãndice - Editorial</option>
+                                <option value="panorama.html">Panorama</option>
+                                <option value="analisis.html">AnÃ¡lisis</option>
+                                <option value="zona-pc.html">Zona PC</option>
+                                <option value="al-descubierto.html">Al Descubierto</option>
+                                <option value="basic.html" selected>ProgramaciÃ³n BASIC</option>
+
+                                <option value="z88dk.html">ProgramaciÃ³n Z88DK</option>
+                                <option value="opinion.html">OpiniÃ³n</option>
+                            </select>
+                            <input type="button" onclick="RecargarCabecera('z88dk.html');" name="siguiente" value=">"/>
+                        </td>
+                        <td align="right" class="texto">
+                            <a href="#arriba">Volver arriba</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFFFFF" class="texto">> <a href="../mapa-web.html"><b>MAPA WEB</b></a> <</td>
+                    </tr>
+                </form>
+            </table>
+        </td>
+    </tr>
+    <tr>
+
+        <td>
+            <table border="0" cellspacing="0" cellpadding="4" width="720" bgcolor="#EEEEEE" class="texto">
+                <tr align="center" valign="center">
+                    <td>2003-2009 Magazine ZX</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
 </html>
