@@ -110,7 +110,7 @@
                             <p><strong>Tipos Abstractos de Datos</strong></p>
                             <ul>
                                 <li>Fichero de cabecera a incluir: #include
-                                    <atd.h>
+                                    &lt;atd.h&gt;
                                 </li>
 
                                 <li>Librería a enlazar: -ladt.</li>
@@ -142,8 +142,8 @@ adt_StackCount();
                             <p><strong>Peticiones de memoria</strong></p>
                             <ul>
                                 <li>Fichero de cabecera a incluir: #include
-                                    <malloc.h> e #include
-                                        <balloc.h>
+                                    &lt;malloc.h&gt; e #include
+                                        &lt;balloc.h&gt;
                                 </li>
                                 <li>Librería a enlazar: -lmalloc y -lballoc.</li>
                             </ul>
@@ -169,7 +169,7 @@ realloc();
                             <p><strong>Modo 2 de Interrupciones</strong></p>
                             <ul>
                                 <li>Fichero de cabecera a incluir: #include
-                                    <im2.h>
+                                    &lt;im2.h&gt;
                                 </li>
 
                                 <li>Librería a enlazar: -lim2.</li>
@@ -196,7 +196,7 @@ im2_CreateGenericISR();
                             <p><strong>Teclado, joystick y ratón</strong></p>
                             <ul>
                                 <li>Fichero de cabecera a incluir: #include
-                                    <input.h>.
+                                    &lt;input.h&gt;.
                                 </li>
                                 <li>Librería a enlazar: No es necesaria.</li>
                             </ul>
@@ -236,8 +236,8 @@ in_JoyKeyboard();
                                     <td><p class="codigo">
 
                                         <pre>
-#include <input.h>
-#include <spectrum.h>
+#include &lt;input.h&gt;
+#include &lt;spectrum.h&gt;
 
 // example for ZX Spectrum target which supplies
 // the following device specific joystick functions:
@@ -288,7 +288,7 @@ if (dirs & in_FIRE)
 
                             <ul>
                                 <li>Fichero de cabecera a incluir: #include
-                                    <sound.h>.
+                                    &lt;sound.h&gt;.
                                 </li>
                                 <li>Librería a enlazar: No es necesaria.</li>
                             </ul>
@@ -318,8 +318,7 @@ bit_play();
                             <p><strong>Librería de Sprites SP1</strong></p>
                             <ul>
                                 <li>Fichero de cabecera a incluir: #include
-                                    <sprites
-                                    /sp1.h>.
+                                    &lt;sprites/sp1.h&gt;.
                                 </li>
                                 <li>Librería a enlazar: -lsp1.</li>
 
@@ -364,7 +363,7 @@ $ make sp1-spectrum
                             <p><strong>Librería general "spectrum.h"</strong></p>
                             <ul>
                                 <li>Fichero de cabecera a incluir: #include
-                                    <spectrum.h>.
+                                    &lt;spectrum.h&gt;.
                                 </li>
 
                                 <li>Librería a enlazar: No es necesaria.</li>
@@ -566,10 +565,10 @@ void BORDER( void )
 
                             <p>Recuerda para esto que:</p>
                             <ul>
-                                <li>signed y unsigned char -> 1 byte.</li>
-                                <li>signed y unsigned short -> 2 bytes.</li>
-                                <li>signed y unsigned int -> 2 bytes.</li>
-                                <li>signed y unsigned char * -> 2 bytes (es una dirección de memoria).</li>
+                                <li>signed y unsigned char -&gt; 1 byte.</li>
+                                <li>signed y unsigned short -&gt; 2 bytes.</li>
+                                <li>signed y unsigned int -&gt; 2 bytes.</li>
+                                <li>signed y unsigned char * -&gt; 2 bytes (es una dirección de memoria).</li>
                             </ul>
                             <p>Finalmente, cabe destacar que sólo se pueden acceder a variables globales: no se podrá
                                 acceder desde esta forma a variables definidas dentro de las funciones, puesto que son

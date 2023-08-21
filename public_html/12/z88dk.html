@@ -445,13 +445,13 @@ void main(void)
                 switch(toupper(getk()))
                 {
 <font color="red">                        case 'Q':
-                                if (velocidad < 50)
+                                if (velocidad &lt; 50)
                                 {
                                         velocidad = velocidad + 5;
                                 }
                                 break;
                         case 'A':
-                                if (velocidad > 0)
+                                if (velocidad &gt; 0)
                                 {
                                         velocidad = velocidad - 5;
                                }
@@ -469,10 +469,10 @@ void main(void)
                 }
 
 
-<font color="red">                if (velocidad > 0)
+<font color="red">                if (velocidad &gt; 0)
                 {
                         ciclos = ciclos - velocidad;
-                        if (ciclos < 0)
+                        if (ciclos &lt; 0)
                         {
                                 ciclos = CICLOS_BASE;
                                 putsprite(spr_xor,x,y,sprites[posicion]);
@@ -628,13 +628,13 @@ void main(void)
                 switch(toupper(getk()))
                 {
                         case 'Q':
-                                if (velocidad < 50)
+                                if (velocidad &lt; 50)
                                 {
                                         velocidad = velocidad + 5;
                                 }
                                 break;
                         case 'A':
-                                if (velocidad > 0)
+                                if (velocidad &gt; 0)
                                 {
                                         velocidad = velocidad - 5;
                                 }
@@ -673,7 +673,7 @@ void main(void)
                 }</font>
 
 
-                if (velocidad > 0)
+                if (velocidad &gt; 0)
                 {
 </pre>
                                         </p></td>
@@ -764,13 +764,13 @@ void main(void)
         switch(toupper(getk()))
         {
             case 'Q':
-                if (velocidad < <font color="red">30</font>)
+                if (velocidad &lt; <font color="red">30</font>)
                 {
                     velocidad = velocidad + <font color="red">1</font>;
                 }
                 break;
             case 'A':
-                if (velocidad > 0)
+                if (velocidad &gt; 0)
                 {
                     velocidad = velocidad - <font color="red">1</font>;
                 }
@@ -811,10 +811,10 @@ void main(void)
         }
 
 
-        if (velocidad > 0)
+        if (velocidad &gt; 0)
         {
             ciclos = ciclos - velocidad;
-            if (ciclos < 0)
+            if (ciclos &lt; 0)
             {
                 ciclos = CICLOS_BASE;
                 <font color="red">asm("halt");</font>
@@ -974,11 +974,11 @@ void main(void)
         int velocidad = 0;
         int ciclos = CICLOS_BASE;
 
-<font color="red">        for (i=0;i<30;i++)
+<font color="red">        for (i=0;i&lt;30;i++)
                 printf("\n");
 
-        for (i=0;i<ALTURA_CIRCUITO;i++)
-                for (j=0;j<ANCHURA_CIRCUITO;j++)
+        for (i=0;i&lt;ALTURA_CIRCUITO;i++)
+                for (j=0;j&lt;ANCHURA_CIRCUITO;j++)
                         if (circuito[i][j] == 1)
                                 putsprite(spr_xor,j*10+1,i*10+1,sprites[8]);
 </font>
@@ -1064,11 +1064,11 @@ void main(void)
     int velocidad = 0;
     int ciclos = CICLOS_BASE;
 
-    for (i=0;i<30;i++)
+    for (i=0;i&lt;30;i++)
         printf("\n");
 
-    for (i=0;i<ALTURA_CIRCUITO;i++)
-        for (j=0;j<ANCHURA_CIRCUITO;j++)
+    for (i=0;i&lt;ALTURA_CIRCUITO;i++)
+        for (j=0;j&lt;ANCHURA_CIRCUITO;j++)
             if (circuito[i][j] == 1)
                 putsprite(spr_xor,j*10+1,i*10+1,sprites[8]);
 
@@ -1086,13 +1086,13 @@ void main(void)
         switch(toupper(getk()))
         {
             case 'Q':
-                if (velocidad < 30)
+                if (velocidad &lt; 30)
                 {
                     velocidad = velocidad + 1;
                 }
                 break;
             case 'A':
-                if (velocidad > 0)
+                if (velocidad &gt; 0)
                 {
                     velocidad = velocidad - 1;
                 }
@@ -1131,10 +1131,10 @@ void main(void)
             contador_derecha = 0;
         }
 
-        if (velocidad > 0)
+        if (velocidad &gt; 0)
         {
             ciclos = ciclos - velocidad;
-            if (ciclos < 0)
+            if (ciclos &lt; 0)
             {
                 ciclos = CICLOS_BASE;
                 asm("halt");
@@ -1318,10 +1318,10 @@ if (circuito[y/10][(x + 9)/10] == 1 ||
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-        if (velocidad > 0)
+        if (velocidad &gt; 0)
         {
             ciclos = ciclos - velocidad;
-            if (ciclos < 0)
+            if (ciclos &lt; 0)
             {
                 ciclos = CICLOS_BASE;
 <font color="red">                y_anterior = y;

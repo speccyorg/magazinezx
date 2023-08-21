@@ -240,7 +240,7 @@ make spectrum
                                 nuestro emulador (o incluso pasar a cinta de verdad ;). Un sitio desde donde obtener el
                                 código fuente de este programa es <a href="http://www.speccy.org/metalbrain/">http://www.speccy.org/metalbrain/</a>.
                                 Por un extraño motivo se debe incluir la línea #include
-                                <string.h>, y ya es posible compilarlo con:
+                                &lt;string.h&gt;, y ya es posible compilarlo con:
                             </p>
 
                             <table border="0" cellspacing="0" cellpadding="4" width="100%" bgcolor="#EAE8A9">
@@ -289,9 +289,9 @@ bin2tap gfx.bin gfx.tap
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-#include <sprites/sp1.h>
-#include <malloc.h>
-#include <spectrum.h>
+#include &lt;sprites/sp1.h&gt;
+#include &lt;malloc.h&gt;
+#include &lt;spectrum.h&gt;
 
 // Dirección de inicio de la pila (0xd000)
 #pragma output STACKPTR = 53248
@@ -452,9 +452,9 @@ bin2tap juego.bin juego.tap
                                     <td><p class="codigo">
                                         <pre>
 
-#include <sprites/sp1.h>
-#include <malloc.h>
-#include <spectrum.h>
+#include &lt;sprites/sp1.h&gt;
+#include &lt;malloc.h&gt;
+#include &lt;spectrum.h&gt;
 
 // Dirección de inicio de la pila (0xd000)
 #pragma output STACKPTR = 53248
@@ -538,14 +538,14 @@ main()
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-1 0 0 0 0 0 0 0 -> Decimal: 128  -> Hexadecimal: 80
-0 0 0 0 0 0 0 0 -> Decimal: 0    -> Hexadecimal: 0
-0 0 0 0 0 1 0 0 -> Decimal: 4    -> Hexadecimal: 4
-0 0 0 0 0 0 0 0 -> Decimal: 0    -> Hexadecimal: 0
-0 1 0 0 0 0 0 0 -> Decimal: 64   -> Hexadecimal: 40
-0 0 0 0 0 0 0 0 -> Decimal: 0    -> Hexadecimal: 0
-0 0 0 0 0 0 1 0 -> Decimal: 2    -> Hexadecimal: 2
-0 0 0 0 0 0 0 0 -> Decimal: 0    -> Hexadecimal: 0
+1 0 0 0 0 0 0 0 -&gt; Decimal: 128  -&gt; Hexadecimal: 80
+0 0 0 0 0 0 0 0 -&gt; Decimal: 0    -&gt; Hexadecimal: 0
+0 0 0 0 0 1 0 0 -&gt; Decimal: 4    -&gt; Hexadecimal: 4
+0 0 0 0 0 0 0 0 -&gt; Decimal: 0    -&gt; Hexadecimal: 0
+0 1 0 0 0 0 0 0 -&gt; Decimal: 64   -&gt; Hexadecimal: 40
+0 0 0 0 0 0 0 0 -&gt; Decimal: 0    -&gt; Hexadecimal: 0
+0 0 0 0 0 0 1 0 -&gt; Decimal: 2    -&gt; Hexadecimal: 2
+0 0 0 0 0 0 0 0 -&gt; Decimal: 0    -&gt; Hexadecimal: 0
 </pre>
                                         </p></td>
                                 </tr>
@@ -657,14 +657,14 @@ main()
                                         <tr>
                                             <td><p class="codigo">
                                                 <pre>
-00111000 -> 56
-01111100 -> 124
-00111000 -> 56
-00010000 -> 16
-01111100 -> 124
-10010010 -> 146
-00101000 -> 40
-00101000 -> 40
+00111000 -&gt; 56
+01111100 -&gt; 124
+00111000 -&gt; 56
+00010000 -&gt; 16
+01111100 -&gt; 124
+10010010 -&gt; 146
+00101000 -&gt; 40
+00101000 -&gt; 40
 </pre>
                                                 </p></td>
                                         </tr>
@@ -679,14 +679,14 @@ main()
                                             <td><p class="codigo">
 
                                                 <pre>
-11000111 -> 199
-10000011 -> 131
-11000111 -> 199
-11101111 -> 239
-10000011 -> 131
-01101101 -> 109
-11010111 -> 215
-11010111 -> 215
+11000111 -&gt; 199
+10000011 -&gt; 131
+11000111 -&gt; 199
+11101111 -&gt; 239
+10000011 -&gt; 131
+01101101 -&gt; 109
+11010111 -&gt; 215
+11010111 -&gt; 215
 </pre>
                                                 </p></td>
                                         </tr>
@@ -946,13 +946,13 @@ struct personaje p;
       sp1_UpdateNow();
 
       input = (p.getjoy)(&p.keys);
-      if (input & in_RIGHT && !(p.sprite->col > 30 && p.sprite->hrot > 0))
+      if (input & in_RIGHT && !(p.sprite-&gt;col &gt; 30 && p.sprite-&gt;hrot &gt; 0))
           p.dx = 1;
-      if (input & in_LEFT && !(p.sprite->col < 1 && p.sprite->hrot < 1))
+      if (input & in_LEFT && !(p.sprite-&gt;col &lt; 1 && p.sprite-&gt;hrot &lt; 1))
           p.dx = -1;
-      if (input & in_DOWN && !(p.sprite->row > 22))
+      if (input & in_DOWN && !(p.sprite-&gt;row &gt; 22))
           p.dy = 1;
-      if (input & in_UP && !(p.sprite->row < 1 && p.sprite->vrot < 129))
+      if (input & in_UP && !(p.sprite-&gt;row &lt; 1 && p.sprite-&gt;vrot &lt; 129))
       // Para sprites definidos por 2 bytes, el bit 7 de vrot siempre vale 1
         p.dy = -1;
 
@@ -1082,14 +1082,14 @@ struct personaje p;
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-00011000 -> 24              11100111 -> 231
-00100100 -> 36              11000011 -> 195
-01011010 -> 90              10000001 -> 129
-10011001 -> 153             00000000 -> 0
-01011010 -> 90              10000001 -> 129
-00100100 -> 36              11000011 -> 195
-00011000 -> 24              11100111 -> 231
-00000000 -> 0               11111111 -> 255
+00011000 -&gt; 24              11100111 -&gt; 231
+00100100 -&gt; 36              11000011 -&gt; 195
+01011010 -&gt; 90              10000001 -&gt; 129
+10011001 -&gt; 153             00000000 -&gt; 0
+01011010 -&gt; 90              10000001 -&gt; 129
+00100100 -&gt; 36              11000011 -&gt; 195
+00011000 -&gt; 24              11100111 -&gt; 231
+00000000 -&gt; 0               11111111 -&gt; 255
 </pre>
                                         </p></td>
                                 </tr>
@@ -1144,7 +1144,7 @@ int i;
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-for (i=0;i<6;i++)
+for (i=0;i&lt;6;i++)
 {
    enemigos[i].sprite = sp1_CreateSpr(SP1_DRAW_MASK2LB, SP1_TYPE_2BYTE, 2, 16, 0);
 
@@ -1169,11 +1169,11 @@ for (i=0;i<6;i++)
                                     <td><p class="codigo">
 
                                         <pre>
-for (i=0;i<6;i++)
+for (i=0;i&lt;6;i++)
 {
-    if (enemigos[i].sprite->col > 30 && enemigos[i].sprite->hrot > 0)
+    if (enemigos[i].sprite-&gt;col &gt; 30 && enemigos[i].sprite-&gt;hrot &gt; 0)
         enemigos[i].dx = -enemigos[i].dx;
-    if (enemigos[i].sprite->row > 22)
+    if (enemigos[i].sprite-&gt;row &gt; 22)
         enemigos[i].dy = -enemigos[i].dy;
 
     sp1_MoveSprRel(enemigos[i].sprite, &cr, enemigos[i].frameoffset,
@@ -1260,8 +1260,8 @@ for (i=0;i<6;i++)
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-   xp = p.sprite->col*8 + p.sprite->hrot + 4;
-   yp = p.sprite->row*8 + p.sprite->vrot + 4;
+   xp = p.sprite-&gt;col*8 + p.sprite-&gt;hrot + 4;
+   yp = p.sprite-&gt;row*8 + p.sprite-&gt;vrot + 4;
 </pre>
                                         </p></td>
                                 </tr>
@@ -1284,9 +1284,9 @@ for (i=0;i<6;i++)
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-   xe = enemigos[i].sprite->col*8 + enemigos[i].sprite->hrot;
-   ye = enemigos[i].sprite->row*8 + enemigos[i].sprite->vrot;
-   if (xe + 8  >= xp && xe <= xp && ye + 8 >= yp && ye <= yp)
+   xe = enemigos[i].sprite-&gt;col*8 + enemigos[i].sprite-&gt;hrot;
+   ye = enemigos[i].sprite-&gt;row*8 + enemigos[i].sprite-&gt;vrot;
+   if (xe + 8  &gt;= xp && xe &lt;= xp && ye + 8 &gt;= yp && ye &lt;= yp)
    {
       zx_border(RED);
       final = 1;

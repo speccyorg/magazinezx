@@ -139,9 +139,9 @@ struct sp_UDK keys;
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-#include <spritepack.h>
+#include &lt;spritepack.h&gt;
 
-#include <stdlib.h>
+#include &lt;stdlib.h&gt;
 #pragma output STACKPTR=61440
 
 extern struct sp_Rect *sp_ClipStruct;
@@ -351,8 +351,8 @@ defb @00000000, @11111111
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-#include <spritepack.h>
-#include <stdlib.h>
+#include &lt;spritepack.h&gt;
+#include &lt;stdlib.h&gt;
 
 #pragma output STACKPTR=61440
 
@@ -586,8 +586,8 @@ sp_Initialize(INK_WHITE | PAPER_BLACK, ' ');
                                     <td><p class="codigo">
 
                                         <pre>
-#include <spritepack.h>
-#include <stdlib.h>
+#include &lt;spritepack.h&gt;
+#include &lt;stdlib.h&gt;
 #pragma output STACKPTR=61440
 
 extern struct sp_Rect *sp_ClipStruct;
@@ -623,19 +623,19 @@ void addColour(struct sp_CS *cs)
 {
 	   if (n == 0) // Se rellena de arriba a abajo y de izquierda
 	   			   // a derecha, incluyendo partes vacias del sprite
-	        cs->colour = INK_BLACK | PAPER_WHITE;
+	        cs-&gt;colour = INK_BLACK | PAPER_WHITE;
 	   else if (n == 1)
-	        cs->colour = INK_BLUE | PAPER_BLACK;
+	        cs-&gt;colour = INK_BLUE | PAPER_BLACK;
 	   else if (n == 2)
-		 cs->colour = INK_RED | PAPER_GREEN;
+		 cs-&gt;colour = INK_RED | PAPER_GREEN;
 	   else if (n == 3)
-		 cs->colour = INK_YELLOW | PAPER_BLACK;
+		 cs-&gt;colour = INK_YELLOW | PAPER_BLACK;
 	   else if (n == 4)
-		 cs->colour = INK_GREEN | PAPER_WHITE;
+		 cs-&gt;colour = INK_GREEN | PAPER_WHITE;
 	   else
-	         cs->colour = TRANSPARENT;
+	         cs-&gt;colour = TRANSPARENT;
 	   if (n > 5)
-	         cs->graphic = sp_NullSprPtr;
+	         cs-&gt;graphic = sp_NullSprPtr;
 	   n++;
 	   return;
 }
@@ -842,19 +842,19 @@ void addColour(struct sp_CS *cs)
 {
            if (n == 0) // Se rellena de arriba a abajo y de izquierda
            			   // a derecha, incluyendo partes vacias del sprite
-                cs->colour = INK_BLACK | PAPER_WHITE;
+                cs-&gt;colour = INK_BLACK | PAPER_WHITE;
            else if (n == 1)
-                cs->colour = INK_BLUE | PAPER_BLACK;
+                cs-&gt;colour = INK_BLUE | PAPER_BLACK;
            else if (n == 2)
-                 cs->colour = INK_RED | PAPER_GREEN;
+                 cs-&gt;colour = INK_RED | PAPER_GREEN;
            else if (n == 3)
-                 cs->colour = INK_YELLOW | PAPER_BLACK;
+                 cs-&gt;colour = INK_YELLOW | PAPER_BLACK;
            else if (n == 4)
-                 cs->colour = INK_GREEN | PAPER_WHITE;
+                 cs-&gt;colour = INK_GREEN | PAPER_WHITE;
            else
-                 cs->colour = TRANSPARENT;
+                 cs-&gt;colour = TRANSPARENT;
            if (n > 5)
-                 cs->graphic = sp_NullSprPtr;
+                 cs-&gt;graphic = sp_NullSprPtr;
            n++;
            return;
 }
@@ -952,8 +952,8 @@ LIB SPNullSprPtr
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-#include <spritepack.h>
-#include <stdlib.h>
+#include &lt;spritepack.h&gt;
+#include &lt;stdlib.h&gt;
 #pragma output STACKPTR=61440
 
 #define NUM_ROCAS 8
@@ -994,12 +994,12 @@ void *u_free = sp_FreeBlock;
 uchar n;
 void addColourRoca(struct sp_CS *cs)
 {
-	   if (n >= 0 && n <= 5)
-		 cs->colour = INK_RED | PAPER_WHITE;
+	   if (n &gt;= 0 && n &lt;= 5)
+		 cs-&gt;colour = INK_RED | PAPER_WHITE;
 	   else
-	         cs->colour = TRANSPARENT;
+	         cs-&gt;colour = TRANSPARENT;
 	   if (n > 5)
-	         cs->graphic = sp_NullSprPtr;
+	         cs-&gt;graphic = sp_NullSprPtr;
 	   n++;
 	   return;
 }
@@ -1007,13 +1007,13 @@ void addColourRoca(struct sp_CS *cs)
 void addColourSki(struct sp_CS *cs)
 {
 	if (n == 0)
-		cs->colour = INK_BLUE | PAPER_WHITE;
+		cs-&gt;colour = INK_BLUE | PAPER_WHITE;
 	else if (n == 2)
-		cs->colour = INK_BLUE | PAPER_WHITE;
+		cs-&gt;colour = INK_BLUE | PAPER_WHITE;
 	else
-		cs->colour = TRANSPARENT;
+		cs-&gt;colour = TRANSPARENT;
 	if (n>2)
-		cs->graphic = sp_NullSprPtr;
+		cs-&gt;graphic = sp_NullSprPtr;
 	n++;
 	return;
 }
@@ -1046,7 +1046,7 @@ main()
 	   keys.right = sp_LookupKey('p');
 	   keys.left = sp_LookupKey('o');
 
-	   for (i=0;i<NUM_ROCAS;i++)
+	   for (i=0;i&lt;NUM_ROCAS;i++)
 	   {
               n = 0;
               spriteRoca[i] = sp_CreateSpr(sp_OR_SPRITE, 3, roca1, 1, TRANSPARENT);
@@ -1082,22 +1082,22 @@ main()
 		 i = sp_JoyKeyboard(&keys);
 		 dx = 0;
 		 dy = 0;
-		 if ((i & sp_LEFT) == 0 && ski->col > 0)
+		 if ((i & sp_LEFT) == 0 && ski-&gt;col &gt; 0)
 		 {
 		    if (posicion != -1)
 		    {
-		    	sp_MoveSprAbs(spriteSkiIzquierda,sp_ClipStruct,0,ski->row,ski->col,0,0);
+		    	sp_MoveSprAbs(spriteSkiIzquierda,sp_ClipStruct,0,ski-&gt;row,ski-&gt;col,0,0);
 		    	sp_MoveSprAbs(ski,sp_ClipStruct,0,0,-10,0,0);
 		    	ski = spriteSkiIzquierda;
 			posicion = -1;
 		    }
 		    dx = -3;
 		 }
-		 else if ((i & sp_RIGHT) == 0 && ski->col < 30)
+		 else if ((i & sp_RIGHT) == 0 && ski-&gt;col &lt; 30)
 		 {
 	            if (posicion != 1)
 		    {
-			sp_MoveSprAbs(spriteSkiDerecha,sp_ClipStruct,0,ski->row,ski->col,0,0);
+			sp_MoveSprAbs(spriteSkiDerecha,sp_ClipStruct,0,ski-&gt;row,ski-&gt;col,0,0);
 			sp_MoveSprAbs(ski,sp_ClipStruct,0,0,-10,0,0);
 			ski = spriteSkiDerecha;
 			posicion = 1;
@@ -1108,7 +1108,7 @@ main()
 		 {
 		    if (posicion != 0)
 		    {
-			    sp_MoveSprAbs(spriteSkiCentrado,sp_ClipStruct,0,ski->row,ski->col,0,0);
+			    sp_MoveSprAbs(spriteSkiCentrado,sp_ClipStruct,0,ski-&gt;row,ski-&gt;col,0,0);
 		            sp_MoveSprAbs(ski,sp_ClipStruct,0,0,-10,0,0);
 		    	    ski = spriteSkiCentrado;
 			    posicion = 0;
@@ -1116,7 +1116,7 @@ main()
 		 }
 	         if (dx != 0) sp_MoveSprRel(ski, sp_ClipStruct, 0, 0, 0, dx, dy);
 
-		 if (spriteRoca[roca]->row != -10)
+		 if (spriteRoca[roca]-&gt;row != -10)
 		 {
 		    dx = 0;
 		    dy = -4;
@@ -1128,7 +1128,7 @@ main()
 			sp_MoveSprAbs(spriteRoca[roca],sp_ClipStruct,0,23,rand()%29+1,0,4);
 		    }
  		 roca ++;
-		 if (roca >= NUM_ROCAS)
+		 if (roca &gt;= NUM_ROCAS)
 	            roca = 0;
 	   }
 }
@@ -1371,7 +1371,7 @@ defb @00000000, @11111111
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
- for (i=0;i<NUM_ROCAS;i++)
+ for (i=0;i&lt;NUM_ROCAS;i++)
  {
     n = 0;
     spriteRoca[i] = sp_CreateSpr(sp_OR_SPRITE, 3, roca1, 1, TRANSPARENT);
@@ -1426,22 +1426,22 @@ defb @00000000, @11111111
 		 i = sp_JoyKeyboard(&keys);
 		 dx = 0;
 		 dy = 0;
-		 if ((i & sp_LEFT) == 0 && ski->col > 0)
+		 if ((i & sp_LEFT) == 0 && ski-&gt;col &gt; 0)
 		 {
 		    if (posicion != -1)
 		    {
-		    	sp_MoveSprAbs(spriteSkiIzquierda,sp_ClipStruct,0,ski->row,ski->col,0,0);
+		    	sp_MoveSprAbs(spriteSkiIzquierda,sp_ClipStruct,0,ski-&gt;row,ski-&gt;col,0,0);
 		    	sp_MoveSprAbs(ski,sp_ClipStruct,0,0,-10,0,0);
 		    	ski = spriteSkiIzquierda;
 			posicion = -1;
 		    }
 		    dx = -3;
 		 }
-		 else if ((i & sp_RIGHT) == 0 && ski->col < 30)
+		 else if ((i & sp_RIGHT) == 0 && ski-&gt;col &lt; 30)
 		 {
 	            if (posicion != 1)
 		    {
-			sp_MoveSprAbs(spriteSkiDerecha,sp_ClipStruct,0,ski->row,ski->col,0,0);
+			sp_MoveSprAbs(spriteSkiDerecha,sp_ClipStruct,0,ski-&gt;row,ski-&gt;col,0,0);
 			sp_MoveSprAbs(ski,sp_ClipStruct,0,0,-10,0,0);
 			ski = spriteSkiDerecha;
 			posicion = 1;
@@ -1452,7 +1452,7 @@ defb @00000000, @11111111
 		 {
 		    if (posicion != 0)
 		    {
-			    sp_MoveSprAbs(spriteSkiCentrado,sp_ClipStruct,0,ski->row,ski->col,0,0);
+			    sp_MoveSprAbs(spriteSkiCentrado,sp_ClipStruct,0,ski-&gt;row,ski-&gt;col,0,0);
 		            sp_MoveSprAbs(ski,sp_ClipStruct,0,0,-10,0,0);
 		    	    ski = spriteSkiCentrado;
 			    posicion = 0;
@@ -1504,9 +1504,9 @@ defb @00000000, @11111111
                                     <td><p class="codigo">
 
                                         <pre>
-if ((i & sp_LEFT) == 0 <font color="red">&& ski->col > 0</font>)
+if ((i & sp_LEFT) == 0 <font color="red">&& ski-&gt;col &gt; 0</font>)
 
-else if ((i & sp_RIGHT) == 0 <font color="red">&& ski->col < 30</font>)
+else if ((i & sp_RIGHT) == 0 <font color="red">&& ski-&gt;col &lt; 30</font>)
 </pre>
                                         </p></td>
                                 </tr>
@@ -1525,19 +1525,19 @@ else if ((i & sp_RIGHT) == 0 <font color="red">&& ski->col < 30</font>)
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-		 if (spriteRoca[roca]->row != -10)
+		 if (spriteRoca[roca]-&gt;row != -10)
 		 {
 		    dx = 0;
 		    dy = -4;
 		    sp_MoveSprRel(spriteRoca[roca],sp_ClipStruct,0,0,0,dx,dy);
 		 }
 		 else
-		    if (rand()%100>98)
+		    if (rand()%100&gt;98)
 		    {
 			sp_MoveSprAbs(spriteRoca[roca],sp_ClipStruct,0,23,rand()%29+1,0,4);
 		    }
  		 roca ++;
-		 if (roca >= NUM_ROCAS)
+		 if (roca &gt;= NUM_ROCAS)
 	            roca = 0;
 </pre>
                                         </p></td>

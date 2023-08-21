@@ -148,7 +148,7 @@ int movimientoPirata(int localizacionPirata, THabitacion habitaciones[],
 
   probabilidadMovimiento = rand()/(RAND_MAX/4);
 
-  if (habitaciones[localizacionPirata].direcciones[probabilidadMovimiento] > 2)
+  if (habitaciones[localizacionPirata].direcciones[probabilidadMovimiento] &gt; 2)
   {
     localizacionPirata =
       habitaciones[localizacionPirata].direcciones[probabilidadMovimiento]-1;
@@ -181,7 +181,7 @@ int movimientoPirata(int localizacionPirata, THabitacion habitaciones[],
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-#include <stdlib.h>
+#include &lt;stdlib.h&gt;
 </pre>
 
                                         </p></td>
@@ -221,7 +221,7 @@ int movimientoPirata(int localizacionPirata, THabitacion habitaciones[],
                                     <td><p class="codigo">
 
                                         <pre>
-  if (habitaciones[localizacionPirata].direcciones[probabilidadMovimiento] > 2)
+  if (habitaciones[localizacionPirata].direcciones[probabilidadMovimiento] &gt; 2)
 </pre>
                                         </p></td>
                                 </tr>
@@ -288,7 +288,7 @@ while (final == 0)
      movimientoPirata(localizacionPirata,habitaciones,habitacion);</font>
 
   printf("Que hago ahora? - ");
-  gets comando;
+  gets (comando);
 </pre>
                                         </p></td>
                                 </tr>

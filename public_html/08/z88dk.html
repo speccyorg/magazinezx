@@ -273,7 +273,7 @@ void escribirDescripcion(THabitacion habitaciones, int habitacion<font color="re
 
 <font color="red">
 	printf("En la habitacion puedes ver:");
-	for (i=0;i<4;i++)
+	for (i=0;i&lt;4;i++)
 		if (objetos[i].localizacion == habitaciones[habitacion].id)
 		{
 			printf(" %s",objetos[i].nombre);
@@ -363,7 +363,7 @@ escribirDescripcion(habitaciones,habitacion,objetos)
 	{
 		hayObjetos = 0;
 		printf("\n\nLlevas:");
-		for (i = 0; i<4;i++)
+		for (i = 0; i&lt;4;i++)
 			if (objetos[i].localizacion == -1)
 			{
 				printf(" %s",objetos[i].nombre);
@@ -557,7 +557,7 @@ char palabra[50];
 		{
 			hayObjetos = 0;
 			i = 0;
-			while (hayObjetos == 0 && i<4)
+			while (hayObjetos == 0 && i&lt;4)
 			{
 				if (strcmp(objetos[i].nombre,palabra) == 0
 					&& objetos[i].localizacion == -1)
@@ -655,7 +655,7 @@ if (strcmp(comando,"coger") == 0)
 	{
 	    hayObjetos = 0;
 	    i = 0;
-	    while (hayObjetos == 0 && i<4)
+	    while (hayObjetos == 0 && i&lt;4)
 	    {
 		if (strcmp(objetos[i].nombre,palabra) == 0
 			&& objetos[i].localizacion == habitacion+1)
@@ -830,7 +830,7 @@ else if (strcmp(comando,"i") == 0 || strcmp(comando,"inventario") == 0)
 {
 	hayObjetos = 0;
 	printf("\n\nLlevas:");
-	for (i = 0; i<4;i++)
+	for (i = 0; i&lt;4;i++)
 		if (objetos[i].localizacion == -1)
 		{
 			printf(" %s",objetos[i].nombre);
