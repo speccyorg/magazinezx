@@ -332,7 +332,7 @@ Crear_Generacion_Aleatoria:
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
- x * 32 = x << 5
+ x * 32 = x &lt;&lt; 5
 </pre>
                                         </p></td>
                                 </tr>
@@ -343,8 +343,8 @@ Crear_Generacion_Aleatoria:
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-#define Celula(x,y)     (mapa[((y)<<5)+(x)])
-#define TempCelula(x,y) (temp[((y)<<5)+(x)])
+#define Celula(x,y)     (mapa[((y)&lt;&lt;5)+(x)])
+#define TempCelula(x,y) (temp[((y)&lt;&lt;5)+(x)])
 </pre>
                                         </p></td>
                                 </tr>
@@ -374,11 +374,11 @@ void GenLife( void )
    printf(" (r) = nueva generacion aleatoria   ");
 
    // limpiamos el tablero de celulas
-   for( i=0; i<ALTO*ANCHO; i++)
+   for( i=0; i&lt;ALTO*ANCHO; i++)
       mapa[i] = temp[i] = 0;
 
    // generamos unas cuantas celulas aleatorias
-   for( i=0; i< NUM_CELULAS; i++)
+   for( i=0; i&lt; NUM_CELULAS; i++)
    {
       x = (rand() % (ANCHO-2)) +1;
       y = (rand() % (ALTO-2)) +1;
@@ -439,14 +439,14 @@ Dibujar_Generacion_Actual:
                                     <td><p class="codigo">
                                         <pre>
 #define DrawCell(x,y,val) \
-  *((unsigned char *) (0x4000 + 6144 + ((y)<<5) + (x))) = (val)<<3 ;
+  *((unsigned char *) (0x4000 + 6144 + ((y)&lt;&lt;5) + (x))) = (val)&lt;&lt;3 ;
 
 //--- Dibujar en pantalla el array de celulas -------------
 void DrawLife( void )
 {
    int x, y;
-   for( y=0; y<ALTO; y++)
-      for( x=0; x<ANCHO; x++)
+   for( y=0; y&lt;ALTO; y++)
+      for( x=0; x&lt;ANCHO; x++)
       {
          Celula(x,y) = TempCelula(x,y);
          DrawCell(x,y,Celula(x,y));
@@ -508,7 +508,7 @@ void DrawLife( void )
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
- atributo = (flash<<7) + (brillo<<6) + (papel<<3) + (tinta);
+ atributo = (flash&lt;&lt;7) + (brillo&lt;&lt;6) + (papel&lt;&lt;3) + (tinta);
 </pre>
                                         </p></td>
                                 </tr>
@@ -523,8 +523,8 @@ void DrawLife( void )
  // memaddr = 22528 + (y*32) + x
  memaddr = 22528 + (5*32) + 2;
 
- // escribir en memaddr (flash<<7)+(brillo<<6)+(papel<<3)+tinta.
- *memaddr = (1<<7) + (2<<3) + (4);
+ // escribir en memaddr (flash&lt;&lt;7)+(brillo&lt;&lt;6)+(papel&lt;&lt;3)+tinta.
+ *memaddr = (1&lt;&lt;7) + (2&lt;&lt;3) + (4);
 </pre>
 
                                         </p></td>
@@ -578,12 +578,12 @@ void Life( void )
    int vecinos;
 
    // Calculamos la siguiente generacion
-   for( y=0; y<ALTO; y++)
+   for( y=0; y&lt;ALTO; y++)
    {
-      for( x=0; x<ANCHO ; x++)
+      for( x=0; x&lt;ANCHO ; x++)
                         {
         // Las celulas del borde mueren
-        if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
+        if( x==0 || y==0 || x&gt;ANCHO-2 || y&gt;ALTO-2 )
            TempCelula(x,y)=0 ;
 
         else
@@ -714,7 +714,7 @@ void Life( void )
                                 <tr>
                                     <td><p class="codigo">
                                         <pre>
-   offset = (y<<5)+x;
+   offset = (y&lt;&lt;5)+x;
 
    // Obtenemos el numero de celulas vecinas
    vecinos = mapa[ offset-33 ] + mapa[ offset-32 ] +
@@ -753,17 +753,17 @@ void Life( void )
    unsigned int vecinos, offset;
 
    // Calculamos la siguiente generacion
-   for( y=0; y<ALTO; y++)
+   for( y=0; y&lt;ALTO; y++)
    {
-      for( x=0; x<ANCHO ; x++)
+      for( x=0; x&lt;ANCHO ; x++)
                         {
         // Las celulas del borde mueren
-        if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
+        if( x==0 || y==0 || x&gt;ANCHO-2 || y&gt;ALTO-2 )
            TempCelula(x,y)=0 ;
 
         else
         {
-           offset = (y<<5)+x;
+           offset = (y&lt;&lt;5)+x;
 
            // Obtenemos el numero de celulas vecinas
            vecinos = mapa[ offset-33 ] + mapa[ offset-32 ] +
@@ -815,12 +815,12 @@ void DrawLife( void )
    unsigned char *memaddr;
 
    memaddr = (0x4000 + 6144);
-   for( i=0; i<ANCHO*ALTO; i++ )
+   for( i=0; i&lt;ANCHO*ALTO; i++ )
    {
       mapa[i] = temp[i];
 
       // Dibujamos en pantalla cambiando el ATTR
-      *memaddr = (temp[i]<<4);
+      *memaddr = (temp[i]&lt;&lt;4);
 
       // pasamos al siguiente caracter en pantalla
       memaddr++;
@@ -879,7 +879,7 @@ void DrawLife( void )
                                     <td><p class="codigo">
                                         <pre>
 /*
- *  ZX-Life  -> Implementacion de ejemplo en C-z88dk del
+ *  ZX-Life  -&gt; Implementacion de ejemplo en C-z88dk del
  *              simulador de vida de John Conway para
  *              MagazineZX (articulo programacion z88dk).
  *
@@ -901,12 +901,12 @@ char mapa[ANCHO*ALTO], temp[ANCHO*ALTO];
 unsigned char *memoffset;
 unsigned char my_tmp_border;
 
-#define Celula(x,y) (mapa[((y)<<5)+(x)])
+#define Celula(x,y) (mapa[((y)&lt;&lt;5)+(x)])
 
-#define TempCelula(x,y) (temp[((y)<<5)+(x)])
+#define TempCelula(x,y) (temp[((y)&lt;&lt;5)+(x)])
 
 #define DrawCell(x,y,val) \
-  *((unsigned char *) (0x4000 + 6144 + ((y)<<5) + (x))) = (val)<<3 ;
+  *((unsigned char *) (0x4000 + 6144 + ((y)&lt;&lt;5) + (x))) = (val)&lt;&lt;3 ;
 
 void GenLife( void );
 void DrawLife( void );
@@ -948,11 +948,11 @@ void GenLife( void )
    printf(" (r) = nueva generacion aleatoria   ");
 
    // limpiamos el tablero de celulas
-   for( i=0; i<ALTO*ANCHO; i++)
+   for( i=0; i&lt;ALTO*ANCHO; i++)
       mapa[i] = temp[i] = 0;
 
    // generamos unas cuantas celulas aleatorias
-   for( i=0; i< NUM_CELULAS; i++)
+   for( i=0; i&lt; NUM_CELULAS; i++)
    {
       x = (rand() % (ANCHO-2)) +1;
       y = (rand() % (ALTO-2)) +1;
@@ -969,12 +969,12 @@ void Life( void )
    int vecinos;
 
    // Calculamos la siguiente generacion
-   for( y=0; y<ALTO; y++)
+   for( y=0; y&lt;ALTO; y++)
    {
-      for( x=0; x<ANCHO ; x++)
+      for( x=0; x&lt;ANCHO ; x++)
                         {
         // Las celulas del borde mueren
-        if( x==0 || y==0 || x>ANCHO-2 || y>ALTO-2 )
+        if( x==0 || y==0 || x&gt;ANCHO-2 || y&gt;ALTO-2 )
            TempCelula(x,y)=0 ;
 
         else
@@ -1020,8 +1020,8 @@ void Life( void )
 void DrawLife( void )
 {
    int x, y;
-   for( y=0; y<ALTO; y++)
-      for( x=0; x<ANCHO; x++)
+   for( y=0; y&lt;ALTO; y++)
+      for( x=0; x&lt;ANCHO; x++)
       {
          Celula(x,y) = TempCelula(x,y);
          DrawCell(x,y,Celula(x,y));
@@ -1048,7 +1048,7 @@ void CLS( int value )
 //--- Cambiar el borde de la pantalla ---------------------
 void BORDER( unsigned char value )
 {
-   my_tmp_border = value<<3;
+   my_tmp_border = value&lt;&lt;3;
 #asm
    ld hl, 2
    add hl, sp
